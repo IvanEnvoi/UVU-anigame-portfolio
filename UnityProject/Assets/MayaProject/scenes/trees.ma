@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: trees.ma
-//Last modified: Fri, Aug 29, 2025 04:07:37 PM
+//Last modified: Fri, Aug 29, 2025 04:18:04 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,19 +11,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "44A24232-4D6A-0FDD-83FC-EF9DDA1DC609";
+fileInfo "UUID" "9321B777-4284-F932-63FA-F7BECE120FAE";
 createNode transform -shared -name "persp";
 	rename -uuid "8A3E86C0-498D-9232-FD4D-27B2522701B8";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -141.28108964930144 -1.0231650364682512 2.0513641379617411 ;
-	setAttr ".rotate" -type "double3" 2.4000000000000798 966.79999999997585 0 ;
+	setAttr ".translate" -type "double3" -53.387760642522444 37.158948167038176 -82.060408891537833 ;
+	setAttr ".rotate" -type "double3" -9.5999999999931944 212.39999999996027 0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -7.1000075429949124e-15 -8.4292084621830391e-17 
 		2.7156654542068022e-16 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "868631C6-4BFC-51A4-3B0A-DCA0D963DCB1";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999979;
-	setAttr ".centerOfInterest" 165.83708857039105;
+	setAttr ".centerOfInterest" 165.8370885701184;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
