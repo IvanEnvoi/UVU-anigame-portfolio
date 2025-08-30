@@ -1,0 +1,50 @@
+// Create spheres with long-form flags
+polySphere -name "snowman_bottom" -radius 3;
+polySphere -name "snowman_middle" -radius 2;
+polySphere -name "snowman_head"   -radius 1.3;
+
+// Move spheres into position using long-form translate flags
+move -relative -x 0 -y 0   -z 0 "snowman_bottom";
+move -relative -x 0 -y 3.5 -z 0 "snowman_middle";
+move -relative -x 0 -y 6   -z 0 "snowman_head";
+
+// Create scarf as a cylinder with long-form flags
+polyCylinder -name "snowman_scarf" -radius 1.4 -height 0.4;
+
+//move scarf using long-form flags
+move   -relative -x 0  -y 5.213 -z 0 "snowman_scarf";
+
+// Create scarf tail as a cube with long-form flags
+polyCube -name "snowman_scarfTail" -width 4.2 -height 0.1 -depth 1.4;
+
+// Move and rotate scarf tail using long-form flags (X and Y swapped)
+move   -relative -x 2.678 -y 3.889 -z -0.777 "snowman_scarfTail";
+rotate -relative -x 0     -y 15    -z -40 "snowman_scarfTail";
+
+// --- Loop to create 9 small dodecahedrons for snowman --- //
+for ($i = 0; $i < 9; $i++) {
+    
+    // Create the dodecahedron
+    string $coal[] = `polyPlatonic 
+        -primitive 12
+        -subdivisionMode 0 
+        -subdivisions 1 
+        -radius 1           // start with normal size
+        -sphericalInflation 1`;
+
+    // Scale it down to be tiny for snowman
+    setAttr ($coal[0] + ".scaleX") 0.18;
+    setAttr ($coal[0] + ".scaleY") 0.18;
+    setAttr ($coal[0] + ".scaleZ") 0.18;
+
+    // Position them on the head
+    if ($i == 0) move -absolute -x -0.4 -y 6.8 -z 1.0 $coal[0];  // left eye
+    if ($i == 1) move -absolute -x 0.4  -y 6.8 -z 1.0 $coal[0];  // right eye
+    if ($i == 2) move -absolute -x -0.8 -y 6.2 -z 0.7 $coal[0];  // left mouth
+    if ($i == 3) move -absolute -x -0.4 -y 6.1 -z 0.8 $coal[0];  // mouth
+    if ($i == 4) move -absolute -x 0.0  -y 6.0 -z 0.8 $coal[0];  // mouth
+    if ($i == 5) move -absolute -x 0.4  -y 6.1 -z 0.8 $coal[0];  // mouth
+    if ($i == 6) move -absolute -x 0.8  -y 6.2 -z 0.7 $coal[0];  // right mouth
+    if ($i == 7) move -absolute -x -0.2 -y 6.05 -z 0.6 $coal[0]; // middle mouth
+    if ($i == 8) move -absolute -x 0.2  -y 6.05 -z 0.6 $coal[0]; // middle mouth     
+}
