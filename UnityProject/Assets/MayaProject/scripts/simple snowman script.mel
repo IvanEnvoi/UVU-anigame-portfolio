@@ -37,7 +37,7 @@ for ($i = 0; $i < 9; $i++) {
     setAttr ($coal[0] + ".scaleY") 0.18;
     setAttr ($coal[0] + ".scaleZ") 0.18;
 
-    // Position them on the head
+    // Position them on the head A
     if ($i == 0) move -absolute -x -0.4 -y 6.8 -z 1.0 $coal[0];  // left eye
     if ($i == 1) move -absolute -x 0.4  -y 6.8 -z 1.0 $coal[0];  // right eye
     if ($i == 2) move -absolute -x -0.8 -y 6.2 -z 0.7 $coal[0];  // left mouth
