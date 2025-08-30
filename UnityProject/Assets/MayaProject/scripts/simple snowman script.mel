@@ -49,6 +49,7 @@ for ($i = 0; $i < 7; $i++) {
     if ($i == 4) move -absolute -x 0.0  -y 6.0 -z 0.8 $coal[0];  // mouth
     if ($i == 5) move -absolute -x 0.4  -y 6.1 -z 0.8 $coal[0];  // mouth
     if ($i == 6) move -absolute -x 0.8  -y 6.2 -z 0.7 $coal[0];  // right mouth
+}
 select -tgl pSphere9 pSphere3 pSphere8 pSphere7 pSphere4 pSphere5 pSphere6 ;
 move -r 0 0 0.66454 ;
 move -r 0 -0.427991 0 ;
