@@ -17,6 +17,14 @@ move   -relative -x 0  -y 5.213 -z 0 "snowman_scarf";
 // Create scarf tail as a cube with long-form flags
 polyCube -name "snowman_scarfTail" -width 4.2 -height 0.1 -depth 1.4;
 
+// Create second scarf tail as a cube
+polyCube -name "snowman_scarfTail2" -width 4.2 -height 0.1 -depth 1.4;
+
+// Move and rotate it slightly differently
+move   -relative -x 2.5 -y 3.8 -z -0.9 "snowman_scarfTail2";
+rotate -relative -x 0   -y 20   -z -50 "snowman_scarfTail2";
+
+
 // Move and rotate scarf tail using long-form flags (X and Y swapped)
 move   -relative -x 2.678 -y 3.889 -z -0.777 "snowman_scarfTail";
 rotate -relative -x 0     -y 15    -z -40 "snowman_scarfTail";
