@@ -30,7 +30,7 @@ move   -relative -x 2.678 -y 3.889 -z -0.777 "snowman_scarfTail";
 rotate -relative -x 0     -y 15    -z -40 "snowman_scarfTail";
 
 // --- Loop to create 9 small spheres for snowman eyes and mouth --- //
-for ($i = 0; $i < 7; $i++) {
+for ($i = 0; $i < 9; $i++) {
     
     // Create a small sphere
     string $coal[] = `polySphere 
@@ -52,7 +52,7 @@ for ($i = 0; $i < 7; $i++) {
     if ($i == 7) move -absolute -x -0.2 -y 6.05 -z 0.6 $coal[0]; // middle mouth
     if ($i == 8) move -absolute -x 0.2  -y 6.05 -z 0.6 $coal[0]; // middle mouth
 }
-select -tgl pSphere3 pSphere7 pSphere4 pSphere5 pSphere6 ;
+select -tgl pSphere9 pSphere3 pSphere8 pSphere7 pSphere4 pSphere5 pSphere6 ;
 move -r 0 0 0.66454 ;
 move -r 0 -0.427991 0 ;
 move -r 0 0 -0.262203 ;
