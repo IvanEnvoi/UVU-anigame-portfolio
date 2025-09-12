@@ -1,3 +1,5 @@
+//      ---Random Bridge Builder!---
+
 global proc makeBridgeRandom()
 {
     // Bridge pieces in order
@@ -51,6 +53,7 @@ global proc makeBridgeRandom()
     }
 }
 
+//     ---Custom Bridge Builder!---
 
 global proc makeBridge(
     int $end1Count,
@@ -113,7 +116,7 @@ global proc makeBridge(
 }
 /*
     ---Examples of code working---
-    
+
     11 arguments total
 
     makeBridge(bridgeStart, int of bridge1...9, bridgeEnd); // custom bridge
