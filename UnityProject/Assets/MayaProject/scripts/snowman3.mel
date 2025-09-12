@@ -56,7 +56,7 @@ global proc string makeSnowman(string $name, float $scale, int $useScarf, float 
         rotate -r 0 15 -40 $tail1[0];
 
         string $tail2[] = `polyCube -w 4.2 -h 0.1 -d 1.4 -name ($name + "_scarfTail2")`;
-        move -a -2.5 4.0 -0.5 $tail2[0];
+        move -a 2.5 4.0 -0.5 $tail2[0];
         rotate -r 0 -20 -30 $tail2[0];
 
         $scarfGrp = `group -n ($name + "_Scarf") $cyl[0] $tail1[0] $tail2[0]`;

@@ -1,1 +1,75 @@
-polySphere;
+/*
+ first code itteration thanks chatty!
+ chatty killin it first itteration makes nearly what i want, readable and modifiable
+ chatty made one mistake which i corrected, $x should have used sin() originally
+ and $z needed to use cos(), this corrected the rotation of the stairs with the pos
+ cuz trig fuccn triangles or some shit idk x3c (i actually had a love hate relationship with trig)
+ ANYWAYS.. all i did was swap the variables and it fixed the code.
+*/
+
+// ---------------------------------------------------
+// makeSpiralStaircase
+// Creates a spiral staircase from polyCubes
+// ---------------------------------------------------
+// Arguments:
+// $numSteps     - number of steps in the staircase
+// $length       - length of each step (X dimension)
+// $width        - width of each step (Z dimension)
+// $height       - thickness of each step (Y dimension)
+// $offset       - radius offset from center (pivot distance)
+// $stepHeight   - vertical rise per step
+// $stepRotation - rotation in degrees per step
+// ---------------------------------------------------
+global proc makeSpiralStaircase(
+    int $numSteps,
+    float $length,
+    float $width,
+    float $height,
+    float $offset,
+    float $stepHeight,
+    float $stepRotation )
+{
+    // Group for all steps
+    string $stairGrp = `group -em -name "spiralStair_grp"`;
+
+    // Loop to create steps
+    for ($i = 0; $i < $numSteps; $i++)
+    {
+        // Create step as cube
+        string $step[] = `polyCube 
+            -w $length 
+            -h $height 
+            -d $width 
+            -name ("stairStep_" + $i)`; 
+
+        // Calculate rotation angle
+        float $angle = $i * $stepRotation;
+       
+        // convert to rad for x y z pos
+        float $radians = deg_to_rad($angle);
+
+        // cos sin for rad position convert to x y z 
+        float $z = cos($radians) * $offset;
+        float $x = sin($radians) * $offset;
+        float $y = $i * $stepHeight;
+
+        // Move step into place
+        move -absolute $x $y $z $step[0];
+
+        // Rotate step so it faces inward
+        rotate -absolute 0 $angle 0 $step[0];
+
+        // Parent step under main group
+        parent $step[0] $stairGrp;
+    }
+}
+
+// ---------------------------------------------------
+// Example usage
+// makeSpiralStaircase numSteps length width height offset stepHeight stepRotation
+// ---------------------------------------------------
+//makeSpiralStaircase 20 3 1 0.2 5 0.5 20;
+//makeSpiralStaircase 50 3 5 0.2 5 3 60;
+//makeSpiralStaircase 500 3 5 0.8 5 0.4 15;
+makeSpiralStaircase(36, 4, 10, 0.8, 20, 0.3, 10); //makes 360 stairset
+
