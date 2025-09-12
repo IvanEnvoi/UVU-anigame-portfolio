@@ -1,0 +1,90 @@
+
+/*/ --- Bridge Builder --- //
+
+// array of bridge pieces (ordered)
+string $bridgePieces[] = {
+    "bridgeStart",
+    "bridge1",
+    "bridge2",
+    "bridge3",
+    "bridge4",
+    "bridge5",
+    "bridge6",
+    "bridge7",
+    "bridge8",
+    "bridge9",
+    "bridgeEnd"
+};
+
+// starting offset along Z (origin)
+float $offset = 0.0;
+
+// how far apart each piece should be placed (length of each piece)
+float $step = 4.0;  // <-- adjust this to match your bridge piece size
+
+// group to hold final bridge
+string $bridgeGroup = `group -em -name "bridge_grp"`;
+
+// loop through array, duplicate and place each piece
+for ($i = 0; $i < size($bridgePieces); $i++) {
+    string $dup[] = `duplicate $bridgePieces[$i]`;
+    move -absolute -x $offset -y 0 -z 0 $dup[0];
+    parent $dup[0] $bridgeGroup;
+    $offset += $step;
+}
+*/
+
+proc makeBridge()
+{
+    // The bridge pieces in order
+    string $pieces[] = {
+        "bridgeStart",
+        "bridge1","bridge2","bridge3","bridge4","bridge5",
+        "bridge6","bridge7","bridge8","bridge9",
+        "bridgeEnd"
+    };
+
+    // Group for all duplicates
+    string $bridgeGroup = `group -em -name "bridge_grp"`;
+
+    // Track position
+    float $posY = 0;
+    float $posZ = 0;
+
+    for ($i = 0; $i < size($pieces); $i++)
+    {
+        // Duplicate this piece
+        string $dup[] = `duplicate $pieces[$i]`;
+        string $name = $dup[0];
+
+        // Always move Z by +4
+        $posZ += 4;
+
+        // Special Y offsets depending on index
+        if ($i == 1) // after bridge1
+            $posY -= 4;
+        if ($i == 2) // after bridge2
+            $posY -= 3;
+        if ($i == 3) // after bridge3
+            $posY -= 2;
+        if ($i == 4) // after bridge4
+            $posY -= 1;
+        if ($i == 5) // after bridge5
+            $posY += 0;
+        if ($i == 6) // after bridge6
+            $posY += 1;
+        if ($i == 7) // after bridge7
+            $posY += 2;
+        if ($i == 8) // after bridge8
+            $posY += 3;
+        if ($i == 9) // after bridge9
+            $posY += 4;
+        // Place the duplicate
+        move -absolute 0 $posY $posZ $name;
+
+        // Add to group
+        parent $name $bridgeGroup;
+    }
+}
+
+//makeBridge 1 0 3 2 1 0 4 1 2 0 1;

@@ -1,0 +1,114 @@
+global proc makeBridgeRandom()
+{
+    // Bridge pieces in order
+    string $pieces[] = {
+        "bridgeStart","bridge1","bridge2","bridge3","bridge4",
+        "bridge5","bridge6","bridge7","bridge8","bridge9","bridgeEnd"
+    };
+
+    // Y offsets for each piece
+    float $yOffsets[] = {
+        0.0,   // bridgeStart
+        -4,    // bridge1
+        -3,    // bridge2
+        -2,    // bridge3
+        -1,    // bridge4
+        0,     // bridge5
+        1,     // bridge6
+        2,     // bridge7
+        3,     // bridge8
+        4,     // bridge9
+        0.0    // bridgeEnd
+    };
+
+    // Generate counts
+    int $counts[];
+    $counts[0] = 1;   // bridgeStart
+    $counts[10] = 1;  // bridgeEnd
+
+    for ($i=1; $i<10; $i++) {  // middle pieces only
+        $counts[$i] = `floor(rand(6))`; // 0–5
+    }
+
+    // Create group for this bridge
+    string $grp = `group -em -name "bridge_grp"`;
+
+    float $cursorY = 0.0;
+    float $cursorZ = 0.0;
+
+    // Loop over each piece type
+    for ($i=0; $i<size($pieces); $i++) {
+        for ($c=0; $c<$counts[$i]; $c++) {
+            string $dup[] = `duplicate $pieces[$i]`;
+            string $obj = $dup[0];
+            move 0 $cursorY $cursorZ $obj;
+            parent $obj $grp;
+
+            // Advance cursor
+            $cursorZ += 4.0;
+            $cursorY += $yOffsets[$i];
+        }
+    }
+}
+
+
+global proc makeBridge(
+    int $end1Count,
+    int $b1Count,
+    int $b2Count,
+    int $b3Count,
+    int $b4Count,
+    int $b5Count,
+    int $b6Count,
+    int $b7Count,
+    int $b8Count,
+    int $b9Count,
+    int $end2Count
+)
+{
+    string $pieces[] = {
+        "bridgeStart","bridge1","bridge2","bridge3","bridge4",
+        "bridge5","bridge6","bridge7","bridge8","bridge9","bridgeEnd"
+    };
+
+    int $counts[] = {
+        $end1Count,$b1Count,$b2Count,$b3Count,$b4Count,
+        $b5Count,$b6Count,$b7Count,$b8Count,$b9Count,$end2Count
+    };
+
+    // how much each piece type shifts Y
+    float $yOffsets[] = {
+        0.0,   // bridgeStart
+        -4,  // bridge1
+        -3,  // bridge2
+        -2,  // bridge3
+        -1,  // bridge4
+        -0,  // bridge5
+        1,  // bridge6
+        2,  // bridge7
+        3,  // bridge8
+        4,  // bridge9
+        0.0    // bridgeEnd
+    };
+
+    // create group
+    string $grp = `group -em -name "bridge_grp"`;
+
+    float $cursorY = 0.0;
+    float $cursorZ = 0.0;
+
+    // loop over each piece type
+    for ($i=0; $i<size($pieces); $i++) {
+        for ($c=0; $c<$counts[$i]; $c++) {
+            // duplicate piece
+            string $dup[] = `duplicate $pieces[$i]`;
+            move 0 $cursorY $cursorZ $dup[0];
+            parent $dup[0] $grp;
+
+            // advance cursor for next piece
+            $cursorZ += 4.0;
+            $cursorY += $yOffsets[$i];
+        }
+    }
+}
+makeBridgeRandom;
