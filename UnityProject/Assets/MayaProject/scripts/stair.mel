@@ -68,8 +68,8 @@ global proc makeSpiralStaircase(
 // Example usage
 // makeSpiralStaircase numSteps length width height offset stepHeight stepRotation
 // ---------------------------------------------------
-//makeSpiralStaircase 20 3 1 0.2 5 0.5 20;
-//makeSpiralStaircase 50 3 5 0.2 5 3 60;
-//makeSpiralStaircase 500 3 5 0.8 5 0.4 15;
-makeSpiralStaircase(36, 4, 10, 0.8, 20, 0.3, 10); //makes 360 stairset
+makeSpiralStaircase 20 3 1 0.2 3 0.5 20;
+makeSpiralStaircase 50 3 5 0.2 5 3 60;
+makeSpiralStaircase 500 3 5 0.8 10 0.4 15;
+makeSpiralStaircase(360, 4, 10, 0.8, 20, 0.3, 10); //makes 360 stairset
 
