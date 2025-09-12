@@ -3,7 +3,7 @@
  chatty killin it first itteration makes nearly what i want, readable and modifiable
  chatty made one mistake which i corrected, $x should have used sin() originally
  and $z needed to use cos(), this corrected the rotation of the stairs with the pos
- cuz trig fuccn triangles or some shit idk x3c (i actually had a love hate relationship with trig)
+ cuz trig fuccn circles and triangles or some shit idk x3c (i actually had a love hate relationship with trig)
  ANYWAYS.. all i did was swap the variables and it fixed the code.
 */
 
