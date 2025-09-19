@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: trees1.ma
-//Last modified: Thu, Sep 18, 2025 09:59:48 PM
+//Last modified: Thu, Sep 18, 2025 10:58:56 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,13 +11,13 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "2CD67C02-4DEC-D03A-F319-8F93ECEF4FD7";
+fileInfo "UUID" "96C367D3-4109-9C2E-2857-4F982DC14A9C";
 fileInfo "exportedFrom" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject/scenes/trees.ma";
 createNode transform -shared -name "persp";
 	rename -uuid "8A3E86C0-498D-9232-FD4D-27B2522701B8";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 6.4574117846324315 2.7235592283266721 20.45990946995115 ;
-	setAttr ".rotate" -type "double3" -4.8000000000000087 732.79999999999018 0 ;
+	setAttr ".translate" -type "double3" -196.89190250293797 97.948024346062212 2.7348431546029861 ;
+	setAttr ".rotate" -type "double3" -18.599999999989869 -446.39999999991323 0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -2.3934624186373954e-14 -1.6919313083049261e-15 
 		-2.8087810861323352e-14 ;
 createNode camera -shared -name "perspShape" -parent "persp";
@@ -28,7 +28,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	setAttr ".nearClipPlane" 0.001;
 	setAttr ".farClipPlane" 1000;
 	setAttr ".focusDistance" 0.05;
-	setAttr ".centerOfInterest" 56.536309759732461;
+	setAttr ".centerOfInterest" 226.73274095363118;
 	setAttr ".orthographicWidth" 58.012026294489154;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
@@ -107,12 +107,12 @@ createNode camera -shared -name "sideShape" -parent "side";
 	setAttr ".aiTranslator" -type "string" "orthographic";
 createNode transform -name "trees";
 	rename -uuid "F8A1B91C-47BF-4171-D938-3EB714C6487D";
-	setAttr ".translate" -type "double3" 36.000416928750546 2.0431602478027338 -23.022014403906642 ;
+	setAttr ".translate" -type "double3" 36.000417480468748 2.0431602478027342 -23.02201416015625 ;
 	setAttr ".scale" -type "double3" 12.068140330965141 12.068140330965141 12.068140330965141 ;
-	setAttr ".rotatePivot" -type "double3" -37.676382781711069 -2.0431602478027338 23.022014403906642 ;
+	setAttr ".rotatePivot" -type "double3" -37.676382781710906 -2.0431602478027457 23.022014403906724 ;
 	setAttr ".scalePivot" -type "double3" -4.3414589036704188 0.023686783814630241 2.0468764940995867 ;
-	setAttr ".scalePivotTranslate" -type "double3" -33.334923878040648 -2.0668470316173644 
-		20.97513790980706 ;
+	setAttr ".scalePivotTranslate" -type "double3" -33.334923878040655 -2.0668470316173635 
+		20.975137909807046 ;
 createNode transform -name "pines" -parent "trees";
 	rename -uuid "99B68F18-4400-7FA6-27E4-7287E837CD96";
 createNode transform -name "SM_tree_pine_large4" -parent "pines";
@@ -31704,6 +31704,23 @@ createNode transform -name "SM_tree_pine_mid2" -parent "pines";
 createNode mesh -name "SM_tree_pine_mid2Shape" -parent "SM_tree_pine_mid2";
 	rename -uuid "19521476-455F-A524-8953-19B8D5A44F41";
 	setAttr -keyable off ".visibility";
+	setAttr -size 6 ".instObjGroups[0].objectGroups";
+	setAttr ".visibleInReflections" yes;
+	setAttr ".visibleInRefractions" yes;
+	setAttr ".uvPivot" -type "double2" 0.23210527002811432 0.5 ;
+	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
+	setAttr ".currentUVSet" -type "string" "map1";
+	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
+	setAttr ".currentColorSet" -type "string" "SculptFreezeColorTemp";
+	setAttr -size 2 ".colorSet";
+	setAttr ".colorSet[0].colorName" -type "string" "SculptFreezeColorTemp";
+	setAttr ".colorSet[1].colorName" -type "string" "SculptMaskColorTemp";
+	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
+	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
+createNode mesh -name "polySurfaceShape113" -parent "SM_tree_pine_mid2";
+	rename -uuid "CDE28BA4-4D23-D96F-5AD9-1AB44D3ADAE8";
+	setAttr -keyable off ".visibility";
+	setAttr ".intermediateObject" yes;
 	setAttr -size 3 ".instObjGroups[0].objectGroups";
 	setAttr ".instObjGroups[0].objectGroups[0].objectGrpCompList" -type "componentList" 
 		1 "f[0:1224]";
@@ -31718,7 +31735,7 @@ createNode mesh -name "SM_tree_pine_mid2Shape" -parent "SM_tree_pine_mid2";
 	setAttr ".componentTags[0].componentTagContents" -type "componentList" 2 "f[728:747]" "f[823:842]";
 	setAttr ".componentTags[1].componentTagName" -type "string" "sides";
 	setAttr ".componentTags[1].componentTagContents" -type "componentList" 3 "f[496:727]" "f[738:822]" "f[833:1224]";
-	setAttr ".uvPivot" -type "double2" 0.23456163704395294 0.5 ;
+	setAttr ".uvPivot" -type "double2" 0.23210527002811432 0.5 ;
 	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
 	setAttr -size 1443 ".uvSet[0].uvSetPoints";
 	setAttr ".uvSet[0].uvSetPoints[0:249]" -type "float2" 0.060747564 0.10505877
@@ -95204,11 +95221,11 @@ createNode mesh -name "SM_tree_birch_small2Shape" -parent "SM_tree_birch_small2"
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -name "oak" -parent "trees";
 	rename -uuid "71682760-4954-C96D-9D1E-D7A7BC793234";
-createNode transform -name "SM__tree_oak1" -parent "oak";
+createNode transform -name "SM_tree_oak1" -parent "oak";
 	rename -uuid "8927E5B9-4AF3-1CAC-4A99-2486AB96559B";
 	setAttr ".rotatePivot" -type "double3" 1.0059481063104589 1.0948246103604846 -5.5689590499156587 ;
 	setAttr ".scalePivot" -type "double3" 1.0059481063104589 1.0948246103604846 -5.5689590499156587 ;
-createNode mesh -name "SM__tree_oak1Shape" -parent "SM__tree_oak1";
+createNode mesh -name "SM_tree_oak1Shape" -parent "SM_tree_oak1";
 	rename -uuid "60032E62-4F1A-57ED-EFCA-B5A711EE0378";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
@@ -106932,12 +106949,12 @@ createNode mesh -name "SM__tree_oak1Shape" -parent "SM__tree_oak1";
 		3038 0 
 		3039 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "SM__tree_oak2" -parent "oak";
+createNode transform -name "SM_tree_oak2" -parent "oak";
 	rename -uuid "7AA67AE9-47D3-CD7C-6D0D-B68DDA96EFF5";
 	setAttr ".rotatePivot" -type "double3" -1.7274229035162032 0.27656624507632954 
 		-7.9710839465968659 ;
 	setAttr ".scalePivot" -type "double3" -1.7274229035162032 0.27656624507632954 -7.9710839465968659 ;
-createNode mesh -name "SM__tree_oak2Shape" -parent "SM__tree_oak2";
+createNode mesh -name "SM_tree_oak2Shape" -parent "SM_tree_oak2";
 	rename -uuid "14AD89C0-4CF2-E4CD-E38D-DAAF8510AF9A";
 	setAttr -keyable off ".visibility";
 	setAttr -size 2 ".instObjGroups[0].objectGroups";
@@ -114107,7 +114124,7 @@ createNode mesh -name "SM__tree_oak2Shape" -parent "SM__tree_oak2";
 		2121 0 
 		2122 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -name "polySurfaceShape85" -parent "SM__tree_oak2";
+createNode mesh -name "polySurfaceShape85" -parent "SM_tree_oak2";
 	rename -uuid "BCFF19BE-4C88-4C6A-E1CF-F8A2815634C9";
 	setAttr -keyable off ".visibility";
 	setAttr ".intermediateObject" yes;
@@ -121969,12 +121986,12 @@ createNode mesh -name "polySurfaceShape85" -parent "SM__tree_oak2";
 	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "SM__tree_oak3" -parent "oak";
+createNode transform -name "SM_tree_oak3" -parent "oak";
 	rename -uuid "E89BF6D0-4D18-EC66-DE92-E0B6C03564CE";
 	setAttr ".rotatePivot" -type "double3" -2.4197212219238287 0.58013612718911067 
 		-5.1094860839843754 ;
 	setAttr ".scalePivot" -type "double3" -2.4197212219238287 0.58013612718911067 -5.1094860839843754 ;
-createNode mesh -name "SM__tree_oak3Shape" -parent "SM__tree_oak3";
+createNode mesh -name "SM_tree_oak3Shape" -parent "SM_tree_oak3";
 	rename -uuid "D7AC6E27-441B-9EF4-5D5D-A8ADFDF1318E";
 	setAttr -keyable off ".visibility";
 	setAttr -size 2 ".instObjGroups[0].objectGroups";
@@ -129567,11 +129584,11 @@ createNode mesh -name "SM__tree_oak3Shape" -parent "SM__tree_oak3";
 		2016 0 
 		2108 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "SM__tree_oak4" -parent "oak";
+createNode transform -name "SM_tree_oak4" -parent "oak";
 	rename -uuid "B2720636-430E-8332-2A8B-9A850B7CE1D3";
 	setAttr ".rotatePivot" -type "double3" -1.7757004165649417 1.0420564694251204 -2.681442355272162 ;
 	setAttr ".scalePivot" -type "double3" -1.7757004165649417 1.0420564694251204 -2.681442355272162 ;
-createNode mesh -name "SM__tree_oak4Shape" -parent "SM__tree_oak4";
+createNode mesh -name "SM_tree_oak4Shape" -parent "SM_tree_oak4";
 	rename -uuid "D95D1FB2-47B4-F783-9CEB-3B8538BB262D";
 	setAttr -keyable off ".visibility";
 	setAttr -size 2 ".instObjGroups[0].objectGroups";
@@ -159417,15 +159434,6 @@ createNode groupId -name "groupId778";
 createNode groupId -name "groupId779";
 	rename -uuid "5D3A3015-4437-5C04-8710-898D8D1FC97A";
 	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId780";
-	rename -uuid "A235EFE0-4967-1EFF-504E-9DA55E254DD2";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId781";
-	rename -uuid "2FE0478E-4A58-2018-9FFA-A9B61F27AFB5";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId782";
-	rename -uuid "880E7358-42C5-2B42-3D10-47B9875D57DD";
-	setAttr ".isHistoricallyInteresting" 0;
 createNode groupId -name "groupId783";
 	rename -uuid "6C76AE54-4CA9-0065-8E68-929CFEC7D870";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -159558,6 +159566,34 @@ createNode groupId -name "groupId856";
 createNode groupId -name "groupId857";
 	rename -uuid "BB929277-4D14-0A18-5E7B-8FB2EA54723E";
 	setAttr ".isHistoricallyInteresting" 0;
+createNode polyMergeVert -name "polyMergeVert1";
+	rename -uuid "A59F092A-4744-7B54-C5F9-CFB2FAECA41A";
+	setAttr ".inputComponents" -type "componentList" 1 "vtx[0:1234]";
+	setAttr ".inputMatrix" -type "matrix" 12.068140330965141 0 0 0 0 12.068140330965141 0 0
+		 0 0 12.068140330965141 0 5071.736943765216 -28.585543106419181 -2470.1992770947745 1;
+	setAttr ".distance" 0.001;
+	setAttr ".alwaysMergeTwoVertices" yes;
+createNode groupId -name "groupId858";
+	rename -uuid "D3913D01-42F7-C280-C468-02832AABD406";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts1";
+	rename -uuid "0AED05B3-49F2-DF40-EC95-D68618EF1BF4";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 1 "f[0:1224]";
+createNode groupId -name "groupId859";
+	rename -uuid "8BBB72D1-4C0B-F775-0D21-87AFA86DEAD8";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts2";
+	rename -uuid "30F3DF56-4961-6F27-90B7-EEBC19936039";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 1 "e[925:932]";
+createNode groupId -name "groupId860";
+	rename -uuid "3178E81C-4DC2-0F78-D71E-B7809911336D";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts3";
+	rename -uuid "94A0AC50-435C-A3A4-2D6C-F2A3D6446D5F";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 5 "e[2200:2208]" "e[2219:2228]" "e[2345]" "e[2396]" "e[2400]";
 select -noExpand :time1;
 	setAttr ".outTime" 0;
 select -noExpand :hardwareRenderingGlobals;
@@ -159685,18 +159721,19 @@ connectAttr "groupId759.groupId" "SM_tree_pine_large2Shape.instObjGroups.objectG
 		;
 connectAttr "set2.memberWireframeColor" "SM_tree_pine_large2Shape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
-connectAttr "groupId780.groupId" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[0].objectGroupId"
+connectAttr "groupId858.groupId" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[0].objectGroupId"
 		;
 connectAttr ":initialShadingGroup.memberWireframeColor" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[0].objectGrpColor"
 		;
-connectAttr "groupId781.groupId" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[1].objectGroupId"
+connectAttr "groupId859.groupId" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[1].objectGroupId"
 		;
 connectAttr "set2.memberWireframeColor" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
-connectAttr "groupId782.groupId" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[2].objectGroupId"
+connectAttr "groupId860.groupId" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[2].objectGroupId"
 		;
 connectAttr "set1.memberWireframeColor" "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[2].objectGrpColor"
 		;
+connectAttr "polyMergeVert1.output" "SM_tree_pine_mid2Shape.inMesh";
 connectAttr "groupId774.groupId" "SM_tree_pine_mid1Shape.instObjGroups.objectGroups[0].objectGroupId"
 		;
 connectAttr ":initialShadingGroup.memberWireframeColor" "SM_tree_pine_mid1Shape.instObjGroups.objectGroups[0].objectGrpColor"
@@ -159785,21 +159822,21 @@ connectAttr "groupId773.groupId" "SM_tree_birch_small2Shape.instObjGroups.object
 		;
 connectAttr "set2.memberWireframeColor" "SM_tree_birch_small2Shape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
-connectAttr "groupId756.groupId" "SM__tree_oak3Shape.instObjGroups.objectGroups[0].objectGroupId"
+connectAttr "groupId756.groupId" "SM_tree_oak3Shape.instObjGroups.objectGroups[0].objectGroupId"
 		;
-connectAttr ":initialShadingGroup.memberWireframeColor" "SM__tree_oak3Shape.instObjGroups.objectGroups[0].objectGrpColor"
+connectAttr ":initialShadingGroup.memberWireframeColor" "SM_tree_oak3Shape.instObjGroups.objectGroups[0].objectGrpColor"
 		;
-connectAttr "groupId757.groupId" "SM__tree_oak3Shape.instObjGroups.objectGroups[1].objectGroupId"
+connectAttr "groupId757.groupId" "SM_tree_oak3Shape.instObjGroups.objectGroups[1].objectGroupId"
 		;
-connectAttr "set2.memberWireframeColor" "SM__tree_oak3Shape.instObjGroups.objectGroups[1].objectGrpColor"
+connectAttr "set2.memberWireframeColor" "SM_tree_oak3Shape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
-connectAttr "groupId793.groupId" "SM__tree_oak4Shape.instObjGroups.objectGroups[0].objectGroupId"
+connectAttr "groupId793.groupId" "SM_tree_oak4Shape.instObjGroups.objectGroups[0].objectGroupId"
 		;
-connectAttr ":initialShadingGroup.memberWireframeColor" "SM__tree_oak4Shape.instObjGroups.objectGroups[0].objectGrpColor"
+connectAttr ":initialShadingGroup.memberWireframeColor" "SM_tree_oak4Shape.instObjGroups.objectGroups[0].objectGrpColor"
 		;
-connectAttr "groupId794.groupId" "SM__tree_oak4Shape.instObjGroups.objectGroups[1].objectGroupId"
+connectAttr "groupId794.groupId" "SM_tree_oak4Shape.instObjGroups.objectGroups[1].objectGroupId"
 		;
-connectAttr "set2.memberWireframeColor" "SM__tree_oak4Shape.instObjGroups.objectGroups[1].objectGrpColor"
+connectAttr "set2.memberWireframeColor" "SM_tree_oak4Shape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
 connectAttr "groupId718.groupId" "polySurfaceShape90.instObjGroups.objectGroups[0].objectGroupId"
 		;
@@ -159918,14 +159955,14 @@ relationship "shadowLink" ":lightLinker1" "lambert1SG.message" ":defaultLightSet
 connectAttr "layerManager.displayLayerId[0]" "defaultLayer.identification";
 connectAttr "renderLayerManager.renderLayerId[0]" "defaultRenderLayer.identification"
 		;
-connectAttr "groupId782.message" "set1.groupNodes" -nextAvailable;
 connectAttr "groupId785.message" "set1.groupNodes" -nextAvailable;
 connectAttr "groupId787.message" "set1.groupNodes" -nextAvailable;
-connectAttr "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[2]" "set1.dagSetMembers"
-		 -nextAvailable;
+connectAttr "groupId860.message" "set1.groupNodes" -nextAvailable;
 connectAttr "SM_tree_pine_large4Shape.instObjGroups.objectGroups[2]" "set1.dagSetMembers"
 		 -nextAvailable;
 connectAttr "SM_tree_pine_small1Shape.instObjGroups.objectGroups[1]" "set1.dagSetMembers"
+		 -nextAvailable;
+connectAttr "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[2]" "set1.dagSetMembers"
 		 -nextAvailable;
 connectAttr ":defaultArnoldDenoiser.message" ":defaultArnoldRenderOptions.imagers"
 		 -nextAvailable;
@@ -159945,14 +159982,14 @@ connectAttr "groupId773.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId775.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId777.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId779.message" "set2.groupNodes" -nextAvailable;
-connectAttr "groupId781.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId784.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId788.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId790.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId792.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId794.message" "set2.groupNodes" -nextAvailable;
 connectAttr "groupId833.message" "set2.groupNodes" -nextAvailable;
-connectAttr "SM__tree_oak2Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
+connectAttr "groupId859.message" "set2.groupNodes" -nextAvailable;
+connectAttr "SM_tree_oak2Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
 connectAttr "SM_tree_birch_mid1Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
@@ -159962,7 +159999,7 @@ connectAttr "SM_tree_pine_mid4Shape.instObjGroups.objectGroups[1]" "set2.dagSetM
 		 -nextAvailable;
 connectAttr "SM_tree_birch_large3Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
-connectAttr "SM__tree_oak3Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
+connectAttr "SM_tree_oak3Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
 connectAttr "SM_tree_pine_large2Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
@@ -159986,8 +160023,6 @@ connectAttr "SM_tree_pine_mid3Shape.instObjGroups.objectGroups[1]" "set2.dagSetM
 		 -nextAvailable;
 connectAttr "SM_tree_pine_mid5Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
-connectAttr "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
-		 -nextAvailable;
 connectAttr "SM_tree_pine_large4Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
 connectAttr "SM_tree_pine_small1Shape.instObjGroups.objectGroups[2]" "set2.dagSetMembers"
@@ -159996,9 +160031,11 @@ connectAttr "SM_tree_birch_mid4Shape.instObjGroups.objectGroups[1]" "set2.dagSet
 		 -nextAvailable;
 connectAttr "SM_tree_birch_mid2Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
-connectAttr "SM__tree_oak4Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
+connectAttr "SM_tree_oak4Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
 connectAttr "SM_tree_pine_large3Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
+		 -nextAvailable;
+connectAttr "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[1]" "set2.dagSetMembers"
 		 -nextAvailable;
 connectAttr "lambert2.outColor" "lambert2SG.surfaceShader";
 connectAttr "lambert2SG.message" "materialInfo1.shadingGroup";
@@ -160052,9 +160089,9 @@ connectAttr "pCubeShape24.instObjGroups" "anisotropic1SG.dagSetMembers" -nextAva
 		;
 connectAttr "anisotropic1SG.message" "materialInfo2.shadingGroup";
 connectAttr "anisotropic1.message" "materialInfo2.material";
-connectAttr "SM__tree_oak1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[8].dependNode"
+connectAttr "SM_tree_oak1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[8].dependNode"
 		;
-connectAttr "SM__tree_oak1Shape.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[9].dependNode"
+connectAttr "SM_tree_oak1Shape.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[9].dependNode"
 		;
 connectAttr ":lambert1.outColor" "lambert1SG.surfaceShader";
 connectAttr "lambert1SG.message" "materialInfo3.shadingGroup";
@@ -160067,6 +160104,14 @@ connectAttr "lambert2SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGr
 		;
 connectAttr "anisotropic1.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[3].dependNode"
 		;
+connectAttr "groupParts3.outputGeometry" "polyMergeVert1.inputPolymesh";
+connectAttr "SM_tree_pine_mid2Shape.worldMatrix" "polyMergeVert1.manipMatrix";
+connectAttr "polySurfaceShape113.outMesh" "groupParts1.inputGeometry";
+connectAttr "groupId858.groupId" "groupParts1.groupId";
+connectAttr "groupParts1.outputGeometry" "groupParts2.inputGeometry";
+connectAttr "groupId859.groupId" "groupParts2.groupId";
+connectAttr "groupParts2.outputGeometry" "groupParts3.inputGeometry";
+connectAttr "groupId860.groupId" "groupParts3.groupId";
 connectAttr "lambert2SG.partition" ":renderPartition.sets" -nextAvailable;
 connectAttr "anisotropic1SG.partition" ":renderPartition.sets" -nextAvailable;
 connectAttr "lambert1SG.partition" ":renderPartition.sets" -nextAvailable;
@@ -160074,11 +160119,11 @@ connectAttr "lambert2.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "anisotropic1.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "defaultRenderLayer.message" ":defaultRenderingList1.rendering" -nextAvailable
 		;
-connectAttr "SM__tree_oak2Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
+connectAttr "SM_tree_oak2Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
-connectAttr "SM__tree_oak1Shape.instObjGroups" ":initialShadingGroup.dagSetMembers"
+connectAttr "SM_tree_oak1Shape.instObjGroups" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
-connectAttr "SM__tree_oak2Shape.instObjGroups" ":initialShadingGroup.dagSetMembers"
+connectAttr "SM_tree_oak2Shape.instObjGroups" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
 connectAttr "polySurfaceShape90.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
@@ -160092,7 +160137,7 @@ connectAttr "SM_tree_pine_mid4Shape.instObjGroups.objectGroups[0]" ":initialShad
 		 -nextAvailable;
 connectAttr "SM_tree_birch_large3Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
-connectAttr "SM__tree_oak3Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
+connectAttr "SM_tree_oak3Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
 connectAttr "SM_tree_pine_large2Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
@@ -160116,8 +160161,6 @@ connectAttr "SM_tree_pine_mid3Shape.instObjGroups.objectGroups[0]" ":initialShad
 		 -nextAvailable;
 connectAttr "SM_tree_pine_mid5Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
-connectAttr "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
-		 -nextAvailable;
 connectAttr "SM_tree_pine_large4Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
 connectAttr "SM_tree_pine_small1Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
@@ -160126,7 +160169,7 @@ connectAttr "SM_tree_birch_mid4Shape.instObjGroups.objectGroups[0]" ":initialSha
 		 -nextAvailable;
 connectAttr "SM_tree_birch_mid2Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
-connectAttr "SM__tree_oak4Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
+connectAttr "SM_tree_oak4Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
 connectAttr "sixFootMan:sixFootManShape.instObjGroups" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
@@ -160180,6 +160223,8 @@ connectAttr "polySurfaceShape99.instObjGroups.objectGroups[0]" ":initialShadingG
 		 -nextAvailable;
 connectAttr "|bigtrees|big_tree|polySurface97|polySurfaceShape97.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
+connectAttr "SM_tree_pine_mid2Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
+		 -nextAvailable;
 connectAttr "groupId191.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "groupId713.message" ":initialShadingGroup.groupNodes" -nextAvailable
@@ -160219,8 +160264,6 @@ connectAttr "groupId774.message" ":initialShadingGroup.groupNodes" -nextAvailabl
 connectAttr "groupId776.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "groupId778.message" ":initialShadingGroup.groupNodes" -nextAvailable
-		;
-connectAttr "groupId780.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "groupId783.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
@@ -160281,5 +160324,7 @@ connectAttr "groupId855.message" ":initialShadingGroup.groupNodes" -nextAvailabl
 connectAttr "groupId856.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "groupId857.message" ":initialShadingGroup.groupNodes" -nextAvailable
+		;
+connectAttr "groupId858.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 // End of trees1.ma
