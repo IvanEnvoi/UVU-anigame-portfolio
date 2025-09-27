@@ -1,0 +1,62 @@
+//function for each operatior
+//1 arg
+//calculate all args
+///return
+//sum dif multi div power mean median
+
+global proc float math_sum(float $input[])
+{
+    float $result = 0;
+    for ($i = 0; $i < size($input); $i++)
+    {
+        $result += $input[$i];
+    }
+    return $result;
+}
+
+global proc float math_dif(float $input[])
+{
+    if (size($input) == 0) return 0;
+    float $result = $input[0];
+    for ($i = 1; $i < size($input); $i++)
+    {
+        $result -= $input[$i];
+    }
+    return $result;
+}
+
+global proc calculator(string $funct, float $arry)
+{
+    if ($funct == "sum")
+    {
+        print("sum: " + math_sum($arry));
+    }
+    else if ($funct == "dif")
+    {
+        print("dif: " + math_dif($arry));
+    }
+    else
+    {
+        print("Function not recognized");
+    }
+}
+
+global proc float math_median(float $input[])
+{
+    int $size = size($input);
+    if ($size == 0) return 0;
+    
+    // Sort the array
+    float $sorted[] = `sort $input`;
+    
+    if ($size % 2 == 0)
+    {
+        // Even number of elements
+        return $sorted[$size / 2 -1] + $sorted[$size / 2];
+    }
+    else
+    {
+        // Odd number of elements
+        return $sorted[$size]
+    }
+}
