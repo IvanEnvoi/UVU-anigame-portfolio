@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f8f7ab48a174d409848f7c98c2133d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameActionObj: {fileID: 11400000, guid: 82e40e78143f613468b7e7aced43ebaa, type: 2}
+  gameActionObj: {fileID: 11400000, guid: f4cc9668208d6d54aa390e227efdaf9f, type: 2}
   awakeEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3772,6 +3772,7 @@ GameObject:
   - component: {fileID: 767206293}
   - component: {fileID: 767206292}
   - component: {fileID: 767206291}
+  - component: {fileID: 767206294}
   m_Layer: 5
   m_Name: WinText
   m_TagString: Untagged
@@ -3795,7 +3796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 18, y: 15}
+  m_AnchoredPosition: {x: 23, y: 146}
   m_SizeDelta: {x: -420, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &767206291
@@ -3810,25 +3811,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f8f7ab48a174d409848f7c98c2133d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameActionObj: {fileID: 11400000, guid: 86a610cd8abbb4784b4ebc83b73167e3, type: 2}
+  gameActionObj: {fileID: 11400000, guid: 3fb1fc1673848e748b35392603404b8f, type: 2}
   awakeEvent:
     m_PersistentCalls:
       m_Calls: []
   raiseEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 767206291}
-        m_TargetAssemblyTypeName: TextMeshProBehaviour, Assembly-CSharp
-        m_MethodName: UpdateText
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: You Win
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &767206292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3849,7 +3838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: get 2 gems!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3914,7 +3903,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 20.463074, w: 0}
+  m_margin: {x: -104.90373, y: 0, z: -108.320984, w: -90.32698}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3928,6 +3917,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767206289}
   m_CullTransparentMesh: 1
+--- !u!114 &767206294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767206289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 3fb1fc1673848e748b35392603404b8f, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 767206291}
+        m_TargetAssemblyTypeName: TextMeshProBehaviour, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: You Win!
+          m_BoolArgument: 0
+        m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdTime: 0.1
 --- !u!1001 &770689779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10528,6 +10552,30 @@ PrefabInstance:
     - target: {fileID: 230215675440308354, guid: b24bc1f4ff50a8b408e7d57f7ff5ffb7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -51.669
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774786200642559578, guid: b24bc1f4ff50a8b408e7d57f7ff5ffb7, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774786200642559578, guid: b24bc1f4ff50a8b408e7d57f7ff5ffb7, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774786200642559578, guid: b24bc1f4ff50a8b408e7d57f7ff5ffb7, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cc9668208d6d54aa390e227efdaf9f, type: 2}
+    - target: {fileID: 1774786200642559578, guid: b24bc1f4ff50a8b408e7d57f7ff5ffb7, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: RaiseAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774786200642559578, guid: b24bc1f4ff50a8b408e7d57f7ff5ffb7, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: GameAction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774786200642559578, guid: b24bc1f4ff50a8b408e7d57f7ff5ffb7, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4233390667190564592, guid: b24bc1f4ff50a8b408e7d57f7ff5ffb7, type: 3}
       propertyPath: m_Name
