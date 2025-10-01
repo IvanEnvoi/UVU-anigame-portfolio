@@ -150,9 +150,12 @@ global proc calculator(string $funct, float $arry[])
     }
 }
 // Example usage:
-calculator("sum", {3, 2});
+calculator("sum", {3, 2, 5, 1, 4});
 calculator("median", {3, 2, 5, 1, 4});
 calculator("diff", {3, 2, 5, 1, 4});
 calculator("avg", {3, 2, 5, 1, 4});
-calculator("multi", {3, 2});
-calculator("div", {3, 2});
+calculator("multi", {3, 2, 5, 1, 4});
+calculator("div", {3, 2, 5, 1, 4});
+calculator("power", {3, 2, 5`, 1, 4});
+calculator("mean", {3, 2, 5, 1, 4});
+// End of calculator.mel
