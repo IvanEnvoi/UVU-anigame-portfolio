@@ -116,6 +116,95 @@ global proc float math_median(float $input[])
 //   $arry  - The array of float values to process.
 global proc calculator(string $funct, float $arry[])
 {
+    string $expr = "";
+    float $result = 0;
+    int $size = size($arry);
+
+    if ($size == 0)
+    {
+        print("No numbers provided.\n");
+        return;
+    }
+
+    if ($funct == "sum")
+    {
+        for ($i = 0; $i < $size; $i++)
+        {
+            $expr += $arry[$i];
+            if ($i < $size - 1) $expr += " + ";
+        }
+        $result = math_sum($arry);
+        print($expr + " = " + $result + "\n");
+    }
+    else if ($funct == "diff")
+    {
+        for ($i = 0; $i < $size; $i++)
+        {
+            $expr += $arry[$i];
+            if ($i < $size - 1) $expr += " - ";
+        }
+        $result = math_diff($arry);
+        print($expr + " = " + $result + "\n");
+    }
+    else if ($funct == "multi")
+    {
+        for ($i = 0; $i < $size; $i++)
+        {
+            $expr += $arry[$i];
+            if ($i < $size - 1) $expr += " * ";
+        }
+        $result = math_multi($arry);
+        print($expr + " = " + $result + "\n");
+    }
+    else if ($funct == "div")
+    {
+        for ($i = 0; $i < $size; $i++)
+        {
+            $expr += $arry[$i];
+            if ($i < $size - 1) $expr += " / ";
+        }
+        $result = math_div($arry);
+        print($expr + " = " + $result + "\n");
+    }
+    else if ($funct == "power")
+    {
+        for ($i = 0; $i < $size; $i++)
+        {
+            $expr += $arry[$i];
+            if ($i < $size - 1) $expr += " ^ ";
+        }
+        $result = math_power($arry);
+        print($expr + " = " + $result + "\n");
+    }
+    else if ($funct == "mean" || $funct == "avg")
+    {
+        for ($i = 0; $i < $size; $i++)
+        {
+            $expr += $arry[$i];
+            if ($i < $size - 1) $expr += ", ";
+        }
+        $result = math_mean($arry);
+        print("mean(" + $expr + ") = " + $result + "\n");
+    }
+    else if ($funct == "median")
+    {
+        for ($i = 0; $i < $size; $i++)
+        {
+            $expr += $arry[$i];
+            if ($i < $size - 1) $expr += ", ";
+        }
+        $result = math_median($arry);
+        print("median(" + $expr + ") = " + $result + "\n");
+    }
+    else
+    {
+        print("Function not recognized\n");
+    }
+}
+
+// Simplified calculator function that directly prints results without detailed expressions
+global proc calculator_simple(string $funct, float $arry[])
+{
     if ($funct == "sum")
     {
         print("Sum: " + math_sum($arry) + "\n");
@@ -149,6 +238,7 @@ global proc calculator(string $funct, float $arry[])
         print("Function not recognized\n");
     }
 }
+
 // Example usage:
 calculator("sum", {3, 2, 5, 1, 4});
 calculator("median", {3, 2, 5, 1, 4});
@@ -156,6 +246,6 @@ calculator("diff", {3, 2, 5, 1, 4});
 calculator("avg", {3, 2, 5, 1, 4});
 calculator("multi", {3, 2, 5, 1, 4});
 calculator("div", {3, 2, 5, 1, 4});
-calculator("power", {3, 2, 5`, 1, 4});
+calculator("power", {3, 2, 5, 1, 4});
 calculator("mean", {3, 2, 5, 1, 4});
 // End of calculator.mel
