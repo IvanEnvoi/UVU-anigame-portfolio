@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Cartoon Animal.ma
-//Last modified: Fri, Oct 10, 2025 07:03:04 PM
+//Last modified: Fri, Oct 10, 2025 07:05:47 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "281F9FBA-459C-9082-B81C-208248C17D68";
+fileInfo "UUID" "3FAD8760-4784-BE51-4A4F-539D9F0E0872";
 createNode transform -shared -name "persp";
 	rename -uuid "B524A512-4F64-5308-D439-F2A4B595FF12";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 6.0282483780562757 7.6452079449925829 -2.8629715757702359 ;
-	setAttr ".rotate" -type "double3" 340.20000012669021 -8154.799999998826 0 ;
+	setAttr ".translate" -type "double3" 3.0660582118269906 4.8398090317484108 4.7845413322043573 ;
+	setAttr ".rotate" -type "double3" 337.80000013321899 -8258.799999992274 -8.5285677505048247e-16 ;
 	setAttr ".rotatePivot" -type "double3" 0 -2.2204460492503131e-16 0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -5.6747746506494417e-14 -1.0193691423190974e-14 
 		-7.9111811767239186e-14 ;
@@ -30,7 +30,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	setAttr ".panZoomEnabled" yes;
 	setAttr ".focalLength" 34.999999999999979;
 	setAttr ".nearClipPlane" 0.005;
-	setAttr ".centerOfInterest" 8.2815075978344037;
+	setAttr ".centerOfInterest" 2.372691652011834;
 	setAttr ".orthographicWidth" 19.163492021062581;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
@@ -1784,6 +1784,25 @@ createNode transform -name "robokitty_main" -parent "Robokitty";
 createNode mesh -name "robokitty_mainShape" -parent "robokitty_main";
 	rename -uuid "48E46D1F-49F7-257D-F0A6-CB87770C5E42";
 	setAttr -keyable off ".visibility";
+	setAttr -size 21 ".instObjGroups[0].objectGroups";
+	setAttr ".visibleInReflections" yes;
+	setAttr ".visibleInRefractions" yes;
+	setAttr ".uvPivot" -type "double2" 0.74399703741073608 0.11459493637084961 ;
+	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
+	setAttr ".currentUVSet" -type "string" "map1";
+	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
+	setAttr -size 2 ".colorSet";
+	setAttr ".colorSet[0].colorName" -type "string" "SculptFreezeColorTemp";
+	setAttr ".colorSet[1].colorName" -type "string" "SculptMaskColorTemp";
+	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
+	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
+	setAttr ".displayFacesWithGroupId" 151;
+	setAttr ".borderWidth" 3;
+	setAttr ".dispResolution" 1;
+createNode mesh -name "polySurfaceShape8" -parent "robokitty_main";
+	rename -uuid "EBAD374C-47BC-39B2-FDC4-089FBD6CFA51";
+	setAttr -keyable off ".visibility";
+	setAttr ".intermediateObject" yes;
 	setAttr -size 11 ".instObjGroups[0].objectGroups";
 	setAttr ".instObjGroups[0].objectGroups[1].objectGrpCompList" -type "componentList" 
 		12 "f[191:195]" "f[198:201]" "f[207:223]" "f[1006:1010]" "f[1013:1016]" "f[1022:1038]" "f[1760:1764]" "f[1766:1768]" "f[1775:1792]" "f[2574:2578]" "f[2580:2582]" "f[2589:2606]";
@@ -21540,36 +21559,6 @@ createNode groupId -name "groupId282";
 createNode groupId -name "groupId283";
 	rename -uuid "FB9B6676-453D-7DDF-B93F-34A25236B1BB";
 	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId284";
-	rename -uuid "025EBDB9-4402-E086-A5EA-95AED939B519";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId285";
-	rename -uuid "A064769C-4990-E919-33B6-36BF182A03BD";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId286";
-	rename -uuid "CFBE8318-4560-3A7A-80A3-0B80410B6870";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId287";
-	rename -uuid "1E0D9F48-4F00-E343-D483-44B938ABE2B5";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId288";
-	rename -uuid "E66916B8-49ED-1B72-855A-4CBF20C29EEB";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId289";
-	rename -uuid "5E95D70F-4260-8F90-2584-B2852C47559D";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId290";
-	rename -uuid "FB38E281-4C1F-0934-F0A2-309B7DD3B767";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId291";
-	rename -uuid "C7B42077-4551-3A4F-78C6-63AACE60C2D6";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId292";
-	rename -uuid "1A01913A-4D23-E603-ED65-D4922824C7A5";
-	setAttr ".isHistoricallyInteresting" 0;
-createNode groupId -name "groupId293";
-	rename -uuid "CE3C927B-4022-CF3E-C7FC-9A877799FA02";
-	setAttr ".isHistoricallyInteresting" 0;
 createNode groupId -name "groupId294";
 	rename -uuid "92580B0B-4F4A-7051-8230-5C91F989FE5A";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -21591,6 +21580,88 @@ createNode groupId -name "groupId299";
 createNode groupId -name "groupId300";
 	rename -uuid "C0165D22-444B-1497-48BE-528F44414369";
 	setAttr ".isHistoricallyInteresting" 0;
+createNode polySplit -name "polySplit1";
+	rename -uuid "F83CB1FA-45EF-AAC6-2784-75920CF7C733";
+	setAttr -size 2 ".edge[0:1]"  1 0;
+	setAttr -size 2 ".desc[0:1]"  -2147480535 -2147480527;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode groupId -name "groupId301";
+	rename -uuid "0D993FBE-4293-76DE-C827-0FBE85DAFA5D";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts1";
+	rename -uuid "5369096A-4363-5F9B-3C7F-F4A1D2FA86BE";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 12 "f[191:195]" "f[198:201]" "f[207:223]" "f[1006:1010]" "f[1013:1016]" "f[1022:1038]" "f[1760:1764]" "f[1766:1768]" "f[1775:1792]" "f[2574:2578]" "f[2580:2582]" "f[2589:2606]";
+createNode groupId -name "groupId302";
+	rename -uuid "54E8DBA5-40CB-09F9-E6ED-0091431C9E2B";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts2";
+	rename -uuid "5BACA082-4AC1-1E7A-D3A9-E99C633018A8";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 112 "f[0:11]" "f[13:14]" "f[16]" "f[19:36]" "f[39:49]" "f[92:103]" "f[105:106]" "f[108]" "f[111:128]" "f[131:141]" "f[184:190]" "f[196:197]" "f[202:206]" "f[224:261]" "f[268]" "f[270]" "f[279:280]" "f[282]" "f[285:291]" "f[293]" "f[295]" "f[297]" "f[299]" "f[301]" "f[303]" "f[306:310]" "f[313:314]" "f[350]" "f[365]" "f[369]" "f[406:414]" "f[416]" "f[420]" "f[425:443]" "f[448]" "f[453:726]" "f[728]" "f[732:835]" "f[874:892]" "f[897:911]" "f[916:1005]" "f[1011:1012]" "f[1017:1021]" "f[1039:1108]" "f[1151]" "f[1155]" "f[1166]" "f[1173]" "f[1190]" "f[1197]" "f[1249:1260]" "f[1262:1263]" "f[1265]" "f[1268:1285]" "f[1288:1310]" "f[1312:1313]" "f[1315]" "f[1318:1335]" "f[1338:1348]" "f[1371]" "f[1373:1383]" "f[1753:1759]" "f[1765]" "f[1769:1774]" "f[1793:1829]" "f[1836]" "f[1838]" "f[1847:1848]" "f[1850]" "f[1853:1859]" "f[1861]" "f[1863]" "f[1865]" "f[1867]" "f[1869]" "f[1871]" "f[1874:1878]" "f[1881:1882]" "f[1918]" "f[1933]" "f[1937]" "f[1974]" "f[1976]" "f[1980]" "f[1985:1997]" "f[2002]" "f[2007:2257]" "f[2261:2371]" "f[2410:2425]" "f[2429:2439]" "f[2441:2455]" "f[2460:2573]" "f[2579]" "f[2583:2588]" "f[2607:2676]" "f[2715]" "f[2719]" "f[2730]" "f[2737]" "f[2754]" "f[2761]" "f[2813:2824]" "f[2826:2827]" "f[2829]" "f[2832:2849]" "f[2852:2874]" "f[2876:2877]" "f[2879]" "f[2882:2899]" "f[2902:2912]" "f[2935]" "f[2937:2947]";
+createNode groupId -name "groupId303";
+	rename -uuid "571C7597-432E-7D2D-8CCB-789AEC28179B";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts3";
+	rename -uuid "E380E91B-4FAE-CA01-0DF2-96BC71D96435";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 4 "f[66:71]" "f[158:163]" "f[1365:1370]" "f[2929:2934]";
+createNode groupId -name "groupId304";
+	rename -uuid "0331E957-4ACC-E507-72E5-519269D8F19A";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts4";
+	rename -uuid "600E7E3A-4452-FD05-B2D7-B894C28CD420";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 9 "f[50:61]" "f[142:153]" "f[1349:1360]" "f[2913:2924]" "f[3744:3767]" "f[3780:3821]" "f[3826:3855]" "f[3864:3899]" "f[3908:3919]";
+createNode groupId -name "groupId305";
+	rename -uuid "86F9044B-4D40-23F5-45F6-49A9CBD2C952";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts5";
+	rename -uuid "3ED8C4AE-4087-FA7C-3E31-46911991FC13";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 4 "f[3768:3779]" "f[3822:3825]" "f[3856:3863]" "f[3900:3907]";
+createNode groupId -name "groupId306";
+	rename -uuid "0013838A-4AD6-D828-5BDF-79BCE23C52B1";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts6";
+	rename -uuid "BAA36DC4-4E98-FCB9-162A-E7B84AFEE370";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 80 "f[62:65]" "f[72:91]" "f[154:157]" "f[164:183]" "f[262:267]" "f[269]" "f[271:278]" "f[281]" "f[283:284]" "f[292]" "f[294]" "f[296]" "f[298]" "f[300]" "f[302]" "f[304:305]" "f[311:312]" "f[315:349]" "f[351:364]" "f[366:368]" "f[370:405]" "f[415]" "f[417:419]" "f[421:424]" "f[444:447]" "f[449:452]" "f[727]" "f[729:731]" "f[836:873]" "f[893:895]" "f[912:915]" "f[1141:1150]" "f[1152:1154]" "f[1156:1165]" "f[1167:1172]" "f[1174:1189]" "f[1191:1196]" "f[1198:1246]" "f[1361:1364]" "f[1372]" "f[1384:1385]" "f[1557:1752]" "f[1830:1835]" "f[1837]" "f[1839:1846]" "f[1849]" "f[1851:1852]" "f[1860]" "f[1862]" "f[1864]" "f[1866]" "f[1868]" "f[1870]" "f[1872:1873]" "f[1879:1880]" "f[1883:1917]" "f[1919:1932]" "f[1934:1936]" "f[1938:1973]" "f[1975]" "f[1977:1979]" "f[1981:1984]" "f[1998:2001]" "f[2003:2006]" "f[2258:2260]" "f[2372:2409]" "f[2426:2428]" "f[2456:2459]" "f[2705:2714]" "f[2716:2718]" "f[2720:2729]" "f[2731:2736]" "f[2738:2753]" "f[2755:2760]" "f[2762:2810]" "f[2925:2928]" "f[2936]" "f[2948:2950]" "f[3126:3323]" "f[3944:3949]";
+createNode groupId -name "groupId307";
+	rename -uuid "64FFE5AF-4FDC-EDB0-4997-3BBC22DA104F";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts7";
+	rename -uuid "06472DB1-451C-B0EF-0CCA-F7A1B777B369";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 2 "f[1390:1556]" "f[2959:3125]";
+createNode groupId -name "groupId308";
+	rename -uuid "7515135C-4227-83DF-EEB5-1E8EEDCC8E9B";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts8";
+	rename -uuid "1478888A-4EF6-9DD8-22E6-2CA90CE787C4";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 4 "f[896]" "f[1247:1248]" "f[2440]" "f[2811:2812]";
+createNode groupId -name "groupId309";
+	rename -uuid "4C4CF2D9-4AD8-B853-04C8-74883D425917";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts9";
+	rename -uuid "33C2DDC3-4352-0C59-6956-C3A9C43B0478";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 30 "f[12]" "f[15]" "f[17:18]" "f[37:38]" "f[104]" "f[107]" "f[109:110]" "f[129:130]" "f[1109:1140]" "f[1261]" "f[1264]" "f[1266:1267]" "f[1286:1287]" "f[1311]" "f[1314]" "f[1316:1317]" "f[1336:1337]" "f[1386:1389]" "f[2677:2704]" "f[2825]" "f[2828]" "f[2830:2831]" "f[2850:2851]" "f[2875]" "f[2878]" "f[2880:2881]" "f[2900:2901]" "f[2951:2958]" "f[3324:3743]" "f[3920:3943]";
+createNode groupId -name "groupId310";
+	rename -uuid "92A9A041-4146-31FD-0295-E99C57E648FD";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts10";
+	rename -uuid "178FEC00-4ADA-E51E-924A-0B9C3E74F0BF";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 1 "f[0:3949]";
+createNode polySplit -name "polySplit2";
+	rename -uuid "3470473D-4C58-AAE6-73D0-B3B339260AED";
+	setAttr -size 2 ".edge[0:1]"  0 1;
+	setAttr -size 2 ".desc[0:1]"  -2147477418 -2147477412;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
 select -noExpand :time1;
 	setAttr -alteredValue -keyable on ".caching";
 	setAttr -channelBox on ".isHistoricallyInteresting";
@@ -21741,43 +21812,44 @@ connectAttr "groupId280.groupId" "helmet_insideShape.instObjGroups.objectGroups[
 connectAttr "textureEditorIsolateSelectSet.memberWireframeColor" "helmet_insideShape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
 connectAttr "Robokitty_ref_out.drawInfo" "robokitty_main.drawOverride";
-connectAttr "groupId284.groupId" "robokitty_mainShape.instObjGroups.objectGroups[1].objectGroupId"
+connectAttr "polySplit2.output" "robokitty_mainShape.inMesh";
+connectAttr "groupId301.groupId" "robokitty_mainShape.instObjGroups.objectGroups[1].objectGroupId"
 		;
 connectAttr "aiStandardSurface1SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
-connectAttr "groupId285.groupId" "robokitty_mainShape.instObjGroups.objectGroups[5].objectGroupId"
+connectAttr "groupId302.groupId" "robokitty_mainShape.instObjGroups.objectGroups[5].objectGroupId"
 		;
 connectAttr "aiStandardSurface10SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[5].objectGrpColor"
 		;
-connectAttr "groupId286.groupId" "robokitty_mainShape.instObjGroups.objectGroups[6].objectGroupId"
+connectAttr "groupId303.groupId" "robokitty_mainShape.instObjGroups.objectGroups[6].objectGroupId"
 		;
 connectAttr "aiStandardSurface4SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[6].objectGrpColor"
 		;
-connectAttr "groupId287.groupId" "robokitty_mainShape.instObjGroups.objectGroups[7].objectGroupId"
+connectAttr "groupId304.groupId" "robokitty_mainShape.instObjGroups.objectGroups[7].objectGroupId"
 		;
 connectAttr "aiStandardSurface5OPBR_SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[7].objectGrpColor"
 		;
-connectAttr "groupId288.groupId" "robokitty_mainShape.instObjGroups.objectGroups[8].objectGroupId"
+connectAttr "groupId305.groupId" "robokitty_mainShape.instObjGroups.objectGroups[8].objectGroupId"
 		;
 connectAttr "aiStandardSurface5OPBR_SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[8].objectGrpColor"
 		;
-connectAttr "groupId289.groupId" "robokitty_mainShape.instObjGroups.objectGroups[9].objectGroupId"
+connectAttr "groupId306.groupId" "robokitty_mainShape.instObjGroups.objectGroups[9].objectGroupId"
 		;
 connectAttr "aiStandardSurface4SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[9].objectGrpColor"
 		;
-connectAttr "groupId290.groupId" "robokitty_mainShape.instObjGroups.objectGroups[10].objectGroupId"
+connectAttr "groupId307.groupId" "robokitty_mainShape.instObjGroups.objectGroups[10].objectGroupId"
 		;
 connectAttr "aiStandardSurface3SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[10].objectGrpColor"
 		;
-connectAttr "groupId291.groupId" "robokitty_mainShape.instObjGroups.objectGroups[11].objectGroupId"
+connectAttr "groupId308.groupId" "robokitty_mainShape.instObjGroups.objectGroups[11].objectGroupId"
 		;
 connectAttr "aiStandardSurface11SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[11].objectGrpColor"
 		;
-connectAttr "groupId292.groupId" "robokitty_mainShape.instObjGroups.objectGroups[12].objectGroupId"
+connectAttr "groupId309.groupId" "robokitty_mainShape.instObjGroups.objectGroups[12].objectGroupId"
 		;
 connectAttr "aiStandardSurface7SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[12].objectGrpColor"
 		;
-connectAttr "groupId293.groupId" "robokitty_mainShape.instObjGroups.objectGroups[14].objectGroupId"
+connectAttr "groupId310.groupId" "robokitty_mainShape.instObjGroups.objectGroups[14].objectGroupId"
 		;
 connectAttr "textureEditorIsolateSelectSet.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[14].objectGrpColor"
 		;
@@ -21901,9 +21973,9 @@ connectAttr ":defaultArnoldDriver.message" ":defaultArnoldRenderOptions.driver";
 connectAttr "blu.outColor" "aiStandardSurface1SG.surfaceShader";
 connectAttr "eye_insideRShape.instObjGroups.objectGroups[1]" "aiStandardSurface1SG.dagSetMembers"
 		 -nextAvailable;
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[1]" "aiStandardSurface1SG.dagSetMembers"
-		 -nextAvailable;
 connectAttr "eye_insideLShape.instObjGroups.objectGroups[1]" "aiStandardSurface1SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[1]" "aiStandardSurface1SG.dagSetMembers"
 		 -nextAvailable;
 connectAttr "groupId117.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
 		;
@@ -21911,9 +21983,9 @@ connectAttr "groupId122.message" "aiStandardSurface1SG.groupNodes" -nextAvailabl
 		;
 connectAttr "groupId281.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
 		;
-connectAttr "groupId284.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
-		;
 connectAttr "groupId294.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
+		;
+connectAttr "groupId301.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface1SG.message" "materialInfo1.shadingGroup";
 connectAttr "blu.message" "materialInfo1.material";
@@ -21933,17 +22005,17 @@ connectAttr "aiStandardSurface2SG.message" "materialInfo3.shadingGroup";
 connectAttr "Clear.message" "materialInfo3.material";
 connectAttr "Clear.message" "materialInfo3.texture" -nextAvailable;
 connectAttr "grey.outColor" "aiStandardSurface3SG.surfaceShader";
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[10]" "aiStandardSurface3SG.dagSetMembers"
-		 -nextAvailable;
 connectAttr "face_meshShape.instObjGroups.objectGroups[3]" "aiStandardSurface3SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[10]" "aiStandardSurface3SG.dagSetMembers"
 		 -nextAvailable;
 connectAttr "groupId120.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
 		;
 connectAttr "groupId125.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
 		;
-connectAttr "groupId290.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
-		;
 connectAttr "groupId298.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
+		;
+connectAttr "groupId307.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface3SG.message" "materialInfo4.shadingGroup";
 connectAttr "grey.message" "materialInfo4.material";
@@ -21957,9 +22029,9 @@ connectAttr "groupId119.message" "aiStandardSurface4SG.groupNodes" -nextAvailabl
 		;
 connectAttr "groupId124.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
 		;
-connectAttr "groupId286.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
+connectAttr "groupId303.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
 		;
-connectAttr "groupId289.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
+connectAttr "groupId306.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface4SG.message" "materialInfo5.shadingGroup";
 connectAttr "panels.message" "materialInfo5.material";
@@ -21970,9 +22042,9 @@ connectAttr "robokitty_mainShape.instObjGroups.objectGroups[7]" "aiStandardSurfa
 		 -nextAvailable;
 connectAttr "robokitty_mainShape.instObjGroups.objectGroups[8]" "aiStandardSurface5OPBR_SG.dagSetMembers"
 		 -nextAvailable;
-connectAttr "groupId287.message" "aiStandardSurface5OPBR_SG.groupNodes" -nextAvailable
+connectAttr "groupId304.message" "aiStandardSurface5OPBR_SG.groupNodes" -nextAvailable
 		;
-connectAttr "groupId288.message" "aiStandardSurface5OPBR_SG.groupNodes" -nextAvailable
+connectAttr "groupId305.message" "aiStandardSurface5OPBR_SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface5OPBR_SG.message" "materialInfo7.shadingGroup";
 connectAttr "silverPBR.message" "materialInfo7.material";
@@ -21990,15 +22062,15 @@ connectAttr "pink.message" "materialInfo8.texture" -nextAvailable;
 connectAttr "black.outColor" "aiStandardSurface7SG.surfaceShader";
 connectAttr "eye_insideRShape.instObjGroups.objectGroups[2]" "aiStandardSurface7SG.dagSetMembers"
 		 -nextAvailable;
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[12]" "aiStandardSurface7SG.dagSetMembers"
-		 -nextAvailable;
 connectAttr "eye_insideLShape.instObjGroups.objectGroups[2]" "aiStandardSurface7SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[12]" "aiStandardSurface7SG.dagSetMembers"
 		 -nextAvailable;
 connectAttr "groupId282.message" "aiStandardSurface7SG.groupNodes" -nextAvailable
 		;
-connectAttr "groupId292.message" "aiStandardSurface7SG.groupNodes" -nextAvailable
-		;
 connectAttr "groupId295.message" "aiStandardSurface7SG.groupNodes" -nextAvailable
+		;
+connectAttr "groupId309.message" "aiStandardSurface7SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface7SG.message" "materialInfo9.shadingGroup";
 connectAttr "black.message" "materialInfo9.material";
@@ -22026,7 +22098,7 @@ connectAttr "layerManager.displayLayerId[3]" "Eye_ref_out.identification";
 connectAttr "suit.outColor" "aiStandardSurface10SG.surfaceShader";
 connectAttr "robokitty_mainShape.instObjGroups.objectGroups[5]" "aiStandardSurface10SG.dagSetMembers"
 		 -nextAvailable;
-connectAttr "groupId285.message" "aiStandardSurface10SG.groupNodes" -nextAvailable
+connectAttr "groupId302.message" "aiStandardSurface10SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface10SG.message" "materialInfo12.shadingGroup";
 connectAttr "suit.message" "materialInfo12.material";
@@ -22035,7 +22107,7 @@ connectAttr "layerManager.displayLayerId[4]" "sky.identification";
 connectAttr "cords.outColor" "aiStandardSurface11SG.surfaceShader";
 connectAttr "robokitty_mainShape.instObjGroups.objectGroups[11]" "aiStandardSurface11SG.dagSetMembers"
 		 -nextAvailable;
-connectAttr "groupId291.message" "aiStandardSurface11SG.groupNodes" -nextAvailable
+connectAttr "groupId308.message" "aiStandardSurface11SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface11SG.message" "materialInfo13.shadingGroup";
 connectAttr "cords.message" "materialInfo13.material";
@@ -22050,11 +22122,11 @@ connectAttr "groupId280.message" "textureEditorIsolateSelectSet.groupNodes" -nex
 		;
 connectAttr "groupId283.message" "textureEditorIsolateSelectSet.groupNodes" -nextAvailable
 		;
-connectAttr "groupId293.message" "textureEditorIsolateSelectSet.groupNodes" -nextAvailable
-		;
 connectAttr "groupId296.message" "textureEditorIsolateSelectSet.groupNodes" -nextAvailable
 		;
 connectAttr "groupId300.message" "textureEditorIsolateSelectSet.groupNodes" -nextAvailable
+		;
+connectAttr "groupId310.message" "textureEditorIsolateSelectSet.groupNodes" -nextAvailable
 		;
 connectAttr "eye_lense1Shape.instObjGroups.objectGroups[3]" "textureEditorIsolateSelectSet.dagSetMembers"
 		 -nextAvailable;
@@ -22066,11 +22138,11 @@ connectAttr "helmet_insideShape.instObjGroups.objectGroups[1]" "textureEditorIso
 		 -nextAvailable;
 connectAttr "eye_insideRShape.instObjGroups.objectGroups[4]" "textureEditorIsolateSelectSet.dagSetMembers"
 		 -nextAvailable;
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[14]" "textureEditorIsolateSelectSet.dagSetMembers"
-		 -nextAvailable;
 connectAttr "eye_insideLShape.instObjGroups.objectGroups[4]" "textureEditorIsolateSelectSet.dagSetMembers"
 		 -nextAvailable;
 connectAttr "face_meshShape.instObjGroups.objectGroups[6]" "textureEditorIsolateSelectSet.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[14]" "textureEditorIsolateSelectSet.dagSetMembers"
 		 -nextAvailable;
 connectAttr "aiStandardSurface8SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[0].dependNode"
 		;
@@ -22118,6 +22190,28 @@ connectAttr "pink.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInf
 		;
 connectAttr "aiStandardSurface5OPBR_SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[22].dependNode"
 		;
+connectAttr "groupParts10.outputGeometry" "polySplit1.inputPolymesh";
+connectAttr "polySurfaceShape8.outMesh" "groupParts1.inputGeometry";
+connectAttr "groupId301.groupId" "groupParts1.groupId";
+connectAttr "groupParts1.outputGeometry" "groupParts2.inputGeometry";
+connectAttr "groupId302.groupId" "groupParts2.groupId";
+connectAttr "groupParts2.outputGeometry" "groupParts3.inputGeometry";
+connectAttr "groupId303.groupId" "groupParts3.groupId";
+connectAttr "groupParts3.outputGeometry" "groupParts4.inputGeometry";
+connectAttr "groupId304.groupId" "groupParts4.groupId";
+connectAttr "groupParts4.outputGeometry" "groupParts5.inputGeometry";
+connectAttr "groupId305.groupId" "groupParts5.groupId";
+connectAttr "groupParts5.outputGeometry" "groupParts6.inputGeometry";
+connectAttr "groupId306.groupId" "groupParts6.groupId";
+connectAttr "groupParts6.outputGeometry" "groupParts7.inputGeometry";
+connectAttr "groupId307.groupId" "groupParts7.groupId";
+connectAttr "groupParts7.outputGeometry" "groupParts8.inputGeometry";
+connectAttr "groupId308.groupId" "groupParts8.groupId";
+connectAttr "groupParts8.outputGeometry" "groupParts9.inputGeometry";
+connectAttr "groupId309.groupId" "groupParts9.groupId";
+connectAttr "groupParts9.outputGeometry" "groupParts10.inputGeometry";
+connectAttr "groupId310.groupId" "groupParts10.groupId";
+connectAttr "polySplit1.output" "polySplit2.inputPolymesh";
 connectAttr "aiStandardSurface1SG.partition" ":renderPartition.sets" -nextAvailable
 		;
 connectAttr "lambert1SG.partition" ":renderPartition.sets" -nextAvailable;
