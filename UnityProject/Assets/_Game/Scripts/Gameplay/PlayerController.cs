@@ -28,8 +28,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     private Vector2 moveInput;
     private bool jumpPressed;
+    private bool jumpConsumed;
 
     private PlayerControls controls;
+    
+    // Coyote time variables
+    private float coyoteTime = 0.2f;
+    private float coyoteTimer;
 
     // -------------------------
     // UNITY CALLBACKS
@@ -99,8 +104,11 @@ public class PlayerController : MonoBehaviour
     // Jump input
     public void OnJump(InputAction.CallbackContext ctx)
     {
-        jumpPressed = true; // no need to check ctx.started anymore
-        Debug.Log("Jump pressed!");
+        if (ctx.started)
+        {
+            jumpPressed = true;      // Button was pressed
+            jumpConsumed = false;    // Reset for this press
+        }
     }
 
 
@@ -162,6 +170,8 @@ public class PlayerController : MonoBehaviour
         velocity.x = horizontalVelocity.x;
         velocity.z = horizontalVelocity.z;
     }
+
+    
 
     private void HandleJump()
     {

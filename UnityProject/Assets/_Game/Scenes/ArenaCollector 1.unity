@@ -8758,7 +8758,6 @@ GameObject:
   - component: {fileID: 2037826335}
   - component: {fileID: 2037826338}
   - component: {fileID: 2037826339}
-  - component: {fileID: 2037826340}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -8872,8 +8871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f01b59ba1258b744acfb74906c33dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpHeight: 2
+  moveSpeed: 10
+  jumpHeight: 4
   gravity: -9.81
   cameraPivot: {fileID: 2030803708}
   cameraTransform: {fileID: 1121970694}
@@ -8881,26 +8880,7 @@ MonoBehaviour:
   rotationSmoothTime: 0.05
   mouseSensitivity: 0.2
   controllerSensitivity: 200
-  followSmoothTime: 1
---- !u!114 &2037826340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037826333}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afe0ef6f40510b43b69e139948663b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpHeight: 54.69
-  gravity: -9.81
-  cameraPivot: {fileID: 2030803708}
-  mouseSensitivity: 0.2
-  controllerSensitivity: 100
-  rotationSmoothTime: 0.1
+  followSmoothTime: 0.1
 --- !u!1001 &2042045842
 PrefabInstance:
   m_ObjectHideFlags: 0
