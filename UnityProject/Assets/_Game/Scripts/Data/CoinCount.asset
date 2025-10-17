@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6df0c6962af14c60b2d5c35ebd9c64c, type: 3}
-  m_Name: GemCount
-  m_EditorClassIdentifier: Assembly-CSharp::IntObject
-  value: 1
+  m_Name: CoinCount
+  m_EditorClassIdentifier: 
+  value: 22
   minValue: 0
-  maxValue: 1
+  maxValue: 10
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 3fb1fc1673848e748b35392603404b8f, type: 2}
+      - m_Target: {fileID: 11400000, guid: 5a8db14b8216bf94b9a39e0273fa40ea, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
         m_MethodName: RaiseAction
         m_Mode: 1
@@ -32,4 +32,16 @@ MonoBehaviour:
         m_CallState: 2
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5a8db14b8216bf94b9a39e0273fa40ea, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
