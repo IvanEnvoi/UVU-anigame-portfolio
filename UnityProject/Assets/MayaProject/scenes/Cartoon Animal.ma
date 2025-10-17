@@ -1,27 +1,28 @@
 //Maya ASCII 2025ff03 scene
 //Name: Cartoon Animal.ma
-//Last modified: Mon, Oct 13, 2025 02:02:22 PM
+//Last modified: Wed, Oct 15, 2025 12:02:10 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
 		 -nodeType "aiStandardSurface" -nodeType "aiPhysicalSky" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.5";
+requires "stereoCamera" "10.0";
 currentUnit -linear centimeter -angle degree -time film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "E5B8629B-4E54-85C4-3684-12903AEE247E";
+fileInfo "UUID" "9503A666-4C2A-3917-2702-9EB28F67D097";
 createNode transform -shared -name "persp";
 	rename -uuid "B524A512-4F64-5308-D439-F2A4B595FF12";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -8.974007997441376 5.7735601169732726 32.379078112636684 ;
-	setAttr ".rotate" -type "double3" 357.00000019276445 -10101.599999999968 -1.0689916910595959e-16 ;
-	setAttr ".rotatePivot" -type "double3" 0 -2.2204460492503131e-16 0 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -5.6747746506494417e-14 -1.0193691423190974e-14 
-		-7.9111811767239186e-14 ;
+	setAttr ".translate" -type "double3" 30.865480107265313 24.280860703167839 -16.670113659110818 ;
+	setAttr ".rotate" -type "double3" -28.199999999998756 -960.39999999992517 0 ;
+	setAttr ".rotatePivot" -type "double3" 2.7755575615628914e-17 0 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -5.6749173068965718e-14 -1.019955808544358e-14 
+		-7.9060352475339352e-14 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "A989A466-4DBA-9E72-08FB-6BA3661418F7";
 	setAttr -keyable off ".visibility" no;
@@ -29,12 +30,12 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	setAttr ".panZoomEnabled" yes;
 	setAttr ".focalLength" 34.999999999999979;
 	setAttr ".nearClipPlane" 0.005;
-	setAttr ".centerOfInterest" 35.037198900291344;
+	setAttr ".centerOfInterest" 40.257616336093506;
 	setAttr ".orthographicWidth" 19.163492021062581;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
-	setAttr ".tumblePivot" -type "double3" 0.18242329359054565 7.0545332431793213 -4.1731362342834473 ;
+	setAttr ".tumblePivot" -type "double3" 0.002355903241542015 5.7373191574557527 1.6863299291116283 ;
 	setAttr ".homeCommand" -type "string" "viewSet -p %camera";
 	setAttr ".aiTranslator" -type "string" "perspective";
 createNode transform -shared -name "top";
@@ -943,7 +944,7 @@ createNode mesh -name "polySurfaceShape9" -parent "helmet_inside";
 	setAttr ".colorSet[1].colorName" -type "string" "SculptMaskColorTemp";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
-	setAttr -size 341 ".pnts";
+	setAttr -size 206 ".pnts";
 	setAttr ".pnts[0]" -type "float3" 0 -9.3132257e-10 0 ;
 	setAttr ".pnts[5]" -type "float3" 0 9.3132257e-10 0 ;
 	setAttr ".pnts[6]" -type "float3" 0 9.3132257e-10 0 ;
@@ -1965,10 +1966,10 @@ createNode transform -name "robokitty_main" -parent "Robokitty";
 createNode mesh -name "robokitty_mainShape" -parent "robokitty_main";
 	rename -uuid "48E46D1F-49F7-257D-F0A6-CB87770C5E42";
 	setAttr -keyable off ".visibility";
-	setAttr -size 21 ".instObjGroups[0].objectGroups";
+	setAttr -size 31 ".instObjGroups[0].objectGroups";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
-	setAttr ".uvPivot" -type "double2" 0.26366889476776123 0.34744346284423955 ;
+	setAttr ".uvPivot" -type "double2" 0.95798322558403015 0.44880671799182892 ;
 	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
 	setAttr ".currentUVSet" -type "string" "map1";
 	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
@@ -3831,7 +3832,7 @@ createNode mesh -name "polySurfaceShape8" -parent "robokitty_main";
 		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1;
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
-	setAttr -size 2160 ".pnts";
+	setAttr -size 1122 ".pnts";
 	setAttr ".pnts[96]" -type "float3" 0 0 -1.8626451e-09 ;
 	setAttr ".pnts[98]" -type "float3" 0 3.7252903e-09 0 ;
 	setAttr ".pnts[99]" -type "float3" -7.4505806e-09 -3.7252903e-09 0 ;
@@ -20423,7 +20424,7 @@ createNode transform -name "eye_lense" -parent "kitty_face_head";
 createNode mesh -name "eye_lenseShape" -parent "eye_lense";
 	rename -uuid "58416C58-4269-2F06-3D69-5B841E24BD44";
 	setAttr -keyable off ".visibility";
-	setAttr -size 4 ".instObjGroups[0].objectGroups";
+	setAttr -size 6 ".instObjGroups[0].objectGroups";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
 	setAttr ".uvPivot" -type "double2" 0.42603936791419983 0.28282894194126129 ;
@@ -20632,7 +20633,7 @@ createNode transform -name "eye_lense1" -parent "kitty_face_head";
 createNode mesh -name "eye_lense1Shape" -parent "eye_lense1";
 	rename -uuid "F5B4FFD9-4A2A-1251-153F-87A99DF383B2";
 	setAttr -keyable off ".visibility";
-	setAttr -size 4 ".instObjGroups[0].objectGroups";
+	setAttr -size 6 ".instObjGroups[0].objectGroups";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
 	setAttr ".uvPivot" -type "double2" 0.6502041220664978 0.26717337965965271 ;
@@ -21818,15 +21819,15 @@ createNode aiSkyDomeLight -name "aiSkyDomeLightShape1" -parent "aiSkyDomeLight1"
 	setAttr ".intensity" 2.7040815353393555;
 	setAttr ".aiExposure" 0.10309278219938278;
 createNode lightLinker -shared -name "lightLinker1";
-	rename -uuid "E72F15DC-4ED6-F232-2242-9585265F7BFE";
-	setAttr -size 15 ".link";
-	setAttr -size 15 ".shadowLink";
+	rename -uuid "29D881E4-4E35-4996-1F68-12A2F8E69CA3";
+	setAttr -size 29 ".link";
+	setAttr -size 29 ".shadowLink";
 createNode shapeEditorManager -name "shapeEditorManager";
-	rename -uuid "B59775F8-487E-78C1-6C41-13A4471EFDEA";
+	rename -uuid "EF6F615D-4D76-3E6A-E7B3-D49B7E7739E8";
 createNode poseInterpolatorManager -name "poseInterpolatorManager";
-	rename -uuid "9315A50E-4FF5-9975-7609-CF8D158AD8D8";
+	rename -uuid "69BE8677-4870-ABAB-1B7E-19BD251456E5";
 createNode displayLayerManager -name "layerManager";
-	rename -uuid "52EAEDC7-42CF-2169-8D44-3C99CE5E7EA4";
+	rename -uuid "FA0AE8B7-47D4-F44A-3E5A-38935F01287B";
 	setAttr ".currentDisplayLayer" 3;
 	setAttr -size 5 ".displayLayerId[1:4]"  1 2 3 4;
 	setAttr -size 5 ".displayLayerId";
@@ -21834,7 +21835,7 @@ createNode displayLayer -name "defaultLayer";
 	rename -uuid "87FEB508-4D38-9928-A0D8-B59D86FEF377";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 createNode renderLayerManager -name "renderLayerManager";
-	rename -uuid "547464F3-489A-D89B-A881-6F8C5E7ED1A6";
+	rename -uuid "C7758AE8-4712-9F97-D029-B9BD73C538A3";
 createNode renderLayer -name "defaultRenderLayer";
 	rename -uuid "99C0958B-4311-BA9D-5B0C-B18128AA0366";
 	setAttr ".global" yes;
@@ -21851,10 +21852,10 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 1176\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1728\n            -height 1088\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1728\n            -height 1176\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 1\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
@@ -21881,8 +21882,8 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n"
 		+ "                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
 		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1728\\n    -height 1088\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1728\\n    -height 1088\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1728\\n    -height 1176\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1728\\n    -height 1176\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
@@ -21942,9 +21943,8 @@ createNode aiStandardSurface -name "blu";
 createNode shadingEngine -name "aiStandardSurface1SG";
 	rename -uuid "B0CFA4F8-4617-ECF2-0DAE-999CA0AAC110";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".dagSetMembers";
 	setAttr ".renderableOnlySet" yes;
-	setAttr -size 5 ".groupNodes";
+	setAttr -size 3 ".groupNodes";
 createNode materialInfo -name "materialInfo1";
 	rename -uuid "E4DC6837-4742-E675-6F75-B7A3CF2C5626";
 createNode shadingEngine -name "lambert1SG";
@@ -21984,9 +21984,8 @@ createNode aiStandardSurface -name "grey";
 createNode shadingEngine -name "aiStandardSurface3SG";
 	rename -uuid "D3937D0E-4E9D-6CF3-E5B4-2E8944EECD01";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 2 ".dagSetMembers";
 	setAttr ".renderableOnlySet" yes;
-	setAttr -size 4 ".groupNodes";
+	setAttr -size 2 ".groupNodes";
 createNode materialInfo -name "materialInfo4";
 	rename -uuid "B376585D-4AD0-3620-996D-579CF11952ED";
 createNode aiStandardSurface -name "panels";
@@ -22010,9 +22009,8 @@ createNode aiStandardSurface -name "panels";
 createNode shadingEngine -name "aiStandardSurface4SG";
 	rename -uuid "91A4C991-4094-55CE-C12A-E0B0F31AA2B5";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 2 ".dagSetMembers";
 	setAttr ".renderableOnlySet" yes;
-	setAttr -size 4 ".groupNodes";
+	setAttr -size 2 ".groupNodes";
 createNode materialInfo -name "materialInfo5";
 	rename -uuid "7DBBA49D-4B27-B71A-B474-91AEB839F3E4";
 createNode shadingEngine -name "aiStandardSurface5SG";
@@ -22024,9 +22022,7 @@ createNode materialInfo -name "materialInfo6";
 createNode shadingEngine -name "aiStandardSurface5OPBR_SG";
 	rename -uuid "0A147099-4015-934C-1394-83BE6A07BB93";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 2 ".dagSetMembers";
 	setAttr ".renderableOnlySet" yes;
-	setAttr -size 2 ".groupNodes";
 createNode materialInfo -name "materialInfo7";
 	rename -uuid "5C0CB44D-4530-D5C9-70EC-7AA316C560C1";
 createNode aiPhysicalSky -name "aiPhysicalSky1";
@@ -22042,7 +22038,6 @@ createNode aiStandardSurface -name "pink";
 createNode shadingEngine -name "aiStandardSurface6SG";
 	rename -uuid "746E2EF9-4BEB-43C8-CD11-C79B97E6CF87";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 2 ".dagSetMembers";
 	setAttr ".renderableOnlySet" yes;
 createNode materialInfo -name "materialInfo8";
 	rename -uuid "E8F17A2D-4F53-9CBE-CA72-C18D640EE6C7";
@@ -22102,9 +22097,7 @@ createNode aiStandardSurface -name "black";
 createNode shadingEngine -name "aiStandardSurface7SG";
 	rename -uuid "164C5F10-47E2-2017-7EB5-2986CDAD9F61";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".dagSetMembers";
 	setAttr ".renderableOnlySet" yes;
-	setAttr -size 3 ".groupNodes";
 createNode materialInfo -name "materialInfo9";
 	rename -uuid "1D5523B3-49C7-3E12-2A1D-1FB02E91B30E";
 createNode groupId -name "groupId154";
@@ -22126,6 +22119,7 @@ createNode shadingEngine -name "aiStandardSurface8SG";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 2 ".dagSetMembers";
 	setAttr ".renderableOnlySet" yes;
+	setAttr -size 2 ".groupNodes";
 createNode materialInfo -name "materialInfo10";
 	rename -uuid "35409404-408E-756C-1FE6-EFA4207F2B4E";
 createNode aiPhysicalSky -name "aiPhysicalSky2";
@@ -22229,81 +22223,6 @@ createNode objectSet -name "textureEditorIsolateSelectSet";
 	setAttr -size 8 ".dagSetMembers";
 	setAttr ".facetsOnlySet" yes;
 	setAttr -size 8 ".groupNodes";
-createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uuid "1B0F82CD-423F-576A-93A3-48B63D2CE83C";
-	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
-	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -8349.8042168937391 -6060.3172195020907 ;
-	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 7056.9471254101209 5457.1426402954921 ;
-	setAttr -size 23 ".tabGraphInfo[0].nodeInfo";
-	setAttr ".tabGraphInfo[0].nodeInfo[0].positionX" -104.28571319580078;
-	setAttr ".tabGraphInfo[0].nodeInfo[0].positionY" -178.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[0].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].positionX" 587.14288330078125;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].positionY" 155.71427917480469;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[2].positionX" 238.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[2].positionY" 155.71427917480469;
-	setAttr ".tabGraphInfo[0].nodeInfo[2].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[3].positionX" 1141.4285888671875;
-	setAttr ".tabGraphInfo[0].nodeInfo[3].positionY" 628.5714111328125;
-	setAttr ".tabGraphInfo[0].nodeInfo[3].nodeVisualState" 3042;
-	setAttr ".tabGraphInfo[0].nodeInfo[4].positionX" 587.14288330078125;
-	setAttr ".tabGraphInfo[0].nodeInfo[4].positionY" 155.71427917480469;
-	setAttr ".tabGraphInfo[0].nodeInfo[4].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[5].positionX" -104.28571319580078;
-	setAttr ".tabGraphInfo[0].nodeInfo[5].positionY" -178.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[5].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[6].positionX" 1141.4285888671875;
-	setAttr ".tabGraphInfo[0].nodeInfo[6].positionY" -252.85714721679688;
-	setAttr ".tabGraphInfo[0].nodeInfo[6].nodeVisualState" 3042;
-	setAttr ".tabGraphInfo[0].nodeInfo[7].positionX" -771.4285888671875;
-	setAttr ".tabGraphInfo[0].nodeInfo[7].positionY" -87.142860412597656;
-	setAttr ".tabGraphInfo[0].nodeInfo[7].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[8].positionX" -2414.28564453125;
-	setAttr ".tabGraphInfo[0].nodeInfo[8].positionY" -191.42857360839844;
-	setAttr ".tabGraphInfo[0].nodeInfo[8].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[9].positionX" 450;
-	setAttr ".tabGraphInfo[0].nodeInfo[9].positionY" 158.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[9].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[10].positionX" -452.85714721679688;
-	setAttr ".tabGraphInfo[0].nodeInfo[10].positionY" -178.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[10].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[11].positionX" 254.28572082519531;
-	setAttr ".tabGraphInfo[0].nodeInfo[11].positionY" 495.71429443359375;
-	setAttr ".tabGraphInfo[0].nodeInfo[11].nodeVisualState" 1971;
-	setAttr ".tabGraphInfo[0].nodeInfo[12].positionX" 101.42857360839844;
-	setAttr ".tabGraphInfo[0].nodeInfo[12].positionY" 158.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[12].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[13].positionX" -1481.4285888671875;
-	setAttr ".tabGraphInfo[0].nodeInfo[13].positionY" 794.28570556640625;
-	setAttr ".tabGraphInfo[0].nodeInfo[13].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[14].positionX" -104.28571319580078;
-	setAttr ".tabGraphInfo[0].nodeInfo[14].positionY" -178.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[14].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[15].positionX" -452.85714721679688;
-	setAttr ".tabGraphInfo[0].nodeInfo[15].positionY" -178.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[15].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[16].positionX" 587.14288330078125;
-	setAttr ".tabGraphInfo[0].nodeInfo[16].positionY" 155.71427917480469;
-	setAttr ".tabGraphInfo[0].nodeInfo[16].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[17].positionX" 238.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[17].positionY" 155.71427917480469;
-	setAttr ".tabGraphInfo[0].nodeInfo[17].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[18].positionX" -1132.857177734375;
-	setAttr ".tabGraphInfo[0].nodeInfo[18].positionY" 794.28570556640625;
-	setAttr ".tabGraphInfo[0].nodeInfo[18].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[19].positionX" -2065.71435546875;
-	setAttr ".tabGraphInfo[0].nodeInfo[19].positionY" -191.42857360839844;
-	setAttr ".tabGraphInfo[0].nodeInfo[19].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[20].positionX" -1120;
-	setAttr ".tabGraphInfo[0].nodeInfo[20].positionY" -87.142860412597656;
-	setAttr ".tabGraphInfo[0].nodeInfo[20].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[21].positionX" -452.85714721679688;
-	setAttr ".tabGraphInfo[0].nodeInfo[21].positionY" -178.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[21].nodeVisualState" 2387;
-	setAttr ".tabGraphInfo[0].nodeInfo[22].positionX" 74.285713195800781;
-	setAttr ".tabGraphInfo[0].nodeInfo[22].positionY" 962.85711669921875;
-	setAttr ".tabGraphInfo[0].nodeInfo[22].nodeVisualState" 1923;
 createNode groupId -name "groupId274";
 	rename -uuid "F640EF39-4306-F5DE-AFF0-D1B7B3F7F1DD";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -32059,6 +31978,397 @@ createNode polyTweakUV -name "polyTweakUV11";
 		 -0.020397425 0.028925568 -0.02109164 0.013950855 -0.019098505 0.024751127 0.0041207373
 		 0.021782607 0.0049699843 0.023962736 0.0059050918 0.031468838 0.0047545433 0.045705229
 		 0.001044035 0.059321553 -0.0013470948 0.06362468;
+createNode lambert -name "lambert2";
+	rename -uuid "5E9F1EE4-429C-3122-1C60-EC952A2A8349";
+	setAttr ".color" -type "float3" 1 0 0 ;
+createNode shadingEngine -name "lambert2SG";
+	rename -uuid "DF1B03E7-48D8-0D67-A8D4-80AB2EB27E9A";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr -size 3 ".dagSetMembers";
+	setAttr ".renderableOnlySet" yes;
+	setAttr -size 3 ".groupNodes";
+createNode materialInfo -name "materialInfo14";
+	rename -uuid "A34DD2D4-487F-BF31-349E-8DBE82B048F8";
+createNode lambert -name "lambert3";
+	rename -uuid "D7290A8D-4227-E437-9DC4-CE9B172996CE";
+	setAttr ".color" -type "float3" 1 1 0 ;
+createNode shadingEngine -name "lambert3SG";
+	rename -uuid "0555FEFB-4AA5-5ABA-546D-AF81F1371E49";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr -size 3 ".dagSetMembers";
+	setAttr ".renderableOnlySet" yes;
+	setAttr -size 3 ".groupNodes";
+createNode materialInfo -name "materialInfo15";
+	rename -uuid "6B74DB66-499A-34DF-76DC-FAA61670DE12";
+createNode lambert -name "lambert4";
+	rename -uuid "D5A2D4A3-42EF-F49B-F047-96852406B49C";
+	setAttr ".color" -type "float3" 0 1 0 ;
+createNode shadingEngine -name "lambert4SG";
+	rename -uuid "AD1D356A-46E6-D25C-9BDE-60B569F5D267";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".renderableOnlySet" yes;
+createNode materialInfo -name "materialInfo16";
+	rename -uuid "F9D9D37B-421A-8F28-9D9A-F4AFBE7BC935";
+createNode lambert -name "lambert5";
+	rename -uuid "3AF46EA0-424A-8821-2CD5-CD8C83A7B6C0";
+	setAttr ".color" -type "float3" 0 1 1 ;
+createNode shadingEngine -name "lambert5SG";
+	rename -uuid "8F5D8D1D-4E89-C005-DF6B-7D9D0358CDBF";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr -size 2 ".dagSetMembers";
+	setAttr ".renderableOnlySet" yes;
+	setAttr -size 2 ".groupNodes";
+createNode materialInfo -name "materialInfo17";
+	rename -uuid "0C7E7007-4BC7-28D3-D468-418B12DE489B";
+createNode lambert -name "lambert6";
+	rename -uuid "D6B8F5F4-46ED-099D-98B5-A59262907801";
+	setAttr ".color" -type "float3" 0 0 1 ;
+createNode shadingEngine -name "lambert6SG";
+	rename -uuid "BD19AA3E-4C9F-FBA2-2823-BC85192678A1";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr -size 2 ".dagSetMembers";
+	setAttr ".renderableOnlySet" yes;
+	setAttr -size 2 ".groupNodes";
+createNode materialInfo -name "materialInfo18";
+	rename -uuid "5A476FED-49DF-98CE-8330-A5B23F790918";
+createNode lambert -name "lambert7";
+	rename -uuid "BEDC147E-4552-1C4F-AFF2-4F8A2204B04F";
+	setAttr ".color" -type "float3" 1 0 1 ;
+createNode shadingEngine -name "lambert7SG";
+	rename -uuid "78FBC385-458E-2C28-5323-3896A3DBDAD1";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".renderableOnlySet" yes;
+createNode materialInfo -name "materialInfo19";
+	rename -uuid "76BF00F9-45D3-88CA-7E43-E1A8EB7168DF";
+createNode lambert -name "lambert8";
+	rename -uuid "DEE21A54-491E-06F2-067A-84A0D26E6279";
+	setAttr ".color" -type "float3" 0.2656 0.1075 0.2656 ;
+createNode shadingEngine -name "lambert8SG";
+	rename -uuid "8671E196-49BA-DF64-587A-318D38380FC8";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr -size 2 ".dagSetMembers";
+	setAttr ".renderableOnlySet" yes;
+	setAttr -size 2 ".groupNodes";
+createNode materialInfo -name "materialInfo20";
+	rename -uuid "6640B3A8-422E-1AAE-C8C3-219A43AA3455";
+createNode lambert -name "lambert9";
+	rename -uuid "54B83D2D-45F1-78C0-471D-0E94B150628C";
+	setAttr ".color" -type "float3" 0.107 0.107 0.107 ;
+createNode shadingEngine -name "lambert9SG";
+	rename -uuid "4ECA882D-4DB4-0F89-1A0F-C6AA141F54F3";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".renderableOnlySet" yes;
+createNode materialInfo -name "materialInfo21";
+	rename -uuid "755D53E9-43A3-D4F6-CCE4-C2AA11FF9CF0";
+createNode groupParts -name "groupParts21";
+	rename -uuid "E31C04B4-495B-39C8-8093-3ABC37B49F3C";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 50 "f[268]" "f[270]" "f[282]" "f[285:286]" "f[293]" "f[295]" "f[297]" "f[299]" "f[301]" "f[303]" "f[306:310]" "f[313:314]" "f[350]" "f[365]" "f[369]" "f[416]" "f[420]" "f[448]" "f[916:917]" "f[1151]" "f[1155]" "f[1166]" "f[1173]" "f[1190]" "f[1197]" "f[1836]" "f[1838]" "f[1850]" "f[1853:1854]" "f[1861]" "f[1863]" "f[1865]" "f[1867]" "f[1869]" "f[1871]" "f[1874:1878]" "f[1881:1882]" "f[1918]" "f[1933]" "f[1937]" "f[1976]" "f[1980]" "f[2002]" "f[2460:2461]" "f[2715]" "f[2719]" "f[2730]" "f[2737]" "f[2754]" "f[2761]";
+	setAttr ".inputRemoveComponent" -type "componentList" 66 "f[0:11]" "f[13:14]" "f[16]" "f[19:36]" "f[39:49]" "f[92:103]" "f[105:106]" "f[108]" "f[111:128]" "f[131:141]" "f[184:190]" "f[196:197]" "f[202:206]" "f[224:261]" "f[279:280]" "f[287:291]" "f[406:414]" "f[425:443]" "f[453:726]" "f[728]" "f[732:835]" "f[874:892]" "f[897:911]" "f[918:1005]" "f[1011:1012]" "f[1017:1021]" "f[1039:1108]" "f[1249:1260]" "f[1262:1263]" "f[1265]" "f[1268:1285]" "f[1288:1310]" "f[1312:1313]" "f[1315]" "f[1318:1335]" "f[1338:1348]" "f[1371]" "f[1373:1383]" "f[1753:1759]" "f[1765]" "f[1769:1774]" "f[1793:1829]" "f[1847:1848]" "f[1855:1859]" "f[1974]" "f[1985:1997]" "f[2007:2257]" "f[2261:2371]" "f[2410:2425]" "f[2429:2439]" "f[2441:2455]" "f[2462:2573]" "f[2579]" "f[2583:2588]" "f[2607:2676]" "f[2813:2824]" "f[2826:2827]" "f[2829]" "f[2832:2849]" "f[2852:2874]" "f[2876:2877]" "f[2879]" "f[2882:2899]" "f[2902:2912]" "f[2935]" "f[2937:2947]";
+createNode groupId -name "groupId321";
+	rename -uuid "B93125C8-4BF7-AE23-550D-96936640C18A";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts22";
+	rename -uuid "CEC3B950-4876-E821-FCAC-DFAB6AD8F355";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 38 "f[184:190]" "f[196:197]" "f[202:206]" "f[224:261]" "f[279:280]" "f[287:291]" "f[406:414]" "f[425:443]" "f[453:726]" "f[728]" "f[732:835]" "f[874:892]" "f[897:911]" "f[918:1005]" "f[1011:1012]" "f[1017:1021]" "f[1039:1108]" "f[1371]" "f[1373:1383]" "f[1753:1759]" "f[1765]" "f[1769:1774]" "f[1793:1829]" "f[1847:1848]" "f[1855:1859]" "f[1974]" "f[1985:1997]" "f[2007:2257]" "f[2261:2371]" "f[2410:2425]" "f[2429:2439]" "f[2441:2455]" "f[2462:2573]" "f[2579]" "f[2583:2588]" "f[2607:2676]" "f[2935]" "f[2937:2947]";
+createNode groupParts -name "groupParts23";
+	rename -uuid "BDF5BF31-436A-839B-328A-6A994F10A4CB";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 8 "f[1261]" "f[1264]" "f[1266:1267]" "f[1286:1287]" "f[2825]" "f[2828]" "f[2830:2831]" "f[2850:2851]";
+	setAttr ".inputRemoveComponent" -type "componentList" 22 "f[12]" "f[15]" "f[17:18]" "f[37:38]" "f[104]" "f[107]" "f[109:110]" "f[129:130]" "f[1109:1140]" "f[1311]" "f[1314]" "f[1316:1317]" "f[1336:1337]" "f[1386:1389]" "f[2677:2704]" "f[2875]" "f[2878]" "f[2880:2881]" "f[2900:2901]" "f[2951:2958]" "f[3324:3743]" "f[3920:3943]";
+createNode groupId -name "groupId322";
+	rename -uuid "39CC1F97-467D-900D-FE20-488233A4AA60";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts24";
+	rename -uuid "7CC5845B-47E6-EBC1-4B60-02B478B36D9F";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 22 "f[12]" "f[15]" "f[17:18]" "f[37:38]" "f[104]" "f[107]" "f[109:110]" "f[129:130]" "f[1109:1140]" "f[1311]" "f[1314]" "f[1316:1317]" "f[1336:1337]" "f[1386:1389]" "f[2677:2704]" "f[2875]" "f[2878]" "f[2880:2881]" "f[2900:2901]" "f[2951:2958]" "f[3324:3743]" "f[3920:3943]";
+createNode groupId -name "groupId323";
+	rename -uuid "910A11FF-4506-C49B-AC21-439B408A661B";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts25";
+	rename -uuid "3641198E-4C7E-3553-0F13-FCBDCAF94B8E";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 28 "f[0:11]" "f[13:14]" "f[16]" "f[19:36]" "f[39:49]" "f[92:103]" "f[105:106]" "f[108]" "f[111:128]" "f[131:141]" "f[1249:1260]" "f[1262:1263]" "f[1265]" "f[1268:1285]" "f[1288:1310]" "f[1312:1313]" "f[1315]" "f[1318:1335]" "f[1338:1348]" "f[2813:2824]" "f[2826:2827]" "f[2829]" "f[2832:2849]" "f[2852:2874]" "f[2876:2877]" "f[2879]" "f[2882:2899]" "f[2902:2912]";
+createNode groupParts -name "groupParts26";
+	rename -uuid "0920EA2E-4EB9-540E-7045-EEA4A1EA4265";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 12 "f[62:65]" "f[72:91]" "f[154:157]" "f[164:183]" "f[1361:1364]" "f[1727:1728]" "f[1732]" "f[1734:1736]" "f[2925:2928]" "f[3288:3289]" "f[3296]" "f[3299:3301]";
+	setAttr ".inputRemoveComponent" -type "componentList" 80 "f[262:267]" "f[269]" "f[271:278]" "f[281]" "f[283:284]" "f[292]" "f[294]" "f[296]" "f[298]" "f[300]" "f[302]" "f[304:305]" "f[311:312]" "f[315:349]" "f[351:364]" "f[366:368]" "f[370:405]" "f[415]" "f[417:419]" "f[421:424]" "f[444:447]" "f[449:452]" "f[727]" "f[729:731]" "f[836:873]" "f[893:895]" "f[912:915]" "f[1141:1150]" "f[1152:1154]" "f[1156:1165]" "f[1167:1172]" "f[1174:1189]" "f[1191:1196]" "f[1198:1246]" "f[1372]" "f[1384:1385]" "f[1557:1726]" "f[1729:1731]" "f[1733]" "f[1737:1752]" "f[1830:1835]" "f[1837]" "f[1839:1846]" "f[1849]" "f[1851:1852]" "f[1860]" "f[1862]" "f[1864]" "f[1866]" "f[1868]" "f[1870]" "f[1872:1873]" "f[1879:1880]" "f[1883:1917]" "f[1919:1932]" "f[1934:1936]" "f[1938:1973]" "f[1975]" "f[1977:1979]" "f[1981:1984]" "f[1998:2001]" "f[2003:2006]" "f[2258:2260]" "f[2372:2409]" "f[2426:2428]" "f[2456:2459]" "f[2705:2714]" "f[2716:2718]" "f[2720:2729]" "f[2731:2736]" "f[2738:2753]" "f[2755:2760]" "f[2762:2810]" "f[2936]" "f[2948:2950]" "f[3126:3287]" "f[3290:3295]" "f[3297:3298]" "f[3302:3323]" "f[3944:3949]";
+createNode groupId -name "groupId324";
+	rename -uuid "68942620-4192-D8FF-C22B-CEBDB3332BEA";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts27";
+	rename -uuid "41975112-4CB3-53A3-79F9-EB811064EE93";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 80 "f[262:267]" "f[269]" "f[271:278]" "f[281]" "f[283:284]" "f[292]" "f[294]" "f[296]" "f[298]" "f[300]" "f[302]" "f[304:305]" "f[311:312]" "f[315:349]" "f[351:364]" "f[366:368]" "f[370:405]" "f[415]" "f[417:419]" "f[421:424]" "f[444:447]" "f[449:452]" "f[727]" "f[729:731]" "f[836:873]" "f[893:895]" "f[912:915]" "f[1141:1150]" "f[1152:1154]" "f[1156:1165]" "f[1167:1172]" "f[1174:1189]" "f[1191:1196]" "f[1198:1246]" "f[1372]" "f[1384:1385]" "f[1557:1726]" "f[1729:1731]" "f[1733]" "f[1737:1752]" "f[1830:1835]" "f[1837]" "f[1839:1846]" "f[1849]" "f[1851:1852]" "f[1860]" "f[1862]" "f[1864]" "f[1866]" "f[1868]" "f[1870]" "f[1872:1873]" "f[1879:1880]" "f[1883:1917]" "f[1919:1932]" "f[1934:1936]" "f[1938:1973]" "f[1975]" "f[1977:1979]" "f[1981:1984]" "f[1998:2001]" "f[2003:2006]" "f[2258:2260]" "f[2372:2409]" "f[2426:2428]" "f[2456:2459]" "f[2705:2714]" "f[2716:2718]" "f[2720:2729]" "f[2731:2736]" "f[2738:2753]" "f[2755:2760]" "f[2762:2810]" "f[2936]" "f[2948:2950]" "f[3126:3287]" "f[3290:3295]" "f[3297:3298]" "f[3302:3323]" "f[3944:3949]";
+createNode groupParts -name "groupParts28";
+	rename -uuid "4C0BBCF1-4950-11FE-5A0E-7EAB1DEC92BB";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 4 "f[50:61]" "f[142:153]" "f[1349:1360]" "f[2913:2924]";
+	setAttr ".inputRemoveComponent" -type "componentList" 5 "f[3744:3767]" "f[3780:3821]" "f[3826:3855]" "f[3864:3899]" "f[3908:3919]";
+createNode groupId -name "groupId325";
+	rename -uuid "B26E808E-4267-CDE6-3104-D19203B6EAC1";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts29";
+	rename -uuid "2F09281E-4CE5-01A6-B77D-72B764EA21ED";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 5 "f[3744:3767]" "f[3780:3821]" "f[3826:3855]" "f[3864:3899]" "f[3908:3919]";
+createNode blinn -name "blinn1";
+	rename -uuid "F6E55A93-4E10-E29C-A04E-4E92C48F8B6F";
+	setAttr ".color" -type "float3" 0 1 1 ;
+	setAttr ".transparency" -type "float3" 0.86995518 0.86995518 0.86995518 ;
+createNode shadingEngine -name "blinn1SG";
+	rename -uuid "73C4568D-46CE-285B-BF0A-E4AB77D88BC8";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".renderableOnlySet" yes;
+createNode materialInfo -name "materialInfo22";
+	rename -uuid "F2E1D9BB-45F5-5A29-7E53-EB93ABD84C7F";
+createNode lambert -name "lambert10";
+	rename -uuid "625E5D34-49B6-E015-CE90-D0B582D7DB75";
+	setAttr ".color" -type "float3" 0.70880002 1 0.2911 ;
+createNode shadingEngine -name "lambert10SG";
+	rename -uuid "9351B082-48B1-AB21-556A-45A46A610068";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".renderableOnlySet" yes;
+createNode materialInfo -name "materialInfo23";
+	rename -uuid "ECEEDDCD-401B-E8D2-3F08-1DB31733C4CD";
+createNode blinn -name "blinn2";
+	rename -uuid "AD39E274-45B3-3A2D-813E-48A6ACC9CAD3";
+	setAttr ".color" -type "float3" 0.34529147 0 0.34529147 ;
+	setAttr ".transparency" -type "float3" 0.95067263 0.95067263 0.95067263 ;
+	setAttr ".ambientColor" -type "float3" 0.026905829 0.026905829 0.026905829 ;
+createNode shadingEngine -name "blinn2SG";
+	rename -uuid "0694D486-4966-9ADE-CCD1-35971F032AD0";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr -size 2 ".dagSetMembers";
+	setAttr ".renderableOnlySet" yes;
+	setAttr -size 2 ".groupNodes";
+createNode materialInfo -name "materialInfo24";
+	rename -uuid "69C9ABEA-4B36-7B0A-FA60-E9983F4EAAF5";
+createNode groupId -name "groupId326";
+	rename -uuid "76755E95-40CD-0B93-CCC4-F09B89E9C943";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts30";
+	rename -uuid "0161FFAC-4844-7577-16B0-D598DE2BFF6B";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 1 "f[0:49]";
+createNode groupId -name "groupId327";
+	rename -uuid "C04CECA2-441D-DE13-6C0F-648F7AB48A03";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupId -name "groupId328";
+	rename -uuid "41C02C53-4483-9F38-2DE2-459D12DB0830";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts31";
+	rename -uuid "45578A6A-426E-D021-A34B-079E1A1F097C";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 1 "f[0:49]";
+createNode groupId -name "groupId329";
+	rename -uuid "AD8AFD7F-497C-07D5-3C7F-65A2276A6811";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode polySplit -name "polySplit3";
+	rename -uuid "3B955A78-420D-EBEB-6B65-B2831965CE2B";
+	setAttr -size 2 ".edge[0:1]"  1 0;
+	setAttr -size 2 ".desc[0:1]"  -2147481460 -2147481495;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit4";
+	rename -uuid "A514B75B-4682-E57E-E9FE-81BE643CB811";
+	setAttr -size 2 ".edge[0:1]"  1 0;
+	setAttr -size 2 ".desc[0:1]"  -2147481470 -2147481536;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode lambert -name "lambert11";
+	rename -uuid "925BA772-4DAE-95F1-47A2-298676C561F0";
+	setAttr ".color" -type "float3" 0.53280002 0.5564 0.95670003 ;
+createNode shadingEngine -name "lambert11SG";
+	rename -uuid "C7BC1251-4AEE-F991-C68A-60A931668C9F";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".renderableOnlySet" yes;
+createNode materialInfo -name "materialInfo25";
+	rename -uuid "9FC3D5A7-4F83-53F6-4F92-7185B3484A6C";
+createNode lambert -name "lambert12";
+	rename -uuid "58645008-4DFE-70B4-0927-C99978713AE0";
+	setAttr ".color" -type "float3" 0.0491 0.0491 0.0491 ;
+createNode shadingEngine -name "lambert12SG";
+	rename -uuid "54954031-4D45-6716-18A9-26A72EE608CF";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr -size 2 ".dagSetMembers";
+	setAttr ".renderableOnlySet" yes;
+	setAttr -size 2 ".groupNodes";
+createNode materialInfo -name "materialInfo26";
+	rename -uuid "0332EABF-4B3C-FC4B-5390-14B267612453";
+createNode lambert -name "lambert13";
+	rename -uuid "0338F6BB-4329-A306-3555-C4B3FB6DF102";
+	setAttr ".color" -type "float3" 0.73542601 0.73542601 0.73542601 ;
+createNode shadingEngine -name "lambert13SG";
+	rename -uuid "33CC1C84-43BB-E24A-C4C3-09BC7BD8D935";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr -size 3 ".dagSetMembers";
+	setAttr ".renderableOnlySet" yes;
+	setAttr -size 2 ".groupNodes";
+createNode materialInfo -name "materialInfo27";
+	rename -uuid "D19DF74D-40F8-73FC-B6D4-AC9857D8A611";
+createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uuid "48B7D90E-4669-3FD4-9288-66B166ECC184";
+	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
+	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -8989.385128477219 -2358.0471637162882 ;
+	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" -1329.2965749698385 6330.0729141570582 ;
+	setAttr -size 51 ".tabGraphInfo[0].nodeInfo";
+	setAttr ".tabGraphInfo[0].nodeInfo[0].positionX" -3420;
+	setAttr ".tabGraphInfo[0].nodeInfo[0].positionY" 3254.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[0].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].positionX" -3112.857177734375;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].positionY" 3254.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[2].positionX" -2414.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[2].positionY" -191.42857360839844;
+	setAttr ".tabGraphInfo[0].nodeInfo[2].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[3].positionX" 1141.4285888671875;
+	setAttr ".tabGraphInfo[0].nodeInfo[3].positionY" 628.5714111328125;
+	setAttr ".tabGraphInfo[0].nodeInfo[3].nodeVisualState" 3042;
+	setAttr ".tabGraphInfo[0].nodeInfo[4].positionX" -104.28571319580078;
+	setAttr ".tabGraphInfo[0].nodeInfo[4].positionY" -178.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[4].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[5].positionX" -104.28571319580078;
+	setAttr ".tabGraphInfo[0].nodeInfo[5].positionY" -178.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[5].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[6].positionX" -452.85714721679688;
+	setAttr ".tabGraphInfo[0].nodeInfo[6].positionY" -178.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[6].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[7].positionX" 254.28572082519531;
+	setAttr ".tabGraphInfo[0].nodeInfo[7].positionY" 495.71429443359375;
+	setAttr ".tabGraphInfo[0].nodeInfo[7].nodeVisualState" 1971;
+	setAttr ".tabGraphInfo[0].nodeInfo[8].positionX" 587.14288330078125;
+	setAttr ".tabGraphInfo[0].nodeInfo[8].positionY" 155.71427917480469;
+	setAttr ".tabGraphInfo[0].nodeInfo[8].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[9].positionX" -1132.857177734375;
+	setAttr ".tabGraphInfo[0].nodeInfo[9].positionY" 794.28570556640625;
+	setAttr ".tabGraphInfo[0].nodeInfo[9].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[10].positionX" -1120;
+	setAttr ".tabGraphInfo[0].nodeInfo[10].positionY" -87.142860412597656;
+	setAttr ".tabGraphInfo[0].nodeInfo[10].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[11].positionX" 74.285713195800781;
+	setAttr ".tabGraphInfo[0].nodeInfo[11].positionY" 962.85711669921875;
+	setAttr ".tabGraphInfo[0].nodeInfo[11].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[12].positionX" 1141.4285888671875;
+	setAttr ".tabGraphInfo[0].nodeInfo[12].positionY" -252.85714721679688;
+	setAttr ".tabGraphInfo[0].nodeInfo[12].nodeVisualState" 3042;
+	setAttr ".tabGraphInfo[0].nodeInfo[13].positionX" -452.85714721679688;
+	setAttr ".tabGraphInfo[0].nodeInfo[13].positionY" -178.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[13].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[14].positionX" 587.14288330078125;
+	setAttr ".tabGraphInfo[0].nodeInfo[14].positionY" 155.71427917480469;
+	setAttr ".tabGraphInfo[0].nodeInfo[14].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[15].positionX" -452.85714721679688;
+	setAttr ".tabGraphInfo[0].nodeInfo[15].positionY" -178.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[15].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[16].positionX" -771.4285888671875;
+	setAttr ".tabGraphInfo[0].nodeInfo[16].positionY" -87.142860412597656;
+	setAttr ".tabGraphInfo[0].nodeInfo[16].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[17].positionX" 238.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[17].positionY" 155.71427917480469;
+	setAttr ".tabGraphInfo[0].nodeInfo[17].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[18].positionX" -104.28571319580078;
+	setAttr ".tabGraphInfo[0].nodeInfo[18].positionY" -178.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[18].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[19].positionX" 101.42857360839844;
+	setAttr ".tabGraphInfo[0].nodeInfo[19].positionY" 158.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[19].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[20].positionX" -2065.71435546875;
+	setAttr ".tabGraphInfo[0].nodeInfo[20].positionY" -191.42857360839844;
+	setAttr ".tabGraphInfo[0].nodeInfo[20].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[21].positionX" 587.14288330078125;
+	setAttr ".tabGraphInfo[0].nodeInfo[21].positionY" 155.71427917480469;
+	setAttr ".tabGraphInfo[0].nodeInfo[21].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[22].positionX" -1481.4285888671875;
+	setAttr ".tabGraphInfo[0].nodeInfo[22].positionY" 794.28570556640625;
+	setAttr ".tabGraphInfo[0].nodeInfo[22].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[23].positionX" 238.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[23].positionY" 155.71427917480469;
+	setAttr ".tabGraphInfo[0].nodeInfo[23].nodeVisualState" 2387;
+	setAttr ".tabGraphInfo[0].nodeInfo[24].positionX" 450;
+	setAttr ".tabGraphInfo[0].nodeInfo[24].positionY" 158.57142639160156;
+	setAttr ".tabGraphInfo[0].nodeInfo[24].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[25].positionX" -670;
+	setAttr ".tabGraphInfo[0].nodeInfo[25].positionY" -3914.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[25].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[26].positionX" -362.85714721679688;
+	setAttr ".tabGraphInfo[0].nodeInfo[26].positionY" -3914.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[26].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[27].positionX" -4600;
+	setAttr ".tabGraphInfo[0].nodeInfo[27].positionY" 1485.7142333984375;
+	setAttr ".tabGraphInfo[0].nodeInfo[27].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[28].positionX" -4292.85693359375;
+	setAttr ".tabGraphInfo[0].nodeInfo[28].positionY" 1485.7142333984375;
+	setAttr ".tabGraphInfo[0].nodeInfo[28].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[29].positionX" -5951.4287109375;
+	setAttr ".tabGraphInfo[0].nodeInfo[29].positionY" -1332.857177734375;
+	setAttr ".tabGraphInfo[0].nodeInfo[29].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[30].positionX" -7178.5712890625;
+	setAttr ".tabGraphInfo[0].nodeInfo[30].positionY" 4367.14306640625;
+	setAttr ".tabGraphInfo[0].nodeInfo[30].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[31].positionX" -5644.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[31].positionY" -1332.857177734375;
+	setAttr ".tabGraphInfo[0].nodeInfo[31].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[32].positionX" -7485.71435546875;
+	setAttr ".tabGraphInfo[0].nodeInfo[32].positionY" 4367.14306640625;
+	setAttr ".tabGraphInfo[0].nodeInfo[32].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[33].positionX" -5051.4287109375;
+	setAttr ".tabGraphInfo[0].nodeInfo[33].positionY" 4911.4287109375;
+	setAttr ".tabGraphInfo[0].nodeInfo[33].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[34].positionX" -5358.5712890625;
+	setAttr ".tabGraphInfo[0].nodeInfo[34].positionY" 4911.4287109375;
+	setAttr ".tabGraphInfo[0].nodeInfo[34].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[35].positionX" -5484.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[35].positionY" 3210;
+	setAttr ".tabGraphInfo[0].nodeInfo[35].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[36].positionX" 3738.571533203125;
+	setAttr ".tabGraphInfo[0].nodeInfo[36].positionY" -3914.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[36].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[37].positionX" -362.85714721679688;
+	setAttr ".tabGraphInfo[0].nodeInfo[37].positionY" 3787.142822265625;
+	setAttr ".tabGraphInfo[0].nodeInfo[37].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[38].positionX" -670;
+	setAttr ".tabGraphInfo[0].nodeInfo[38].positionY" -5474.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[38].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[39].positionX" -5078.5712890625;
+	setAttr ".tabGraphInfo[0].nodeInfo[39].positionY" -3804.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[39].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[40].positionX" -5644.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[40].positionY" -210;
+	setAttr ".tabGraphInfo[0].nodeInfo[40].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[41].positionX" -5177.14306640625;
+	setAttr ".tabGraphInfo[0].nodeInfo[41].positionY" 3210;
+	setAttr ".tabGraphInfo[0].nodeInfo[41].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[42].positionX" -5951.4287109375;
+	setAttr ".tabGraphInfo[0].nodeInfo[42].positionY" -210;
+	setAttr ".tabGraphInfo[0].nodeInfo[42].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[43].positionX" 4541.4287109375;
+	setAttr ".tabGraphInfo[0].nodeInfo[43].positionY" -210;
+	setAttr ".tabGraphInfo[0].nodeInfo[43].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[44].positionX" 4848.5712890625;
+	setAttr ".tabGraphInfo[0].nodeInfo[44].positionY" -210;
+	setAttr ".tabGraphInfo[0].nodeInfo[44].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[45].positionX" -670;
+	setAttr ".tabGraphInfo[0].nodeInfo[45].positionY" 3787.142822265625;
+	setAttr ".tabGraphInfo[0].nodeInfo[45].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[46].positionX" 4045.71435546875;
+	setAttr ".tabGraphInfo[0].nodeInfo[46].positionY" -3914.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[46].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[47].positionX" -4771.4287109375;
+	setAttr ".tabGraphInfo[0].nodeInfo[47].positionY" -3804.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[47].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[48].positionX" -362.85714721679688;
+	setAttr ".tabGraphInfo[0].nodeInfo[48].positionY" -5474.28564453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[48].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[49].positionX" -7720;
+	setAttr ".tabGraphInfo[0].nodeInfo[49].positionY" 2121.428466796875;
+	setAttr ".tabGraphInfo[0].nodeInfo[49].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[50].positionX" -7412.85693359375;
+	setAttr ".tabGraphInfo[0].nodeInfo[50].positionY" 2121.428466796875;
+	setAttr ".tabGraphInfo[0].nodeInfo[50].nodeVisualState" 1923;
 select -noExpand :time1;
 	setAttr -alteredValue -keyable on ".caching";
 	setAttr -channelBox on ".isHistoricallyInteresting";
@@ -32079,7 +32389,7 @@ select -noExpand :renderPartition;
 	setAttr -channelBox on ".isHistoricallyInteresting";
 	setAttr -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr -size 15 ".sets";
+	setAttr -size 29 ".sets";
 	setAttr -channelBox on ".annotation";
 	setAttr -channelBox on ".partitionType";
 select -noExpand :renderGlobalsList1;
@@ -32092,7 +32402,7 @@ select -noExpand :defaultShaderList1;
 	setAttr -channelBox on ".isHistoricallyInteresting";
 	setAttr -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr -size 16 ".shaders";
+	setAttr -size 30 ".shaders";
 select -noExpand :postProcessList1;
 	setAttr -keyable on ".caching";
 	setAttr -channelBox on ".isHistoricallyInteresting";
@@ -32215,42 +32525,42 @@ connectAttr "polyTweakUV3.output" "helmet_insideShape.inMesh";
 connectAttr "polyTweakUV3.uvTweak[0]" "helmet_insideShape.uvSet[0].uvSetTweakLocation"
 		;
 connectAttr "Robokitty_ref_out.drawInfo" "robokitty_main.drawOverride";
-connectAttr "polyTweakUV11.output" "robokitty_mainShape.inMesh";
+connectAttr "groupParts29.outputGeometry" "robokitty_mainShape.inMesh";
 connectAttr "groupId301.groupId" "robokitty_mainShape.instObjGroups.objectGroups[1].objectGroupId"
 		;
 connectAttr "aiStandardSurface1SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
 connectAttr "groupId302.groupId" "robokitty_mainShape.instObjGroups.objectGroups[5].objectGroupId"
 		;
-connectAttr "aiStandardSurface10SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[5].objectGrpColor"
+connectAttr "lambert2SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[5].objectGrpColor"
 		;
 connectAttr "groupId303.groupId" "robokitty_mainShape.instObjGroups.objectGroups[6].objectGroupId"
 		;
-connectAttr "aiStandardSurface4SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[6].objectGrpColor"
+connectAttr "lambert8SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[6].objectGrpColor"
 		;
 connectAttr "groupId304.groupId" "robokitty_mainShape.instObjGroups.objectGroups[7].objectGroupId"
 		;
-connectAttr "aiStandardSurface5OPBR_SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[7].objectGrpColor"
+connectAttr "lambert8SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[7].objectGrpColor"
 		;
 connectAttr "groupId305.groupId" "robokitty_mainShape.instObjGroups.objectGroups[8].objectGroupId"
 		;
-connectAttr "aiStandardSurface5OPBR_SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[8].objectGrpColor"
+connectAttr "lambert6SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[8].objectGrpColor"
 		;
 connectAttr "groupId306.groupId" "robokitty_mainShape.instObjGroups.objectGroups[9].objectGroupId"
 		;
-connectAttr "aiStandardSurface4SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[9].objectGrpColor"
+connectAttr "lambert5SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[9].objectGrpColor"
 		;
 connectAttr "groupId307.groupId" "robokitty_mainShape.instObjGroups.objectGroups[10].objectGroupId"
 		;
-connectAttr "aiStandardSurface3SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[10].objectGrpColor"
+connectAttr "lambert3SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[10].objectGrpColor"
 		;
 connectAttr "groupId308.groupId" "robokitty_mainShape.instObjGroups.objectGroups[11].objectGroupId"
 		;
-connectAttr "aiStandardSurface11SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[11].objectGrpColor"
+connectAttr "lambert2SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[11].objectGrpColor"
 		;
 connectAttr "groupId309.groupId" "robokitty_mainShape.instObjGroups.objectGroups[12].objectGroupId"
 		;
-connectAttr "aiStandardSurface7SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[12].objectGrpColor"
+connectAttr "lambert3SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[12].objectGrpColor"
 		;
 connectAttr "groupId310.groupId" "robokitty_mainShape.instObjGroups.objectGroups[14].objectGroupId"
 		;
@@ -32258,16 +32568,36 @@ connectAttr "textureEditorIsolateSelectSet.memberWireframeColor" "robokitty_main
 		;
 connectAttr "groupId274.groupId" "robokitty_mainShape.instObjGroups.objectGroups[15].objectGroupId"
 		;
+connectAttr "groupId321.groupId" "robokitty_mainShape.instObjGroups.objectGroups[16].objectGroupId"
+		;
+connectAttr "lambert2SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[16].objectGrpColor"
+		;
+connectAttr "groupId322.groupId" "robokitty_mainShape.instObjGroups.objectGroups[17].objectGroupId"
+		;
+connectAttr "lambert3SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[17].objectGrpColor"
+		;
+connectAttr "groupId323.groupId" "robokitty_mainShape.instObjGroups.objectGroups[19].objectGroupId"
+		;
+connectAttr "lambert4SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[19].objectGrpColor"
+		;
+connectAttr "groupId324.groupId" "robokitty_mainShape.instObjGroups.objectGroups[20].objectGroupId"
+		;
+connectAttr "lambert5SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[20].objectGrpColor"
+		;
+connectAttr "groupId325.groupId" "robokitty_mainShape.instObjGroups.objectGroups[21].objectGroupId"
+		;
+connectAttr "lambert6SG.memberWireframeColor" "robokitty_mainShape.instObjGroups.objectGroups[21].objectGrpColor"
+		;
 connectAttr "polyTweakUV11.uvTweak[0]" "robokitty_mainShape.uvSet[0].uvSetTweakLocation"
 		;
 connectAttr "Eye_ref_out.drawInfo" "eye_insideR.drawOverride";
 connectAttr "groupId281.groupId" "eye_insideRShape.instObjGroups.objectGroups[1].objectGroupId"
 		;
-connectAttr "aiStandardSurface1SG.memberWireframeColor" "eye_insideRShape.instObjGroups.objectGroups[1].objectGrpColor"
+connectAttr "lambert13SG.memberWireframeColor" "eye_insideRShape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
 connectAttr "groupId282.groupId" "eye_insideRShape.instObjGroups.objectGroups[2].objectGroupId"
 		;
-connectAttr "aiStandardSurface7SG.memberWireframeColor" "eye_insideRShape.instObjGroups.objectGroups[2].objectGrpColor"
+connectAttr "lambert12SG.memberWireframeColor" "eye_insideRShape.instObjGroups.objectGroups[2].objectGrpColor"
 		;
 connectAttr "groupId283.groupId" "eye_insideRShape.instObjGroups.objectGroups[4].objectGroupId"
 		;
@@ -32276,11 +32606,11 @@ connectAttr "textureEditorIsolateSelectSet.memberWireframeColor" "eye_insideRSha
 connectAttr "Eye_ref_out.drawInfo" "eye_insideL.drawOverride";
 connectAttr "groupId294.groupId" "eye_insideLShape.instObjGroups.objectGroups[1].objectGroupId"
 		;
-connectAttr "aiStandardSurface1SG.memberWireframeColor" "eye_insideLShape.instObjGroups.objectGroups[1].objectGrpColor"
+connectAttr "lambert13SG.memberWireframeColor" "eye_insideLShape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
 connectAttr "groupId295.groupId" "eye_insideLShape.instObjGroups.objectGroups[2].objectGroupId"
 		;
-connectAttr "aiStandardSurface7SG.memberWireframeColor" "eye_insideLShape.instObjGroups.objectGroups[2].objectGrpColor"
+connectAttr "lambert12SG.memberWireframeColor" "eye_insideLShape.instObjGroups.objectGroups[2].objectGrpColor"
 		;
 connectAttr "groupId296.groupId" "eye_insideLShape.instObjGroups.objectGroups[4].objectGroupId"
 		;
@@ -32289,21 +32619,21 @@ connectAttr "textureEditorIsolateSelectSet.memberWireframeColor" "eye_insideLSha
 connectAttr "Head_In_Helmet_ref_out.drawInfo" "face_mesh.drawOverride";
 connectAttr "groupId317.groupId" "face_meshShape.instObjGroups.objectGroups[2].objectGroupId"
 		;
-connectAttr "aiStandardSurface6SG.memberWireframeColor" "face_meshShape.instObjGroups.objectGroups[2].objectGrpColor"
+connectAttr "lambert11SG.memberWireframeColor" "face_meshShape.instObjGroups.objectGroups[2].objectGrpColor"
 		;
 connectAttr "groupId318.groupId" "face_meshShape.instObjGroups.objectGroups[3].objectGroupId"
 		;
-connectAttr "aiStandardSurface3SG.memberWireframeColor" "face_meshShape.instObjGroups.objectGroups[3].objectGrpColor"
+connectAttr "lambert9SG.memberWireframeColor" "face_meshShape.instObjGroups.objectGroups[3].objectGrpColor"
 		;
 connectAttr "groupId319.groupId" "face_meshShape.instObjGroups.objectGroups[4].objectGroupId"
 		;
-connectAttr "aiStandardSurface9SG.memberWireframeColor" "face_meshShape.instObjGroups.objectGroups[4].objectGrpColor"
+connectAttr "lambert10SG.memberWireframeColor" "face_meshShape.instObjGroups.objectGroups[4].objectGrpColor"
 		;
 connectAttr "groupId320.groupId" "face_meshShape.instObjGroups.objectGroups[6].objectGroupId"
 		;
 connectAttr "textureEditorIsolateSelectSet.memberWireframeColor" "face_meshShape.instObjGroups.objectGroups[6].objectGrpColor"
 		;
-connectAttr "polyTweakUV8.output" "face_meshShape.inMesh";
+connectAttr "polySplit4.output" "face_meshShape.inMesh";
 connectAttr "polyTweakUV8.uvTweak[0]" "face_meshShape.uvSet[0].uvSetTweakLocation"
 		;
 connectAttr "Head_In_Helmet_ref_out.drawInfo" "eye_lense.drawOverride";
@@ -32313,8 +32643,14 @@ connectAttr "groupId316.groupId" "eye_lenseShape.instObjGroups.objectGroups[3].o
 		;
 connectAttr "textureEditorIsolateSelectSet.memberWireframeColor" "eye_lenseShape.instObjGroups.objectGroups[3].objectGrpColor"
 		;
-connectAttr "polyTweakUV7.output" "eye_lenseShape.inMesh";
+connectAttr "groupId328.groupId" "eye_lenseShape.instObjGroups.objectGroups[4].objectGroupId"
+		;
+connectAttr "blinn2SG.memberWireframeColor" "eye_lenseShape.instObjGroups.objectGroups[4].objectGrpColor"
+		;
+connectAttr "groupParts31.outputGeometry" "eye_lenseShape.inMesh";
 connectAttr "polyTweakUV7.uvTweak[0]" "eye_lenseShape.uvSet[0].uvSetTweakLocation"
+		;
+connectAttr "groupId329.groupId" "eye_lenseShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId"
 		;
 connectAttr "Head_In_Helmet_ref_out.drawInfo" "eye_lense1.drawOverride";
 connectAttr "groupId312.groupId" "eye_lense1Shape.instObjGroups.objectGroups[1].objectGroupId"
@@ -32323,8 +32659,14 @@ connectAttr "groupId313.groupId" "eye_lense1Shape.instObjGroups.objectGroups[3].
 		;
 connectAttr "textureEditorIsolateSelectSet.memberWireframeColor" "eye_lense1Shape.instObjGroups.objectGroups[3].objectGrpColor"
 		;
-connectAttr "polyTweakUV4.output" "eye_lense1Shape.inMesh";
+connectAttr "groupId326.groupId" "eye_lense1Shape.instObjGroups.objectGroups[4].objectGroupId"
+		;
+connectAttr "blinn2SG.memberWireframeColor" "eye_lense1Shape.instObjGroups.objectGroups[4].objectGrpColor"
+		;
+connectAttr "groupParts30.outputGeometry" "eye_lense1Shape.inMesh";
 connectAttr "polyTweakUV4.uvTweak[0]" "eye_lense1Shape.uvSet[0].uvSetTweakLocation"
+		;
+connectAttr "groupId327.groupId" "eye_lense1Shape.compInstObjGroups.compObjectGroups[0].compObjectGroupId"
 		;
 connectAttr ":defaultColorMgtGlobals.cmEnabled" "imagePlaneShape1.colorManagementEnabled"
 		;
@@ -32360,6 +32702,20 @@ relationship "link" ":lightLinker1" "aiStandardSurface8SG.message" ":defaultLigh
 relationship "link" ":lightLinker1" "aiStandardSurface9SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "aiStandardSurface10SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "aiStandardSurface11SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert10SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert11SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert12SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert13SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
@@ -32375,6 +32731,20 @@ relationship "shadowLink" ":lightLinker1" "aiStandardSurface8SG.message" ":defau
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface9SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface10SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface11SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert10SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert11SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert12SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert13SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.displayLayerId[0]" "defaultLayer.identification";
 connectAttr "renderLayerManager.renderLayerId[0]" "defaultRenderLayer.identification"
 		;
@@ -32385,19 +32755,11 @@ connectAttr ":defaultArnoldDisplayDriver.message" ":defaultArnoldRenderOptions.d
 connectAttr ":defaultArnoldFilter.message" ":defaultArnoldRenderOptions.filter";
 connectAttr ":defaultArnoldDriver.message" ":defaultArnoldRenderOptions.driver";
 connectAttr "blu.outColor" "aiStandardSurface1SG.surfaceShader";
-connectAttr "eye_insideRShape.instObjGroups.objectGroups[1]" "aiStandardSurface1SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "eye_insideLShape.instObjGroups.objectGroups[1]" "aiStandardSurface1SG.dagSetMembers"
-		 -nextAvailable;
 connectAttr "robokitty_mainShape.instObjGroups.objectGroups[1]" "aiStandardSurface1SG.dagSetMembers"
 		 -nextAvailable;
 connectAttr "groupId117.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
 		;
 connectAttr "groupId122.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId281.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId294.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
 		;
 connectAttr "groupId301.message" "aiStandardSurface1SG.groupNodes" -nextAvailable
 		;
@@ -32411,97 +32773,55 @@ connectAttr "groupId123.message" "lambert1SG.groupNodes" -nextAvailable;
 connectAttr "lambert1SG.message" "materialInfo2.shadingGroup";
 connectAttr ":lambert1.message" "materialInfo2.material";
 connectAttr "Clear.outColor" "aiStandardSurface2SG.surfaceShader";
-connectAttr "glass_outerShape.instObjGroups" "aiStandardSurface2SG.dagSetMembers"
-		 -nextAvailable;
 connectAttr "groupId121.message" "aiStandardSurface2SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface2SG.message" "materialInfo3.shadingGroup";
 connectAttr "Clear.message" "materialInfo3.material";
 connectAttr "Clear.message" "materialInfo3.texture" -nextAvailable;
 connectAttr "grey.outColor" "aiStandardSurface3SG.surfaceShader";
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[10]" "aiStandardSurface3SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "face_meshShape.instObjGroups.objectGroups[3]" "aiStandardSurface3SG.dagSetMembers"
-		 -nextAvailable;
 connectAttr "groupId120.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
 		;
 connectAttr "groupId125.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId307.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId318.message" "aiStandardSurface3SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface3SG.message" "materialInfo4.shadingGroup";
 connectAttr "grey.message" "materialInfo4.material";
 connectAttr "grey.message" "materialInfo4.texture" -nextAvailable;
 connectAttr "panels.outColor" "aiStandardSurface4SG.surfaceShader";
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[6]" "aiStandardSurface4SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[9]" "aiStandardSurface4SG.dagSetMembers"
-		 -nextAvailable;
 connectAttr "groupId119.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
 		;
 connectAttr "groupId124.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId303.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId306.message" "aiStandardSurface4SG.groupNodes" -nextAvailable
 		;
 connectAttr "aiStandardSurface4SG.message" "materialInfo5.shadingGroup";
 connectAttr "panels.message" "materialInfo5.material";
 connectAttr "panels.message" "materialInfo5.texture" -nextAvailable;
 connectAttr "aiStandardSurface5SG.message" "materialInfo6.shadingGroup";
 connectAttr "silverPBR.outColor" "aiStandardSurface5OPBR_SG.surfaceShader";
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[7]" "aiStandardSurface5OPBR_SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[8]" "aiStandardSurface5OPBR_SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "groupId304.message" "aiStandardSurface5OPBR_SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId305.message" "aiStandardSurface5OPBR_SG.groupNodes" -nextAvailable
-		;
 connectAttr "aiStandardSurface5OPBR_SG.message" "materialInfo7.shadingGroup";
 connectAttr "silverPBR.message" "materialInfo7.material";
 connectAttr "silverPBR.message" "materialInfo7.texture" -nextAvailable;
 connectAttr "pink.outColor" "aiStandardSurface6SG.surfaceShader";
 connectAttr "helmet_insideShape.instObjGroups" "aiStandardSurface6SG.dagSetMembers"
 		 -nextAvailable;
-connectAttr "face_meshShape.instObjGroups.objectGroups[2]" "aiStandardSurface6SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "groupId317.message" "aiStandardSurface6SG.groupNodes" -nextAvailable
-		;
 connectAttr "aiStandardSurface6SG.message" "materialInfo8.shadingGroup";
 connectAttr "pink.message" "materialInfo8.material";
 connectAttr "pink.message" "materialInfo8.texture" -nextAvailable;
 connectAttr "black.outColor" "aiStandardSurface7SG.surfaceShader";
-connectAttr "eye_insideRShape.instObjGroups.objectGroups[2]" "aiStandardSurface7SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "eye_insideLShape.instObjGroups.objectGroups[2]" "aiStandardSurface7SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[12]" "aiStandardSurface7SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "groupId282.message" "aiStandardSurface7SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId295.message" "aiStandardSurface7SG.groupNodes" -nextAvailable
-		;
-connectAttr "groupId309.message" "aiStandardSurface7SG.groupNodes" -nextAvailable
-		;
 connectAttr "aiStandardSurface7SG.message" "materialInfo9.shadingGroup";
 connectAttr "black.message" "materialInfo9.material";
 connectAttr "black.message" "materialInfo9.texture" -nextAvailable;
 connectAttr "eye_leses.outColor" "aiStandardSurface8SG.surfaceShader";
-connectAttr "eye_lenseShape.instObjGroups" "aiStandardSurface8SG.dagSetMembers" 
-		-nextAvailable;
-connectAttr "eye_lense1Shape.instObjGroups" "aiStandardSurface8SG.dagSetMembers"
+connectAttr "eye_lense1Shape.compInstObjGroups.compObjectGroups[0]" "aiStandardSurface8SG.dagSetMembers"
 		 -nextAvailable;
+connectAttr "eye_lenseShape.compInstObjGroups.compObjectGroups[0]" "aiStandardSurface8SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId327.message" "aiStandardSurface8SG.groupNodes" -nextAvailable
+		;
+connectAttr "groupId329.message" "aiStandardSurface8SG.groupNodes" -nextAvailable
+		;
 connectAttr "aiStandardSurface8SG.message" "materialInfo10.shadingGroup";
 connectAttr "eye_leses.message" "materialInfo10.material";
 connectAttr "eye_leses.message" "materialInfo10.texture" -nextAvailable;
 connectAttr "eye_white.outColor" "aiStandardSurface9SG.surfaceShader";
-connectAttr "face_meshShape.instObjGroups.objectGroups[4]" "aiStandardSurface9SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "groupId319.message" "aiStandardSurface9SG.groupNodes" -nextAvailable
-		;
 connectAttr "aiStandardSurface9SG.message" "materialInfo11.shadingGroup";
 connectAttr "eye_white.message" "materialInfo11.material";
 connectAttr "eye_white.message" "materialInfo11.texture" -nextAvailable;
@@ -32510,19 +32830,11 @@ connectAttr "layerManager.displayLayerId[1]" "Head_In_Helmet_ref_out.identificat
 connectAttr "layerManager.displayLayerId[2]" "Robokitty_ref_out.identification";
 connectAttr "layerManager.displayLayerId[3]" "Eye_ref_out.identification";
 connectAttr "suit.outColor" "aiStandardSurface10SG.surfaceShader";
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[5]" "aiStandardSurface10SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "groupId302.message" "aiStandardSurface10SG.groupNodes" -nextAvailable
-		;
 connectAttr "aiStandardSurface10SG.message" "materialInfo12.shadingGroup";
 connectAttr "suit.message" "materialInfo12.material";
 connectAttr "suit.message" "materialInfo12.texture" -nextAvailable;
 connectAttr "layerManager.displayLayerId[4]" "sky.identification";
 connectAttr "cords.outColor" "aiStandardSurface11SG.surfaceShader";
-connectAttr "robokitty_mainShape.instObjGroups.objectGroups[11]" "aiStandardSurface11SG.dagSetMembers"
-		 -nextAvailable;
-connectAttr "groupId308.message" "aiStandardSurface11SG.groupNodes" -nextAvailable
-		;
 connectAttr "aiStandardSurface11SG.message" "materialInfo13.shadingGroup";
 connectAttr "cords.message" "materialInfo13.material";
 connectAttr "cords.message" "materialInfo13.texture" -nextAvailable;
@@ -32558,52 +32870,6 @@ connectAttr "eye_lenseShape.instObjGroups.objectGroups[3]" "textureEditorIsolate
 		 -nextAvailable;
 connectAttr "face_meshShape.instObjGroups.objectGroups[6]" "textureEditorIsolateSelectSet.dagSetMembers"
 		 -nextAvailable;
-connectAttr "aiStandardSurface8SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[0].dependNode"
-		;
-connectAttr "aiStandardSurface3SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[1].dependNode"
-		;
-connectAttr "grey.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[2].dependNode"
-		;
-connectAttr "imagePlaneShape1.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[3].dependNode"
-		;
-connectAttr "aiStandardSurface4SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[4].dependNode"
-		;
-connectAttr "aiStandardSurface6SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[5].dependNode"
-		;
-connectAttr "imagePlaneShape3.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[6].dependNode"
-		;
-connectAttr "aiStandardSurface11SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[7].dependNode"
-		;
-connectAttr "eye_white.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[8].dependNode"
-		;
-connectAttr "aiStandardSurface2SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[9].dependNode"
-		;
-connectAttr "eye_leses.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[10].dependNode"
-		;
-connectAttr "silverPBR.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[11].dependNode"
-		;
-connectAttr "Clear.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[12].dependNode"
-		;
-connectAttr "suit.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[13].dependNode"
-		;
-connectAttr "aiStandardSurface7SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[14].dependNode"
-		;
-connectAttr "black.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[15].dependNode"
-		;
-connectAttr "aiStandardSurface5SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[16].dependNode"
-		;
-connectAttr "panels.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[17].dependNode"
-		;
-connectAttr "aiStandardSurface10SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[18].dependNode"
-		;
-connectAttr "aiStandardSurface9SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[19].dependNode"
-		;
-connectAttr "cords.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[20].dependNode"
-		;
-connectAttr "pink.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[21].dependNode"
-		;
-connectAttr "aiStandardSurface5OPBR_SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[22].dependNode"
-		;
 connectAttr "groupParts10.outputGeometry" "polySplit1.inputPolymesh";
 connectAttr "polySurfaceShape8.outMesh" "groupParts1.inputGeometry";
 connectAttr "groupId301.groupId" "groupParts1.groupId";
@@ -32674,6 +32940,242 @@ connectAttr "polyMapCut5.output" "polyMapCut6.inputPolymesh";
 connectAttr "polyMapCut6.output" "polyMapCut7.inputPolymesh";
 connectAttr "polyMapCut7.output" "polyMapCut8.inputPolymesh";
 connectAttr "polyMapCut8.output" "polyTweakUV11.inputPolymesh";
+connectAttr "lambert2.outColor" "lambert2SG.surfaceShader";
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[16]" "lambert2SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[5]" "lambert2SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[11]" "lambert2SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId321.message" "lambert2SG.groupNodes" -nextAvailable;
+connectAttr "groupId302.message" "lambert2SG.groupNodes" -nextAvailable;
+connectAttr "groupId308.message" "lambert2SG.groupNodes" -nextAvailable;
+connectAttr "lambert2SG.message" "materialInfo14.shadingGroup";
+connectAttr "lambert2.message" "materialInfo14.material";
+connectAttr "lambert3.outColor" "lambert3SG.surfaceShader";
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[17]" "lambert3SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[12]" "lambert3SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[10]" "lambert3SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId322.message" "lambert3SG.groupNodes" -nextAvailable;
+connectAttr "groupId309.message" "lambert3SG.groupNodes" -nextAvailable;
+connectAttr "groupId307.message" "lambert3SG.groupNodes" -nextAvailable;
+connectAttr "lambert3SG.message" "materialInfo15.shadingGroup";
+connectAttr "lambert3.message" "materialInfo15.material";
+connectAttr "lambert4.outColor" "lambert4SG.surfaceShader";
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[19]" "lambert4SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId323.message" "lambert4SG.groupNodes" -nextAvailable;
+connectAttr "lambert4SG.message" "materialInfo16.shadingGroup";
+connectAttr "lambert4.message" "materialInfo16.material";
+connectAttr "lambert5.outColor" "lambert5SG.surfaceShader";
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[20]" "lambert5SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[9]" "lambert5SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId324.message" "lambert5SG.groupNodes" -nextAvailable;
+connectAttr "groupId306.message" "lambert5SG.groupNodes" -nextAvailable;
+connectAttr "lambert5SG.message" "materialInfo17.shadingGroup";
+connectAttr "lambert5.message" "materialInfo17.material";
+connectAttr "lambert6.outColor" "lambert6SG.surfaceShader";
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[21]" "lambert6SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[8]" "lambert6SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId325.message" "lambert6SG.groupNodes" -nextAvailable;
+connectAttr "groupId305.message" "lambert6SG.groupNodes" -nextAvailable;
+connectAttr "lambert6SG.message" "materialInfo18.shadingGroup";
+connectAttr "lambert6.message" "materialInfo18.material";
+connectAttr "lambert7.outColor" "lambert7SG.surfaceShader";
+connectAttr "lambert7SG.message" "materialInfo19.shadingGroup";
+connectAttr "lambert7.message" "materialInfo19.material";
+connectAttr "lambert8.outColor" "lambert8SG.surfaceShader";
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[6]" "lambert8SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "robokitty_mainShape.instObjGroups.objectGroups[7]" "lambert8SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId303.message" "lambert8SG.groupNodes" -nextAvailable;
+connectAttr "groupId304.message" "lambert8SG.groupNodes" -nextAvailable;
+connectAttr "lambert8SG.message" "materialInfo20.shadingGroup";
+connectAttr "lambert8.message" "materialInfo20.material";
+connectAttr "lambert9.outColor" "lambert9SG.surfaceShader";
+connectAttr "face_meshShape.instObjGroups.objectGroups[3]" "lambert9SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId318.message" "lambert9SG.groupNodes" -nextAvailable;
+connectAttr "lambert9SG.message" "materialInfo21.shadingGroup";
+connectAttr "lambert9.message" "materialInfo21.material";
+connectAttr "polyTweakUV11.output" "groupParts21.inputGeometry";
+connectAttr "groupId302.groupId" "groupParts21.groupId";
+connectAttr "groupParts21.outputGeometry" "groupParts22.inputGeometry";
+connectAttr "groupId321.groupId" "groupParts22.groupId";
+connectAttr "groupParts22.outputGeometry" "groupParts23.inputGeometry";
+connectAttr "groupId309.groupId" "groupParts23.groupId";
+connectAttr "groupParts23.outputGeometry" "groupParts24.inputGeometry";
+connectAttr "groupId322.groupId" "groupParts24.groupId";
+connectAttr "groupParts24.outputGeometry" "groupParts25.inputGeometry";
+connectAttr "groupId323.groupId" "groupParts25.groupId";
+connectAttr "groupParts25.outputGeometry" "groupParts26.inputGeometry";
+connectAttr "groupId306.groupId" "groupParts26.groupId";
+connectAttr "groupParts26.outputGeometry" "groupParts27.inputGeometry";
+connectAttr "groupId324.groupId" "groupParts27.groupId";
+connectAttr "groupParts27.outputGeometry" "groupParts28.inputGeometry";
+connectAttr "groupId304.groupId" "groupParts28.groupId";
+connectAttr "groupParts28.outputGeometry" "groupParts29.inputGeometry";
+connectAttr "groupId325.groupId" "groupParts29.groupId";
+connectAttr "blinn1.outColor" "blinn1SG.surfaceShader";
+connectAttr "glass_outerShape.instObjGroups" "blinn1SG.dagSetMembers" -nextAvailable
+		;
+connectAttr "blinn1SG.message" "materialInfo22.shadingGroup";
+connectAttr "blinn1.message" "materialInfo22.material";
+connectAttr "lambert10.outColor" "lambert10SG.surfaceShader";
+connectAttr "face_meshShape.instObjGroups.objectGroups[4]" "lambert10SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId319.message" "lambert10SG.groupNodes" -nextAvailable;
+connectAttr "lambert10SG.message" "materialInfo23.shadingGroup";
+connectAttr "lambert10.message" "materialInfo23.material";
+connectAttr "blinn2.outColor" "blinn2SG.surfaceShader";
+connectAttr "eye_lense1Shape.instObjGroups.objectGroups[4]" "blinn2SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "eye_lenseShape.instObjGroups.objectGroups[4]" "blinn2SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId326.message" "blinn2SG.groupNodes" -nextAvailable;
+connectAttr "groupId328.message" "blinn2SG.groupNodes" -nextAvailable;
+connectAttr "blinn2SG.message" "materialInfo24.shadingGroup";
+connectAttr "blinn2.message" "materialInfo24.material";
+connectAttr "polyTweakUV4.output" "groupParts30.inputGeometry";
+connectAttr "groupId326.groupId" "groupParts30.groupId";
+connectAttr "polyTweakUV7.output" "groupParts31.inputGeometry";
+connectAttr "groupId328.groupId" "groupParts31.groupId";
+connectAttr "polyTweakUV8.output" "polySplit3.inputPolymesh";
+connectAttr "polySplit3.output" "polySplit4.inputPolymesh";
+connectAttr "lambert11.outColor" "lambert11SG.surfaceShader";
+connectAttr "face_meshShape.instObjGroups.objectGroups[2]" "lambert11SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId317.message" "lambert11SG.groupNodes" -nextAvailable;
+connectAttr "lambert11SG.message" "materialInfo25.shadingGroup";
+connectAttr "lambert11.message" "materialInfo25.material";
+connectAttr "lambert12.outColor" "lambert12SG.surfaceShader";
+connectAttr "eye_insideRShape.instObjGroups.objectGroups[2]" "lambert12SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "eye_insideLShape.instObjGroups.objectGroups[2]" "lambert12SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId282.message" "lambert12SG.groupNodes" -nextAvailable;
+connectAttr "groupId295.message" "lambert12SG.groupNodes" -nextAvailable;
+connectAttr "lambert12SG.message" "materialInfo26.shadingGroup";
+connectAttr "lambert12.message" "materialInfo26.material";
+connectAttr "lambert13.outColor" "lambert13SG.surfaceShader";
+connectAttr "eye_insideRShape.instObjGroups.objectGroups[1]" "lambert13SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "eye_insideLShape.instObjGroups.objectGroups[1]" "lambert13SG.dagSetMembers"
+		 -nextAvailable;
+connectAttr "groupId281.message" "lambert13SG.groupNodes" -nextAvailable;
+connectAttr "groupId294.message" "lambert13SG.groupNodes" -nextAvailable;
+connectAttr "lambert13SG.message" "materialInfo27.shadingGroup";
+connectAttr "lambert13.message" "materialInfo27.material";
+connectAttr "blinn2.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[0].dependNode"
+		;
+connectAttr "blinn2SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[1].dependNode"
+		;
+connectAttr "eye_white.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[2].dependNode"
+		;
+connectAttr "imagePlaneShape1.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[3].dependNode"
+		;
+connectAttr "aiStandardSurface8SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[4].dependNode"
+		;
+connectAttr "aiStandardSurface6SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[5].dependNode"
+		;
+connectAttr "pink.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[6].dependNode"
+		;
+connectAttr "silverPBR.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[7].dependNode"
+		;
+connectAttr "aiStandardSurface3SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[8].dependNode"
+		;
+connectAttr "aiStandardSurface10SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[9].dependNode"
+		;
+connectAttr "cords.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[10].dependNode"
+		;
+connectAttr "aiStandardSurface5OPBR_SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[11].dependNode"
+		;
+connectAttr "imagePlaneShape3.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[12].dependNode"
+		;
+connectAttr "eye_leses.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[13].dependNode"
+		;
+connectAttr "aiStandardSurface5SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[14].dependNode"
+		;
+connectAttr "black.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[15].dependNode"
+		;
+connectAttr "aiStandardSurface11SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[16].dependNode"
+		;
+connectAttr "panels.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[17].dependNode"
+		;
+connectAttr "aiStandardSurface7SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[18].dependNode"
+		;
+connectAttr "Clear.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[19].dependNode"
+		;
+connectAttr "aiStandardSurface9SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[20].dependNode"
+		;
+connectAttr "aiStandardSurface4SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[21].dependNode"
+		;
+connectAttr "suit.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[22].dependNode"
+		;
+connectAttr "grey.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[23].dependNode"
+		;
+connectAttr "aiStandardSurface2SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[24].dependNode"
+		;
+connectAttr "lambert2.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[25].dependNode"
+		;
+connectAttr "lambert2SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[26].dependNode"
+		;
+connectAttr "lambert11.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[27].dependNode"
+		;
+connectAttr "lambert11SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[28].dependNode"
+		;
+connectAttr "lambert13.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[29].dependNode"
+		;
+connectAttr "lambert12SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[30].dependNode"
+		;
+connectAttr "lambert13SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[31].dependNode"
+		;
+connectAttr "lambert12.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[32].dependNode"
+		;
+connectAttr "lambert10SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[33].dependNode"
+		;
+connectAttr "lambert10.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[34].dependNode"
+		;
+connectAttr "lambert8.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[35].dependNode"
+		;
+connectAttr "lambert7.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[36].dependNode"
+		;
+connectAttr "lambert3SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[37].dependNode"
+		;
+connectAttr "lambert9.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[38].dependNode"
+		;
+connectAttr "lambert6.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[39].dependNode"
+		;
+connectAttr "lambert5SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[40].dependNode"
+		;
+connectAttr "lambert8SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[41].dependNode"
+		;
+connectAttr "lambert5.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[42].dependNode"
+		;
+connectAttr "lambert4.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[43].dependNode"
+		;
+connectAttr "lambert4SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[44].dependNode"
+		;
+connectAttr "lambert3.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[45].dependNode"
+		;
+connectAttr "lambert7SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[46].dependNode"
+		;
+connectAttr "lambert6SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[47].dependNode"
+		;
+connectAttr "lambert9SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[48].dependNode"
+		;
+connectAttr "blinn1.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[49].dependNode"
+		;
+connectAttr "blinn1SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[50].dependNode"
+		;
 connectAttr "aiStandardSurface1SG.partition" ":renderPartition.sets" -nextAvailable
 		;
 connectAttr "lambert1SG.partition" ":renderPartition.sets" -nextAvailable;
@@ -32699,6 +33201,20 @@ connectAttr "aiStandardSurface10SG.partition" ":renderPartition.sets" -nextAvail
 		;
 connectAttr "aiStandardSurface11SG.partition" ":renderPartition.sets" -nextAvailable
 		;
+connectAttr "lambert2SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert3SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert4SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert5SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert6SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert7SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert8SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert9SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "blinn1SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert10SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "blinn2SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert11SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert12SG.partition" ":renderPartition.sets" -nextAvailable;
+connectAttr "lambert13SG.partition" ":renderPartition.sets" -nextAvailable;
 connectAttr "blu.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "Clear.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "grey.message" ":defaultShaderList1.shaders" -nextAvailable;
@@ -32710,6 +33226,20 @@ connectAttr "eye_leses.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "eye_white.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "suit.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "cords.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert2.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert3.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert4.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert5.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert6.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert7.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert8.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert9.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "blinn1.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert10.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "blinn2.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert11.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert12.message" ":defaultShaderList1.shaders" -nextAvailable;
+connectAttr "lambert13.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "defaultRenderLayer.message" ":defaultRenderingList1.rendering" -nextAvailable
 		;
 connectAttr "aiSkyDomeLightShape1.lightData" ":lightList1.lights" -nextAvailable

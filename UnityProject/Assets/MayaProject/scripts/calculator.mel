@@ -239,6 +239,41 @@ global proc calculator_simple(string $funct, float $arry[])
     }
 }
 
+
+global proc Calc()
+{
+    string $calcwindow = `window -title "Calculator" -widthHeight 300 200`;
+    gridLayout -numberOfColumns 2 -cellWidthHeight 150 30;
+    text -label "Operation:";
+    string $operation = `textField -text "sum" operation;
+    text -label "Numbers (comma separated):";
+    string $operation = `textField -text "3,2,5,1,4" args;
+    string $operation = `textField operation;
+    string $args = `textField args;
+    button -label "Calculate" -command ("CalculateResult(\"" + $operation + "\", \"" + $args + "\")");
+    text -label "Result:";
+
+    showWindow $calcwindow;
+    gridLayout -edit -numberOfColumns 2;
+
+}
+
+global proc CalculateResult(string $op string $args)
+{
+    string $opfield = `textField -query -text $op`;
+    string $argsfield = `textField -query -text $args`;
+    string $argArray[] = stringToStringArray($args, ",");
+    float $numArray[];
+    for ($arg in $argArray)
+    {
+        $numArray[size($numArray)] = (float)$arg;
+    }
+    calculator($op, $numArray);
+    print("Result: " + $result + "\n");
+}
+
+
+
 // Example usage:
 calculator("sum", {3, 2, 5, 1, 4});
 calculator("median", {3, 2, 5, 1, 4});
