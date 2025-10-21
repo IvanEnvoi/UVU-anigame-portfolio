@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Coin_Bunny.ma
-//Last modified: Sun, Oct 19, 2025 06:21:22 PM
+//Last modified: Mon, Oct 20, 2025 05:47:03 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "CC01B60F-402F-F8E5-A392-5D97FBFA5823";
+fileInfo "UUID" "428A3216-4932-A78E-5724-5093B81DA7B2";
 createNode transform -shared -name "persp";
 	rename -uuid "9C65BA6E-4806-516D-1185-A7BE2437FE1B";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 265.84895818395864 38.928435145122734 321.42687480965765 ;
-	setAttr ".rotate" -type "double3" -359.73835272912993 -2121.3999999997754 -1.5897269697942967e-17 ;
+	setAttr ".translate" -type "double3" 77.279862240659597 88.08218858615686 -430.3930340123361 ;
+	setAttr ".rotate" -type "double3" -366.33835272898307 -1990.5999999999876 0 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "0A03E390-4DA7-14B5-B601-0CA5E3ED12AF";
 	setAttr -keyable off ".visibility" no;
@@ -582,18 +582,6 @@ createNode shadingEngine -name "blinn1SG";
 	setAttr ".renderableOnlySet" yes;
 createNode materialInfo -name "materialInfo1";
 	rename -uuid "D96A83FE-4610-283A-82EC-A29728AB4F82";
-createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uuid "887EC66B-4B75-A7D7-407C-13844F274C2A";
-	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
-	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -44.444442678380966 -383.33331810103584 ;
-	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 524.60315375731818 44.444442678380966 ;
-	setAttr -size 2 ".tabGraphInfo[0].nodeInfo";
-	setAttr ".tabGraphInfo[0].nodeInfo[0].positionX" 301.42855834960938;
-	setAttr ".tabGraphInfo[0].nodeInfo[0].positionY" 12.857142448425293;
-	setAttr ".tabGraphInfo[0].nodeInfo[0].nodeVisualState" 1923;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].positionX" -5.7142858505249023;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].positionY" 12.857142448425293;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].nodeVisualState" 1923;
 createNode aiOptions -shared -name "defaultArnoldRenderOptions";
 	rename -uuid "A71E9A20-4B3A-150C-DD18-F99A2C2CBDD2";
 	setAttr ".version" -type "string" "5.4.5";
@@ -653,6 +641,7 @@ createNode displacementShader -name "displacementShader1";
 createNode bump2d -name "bump2d1";
 	rename -uuid "2B46C062-4E97-2E28-0F1A-DBB77C78EE66";
 	setAttr ".bumpInterp" 1;
+	setAttr ".vertexCameraTwo" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -name "place2dTexture2";
 	rename -uuid "DAEBD9D7-4828-C029-F293-69B69EA2EA71";
 createNode file -name "file6";
@@ -697,7 +686,20 @@ createNode displacementShader -name "displacementShader2";
 createNode bump2d -name "bump2d2";
 	rename -uuid "A76124EE-433B-1072-B3E6-26BEBD2C1AB7";
 	setAttr ".bumpInterp" 1;
+	setAttr ".vertexCameraOne" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vertexCameraTwo" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uuid "936C6C4C-4853-979A-F555-27A1BBA94B6A";
+	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
+	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -44.444442678380959 -669.71466095071924 ;
+	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 837.00619539216018 330.03213476595033 ;
+	setAttr -size 2 ".tabGraphInfo[0].nodeInfo";
+	setAttr ".tabGraphInfo[0].nodeInfo[0].positionX" 301.42855834960938;
+	setAttr ".tabGraphInfo[0].nodeInfo[0].positionY" 12.857142448425293;
+	setAttr ".tabGraphInfo[0].nodeInfo[0].nodeVisualState" 1923;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].positionX" -5.7142858505249023;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].positionY" 12.857142448425293;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].nodeVisualState" 1923;
 select -noExpand :time1;
 	setAttr ".outTime" 0;
 select -noExpand :hardwareRenderingGlobals;
@@ -800,14 +802,8 @@ connectAttr "polyTweakUV3.output" "polyMapCut7.inputPolymesh";
 connectAttr "polyMapCut7.output" "polyMapCut8.inputPolymesh";
 connectAttr "polyMapCut8.output" "polyTweakUV4.inputPolymesh";
 connectAttr "blinn1.outColor" "blinn1SG.surfaceShader";
-connectAttr "pCylinderShape1.instObjGroups" "blinn1SG.dagSetMembers" -nextAvailable
-		;
 connectAttr "blinn1SG.message" "materialInfo1.shadingGroup";
 connectAttr "blinn1.message" "materialInfo1.material";
-connectAttr "blinn1SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[0].dependNode"
-		;
-connectAttr "blinn1.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[1].dependNode"
-		;
 connectAttr ":defaultArnoldDenoiser.message" ":defaultArnoldRenderOptions.imagers"
 		 -nextAvailable;
 connectAttr ":defaultArnoldDisplayDriver.message" ":defaultArnoldRenderOptions.drivers"
@@ -941,6 +937,7 @@ connectAttr "bump2d1.outNormal" "aiStandardSurface1.normalCamera";
 connectAttr "file5.outAlpha" "aiStandardSurface1.specularRoughness";
 connectAttr "aiStandardSurface1.outColor" "set1.surfaceShader";
 connectAttr "displacementShader1.displacement" "set1.displacementShader";
+connectAttr "pCylinderShape1.instObjGroups" "set1.dagSetMembers" -nextAvailable;
 connectAttr "set1.message" "materialInfo2.shadingGroup";
 connectAttr "aiStandardSurface1.message" "materialInfo2.material";
 connectAttr "aiStandardSurface1.message" "materialInfo2.texture" -nextAvailable;
@@ -1078,6 +1075,10 @@ connectAttr "standardSurface2.message" "materialInfo3.material";
 connectAttr "multiplyDivide2.message" "materialInfo3.texture" -nextAvailable;
 connectAttr "file7.outAlpha" "displacementShader2.displacement";
 connectAttr "file9.outAlpha" "bump2d2.bumpValue";
+connectAttr "blinn1SG.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[0].dependNode"
+		;
+connectAttr "blinn1.message" "hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[1].dependNode"
+		;
 connectAttr "blinn1SG.partition" ":renderPartition.sets" -nextAvailable;
 connectAttr "set1.partition" ":renderPartition.sets" -nextAvailable;
 connectAttr "set2.partition" ":renderPartition.sets" -nextAvailable;
