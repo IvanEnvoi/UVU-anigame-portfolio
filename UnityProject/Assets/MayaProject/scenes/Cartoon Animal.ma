@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Cartoon Animal.ma
-//Last modified: Mon, Oct 20, 2025 06:01:12 PM
+//Last modified: Mon, Oct 20, 2025 10:50:44 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "9AF3448C-421F-EE99-BA12-798868B7EB03";
+fileInfo "UUID" "98CAC67A-4E70-D8C1-EE5D-EAA0D350574D";
 createNode transform -shared -name "persp";
 	rename -uuid "B524A512-4F64-5308-D439-F2A4B595FF12";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -17.285959423940795 8.6188247730851337 4.1126405970403077 ;
-	setAttr ".rotate" -type "double3" -12.000000000000201 -78.000000000000441 0 ;
+	setAttr ".translate" -type "double3" -9.3744259179172769 7.3808891760114701 15.337727481488445 ;
+	setAttr ".rotate" -type "double3" -7.799999999999998 -30.000000000000018 -4.590735253788214e-16 ;
 	setAttr ".rotatePivot" -type "double3" -2.2204460492503131e-16 0 -3.5527136788005009e-15 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -5.9978702874950477e-14 -9.7912192986853932e-15 
 		-7.4866002689521621e-14 ;
