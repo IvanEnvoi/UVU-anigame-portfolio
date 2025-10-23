@@ -1,0 +1,58 @@
+// =============================
+//  SCATTER DUPLICATES FUNCTION
+// =============================
+global proc scatterDupes(
+    int   $count,
+    float $minX, float $maxX,
+    float $minY, float $maxY,
+    float $minZ, float $maxZ )
+{
+    string $sel[] = `ls -sl`;
+    if (!size($sel)) {
+        warning "Select at least one object before scattering.";
+        return;
+    }
+
+    for (int $i = 0; $i < $count; $i++)
+    {
+        string $d[] = `duplicate $sel`;
+
+        float $rx = `rand $minX $maxX`;
+        float $ry = `rand $minY $maxY`;
+        float $rz = `rand $minZ $maxZ`;
+
+        move $rx $ry $rz $d;
+    }
+}
+
+
+// ==============
+//     UI TOOL
+// ==============
+global proc scatterUI()
+{
+    if (`window -exists scatterWin`)
+        deleteUI scatterWin;
+
+    window -title "Scatter Duplicates" scatterWin;
+    columnLayout -adj true;
+
+    intFieldGrp   -label "Number of Duplicates" -value1 10 dupField;
+    floatFieldGrp -numberOfFields 2 -label "X Range" -value1 -10 -value2 10 xRange;
+    floatFieldGrp -numberOfFields 2 -label "Y Range" -value1   0 -value2  5 yRange;
+    floatFieldGrp -numberOfFields 2 -label "Z Range" -value1 -10 -value2 10 zRange;
+
+    button -label "Scatter!" -c
+    ("
+        int   $c    = `intFieldGrp   -q -value1 dupField`;
+        float $minX = `floatFieldGrp -q -value1 xRange`;
+        float $maxX = `floatFieldGrp -q -value2 xRange`;
+        float $minY = `floatFieldGrp -q -value1 yRange`;
+        float $maxY = `floatFieldGrp -q -value2 yRange`;
+        float $minZ = `floatFieldGrp -q -value1 zRange`;
+        float $maxZ = `floatFieldGrp -q -value2 zRange`;
+        scatterDupes($c,$minX,$maxX,$minY,$maxY,$minZ,$maxZ);
+    ");
+
+    showWindow scatterWin;
+}
