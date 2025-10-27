@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: level 1.ma
-//Last modified: Sun, Oct 26, 2025 04:42:00 PM
+//Last modified: Sun, Oct 26, 2025 05:24:40 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "7CB1B848-432C-A720-B768-3F9EF3332E00";
+fileInfo "UUID" "760CD303-4729-082E-77FF-D1B0238DCB0F";
 createNode transform -shared -name "persp";
 	rename -uuid "00C3A442-4BC2-8E6A-EDDD-9FB48018BB9D";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -3519.3632354279694 2028.2830232100714 -616.81442704945175 ;
-	setAttr ".rotate" -type "double3" -22.538352724634191 -3360.1999999996906 0 ;
+	setAttr ".translate" -type "double3" -1594.8518089971815 1408.6978492759445 -2547.3649156629281 ;
+	setAttr ".rotate" -type "double3" -14.1383527246053 -3397.7999999996196 0 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "0418F77F-44D5-2FD4-479F-A3909908AE8C";
 	setAttr -keyable off ".visibility" no;
@@ -6267,6 +6267,8 @@ select -noExpand :hardwareRenderGlobals;
 	setAttr -keyable on ".hardwareCodec";
 	setAttr -keyable on ".hardwareDepth";
 	setAttr -keyable on ".hardwareQual";
+select -noExpand :ikSystem;
+	setAttr -size 4 ".ikSolver";
 connectAttr "polyExtrudeEdge1.output" "pPlaneShape1.inMesh";
 connectAttr "layer1.drawInfo" "sweep1.drawOverride";
 connectAttr "polyDelEdge1.output" "sweepShape1.inMesh";
