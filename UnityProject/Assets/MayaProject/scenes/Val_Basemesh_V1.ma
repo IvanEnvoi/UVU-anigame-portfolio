@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Cartoon Human.ma
-//Last modified: Sun, Oct 26, 2025 09:22:26 PM
+//Name: Val_Basemesh_V1.ma
+//Last modified: Sun, Oct 26, 2025 09:23:35 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "F1D34FE6-40E5-AA06-1E66-07AB998EC0F7";
+fileInfo "UUID" "BD1A0343-40F2-EEDC-27D0-E9A9002363FC";
 fileInfo "license" "education";
 createNode transform -shared -name "persp";
 	rename -uuid "0FDF1E6C-46E9-50B1-3E9E-EE8E1197D6D2";
@@ -32,8 +32,8 @@ createNode camera -shared -name "perspShape" -parent "persp";
 createNode transform -shared -name "top";
 	rename -uuid "FCD30E0F-4F35-F81C-C135-93BD0F40C80F";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 23.854379874002408 4.3955010269946975 24.86971857050392 ;
-	setAttr ".rotate" -type "double3" 367.19999988244109 -2829.1999999998384 1.2580724770450579e-15 ;
+	setAttr ".translate" -type "double3" 6.2720166947573404 14.019327277085734 35.184882157853117 ;
+	setAttr ".rotate" -type "double3" 349.199999882442 -2868.3999999998341 2.0292945097672981e-16 ;
 	setAttr ".rotatePivotTranslate" -type "double3" 7.1824907332512492e-14 -2.531122708473816e-15 
 		-2.5311227084743595e-15 ;
 createNode camera -shared -name "topShape" -parent "top";
@@ -56060,4 +56060,4 @@ connectAttr "GenericMeshCartoon:GenericHumamWithBear:Scale_groupId54.message" ":
 		 -nextAvailable;
 connectAttr "GenericMeshCartoon:GenericHumamWithBear:Scale_groupId76.message" ":initialShadingGroup.groupNodes"
 		 -nextAvailable;
-// End of Cartoon Human.ma
+// End of Val_Basemesh_V1.ma
