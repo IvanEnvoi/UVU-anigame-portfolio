@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: PineTrees5.ma
-//Last modified: Tue, Oct 28, 2025 08:19:40 PM
+//Last modified: Tue, Oct 28, 2025 09:09:15 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "9FCEA4E3-444F-E1AF-4512-89B858F1C274";
+fileInfo "UUID" "74BDF0EA-45A5-A4FB-5052-218B2C65EAF1";
 fileInfo "exportedFrom" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject/scenes/trees.ma";
 createNode transform -shared -name "persp";
 	rename -uuid "8A3E86C0-498D-9232-FD4D-27B2522701B8";
@@ -5885,7 +5885,7 @@ createNode mesh -name "SM_tree_pine_mid5Shape" -parent "SM_tree_pine_mid5";
 	setAttr ".componentTags[0].componentTagContents" -type "componentList" 2 "f[60:79]" "f[155:174]";
 	setAttr ".componentTags[1].componentTagName" -type "string" "sides";
 	setAttr ".componentTags[1].componentTagContents" -type "componentList" 4 "f[0:59]" "f[70:154]" "f[165:342]" "f[839:848]";
-	setAttr ".uvPivot" -type "double2" 0.5 0.48970443010328729 ;
+	setAttr ".uvPivot" -type "double2" 0.5 0.48970440030085333 ;
 	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
 	setAttr -size 1017 ".uvSet[0].uvSetPoints";
 	setAttr ".uvSet[0].uvSetPoints[0:249]" -type "float2" 0.8712824 0.024333179
@@ -21426,7 +21426,7 @@ createNode displacementShader -name "displacementShader2";
 createNode multiplyDivide -name "multiplyDivide2";
 	rename -uuid "E1CFEF18-4F78-85D9-9403-488FF26F4966";
 createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uuid "AEF63657-4FBB-8CA3-3FBC-A7978251ECB6";
+	rename -uuid "3231B6DE-4DA6-87A8-FBDC-3B9F87229D57";
 	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
 	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -311.11109874866656 -1217.2117330719689 ;
 	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 1863.491989443545 538.64033146454528 ;
