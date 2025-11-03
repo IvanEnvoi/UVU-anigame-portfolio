@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Val_Basemesh_V1.ma
-//Last modified: Mon, Nov 03, 2025 02:50:18 PM
+//Name: Val_Basemesh_V2.ma
+//Last modified: Mon, Nov 03, 2025 02:50:38 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "1B897EF9-4E8D-8374-15A3-1B90E0A8CDFC";
+fileInfo "UUID" "306C2718-4C67-BCCC-095D-57A5C57E4E64";
 fileInfo "license" "education";
 createNode transform -name "front1";
 	rename -uuid "88AD262D-46D9-A1EC-F9F5-288F3C219D92";
@@ -67300,4 +67300,4 @@ connectAttr "GenericMeshCartoon:GenericHumamWithBear:Scale_groupId54.message" ":
 		 -nextAvailable;
 connectAttr "GenericMeshCartoon:GenericHumamWithBear:Scale_groupId76.message" ":initialShadingGroup.groupNodes"
 		 -nextAvailable;
-// End of Val_Basemesh_V1.ma
+// End of Val_Basemesh_V2.ma

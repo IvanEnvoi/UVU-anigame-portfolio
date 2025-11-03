@@ -1,42 +1,38 @@
 //Maya ASCII 2025ff03 scene
-//Name: running anim.ma
-//Last modified: Mon, Nov 03, 2025 11:16:50 AM
+//Name: animation script test.ma
+//Last modified: Mon, Nov 03, 2025 11:10:24 AM
 //Codeset: 1252
-file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -rfn "Ultimate_Bony_v1_0_5RN" -op "v=1;"
-		 -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Ultimate_Bony_v1.0.5.ma";
-file -r -ns "Ultimate_Bony_v1_0_5" -dr 1 -rfn "Ultimate_Bony_v1_0_5RN" -op "v=1;"
-		 -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Ultimate_Bony_v1.0.5.ma";
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.4.5";
+requires "mtoa" "5.4.5";
 currentUnit -linear centimeter -angle degree -time film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "2550200A-4DCA-4829-ACD3-55BD3CD23AD6";
+fileInfo "UUID" "51AE038E-42AA-4F75-6E8A-F383A36A2C12";
 createNode transform -shared -name "persp";
-	rename -uuid "5060050A-4588-4503-7251-8D9635F07257";
+	rename -uuid "117CB240-4A13-B44F-2BCE-06BC4ED60183";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -153.65050775367155 66.562031908458522 -156.37072077888811 ;
-	setAttr ".rotate" -type "double3" -17.13835273021612 -508.19999999995372 0 ;
+	setAttr ".translate" -type "double3" -425.51463740004232 35.171885133028091 123.62343009727304 ;
+	setAttr ".rotate" -type "double3" -4.5383527296014572 -73.799999999998917 0 ;
 createNode camera -shared -name "perspShape" -parent "persp";
-	rename -uuid "C04E52D0-4DF1-392E-5671-D9AD427561A5";
+	rename -uuid "F1FBA2B7-4DB5-CB64-ED87-D295DDB9B6EC";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 205.58509450994487;
+	setAttr ".centerOfInterest" 444.50255411471585;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
 	setAttr ".homeCommand" -type "string" "viewSet -p %camera";
 createNode transform -shared -name "top";
-	rename -uuid "BC3E63E7-4EDA-1CE2-F0FE-E79CCF0336B3";
+	rename -uuid "8FA8060D-4AFE-6638-4C07-B88A5CF382ED";
 	setAttr ".visibility" no;
 	setAttr ".translate" -type "double3" 0 1000.1 0 ;
 	setAttr ".rotate" -type "double3" -90 0 0 ;
 createNode camera -shared -name "topShape" -parent "top";
-	rename -uuid "D5ADBDFE-4437-E02C-E90A-098289A9D532";
+	rename -uuid "A701DA73-4233-D135-9922-FB89BBBF322E";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".centerOfInterest" 1000.1;
@@ -48,15 +44,15 @@ createNode camera -shared -name "topShape" -parent "top";
 	setAttr ".orthographic" yes;
 	setAttr ".aiTranslator" -type "string" "orthographic";
 createNode transform -shared -name "front";
-	rename -uuid "E256A4E1-4AD8-B165-1358-20A188938C90";
+	rename -uuid "37E09926-4505-18F9-D782-2D8AF0255538";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 1.536034524429597 6.067336371496916 1000.1 ;
+	setAttr ".translate" -type "double3" 0 0 1000.1 ;
 createNode camera -shared -name "frontShape" -parent "front";
-	rename -uuid "860291C8-4C76-54D5-79DC-E69AC2A24F6B";
+	rename -uuid "7AA39429-45CC-1DFD-211B-809841409A0D";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".centerOfInterest" 1000.1;
-	setAttr ".orthographicWidth" 56.29566532034481;
+	setAttr ".orthographicWidth" 30;
 	setAttr ".imageName" -type "string" "front";
 	setAttr ".depthName" -type "string" "front_depth";
 	setAttr ".maskName" -type "string" "front_mask";
@@ -64,12 +60,12 @@ createNode camera -shared -name "frontShape" -parent "front";
 	setAttr ".orthographic" yes;
 	setAttr ".aiTranslator" -type "string" "orthographic";
 createNode transform -shared -name "side";
-	rename -uuid "5AB38749-444C-413A-BB61-35B1843B6B0F";
+	rename -uuid "842FE698-4497-667D-E197-C98A27ECF84E";
 	setAttr ".visibility" no;
 	setAttr ".translate" -type "double3" 1000.1 0 0 ;
 	setAttr ".rotate" -type "double3" 0 90 0 ;
 createNode camera -shared -name "sideShape" -parent "side";
-	rename -uuid "AF2C62AF-4F4B-E11A-DBB6-BBB28A63D060";
+	rename -uuid "DD94F57D-42C5-FCB9-5FD7-AA829F52A83A";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".centerOfInterest" 1000.1;
@@ -81,10 +77,11 @@ createNode camera -shared -name "sideShape" -parent "side";
 	setAttr ".orthographic" yes;
 	setAttr ".aiTranslator" -type "string" "orthographic";
 createNode transform -name "pCube1";
-	rename -uuid "D4E54282-4701-E21E-5F31-3DA9C8E786C5";
-	setAttr ".translate" -type "double3" -5.0606493567105293 -0.62754195351023578 11.837619704807466 ;
+	rename -uuid "786A71B6-4F09-6784-D9BD-689A6CFCF2A6";
+	addAttr -cachedInternally true -shortName "amplitude" -longName "amplitude" -attributeType "double";
+	setAttr -keyable on ".amplitude";
 createNode mesh -name "pCubeShape1" -parent "pCube1";
-	rename -uuid "B7B20123-43F3-FADE-37AD-49B19473226A";
+	rename -uuid "2CE8999C-45E1-E9E4-77AE-DD9DC63C4A98";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
@@ -93,19 +90,12 @@ createNode mesh -name "pCubeShape1" -parent "pCube1";
 	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
-	setAttr -size 18 ".pnts[0:17]" -type "float3"  -15.926814 4.3881812 
-		15.926814 4.1224057e-14 4.3881812 15.926814 15.926814 4.3881812 15.926814 -15.926814 
-		1.462987e-14 15.926814 4.1224057e-14 -1.1333776e-29 15.926814 15.926814 -1.462987e-14 
-		15.926814 -15.926814 -4.3881812 15.926814 4.1224057e-14 -4.3881812 15.926814 15.926814 
-		-4.3881812 15.926814 -15.926814 -4.3881812 -15.926814 4.1224057e-14 -4.3881812 -15.926814 
-		15.926814 -4.3881812 -15.926814 -15.926814 1.462987e-14 -15.926814 4.1224057e-14 
-		-1.1333776e-29 -15.926814 15.926814 -1.462987e-14 -15.926814 -15.926814 4.3881812 
-		-15.926814 4.1224057e-14 4.3881812 -15.926814 15.926814 4.3881812 -15.926814;
-createNode transform -name "pCube2";
-	rename -uuid "9EF8410C-4A78-093A-A916-F2A45C9BB1B0";
-	setAttr ".translate" -type "double3" -34.171076603013901 -1.653953514533673 22.926176854090954 ;
+createNode transform -name "pCube2" -parent "pCube1";
+	rename -uuid "4A84CA42-494D-5640-58F3-44ACEDE56908";
+	setAttr ".translate" -type "double3" 0 12.304722382287107 -0.12565864084030473 ;
+	setAttr ".rotate" -type "double3" -0.58509727294046221 0 0 ;
 createNode mesh -name "pCubeShape2" -parent "pCube2";
-	rename -uuid "2EEBC25F-4216-4D8C-3AC2-75B4AF4BB6B6";
+	rename -uuid "888FB3ED-4F1D-6179-C356-16B3ADFC914B";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
@@ -132,14 +122,6 @@ createNode mesh -name "pCubeShape2" -parent "pCube2";
 	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
-	setAttr -size 18 ".pnts[0:17]" -type "float3"  3.3638575 -1.7376035 
-		4.5236588 6.9736345e-14 -1.7376035 4.5236588 -3.3638575 -1.7376035 4.5236588 3.3638575 
-		2.4281225e-13 4.5236588 6.9736345e-14 -5.8247844e-28 4.5236588 -3.3638575 -2.4281225e-13 
-		4.5236588 3.3638575 1.7376035 4.5236588 6.9736345e-14 1.7376035 4.5236588 -3.3638575 
-		1.7376035 4.5236588 3.3638575 1.7376035 -4.5236588 6.9736345e-14 1.7376035 -4.5236588 
-		-3.3638575 1.7376035 -4.5236588 3.3638575 2.4281225e-13 -4.5236588 6.9736345e-14 
-		-5.8247844e-28 -4.5236588 -3.3638575 -2.4281225e-13 -4.5236588 3.3638575 -1.7376035 
-		-4.5236588 6.9736345e-14 -1.7376035 -4.5236588 -3.3638575 -1.7376035 -4.5236588;
 	setAttr -size 18 ".vrts[0:17]"  -5 -5 5 0 -5 5 5 -5 5 -5 0 5 0 0 5 5 0 5
 		 -5 5 5 0 5 5 5 5 5 -5 5 -5 0 5 -5 5 5 -5 -5 0 -5 0 0 -5 5 0 -5 -5 -5 -5 0 -5 -5 5 -5 -5;
 	setAttr -size 32 ".edge[0:31]"  0 1 0 1 2 0 3 4 1 4 5 1 6 7 0 7 8 0
@@ -183,11 +165,11 @@ createNode mesh -name "pCubeShape2" -parent "pCube2";
 	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "pCube3";
-	rename -uuid "0EBCBC6E-42A4-A147-7E8C-778BCE5C6B41";
-	setAttr ".translate" -type "double3" -30.582009205036414 -0.62754195351023578 23.714183100928967 ;
+createNode transform -name "pCube3" -parent "pCube2";
+	rename -uuid "A0339748-4BD5-A44A-BFFE-B9B18D5CEFB4";
+	setAttr ".translate" -type "double3" 0 13.007779256347993 0 ;
 createNode mesh -name "pCubeShape3" -parent "pCube3";
-	rename -uuid "B5B29E26-4961-2E2B-0BFD-B6B89E476779";
+	rename -uuid "575E15D9-47B5-A8A9-B018-2D838259A0DF";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
@@ -214,14 +196,6 @@ createNode mesh -name "pCubeShape3" -parent "pCube3";
 	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
-	setAttr -size 18 ".pnts[0:17]" -type "float3"  -0.067796871 4.3881812 
-		5.49405 6.8339912e-14 4.3881812 5.49405 0.067796871 4.3881812 5.49405 -0.067796871 
-		2.5784777e-14 5.49405 6.8339912e-14 -8.3331269e-29 5.49405 0.067796871 -2.5784777e-14 
-		5.49405 -0.067796871 -4.3881812 5.49405 6.8339912e-14 -4.3881812 5.49405 0.067796871 
-		-4.3881812 5.49405 -0.067796871 -4.3881812 -5.49405 6.8339912e-14 -4.3881812 -5.49405 
-		0.067796871 -4.3881812 -5.49405 -0.067796871 2.5784777e-14 -5.49405 6.8339912e-14 
-		-8.3331269e-29 -5.49405 0.067796871 -2.5784777e-14 -5.49405 -0.067796871 4.3881812 
-		-5.49405 6.8339912e-14 4.3881812 -5.49405 0.067796871 4.3881812 -5.49405;
 	setAttr -size 18 ".vrts[0:17]"  -5 -5 5 0 -5 5 5 -5 5 -5 0 5 0 0 5 5 0 5
 		 -5 5 5 0 5 5 5 5 5 -5 5 -5 0 5 -5 5 5 -5 -5 0 -5 0 0 -5 5 0 -5 -5 -5 -5 0 -5 -5 5 -5 -5;
 	setAttr -size 32 ".edge[0:31]"  0 1 0 1 2 0 3 4 1 4 5 1 6 7 0 7 8 0
@@ -265,11 +239,11 @@ createNode mesh -name "pCubeShape3" -parent "pCube3";
 	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "pCube4";
-	rename -uuid "1F40EF2C-44EB-55AA-E522-8A8CEE3E2B3C";
-	setAttr ".translate" -type "double3" -40.538545239168215 1.923728695838256 23.714183100928967 ;
+createNode transform -name "pCube4" -parent "pCube3";
+	rename -uuid "D8F6B26D-459D-6A51-49DB-43A1EE5942A5";
+	setAttr ".translate" -type "double3" 0 12.855525555969844 0 ;
 createNode mesh -name "pCubeShape4" -parent "pCube4";
-	rename -uuid "1273E711-4036-5405-27E7-769765B0E52E";
+	rename -uuid "0F612374-4DAD-7860-6B13-C787C0D0B43E";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
@@ -296,14 +270,6 @@ createNode mesh -name "pCubeShape4" -parent "pCube4";
 	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
-	setAttr -size 18 ".pnts[0:17]" -type "float3"  -0.067796871 4.3881812 
-		5.49405 6.8339912e-14 4.3881812 5.49405 0.067796871 4.3881812 5.49405 -0.067796871 
-		2.5784777e-14 5.49405 6.8339912e-14 -8.3331269e-29 5.49405 0.067796871 -2.5784777e-14 
-		5.49405 -0.067796871 -4.3881812 5.49405 6.8339912e-14 -4.3881812 5.49405 0.067796871 
-		-4.3881812 5.49405 -0.067796871 -4.3881812 -5.49405 6.8339912e-14 -4.3881812 -5.49405 
-		0.067796871 -4.3881812 -5.49405 -0.067796871 2.5784777e-14 -5.49405 6.8339912e-14 
-		-8.3331269e-29 -5.49405 0.067796871 -2.5784777e-14 -5.49405 -0.067796871 4.3881812 
-		-5.49405 6.8339912e-14 4.3881812 -5.49405 0.067796871 4.3881812 -5.49405;
 	setAttr -size 18 ".vrts[0:17]"  -5 -5 5 0 -5 5 5 -5 5 -5 0 5 0 0 5 5 0 5
 		 -5 5 5 0 5 5 5 5 5 -5 5 -5 0 5 -5 5 5 -5 -5 0 -5 0 0 -5 5 0 -5 -5 -5 -5 0 -5 -5 5 -5 -5;
 	setAttr -size 32 ".edge[0:31]"  0 1 0 1 2 0 3 4 1 4 5 1 6 7 0 7 8 0
@@ -347,11 +313,13 @@ createNode mesh -name "pCubeShape4" -parent "pCube4";
 	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "pCube5";
-	rename -uuid "B238073E-4028-D66F-30D7-6490623CEDAD";
-	setAttr ".translate" -type "double3" -47.131945876176232 0.47378331892269809 22.926176854090954 ;
+createNode transform -name "pCube5" -parent "pCube4";
+	rename -uuid "400AF3D5-470D-20E4-E2AC-24B48C02E24C";
+	setAttr ".translate" -type "double3" 0 13.054459663967261 -0.32532411754205287 ;
+	setAttr ".rotate" -type "double3" -0.36388734641512421 0 0 ;
+	setAttr ".scale" -type "double3" 1 0.99999999999999978 0.99999999999999978 ;
 createNode mesh -name "pCubeShape5" -parent "pCube5";
-	rename -uuid "5D5C7017-4B8B-FB2F-F659-EFBEEC09DF26";
+	rename -uuid "66ADD8DC-477E-0524-F831-56A4C455CF84";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
@@ -378,96 +346,6 @@ createNode mesh -name "pCubeShape5" -parent "pCube5";
 	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
-	setAttr -size 18 ".pnts[0:17]" -type "float3"  3.3638575 -1.7376035 
-		4.5236588 6.9736345e-14 -1.7376035 4.5236588 -3.3638575 -1.7376035 4.5236588 3.3638575 
-		2.4281225e-13 4.5236588 6.9736345e-14 -5.8247844e-28 4.5236588 -3.3638575 -2.4281225e-13 
-		4.5236588 3.3638575 1.7376035 4.5236588 6.9736345e-14 1.7376035 4.5236588 -3.3638575 
-		1.7376035 4.5236588 3.3638575 1.7376035 -4.5236588 6.9736345e-14 1.7376035 -4.5236588 
-		-3.3638575 1.7376035 -4.5236588 3.3638575 2.4281225e-13 -4.5236588 6.9736345e-14 
-		-5.8247844e-28 -4.5236588 -3.3638575 -2.4281225e-13 -4.5236588 3.3638575 -1.7376035 
-		-4.5236588 6.9736345e-14 -1.7376035 -4.5236588 -3.3638575 -1.7376035 -4.5236588;
-	setAttr -size 18 ".vrts[0:17]"  -5 -5 5 0 -5 5 5 -5 5 -5 0 5 0 0 5 5 0 5
-		 -5 5 5 0 5 5 5 5 5 -5 5 -5 0 5 -5 5 5 -5 -5 0 -5 0 0 -5 5 0 -5 -5 -5 -5 0 -5 -5 5 -5 -5;
-	setAttr -size 32 ".edge[0:31]"  0 1 0 1 2 0 3 4 1 4 5 1 6 7 0 7 8 0
-		 9 10 0 10 11 0 12 13 1 13 14 1 15 16 0 16 17 0 0 3 0 1 4 1 2 5 0 3 6 0 4 7 1 5 8 0
-		 6 9 0 7 10 1 8 11 0 9 12 0 10 13 1 11 14 0 12 15 0 13 16 1 14 17 0 15 0 0 16 1 1
-		 17 2 0 14 5 1 12 3 1;
-	setAttr -size 16 -capacityHint 64 ".face[0:15]" -type "polyFaces" 
-		f 4 0 13 -3 -13
-		mu 0 4 0 1 4 3
-		f 4 1 14 -4 -14
-		mu 0 4 1 2 5 4
-		f 4 2 16 -5 -16
-		mu 0 4 3 4 7 6
-		f 4 3 17 -6 -17
-		mu 0 4 4 5 8 7
-		f 4 4 19 -7 -19
-		mu 0 4 6 7 10 9
-		f 4 5 20 -8 -20
-		mu 0 4 7 8 11 10
-		f 4 6 22 -9 -22
-		mu 0 4 9 10 13 12
-		f 4 7 23 -10 -23
-		mu 0 4 10 11 14 13
-		f 4 8 25 -11 -25
-		mu 0 4 12 13 16 15
-		f 4 9 26 -12 -26
-		mu 0 4 13 14 17 16
-		f 4 10 28 -1 -28
-		mu 0 4 15 16 19 18
-		f 4 11 29 -2 -29
-		mu 0 4 16 17 20 19
-		f 4 -30 -27 30 -15
-		mu 0 4 2 21 22 5
-		f 4 -31 -24 -21 -18
-		mu 0 4 5 22 23 8
-		f 4 27 12 -32 24
-		mu 0 4 24 0 3 25
-		f 4 31 15 18 21
-		mu 0 4 25 3 6 26;
-	setAttr ".creaseData" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "pCube6";
-	rename -uuid "409E5D4F-40A9-CB96-1129-C6AB62515D0E";
-	setAttr ".translate" -type "double3" -67.76718612242388 1.923728695838256 30.259861344336834 ;
-createNode mesh -name "pCubeShape6" -parent "pCube6";
-	rename -uuid "34E3521C-47BD-A636-A795-429B5639AF0C";
-	setAttr -keyable off ".visibility";
-	setAttr ".visibleInReflections" yes;
-	setAttr ".visibleInRefractions" yes;
-	setAttr -size 6 ".componentTags";
-	setAttr ".componentTags[0].componentTagName" -type "string" "back";
-	setAttr ".componentTags[0].componentTagContents" -type "componentList" 1 "f[6:9]";
-	setAttr ".componentTags[1].componentTagName" -type "string" "bottom";
-	setAttr ".componentTags[1].componentTagContents" -type "componentList" 1 "f[10:11]";
-	setAttr ".componentTags[2].componentTagName" -type "string" "front";
-	setAttr ".componentTags[2].componentTagContents" -type "componentList" 1 "f[0:3]";
-	setAttr ".componentTags[3].componentTagName" -type "string" "left";
-	setAttr ".componentTags[3].componentTagContents" -type "componentList" 1 "f[14:15]";
-	setAttr ".componentTags[4].componentTagName" -type "string" "right";
-	setAttr ".componentTags[4].componentTagContents" -type "componentList" 1 "f[12:13]";
-	setAttr ".componentTags[5].componentTagName" -type "string" "top";
-	setAttr ".componentTags[5].componentTagContents" -type "componentList" 1 "f[4:5]";
-	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
-	setAttr -size 27 ".uvSet[0].uvSetPoints[0:26]" -type "float2" 0.375
-		 0 0.5 0 0.625 0 0.375 0.125 0.5 0.125 0.625 0.125 0.375 0.25 0.5 0.25 0.625 0.25
-		 0.375 0.5 0.5 0.5 0.625 0.5 0.375 0.625 0.5 0.625 0.625 0.625 0.375 0.75 0.5 0.75
-		 0.625 0.75 0.375 1 0.5 1 0.625 1 0.875 0 0.875 0.125 0.875 0.25 0.125 0 0.125 0.125
-		 0.125 0.25;
-	setAttr ".currentUVSet" -type "string" "map1";
-	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
-	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
-	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
-	setAttr -size 18 ".pnts[0:17]" -type "float3"  -14.080932 4.3881812 
-		12.100121 2.5730893e-13 4.3881812 12.100121 14.080932 4.3881812 12.100121 -14.080932 
-		3.0447714e-14 12.100121 2.5730893e-13 4.6629367e-15 12.100121 14.080932 -2.1121841e-14 
-		12.100121 -14.080932 -4.3881812 12.100121 2.5730893e-13 -4.3881812 12.100121 14.080932 
-		-4.3881812 12.100121 -14.080932 -4.3881812 -12.100121 2.5730893e-13 -4.3881812 -12.100121 
-		14.080932 -4.3881812 -12.100121 -14.080932 3.0447714e-14 -12.100121 2.5730893e-13 
-		4.6629367e-15 -12.100121 14.080932 -2.1121841e-14 -12.100121 -14.080932 4.3881812 
-		-12.100121 2.5730893e-13 4.3881812 -12.100121 14.080932 4.3881812 -12.100121;
 	setAttr -size 18 ".vrts[0:17]"  -5 -5 5 0 -5 5 5 -5 5 -5 0 5 0 0 5 5 0 5
 		 -5 5 5 0 5 5 5 5 5 -5 5 -5 0 5 -5 5 5 -5 -5 0 -5 0 0 -5 5 0 -5 -5 -5 -5 0 -5 -5 5 -5 -5;
 	setAttr -size 32 ".edge[0:31]"  0 1 0 1 2 0 3 4 1 4 5 1 6 7 0 7 8 0
@@ -512,112 +390,40 @@ createNode mesh -name "pCubeShape6" -parent "pCube6";
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -shared -name "lightLinker1";
-	rename -uuid "7F2BA468-473C-FCD3-1C9D-EC809B8EDF98";
-	setAttr -size 4 ".link";
-	setAttr -size 4 ".shadowLink";
+	rename -uuid "008E5B65-401A-3F6C-9D98-D9982634AE85";
+	setAttr -size 2 ".link";
+	setAttr -size 2 ".shadowLink";
 createNode shapeEditorManager -name "shapeEditorManager";
-	rename -uuid "DA52EEAB-47C6-D0D5-580E-30801DA24F96";
-	setAttr ".blendShapeDirectory[0].childIndices" -type "Int32Array" 1 0 ;
+	rename -uuid "96690865-4609-B1F2-6A32-7CAD7428D4D8";
 createNode poseInterpolatorManager -name "poseInterpolatorManager";
-	rename -uuid "E6C12300-4B3D-BE4F-9F28-C4A0C5A25C17";
+	rename -uuid "CF856A1B-4108-DE69-DE33-6291E9B22624";
 createNode displayLayerManager -name "layerManager";
-	rename -uuid "54DE9807-42A2-E89F-7AB9-FDAA8E3BFFD9";
+	rename -uuid "FF1BD405-479D-248A-93A4-4ABF77275F9E";
 createNode displayLayer -name "defaultLayer";
-	rename -uuid "BD3CAF69-435C-1354-953B-33AF6DCBB802";
+	rename -uuid "6E4E3731-41F7-DBEF-CAC1-F2BD928564F8";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 createNode renderLayerManager -name "renderLayerManager";
-	rename -uuid "50EA1F98-4091-23A1-4366-6596D082E523";
+	rename -uuid "AA8B7D4E-4C62-001A-1A60-568C157E7C79";
 createNode renderLayer -name "defaultRenderLayer";
-	rename -uuid "04F594A0-468A-8130-4FEA-81AE23E6AB17";
+	rename -uuid "D1B55A0C-404D-73A7-1297-EA8381ED0C75";
 	setAttr ".global" yes;
-createNode reference -name "Ultimate_Bony_v1_0_5RN";
-	rename -uuid "DDABDC9A-4CF0-A0A8-A35B-0A8FB4CD9005";
-	setAttr ".edits" -type "dataReferenceEdits" 
-		"Ultimate_Bony_v1_0_5RN"
-		"Ultimate_Bony_v1_0_5RN" 0
-		"Ultimate_Bony_v1_0_5RN" 29
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT" "rotate" 
-		" -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC" 
-		"translate" " -type \"double3\" 0 -1.1322636318732302 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC" 
-		"rotate" " -type \"double3\" 28.50639104986299799 -2.01740006921215054 10.14982968276956221"
-		
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Spine01FKCG|Ultimate_Bony_v1_0_5:Bony_Spine01FKC" 
-		"rotate" " -type \"double3\" 7.60568176847791388 -0.63814764975202221 2.16769711482862615"
-		
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Spine01FKCG|Ultimate_Bony_v1_0_5:Bony_Spine01FKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Spine02FKCG|Ultimate_Bony_v1_0_5:Bony_Spine02FKC" 
-		"rotate" " -type \"double3\" 9.12664359509289547 5.27705534351508998 -4.49639829884142639"
-		
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Spine02FKCG|Ultimate_Bony_v1_0_5:Bony_Spine02FKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Spine03FKCG|Ultimate_Bony_v1_0_5:Bony_Spine03FKC" 
-		"rotate" " -type \"double3\" 24.53726549279456393 -0.99173835441984681 1.23057023968703438"
-		
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Spine03FKCG|Ultimate_Bony_v1_0_5:Bony_Spine03FKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_HeadCG2|Ultimate_Bony_v1_0_5:Bony_HeadCG|Ultimate_Bony_v1_0_5:Bony_HeadC" 
-		"rotate" " -type \"double3\" -72.29580828560406758 -27.37444840879356178 19.36118453485392621"
-		
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_HeadCG2|Ultimate_Bony_v1_0_5:Bony_HeadCG|Ultimate_Bony_v1_0_5:Bony_HeadC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lFootIKCG|Ultimate_Bony_v1_0_5:Bony_lFootIKC" 
-		"translate" " -type \"double3\" 0 0 -1.975355965076242"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lFootIKCG|Ultimate_Bony_v1_0_5:Bony_lFootIKC" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lFootIKCG|Ultimate_Bony_v1_0_5:Bony_lFootIKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lElbowFKCG|Ultimate_Bony_v1_0_5:Bony_lElbowFKC" 
-		"rotateY" " -47.95575381059548192"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lElbowFKCG|Ultimate_Bony_v1_0_5:Bony_lElbowFKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lShoulderFKCG2|Ultimate_Bony_v1_0_5:Bony_lShoulderFKCG|Ultimate_Bony_v1_0_5:Bony_lShoulderFKC" 
-		"rotate" " -type \"double3\" 546.22056789832072354 -111.08197819148486474 -596.88667887050849004"
-		
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lToeIKCG|Ultimate_Bony_v1_0_5:Bony_lToeIKC" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lToeIKCG|Ultimate_Bony_v1_0_5:Bony_lToeIKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rFootIKCG|Ultimate_Bony_v1_0_5:Bony_rFootIKC" 
-		"translate" " -type \"double3\" 0 0 -1.15843580486795683"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rFootIKCG|Ultimate_Bony_v1_0_5:Bony_rFootIKC" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rFootIKCG|Ultimate_Bony_v1_0_5:Bony_rFootIKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rElbowFKCG|Ultimate_Bony_v1_0_5:Bony_rElbowFKC" 
-		"rotateY" " -16.08031489524150714"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rElbowFKCG|Ultimate_Bony_v1_0_5:Bony_rElbowFKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG2|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG|Ultimate_Bony_v1_0_5:Bony_rShoulderFKC" 
-		"rotate" " -type \"double3\" 13.67965676847481582 -15.05759219626932577 -62.17784204780569013"
-		
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG2|Ultimate_Bony_v1_0_5:Bony_rShoulderFKCG|Ultimate_Bony_v1_0_5:Bony_rShoulderFKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rToeIKCG|Ultimate_Bony_v1_0_5:Bony_rToeIKC" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_rToeIKCG|Ultimate_Bony_v1_0_5:Bony_rToeIKC" 
-		"rotatePivotTranslate" " -type \"double3\" 0 0 0";
-	setAttr ".proxyTag" -type "string" "";
-lockNode -l 1 ;
-createNode aiOptions -shared -name "defaultArnoldRenderOptions";
-	rename -uuid "9BD3981C-43CE-45CA-E150-52AC94FC80D6";
-	setAttr ".version" -type "string" "5.3.5.2";
-createNode aiAOVFilter -shared -name "defaultArnoldFilter";
-	rename -uuid "D250FD96-453A-F040-8204-62AA38003DE5";
-	setAttr ".aiTranslator" -type "string" "gaussian";
-createNode aiAOVDriver -shared -name "defaultArnoldDriver";
-	rename -uuid "492D98C1-4760-C7C5-7712-FD8DF945190F";
-	setAttr ".aiTranslator" -type "string" "exr";
-createNode aiAOVDriver -shared -name "defaultArnoldDisplayDriver";
-	rename -uuid "21A20FC3-4DB4-A639-6469-D2BF7A55B667";
-	setAttr ".aiTranslator" -type "string" "maya";
-	setAttr ".outputMode" 0;
+createNode polyCube -name "polyCube1";
+	rename -uuid "70BC4EB5-496B-6B4F-308E-5DBF024EEB4A";
+	setAttr ".width" 10;
+	setAttr ".height" 10;
+	setAttr ".depth" 10;
+	setAttr ".subdivisionsWidth" 2;
+	setAttr ".subdivisionsHeight" 2;
+	setAttr ".createUVs" 4;
+createNode expression -name "baseRotation_EXP";
+	rename -uuid "1B95C0BD-46CB-9862-EAD6-408554DCFC88";
+	setAttr -keyable on ".nodeState";
+	setAttr ".internalExpression" -type "string" ".O[0] = sin(time);";
+createNode unitConversion -name "unitConversion1";
+	rename -uuid "A7C92B91-42F8-963F-FD3B-8694B5C9EF3E";
+	setAttr ".conversionFactor" 0.017453292519943295;
 createNode script -name "uiConfigurationScriptNode";
-	rename -uuid "E6DAD2DC-40AA-F7B3-AB82-BAA7760761A8";
+	rename -uuid "C22C8AF6-4299-A862-7D5E-8396FA0E4D27";
 	setAttr ".before" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
@@ -665,23 +471,16 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
-	rename -uuid "91D1BCA4-4350-6B96-B496-71AF4B9C5925";
-	setAttr ".before" -type "string" "playbackOptions -min 0 -max 25 -ast 0 -aet 42 ";
+	rename -uuid "5ECA5F30-4F34-4A79-1D51-98B6A1424E7B";
+	setAttr ".before" -type "string" "playbackOptions -min 0 -max 100 -ast 0 -aet 100 ";
 	setAttr ".scriptType" 6;
-createNode polyCube -name "polyCube1";
-	rename -uuid "A0315ECF-4C2B-1D99-0564-EC9C6004EF12";
-	setAttr ".width" 10;
-	setAttr ".height" 10;
-	setAttr ".depth" 10;
-	setAttr ".subdivisionsWidth" 2;
-	setAttr ".subdivisionsHeight" 2;
-	setAttr ".createUVs" 4;
 select -noExpand :time1;
 	setAttr -alteredValue -keyable on ".caching";
 	setAttr -channelBox on ".isHistoricallyInteresting";
 	setAttr -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr ".outTime" 0;
+	setAttr ".outTime" 57;
+	setAttr ".unwarpedTime" 57;
 select -noExpand :hardwareRenderingGlobals;
 	setAttr ".objectTypeFilterNameArray" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".objectTypeFilterValueArray" -type "Int32Array" 22 0 1 1
@@ -694,7 +493,7 @@ select -noExpand :renderPartition;
 	setAttr -channelBox on ".isHistoricallyInteresting";
 	setAttr -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr -size 4 ".sets";
+	setAttr -size 2 ".sets";
 	setAttr -channelBox on ".annotation";
 	setAttr -channelBox on ".partitionType";
 select -noExpand :renderGlobalsList1;
@@ -707,17 +506,14 @@ select -noExpand :defaultShaderList1;
 	setAttr -channelBox on ".isHistoricallyInteresting";
 	setAttr -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr -size 7 ".shaders";
+	setAttr -size 5 ".shaders";
 select -noExpand :postProcessList1;
 	setAttr -keyable on ".caching";
 	setAttr -channelBox on ".isHistoricallyInteresting";
 	setAttr -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
 	setAttr -size 2 ".postProcesses";
-select -noExpand :defaultRenderUtilityList1;
-	setAttr -size 130 ".utilities";
 select -noExpand :defaultRenderingList1;
-	setAttr -size 2 ".rendering";
 select -noExpand :standardSurface1;
 	setAttr ".baseColor" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".specularRoughness" 0.5;
@@ -726,7 +522,7 @@ select -noExpand :initialShadingGroup;
 	setAttr -channelBox on ".isHistoricallyInteresting";
 	setAttr -alteredValue -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr -size 8 ".dagSetMembers";
+	setAttr -size 5 ".dagSetMembers";
 	setAttr -keyable on ".memberWireframeColor";
 	setAttr -channelBox on ".annotation";
 	setAttr -channelBox on ".isLayer";
@@ -810,8 +606,7 @@ select -noExpand :hardwareRenderGlobals;
 	setAttr -keyable on ".hardwareCodec";
 	setAttr -keyable on ".hardwareDepth";
 	setAttr -keyable on ".hardwareQual";
-select -noExpand :ikSystem;
-	setAttr -size 2 ".ikSolver";
+connectAttr "unitConversion1.output" "pCube1.rotateX";
 connectAttr "polyCube1.output" "pCubeShape1.inMesh";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -820,6 +615,8 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.displayLayerId[0]" "defaultLayer.identification";
 connectAttr "renderLayerManager.renderLayerId[0]" "defaultRenderLayer.identification"
 		;
+connectAttr ":time1.outTime" "baseRotation_EXP.time";
+connectAttr "baseRotation_EXP.output[0]" "unitConversion1.input";
 connectAttr "defaultRenderLayer.message" ":defaultRenderingList1.rendering" -nextAvailable
 		;
 connectAttr "pCubeShape1.instObjGroups" ":initialShadingGroup.dagSetMembers" -nextAvailable
@@ -832,6 +629,4 @@ connectAttr "pCubeShape4.instObjGroups" ":initialShadingGroup.dagSetMembers" -ne
 		;
 connectAttr "pCubeShape5.instObjGroups" ":initialShadingGroup.dagSetMembers" -nextAvailable
 		;
-connectAttr "pCubeShape6.instObjGroups" ":initialShadingGroup.dagSetMembers" -nextAvailable
-		;
-// End of running anim.ma
+// End of animation script test.ma
