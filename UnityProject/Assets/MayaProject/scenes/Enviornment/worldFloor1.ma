@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: worldFloor1.ma
-//Last modified: Sat, Nov 08, 2025 03:52:38 PM
+//Last modified: Sun, Nov 09, 2025 12:31:16 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "F735E593-41D8-08FB-C2DE-1C9FBC55D48B";
+fileInfo "UUID" "18F127CD-4E89-C81A-B3BD-1D9A5DEECE1F";
 createNode transform -shared -name "persp";
 	rename -uuid "2D894FF7-4878-F320-A697-B5833776ADF2";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 108.72392275035021 31.04504014904121 -61.690966581760108 ;
-	setAttr ".rotate" -type "double3" -18.600000000135225 2351.600000000301 0 ;
+	setAttr ".translate" -type "double3" -28.197719248693119 83.780373898102937 -148.57593725330008 ;
+	setAttr ".rotate" -type "double3" -29.999999999445837 2006.3999999986877 0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" 1.0605213367721025e-20 0 -8.68005334899402e-19 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "AB257599-40FB-0AFD-C236-5FAA9247427F";
@@ -28,7 +28,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	setAttr ".nearClipPlane" 0.001;
 	setAttr ".farClipPlane" 1000;
 	setAttr ".focusDistance" 0.05;
-	setAttr ".centerOfInterest" 40.297691523957191;
+	setAttr ".centerOfInterest" 194.42853705131736;
 	setAttr ".orthographicWidth" 7.9433486855459767;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
