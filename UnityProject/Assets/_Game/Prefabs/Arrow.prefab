@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &807631881982765995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 38062503941880537}
+  m_Layer: 0
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38062503941880537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807631881982765995}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6998885, y: 0.0020333494, z: 0.0014657793, w: 0.7142478}
+  m_LocalPosition: {x: -68.34602, y: 33.761124, z: 15.726728}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6520634337176415579}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -88.836, y: 2.405, z: -2.122}
+--- !u!1001 &2906531708087317281
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 38062503941880537}
+    m_Modifications:
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2904053
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.7266765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.834398
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746045440121177280, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_Name
+      value: Simple_Arrow
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -4866378803273192694, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+--- !u!4 &6520634337176415579 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+  m_PrefabInstance: {fileID: 2906531708087317281}
+  m_PrefabAsset: {fileID: 0}
