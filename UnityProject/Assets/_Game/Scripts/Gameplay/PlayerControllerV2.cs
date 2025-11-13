@@ -4,24 +4,19 @@ using UnityEngine.InputSystem;
 public class PlayerControllerV2 : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 5f;         // How fast the player moves
-    public float jumpHeight = 2f;        // Jump strength
-    public float gravity = -9.81f;       // Gravity applied to player
+    public float moveSpeed = 5f;
+    public float jumpHeight = 2f;
+    public float gravity = -9.81f;
 
-    private CharacterController controller; // Reference to CharacterController
-    private Vector3 velocity;           // Vertical velocity for gravity/jump
-    private Vector2 moveInput;          // Left stick / WASD input
-    private bool jumpPressed;           // Jump flag
-
-    private PlayerControls controls;    // Generated Input System class
-
-    // -------------------------
-    // UNITY CALLBACKS
-    // -------------------------
+    private CharacterController controller;
+    private Vector3 velocity;
+    private Vector2 moveInput;
+    private bool jumpPressed;
+    private PlayerControls controls;
 
     private void Awake()
     {
-        controller = GetComponent<CharacterController>(); // Get CharacterController
+        controller = GetComponent<CharacterController>();
     }
 
     private void OnEnable()
@@ -29,10 +24,8 @@ public class PlayerControllerV2 : MonoBehaviour
         controls = new PlayerControls();
         controls.Player.Enable();
 
-        // Subscribe to input callbacks
         controls.Player.Move.performed += OnMove;
         controls.Player.Move.canceled += OnMove;
-
         controls.Player.Jump.performed += OnJump;
     }
 
@@ -50,26 +43,16 @@ public class PlayerControllerV2 : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    // -------------------------
-    // INPUT CALLBACKS
-    // -------------------------
-
-    // Movement input
     public void OnMove(InputAction.CallbackContext ctx) => moveInput = ctx.ReadValue<Vector2>();
 
-    // Jump input
     public void OnJump(InputAction.CallbackContext ctx)
     {
         if (ctx.started) jumpPressed = true;
     }
 
-    // -------------------------
-    // CORE LOGIC / HELPERS
-    // -------------------------
-
     private void HandleMovement()
     {
-        // Move relative to player forward direction
+        // Move relative to player's forward direction (not camera)
         Vector3 forward = transform.forward;
         Vector3 right = transform.right;
 
@@ -89,6 +72,6 @@ public class PlayerControllerV2 : MonoBehaviour
     private void HandleGravity()
     {
         if (!controller.isGrounded) velocity.y += gravity * Time.deltaTime;
-        else if (velocity.y < 0) velocity.y = -2f; // Small downward force to stick to ground
+        else if (velocity.y < 0) velocity.y = -2f;
     }
 }
