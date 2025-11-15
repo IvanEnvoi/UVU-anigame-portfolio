@@ -4070,11 +4070,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoboKitty2
       objectReference: {fileID: 0}
+    - target: {fileID: 7023087172137848065, guid: b82fb3b88b1c31c45a319d0a8b697081, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5345674039177244213, guid: b82fb3b88b1c31c45a319d0a8b697081, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8208230256835491243}
   m_SourcePrefab: {fileID: 100100000, guid: b82fb3b88b1c31c45a319d0a8b697081, type: 3}
+--- !u!1 &8208230256835491242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5345674039177244213, guid: b82fb3b88b1c31c45a319d0a8b697081, type: 3}
+  m_PrefabInstance: {fileID: 8208230256835491241}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8208230256835491243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208230256835491242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f01b59ba1258b744acfb74906c33dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpHeight: 2
+  gravity: -9.81
+  cameraPivot: {fileID: 0}
+  cameraTransform: {fileID: 0}
+  cameraOffset: {x: 0, y: 2, z: -4}
+  rotationSmoothTime: 0.1
+  mouseSensitivity: 0.2
+  controllerSensitivity: 200
+  followSmoothTime: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

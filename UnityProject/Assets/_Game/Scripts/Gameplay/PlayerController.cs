@@ -129,6 +129,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Smooth camera rotation
+    
     private void HandleCameraRotation()
     {
         currentRotation.x = Mathf.SmoothDamp(currentRotation.x, targetRotation.x, ref rotationVelocity.x, rotationSmoothTime);
@@ -137,6 +138,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Smooth camera follow
+
     private void HandleCameraFollow()
     {
         if (cameraTransform == null) return;
@@ -145,7 +147,6 @@ public class PlayerController : MonoBehaviour
         cameraTransform.position = Vector3.SmoothDamp(cameraTransform.position, targetPosition, ref currentVelocity, followSmoothTime);
         cameraTransform.LookAt(cameraPivot);
     }
-
     // -------------------------
     // CORE LOGIC
     // -------------------------
