@@ -112,3 +112,7 @@ UnityProject/.idea/
 *.swatches
 
 *.avi
+
+UnityProject/Assets/MayaProject/scripts/__pycache__/
+
+*.pyc
