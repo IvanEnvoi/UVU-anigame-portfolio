@@ -116,3 +116,4 @@ UnityProject/.idea/
 UnityProject/Assets/MayaProject/scripts/__pycache__/
 
 *.pyc
+UnityProject/Assets/MayaProject/scripts/__pycache__.meta
