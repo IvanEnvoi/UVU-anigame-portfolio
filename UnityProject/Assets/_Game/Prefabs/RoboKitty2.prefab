@@ -34,19 +34,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 656e995913509ba4c8504a3a550ec2d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8259522
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 656e995913509ba4c8504a3a550ec2d7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.47686365
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 656e995913509ba4c8504a3a550ec2d7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.2603902
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 656e995913509ba4c8504a3a550ec2d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.15033633
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 656e995913509ba4c8504a3a550ec2d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -156,3 +156,6 @@ MonoBehaviour:
   moveSpeed: 5
   jumpHeight: 2
   gravity: -9.81
+  virtualCamera: {fileID: 0}
+  mouseSensitivity: 0.2
+  controllerSensitivity: 200
