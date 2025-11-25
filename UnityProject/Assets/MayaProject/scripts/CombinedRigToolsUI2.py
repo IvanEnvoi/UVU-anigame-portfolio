@@ -1,13 +1,10 @@
 import maya.cmds as cmds
 import sys
 import os
-from functools import partial
+
 
 # Add the scripts directory to the path so we can import other scripts
 # Adjust this path as necessary
-scripts_dir = r"c:\Users\foxke\Documents\UVU\UVU-anigame-portfolio\UnityProject\Assets\MayaProject\scripts"
-if scripts_dir not in sys.path:
-    sys.path.insert(0, scripts_dir)
 
 from renameSequence import renameSequence
 from setShapeColor import setShapeColor
