@@ -78,6 +78,12 @@ public class PlayerControllerV3 : MonoBehaviour
 
         Vector3 move = forward * moveInput.y + right * moveInput.x;
         move *= moveSpeed;
+        // Rotate toward movement direction
+        if (move.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(move);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 10f * Time.deltaTime);
+        }
 
         velocity.x = move.x;
         velocity.z = move.z;
