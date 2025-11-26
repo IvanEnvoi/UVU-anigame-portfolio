@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: RoboKitty.ma
-//Last modified: Tue, Nov 25, 2025 12:29:12 PM
+//Last modified: Tue, Nov 25, 2025 03:54:20 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "2DC740F2-4F44-C3E7-E41C-B8A3D4C0AB2D";
+fileInfo "UUID" "EF39F867-4B30-C578-E45E-ADB679AE832F";
 createNode transform -shared -name "persp";
 	rename -uuid "B524A512-4F64-5308-D439-F2A4B595FF12";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 87.648191828714502 176.65067213255398 46.215790130106249 ;
-	setAttr ".rotate" -type "double3" -52.799999999894737 -2464.0000000004566 0 ;
+	setAttr ".translate" -type "double3" -101.61396141610491 70.375594607654847 19.507573714361854 ;
+	setAttr ".rotate" -type "double3" -3.6000000000010428 -2965.9999999991974 0 ;
 	setAttr ".rotatePivot" -type "double3" -2.2204460492503131e-16 0 -3.5527136788005009e-15 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -5.9978702874950477e-14 -9.7912192986853932e-15 
 		-7.4866002689521621e-14 ;
@@ -30,7 +30,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	setAttr ".panZoomEnabled" yes;
 	setAttr ".focalLength" 34.999999999999979;
 	setAttr ".nearClipPlane" 0.005;
-	setAttr ".centerOfInterest" 157.41002183195383;
+	setAttr ".centerOfInterest" 118.5299962923104;
 	setAttr ".orthographicWidth" 19.163492021062581;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
@@ -138007,7 +138007,7 @@ createNode groupId -name "groupId367";
 	rename -uuid "C9523424-4B66-03D2-5866-8CA26566F6B9";
 	setAttr ".isHistoricallyInteresting" 0;
 createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uuid "FACC753D-4B9A-03D2-77BF-38B370FB8A19";
+	rename -uuid "AD6E7AB1-41DC-8376-B41E-02AA3BA0A268";
 	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
 	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -3041.8108459402638 -11988.924487527907 ;
 	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 16480.915651023559 9207.1785663185274 ;
