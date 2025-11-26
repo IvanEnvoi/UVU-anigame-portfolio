@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: NoraBasemeshV1.ma
-//Last modified: Tue, Nov 25, 2025 09:51:48 PM
+//Name: NoraBasemeshV2.ma
+//Last modified: Tue, Nov 25, 2025 09:51:59 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "simplexNoise" "lookdevKit" "1.0";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "63FAD637-412E-488E-CD6E-8C84F2C51E76";
+fileInfo "UUID" "DDFC842A-4175-0E16-CB98-86B4083CEEE5";
 createNode transform -shared -name "persp";
 	rename -uuid "AF1F716D-4124-DDB9-2D48-43A2FBF4522B";
 	setAttr ".visibility" no;
@@ -269561,4 +269561,4 @@ connectAttr "groupId19.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "groupId21.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
-// End of NoraBasemeshV1.ma
+// End of NoraBasemeshV2.ma
