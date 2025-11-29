@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: NoraV4.ma
-//Last modified: Sat, Nov 29, 2025 01:26:09 AM
+//Name: NoraV5UVMap.ma
+//Last modified: Sat, Nov 29, 2025 01:26:38 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "simplexNoise" "lookdevKit" "1.0";
@@ -15,11 +15,11 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "73E70A8B-4389-2E4C-1ECC-C4B757BE830D";
+fileInfo "UUID" "301F82C0-4C91-D7C2-215F-28B4BAD8C045";
 createNode transform -shared -name "persp";
 	rename -uuid "AF1F716D-4124-DDB9-2D48-43A2FBF4522B";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 130.13258272991806 186.3046632224777 39.331925253385023 ;
+	setAttr ".translate" -type "double3" 95.614180293641098 156.03644115180654 80.976853322748269 ;
 	setAttr ".rotate" -type "double3" 521.26004747135664 -4179.4019311775519 180.00002335629276 ;
 	setAttr ".rotatePivot" -type "double3" 5.5067062021407764e-14 0 0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -1.0631554972969049e-13 -3.1115941047605662e-16 
@@ -311617,25 +311617,25 @@ createNode aiStandardSurface -name "Val";
 	setAttr ".specularRoughness" 1;
 createNode file -name "file3";
 	rename -uuid "0A038357-4EE6-014E-5E93-3B8CCA2994D0";
-	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV4/NoraV4_clear_Metallic.png";
+	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV5UVMap/NoraV5UVMap_clear_Metallic.png";
 	setAttr ".colorSpace" -type "string" "sRGB";
 createNode place2dTexture -name "place2dTexture1";
 	rename -uuid "5360542A-40C9-DF74-47CB-71A810557C1D";
 createNode file -name "file1";
 	rename -uuid "F6C08A82-465D-7700-AE26-289A0D68AC2B";
-	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV4/NoraV4_clear_BaseColor.png";
+	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV5UVMap/NoraV5UVMap_clear_BaseColor.png";
 	setAttr ".colorSpace" -type "string" "sRGB";
 createNode place2dTexture -name "place2dTexture2";
 	rename -uuid "6BD2A0EC-40F8-5077-FAAB-C381CD6FC8D2";
 createNode file -name "file4";
 	rename -uuid "87D7E051-4BBC-4A76-9C3B-87960E9634A0";
-	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV4/NoraV4_clear_Normal.png";
+	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV5UVMap/NoraV5UVMap_clear_Normal.png";
 	setAttr ".colorSpace" -type "string" "sRGB";
 createNode place2dTexture -name "place2dTexture3";
 	rename -uuid "00E7703E-47C9-B710-A195-FD9F9B5B018B";
 createNode file -name "file2";
 	rename -uuid "384644BA-4B49-FA74-38E2-5495AF51BBFB";
-	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV4/NoraV4_clear_Roughness.png";
+	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV5UVMap/NoraV5UVMap_clear_Roughness.png";
 	setAttr ".colorSpace" -type "string" "sRGB";
 createNode place2dTexture -name "place2dTexture4";
 	rename -uuid "EDA12B4B-4B5D-19CC-88D7-1EAC26549896";
@@ -323497,7 +323497,7 @@ createNode polyTweakUV -name "polyTweakUV15";
 		 -0.352685 -0.00094309449 -0.32754189 -0.01394429 -0.35285425 -0.0014530569 -0.35316142
 		 -0.0021609664;
 createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uuid "7CDD5C52-450B-02C3-F216-969EE86C4344";
+	rename -uuid "8E9E5E08-4DD6-8290-AD22-949BEF13FC91";
 	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
 	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -3185.7141591253785 -12591.119429127131 ;
 	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 4347.4072346569656 12587.151175316558 ;
@@ -326245,4 +326245,4 @@ connectAttr "groupId123.message" ":initialShadingGroup.groupNodes" -nextAvailabl
 		;
 connectAttr "groupId124.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
-// End of NoraV4.ma
+// End of NoraV5UVMap.ma
