@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: NoraV5UVMap.ma
-//Last modified: Sat, Nov 29, 2025 06:09:06 AM
+//Name: NoraV6.ma
+//Last modified: Sat, Nov 29, 2025 06:09:25 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "simplexNoise" "lookdevKit" "1.0";
@@ -15,7 +15,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "67BD3B21-4726-21C6-D8CD-43B7250A746D";
+fileInfo "UUID" "44480BC9-40BA-A7C2-F540-FB824E98656C";
 createNode transform -shared -name "persp";
 	rename -uuid "AF1F716D-4124-DDB9-2D48-43A2FBF4522B";
 	setAttr ".visibility" no;
@@ -309213,25 +309213,25 @@ createNode aiStandardSurface -name "Val";
 	setAttr ".specularRoughness" 1;
 createNode file -name "file3";
 	rename -uuid "0A038357-4EE6-014E-5E93-3B8CCA2994D0";
-	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV5UVMap/NoraV5UVMap_clear_Metallic.png";
+	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV6/NoraV6_clear_Metallic.png";
 	setAttr ".colorSpace" -type "string" "sRGB";
 createNode place2dTexture -name "place2dTexture1";
 	rename -uuid "5360542A-40C9-DF74-47CB-71A810557C1D";
 createNode file -name "file1";
 	rename -uuid "F6C08A82-465D-7700-AE26-289A0D68AC2B";
-	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV5UVMap/NoraV5UVMap_clear_BaseColor.png";
+	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV6/NoraV6_clear_BaseColor.png";
 	setAttr ".colorSpace" -type "string" "sRGB";
 createNode place2dTexture -name "place2dTexture2";
 	rename -uuid "6BD2A0EC-40F8-5077-FAAB-C381CD6FC8D2";
 createNode file -name "file4";
 	rename -uuid "87D7E051-4BBC-4A76-9C3B-87960E9634A0";
-	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV5UVMap/NoraV5UVMap_clear_Normal.png";
+	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV6/NoraV6_clear_Normal.png";
 	setAttr ".colorSpace" -type "string" "sRGB";
 createNode place2dTexture -name "place2dTexture3";
 	rename -uuid "00E7703E-47C9-B710-A195-FD9F9B5B018B";
 createNode file -name "file2";
 	rename -uuid "384644BA-4B49-FA74-38E2-5495AF51BBFB";
-	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV5UVMap/NoraV5UVMap_clear_Roughness.png";
+	setAttr ".fileTextureName" -type "string" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//sourceimages/3dPaintTextures/NoraV6/NoraV6_clear_Roughness.png";
 	setAttr ".colorSpace" -type "string" "sRGB";
 createNode place2dTexture -name "place2dTexture4";
 	rename -uuid "EDA12B4B-4B5D-19CC-88D7-1EAC26549896";
@@ -309449,7 +309449,7 @@ createNode groupId -name "groupId179";
 	rename -uuid "294D5289-4FBA-6B6E-B954-FA80B5A7DBE1";
 	setAttr ".isHistoricallyInteresting" 0;
 createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uuid "297AF392-4E39-8519-8C96-B58EDB4E94CD";
+	rename -uuid "9F5EDE8A-4EDC-A553-128D-E38BF0A58BCB";
 	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
 	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -6031.9397955856175 -20707.277248889255 ;
 	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 1502.1868891620711 20702.515344316562 ;
@@ -311210,4 +311210,4 @@ connectAttr "groupId120.message" ":initialShadingGroup.groupNodes" -nextAvailabl
 		;
 connectAttr "groupId123.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
-// End of NoraV5UVMap.ma
+// End of NoraV6.ma
