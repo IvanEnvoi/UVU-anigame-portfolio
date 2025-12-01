@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: IdleAnimation.ma
-//Last modified: Mon, Dec 01, 2025 12:08:02 AM
+//Last modified: Mon, Dec 01, 2025 12:40:29 AM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -rfn "Ultimate_Bony_v1_0_5RN" -op "v=1;"
 		 -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Animations/Ultimate_Bony_v1.0.5.ma";
@@ -16,17 +16,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "13404A2F-4A58-20FE-1114-AB829682CBC1";
+fileInfo "UUID" "B243BDA4-488F-04CB-4916-E38AC1FC7773";
 createNode transform -shared -name "persp";
 	rename -uuid "E8D8D3FF-4C73-5608-7C26-288A22916DAE";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -20.490554464792822 24.439956663972733 48.252395487156093 ;
-	setAttr ".rotate" -type "double3" -19.538352729315871 -1102.5999999995163 0 ;
+	setAttr ".translate" -type "double3" -9.6542508203614315 8.5654107029413868 30.494794700711566 ;
+	setAttr ".rotate" -type "double3" -5.1383527293354483 -1096.9999999994754 0 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "5780A8C0-4B80-A6CF-9342-A7B1E1639FB6";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 56.228483733109798;
+	setAttr ".centerOfInterest" 32.719403978495507;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -294,7 +294,7 @@ createNode reference -name "Ultimate_Bony_v1_0_5RN";
 	setAttr ".edits" -type "dataReferenceEdits" 
 		"Ultimate_Bony_v1_0_5RN"
 		"Ultimate_Bony_v1_0_5RN" 0
-		"Ultimate_Bony_v1_0_5RN" 227
+		"Ultimate_Bony_v1_0_5RN" 228
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_ROOTCG|Ultimate_Bony_v1_0_5:Bony_ROOTC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_Spine02FKCG|Ultimate_Bony_v1_0_5:Bony_Spine02FKC" 
@@ -315,6 +315,8 @@ createNode reference -name "Ultimate_Bony_v1_0_5RN";
 		"toeUpDn" " -k 1"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lFootIKCG|Ultimate_Bony_v1_0_5:Bony_lFootIKC" 
 		"ballSwivel" " -k 1"
+		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lElbowFKCG|Ultimate_Bony_v1_0_5:Bony_lElbowFKC" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lPalmCG|Ultimate_Bony_v1_0_5:Bony_lPalmC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:Bony_lPalmCG|Ultimate_Bony_v1_0_5:Bony_lPalmC|Ultimate_Bony_v1_0_5:Bony_lFinger1J2CG|Ultimate_Bony_v1_0_5:Bony_lFinger1J2C" 
@@ -779,41 +781,6 @@ createNode animCurveTA -name "Bony_Main_CNT_rotateZ";
 	setAttr ".tangentType" 18;
 	setAttr ".weightedTangents" no;
 	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 120 0;
-createNode animCurveTA -name "Bony_HeadC_rotateX";
-	rename -uuid "EFD2C3C4-4C96-3FF4-4A3F-DFBA0B787194";
-	setAttr ".tangentType" 18;
-	setAttr ".weightedTangents" no;
-	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 48 7.8013033595177337 78 1.8588726465255161
-		 120 0;
-	setAttr -size 4 ".keyTanInType[3]"  1;
-	setAttr -size 4 ".keyTanOutType[3]"  1;
-	setAttr -size 4 ".keyTanInX[3]"  1;
-	setAttr -size 4 ".keyTanInY[3]"  0;
-	setAttr -size 4 ".keyTanOutX[3]"  1;
-	setAttr -size 4 ".keyTanOutY[3]"  0;
-createNode animCurveTA -name "Bony_HeadC_rotateY";
-	rename -uuid "ED7FEAA7-40CE-8A4F-58A9-21B45E496D59";
-	setAttr ".tangentType" 18;
-	setAttr ".weightedTangents" no;
-	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 48 29.774086335432617 78 -12.482345890753924
-		 120 0;
-	setAttr -size 4 ".keyTanInType[3]"  1;
-	setAttr -size 4 ".keyTanOutType[3]"  1;
-	setAttr -size 4 ".keyTanInX[3]"  1;
-	setAttr -size 4 ".keyTanInY[3]"  0;
-	setAttr -size 4 ".keyTanOutX[3]"  1;
-	setAttr -size 4 ".keyTanOutY[3]"  0;
-createNode animCurveTA -name "Bony_HeadC_rotateZ";
-	rename -uuid "7E1E42B1-41CD-C9A1-E89C-DAA8A7BA5EB0";
-	setAttr ".tangentType" 18;
-	setAttr ".weightedTangents" no;
-	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 48 0 78 0 120 0;
-	setAttr -size 4 ".keyTanInType[3]"  1;
-	setAttr -size 4 ".keyTanOutType[3]"  1;
-	setAttr -size 4 ".keyTanInX[3]"  1;
-	setAttr -size 4 ".keyTanInY[3]"  0;
-	setAttr -size 4 ".keyTanOutX[3]"  1;
-	setAttr -size 4 ".keyTanOutY[3]"  0;
 createNode animCurveTA -name "Bony_MainHipC_rotateX";
 	rename -uuid "1C52B61A-4C7F-E150-4D9E-C0B986CB54DE";
 	setAttr ".tangentType" 18;
@@ -1019,7 +986,14 @@ createNode animCurveTA -name "Bony_lElbowFKC_rotateY";
 	rename -uuid "3C66FB37-4F56-ED13-549E-EF8B807CCC65";
 	setAttr ".tangentType" 18;
 	setAttr ".weightedTangents" no;
-	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 120 0;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -16.194012492855752 71 -31.388024985711514
+		 120 -16.194012492855752;
+	setAttr -size 3 ".keyTanInType[0:2]"  1 18 18;
+	setAttr -size 3 ".keyTanOutType[0:2]"  1 18 18;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
 createNode animCurveTA -name "Bony_lFootIKC_rotateX";
 	rename -uuid "1B86E076-4877-EC2C-8B00-849EC8E161FC";
 	setAttr ".tangentType" 18;
@@ -1900,16 +1874,20 @@ createNode animCurveTU -name "Bony_rShoulderFKC_ShoulderOrient";
 	setAttr -size 5 ".keyTanOutY[4]"  0;
 createNode animCurveTL -name "Bony_ROOTC_translateX";
 	rename -uuid "49A5D019-4E4D-0AF2-A455-EA957F48C795";
-	setAttr ".tangentType" 18;
+	setAttr ".tangentType" 1;
 	setAttr ".weightedTangents" no;
-	setAttr -size 5 ".keyTimeValue[0:4]"  0 0.32188127106907027 23 -0.34828175808542394
-		 60 -0.33134696921420215 102 0.27785082000389361 120 0.32188127106907027;
-	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
-	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
-	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
-	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
-	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
-	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0.482030781572936 42 -0.21830025591735575
+		 60 -0.33134696921420215 91 0.38311490743819554 120 0.482030781572936;
+	setAttr -size 5 ".keyTanInType[1:4]"  18 18 1 1;
+	setAttr -size 5 ".keyTanOutType[1:4]"  18 18 1 1;
+	setAttr -size 5 ".keyTanInX[0:4]"  1 0.95093587809692215 1 0.96676886829389663 
+		1;
+	setAttr -size 5 ".keyTanInY[0:4]"  0 -0.30938803426770667 0 0.25565201993674586 
+		0;
+	setAttr -size 5 ".keyTanOutX[0:4]"  1 0.95093587809692215 1 0.96676886545778873 
+		1;
+	setAttr -size 5 ".keyTanOutY[0:4]"  0 -0.30938803426770667 0 0.25565203066171821 
+		0;
 createNode animCurveTL -name "Bony_ROOTC_translateY";
 	rename -uuid "DB1E5D6F-4DBA-4E54-037F-14BCB7F5A083";
 	setAttr ".tangentType" 18;
@@ -1944,17 +1922,6 @@ createNode animCurveTU -name "Bony_rLegSwitchC_SwitchIkFk";
 	setAttr -size 2 ".keyTanInY[1]"  0;
 	setAttr -size 2 ".keyTanOutX[1]"  1;
 	setAttr -size 2 ".keyTanOutY[1]"  0;
-createNode animCurveTU -name "Bony_HeadC_HeadOrient";
-	rename -uuid "E610220B-44F3-DED7-465D-C484F41DD84D";
-	setAttr ".tangentType" 18;
-	setAttr ".weightedTangents" no;
-	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 48 1 78 1 120 1;
-	setAttr -size 4 ".keyTanInType[3]"  1;
-	setAttr -size 4 ".keyTanOutType[3]"  1;
-	setAttr -size 4 ".keyTanInX[3]"  1;
-	setAttr -size 4 ".keyTanInY[3]"  0;
-	setAttr -size 4 ".keyTanOutX[3]"  1;
-	setAttr -size 4 ".keyTanOutY[3]"  0;
 createNode animCurveTU -name "Bony_rFinger2J1C_scaleX";
 	rename -uuid "D12BE714-42E6-7398-C799-12A2CC04057D";
 	setAttr ".tangentType" 18;
@@ -2034,9 +2001,54 @@ createNode animCurveTA -name "Bony_rShoulderFKC_rotateZ";
 	setAttr -size 4 ".keyTanInY[3]"  0;
 	setAttr -size 4 ".keyTanOutX[3]"  1;
 	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "Bony_HeadC_HeadOrient";
+	rename -uuid "E610220B-44F3-DED7-465D-C484F41DD84D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 48 1 100 1 120 1;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTA -name "Bony_HeadC_rotateZ";
+	rename -uuid "7E1E42B1-41CD-C9A1-E89C-DAA8A7BA5EB0";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 48 0 100 0 120 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTA -name "Bony_HeadC_rotateY";
+	rename -uuid "ED7FEAA7-40CE-8A4F-58A9-21B45E496D59";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 48 29.774086335432617 100 -12.482345890753924
+		 120 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTA -name "Bony_HeadC_rotateX";
+	rename -uuid "EFD2C3C4-4C96-3FF4-4A3F-DFBA0B787194";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 48 7.8013033595177337 100 1.8588726465255161
+		 120 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
 select -noExpand :time1;
-	setAttr ".outTime" 19;
-	setAttr ".unwarpedTime" 19;
+	setAttr ".outTime" 0;
 select -noExpand :hardwareRenderingGlobals;
 	setAttr ".objectTypeFilterNameArray" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".objectTypeFilterValueArray" -type "Int32Array" 22 0 1 1
