@@ -221,6 +221,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7394796077106153529}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5727005269672315103}
   m_SourcePrefab: {fileID: 100100000, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
 --- !u!1 &2628289333794599488 stripped
 GameObject:
@@ -365,6 +368,48 @@ CapsuleCollider:
   m_Height: 1.86
   m_Direction: 2
   m_Center: {x: 0, y: 0.24, z: 0}
+--- !u!114 &5727005269672315103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628289333794599488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c4c067838ab4f4daf3ceea190e0b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  awakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 3ceedfb4103c5e04d866ae7cdaaa18f7, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 8c735366925e2814abea0f613a387383, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &3400885765687093498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}

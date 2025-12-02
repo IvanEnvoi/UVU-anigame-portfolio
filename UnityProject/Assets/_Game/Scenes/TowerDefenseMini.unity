@@ -2131,6 +2131,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1985395186261288721, guid: 6f1ea50422f2b7d4aabdeab30b20937e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6f1ea50422f2b7d4aabdeab30b20937e, type: 3}
       propertyPath: m_Name
       value: CabinGround
@@ -2138,8 +2142,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4084704572415318107, guid: 6f1ea50422f2b7d4aabdeab30b20937e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 820914887}
   m_SourcePrefab: {fileID: 100100000, guid: 6f1ea50422f2b7d4aabdeab30b20937e, type: 3}
+--- !u!1 &820914886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4084704572415318107, guid: 6f1ea50422f2b7d4aabdeab30b20937e, type: 3}
+  m_PrefabInstance: {fileID: 820914885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &820914887
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820914886}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8820672532532519846, guid: 6f1ea50422f2b7d4aabdeab30b20937e, type: 3}
 --- !u!1001 &844693263
 PrefabInstance:
   m_ObjectHideFlags: 0
