@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 517ffcb5a59524e6f93b38629b128126, type: 3}
+  m_Name: New Bool Data
+  m_EditorClassIdentifier: 
+  value: 0
+  onValueChangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  setTrueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: b0a6e3178ecef5241ad4f94152ba4034, type: 2}
+        m_TargetAssemblyTypeName: Instancer2, Assembly-CSharp
+        m_MethodName: InstanceFromTransform2
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  setFalseEvent:
+    m_PersistentCalls:
+      m_Calls: []
