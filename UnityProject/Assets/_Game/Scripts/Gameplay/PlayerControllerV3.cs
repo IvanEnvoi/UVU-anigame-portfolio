@@ -47,7 +47,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
     // --------------------
     // INPUT CALLBACKS
-    // --------------------
+    // -----w---------------
     private void OnMove(InputAction.CallbackContext ctx)
     {
         moveInput = ctx.ReadValue<Vector2>();
@@ -58,6 +58,17 @@ public class PlayerControllerV3 : MonoBehaviour
         if (ctx.started)
             jumpPressed = true;
     }
+    
+    private void OnLaser(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            // Implement laser firing logic here
+            Debug.Log("Laser fired!");
+            
+        }
+    }
+    
 
     // --------------------
     // MOVEMENT

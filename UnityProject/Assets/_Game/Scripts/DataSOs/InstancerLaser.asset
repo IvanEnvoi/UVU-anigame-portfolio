@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226e9b54a35dab844bcb0658167d86a1, type: 3}
   m_Name: InstancerLaser
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 68245300227742828, guid: 691e6baf36b6ef6459de31658a2a2c86, type: 3}
   indexer: {fileID: 0}

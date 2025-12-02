@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4651407321176581242}
-  - component: {fileID: 571708732478229379}
   - component: {fileID: 147896436267047241}
   m_Layer: 3
   m_Name: InstancerArrow
@@ -33,49 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 852429226808911312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &571708732478229379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678560343249851747}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1703f3244536a4c97b5337900939d3ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startHoldTime: 0.1
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  seconds: 1
-  delayEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  repeatEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: ede74ddd4baf5344086e3288e1179a42, type: 2}
-        m_TargetAssemblyTypeName: Instancer, Assembly-CSharp
-        m_MethodName: InstanceFromTransform2
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4651407321176581242}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  endEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  counterNum: {fileID: 0}
-  maxCounterNum: 3
 --- !u!114 &147896436267047241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327ca5ce18ed4725ae75f76e0f07d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 0.3
+  seconds: 0.7
   event:
     m_PersistentCalls:
       m_Calls:
@@ -171,7 +127,7 @@ PrefabInstance:
     - target: {fileID: -6865764845294747240, guid: 71e4b4ef58b536840bef47e5a9e8f614, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c251acb813d8f3440a843aac6f411881, type: 2}
+      objectReference: {fileID: 2100000, guid: 01e85343b73eeb64ab2cb213caa9b7b3, type: 2}
     - target: {fileID: -5806124203620820111, guid: 71e4b4ef58b536840bef47e5a9e8f614, type: 3}
       propertyPath: m_Layer
       value: 3

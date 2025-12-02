@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: LaserBlast.ma
-//Last modified: Tue, Dec 02, 2025 01:48:37 AM
+//Last modified: Tue, Dec 02, 2025 03:17:30 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "30CDD43E-45A4-BB7A-8A76-01BC1FE09CF2";
+fileInfo "UUID" "03F34B57-4A5E-E354-FA01-6A8B8611B23B";
 createNode transform -shared -name "persp";
 	rename -uuid "39F5A682-4283-38B3-8C99-FC8A42808A02";
 	setAttr ".visibility" no;
