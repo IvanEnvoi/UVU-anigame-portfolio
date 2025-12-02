@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17e842cc2663f46d98d43922a660ba8e, type: 3}
-  m_Name: InstancerArrow
+  m_Script: {fileID: 11500000, guid: 226e9b54a35dab844bcb0658167d86a1, type: 3}
+  m_Name: InstancerLaser
   m_EditorClassIdentifier: 
-  prefab: {fileID: 807631881982765995, guid: b5439bfabfabe6b4fa96753eb16d3330, type: 3}
+  prefab: {fileID: 0}
   indexer: {fileID: 0}
