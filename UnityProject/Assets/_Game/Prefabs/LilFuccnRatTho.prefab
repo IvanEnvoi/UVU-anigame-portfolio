@@ -52,8 +52,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.1, y: 5.18, z: 6.52}
-  m_Center: {x: 0.35, y: 1.21, z: 0.4}
+  m_Size: {x: 19.34, y: 5.74, z: 9.47}
+  m_Center: {x: -1.93, y: 1.21, z: 0.4}
 --- !u!114 &85614436957355303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.04, y: 3.31, z: 8.03}
+  m_Size: {x: 18.52, y: 14.95, z: 20.62}
   m_Center: {x: -0.05, y: 0.21, z: -0.14}
 --- !u!195 &6256098072723581110
 NavMeshAgent:

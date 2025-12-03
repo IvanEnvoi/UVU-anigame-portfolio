@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daea36433e627e24eb2a40b448234205, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daea36433e627e24eb2a40b448234205, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daea36433e627e24eb2a40b448234205, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daea36433e627e24eb2a40b448234205, type: 3}
       propertyPath: m_LocalPosition.x
@@ -126,13 +126,13 @@ CapsuleCollider:
     m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 1015
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.57
   m_Height: 0.73
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.04}
@@ -166,7 +166,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -185,10 +185,10 @@ ConstantForce:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68245300227742828}
   m_Enabled: 1
-  m_Force: {x: 0, y: 0, z: 0}
-  m_RelativeForce: {x: 0, y: 3, z: 164.6}
+  m_Force: {x: 0, y: -17.3, z: 18.36}
+  m_RelativeForce: {x: 0, y: -16.9, z: 134.1}
   m_Torque: {x: 0, y: 0, z: 0}
-  m_RelativeTorque: {x: 0, y: 0, z: 5}
+  m_RelativeTorque: {x: 0, y: 0, z: 6.56}
 --- !u!114 &2058232872816961927
 MonoBehaviour:
   m_ObjectHideFlags: 0

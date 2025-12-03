@@ -30,6 +30,12 @@ public class PlayerControllerV3 : MonoBehaviour
         controls.Player.Move.canceled += OnMove;
 
         controls.Player.Jump.started += OnJump;
+       
+      //  // Laser input (commented out for now)
+      //  controls.Player.Laser.performed += OnLaser;
+      //  controls.Player.Laser.started += OnLaser;
+      //  controls.Player.Laser.canceled += OnLaser;
+
     }
 
     private void OnDisable()
@@ -59,16 +65,15 @@ public class PlayerControllerV3 : MonoBehaviour
             jumpPressed = true;
     }
     
-    private void OnLaser(InputAction.CallbackContext ctx)
-    {
-        if (ctx.performed)
-        {
+   //private void OnLaser(InputAction.CallbackContext ctx)
+   // {
+   //     if (ctx.started)
             // Implement laser firing logic here
-            Debug.Log("Laser fired!");
+  //          Debug.Log("Laser fired!");
             
-        }
-    }
-    
+        
+  //  }
+    ///
 
     // --------------------
     // MOVEMENT

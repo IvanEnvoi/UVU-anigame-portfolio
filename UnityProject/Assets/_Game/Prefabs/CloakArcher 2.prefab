@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4651407321176581242}
   - component: {fileID: 147896436267047241}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: InstancerArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,11 +130,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 01e85343b73eeb64ab2cb213caa9b7b3, type: 2}
     - target: {fileID: -5806124203620820111, guid: 71e4b4ef58b536840bef47e5a9e8f614, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -3490653592819595927, guid: 71e4b4ef58b536840bef47e5a9e8f614, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 71e4b4ef58b536840bef47e5a9e8f614, type: 3}
       propertyPath: m_Name
@@ -142,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 71e4b4ef58b536840bef47e5a9e8f614, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3224918526554815421, guid: 71e4b4ef58b536840bef47e5a9e8f614, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -186,7 +186,7 @@ SphereCollider:
     m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
