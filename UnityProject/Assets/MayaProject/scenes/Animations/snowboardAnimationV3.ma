@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: snowboardAnimationV2.ma
-//Last modified: Wed, Dec 03, 2025 07:19:27 PM
+//Name: snowboardAnimationV3.ma
+//Last modified: Wed, Dec 03, 2025 07:19:47 PM
 //Codeset: 1252
 file -rdi 1 -ns "PALBot" -rfn "PALBotRN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Desktop/rigs/PALBOT/scenes/PALBot.ma";
 file -rdi 1 -ns "Ultimate_Walker_IK_v1_0_1" -rfn "Ultimate_Walker_IK_v1_0_1RN"
@@ -23,17 +23,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "9C609113-4484-3E54-4578-84AE21ACF9A5";
+fileInfo "UUID" "0D20B5ED-43BC-13B9-90E6-2EBD7F3DC767";
 createNode transform -shared -name "persp";
 	rename -uuid "9A86F253-4335-68AE-72B2-E88DB75B5040";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 28.276639254540708 13.365187573330218 -29.091746827754491 ;
-	setAttr ".rotate" -type "double3" -14.938357793283851 -3843.5992141776901 0 ;
+	setAttr ".translate" -type "double3" 28.259763958457459 16.101088372310773 -29.944962970654185 ;
+	setAttr ".rotate" -type "double3" -29.338357793287127 -3836.7992141776431 0 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "EDBAAFD2-4FF4-689A-68A5-72876766C21A";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 5.4751723699734756;
+	setAttr ".centerOfInterest" 7.1612184003756765;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -6681,7 +6681,7 @@ createNode transform -name "robo";
 createNode transform -name "bony";
 	rename -uuid "708C802F-43CC-6016-A5C6-A8AA45B83C90";
 createNode fosterParent -name "PALBotRNfosterParent1";
-	rename -uuid "5B2E05C1-4FF8-76E5-9843-F7A7D67AEBEE";
+	rename -uuid "19DEA2AE-46A9-B3BD-6335-17A34996AE9B";
 createNode transform -name "board" -parent "PALBotRNfosterParent1";
 	rename -uuid "497068D2-4B2B-2DDF-1FAC-5482300F6D8C";
 	setAttr ".rotatePivot" -type "double3" -0.30032199632918838 0 0.84447861837650273 ;
@@ -6702,7 +6702,7 @@ createNode mesh -name "boardShape" -parent "board";
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
 	setAttr ".dispResolution" 1;
 createNode fosterParent -name "Ultimate_Walker_IK_v1_0_1RNfosterParent1";
-	rename -uuid "FBA0BF4D-40C9-6A73-8E65-E289E1294020";
+	rename -uuid "64F92642-456D-169D-7818-8199D7E3E4E3";
 createNode transform -name "board2" -parent "Ultimate_Walker_IK_v1_0_1RNfosterParent1";
 	rename -uuid "B312A9B6-4B57-6B62-B3D4-C78207133CB1";
 	setAttr ".rotatePivot" -type "double3" 0 0.19351007576128845 0 ;
@@ -6824,7 +6824,7 @@ createNode mesh -name "board2Shape" -parent "board2";
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -name "Ultimate_Bony_v1_0_5RNfosterParent1";
-	rename -uuid "8E14C1DC-4789-17D8-BF7D-1C82EBBA5F3E";
+	rename -uuid "C795E0BC-4F91-FEA9-DB59-F4AA0DE5280D";
 createNode transform -name "board1" -parent "Ultimate_Bony_v1_0_5RNfosterParent1";
 	rename -uuid "E25C38FF-4E1E-713F-358E-8EAE2A1F51E9";
 	setAttr ".rotatePivot" -type "double3" 0 0.67688704472458805 0 ;
@@ -7382,13 +7382,13 @@ createNode reference -name "PALBotRN";
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|PALBot:PALBOT_GRP|PALBot:PALbot_RIG" "visibility" " 0"
 		2 "|PALBot:PALBOT_GRP|PALBot:PALbot_RIG|PALBot:PALbot_SpineHANDLE" "translate" 
-		" -type \"double3\" -218.66049692349119482 -102.66005317566704491 14.86062872982618366"
+		" -type \"double3\" 7.78470560059009919 14.59716329512441746 0.34930667513492636"
 		
 		2 "|PALBot:PALBOT_GRP|PALBot:PALbot_RIG|PALBot:PALbot_SpineHANDLE" "rotate" 
-		" -type \"double3\" 21.77372403906454679 -23.66599618649832237 8.14417807196207555"
+		" -type \"double3\" 0.87876069854855643 -15.25955045016852196 33.13642229080999613"
 		
 		2 "|PALBot:PALBOT_GRP|PALBot:PALbot_RIG|PALBot:PALbot_NeckHANDLE" "rotate" 
-		" -type \"double3\" 106.43748939438430057 -65.78725578661362761 -103.50937210019372969"
+		" -type \"double3\" -1.90527494928608609 -61.75004263986677699 40.39826228604893288"
 		
 		2 "|PALBot:PALBOT_GRP|PALBot:PALbot_LOC" "visibility" " 0"
 		2 "|PALBot:PALBOT_GRP|PALBot:PALbot_LOC|PALBot:PALbot_CTRLs|PALBot:PALbot_MAIN" 
@@ -13502,8 +13502,8 @@ createNode animCurveTU -name "Bony_lWristIKC_ControlScale";
 	setAttr ".weightedTangents" no;
 	setAttr -size 2 ".keyTimeValue[0:1]"  60 1 114 1;
 select -noExpand :time1;
-	setAttr ".outTime" 56;
-	setAttr ".unwarpedTime" 56;
+	setAttr ".outTime" 10;
+	setAttr ".unwarpedTime" 10;
 select -noExpand :hardwareRenderingGlobals;
 	setAttr ".objectTypeFilterNameArray" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".objectTypeFilterValueArray" -type "Int32Array" 22 0 1 1
@@ -14931,4 +14931,4 @@ connectAttr "pTorusShape3.instObjGroups" ":initialShadingGroup.dagSetMembers" -n
 		;
 connectAttr "aiSkyDomeLight1.instObjGroups" ":defaultLightSet.dagSetMembers" -nextAvailable
 		;
-// End of snowboardAnimationV2.ma
+// End of snowboardAnimationV3.ma
