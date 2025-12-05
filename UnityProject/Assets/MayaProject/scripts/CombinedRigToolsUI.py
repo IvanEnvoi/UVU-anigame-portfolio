@@ -1,9 +1,4 @@
-import maya.cmds as cmds
-import sys
-from functools import partial
-
-
-from renameSequence import renameSequence
+mport renameSequence
 from setShapeColor import setShapeColor
 
 class CombinedRigToolsUI:

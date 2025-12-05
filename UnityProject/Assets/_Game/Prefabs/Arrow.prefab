@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_RelativeTorque.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1232664158096868025, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 01e85343b73eeb64ab2cb213caa9b7b3, type: 2}
     - target: {fileID: 1964138447706251219, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -189,6 +193,10 @@ PrefabInstance:
       propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8002338261360334364, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fe778f4b53efe184c8a31ab6ff396ac8, type: 2}
     - target: {fileID: 8226916885106089594, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_LocalScale.x
       value: 2

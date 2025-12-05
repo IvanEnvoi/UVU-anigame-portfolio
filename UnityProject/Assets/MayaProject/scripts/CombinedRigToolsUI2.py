@@ -1,8 +1,6 @@
 import maya.cmds as cmds
 import sys
 
-
-
 class CombinedRigToolsUI:
     """Combined UI for Sequential Renamer and Assign Color."""
     
@@ -78,7 +76,7 @@ class CombinedRigToolsUI:
         
         cmds.text(label="Naming Pattern (use ## for numbers):", align="left")
         self.pattern_field = cmds.textField(
-            placeholderText="e.g., L_Leg_##_Ctrl",
+            placeholderText="e.g., joint_##_ctrl",
             height=30,
             annotation="Enter pattern with ## for sequential numbers"
         )
