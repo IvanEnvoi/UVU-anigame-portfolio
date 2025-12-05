@@ -76,15 +76,27 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 5a65b7f77ffaef842bccba2a2459eeb4, type: 2}
-        m_TargetAssemblyTypeName: Instancer2, Assembly-CSharp
-        m_MethodName: InstanceFromTransform2
-        m_Mode: 2
+      - m_Target: {fileID: 11400000, guid: 6f5c4935a73907f4fb3613ede6f0fdd6, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 4
         m_Arguments:
-          m_ObjectArgument: {fileID: 7330752658547035835}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: -0.02
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 270f90e5c0006df4082c16eab29590be, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -0.02
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -196,9 +208,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6072811938000832682}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6256098072723581110}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
       insertIndex: -1
@@ -212,33 +221,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5338378267308696884}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1717355531933970645}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4549861198299846937}
   m_SourcePrefab: {fileID: 100100000, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
 --- !u!1 &2628289333794599488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
   m_PrefabInstance: {fileID: 2934349044288016145}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &6072811938000832682
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2628289333794599488}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 136
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 1911
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 18.52, y: 14.95, z: 20.62}
-  m_Center: {x: -0.05, y: 0.21, z: -0.14}
 --- !u!195 &6256098072723581110
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -343,10 +337,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 255
+    m_Bits: 4294967295
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -383,6 +377,68 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1717355531933970645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628289333794599488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHoldTime: 0.01
+  awakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5a65b7f77ffaef842bccba2a2459eeb4, type: 2}
+        m_TargetAssemblyTypeName: Instancer2, Assembly-CSharp
+        m_MethodName: InstanceFromTransform2
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3400885765687093498}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerEnterRepeatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enterHoldTime: 0.01
+  repeatHoldTime: 0.01
+  exitHoldTime: 0.01
+  canRepeat: 0
+  canRepeatWithLimits: 0
+  repeatLimit: 10
+--- !u!114 &4549861198299846937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628289333794599488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f48ffe1e7c66f4ef0bcb54b9ce957f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 0.05
 --- !u!4 &3400885765687093498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1a7cae1a6ca33743b2e645b5acac0eb, type: 3}
