@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 38062503941880537}
   - component: {fileID: 1125337669635228584}
   - component: {fileID: 5354198384249792060}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33e92b43689542cbba2b63d5a00d04e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 2
+  seconds: 2.48
   useTrigger: 0
 --- !u!114 &5354198384249792060
 MonoBehaviour:
@@ -99,7 +99,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964138447706251219, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2102149586380332131, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_IsTrigger
@@ -107,7 +107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849473897704868909, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 439
+      value: 959
       objectReference: {fileID: 0}
     - target: {fileID: 4849473897704868909, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
@@ -243,7 +243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8746045440121177280, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,13 +1,7 @@
 import maya.cmds as cmds
 import sys
-import os
 
 
-# Add the scripts directory to the path so we can import other scripts
-# Adjust this path as necessary
-
-from renameSequence import renameSequence
-from setShapeColor import setShapeColor
 
 class CombinedRigToolsUI:
     """Combined UI for Sequential Renamer and Assign Color."""
