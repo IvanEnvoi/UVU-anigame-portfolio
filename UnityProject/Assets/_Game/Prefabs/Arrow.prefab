@@ -79,7 +79,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770748551348924040, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_Force.y
-      value: 0
+      value: 4.17
       objectReference: {fileID: 0}
     - target: {fileID: 770748551348924040, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_Force.z
@@ -90,8 +90,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 770748551348924040, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
+      propertyPath: m_RelativeForce.x
+      value: 34.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 770748551348924040, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_RelativeForce.y
-      value: 33.4
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 770748551348924040, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_RelativeTorque.y
@@ -111,7 +115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849473897704868909, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
-      value: 72
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6174658499643839141, guid: f8617a113810ee74fb5003af5f68375a, type: 3}
       propertyPath: m_Enabled
@@ -300,7 +304,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.02
+          m_FloatArgument: -0.07
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
