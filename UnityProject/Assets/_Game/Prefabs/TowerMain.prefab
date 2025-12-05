@@ -60,9 +60,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6738538698270077969, guid: 884ad6e33df896940991e853ac9236ae, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4609510461793813630, guid: 884ad6e33df896940991e853ac9236ae, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4261595845573270927, guid: 884ad6e33df896940991e853ac9236ae, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 884ad6e33df896940991e853ac9236ae, type: 3}
       propertyPath: m_Name
       value: TowerMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 884ad6e33df896940991e853ac9236ae, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 884ad6e33df896940991e853ac9236ae, type: 3}
       propertyPath: m_IsActive
