@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: PineTrees5.ma
-//Last modified: Fri, Dec 05, 2025 03:24:07 PM
+//Last modified: Fri, Dec 05, 2025 03:32:48 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "F961F1C9-4B81-82E1-15AF-5083170C3B7D";
+fileInfo "UUID" "A1996298-4B73-95F5-253D-F0971680306B";
 fileInfo "exportedFrom" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject/scenes/trees.ma";
 createNode transform -shared -name "persp";
 	rename -uuid "8A3E86C0-498D-9232-FD4D-27B2522701B8";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -47.924361276431171 9.0431424863935863 46.425120324713262 ;
+	setAttr ".translate" -type "double3" -90.377070867371188 12.477389524600289 66.041026050264904 ;
 	setAttr ".rotate" -type "double3" 715.79999999997256 -14105.200000005785 -9.4783016203248674e-16 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -8.0497033976827629e-15 -1.6919313083049261e-15 
 		-5.2820307186057594e-14 ;
@@ -30,7 +30,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	setAttr ".nearClipPlane" 0.001;
 	setAttr ".farClipPlane" 100000;
 	setAttr ".focusDistance" 0.05;
-	setAttr ".centerOfInterest" 33.346231701591407;
+	setAttr ".centerOfInterest" 80.237705998800863;
 	setAttr ".orthographicWidth" 94.900943396926579;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";

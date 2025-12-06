@@ -1,6 +1,7 @@
 import maya.cmds as cmds
 import sys
 
+
 class CombinedRigToolsUI:
     """Combined UI for Sequential Renamer and Assign Color."""
     
