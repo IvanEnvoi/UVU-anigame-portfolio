@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Ultimate_Bony_v1.0.5.ma
-//Last modified: Mon, Nov 17, 2025 04:17:43 PM
+//Last modified: Fri, Dec 05, 2025 06:05:51 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "BC981000-40F7-9904-3EB2-46B617CDB9E6";
+fileInfo "UUID" "D7BDF4EB-4025-DF2E-B84D-559A1DC9C08F";
 createNode transform -shared -name "persp";
 	rename -uuid "2158BFD4-4CC2-0C4D-F302-F4B84EC02336";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -7.8984874499438611 8.0554184967881817 24.651632536823701 ;
-	setAttr ".rotate" -type "double3" -8.1383527295411824 340.60000000001446 2.107505220707868e-16 ;
+	setAttr ".translate" -type "double3" -1.4045099504325709 16.869600052606277 19.528928922642109 ;
+	setAttr ".rotate" -type "double3" -26.738352729535123 362.20000000000533 0 ;
 	setAttr ".rotatePivot" -type "double3" -1.7763568394002505e-15 5.3290705182007514e-15 
 		0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" 0.007583123921775882 0.029479031201159852 
@@ -25,7 +25,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "C5CD4AF4-4421-00F7-6023-DB8E645A26D7";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999986;
-	setAttr ".centerOfInterest" 25.396142402961917;
+	setAttr ".centerOfInterest" 21.983227804780807;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -247,7 +247,7 @@ createNode transform -name "Bony_ROOTCG" -parent "Bony_Main_CNT";
 	setAttr -lock on -keyable off ".scaleZ";
 	setAttr ".rotatePivot" -type "double3" 0 4.7661149111754275 0.018608514219522476 ;
 	setAttr ".scalePivot" -type "double3" 0 4.7661149111754275 0.018608514219522476 ;
-createNode transform -name "Bony_ROOTC" -parent "Bony_ROOTCG";
+createNode transform -name "joint07" -parent "Bony_ROOTCG";
 	rename -uuid "A3265DE5-46C5-E199-744B-D6B98442BF97";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".scaleX";
@@ -255,11 +255,11 @@ createNode transform -name "Bony_ROOTC" -parent "Bony_ROOTCG";
 	setAttr -lock on -keyable off ".scaleZ";
 	setAttr ".rotatePivot" -type "double3" 0 4.7661149111754275 0.018608514219522476 ;
 	setAttr ".scalePivot" -type "double3" 0 4.7661149111754275 0.018608514219522476 ;
-createNode nurbsCurve -name "Bony_ROOTCShape" -parent "Bony_ROOTC";
+createNode nurbsCurve -name "joint07Shape" -parent "joint07";
 	rename -uuid "49541986-4863-EE55-F3F3-CCAC46690A9B";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 17;
+	setAttr ".overrideColor" 18;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -276,7 +276,7 @@ createNode nurbsCurve -name "Bony_ROOTCShape" -parent "Bony_ROOTC";
 		-1.7340228600678178e-16 4.7661149111754275 -1.3721073358239153
 		-1.0747307879677177 4.7661149111754275 -0.9647760940498058
 		;
-createNode transform -name "BonymidSpineAimLctr" -parent "Bony_ROOTC";
+createNode transform -name "BonymidSpineAimLctr" -parent "joint07";
 	rename -uuid "45EB17A0-4A7F-23B7-244E-69AFF65A0DEB";
 	setAttr -lock on -keyable off ".visibility" no;
 	setAttr -lock on -keyable off ".translateX";
@@ -314,7 +314,7 @@ createNode aimConstraint -name "BonymidSpineAimLctr_aimConstraint1" -parent "Bon
 	setAttr ".worldUpType" 4;
 	setAttr ".offset" -type "double3" 0.48614613354801683 0 0 ;
 	setAttr -keyable on ".JolanmidSpineTargetLctrW0";
-createNode transform -name "BonymidSpineTargetLctr" -parent "Bony_ROOTC";
+createNode transform -name "BonymidSpineTargetLctr" -parent "joint07";
 	rename -uuid "9351E2FC-4125-4ADC-1A9C-EE8CB5C8459C";
 	setAttr -lock on -keyable off ".visibility" no;
 	setAttr -lock on -keyable off ".translateX";
@@ -369,7 +369,7 @@ createNode transform -name "Bony_MainHipCG" -parent "Bony_Main_CNT";
 	setAttr -lock on -keyable off ".scaleZ";
 	setAttr ".rotatePivot" -type "double3" 0 4.7661149111754275 0.018608514219522476 ;
 	setAttr ".scalePivot" -type "double3" 0 4.7661149111754275 0.018608514219522476 ;
-createNode transform -name "Bony_MainHipC" -parent "Bony_MainHipCG";
+createNode transform -name "joint10" -parent "Bony_MainHipCG";
 	rename -uuid "24CC2467-4DC4-4E12-E847-BA8F842B93B7";
 	addAttr -cachedInternally true -shortName "spineLength" -longName "spineLength" 
 		-attributeType "double";
@@ -379,11 +379,11 @@ createNode transform -name "Bony_MainHipC" -parent "Bony_MainHipCG";
 	setAttr -lock on -keyable off ".scaleZ";
 	setAttr ".rotatePivot" -type "double3" 0 4.7661149111754275 0.018608514219522476 ;
 	setAttr ".scalePivot" -type "double3" 0 4.7661149111754275 0.018608514219522476 ;
-createNode nurbsCurve -name "Bony_MainHipCShape" -parent "Bony_MainHipC";
+createNode nurbsCurve -name "joint10Shape" -parent "joint10";
 	rename -uuid "C2683A88-45F7-C681-C878-80AC7BD93139";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 17;
+	setAttr ".overrideColor" 18;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -400,7 +400,7 @@ createNode nurbsCurve -name "Bony_MainHipCShape" -parent "Bony_MainHipC";
 		-1.1826850472138431e-16 3.7422265669007699 -0.16257755185274789
 		-0.73301688344527338 5.3746982768855656 -0.92811181529921993
 		;
-createNode transform -name "Bony_spineLengthClstr01" -parent "Bony_MainHipC";
+createNode transform -name "Bony_spineLengthClstr01" -parent "joint10";
 	rename -uuid "54C7028E-4ACF-BE4E-A97F-9BB4A25DDAF5";
 	setAttr ".visibility" no;
 	setAttr ".rotatePivot" -type "double3" -2.6455554516092471e-17 4.9273717583732903 
@@ -412,7 +412,7 @@ createNode clusterHandle -name "Bony_spineLengthClstr01Shape" -parent "Bony_spin
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -keyable off ".visibility";
 	setAttr ".origin" -type "double3" -2.6455554516092471e-17 4.9273717583732903 0.0224316576306633 ;
-createNode transform -name "Bony_spineBtmTX_Lctr" -parent "Bony_MainHipC";
+createNode transform -name "Bony_spineBtmTX_Lctr" -parent "joint10";
 	rename -uuid "C9886E59-4CBF-3EE1-2E30-96BF9E94EE57";
 	setAttr ".visibility" no;
 createNode locator -name "Bony_spineBtmTX_LctrShape" -parent "Bony_spineBtmTX_Lctr";
@@ -625,7 +625,7 @@ createNode transform -name "Bony_SpineTopIKCG" -parent "Bony_Main_CNT";
 	setAttr -lock on -keyable off ".scaleX";
 	setAttr -lock on -keyable off ".scaleY";
 	setAttr -lock on -keyable off ".scaleZ";
-createNode transform -name "Bony_SpineTopIKC" -parent "Bony_SpineTopIKCG";
+createNode transform -name "joint16" -parent "Bony_SpineTopIKCG";
 	rename -uuid "693758AC-4434-210F-26A8-18B59CC68C5F";
 	addAttr -cachedInternally true -shortName "spineLength" -longName "spineLength" 
 		-attributeType "double";
@@ -633,7 +633,7 @@ createNode transform -name "Bony_SpineTopIKC" -parent "Bony_SpineTopIKCG";
 	setAttr -lock on -keyable off ".scaleX";
 	setAttr -lock on -keyable off ".scaleY";
 	setAttr -lock on -keyable off ".scaleZ";
-createNode nurbsCurve -name "Bony_SpineTopIKCShape" -parent "Bony_SpineTopIKC";
+createNode nurbsCurve -name "joint16Shape" -parent "joint16";
 	rename -uuid "D1ABCE01-4AFF-89B1-3798-B7B9CDC7CAD7";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
@@ -649,7 +649,7 @@ createNode nurbsCurve -name "Bony_SpineTopIKCShape" -parent "Bony_SpineTopIKC";
 		0.59262237848166155 0 0.47409790278532921
 		0 0 1.1852447569633231
 		;
-createNode transform -name "Bony_spineLengthClstr03" -parent "Bony_SpineTopIKC";
+createNode transform -name "Bony_spineLengthClstr03" -parent "joint16";
 	rename -uuid "8224574F-45F3-4889-FB6C-84B6DE085031";
 	setAttr ".visibility" no;
 	setAttr ".translate" -type "double3" 6.7469860147374595e-16 -6.9592080330663535 
@@ -663,7 +663,7 @@ createNode clusterHandle -name "Bony_spineLengthClstr03Shape" -parent "Bony_spin
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -keyable off ".visibility";
 	setAttr ".origin" -type "double3" -6.0401276850741514e-16 6.8025585243598599 0.0063722699164687844 ;
-createNode transform -name "Bony_SpineTopTX_Lctr" -parent "Bony_SpineTopIKC";
+createNode transform -name "Bony_SpineTopTX_Lctr" -parent "joint16";
 	rename -uuid "BB8A9100-437B-43C3-3793-7F86C0294267";
 	setAttr ".visibility" no;
 createNode locator -name "Bony_SpineTopTX_LctrShape" -parent "Bony_SpineTopTX_Lctr";
@@ -2138,7 +2138,7 @@ createNode transform -name "Bony_lArmSwitchCG" -parent "Bony_Main_CNT";
 	setAttr -lock on -keyable off ".scaleZ";
 	setAttr ".rotatePivot" -type "double3" 3.5609607696533203 7.1013436317443857 -0.013861402869224545 ;
 	setAttr ".scalePivot" -type "double3" 3.5609607696533203 7.1013436317443857 -0.013861402869224545 ;
-createNode transform -name "Bony_lArmSwitchC" -parent "Bony_lArmSwitchCG";
+createNode transform -name "joint13" -parent "Bony_lArmSwitchCG";
 	rename -uuid "97790207-4BD1-086A-DCFE-C9A9F4C74683";
 	addAttr -cachedInternally true -shortName "SwitchIkFk" -longName "SwitchIkFk" -defaultValue 
 		1 -minValue 0 -maxValue 1 -attributeType "double";
@@ -2158,7 +2158,7 @@ createNode transform -name "Bony_lArmSwitchC" -parent "Bony_lArmSwitchCG";
 	setAttr ".scalePivot" -type "double3" 3.5609607696533203 7.1013436317443857 -0.013861402869224545 ;
 	setAttr -keyable on ".SwitchIkFk";
 	setAttr -lock on ".curve";
-createNode nurbsCurve -name "curveShape20" -parent "Bony_lArmSwitchC";
+createNode nurbsCurve -name "curveShape20" -parent "joint13";
 	rename -uuid "6B691495-4534-53D0-D788-72A10C788648";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -2521,7 +2521,7 @@ createNode transform -name "Bony_lWristFKCG" -parent "Bony_Main_CNT";
 	setAttr -lock on -keyable off ".scaleZ";
 	setAttr ".rotatePivot" -type "double3" 3.5609607696533203 7.1013436317443857 -0.013861402869224545 ;
 	setAttr ".scalePivot" -type "double3" 3.5609607696533203 7.1013436317443857 -0.013861402869224545 ;
-createNode transform -name "Bony_lWristFKC" -parent "Bony_lWristFKCG";
+createNode transform -name "joint04" -parent "Bony_lWristFKCG";
 	rename -uuid "0D79B523-4DBC-29A3-8A8F-8F84F9A5730A";
 	setAttr -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -2535,7 +2535,7 @@ createNode transform -name "Bony_lWristFKC" -parent "Bony_lWristFKCG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lWristFKCShape" -parent "Bony_lWristFKC";
+createNode nurbsCurve -name "joint04Shape" -parent "joint04";
 	rename -uuid "A1A7A0BA-45A7-2010-097F-E28F09B6682D";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -2625,7 +2625,7 @@ createNode transform -name "Bony_lElbowFKCG" -parent "Bony_Main_CNT";
 	setAttr ".rotatePivotTranslate" -type "double3" 5.7484948848354343e-06 1.4434431177912989e-07 
 		0.00093114738123961833 ;
 	setAttr ".scalePivot" -type "double3" 2.1926946375524783 7.1013439642372331 -0.01510315880519093 ;
-createNode transform -name "Bony_lElbowFKC" -parent "Bony_lElbowFKCG";
+createNode transform -name "joint15" -parent "Bony_lElbowFKCG";
 	rename -uuid "532C1B79-49C1-91BD-84A6-478243A1695E";
 	setAttr -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -2642,7 +2642,7 @@ createNode transform -name "Bony_lElbowFKC" -parent "Bony_lElbowFKCG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lElbowFKCShape" -parent "Bony_lElbowFKC";
+createNode nurbsCurve -name "joint15Shape" -parent "joint15";
 	rename -uuid "0BEA475D-4772-CFBE-B116-2EA76D698C55";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -2719,7 +2719,7 @@ createNode transform -name "Bony_lShoulderFKCG" -parent "Bony_lShoulderFKCG2";
 	setAttr -lock on -keyable off ".scaleX";
 	setAttr -lock on -keyable off ".scaleY";
 	setAttr -lock on -keyable off ".scaleZ";
-createNode transform -name "Bony_lShoulderFKC" -parent "Bony_lShoulderFKCG";
+createNode transform -name "joint01" -parent "Bony_lShoulderFKCG";
 	rename -uuid "F4BD345C-4A9A-9708-C90C-7AA45D6189E8";
 	addAttr -cachedInternally true -shortName "ShoulderOrient" -longName "ShoulderOrient" 
 		-defaultValue 1 -minValue 0 -maxValue 1 -attributeType "double";
@@ -2734,7 +2734,7 @@ createNode transform -name "Bony_lShoulderFKC" -parent "Bony_lShoulderFKCG";
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
 	setAttr -keyable on ".ShoulderOrient";
-createNode nurbsCurve -name "Bony_lShoulderFKCShape" -parent "Bony_lShoulderFKC";
+createNode nurbsCurve -name "joint01Shape" -parent "joint01";
 	rename -uuid "5DBD543B-469A-2690-6932-C0A2856CE334";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -2851,7 +2851,7 @@ createNode transform -name "Bony_lClavicleCG" -parent "Bony_Main_CNT";
 	setAttr -lock on -keyable off ".scaleZ";
 	setAttr ".rotatePivot" -type "double3" 0.38826418586793132 7.1013445854187021 -0.013861397281288946 ;
 	setAttr ".scalePivot" -type "double3" 0.38826418586793132 7.1013445854187021 -0.013861397281288946 ;
-createNode transform -name "Bony_lClavicleC" -parent "Bony_lClavicleCG";
+createNode transform -name "joint08" -parent "Bony_lClavicleCG";
 	rename -uuid "464A4989-45F3-7B08-901B-B5945EBFD515";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -2862,7 +2862,7 @@ createNode transform -name "Bony_lClavicleC" -parent "Bony_lClavicleCG";
 	setAttr -lock on -keyable off ".scaleZ";
 	setAttr ".rotatePivot" -type "double3" 0.38826418586793132 7.1013445854187021 -0.013861397281288946 ;
 	setAttr ".scalePivot" -type "double3" 0.38826418586793132 7.1013445854187021 -0.013861397281288946 ;
-createNode nurbsCurve -name "Bony_lClavicleCShape" -parent "Bony_lClavicleC";
+createNode nurbsCurve -name "joint08Shape" -parent "joint08";
 	rename -uuid "27B16C82-441F-EE02-3F59-FD803E44063D";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3465,7 +3465,7 @@ createNode transform -name "Bony_lPalmCG" -parent "Bony_Main_CNT";
 		1.2836953722228372e-16 ;
 	setAttr ".scalePivot" -type "double3" 0.21099049185002006 1.9539925233402755e-14 
 		1.2836953722228372e-16 ;
-createNode transform -name "Bony_lPalmC" -parent "Bony_lPalmCG";
+createNode transform -name "joint18" -parent "Bony_lPalmCG";
 	rename -uuid "B65B0A03-47A9-F780-56FD-81B6E35B0318";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -3479,7 +3479,7 @@ createNode transform -name "Bony_lPalmC" -parent "Bony_lPalmCG";
 		1.2836953722228372e-16 ;
 	setAttr ".scalePivot" -type "double3" 0.21099049185002006 1.9539925233402755e-14 
 		1.2836953722228372e-16 ;
-createNode nurbsCurve -name "curveShape21" -parent "Bony_lPalmC";
+createNode nurbsCurve -name "curveShape21" -parent "joint18";
 	rename -uuid "0521D624-4B3D-99E0-5F71-2599CAE00CC2";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3494,7 +3494,7 @@ createNode nurbsCurve -name "curveShape21" -parent "Bony_lPalmC";
 		0.27858750617422529 -0.19097329884333947 0.28679603953812344
 		0.27858750617422529 0.19097329884355266 0.28679603953812344
 		;
-createNode scaleConstraint -name "Bony_lPalmC_scaleConstraint1" -parent "Bony_lPalmC";
+createNode scaleConstraint -name "Bony_lPalmC_scaleConstraint1" -parent "joint18";
 	rename -uuid "8B546787-465E-4400-4592-2DAC516DEC01";
 	addAttr -cachedInternally true -shortName "w0" -longName "Jolan_lWristJG1W0" -defaultValue 
 		1 -minValue 0 -attributeType "double";
@@ -3514,7 +3514,7 @@ createNode scaleConstraint -name "Bony_lPalmC_scaleConstraint1" -parent "Bony_lP
 	setAttr -lock on -keyable off ".offsetY";
 	setAttr -lock on -keyable off ".offsetZ";
 	setAttr -lock on ".Jolan_lWristJG1W0";
-createNode transform -name "Bony_lFinger1J1CG" -parent "Bony_lPalmC";
+createNode transform -name "Bony_lFinger1J1CG" -parent "joint18";
 	rename -uuid "71488C3A-43E1-6A6C-96B3-EFAD5CA2C185";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3527,7 +3527,7 @@ createNode transform -name "Bony_lFinger1J1CG" -parent "Bony_lPalmC";
 	setAttr -lock on -keyable off ".scaleX";
 	setAttr -lock on -keyable off ".scaleY";
 	setAttr -lock on -keyable off ".scaleZ";
-createNode transform -name "Bony_lFinger1J1C" -parent "Bony_lFinger1J1CG";
+createNode transform -name "joint12" -parent "Bony_lFinger1J1CG";
 	rename -uuid "6FD53469-4AB3-88DD-4CD6-E7A257660B61";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -3537,7 +3537,7 @@ createNode transform -name "Bony_lFinger1J1C" -parent "Bony_lFinger1J1CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lFinger1J1CShape" -parent "Bony_lFinger1J1C";
+createNode nurbsCurve -name "joint12Shape" -parent "joint12";
 	rename -uuid "D25FF0F3-4F29-8745-0C2C-A18EB4EC5448";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3582,7 +3582,7 @@ createNode parentConstraint -name "Bony_lFinger1J1CG_parentConstraint1" -parent 
 		0.17782907378309631 ;
 	setAttr ".interpType" 2;
 	setAttr -keyable on ".Jolan_lPalmCW0";
-createNode transform -name "Bony_lFinger1J2CG" -parent "Bony_lPalmC";
+createNode transform -name "Bony_lFinger1J2CG" -parent "joint18";
 	rename -uuid "93F0771F-42CB-52BC-EDF3-028424271835";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3599,7 +3599,7 @@ createNode transform -name "Bony_lFinger1J2CG" -parent "Bony_lPalmC";
 		0.17782907378309631 ;
 	setAttr ".scalePivot" -type "double3" 0.70960511608347243 7.1054273576010019e-15 
 		0.17782907378309631 ;
-createNode transform -name "Bony_lFinger1J2C" -parent "Bony_lFinger1J2CG";
+createNode transform -name "joint14" -parent "Bony_lFinger1J2CG";
 	rename -uuid "803DEE06-4A29-ADE1-4AB0-7483B6BAA493";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -3616,7 +3616,7 @@ createNode transform -name "Bony_lFinger1J2C" -parent "Bony_lFinger1J2CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lFinger1J2CShape" -parent "Bony_lFinger1J2C";
+createNode nurbsCurve -name "joint14Shape" -parent "joint14";
 	rename -uuid "C46E3766-4FCB-1FB3-85C7-13AC3DB3EC01";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3661,7 +3661,7 @@ createNode parentConstraint -name "Bony_lFinger1J2CG_parentConstraint1" -parent 
 		0 ;
 	setAttr ".interpType" 2;
 	setAttr -keyable on ".Jolan_lFinger1J1CW0";
-createNode transform -name "Bony_lFinger1J3CG" -parent "Bony_lPalmC";
+createNode transform -name "Bony_lFinger1J3CG" -parent "joint18";
 	rename -uuid "7E261256-4C35-9BC4-91A1-379229C65015";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3678,7 +3678,7 @@ createNode transform -name "Bony_lFinger1J3CG" -parent "Bony_lPalmC";
 		0.17782907378309631 ;
 	setAttr ".scalePivot" -type "double3" 0.89524901023438908 7.1054273576010019e-15 
 		0.17782907378309631 ;
-createNode transform -name "Bony_lFinger1J3C" -parent "Bony_lFinger1J3CG";
+createNode transform -name "joint03" -parent "Bony_lFinger1J3CG";
 	rename -uuid "F229D650-41CD-FD68-2436-478EAAB33DA1";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -3695,7 +3695,7 @@ createNode transform -name "Bony_lFinger1J3C" -parent "Bony_lFinger1J3CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lFinger1J3CShape" -parent "Bony_lFinger1J3C";
+createNode nurbsCurve -name "joint03Shape" -parent "joint03";
 	rename -uuid "2C4CA4A0-45F7-8F46-636C-75AFCD701D81";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3739,7 +3739,7 @@ createNode parentConstraint -name "Bony_lFinger1J3CG_parentConstraint1" -parent 
 	setAttr ".restTranslate" -type "double3" 0 8.8817841970012523e-16 0 ;
 	setAttr ".interpType" 2;
 	setAttr -keyable on ".Jolan_lFinger1J2CW0";
-createNode transform -name "Bony_lFinger2J1CG" -parent "Bony_lPalmC";
+createNode transform -name "Bony_lFinger2J1CG" -parent "joint18";
 	rename -uuid "12851289-4422-A847-1425-51B4181C57E0";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3752,7 +3752,7 @@ createNode transform -name "Bony_lFinger2J1CG" -parent "Bony_lPalmC";
 	setAttr -lock on -keyable off ".scaleX";
 	setAttr -lock on -keyable off ".scaleY";
 	setAttr -lock on -keyable off ".scaleZ";
-createNode transform -name "Bony_lFinger2J1C" -parent "Bony_lFinger2J1CG";
+createNode transform -name "joint09" -parent "Bony_lFinger2J1CG";
 	rename -uuid "0B5651F7-4F6B-321C-8451-4C860FE7E62D";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -3762,7 +3762,7 @@ createNode transform -name "Bony_lFinger2J1C" -parent "Bony_lFinger2J1CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lFinger2J1CShape" -parent "Bony_lFinger2J1C";
+createNode nurbsCurve -name "joint09Shape" -parent "joint09";
 	rename -uuid "4BC3BAD6-466E-2D39-3CD8-DFB33F18CD91";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3807,7 +3807,7 @@ createNode parentConstraint -name "Bony_lFinger2J1CG_parentConstraint1" -parent 
 		-0.072347365319728768 ;
 	setAttr ".interpType" 2;
 	setAttr -keyable on ".Jolan_lPalmCW0";
-createNode transform -name "Bony_lFinger2J2CG" -parent "Bony_lPalmC";
+createNode transform -name "Bony_lFinger2J2CG" -parent "joint18";
 	rename -uuid "BF7AE1AD-4390-DD01-B585-17804B7C6F20";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3824,7 +3824,7 @@ createNode transform -name "Bony_lFinger2J2CG" -parent "Bony_lPalmC";
 		-0.072347365319728768 ;
 	setAttr ".scalePivot" -type "double3" 0.71882314778425194 -2.6645352591003757e-15 
 		-0.072347365319728768 ;
-createNode transform -name "Bony_lFinger2J2C" -parent "Bony_lFinger2J2CG";
+createNode transform -name "joint06" -parent "Bony_lFinger2J2CG";
 	rename -uuid "CA090212-4382-0407-96DC-60B49C0728F3";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -3841,7 +3841,7 @@ createNode transform -name "Bony_lFinger2J2C" -parent "Bony_lFinger2J2CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lFinger2J2CShape" -parent "Bony_lFinger2J2C";
+createNode nurbsCurve -name "joint06Shape" -parent "joint06";
 	rename -uuid "8721919F-46E8-3DA2-F69A-50BDB3E97D6E";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3886,7 +3886,7 @@ createNode parentConstraint -name "Bony_lFinger2J2CG_parentConstraint1" -parent 
 		0 ;
 	setAttr ".interpType" 2;
 	setAttr -keyable on ".Jolan_lFinger2J1CW0";
-createNode transform -name "Bony_lFinger2J3CG" -parent "Bony_lPalmC";
+createNode transform -name "Bony_lFinger2J3CG" -parent "joint18";
 	rename -uuid "35A5AA3C-4E43-6AF4-3A90-FA8334AA9613";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -3903,7 +3903,7 @@ createNode transform -name "Bony_lFinger2J3CG" -parent "Bony_lPalmC";
 		-0.072347365319728657 ;
 	setAttr ".scalePivot" -type "double3" 0.89735598890885004 -2.6645352591003757e-15 
 		-0.072347365319728657 ;
-createNode transform -name "Bony_lFinger2J3C" -parent "Bony_lFinger2J3CG";
+createNode transform -name "joint05" -parent "Bony_lFinger2J3CG";
 	rename -uuid "FBC1C99C-4699-0525-C52D-34BA3612A1DD";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -3920,7 +3920,7 @@ createNode transform -name "Bony_lFinger2J3C" -parent "Bony_lFinger2J3CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lFinger2J3CShape" -parent "Bony_lFinger2J3C";
+createNode nurbsCurve -name "joint05Shape" -parent "joint05";
 	rename -uuid "AEF459A8-44A0-26BE-6655-AC80041C8E98";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -5788,7 +5788,7 @@ createNode nurbsCurve -name "curveShape24" -parent "Bony_rArmSwitchC";
 	rename -uuid "1E68A47D-4125-DB09-ADAD-0298B3E963DA";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 14;
 	setAttr ".cached" -type "nurbsCurve" 
 		1 14 0 no 3
 		15 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
@@ -6180,7 +6180,7 @@ createNode nurbsCurve -name "Bony_rWristFKCShape" -parent "Bony_rWristFKC";
 	rename -uuid "1584B4D4-4616-2B79-55A9-32A98E74382F";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 14;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -7147,7 +7147,7 @@ createNode nurbsCurve -name "curveShape25" -parent "Bony_rPalmC";
 	rename -uuid "2F8074E9-4E58-5E5A-8441-9F8E2019381B";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 14;
 	setAttr ".cached" -type "nurbsCurve" 
 		1 4 0 no 3
 		5 0 1 2 3 4
@@ -7205,7 +7205,7 @@ createNode nurbsCurve -name "Bony_rFinger1J1CShape" -parent "Bony_rFinger1J1C";
 	rename -uuid "BD4FD3B5-4D2B-7934-3C48-4AB494B62BE1";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -7280,7 +7280,7 @@ createNode nurbsCurve -name "Bony_rFinger1J2CShape" -parent "Bony_rFinger1J2C";
 	rename -uuid "7CEBE065-441E-59D7-1647-62A1274B8E7D";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -7355,7 +7355,7 @@ createNode nurbsCurve -name "Bony_rFinger1J3CShape" -parent "Bony_rFinger1J3C";
 	rename -uuid "2C0F6F6C-4C12-6FF9-8678-21ACF40CFA34";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -7423,7 +7423,7 @@ createNode nurbsCurve -name "Bony_rFinger2J1CShape" -parent "Bony_rFinger2J1C";
 	rename -uuid "57862EC6-4A97-D20B-8850-09B70CC89FB3";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -7498,7 +7498,7 @@ createNode nurbsCurve -name "Bony_rFinger2J2CShape" -parent "Bony_rFinger2J2C";
 	rename -uuid "0F2D8C66-4834-E3A9-A036-CFBD507B00E5";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -7573,7 +7573,7 @@ createNode nurbsCurve -name "Bony_rFinger2J3CShape" -parent "Bony_rFinger2J3C";
 	rename -uuid "FD60058C-47E4-64EC-A007-C6B99FBE4CCB";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -17691,7 +17691,7 @@ createNode transform -name "Bony_lThumbJ1CG" -parent "Bony_lWristJG1";
 		-3.2735022536929625e-16 ;
 	setAttr ".scalePivot" -type "double3" -6.6613381477509392e-16 8.8817841970012523e-16 
 		0 ;
-createNode transform -name "Bony_lThumbJ1C" -parent "Bony_lThumbJ1CG";
+createNode transform -name "joint02" -parent "Bony_lThumbJ1CG";
 	rename -uuid "35B6741F-460C-B780-F4AC-4EBD0745AEE2";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -17705,7 +17705,7 @@ createNode transform -name "Bony_lThumbJ1C" -parent "Bony_lThumbJ1CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lThumbJ1CShape" -parent "Bony_lThumbJ1C";
+createNode nurbsCurve -name "joint02Shape" -parent "joint02";
 	rename -uuid "D46149F7-4E4D-7035-54E7-36A2BAC2F6C4";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -17770,7 +17770,7 @@ createNode transform -name "Bony_lThumbJ2CG" -parent "Bony_lWristJG1";
 	setAttr ".rotatePivotTranslate" -type "double3" -0.14549072019865347 -0.16955833353468136 
 		0.60477188909356216 ;
 	setAttr ".scalePivot" -type "double3" 0.52575844069504174 0.10939357085096901 -0.18650295137775119 ;
-createNode transform -name "Bony_lThumbJ2C" -parent "Bony_lThumbJ2CG";
+createNode transform -name "joint11" -parent "Bony_lThumbJ2CG";
 	rename -uuid "4265855A-48C0-F55E-06E1-AA90D5B156A9";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -17785,7 +17785,7 @@ createNode transform -name "Bony_lThumbJ2C" -parent "Bony_lThumbJ2CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lThumbJ2CShape" -parent "Bony_lThumbJ2C";
+createNode nurbsCurve -name "joint11Shape" -parent "joint11";
 	rename -uuid "ABA717C5-4210-252E-DC7E-F4AA3D8439C9";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -17850,7 +17850,7 @@ createNode transform -name "Bony_lThumbJ3CG" -parent "Bony_lWristJG1";
 	setAttr ".rotatePivotTranslate" -type "double3" -0.24573815202010815 -0.21933132005899575 
 		0.74422323521137401 ;
 	setAttr ".scalePivot" -type "double3" 0.68523173156877992 0.10939357085096901 -0.18650295137775252 ;
-createNode transform -name "Bony_lThumbJ3C" -parent "Bony_lThumbJ3CG";
+createNode transform -name "joint17" -parent "Bony_lThumbJ3CG";
 	rename -uuid "93BCE61F-4786-EB93-A71C-6CB4ED0D306B";
 	setAttr -lock on -keyable off ".visibility";
 	setAttr -lock on -keyable off ".translateX";
@@ -17865,7 +17865,7 @@ createNode transform -name "Bony_lThumbJ3C" -parent "Bony_lThumbJ3CG";
 	setAttr ".minScaleXLimitEnable" yes;
 	setAttr ".minScaleYLimitEnable" yes;
 	setAttr ".minScaleZLimitEnable" yes;
-createNode nurbsCurve -name "Bony_lThumbJ3CShape" -parent "Bony_lThumbJ3C";
+createNode nurbsCurve -name "joint17Shape" -parent "joint17";
 	rename -uuid "DF59DAC5-4CAC-0A53-CA3F-EAA38D2FA0AD";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
@@ -18452,7 +18452,7 @@ createNode nurbsCurve -name "Bony_rThumbJ1CShape" -parent "Bony_rThumbJ1C";
 	rename -uuid "FA7D40B9-44F3-8511-3E42-888F4F58558F";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -18532,7 +18532,7 @@ createNode nurbsCurve -name "Bony_rThumbJ2CShape" -parent "Bony_rThumbJ2C";
 	rename -uuid "0D823C24-4B74-5FFB-6ED1-C08ADBD8EFA1";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -18612,7 +18612,7 @@ createNode nurbsCurve -name "Bony_rThumbJ3CShape" -parent "Bony_rThumbJ3C";
 	rename -uuid "21A384E1-460F-5B73-ED66-978CE02009FA";
 	setAttr -keyable off ".visibility";
 	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 13;
+	setAttr ".overrideColor" 17;
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
@@ -113238,11 +113238,11 @@ createNode blinn -name "char_body_blinn5";
 	setAttr ".reflectivity" 0;
 	setAttr ".specularRollOff" 0.38211381435394287;
 createNode lightLinker -shared -name "lightLinker1";
-	rename -uuid "D4784396-4EF2-A127-E50E-EC893C4D0611";
+	rename -uuid "AA9E74E0-4FD5-8C85-8967-17BA6963362F";
 	setAttr -size 4 ".link";
 	setAttr -size 4 ".shadowLink";
 createNode displayLayerManager -name "layerManager";
-	rename -uuid "35529AC9-48E9-E8A2-2445-18A548A3CCA8";
+	rename -uuid "A8A7A928-43FB-EF5F-06C0-659F3339BBC6";
 	setAttr ".currentDisplayLayer" 4;
 	setAttr -size 8 ".displayLayerId[1:7]"  8 4 1 2 5 
 		6 7;
@@ -113251,7 +113251,7 @@ createNode displayLayer -name "defaultLayer";
 	rename -uuid "000FE639-4E3F-2EB9-F0C1-BCABAC54312E";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 createNode renderLayerManager -name "renderLayerManager";
-	rename -uuid "79FFAF9E-4055-7EA2-9D47-B09F3C27DC05";
+	rename -uuid "8B279AC4-46F3-871A-BA6A-9EB0325ACCA7";
 createNode renderLayer -name "defaultRenderLayer";
 	rename -uuid "1C225E99-4DDD-D428-D370-5FA5CCD0D1D8";
 	setAttr ".global" yes;
@@ -113261,45 +113261,46 @@ createNode script -name "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 870\n            -height 317\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 870\n            -height 316\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 870\n            -height 316\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1756\n            -height 1058\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1663\n            -height 600\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 1\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 1\n            -showAttributes 0\n"
 		+ "            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n"
 		+ "            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
-		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n"
-		+ "                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range -1 -1 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
-		+ "                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n"
-		+ "                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n"
-		+ "                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"|persp\" \n                -useInteractiveMode 0\n"
-		+ "                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
-		+ "                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n"
-		+ "                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
-		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1756\\n    -height 1058\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1756\\n    -height 1058\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n"
+		+ "                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n"
+		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
+		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range -1 -1 \n                -iconSize \"smallIcons\" \n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
+		+ "                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n"
+		+ "                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n"
+		+ "                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n"
+		+ "                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
+		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1663\\n    -height 600\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1663\\n    -height 600\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
@@ -128769,13 +128770,16 @@ createNode objectSet -name "Bony_All_CNTs";
 	setAttr -size 58 ".dagSetMembers";
 	setAttr ".annotation" -type "string" "gCharacterSet";
 createNode shapeEditorManager -name "shapeEditorManager";
-	rename -uuid "1841FF49-4E39-FCC4-6189-D6B5CB29499E";
+	rename -uuid "E7DFB44A-4009-4A62-BAF9-75AF65448F4C";
 	setAttr ".blendShapeDirectory[0].childIndices" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -name "poseInterpolatorManager";
-	rename -uuid "2ADEF5AB-4BA9-1EB5-43AC-5F8BEEE0900F";
+	rename -uuid "FA390042-4352-D3FC-59D2-C38E55E20A09";
 createNode aiOptions -shared -name "defaultArnoldRenderOptions";
 	rename -uuid "9BD3981C-43CE-45CA-E150-52AC94FC80D6";
+	addAttr -cachedInternally true -shortName "ARV_options" -longName "ARV_options" 
+		-dataType "string";
 	setAttr ".version" -type "string" "5.3.5.2";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -shared -name "defaultArnoldFilter";
 	rename -uuid "D250FD96-453A-F040-8204-62AA38003DE5";
 	setAttr ".aiTranslator" -type "string" "gaussian";
@@ -128945,8 +128949,8 @@ select -noExpand :defaultRenderGlobals;
 	setAttr -alteredValue -keyable on ".enableStrokeRender";
 	setAttr -keyable on ".onlyRenderStrokes";
 	setAttr -channelBox on ".strokesDepthFile";
-	setAttr -keyable on ".imageFormat";
-	setAttr -channelBox on ".imfPluginKey";
+	setAttr -keyable on ".imageFormat" 51;
+	setAttr -channelBox on ".imfPluginKey" -type "string" "exr";
 	setAttr -keyable on ".gammaCorrection";
 	setAttr -channelBox on ".animation";
 	setAttr -channelBox on ".animationRange";
@@ -129191,8 +129195,8 @@ connectAttr "Bony_ROOTCG_parentConstraint1.constraintRotateY" "Bony_ROOTCG.rotat
 		 -lock on;
 connectAttr "Bony_ROOTCG_parentConstraint1.constraintRotateZ" "Bony_ROOTCG.rotateZ"
 		 -lock on;
-connectAttr "Bony_Body.drawInfo" "Bony_ROOTC.drawOverride";
-connectAttr "Bony_MainHipC.translate" "BonymidSpineAimLctr.translate";
+connectAttr "Bony_Body.drawInfo" "joint07.drawOverride";
+connectAttr "joint10.translate" "BonymidSpineAimLctr.translate";
 connectAttr "BonymidSpineAimLctr_aimConstraint1.constraintRotateX" "BonymidSpineAimLctr.rotateX"
 		 -lock on;
 connectAttr "BonymidSpineAimLctr_aimConstraint1.constraintRotateZ" "BonymidSpineAimLctr.rotateZ"
@@ -129217,7 +129221,7 @@ connectAttr "BonymidSpineTargetLctr.parentMatrix" "BonymidSpineAimLctr_aimConstr
 		;
 connectAttr "BonymidSpineAimLctr_aimConstraint1.JolanmidSpineTargetLctrW0" "BonymidSpineAimLctr_aimConstraint1.target[0].targetWeight"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "BonymidSpineTargetLctr.translate";
+connectAttr "joint16.translate" "BonymidSpineTargetLctr.translate";
 connectAttr "Bony_ROOTCG.rotateOrder" "Bony_ROOTCG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_ROOTCG.parentInverseMatrix" "Bony_ROOTCG_parentConstraint1.constraintParentInverseMatrix"
@@ -129254,9 +129258,9 @@ connectAttr "Bony_MainHipCG_parentConstraint1.constraintRotateY" "Bony_MainHipCG
 		 -lock on;
 connectAttr "Bony_MainHipCG_parentConstraint1.constraintRotateZ" "Bony_MainHipCG.rotateZ"
 		 -lock on;
-connectAttr "JolanspineLength_MD.outputX" "Bony_MainHipC.spineLength" -lock on;
-connectAttr "Bony_Pelvis.drawInfo" "Bony_MainHipC.drawOverride";
-connectAttr "Bony_MainHipC.matrix" "Bony_spineLengthClstr01Shape.weightedNode";
+connectAttr "JolanspineLength_MD.outputX" "joint10.spineLength" -lock on;
+connectAttr "Bony_Pelvis.drawInfo" "joint10.drawOverride";
+connectAttr "joint10.matrix" "Bony_spineLengthClstr01Shape.weightedNode";
 connectAttr "Bony_spineBtmTX_Lctr_pointConstraint1.constraintTranslateX" "Bony_spineBtmTX_Lctr.translateX"
 		;
 connectAttr "Bony_spineBtmTX_Lctr_pointConstraint1.constraintTranslateY" "Bony_spineBtmTX_Lctr.translateY"
@@ -129287,19 +129291,19 @@ connectAttr "Bony_MainHipCG.rotatePivot" "Bony_MainHipCG_parentConstraint1.const
 		;
 connectAttr "Bony_MainHipCG.rotatePivotTranslate" "Bony_MainHipCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_ROOTC.translate" "Bony_MainHipCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint07.translate" "Bony_MainHipCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_ROOTC.rotatePivot" "Bony_MainHipCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint07.rotatePivot" "Bony_MainHipCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_ROOTC.rotatePivotTranslate" "Bony_MainHipCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint07.rotatePivotTranslate" "Bony_MainHipCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_ROOTC.rotate" "Bony_MainHipCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint07.rotate" "Bony_MainHipCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_ROOTC.rotateOrder" "Bony_MainHipCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint07.rotateOrder" "Bony_MainHipCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_ROOTC.scale" "Bony_MainHipCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint07.scale" "Bony_MainHipCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_ROOTC.parentMatrix" "Bony_MainHipCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint07.parentMatrix" "Bony_MainHipCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_MainHipCG_parentConstraint1.Jolan_ROOTCW0" "Bony_MainHipCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -129324,19 +129328,19 @@ connectAttr "Bony_Spine01FKCG.rotatePivot" "Bony_Spine01FKCG_parentConstraint1.c
 		;
 connectAttr "Bony_Spine01FKCG.rotatePivotTranslate" "Bony_Spine01FKCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_ROOTC.translate" "Bony_Spine01FKCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint07.translate" "Bony_Spine01FKCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_ROOTC.rotatePivot" "Bony_Spine01FKCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint07.rotatePivot" "Bony_Spine01FKCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_ROOTC.rotatePivotTranslate" "Bony_Spine01FKCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint07.rotatePivotTranslate" "Bony_Spine01FKCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_ROOTC.rotate" "Bony_Spine01FKCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint07.rotate" "Bony_Spine01FKCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_ROOTC.rotateOrder" "Bony_Spine01FKCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint07.rotateOrder" "Bony_Spine01FKCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_ROOTC.scale" "Bony_Spine01FKCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint07.scale" "Bony_Spine01FKCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_ROOTC.parentMatrix" "Bony_Spine01FKCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint07.parentMatrix" "Bony_Spine01FKCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_Spine01FKCG_parentConstraint1.Jolan_ROOTCW0" "Bony_Spine01FKCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -129396,11 +129400,9 @@ connectAttr "Bony_SpineTopIKCG_parentConstraint1.constraintRotateY" "Bony_SpineT
 		 -lock on;
 connectAttr "Bony_SpineTopIKCG_parentConstraint1.constraintRotateZ" "Bony_SpineTopIKCG.rotateZ"
 		 -lock on;
-connectAttr "JolanspineLength_MD.outputX" "Bony_SpineTopIKC.spineLength" -lock on
-		;
-connectAttr "Bony_Body.drawInfo" "Bony_SpineTopIKC.drawOverride";
-connectAttr "Bony_SpineTopIKC.matrix" "Bony_spineLengthClstr03Shape.weightedNode"
-		;
+connectAttr "JolanspineLength_MD.outputX" "joint16.spineLength" -lock on;
+connectAttr "Bony_Body.drawInfo" "joint16.drawOverride";
+connectAttr "joint16.matrix" "Bony_spineLengthClstr03Shape.weightedNode";
 connectAttr "Bony_SpineTopTX_Lctr_pointConstraint1.constraintTranslateX" "Bony_SpineTopTX_Lctr.translateX"
 		;
 connectAttr "Bony_SpineTopTX_Lctr_pointConstraint1.constraintTranslateY" "Bony_SpineTopTX_Lctr.translateY"
@@ -129584,19 +129586,19 @@ connectAttr "Bony_spineBtm01JIK.rotatePivotTranslate" "Bony_spineBtm01JIK_parent
 		;
 connectAttr "Bony_spineBtm01JIK.jointOrient" "Bony_spineBtm01JIK_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint10.translate" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetRotate"
+connectAttr "joint10.rotate" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetScale"
+connectAttr "joint10.scale" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_spineBtm01JIK_parentConstraint1.Jolan_MainHipCW0" "Bony_spineBtm01JIK_parentConstraint1.target[0].targetWeight"
 		;
@@ -129666,19 +129668,19 @@ connectAttr "Bony_SpineTopJIK.rotatePivotTranslate" "Bony_SpineTopJIK_parentCons
 		;
 connectAttr "Bony_SpineTopJIK.jointOrient" "Bony_SpineTopJIK_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_SpineTopJIK_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint16.translate" "Bony_SpineTopJIK_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_SpineTopJIK_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_SpineTopJIK_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_SpineTopJIK_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_SpineTopJIK_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_SpineTopJIK_parentConstraint1.target[0].targetRotate"
+connectAttr "joint16.rotate" "Bony_SpineTopJIK_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_SpineTopJIK_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_SpineTopJIK_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_SpineTopJIK_parentConstraint1.target[0].targetScale"
+connectAttr "joint16.scale" "Bony_SpineTopJIK_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_SpineTopJIK_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_SpineTopJIK_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_SpineTopJIK_parentConstraint1.Jolan_SpineTopIKCW0" "Bony_SpineTopJIK_parentConstraint1.target[0].targetWeight"
 		;
@@ -129770,19 +129772,19 @@ connectAttr "Bony_Neck01CG.rotatePivot" "Bony_Neck01CG_parentConstraint1.constra
 		;
 connectAttr "Bony_Neck01CG.rotatePivotTranslate" "Bony_Neck01CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_Neck01CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint16.translate" "Bony_Neck01CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_Neck01CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_Neck01CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_Neck01CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_Neck01CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_Neck01CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint16.rotate" "Bony_Neck01CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_Neck01CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_Neck01CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_Neck01CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint16.scale" "Bony_Neck01CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_Neck01CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_Neck01CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_Neck01CG_parentConstraint1.Jolan_SpineTopIKCW0" "Bony_Neck01CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -130100,19 +130102,19 @@ connectAttr "Bony_Main_CNT.parentMatrix" "Bony_lKneeIKCG_parentConstraint1.targe
 		;
 connectAttr "Bony_lKneeIKCG_parentConstraint1.Jolan_MainCW0" "Bony_lKneeIKCG_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_lKneeIKCG_parentConstraint1.target[1].targetTranslate"
+connectAttr "joint10.translate" "Bony_lKneeIKCG_parentConstraint1.target[1].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_lKneeIKCG_parentConstraint1.target[1].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_lKneeIKCG_parentConstraint1.target[1].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_lKneeIKCG_parentConstraint1.target[1].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_lKneeIKCG_parentConstraint1.target[1].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_lKneeIKCG_parentConstraint1.target[1].targetRotate"
+connectAttr "joint10.rotate" "Bony_lKneeIKCG_parentConstraint1.target[1].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_lKneeIKCG_parentConstraint1.target[1].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_lKneeIKCG_parentConstraint1.target[1].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_lKneeIKCG_parentConstraint1.target[1].targetScale"
+connectAttr "joint10.scale" "Bony_lKneeIKCG_parentConstraint1.target[1].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_lKneeIKCG_parentConstraint1.target[1].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_lKneeIKCG_parentConstraint1.target[1].targetParentMatrix"
 		;
 connectAttr "Bony_lKneeIKCG_parentConstraint1.Jolan_MainHipCW1" "Bony_lKneeIKCG_parentConstraint1.target[1].targetWeight"
 		;
@@ -130355,19 +130357,19 @@ connectAttr "Bony_lHipFKCG.rotatePivot" "Bony_lHipFKCG_parentConstraint1.constra
 		;
 connectAttr "Bony_lHipFKCG.rotatePivotTranslate" "Bony_lHipFKCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_lHipFKCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint10.translate" "Bony_lHipFKCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_lHipFKCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_lHipFKCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_lHipFKCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_lHipFKCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_lHipFKCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint10.rotate" "Bony_lHipFKCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_lHipFKCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_lHipFKCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_lHipFKCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint10.scale" "Bony_lHipFKCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_lHipFKCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_lHipFKCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lHipFKCG_parentConstraint1.Jolan_MainHipCW0" "Bony_lHipFKCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -130379,19 +130381,19 @@ connectAttr "Bony_lHipFKCG.rotatePivot" "Bony_lHipFKCG_parentConstraint2.constra
 		;
 connectAttr "Bony_lHipFKCG.rotatePivotTranslate" "Bony_lHipFKCG_parentConstraint2.constraintRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_lHipFKCG_parentConstraint2.target[0].targetTranslate"
+connectAttr "joint10.translate" "Bony_lHipFKCG_parentConstraint2.target[0].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_lHipFKCG_parentConstraint2.target[0].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_lHipFKCG_parentConstraint2.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_lHipFKCG_parentConstraint2.target[0].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_lHipFKCG_parentConstraint2.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_lHipFKCG_parentConstraint2.target[0].targetRotate"
+connectAttr "joint10.rotate" "Bony_lHipFKCG_parentConstraint2.target[0].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_lHipFKCG_parentConstraint2.target[0].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_lHipFKCG_parentConstraint2.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_lHipFKCG_parentConstraint2.target[0].targetScale"
+connectAttr "joint10.scale" "Bony_lHipFKCG_parentConstraint2.target[0].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_lHipFKCG_parentConstraint2.target[0].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_lHipFKCG_parentConstraint2.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lHipFKCG_parentConstraint2.Jolan_MainHipCW0" "Bony_lHipFKCG_parentConstraint2.target[0].targetWeight"
 		;
@@ -130447,7 +130449,7 @@ connectAttr "Bony_lArmSwitchCG_parentConstraint1.constraintRotateY" "Bony_lArmSw
 		 -lock on;
 connectAttr "Bony_lArmSwitchCG_parentConstraint1.constraintRotateZ" "Bony_lArmSwitchCG.rotateZ"
 		 -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lArmSwitchC.drawOverride";
+connectAttr "Bony_Arms.drawInfo" "joint13.drawOverride";
 connectAttr "Bony_lArmSwitchCG.rotateOrder" "Bony_lArmSwitchCG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lArmSwitchCG.parentInverseMatrix" "Bony_lArmSwitchCG_parentConstraint1.constraintParentInverseMatrix"
@@ -130553,19 +130555,19 @@ connectAttr "Bony_lWristIKC.parentMatrix" "Bony_lElbowIKCG_parentConstraint1.tar
 		;
 connectAttr "Bony_lElbowIKCG_parentConstraint1.Jolan_lWristIKCW1" "Bony_lElbowIKCG_parentConstraint1.target[1].targetWeight"
 		;
-connectAttr "Bony_lClavicleC.translate" "Bony_lElbowIKCG_parentConstraint1.target[2].targetTranslate"
+connectAttr "joint08.translate" "Bony_lElbowIKCG_parentConstraint1.target[2].targetTranslate"
 		;
-connectAttr "Bony_lClavicleC.rotatePivot" "Bony_lElbowIKCG_parentConstraint1.target[2].targetRotatePivot"
+connectAttr "joint08.rotatePivot" "Bony_lElbowIKCG_parentConstraint1.target[2].targetRotatePivot"
 		;
-connectAttr "Bony_lClavicleC.rotatePivotTranslate" "Bony_lElbowIKCG_parentConstraint1.target[2].targetRotateTranslate"
+connectAttr "joint08.rotatePivotTranslate" "Bony_lElbowIKCG_parentConstraint1.target[2].targetRotateTranslate"
 		;
-connectAttr "Bony_lClavicleC.rotate" "Bony_lElbowIKCG_parentConstraint1.target[2].targetRotate"
+connectAttr "joint08.rotate" "Bony_lElbowIKCG_parentConstraint1.target[2].targetRotate"
 		;
-connectAttr "Bony_lClavicleC.rotateOrder" "Bony_lElbowIKCG_parentConstraint1.target[2].targetRotateOrder"
+connectAttr "joint08.rotateOrder" "Bony_lElbowIKCG_parentConstraint1.target[2].targetRotateOrder"
 		;
-connectAttr "Bony_lClavicleC.scale" "Bony_lElbowIKCG_parentConstraint1.target[2].targetScale"
+connectAttr "joint08.scale" "Bony_lElbowIKCG_parentConstraint1.target[2].targetScale"
 		;
-connectAttr "Bony_lClavicleC.parentMatrix" "Bony_lElbowIKCG_parentConstraint1.target[2].targetParentMatrix"
+connectAttr "joint08.parentMatrix" "Bony_lElbowIKCG_parentConstraint1.target[2].targetParentMatrix"
 		;
 connectAttr "Bony_lElbowIKCG_parentConstraint1.Jolan_lClavicleCW2" "Bony_lElbowIKCG_parentConstraint1.target[2].targetWeight"
 		;
@@ -130595,35 +130597,35 @@ connectAttr "Bony_lElbowFKAimLctr.rotatePivot" "Bony_lElbowFKAimLctr_parentConst
 		;
 connectAttr "Bony_lElbowFKAimLctr.rotatePivotTranslate" "Bony_lElbowFKAimLctr_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lElbowFKC.translate" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint15.translate" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lElbowFKC.rotatePivot" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint15.rotatePivot" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lElbowFKC.rotatePivotTranslate" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint15.rotatePivotTranslate" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lElbowFKC.rotate" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetRotate"
+connectAttr "joint15.rotate" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lElbowFKC.rotateOrder" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint15.rotateOrder" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lElbowFKC.scale" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetScale"
+connectAttr "joint15.scale" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lElbowFKC.parentMatrix" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint15.parentMatrix" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lElbowFKAimLctr_parentConstraint1.Jolan_lElbowFKCW0" "Bony_lElbowFKAimLctr_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "Bony_lShoulderFKC.translate" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetTranslate"
+connectAttr "joint01.translate" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetTranslate"
 		;
-connectAttr "Bony_lShoulderFKC.rotatePivot" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetRotatePivot"
+connectAttr "joint01.rotatePivot" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetRotatePivot"
 		;
-connectAttr "Bony_lShoulderFKC.rotatePivotTranslate" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetRotateTranslate"
+connectAttr "joint01.rotatePivotTranslate" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetRotateTranslate"
 		;
-connectAttr "Bony_lShoulderFKC.rotate" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetRotate"
+connectAttr "joint01.rotate" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetRotate"
 		;
-connectAttr "Bony_lShoulderFKC.rotateOrder" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetRotateOrder"
+connectAttr "joint01.rotateOrder" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetRotateOrder"
 		;
-connectAttr "Bony_lShoulderFKC.scale" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetScale"
+connectAttr "joint01.scale" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetScale"
 		;
-connectAttr "Bony_lShoulderFKC.parentMatrix" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetParentMatrix"
+connectAttr "joint01.parentMatrix" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetParentMatrix"
 		;
 connectAttr "Bony_lElbowFKAimLctr_parentConstraint1.Jolan_lShoulderFKCW1" "Bony_lElbowFKAimLctr_parentConstraint1.target[1].targetWeight"
 		;
@@ -130699,35 +130701,35 @@ connectAttr "Bony_Main_CNT.parentMatrix" "Bony_lWristIKCG_parentConstraint1.targ
 		;
 connectAttr "Bony_lWristIKCG_parentConstraint1.Jolan_MainCW0" "Bony_lWristIKCG_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_lWristIKCG_parentConstraint1.target[1].targetTranslate"
+connectAttr "joint10.translate" "Bony_lWristIKCG_parentConstraint1.target[1].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_lWristIKCG_parentConstraint1.target[1].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_lWristIKCG_parentConstraint1.target[1].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_lWristIKCG_parentConstraint1.target[1].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_lWristIKCG_parentConstraint1.target[1].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_lWristIKCG_parentConstraint1.target[1].targetRotate"
+connectAttr "joint10.rotate" "Bony_lWristIKCG_parentConstraint1.target[1].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_lWristIKCG_parentConstraint1.target[1].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_lWristIKCG_parentConstraint1.target[1].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_lWristIKCG_parentConstraint1.target[1].targetScale"
+connectAttr "joint10.scale" "Bony_lWristIKCG_parentConstraint1.target[1].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_lWristIKCG_parentConstraint1.target[1].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_lWristIKCG_parentConstraint1.target[1].targetParentMatrix"
 		;
 connectAttr "Bony_lWristIKCG_parentConstraint1.Jolan_MainHipCW1" "Bony_lWristIKCG_parentConstraint1.target[1].targetWeight"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_lWristIKCG_parentConstraint1.target[2].targetTranslate"
+connectAttr "joint16.translate" "Bony_lWristIKCG_parentConstraint1.target[2].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_lWristIKCG_parentConstraint1.target[2].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_lWristIKCG_parentConstraint1.target[2].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_lWristIKCG_parentConstraint1.target[2].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_lWristIKCG_parentConstraint1.target[2].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_lWristIKCG_parentConstraint1.target[2].targetRotate"
+connectAttr "joint16.rotate" "Bony_lWristIKCG_parentConstraint1.target[2].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_lWristIKCG_parentConstraint1.target[2].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_lWristIKCG_parentConstraint1.target[2].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_lWristIKCG_parentConstraint1.target[2].targetScale"
+connectAttr "joint16.scale" "Bony_lWristIKCG_parentConstraint1.target[2].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_lWristIKCG_parentConstraint1.target[2].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_lWristIKCG_parentConstraint1.target[2].targetParentMatrix"
 		;
 connectAttr "Bony_lWristIKCG_parentConstraint1.Jolan_SpineTopIKCW2" "Bony_lWristIKCG_parentConstraint1.target[2].targetWeight"
 		;
@@ -130767,10 +130769,10 @@ connectAttr "Bony_lWristFKCG_parentConstraint1.constraintRotateY" "Bony_lWristFK
 		 -lock on;
 connectAttr "Bony_lWristFKCG_parentConstraint1.constraintRotateZ" "Bony_lWristFKCG.rotateZ"
 		 -lock on;
-connectAttr "JolanlArmFKViz.outColorR" "Bony_lWristFKC.visibility" -lock on;
-connectAttr "Bony_lWristFKC.scaleX" "Bony_lWristFKC.scaleY" -lock on;
-connectAttr "Bony_lWristFKC.scaleX" "Bony_lWristFKC.scaleZ" -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lWristFKC.drawOverride";
+connectAttr "JolanlArmFKViz.outColorR" "joint04.visibility" -lock on;
+connectAttr "joint04.scaleX" "joint04.scaleY" -lock on;
+connectAttr "joint04.scaleX" "joint04.scaleZ" -lock on;
+connectAttr "Bony_Arms.drawInfo" "joint04.drawOverride";
 connectAttr "Bony_lWristFKCG.rotateOrder" "Bony_lWristFKCG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lWristFKCG.parentInverseMatrix" "Bony_lWristFKCG_parentConstraint1.constraintParentInverseMatrix"
@@ -130779,19 +130781,19 @@ connectAttr "Bony_lWristFKCG.rotatePivot" "Bony_lWristFKCG_parentConstraint1.con
 		;
 connectAttr "Bony_lWristFKCG.rotatePivotTranslate" "Bony_lWristFKCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lElbowFKC.translate" "Bony_lWristFKCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint15.translate" "Bony_lWristFKCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lElbowFKC.rotatePivot" "Bony_lWristFKCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint15.rotatePivot" "Bony_lWristFKCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lElbowFKC.rotatePivotTranslate" "Bony_lWristFKCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint15.rotatePivotTranslate" "Bony_lWristFKCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lElbowFKC.rotate" "Bony_lWristFKCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint15.rotate" "Bony_lWristFKCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lElbowFKC.rotateOrder" "Bony_lWristFKCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint15.rotateOrder" "Bony_lWristFKCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lElbowFKC.scale" "Bony_lWristFKCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint15.scale" "Bony_lWristFKCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lElbowFKC.parentMatrix" "Bony_lWristFKCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint15.parentMatrix" "Bony_lWristFKCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lWristFKCG_parentConstraint1.Jolan_lElbowFKCW0" "Bony_lWristFKCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -130825,9 +130827,9 @@ connectAttr "Bony_lElbowFKCG_parentConstraint1.constraintRotateY" "Bony_lElbowFK
 		 -lock on;
 connectAttr "Bony_lElbowFKCG_parentConstraint1.constraintRotateZ" "Bony_lElbowFKCG.rotateZ"
 		 -lock on;
-connectAttr "JolanlArmFKViz.outColorR" "Bony_lElbowFKC.visibility" -lock on;
-connectAttr "Bony_lShoulderFKC.scaleX" "Bony_lElbowFKC.scaleX" -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lElbowFKC.drawOverride";
+connectAttr "JolanlArmFKViz.outColorR" "joint15.visibility" -lock on;
+connectAttr "joint01.scaleX" "joint15.scaleX" -lock on;
+connectAttr "Bony_Arms.drawInfo" "joint15.drawOverride";
 connectAttr "Bony_lElbowFKCG.rotateOrder" "Bony_lElbowFKCG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lElbowFKCG.parentInverseMatrix" "Bony_lElbowFKCG_parentConstraint1.constraintParentInverseMatrix"
@@ -130836,19 +130838,19 @@ connectAttr "Bony_lElbowFKCG.rotatePivot" "Bony_lElbowFKCG_parentConstraint1.con
 		;
 connectAttr "Bony_lElbowFKCG.rotatePivotTranslate" "Bony_lElbowFKCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lShoulderFKC.translate" "Bony_lElbowFKCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint01.translate" "Bony_lElbowFKCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lShoulderFKC.rotatePivot" "Bony_lElbowFKCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint01.rotatePivot" "Bony_lElbowFKCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lShoulderFKC.rotatePivotTranslate" "Bony_lElbowFKCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint01.rotatePivotTranslate" "Bony_lElbowFKCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lShoulderFKC.rotate" "Bony_lElbowFKCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint01.rotate" "Bony_lElbowFKCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lShoulderFKC.rotateOrder" "Bony_lElbowFKCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint01.rotateOrder" "Bony_lElbowFKCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lShoulderFKC.scale" "Bony_lElbowFKCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint01.scale" "Bony_lElbowFKCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lShoulderFKC.parentMatrix" "Bony_lElbowFKCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint01.parentMatrix" "Bony_lElbowFKCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lElbowFKCG_parentConstraint1.Jolan_lShoulderFKCW0" "Bony_lElbowFKCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -130864,8 +130866,8 @@ connectAttr "Bony_lShoulderFKCG_parentConstraint1.constraintTranslateY" "Bony_lS
 		 -lock on;
 connectAttr "Bony_lShoulderFKCG_parentConstraint1.constraintTranslateZ" "Bony_lShoulderFKCG.translateZ"
 		 -lock on;
-connectAttr "JolanlArmFKViz.outColorR" "Bony_lShoulderFKC.visibility" -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lShoulderFKC.drawOverride";
+connectAttr "JolanlArmFKViz.outColorR" "joint01.visibility" -lock on;
+connectAttr "Bony_Arms.drawInfo" "joint01.drawOverride";
 connectAttr "Bony_lShoulderFKCG.rotateOrder" "Bony_lShoulderFKCG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lShoulderFKCG.parentInverseMatrix" "Bony_lShoulderFKCG_parentConstraint1.constraintParentInverseMatrix"
@@ -130874,19 +130876,19 @@ connectAttr "Bony_lShoulderFKCG.rotatePivot" "Bony_lShoulderFKCG_parentConstrain
 		;
 connectAttr "Bony_lShoulderFKCG.rotatePivotTranslate" "Bony_lShoulderFKCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lClavicleC.translate" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint08.translate" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lClavicleC.rotatePivot" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint08.rotatePivot" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lClavicleC.rotatePivotTranslate" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint08.rotatePivotTranslate" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lClavicleC.rotate" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint08.rotate" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lClavicleC.rotateOrder" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint08.rotateOrder" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lClavicleC.scale" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint08.scale" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lClavicleC.parentMatrix" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint08.parentMatrix" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lShoulderFKCG_parentConstraint1.Jolan_lClavicleCW0" "Bony_lShoulderFKCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -130918,19 +130920,19 @@ connectAttr "Bony_lShoulderFKCG2.rotatePivot" "Bony_lShoulderFKCG2_parentConstra
 		;
 connectAttr "Bony_lShoulderFKCG2.rotatePivotTranslate" "Bony_lShoulderFKCG2_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint16.translate" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetRotate"
+connectAttr "joint16.rotate" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetScale"
+connectAttr "joint16.scale" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lShoulderFKCG2_parentConstraint1.Jolan_SpineTopIKCW0" "Bony_lShoulderFKCG2_parentConstraint1.target[0].targetWeight"
 		;
@@ -130966,7 +130968,7 @@ connectAttr "Bony_lClavicleCG_parentConstraint1.constraintRotateY" "Bony_lClavic
 		 -lock on;
 connectAttr "Bony_lClavicleCG_parentConstraint1.constraintRotateZ" "Bony_lClavicleCG.rotateZ"
 		 -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lClavicleC.drawOverride";
+connectAttr "Bony_Arms.drawInfo" "joint08.drawOverride";
 connectAttr "Bony_lClavicleCG.rotateOrder" "Bony_lClavicleCG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lClavicleCG.parentInverseMatrix" "Bony_lClavicleCG_parentConstraint1.constraintParentInverseMatrix"
@@ -130975,19 +130977,19 @@ connectAttr "Bony_lClavicleCG.rotatePivot" "Bony_lClavicleCG_parentConstraint1.c
 		;
 connectAttr "Bony_lClavicleCG.rotatePivotTranslate" "Bony_lClavicleCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_lClavicleCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint16.translate" "Bony_lClavicleCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_lClavicleCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_lClavicleCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_lClavicleCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_lClavicleCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_lClavicleCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint16.rotate" "Bony_lClavicleCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_lClavicleCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_lClavicleCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_lClavicleCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint16.scale" "Bony_lClavicleCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_lClavicleCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_lClavicleCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lClavicleCG_parentConstraint1.Jolan_SpineTopIKCW0" "Bony_lClavicleCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -131035,7 +131037,7 @@ connectAttr "Bony_lShoulderJFK_parentConstraint1.constraintTranslateY" "Bony_lSh
 		;
 connectAttr "Bony_lShoulderJFK_parentConstraint1.constraintTranslateZ" "Bony_lShoulderJFK.translateZ"
 		;
-connectAttr "Bony_lShoulderFKC.scaleX" "Bony_lShoulderJFK.scaleX";
+connectAttr "joint01.scaleX" "Bony_lShoulderJFK.scaleX";
 connectAttr "Bony_lShoulderJFK_parentConstraint1.constraintRotateX" "Bony_lShoulderJFK.rotateX"
 		;
 connectAttr "Bony_lShoulderJFK_parentConstraint1.constraintRotateY" "Bony_lShoulderJFK.rotateY"
@@ -131052,19 +131054,19 @@ connectAttr "Bony_lShoulderJFK.rotatePivotTranslate" "Bony_lShoulderJFK_parentCo
 		;
 connectAttr "Bony_lShoulderJFK.jointOrient" "Bony_lShoulderJFK_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lShoulderFKC.translate" "Bony_lShoulderJFK_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint01.translate" "Bony_lShoulderJFK_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lShoulderFKC.rotatePivot" "Bony_lShoulderJFK_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint01.rotatePivot" "Bony_lShoulderJFK_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lShoulderFKC.rotatePivotTranslate" "Bony_lShoulderJFK_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint01.rotatePivotTranslate" "Bony_lShoulderJFK_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lShoulderFKC.rotate" "Bony_lShoulderJFK_parentConstraint1.target[0].targetRotate"
+connectAttr "joint01.rotate" "Bony_lShoulderJFK_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lShoulderFKC.rotateOrder" "Bony_lShoulderJFK_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint01.rotateOrder" "Bony_lShoulderJFK_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lShoulderFKC.scale" "Bony_lShoulderJFK_parentConstraint1.target[0].targetScale"
+connectAttr "joint01.scale" "Bony_lShoulderJFK_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lShoulderFKC.parentMatrix" "Bony_lShoulderJFK_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint01.parentMatrix" "Bony_lShoulderJFK_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lShoulderJFK_parentConstraint1.Jolan_lShoulderFKCW0" "Bony_lShoulderJFK_parentConstraint1.target[0].targetWeight"
 		;
@@ -131239,19 +131241,19 @@ connectAttr "Bony_lWristJFK.rotatePivotTranslate" "Bony_lWristJFK_parentConstrai
 		;
 connectAttr "Bony_lWristJFK.jointOrient" "Bony_lWristJFK_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lWristFKC.translate" "Bony_lWristJFK_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint04.translate" "Bony_lWristJFK_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lWristFKC.rotatePivot" "Bony_lWristJFK_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint04.rotatePivot" "Bony_lWristJFK_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lWristFKC.rotatePivotTranslate" "Bony_lWristJFK_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint04.rotatePivotTranslate" "Bony_lWristJFK_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lWristFKC.rotate" "Bony_lWristJFK_parentConstraint1.target[0].targetRotate"
+connectAttr "joint04.rotate" "Bony_lWristJFK_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lWristFKC.rotateOrder" "Bony_lWristJFK_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint04.rotateOrder" "Bony_lWristJFK_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lWristFKC.scale" "Bony_lWristJFK_parentConstraint1.target[0].targetScale"
+connectAttr "joint04.scale" "Bony_lWristJFK_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lWristFKC.parentMatrix" "Bony_lWristJFK_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint04.parentMatrix" "Bony_lWristJFK_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lWristJFK_parentConstraint1.Jolan_lWristFKCW0" "Bony_lWristJFK_parentConstraint1.target[0].targetWeight"
 		;
@@ -131261,13 +131263,13 @@ connectAttr "Bony_lWristJFKG1.rotatePivot" "Bony_lWristJFKG1_pointConstraint1.co
 		;
 connectAttr "Bony_lWristJFKG1.rotatePivotTranslate" "Bony_lWristJFKG1_pointConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lWristFKC.translate" "Bony_lWristJFKG1_pointConstraint1.target[0].targetTranslate"
+connectAttr "joint04.translate" "Bony_lWristJFKG1_pointConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lWristFKC.rotatePivot" "Bony_lWristJFKG1_pointConstraint1.target[0].targetRotatePivot"
+connectAttr "joint04.rotatePivot" "Bony_lWristJFKG1_pointConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lWristFKC.rotatePivotTranslate" "Bony_lWristJFKG1_pointConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint04.rotatePivotTranslate" "Bony_lWristJFKG1_pointConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lWristFKC.parentMatrix" "Bony_lWristJFKG1_pointConstraint1.target[0].targetParentMatrix"
+connectAttr "joint04.parentMatrix" "Bony_lWristJFKG1_pointConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lWristJFKG1_pointConstraint1.Jolan_lWristFKCW0" "Bony_lWristJFKG1_pointConstraint1.target[0].targetWeight"
 		;
@@ -131327,7 +131329,7 @@ connectAttr "Bony_lElbowJFK_parentConstraint1.constraintRotateY" "Bony_lElbowJFK
 		;
 connectAttr "Bony_lElbowJFK_parentConstraint1.constraintRotateZ" "Bony_lElbowJFK.rotateZ"
 		;
-connectAttr "Bony_lShoulderFKC.scaleX" "Bony_lElbowJFK.scaleX";
+connectAttr "joint01.scaleX" "Bony_lElbowJFK.scaleX";
 connectAttr "Bony_lElbowJFK.rotateOrder" "Bony_lElbowJFK_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lElbowJFK.parentInverseMatrix" "Bony_lElbowJFK_parentConstraint1.constraintParentInverseMatrix"
@@ -131338,19 +131340,19 @@ connectAttr "Bony_lElbowJFK.rotatePivotTranslate" "Bony_lElbowJFK_parentConstrai
 		;
 connectAttr "Bony_lElbowJFK.jointOrient" "Bony_lElbowJFK_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lElbowFKC.translate" "Bony_lElbowJFK_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint15.translate" "Bony_lElbowJFK_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lElbowFKC.rotatePivot" "Bony_lElbowJFK_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint15.rotatePivot" "Bony_lElbowJFK_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lElbowFKC.rotatePivotTranslate" "Bony_lElbowJFK_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint15.rotatePivotTranslate" "Bony_lElbowJFK_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lElbowFKC.rotate" "Bony_lElbowJFK_parentConstraint1.target[0].targetRotate"
+connectAttr "joint15.rotate" "Bony_lElbowJFK_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lElbowFKC.rotateOrder" "Bony_lElbowJFK_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint15.rotateOrder" "Bony_lElbowJFK_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lElbowFKC.scale" "Bony_lElbowJFK_parentConstraint1.target[0].targetScale"
+connectAttr "joint15.scale" "Bony_lElbowJFK_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lElbowFKC.parentMatrix" "Bony_lElbowJFK_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint15.parentMatrix" "Bony_lElbowJFK_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lElbowJFK_parentConstraint1.Jolan_lElbowFKCW0" "Bony_lElbowJFK_parentConstraint1.target[0].targetWeight"
 		;
@@ -131360,13 +131362,13 @@ connectAttr "Bony_lElbowJFKG1.rotatePivot" "Bony_lElbowJFKG1_pointConstraint1.co
 		;
 connectAttr "Bony_lElbowJFKG1.rotatePivotTranslate" "Bony_lElbowJFKG1_pointConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lElbowFKC.translate" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetTranslate"
+connectAttr "joint15.translate" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lElbowFKC.rotatePivot" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetRotatePivot"
+connectAttr "joint15.rotatePivot" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lElbowFKC.rotatePivotTranslate" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint15.rotatePivotTranslate" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lElbowFKC.parentMatrix" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetParentMatrix"
+connectAttr "joint15.parentMatrix" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lElbowJFKG1_pointConstraint1.Jolan_lElbowFKCW0" "Bony_lElbowJFKG1_pointConstraint1.target[0].targetWeight"
 		;
@@ -131500,14 +131502,14 @@ connectAttr "Bony_lPalmCG_parentConstraint1.constraintRotateY" "Bony_lPalmCG.rot
 		;
 connectAttr "Bony_lPalmCG_parentConstraint1.constraintRotateZ" "Bony_lPalmCG.rotateZ"
 		;
-connectAttr "Bony_lPalmC_scaleConstraint1.constraintScaleX" "Bony_lPalmC.scaleX"
-		 -lock on;
-connectAttr "Bony_lPalmC_scaleConstraint1.constraintScaleY" "Bony_lPalmC.scaleY"
-		 -lock on;
-connectAttr "Bony_lPalmC_scaleConstraint1.constraintScaleZ" "Bony_lPalmC.scaleZ"
-		 -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lPalmC.drawOverride";
-connectAttr "Bony_lPalmC.parentInverseMatrix" "Bony_lPalmC_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "Bony_lPalmC_scaleConstraint1.constraintScaleX" "joint18.scaleX" -lock
+		 on;
+connectAttr "Bony_lPalmC_scaleConstraint1.constraintScaleY" "joint18.scaleY" -lock
+		 on;
+connectAttr "Bony_lPalmC_scaleConstraint1.constraintScaleZ" "joint18.scaleZ" -lock
+		 on;
+connectAttr "Bony_Arms.drawInfo" "joint18.drawOverride";
+connectAttr "joint18.parentInverseMatrix" "Bony_lPalmC_scaleConstraint1.constraintParentInverseMatrix"
 		;
 connectAttr "Bony_lWristJG1.scale" "Bony_lPalmC_scaleConstraint1.target[0].targetScale"
 		;
@@ -131527,7 +131529,7 @@ connectAttr "Bony_lFinger1J1CG_parentConstraint1.constraintRotateY" "Bony_lFinge
 		 -lock on;
 connectAttr "Bony_lFinger1J1CG_parentConstraint1.constraintRotateZ" "Bony_lFinger1J1CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lFinger1J1C.drawOverride";
+connectAttr "Bony_Arms.drawInfo" "joint12.drawOverride";
 connectAttr "Bony_lFinger1J1CG.rotateOrder" "Bony_lFinger1J1CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lFinger1J1CG.parentInverseMatrix" "Bony_lFinger1J1CG_parentConstraint1.constraintParentInverseMatrix"
@@ -131536,19 +131538,19 @@ connectAttr "Bony_lFinger1J1CG.rotatePivot" "Bony_lFinger1J1CG_parentConstraint1
 		;
 connectAttr "Bony_lFinger1J1CG.rotatePivotTranslate" "Bony_lFinger1J1CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lPalmC.translate" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint18.translate" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lPalmC.rotatePivot" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint18.rotatePivot" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lPalmC.rotatePivotTranslate" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint18.rotatePivotTranslate" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lPalmC.rotate" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint18.rotate" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lPalmC.rotateOrder" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint18.rotateOrder" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lPalmC.scale" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint18.scale" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lPalmC.parentMatrix" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint18.parentMatrix" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger1J1CG_parentConstraint1.Jolan_lPalmCW0" "Bony_lFinger1J1CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -131564,8 +131566,8 @@ connectAttr "Bony_lFinger1J2CG_parentConstraint1.constraintRotateY" "Bony_lFinge
 		 -lock on;
 connectAttr "Bony_lFinger1J2CG_parentConstraint1.constraintRotateZ" "Bony_lFinger1J2CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_lFinger1J1C.scale" "Bony_lFinger1J2C.scale";
-connectAttr "Bony_Arms.drawInfo" "Bony_lFinger1J2C.drawOverride";
+connectAttr "joint12.scale" "joint14.scale";
+connectAttr "Bony_Arms.drawInfo" "joint14.drawOverride";
 connectAttr "Bony_lFinger1J2CG.rotateOrder" "Bony_lFinger1J2CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lFinger1J2CG.parentInverseMatrix" "Bony_lFinger1J2CG_parentConstraint1.constraintParentInverseMatrix"
@@ -131574,19 +131576,19 @@ connectAttr "Bony_lFinger1J2CG.rotatePivot" "Bony_lFinger1J2CG_parentConstraint1
 		;
 connectAttr "Bony_lFinger1J2CG.rotatePivotTranslate" "Bony_lFinger1J2CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lFinger1J1C.translate" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint12.translate" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger1J1C.rotatePivot" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint12.rotatePivot" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger1J1C.rotatePivotTranslate" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint12.rotatePivotTranslate" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger1J1C.rotate" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint12.rotate" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger1J1C.rotateOrder" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint12.rotateOrder" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger1J1C.scale" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint12.scale" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger1J1C.parentMatrix" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint12.parentMatrix" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger1J2CG_parentConstraint1.Jolan_lFinger1J1CW0" "Bony_lFinger1J2CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -131602,8 +131604,8 @@ connectAttr "Bony_lFinger1J3CG_parentConstraint1.constraintRotateY" "Bony_lFinge
 		 -lock on;
 connectAttr "Bony_lFinger1J3CG_parentConstraint1.constraintRotateZ" "Bony_lFinger1J3CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_lFinger1J1C.scale" "Bony_lFinger1J3C.scale";
-connectAttr "Bony_Arms.drawInfo" "Bony_lFinger1J3C.drawOverride";
+connectAttr "joint12.scale" "joint03.scale";
+connectAttr "Bony_Arms.drawInfo" "joint03.drawOverride";
 connectAttr "Bony_lFinger1J3CG.rotateOrder" "Bony_lFinger1J3CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lFinger1J3CG.parentInverseMatrix" "Bony_lFinger1J3CG_parentConstraint1.constraintParentInverseMatrix"
@@ -131612,19 +131614,19 @@ connectAttr "Bony_lFinger1J3CG.rotatePivot" "Bony_lFinger1J3CG_parentConstraint1
 		;
 connectAttr "Bony_lFinger1J3CG.rotatePivotTranslate" "Bony_lFinger1J3CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lFinger1J2C.translate" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint14.translate" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger1J2C.rotatePivot" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint14.rotatePivot" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger1J2C.rotatePivotTranslate" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint14.rotatePivotTranslate" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger1J2C.rotate" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint14.rotate" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger1J2C.rotateOrder" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint14.rotateOrder" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger1J2C.scale" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint14.scale" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger1J2C.parentMatrix" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint14.parentMatrix" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger1J3CG_parentConstraint1.Jolan_lFinger1J2CW0" "Bony_lFinger1J3CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -131640,7 +131642,7 @@ connectAttr "Bony_lFinger2J1CG_parentConstraint1.constraintRotateY" "Bony_lFinge
 		 -lock on;
 connectAttr "Bony_lFinger2J1CG_parentConstraint1.constraintRotateZ" "Bony_lFinger2J1CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lFinger2J1C.drawOverride";
+connectAttr "Bony_Arms.drawInfo" "joint09.drawOverride";
 connectAttr "Bony_lFinger2J1CG.rotateOrder" "Bony_lFinger2J1CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lFinger2J1CG.parentInverseMatrix" "Bony_lFinger2J1CG_parentConstraint1.constraintParentInverseMatrix"
@@ -131649,19 +131651,19 @@ connectAttr "Bony_lFinger2J1CG.rotatePivot" "Bony_lFinger2J1CG_parentConstraint1
 		;
 connectAttr "Bony_lFinger2J1CG.rotatePivotTranslate" "Bony_lFinger2J1CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lPalmC.translate" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint18.translate" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lPalmC.rotatePivot" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint18.rotatePivot" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lPalmC.rotatePivotTranslate" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint18.rotatePivotTranslate" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lPalmC.rotate" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint18.rotate" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lPalmC.rotateOrder" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint18.rotateOrder" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lPalmC.scale" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint18.scale" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lPalmC.parentMatrix" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint18.parentMatrix" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger2J1CG_parentConstraint1.Jolan_lPalmCW0" "Bony_lFinger2J1CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -131677,8 +131679,8 @@ connectAttr "Bony_lFinger2J2CG_parentConstraint1.constraintRotateY" "Bony_lFinge
 		 -lock on;
 connectAttr "Bony_lFinger2J2CG_parentConstraint1.constraintRotateZ" "Bony_lFinger2J2CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_lFinger2J1C.scale" "Bony_lFinger2J2C.scale";
-connectAttr "Bony_Arms.drawInfo" "Bony_lFinger2J2C.drawOverride";
+connectAttr "joint09.scale" "joint06.scale";
+connectAttr "Bony_Arms.drawInfo" "joint06.drawOverride";
 connectAttr "Bony_lFinger2J2CG.rotateOrder" "Bony_lFinger2J2CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lFinger2J2CG.parentInverseMatrix" "Bony_lFinger2J2CG_parentConstraint1.constraintParentInverseMatrix"
@@ -131687,19 +131689,19 @@ connectAttr "Bony_lFinger2J2CG.rotatePivot" "Bony_lFinger2J2CG_parentConstraint1
 		;
 connectAttr "Bony_lFinger2J2CG.rotatePivotTranslate" "Bony_lFinger2J2CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lFinger2J1C.translate" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint09.translate" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger2J1C.rotatePivot" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint09.rotatePivot" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger2J1C.rotatePivotTranslate" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint09.rotatePivotTranslate" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger2J1C.rotate" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint09.rotate" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger2J1C.rotateOrder" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint09.rotateOrder" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger2J1C.scale" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint09.scale" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger2J1C.parentMatrix" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint09.parentMatrix" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger2J2CG_parentConstraint1.Jolan_lFinger2J1CW0" "Bony_lFinger2J2CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -131715,8 +131717,8 @@ connectAttr "Bony_lFinger2J3CG_parentConstraint1.constraintRotateY" "Bony_lFinge
 		 -lock on;
 connectAttr "Bony_lFinger2J3CG_parentConstraint1.constraintRotateZ" "Bony_lFinger2J3CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_lFinger2J1C.scale" "Bony_lFinger2J3C.scale";
-connectAttr "Bony_Arms.drawInfo" "Bony_lFinger2J3C.drawOverride";
+connectAttr "joint09.scale" "joint05.scale";
+connectAttr "Bony_Arms.drawInfo" "joint05.drawOverride";
 connectAttr "Bony_lFinger2J3CG.rotateOrder" "Bony_lFinger2J3CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lFinger2J3CG.parentInverseMatrix" "Bony_lFinger2J3CG_parentConstraint1.constraintParentInverseMatrix"
@@ -131725,19 +131727,19 @@ connectAttr "Bony_lFinger2J3CG.rotatePivot" "Bony_lFinger2J3CG_parentConstraint1
 		;
 connectAttr "Bony_lFinger2J3CG.rotatePivotTranslate" "Bony_lFinger2J3CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lFinger2J2C.translate" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint06.translate" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger2J2C.rotatePivot" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint06.rotatePivot" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger2J2C.rotatePivotTranslate" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint06.rotatePivotTranslate" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger2J2C.rotate" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint06.rotate" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger2J2C.rotateOrder" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint06.rotateOrder" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger2J2C.scale" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint06.scale" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger2J2C.parentMatrix" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint06.parentMatrix" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger2J3CG_parentConstraint1.Jolan_lFinger2J2CW0" "Bony_lFinger2J3CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -132164,19 +132166,19 @@ connectAttr "Bony_lWristFKLctr.rotatePivot" "Bony_lWristFKLctr_parentConstraint1
 		;
 connectAttr "Bony_lWristFKLctr.rotatePivotTranslate" "Bony_lWristFKLctr_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lWristFKC.translate" "Bony_lWristFKLctr_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint04.translate" "Bony_lWristFKLctr_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lWristFKC.rotatePivot" "Bony_lWristFKLctr_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint04.rotatePivot" "Bony_lWristFKLctr_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lWristFKC.rotatePivotTranslate" "Bony_lWristFKLctr_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint04.rotatePivotTranslate" "Bony_lWristFKLctr_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lWristFKC.rotate" "Bony_lWristFKLctr_parentConstraint1.target[0].targetRotate"
+connectAttr "joint04.rotate" "Bony_lWristFKLctr_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lWristFKC.rotateOrder" "Bony_lWristFKLctr_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint04.rotateOrder" "Bony_lWristFKLctr_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lWristFKC.scale" "Bony_lWristFKLctr_parentConstraint1.target[0].targetScale"
+connectAttr "joint04.scale" "Bony_lWristFKLctr_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lWristFKC.parentMatrix" "Bony_lWristFKLctr_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint04.parentMatrix" "Bony_lWristFKLctr_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lWristFKLctr_parentConstraint1.Jolan_lWristFKCW0" "Bony_lWristFKLctr_parentConstraint1.target[0].targetWeight"
 		;
@@ -132819,19 +132821,19 @@ connectAttr "Bony_Main_CNT.parentMatrix" "Bony_rKneeIKCG_parentConstraint1.targe
 		;
 connectAttr "Bony_rKneeIKCG_parentConstraint1.Jolan_MainCW0" "Bony_rKneeIKCG_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_rKneeIKCG_parentConstraint1.target[1].targetTranslate"
+connectAttr "joint10.translate" "Bony_rKneeIKCG_parentConstraint1.target[1].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_rKneeIKCG_parentConstraint1.target[1].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_rKneeIKCG_parentConstraint1.target[1].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_rKneeIKCG_parentConstraint1.target[1].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_rKneeIKCG_parentConstraint1.target[1].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_rKneeIKCG_parentConstraint1.target[1].targetRotate"
+connectAttr "joint10.rotate" "Bony_rKneeIKCG_parentConstraint1.target[1].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_rKneeIKCG_parentConstraint1.target[1].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_rKneeIKCG_parentConstraint1.target[1].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_rKneeIKCG_parentConstraint1.target[1].targetScale"
+connectAttr "joint10.scale" "Bony_rKneeIKCG_parentConstraint1.target[1].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_rKneeIKCG_parentConstraint1.target[1].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_rKneeIKCG_parentConstraint1.target[1].targetParentMatrix"
 		;
 connectAttr "Bony_rKneeIKCG_parentConstraint1.Jolan_MainHipCW1" "Bony_rKneeIKCG_parentConstraint1.target[1].targetWeight"
 		;
@@ -133074,19 +133076,19 @@ connectAttr "Bony_rHipFKCG.rotatePivot" "Bony_rHipFKCG_parentConstraint1.constra
 		;
 connectAttr "Bony_rHipFKCG.rotatePivotTranslate" "Bony_rHipFKCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_rHipFKCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint10.translate" "Bony_rHipFKCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_rHipFKCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_rHipFKCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_rHipFKCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_rHipFKCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_rHipFKCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint10.rotate" "Bony_rHipFKCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_rHipFKCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_rHipFKCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_rHipFKCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint10.scale" "Bony_rHipFKCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_rHipFKCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_rHipFKCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_rHipFKCG_parentConstraint1.Jolan_MainHipCW0" "Bony_rHipFKCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -133098,19 +133100,19 @@ connectAttr "Bony_rHipFKCG.rotatePivot" "Bony_rHipFKCG_parentConstraint2.constra
 		;
 connectAttr "Bony_rHipFKCG.rotatePivotTranslate" "Bony_rHipFKCG_parentConstraint2.constraintRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_rHipFKCG_parentConstraint2.target[0].targetTranslate"
+connectAttr "joint10.translate" "Bony_rHipFKCG_parentConstraint2.target[0].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_rHipFKCG_parentConstraint2.target[0].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_rHipFKCG_parentConstraint2.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_rHipFKCG_parentConstraint2.target[0].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_rHipFKCG_parentConstraint2.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_rHipFKCG_parentConstraint2.target[0].targetRotate"
+connectAttr "joint10.rotate" "Bony_rHipFKCG_parentConstraint2.target[0].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_rHipFKCG_parentConstraint2.target[0].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_rHipFKCG_parentConstraint2.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_rHipFKCG_parentConstraint2.target[0].targetScale"
+connectAttr "joint10.scale" "Bony_rHipFKCG_parentConstraint2.target[0].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_rHipFKCG_parentConstraint2.target[0].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_rHipFKCG_parentConstraint2.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_rHipFKCG_parentConstraint2.Jolan_MainHipCW0" "Bony_rHipFKCG_parentConstraint2.target[0].targetWeight"
 		;
@@ -133418,35 +133420,35 @@ connectAttr "Bony_Main_CNT.parentMatrix" "Bony_rWristIKCG_parentConstraint1.targ
 		;
 connectAttr "Bony_rWristIKCG_parentConstraint1.Jolan_MainCW0" "Bony_rWristIKCG_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_rWristIKCG_parentConstraint1.target[1].targetTranslate"
+connectAttr "joint10.translate" "Bony_rWristIKCG_parentConstraint1.target[1].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_rWristIKCG_parentConstraint1.target[1].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_rWristIKCG_parentConstraint1.target[1].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_rWristIKCG_parentConstraint1.target[1].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_rWristIKCG_parentConstraint1.target[1].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_rWristIKCG_parentConstraint1.target[1].targetRotate"
+connectAttr "joint10.rotate" "Bony_rWristIKCG_parentConstraint1.target[1].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_rWristIKCG_parentConstraint1.target[1].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_rWristIKCG_parentConstraint1.target[1].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_rWristIKCG_parentConstraint1.target[1].targetScale"
+connectAttr "joint10.scale" "Bony_rWristIKCG_parentConstraint1.target[1].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_rWristIKCG_parentConstraint1.target[1].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_rWristIKCG_parentConstraint1.target[1].targetParentMatrix"
 		;
 connectAttr "Bony_rWristIKCG_parentConstraint1.Jolan_MainHipCW1" "Bony_rWristIKCG_parentConstraint1.target[1].targetWeight"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_rWristIKCG_parentConstraint1.target[2].targetTranslate"
+connectAttr "joint16.translate" "Bony_rWristIKCG_parentConstraint1.target[2].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_rWristIKCG_parentConstraint1.target[2].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_rWristIKCG_parentConstraint1.target[2].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_rWristIKCG_parentConstraint1.target[2].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_rWristIKCG_parentConstraint1.target[2].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_rWristIKCG_parentConstraint1.target[2].targetRotate"
+connectAttr "joint16.rotate" "Bony_rWristIKCG_parentConstraint1.target[2].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_rWristIKCG_parentConstraint1.target[2].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_rWristIKCG_parentConstraint1.target[2].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_rWristIKCG_parentConstraint1.target[2].targetScale"
+connectAttr "joint16.scale" "Bony_rWristIKCG_parentConstraint1.target[2].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_rWristIKCG_parentConstraint1.target[2].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_rWristIKCG_parentConstraint1.target[2].targetParentMatrix"
 		;
 connectAttr "Bony_rWristIKCG_parentConstraint1.Jolan_SpineTopIKCW2" "Bony_rWristIKCG_parentConstraint1.target[2].targetWeight"
 		;
@@ -133637,19 +133639,19 @@ connectAttr "Bony_rShoulderFKCG2.rotatePivot" "Bony_rShoulderFKCG2_parentConstra
 		;
 connectAttr "Bony_rShoulderFKCG2.rotatePivotTranslate" "Bony_rShoulderFKCG2_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint16.translate" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetRotate"
+connectAttr "joint16.rotate" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetScale"
+connectAttr "joint16.scale" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_rShoulderFKCG2_parentConstraint1.Jolan_SpineTopIKCW0" "Bony_rShoulderFKCG2_parentConstraint1.target[0].targetWeight"
 		;
@@ -133694,19 +133696,19 @@ connectAttr "Bony_rClavicleCG.rotatePivot" "Bony_rClavicleCG_parentConstraint1.c
 		;
 connectAttr "Bony_rClavicleCG.rotatePivotTranslate" "Bony_rClavicleCG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_rClavicleCG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint16.translate" "Bony_rClavicleCG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_rClavicleCG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_rClavicleCG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_rClavicleCG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_rClavicleCG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_rClavicleCG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint16.rotate" "Bony_rClavicleCG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_rClavicleCG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_rClavicleCG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_rClavicleCG_parentConstraint1.target[0].targetScale"
+connectAttr "joint16.scale" "Bony_rClavicleCG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_rClavicleCG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_rClavicleCG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_rClavicleCG_parentConstraint1.Jolan_SpineTopIKCW0" "Bony_rClavicleCG_parentConstraint1.target[0].targetWeight"
 		;
@@ -136937,19 +136939,19 @@ connectAttr "Bony_lElbowTopCurveLctr.rotatePivot" "Bony_lElbowTopCurveLctr_paren
 		;
 connectAttr "Bony_lElbowTopCurveLctr.rotatePivotTranslate" "Bony_lElbowTopCurveLctr_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lClavicleC.translate" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint08.translate" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lClavicleC.rotatePivot" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint08.rotatePivot" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lClavicleC.rotatePivotTranslate" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint08.rotatePivotTranslate" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lClavicleC.rotate" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetRotate"
+connectAttr "joint08.rotate" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lClavicleC.rotateOrder" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint08.rotateOrder" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lClavicleC.scale" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetScale"
+connectAttr "joint08.scale" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lClavicleC.parentMatrix" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint08.parentMatrix" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lElbowTopCurveLctr_parentConstraint1.Jolan_lClavicleCW0" "Bony_lElbowTopCurveLctr_parentConstraint1.target[0].targetWeight"
 		;
@@ -137951,19 +137953,19 @@ connectAttr "Bony_lKneeTopCurveLctr.rotatePivot" "Bony_lKneeTopCurveLctr_parentC
 		;
 connectAttr "Bony_lKneeTopCurveLctr.rotatePivotTranslate" "Bony_lKneeTopCurveLctr_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint10.translate" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetRotate"
+connectAttr "joint10.rotate" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetScale"
+connectAttr "joint10.scale" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lKneeTopCurveLctr_parentConstraint1.Jolan_MainHipCW0" "Bony_lKneeTopCurveLctr_parentConstraint1.target[0].targetWeight"
 		;
@@ -138458,19 +138460,19 @@ connectAttr "Bony_rKneeTopCurveLctr.rotatePivot" "Bony_rKneeTopCurveLctr_parentC
 		;
 connectAttr "Bony_rKneeTopCurveLctr.rotatePivotTranslate" "Bony_rKneeTopCurveLctr_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint10.translate" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetRotate"
+connectAttr "joint10.rotate" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetScale"
+connectAttr "joint10.scale" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_rKneeTopCurveLctr_parentConstraint1.Jolan_MainHipCW0" "Bony_rKneeTopCurveLctr_parentConstraint1.target[0].targetWeight"
 		;
@@ -140192,19 +140194,19 @@ connectAttr "Bony_lClavicleJ.rotatePivotTranslate" "Bony_lClavicleJ_parentConstr
 		;
 connectAttr "Bony_lClavicleJ.jointOrient" "Bony_lClavicleJ_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lClavicleC.translate" "Bony_lClavicleJ_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint08.translate" "Bony_lClavicleJ_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lClavicleC.rotatePivot" "Bony_lClavicleJ_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint08.rotatePivot" "Bony_lClavicleJ_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lClavicleC.rotatePivotTranslate" "Bony_lClavicleJ_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint08.rotatePivotTranslate" "Bony_lClavicleJ_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lClavicleC.rotate" "Bony_lClavicleJ_parentConstraint1.target[0].targetRotate"
+connectAttr "joint08.rotate" "Bony_lClavicleJ_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lClavicleC.rotateOrder" "Bony_lClavicleJ_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint08.rotateOrder" "Bony_lClavicleJ_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lClavicleC.scale" "Bony_lClavicleJ_parentConstraint1.target[0].targetScale"
+connectAttr "joint08.scale" "Bony_lClavicleJ_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lClavicleC.parentMatrix" "Bony_lClavicleJ_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint08.parentMatrix" "Bony_lClavicleJ_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lClavicleJ_parentConstraint1.Jolan_lClavicleCW0" "Bony_lClavicleJ_parentConstraint1.target[0].targetWeight"
 		;
@@ -140299,19 +140301,19 @@ connectAttr "Bony_Spine04J.rotatePivotTranslate" "Bony_Spine04J_parentConstraint
 		;
 connectAttr "Bony_Spine04J.jointOrient" "Bony_Spine04J_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "Bony_Spine04J_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint16.translate" "Bony_Spine04J_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivot" "Bony_Spine04J_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint16.rotatePivot" "Bony_Spine04J_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_SpineTopIKC.rotatePivotTranslate" "Bony_Spine04J_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint16.rotatePivotTranslate" "Bony_Spine04J_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_SpineTopIKC.rotate" "Bony_Spine04J_parentConstraint1.target[0].targetRotate"
+connectAttr "joint16.rotate" "Bony_Spine04J_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_SpineTopIKC.rotateOrder" "Bony_Spine04J_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint16.rotateOrder" "Bony_Spine04J_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_SpineTopIKC.scale" "Bony_Spine04J_parentConstraint1.target[0].targetScale"
+connectAttr "joint16.scale" "Bony_Spine04J_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_SpineTopIKC.parentMatrix" "Bony_Spine04J_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint16.parentMatrix" "Bony_Spine04J_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_Spine04J_parentConstraint1.Jolan_SpineTopIKCW0" "Bony_Spine04J_parentConstraint1.target[0].targetWeight"
 		;
@@ -140492,19 +140494,19 @@ connectAttr "Bony_ROOTJ.rotatePivotTranslate" "Bony_ROOTJ_parentConstraint1.cons
 		;
 connectAttr "Bony_ROOTJ.jointOrient" "Bony_ROOTJ_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_MainHipC.translate" "Bony_ROOTJ_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint10.translate" "Bony_ROOTJ_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_MainHipC.rotatePivot" "Bony_ROOTJ_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint10.rotatePivot" "Bony_ROOTJ_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_MainHipC.rotatePivotTranslate" "Bony_ROOTJ_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint10.rotatePivotTranslate" "Bony_ROOTJ_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_MainHipC.rotate" "Bony_ROOTJ_parentConstraint1.target[0].targetRotate"
+connectAttr "joint10.rotate" "Bony_ROOTJ_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_MainHipC.rotateOrder" "Bony_ROOTJ_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint10.rotateOrder" "Bony_ROOTJ_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_MainHipC.scale" "Bony_ROOTJ_parentConstraint1.target[0].targetScale"
+connectAttr "joint10.scale" "Bony_ROOTJ_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_MainHipC.parentMatrix" "Bony_ROOTJ_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint10.parentMatrix" "Bony_ROOTJ_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_ROOTJ_parentConstraint1.Jolan_MainHipCW0" "Bony_ROOTJ_parentConstraint1.target[0].targetWeight"
 		;
@@ -141741,7 +141743,7 @@ connectAttr "Bony_lThumbJ1_parentConstraint1.constraintRotateY" "Bony_lThumbJ1.r
 		;
 connectAttr "Bony_lThumbJ1_parentConstraint1.constraintRotateZ" "Bony_lThumbJ1.rotateZ"
 		;
-connectAttr "Bony_lThumbJ1C.scale" "Bony_lThumbJ1.scale";
+connectAttr "joint02.scale" "Bony_lThumbJ1.scale";
 connectAttr "Bony_lWristJ.scale" "Bony_lThumbJ1.inverseScale";
 connectAttr "Bony_lThumbJ1.scale" "Bony_lThumbJ2.inverseScale";
 connectAttr "Bony_lThumbJ2_parentConstraint1.constraintTranslateX" "Bony_lThumbJ2.translateX"
@@ -141756,7 +141758,7 @@ connectAttr "Bony_lThumbJ2_parentConstraint1.constraintRotateY" "Bony_lThumbJ2.r
 		;
 connectAttr "Bony_lThumbJ2_parentConstraint1.constraintRotateZ" "Bony_lThumbJ2.rotateZ"
 		;
-connectAttr "Bony_lThumbJ1C.scale" "Bony_lThumbJ2.scale";
+connectAttr "joint02.scale" "Bony_lThumbJ2.scale";
 connectAttr "Bony_lThumbJ2.scale" "Bony_lThumbJ3.inverseScale";
 connectAttr "Bony_lThumbJ3_parentConstraint1.constraintTranslateX" "Bony_lThumbJ3.translateX"
 		;
@@ -141770,7 +141772,7 @@ connectAttr "Bony_lThumbJ3_parentConstraint1.constraintRotateY" "Bony_lThumbJ3.r
 		;
 connectAttr "Bony_lThumbJ3_parentConstraint1.constraintRotateZ" "Bony_lThumbJ3.rotateZ"
 		;
-connectAttr "Bony_lThumbJ1C.scale" "Bony_lThumbJ3.scale";
+connectAttr "joint02.scale" "Bony_lThumbJ3.scale";
 connectAttr "Bony_lThumbJ3.scale" "Bony_lThumbJTip.inverseScale";
 connectAttr "Bony_lThumbJ3.rotateOrder" "Bony_lThumbJ3_parentConstraint1.constraintRotateOrder"
 		;
@@ -141782,19 +141784,19 @@ connectAttr "Bony_lThumbJ3.rotatePivotTranslate" "Bony_lThumbJ3_parentConstraint
 		;
 connectAttr "Bony_lThumbJ3.jointOrient" "Bony_lThumbJ3_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lThumbJ3C.translate" "Bony_lThumbJ3_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint17.translate" "Bony_lThumbJ3_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lThumbJ3C.rotatePivot" "Bony_lThumbJ3_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint17.rotatePivot" "Bony_lThumbJ3_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lThumbJ3C.rotatePivotTranslate" "Bony_lThumbJ3_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint17.rotatePivotTranslate" "Bony_lThumbJ3_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lThumbJ3C.rotate" "Bony_lThumbJ3_parentConstraint1.target[0].targetRotate"
+connectAttr "joint17.rotate" "Bony_lThumbJ3_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lThumbJ3C.rotateOrder" "Bony_lThumbJ3_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint17.rotateOrder" "Bony_lThumbJ3_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lThumbJ3C.scale" "Bony_lThumbJ3_parentConstraint1.target[0].targetScale"
+connectAttr "joint17.scale" "Bony_lThumbJ3_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lThumbJ3C.parentMatrix" "Bony_lThumbJ3_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint17.parentMatrix" "Bony_lThumbJ3_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lThumbJ3_parentConstraint1.Jolan_lThumbJ3CW0" "Bony_lThumbJ3_parentConstraint1.target[0].targetWeight"
 		;
@@ -141808,19 +141810,19 @@ connectAttr "Bony_lThumbJ2.rotatePivotTranslate" "Bony_lThumbJ2_parentConstraint
 		;
 connectAttr "Bony_lThumbJ2.jointOrient" "Bony_lThumbJ2_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lThumbJ2C.translate" "Bony_lThumbJ2_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint11.translate" "Bony_lThumbJ2_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lThumbJ2C.rotatePivot" "Bony_lThumbJ2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint11.rotatePivot" "Bony_lThumbJ2_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lThumbJ2C.rotatePivotTranslate" "Bony_lThumbJ2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint11.rotatePivotTranslate" "Bony_lThumbJ2_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lThumbJ2C.rotate" "Bony_lThumbJ2_parentConstraint1.target[0].targetRotate"
+connectAttr "joint11.rotate" "Bony_lThumbJ2_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lThumbJ2C.rotateOrder" "Bony_lThumbJ2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint11.rotateOrder" "Bony_lThumbJ2_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lThumbJ2C.scale" "Bony_lThumbJ2_parentConstraint1.target[0].targetScale"
+connectAttr "joint11.scale" "Bony_lThumbJ2_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lThumbJ2C.parentMatrix" "Bony_lThumbJ2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint11.parentMatrix" "Bony_lThumbJ2_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lThumbJ2_parentConstraint1.Jolan_lThumbJ2CW0" "Bony_lThumbJ2_parentConstraint1.target[0].targetWeight"
 		;
@@ -141834,19 +141836,19 @@ connectAttr "Bony_lThumbJ1.rotatePivotTranslate" "Bony_lThumbJ1_parentConstraint
 		;
 connectAttr "Bony_lThumbJ1.jointOrient" "Bony_lThumbJ1_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lThumbJ1C.translate" "Bony_lThumbJ1_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint02.translate" "Bony_lThumbJ1_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lThumbJ1C.rotatePivot" "Bony_lThumbJ1_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint02.rotatePivot" "Bony_lThumbJ1_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lThumbJ1C.rotatePivotTranslate" "Bony_lThumbJ1_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint02.rotatePivotTranslate" "Bony_lThumbJ1_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lThumbJ1C.rotate" "Bony_lThumbJ1_parentConstraint1.target[0].targetRotate"
+connectAttr "joint02.rotate" "Bony_lThumbJ1_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lThumbJ1C.rotateOrder" "Bony_lThumbJ1_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint02.rotateOrder" "Bony_lThumbJ1_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lThumbJ1C.scale" "Bony_lThumbJ1_parentConstraint1.target[0].targetScale"
+connectAttr "joint02.scale" "Bony_lThumbJ1_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lThumbJ1C.parentMatrix" "Bony_lThumbJ1_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint02.parentMatrix" "Bony_lThumbJ1_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lThumbJ1_parentConstraint1.Jolan_lThumbJ1CW0" "Bony_lThumbJ1_parentConstraint1.target[0].targetWeight"
 		;
@@ -141875,7 +141877,7 @@ connectAttr "Bony_lFinger1J1_parentConstraint1.constraintRotateY" "Bony_lFinger1
 		;
 connectAttr "Bony_lFinger1J1_parentConstraint1.constraintRotateZ" "Bony_lFinger1J1.rotateZ"
 		;
-connectAttr "Bony_lFinger1J1C.scale" "Bony_lFinger1J1.scale";
+connectAttr "joint12.scale" "Bony_lFinger1J1.scale";
 connectAttr "Bony_lFinger1J1.scale" "Bony_lFinger1J2.inverseScale";
 connectAttr "Bony_lFinger1J2_parentConstraint1.constraintTranslateX" "Bony_lFinger1J2.translateX"
 		;
@@ -141889,7 +141891,7 @@ connectAttr "Bony_lFinger1J2_parentConstraint1.constraintRotateY" "Bony_lFinger1
 		;
 connectAttr "Bony_lFinger1J2_parentConstraint1.constraintRotateZ" "Bony_lFinger1J2.rotateZ"
 		;
-connectAttr "Bony_lFinger1J1C.scale" "Bony_lFinger1J2.scale";
+connectAttr "joint12.scale" "Bony_lFinger1J2.scale";
 connectAttr "Bony_lFinger1J2.scale" "Bony_lFinger1J3.inverseScale";
 connectAttr "Bony_lFinger1J3_parentConstraint1.constraintTranslateX" "Bony_lFinger1J3.translateX"
 		;
@@ -141903,7 +141905,7 @@ connectAttr "Bony_lFinger1J3_parentConstraint1.constraintRotateY" "Bony_lFinger1
 		;
 connectAttr "Bony_lFinger1J3_parentConstraint1.constraintRotateZ" "Bony_lFinger1J3.rotateZ"
 		;
-connectAttr "Bony_lFinger1J1C.scale" "Bony_lFinger1J3.scale";
+connectAttr "joint12.scale" "Bony_lFinger1J3.scale";
 connectAttr "Bony_lFinger1J3.scale" "Bony_lFinger1JTip.inverseScale";
 connectAttr "Bony_lFinger1J3.rotateOrder" "Bony_lFinger1J3_parentConstraint1.constraintRotateOrder"
 		;
@@ -141915,19 +141917,19 @@ connectAttr "Bony_lFinger1J3.rotatePivotTranslate" "Bony_lFinger1J3_parentConstr
 		;
 connectAttr "Bony_lFinger1J3.jointOrient" "Bony_lFinger1J3_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lFinger1J3C.translate" "Bony_lFinger1J3_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint03.translate" "Bony_lFinger1J3_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger1J3C.rotatePivot" "Bony_lFinger1J3_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint03.rotatePivot" "Bony_lFinger1J3_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger1J3C.rotatePivotTranslate" "Bony_lFinger1J3_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint03.rotatePivotTranslate" "Bony_lFinger1J3_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger1J3C.rotate" "Bony_lFinger1J3_parentConstraint1.target[0].targetRotate"
+connectAttr "joint03.rotate" "Bony_lFinger1J3_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger1J3C.rotateOrder" "Bony_lFinger1J3_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint03.rotateOrder" "Bony_lFinger1J3_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger1J3C.scale" "Bony_lFinger1J3_parentConstraint1.target[0].targetScale"
+connectAttr "joint03.scale" "Bony_lFinger1J3_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger1J3C.parentMatrix" "Bony_lFinger1J3_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint03.parentMatrix" "Bony_lFinger1J3_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger1J3_parentConstraint1.Jolan_lFinger1J3CW0" "Bony_lFinger1J3_parentConstraint1.target[0].targetWeight"
 		;
@@ -141941,19 +141943,19 @@ connectAttr "Bony_lFinger1J2.rotatePivotTranslate" "Bony_lFinger1J2_parentConstr
 		;
 connectAttr "Bony_lFinger1J2.jointOrient" "Bony_lFinger1J2_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lFinger1J2C.translate" "Bony_lFinger1J2_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint14.translate" "Bony_lFinger1J2_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger1J2C.rotatePivot" "Bony_lFinger1J2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint14.rotatePivot" "Bony_lFinger1J2_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger1J2C.rotatePivotTranslate" "Bony_lFinger1J2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint14.rotatePivotTranslate" "Bony_lFinger1J2_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger1J2C.rotate" "Bony_lFinger1J2_parentConstraint1.target[0].targetRotate"
+connectAttr "joint14.rotate" "Bony_lFinger1J2_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger1J2C.rotateOrder" "Bony_lFinger1J2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint14.rotateOrder" "Bony_lFinger1J2_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger1J2C.scale" "Bony_lFinger1J2_parentConstraint1.target[0].targetScale"
+connectAttr "joint14.scale" "Bony_lFinger1J2_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger1J2C.parentMatrix" "Bony_lFinger1J2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint14.parentMatrix" "Bony_lFinger1J2_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger1J2_parentConstraint1.Jolan_lFinger1J2CW0" "Bony_lFinger1J2_parentConstraint1.target[0].targetWeight"
 		;
@@ -141967,19 +141969,19 @@ connectAttr "Bony_lFinger1J1.rotatePivotTranslate" "Bony_lFinger1J1_parentConstr
 		;
 connectAttr "Bony_lFinger1J1.jointOrient" "Bony_lFinger1J1_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lFinger1J1C.translate" "Bony_lFinger1J1_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint12.translate" "Bony_lFinger1J1_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger1J1C.rotatePivot" "Bony_lFinger1J1_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint12.rotatePivot" "Bony_lFinger1J1_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger1J1C.rotatePivotTranslate" "Bony_lFinger1J1_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint12.rotatePivotTranslate" "Bony_lFinger1J1_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger1J1C.rotate" "Bony_lFinger1J1_parentConstraint1.target[0].targetRotate"
+connectAttr "joint12.rotate" "Bony_lFinger1J1_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger1J1C.rotateOrder" "Bony_lFinger1J1_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint12.rotateOrder" "Bony_lFinger1J1_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger1J1C.scale" "Bony_lFinger1J1_parentConstraint1.target[0].targetScale"
+connectAttr "joint12.scale" "Bony_lFinger1J1_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger1J1C.parentMatrix" "Bony_lFinger1J1_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint12.parentMatrix" "Bony_lFinger1J1_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger1J1_parentConstraint1.Jolan_lFinger1J1CW0" "Bony_lFinger1J1_parentConstraint1.target[0].targetWeight"
 		;
@@ -141995,7 +141997,7 @@ connectAttr "Bony_lFinger2J1_parentConstraint1.constraintRotateY" "Bony_lFinger2
 		;
 connectAttr "Bony_lFinger2J1_parentConstraint1.constraintRotateZ" "Bony_lFinger2J1.rotateZ"
 		;
-connectAttr "Bony_lFinger2J1C.scale" "Bony_lFinger2J1.scale";
+connectAttr "joint09.scale" "Bony_lFinger2J1.scale";
 connectAttr "Bony_lFinger2J1.scale" "Bony_lFinger2J2.inverseScale";
 connectAttr "Bony_lFinger2J2_parentConstraint1.constraintTranslateX" "Bony_lFinger2J2.translateX"
 		;
@@ -142009,7 +142011,7 @@ connectAttr "Bony_lFinger2J2_parentConstraint1.constraintRotateY" "Bony_lFinger2
 		;
 connectAttr "Bony_lFinger2J2_parentConstraint1.constraintRotateZ" "Bony_lFinger2J2.rotateZ"
 		;
-connectAttr "Bony_lFinger2J1C.scale" "Bony_lFinger2J2.scale";
+connectAttr "joint09.scale" "Bony_lFinger2J2.scale";
 connectAttr "Bony_lFinger2J2.scale" "Bony_lFinger2J3.inverseScale";
 connectAttr "Bony_lFinger2J3_parentConstraint1.constraintTranslateX" "Bony_lFinger2J3.translateX"
 		;
@@ -142023,7 +142025,7 @@ connectAttr "Bony_lFinger2J3_parentConstraint1.constraintRotateY" "Bony_lFinger2
 		;
 connectAttr "Bony_lFinger2J3_parentConstraint1.constraintRotateZ" "Bony_lFinger2J3.rotateZ"
 		;
-connectAttr "Bony_lFinger2J1C.scale" "Bony_lFinger2J3.scale";
+connectAttr "joint09.scale" "Bony_lFinger2J3.scale";
 connectAttr "Bony_lFinger2J3.scale" "Bony_lFinger2JTip.inverseScale";
 connectAttr "Bony_lFinger2J3.rotateOrder" "Bony_lFinger2J3_parentConstraint1.constraintRotateOrder"
 		;
@@ -142035,19 +142037,19 @@ connectAttr "Bony_lFinger2J3.rotatePivotTranslate" "Bony_lFinger2J3_parentConstr
 		;
 connectAttr "Bony_lFinger2J3.jointOrient" "Bony_lFinger2J3_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lFinger2J3C.translate" "Bony_lFinger2J3_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint05.translate" "Bony_lFinger2J3_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger2J3C.rotatePivot" "Bony_lFinger2J3_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint05.rotatePivot" "Bony_lFinger2J3_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger2J3C.rotatePivotTranslate" "Bony_lFinger2J3_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint05.rotatePivotTranslate" "Bony_lFinger2J3_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger2J3C.rotate" "Bony_lFinger2J3_parentConstraint1.target[0].targetRotate"
+connectAttr "joint05.rotate" "Bony_lFinger2J3_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger2J3C.rotateOrder" "Bony_lFinger2J3_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint05.rotateOrder" "Bony_lFinger2J3_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger2J3C.scale" "Bony_lFinger2J3_parentConstraint1.target[0].targetScale"
+connectAttr "joint05.scale" "Bony_lFinger2J3_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger2J3C.parentMatrix" "Bony_lFinger2J3_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint05.parentMatrix" "Bony_lFinger2J3_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger2J3_parentConstraint1.Jolan_lFinger2J3CW0" "Bony_lFinger2J3_parentConstraint1.target[0].targetWeight"
 		;
@@ -142061,19 +142063,19 @@ connectAttr "Bony_lFinger2J2.rotatePivotTranslate" "Bony_lFinger2J2_parentConstr
 		;
 connectAttr "Bony_lFinger2J2.jointOrient" "Bony_lFinger2J2_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lFinger2J2C.translate" "Bony_lFinger2J2_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint06.translate" "Bony_lFinger2J2_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger2J2C.rotatePivot" "Bony_lFinger2J2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint06.rotatePivot" "Bony_lFinger2J2_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger2J2C.rotatePivotTranslate" "Bony_lFinger2J2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint06.rotatePivotTranslate" "Bony_lFinger2J2_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger2J2C.rotate" "Bony_lFinger2J2_parentConstraint1.target[0].targetRotate"
+connectAttr "joint06.rotate" "Bony_lFinger2J2_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger2J2C.rotateOrder" "Bony_lFinger2J2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint06.rotateOrder" "Bony_lFinger2J2_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger2J2C.scale" "Bony_lFinger2J2_parentConstraint1.target[0].targetScale"
+connectAttr "joint06.scale" "Bony_lFinger2J2_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger2J2C.parentMatrix" "Bony_lFinger2J2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint06.parentMatrix" "Bony_lFinger2J2_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger2J2_parentConstraint1.Jolan_lFinger2J2CW0" "Bony_lFinger2J2_parentConstraint1.target[0].targetWeight"
 		;
@@ -142087,19 +142089,19 @@ connectAttr "Bony_lFinger2J1.rotatePivotTranslate" "Bony_lFinger2J1_parentConstr
 		;
 connectAttr "Bony_lFinger2J1.jointOrient" "Bony_lFinger2J1_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lFinger2J1C.translate" "Bony_lFinger2J1_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint09.translate" "Bony_lFinger2J1_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lFinger2J1C.rotatePivot" "Bony_lFinger2J1_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint09.rotatePivot" "Bony_lFinger2J1_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lFinger2J1C.rotatePivotTranslate" "Bony_lFinger2J1_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint09.rotatePivotTranslate" "Bony_lFinger2J1_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lFinger2J1C.rotate" "Bony_lFinger2J1_parentConstraint1.target[0].targetRotate"
+connectAttr "joint09.rotate" "Bony_lFinger2J1_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lFinger2J1C.rotateOrder" "Bony_lFinger2J1_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint09.rotateOrder" "Bony_lFinger2J1_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lFinger2J1C.scale" "Bony_lFinger2J1_parentConstraint1.target[0].targetScale"
+connectAttr "joint09.scale" "Bony_lFinger2J1_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lFinger2J1C.parentMatrix" "Bony_lFinger2J1_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint09.parentMatrix" "Bony_lFinger2J1_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lFinger2J1_parentConstraint1.Jolan_lFinger2J1CW0" "Bony_lFinger2J1_parentConstraint1.target[0].targetWeight"
 		;
@@ -142113,19 +142115,19 @@ connectAttr "Bony_lPalmJ.rotatePivotTranslate" "Bony_lPalmJ_parentConstraint1.co
 		;
 connectAttr "Bony_lPalmJ.jointOrient" "Bony_lPalmJ_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "Bony_lPalmC.translate" "Bony_lPalmJ_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint18.translate" "Bony_lPalmJ_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lPalmC.rotatePivot" "Bony_lPalmJ_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint18.rotatePivot" "Bony_lPalmJ_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lPalmC.rotatePivotTranslate" "Bony_lPalmJ_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint18.rotatePivotTranslate" "Bony_lPalmJ_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lPalmC.rotate" "Bony_lPalmJ_parentConstraint1.target[0].targetRotate"
+connectAttr "joint18.rotate" "Bony_lPalmJ_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lPalmC.rotateOrder" "Bony_lPalmJ_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint18.rotateOrder" "Bony_lPalmJ_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lPalmC.scale" "Bony_lPalmJ_parentConstraint1.target[0].targetScale"
+connectAttr "joint18.scale" "Bony_lPalmJ_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lPalmC.parentMatrix" "Bony_lPalmJ_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint18.parentMatrix" "Bony_lPalmJ_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lPalmJ_parentConstraint1.Jolan_lPalmCW0" "Bony_lPalmJ_parentConstraint1.target[0].targetWeight"
 		;
@@ -142141,7 +142143,7 @@ connectAttr "Bony_lThumbJ1CG_parentConstraint1.constraintRotateY" "Bony_lThumbJ1
 		 -lock on;
 connectAttr "Bony_lThumbJ1CG_parentConstraint1.constraintRotateZ" "Bony_lThumbJ1CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_Arms.drawInfo" "Bony_lThumbJ1C.drawOverride";
+connectAttr "Bony_Arms.drawInfo" "joint02.drawOverride";
 connectAttr "Bony_lThumbJ1CG.rotateOrder" "Bony_lThumbJ1CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lThumbJ1CG.parentInverseMatrix" "Bony_lThumbJ1CG_parentConstraint1.constraintParentInverseMatrix"
@@ -142180,8 +142182,8 @@ connectAttr "Bony_lThumbJ2CG_parentConstraint1.constraintRotateY" "Bony_lThumbJ2
 		 -lock on;
 connectAttr "Bony_lThumbJ2CG_parentConstraint1.constraintRotateZ" "Bony_lThumbJ2CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_lThumbJ1C.scale" "Bony_lThumbJ2C.scale";
-connectAttr "Bony_Arms.drawInfo" "Bony_lThumbJ2C.drawOverride";
+connectAttr "joint02.scale" "joint11.scale";
+connectAttr "Bony_Arms.drawInfo" "joint11.drawOverride";
 connectAttr "Bony_lThumbJ2CG.rotateOrder" "Bony_lThumbJ2CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lThumbJ2CG.parentInverseMatrix" "Bony_lThumbJ2CG_parentConstraint1.constraintParentInverseMatrix"
@@ -142190,19 +142192,19 @@ connectAttr "Bony_lThumbJ2CG.rotatePivot" "Bony_lThumbJ2CG_parentConstraint1.con
 		;
 connectAttr "Bony_lThumbJ2CG.rotatePivotTranslate" "Bony_lThumbJ2CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lThumbJ1C.translate" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint02.translate" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lThumbJ1C.rotatePivot" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint02.rotatePivot" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lThumbJ1C.rotatePivotTranslate" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint02.rotatePivotTranslate" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lThumbJ1C.rotate" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint02.rotate" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lThumbJ1C.rotateOrder" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint02.rotateOrder" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lThumbJ1C.scale" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint02.scale" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lThumbJ1C.parentMatrix" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint02.parentMatrix" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lThumbJ2CG_parentConstraint1.Jolan_lThumbJ1CW0" "Bony_lThumbJ2CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -142218,8 +142220,8 @@ connectAttr "Bony_lThumbJ3CG_parentConstraint1.constraintRotateY" "Bony_lThumbJ3
 		 -lock on;
 connectAttr "Bony_lThumbJ3CG_parentConstraint1.constraintRotateZ" "Bony_lThumbJ3CG.rotateZ"
 		 -lock on;
-connectAttr "Bony_lThumbJ1C.scale" "Bony_lThumbJ3C.scale";
-connectAttr "Bony_Arms.drawInfo" "Bony_lThumbJ3C.drawOverride";
+connectAttr "joint02.scale" "joint17.scale";
+connectAttr "Bony_Arms.drawInfo" "joint17.drawOverride";
 connectAttr "Bony_lThumbJ3CG.rotateOrder" "Bony_lThumbJ3CG_parentConstraint1.constraintRotateOrder"
 		;
 connectAttr "Bony_lThumbJ3CG.parentInverseMatrix" "Bony_lThumbJ3CG_parentConstraint1.constraintParentInverseMatrix"
@@ -142228,19 +142230,19 @@ connectAttr "Bony_lThumbJ3CG.rotatePivot" "Bony_lThumbJ3CG_parentConstraint1.con
 		;
 connectAttr "Bony_lThumbJ3CG.rotatePivotTranslate" "Bony_lThumbJ3CG_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "Bony_lThumbJ2C.translate" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetTranslate"
+connectAttr "joint11.translate" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "Bony_lThumbJ2C.rotatePivot" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "joint11.rotatePivot" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "Bony_lThumbJ2C.rotatePivotTranslate" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "joint11.rotatePivotTranslate" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "Bony_lThumbJ2C.rotate" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetRotate"
+connectAttr "joint11.rotate" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "Bony_lThumbJ2C.rotateOrder" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "joint11.rotateOrder" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "Bony_lThumbJ2C.scale" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetScale"
+connectAttr "joint11.scale" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "Bony_lThumbJ2C.parentMatrix" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "joint11.parentMatrix" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "Bony_lThumbJ3CG_parentConstraint1.Jolan_lThumbJ2CW0" "Bony_lThumbJ3CG_parentConstraint1.target[0].targetWeight"
 		;
@@ -143802,9 +143804,9 @@ connectAttr "Bony_rHipFKC.HipOrient" "Jolan_rHipFKCG_parentConstraint2_Jolan_Mai
 		;
 connectAttr "Bony_rHipFKC.HipOrient" "Jolan_rHipFKCG_parentConstraint2_Jolan_MainCW1.input"
 		;
-connectAttr "Bony_lShoulderFKC.ShoulderOrient" "Jolan_lShoulderFKCG2_parentConstraint1_Jolan_SpineTopIKCW0.input"
+connectAttr "joint01.ShoulderOrient" "Jolan_lShoulderFKCG2_parentConstraint1_Jolan_SpineTopIKCW0.input"
 		;
-connectAttr "Bony_lShoulderFKC.ShoulderOrient" "Jolan_lShoulderFKCG2_parentConstraint1_Jolan_MainCW1.input"
+connectAttr "joint01.ShoulderOrient" "Jolan_lShoulderFKCG2_parentConstraint1_Jolan_MainCW1.input"
 		;
 connectAttr "Bony_lWristIKC.Hips" "Jolan_lWristIKParent_PMA.input1D[0]";
 connectAttr "Bony_lWristIKC.Chest" "Jolan_lWristIKParent_PMA.input1D[1]";
@@ -143864,32 +143866,29 @@ connectAttr "Jolan_rLegLength_Blnd.outputR" "Jolan_rKneeLock_Blnd.color2R";
 connectAttr "Bony_rFootIKC.KneeLock" "Jolan_rKneeLock_Blnd.blender";
 connectAttr "Bony_lShoulderJFK.scale" "Jolan_lShoulderJIKFK_BlndScale.color1";
 connectAttr "Bony_lShoulderJIK.scale" "Jolan_lShoulderJIKFK_BlndScale.color2";
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "Jolan_lShoulderJIKFK_BlndScale.blender"
-		;
+connectAttr "joint13.SwitchIkFk" "Jolan_lShoulderJIKFK_BlndScale.blender";
 connectAttr "Jolan_lShoulderJIKFK_BlndScale.outputR" "Jolan_lShoulderVolume_MD.input2X"
 		;
 connectAttr "unitConversion1.output" "Jolan_lShoulderJIKFK_BlndRotate.color1";
 connectAttr "unitConversion2.output" "Jolan_lShoulderJIKFK_BlndRotate.color2";
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "Jolan_lShoulderJIKFK_BlndRotate.blender"
-		;
+connectAttr "joint13.SwitchIkFk" "Jolan_lShoulderJIKFK_BlndRotate.blender";
 connectAttr "Bony_lShoulderJFK.rotate" "unitConversion1.input";
 connectAttr "Bony_lShoulderJIK.rotate" "unitConversion2.input";
 connectAttr "Jolan_lShoulderJIKFK_BlndRotate.output" "unitConversion3.input";
 connectAttr "Bony_lElbowJFK.scale" "Jolan_lElbowJIKFK_BlndScale.color1";
 connectAttr "Bony_lElbowJIK.scale" "Jolan_lElbowJIKFK_BlndScale.color2";
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "Jolan_lElbowJIKFK_BlndScale.blender";
+connectAttr "joint13.SwitchIkFk" "Jolan_lElbowJIKFK_BlndScale.blender";
 connectAttr "Jolan_lElbowJIKFK_BlndScale.outputR" "Jolan_lElbowVolume_MD.input2X"
 		;
 connectAttr "unitConversion4.output" "Jolan_lElbowJIKFK_BlndRotate.color1";
 connectAttr "unitConversion5.output" "Jolan_lElbowJIKFK_BlndRotate.color2";
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "Jolan_lElbowJIKFK_BlndRotate.blender"
-		;
+connectAttr "joint13.SwitchIkFk" "Jolan_lElbowJIKFK_BlndRotate.blender";
 connectAttr "Bony_lElbowJFK.rotate" "unitConversion4.input";
 connectAttr "Bony_lElbowJIK.rotate" "unitConversion5.input";
 connectAttr "Jolan_lElbowJIKFK_BlndRotate.output" "unitConversion6.input";
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "Jolan_lWristJG1_orientConstraint1_Jolan_lWristJFKW0.input"
+connectAttr "joint13.SwitchIkFk" "Jolan_lWristJG1_orientConstraint1_Jolan_lWristJFKW0.input"
 		;
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "Jolan_lWristJG1_orientConstraint1_Jolan_lWristJIKDummyW1.input"
+connectAttr "joint13.SwitchIkFk" "Jolan_lWristJG1_orientConstraint1_Jolan_lWristJIKDummyW1.input"
 		;
 connectAttr "Bony_lHipJFK.scale" "Jolan_lHipJIKFK_BlndScale.color1";
 connectAttr "Bony_lHipJIK.scale" "Jolan_lHipJIKFK_BlndScale.color2";
@@ -144022,9 +144021,9 @@ connectAttr "Bony_rKneeIKC.Follow" "Jolan_rKneeIKCG_parentConstraint1_Jolan_Main
 		;
 connectAttr "Bony_rKneeIKC.Follow" "Jolan_rKneeIKCG_parentConstraint1_Jolan_rBallSwivelW2.input"
 		;
-connectAttr "Bony_lWristFKC.scaleX" "JolanlHandIKFK_BlndScale.color1R";
+connectAttr "joint04.scaleX" "JolanlHandIKFK_BlndScale.color1R";
 connectAttr "Bony_lWristIKC.scaleX" "JolanlHandIKFK_BlndScale.color2R";
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "JolanlHandIKFK_BlndScale.blender";
+connectAttr "joint13.SwitchIkFk" "JolanlHandIKFK_BlndScale.blender";
 connectAttr "Bony_rWristFKC.scaleX" "Jolan_rHandIKFK_BlndScale.color1R";
 connectAttr "Bony_rWristIKC.scaleX" "Jolan_rHandIKFK_BlndScale.color2R";
 connectAttr "Bony_rArmSwitchC.SwitchIkFk" "Jolan_rHandIKFK_BlndScale.blender";
@@ -144032,20 +144031,20 @@ connectAttr "Bony_SpineMidIKC.translateX" "Jolan_ribbonBlend_lClusterG_scaleY.in
 		;
 connectAttr "Bony_SpineMidIKC.translateX" "Jolan_ribbonBlend_rClusterG_scaleY.input"
 		;
-connectAttr "Bony_SpineTopIKC.translate" "JolanSpineMid_Blnd.color1";
-connectAttr "Bony_MainHipC.translate" "JolanSpineMid_Blnd.color2";
+connectAttr "joint16.translate" "JolanSpineMid_Blnd.color1";
+connectAttr "joint10.translate" "JolanSpineMid_Blnd.color2";
 connectAttr "unitConversion37.output" "JolanspineMidIKCG_Blnd.color1";
 connectAttr "unitConversion38.output" "JolanspineMidIKCG_Blnd.color2";
-connectAttr "Bony_SpineTopIKC.rotate" "unitConversion37.input";
-connectAttr "Bony_MainHipC.rotate" "unitConversion38.input";
+connectAttr "joint16.rotate" "unitConversion37.input";
+connectAttr "joint10.rotate" "unitConversion38.input";
 connectAttr "JolanspineMidIKCG_Blnd.outputG" "unitConversion39.input";
 connectAttr "JolanspineLengthInfo.arcLength" "JolanspineLength_MD.input1X";
 connectAttr "Bony_HeadC.HeadOrient" "Jolan_HeadCG_orientConstraint1_Jolan_MainCW0.input"
 		;
 connectAttr "Bony_HeadC.HeadOrient" "Jolan_HeadCG_orientConstraint1_Jolan_Neck01CW1.input"
 		;
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "JolanlArmIKViz.firstTerm";
-connectAttr "Bony_lArmSwitchC.SwitchIkFk" "JolanlArmFKViz.firstTerm";
+connectAttr "joint13.SwitchIkFk" "JolanlArmIKViz.firstTerm";
+connectAttr "joint13.SwitchIkFk" "JolanlArmFKViz.firstTerm";
 connectAttr "Bony_lLegSwitchC.SwitchIkFk" "JolanlLegIKViz.firstTerm";
 connectAttr "Bony_lLegSwitchC.SwitchIkFk" "JolanlLegFKViz.firstTerm";
 connectAttr "Bony_rArmSwitchC.SwitchIkFk" "JolanrArmIKViz.firstTerm";
@@ -144359,9 +144358,9 @@ connectAttr "Bony_lUpperArmCurve3CG.transMinusRotatePivotZ" "addDoubleLinear27.i
 		;
 connectAttr "Jolan_lUpperArm3_MP.zCoordinate" "addDoubleLinear27.input2";
 connectAttr "Jolan_lElbowTwist_MD.outputZ" "unitConversion53.input";
-connectAttr "Bony_lArmSwitchC.curve" "Jolan_lArmCurve_MD1.input1X";
+connectAttr "joint13.curve" "Jolan_lArmCurve_MD1.input1X";
 connectAttr "Jolan_lArmCurve_MD1.outputX" "Jolan_lArmCurve_MD2.input1X";
-connectAttr "Bony_lShoulderFKC.scaleX" "Jolan_lArmCurve_MD2.input2X";
+connectAttr "joint01.scaleX" "Jolan_lArmCurve_MD2.input2X";
 connectAttr "Bony_lShoulderJ.scale" "Jolan_lUpperArmCurve1_Blend.color1";
 connectAttr "Bony_lElbowJ.scale" "Jolan_lUpperArmCurve1_Blend.color2";
 connectAttr "Bony_lShoulderJ.scale" "Jolan_lUpperArmCurve2_Blend.color1";
@@ -147192,13 +147191,13 @@ connectAttr "layerManager.displayLayerId[1]" "Bony_Pelvis.identification";
 connectAttr "layerManager.displayLayerId[2]" "Bony_Legs.identification";
 connectAttr "layerManager.displayLayerId[3]" "Bony_Body.identification";
 connectAttr "layerManager.displayLayerId[4]" "Bony_Arms.identification";
-connectAttr "Bony_ROOTC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint07.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_MainHipC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint10.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
 connectAttr "Bony_Spine01FKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_SpineTopIKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint16.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
 connectAttr "Bony_Spine02FKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
@@ -147214,29 +147213,29 @@ connectAttr "Bony_lFootIKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAva
 		;
 connectAttr "Bony_lKneeIKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lArmSwitchC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint13.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lWristFKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint04.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lElbowFKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint15.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lShoulderFKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint01.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lClavicleC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint08.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lPalmC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint18.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lFinger1J1C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint12.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lFinger1J2C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint14.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lFinger1J3C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint03.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lFinger2J1C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint09.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lFinger2J2C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint06.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lFinger2J3C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint05.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
 connectAttr "Bony_lToeIKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
@@ -147272,11 +147271,11 @@ connectAttr "Bony_rFinger2J3C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -next
 		;
 connectAttr "Bony_rToeIKC.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lThumbJ1C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint02.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lThumbJ2C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint11.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
-connectAttr "Bony_lThumbJ3C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
+connectAttr "joint17.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
 connectAttr "Bony_rThumbJ1C.instObjGroups" "Bony_All_CNTs.dagSetMembers" -nextAvailable
 		;
