@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cabin3
       objectReference: {fileID: 0}
+    - target: {fileID: 5926714233439917278, guid: 7e1b914d5a76de44581ee57ae2dbd948, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e344cd2661b760d44813ff76c66523f5, type: 2}
     - target: {fileID: 6402982380696419100, guid: 7e1b914d5a76de44581ee57ae2dbd948, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
