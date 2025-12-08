@@ -60,6 +60,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikes
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d10b90dc5b2254c8db7f404f5a1018, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034168863690391736, guid: a0d10b90dc5b2254c8db7f404f5a1018, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535775860052851933, guid: a0d10b90dc5b2254c8db7f404f5a1018, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89,7 +101,7 @@ BoxCollider:
     m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8127
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -155,6 +167,6 @@ MonoBehaviour:
   enterHoldTime: 0.01
   repeatHoldTime: 0.01
   exitHoldTime: 0.01
-  canRepeat: 0
+  canRepeat: 1
   canRepeatWithLimits: 0
   repeatLimit: 10
