@@ -100,6 +100,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1664282811209993080}
+  - component: {fileID: 7950812860637607628}
+  - component: {fileID: 6212266759783689497}
   m_Layer: 7
   m_Name: TowerHolder
   m_TagString: Untagged
@@ -123,6 +125,88 @@ Transform:
   - {fileID: 864529246890547401}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7950812860637607628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495615862488941033}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 2039
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.83, y: 31.71, z: 8.83}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6212266759783689497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495615862488941033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHoldTime: 0.1
+  awakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c6be69c20c0657247beb75909a48ea23, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -0.1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: f9e87da6785eaa14fa5d583cccdaf4ce, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -0.1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerEnterRepeatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enterHoldTime: 0.01
+  repeatHoldTime: 0.01
+  exitHoldTime: 0.01
+  canRepeat: 0
+  canRepeatWithLimits: 0
+  repeatLimit: 10
 --- !u!1001 &4682723674638422899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,23 +225,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: 22e694f08c9b97d41b15252696df6e9a, type: 2}
+      objectReference: {fileID: 11400000, guid: c6be69c20c0657247beb75909a48ea23, type: 2}
     - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Raise
+      value: SetValue
       objectReference: {fileID: 0}
     - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
       propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -169,7 +253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameAction, Assembly-CSharp
+      value: FloatData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
+      propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2648934519766942986, guid: 08745a783b210af498367e64a2ccbfb8, type: 3}
       propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
