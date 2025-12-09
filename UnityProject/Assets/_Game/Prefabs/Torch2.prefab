@@ -173,6 +173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch2
       objectReference: {fileID: 0}
+    - target: {fileID: 1797449994764206577, guid: 75986d02c091d974380fc4f8cdc13580, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 01e85343b73eeb64ab2cb213caa9b7b3, type: 2}
     - target: {fileID: 1879906531568048210, guid: 75986d02c091d974380fc4f8cdc13580, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
