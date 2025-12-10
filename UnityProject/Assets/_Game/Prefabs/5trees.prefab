@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 55dced1cc41849f439c44616a7271682, type: 2}
+    - target: {fileID: -6321702749422309395, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5864756627866029592, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -4883290419781542823, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -64,14 +72,34 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 55dced1cc41849f439c44616a7271682, type: 2}
+    - target: {fileID: -2702872038001338035, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1965416158525613710, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
       propertyPath: m_Name
       value: 5trees
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4634650792205844939, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 55dced1cc41849f439c44616a7271682, type: 2}
+    - target: {fileID: 6778066213521736608, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414362072115957658, guid: c15d252e72133274c871c3f6e0e4f635, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

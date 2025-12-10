@@ -52,9 +52,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.188
       objectReference: {fileID: 0}
+    - target: {fileID: -1559887626983823225, guid: e7a40b60c50208841b1ce68d91b76196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -674449036139524865, guid: e7a40b60c50208841b1ce68d91b76196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e7a40b60c50208841b1ce68d91b76196, type: 3}
       propertyPath: m_Name
       value: TowerDefenseGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e7a40b60c50208841b1ce68d91b76196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 936942304509861943, guid: e7a40b60c50208841b1ce68d91b76196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2887417231957549289, guid: e7a40b60c50208841b1ce68d91b76196, type: 3}
       propertyPath: m_LocalPosition.y

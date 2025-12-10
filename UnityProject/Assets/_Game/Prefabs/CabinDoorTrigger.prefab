@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3567279737179016419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1112795949216952971}
+  - component: {fileID: 4841032899794013969}
+  - component: {fileID: 4749860097210047360}
+  m_Layer: 0
+  m_Name: CabinDoorTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1112795949216952971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567279737179016419}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -55.744, y: 22.784, z: 110.415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5724077403114637855}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4841032899794013969
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567279737179016419}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.821148, y: 2.36, z: 4.7477007}
+  m_Center: {x: 1.1877193, y: 1.6, z: 1.8238502}
+--- !u!114 &4749860097210047360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567279737179016419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHoldTime: 0.1
+  awakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4402847406626366578}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CabinDoorOpen
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerEnterRepeatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4402847406626366578}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CabinDoorClosed
+          m_BoolArgument: 0
+        m_CallState: 2
+  enterHoldTime: 0.01
+  repeatHoldTime: 0.01
+  exitHoldTime: 0.01
+  canRepeat: 0
+  canRepeatWithLimits: 0
+  repeatLimit: 10
+--- !u!1001 &6208371371621345473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1112795949216952971}
+    m_Modifications:
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9998009
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0027894625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.019481683
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0032950684
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.327
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 2.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.371
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697678995753559010, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395723628370513216, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_Center.x
+      value: -1741
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204479134665492190, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+      propertyPath: m_Name
+      value: CabinDoorHinge
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+--- !u!95 &4402847406626366578 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7724410849355828403, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+  m_PrefabInstance: {fileID: 6208371371621345473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5724077403114637855 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1826371055519589086, guid: c8ca2744eeda1404dbecc318773a9d08, type: 3}
+  m_PrefabInstance: {fileID: 6208371371621345473}
+  m_PrefabAsset: {fileID: 0}
