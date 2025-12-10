@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: NoraTurntable3.ma
-//Last modified: Wed, Dec 10, 2025 02:17:40 AM
+//Last modified: Wed, Dec 10, 2025 02:46:48 AM
 //Codeset: 1252
 file -rdi 1 -ns "NoraV9" -rfn "NoraV9RN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Characters/NoraV9.ma";
 file -r -ns "NoraV9" -dr 1 -rfn "NoraV9RN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Characters/NoraV9.ma";
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "38FC4C30-4946-AF01-34AF-76B61D0CF92A";
+fileInfo "UUID" "6AD57E81-4A5B-9B0D-A253-8DA90E5A679E";
 createNode transform -shared -name "persp";
 	rename -uuid "669648EF-4436-81A8-1325-2D906BD02276";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -67.597510337087044 159.09842604048143 356.48586394650175 ;
-	setAttr ".rotate" -type "double3" -12.338352729597595 351.80000000000905 -7.0293296084915455e-16 ;
+	setAttr ".translate" -type "double3" -284.00834300799534 178.40584947970603 208.98025164457871 ;
+	setAttr ".rotate" -type "double3" -8.7383527296233154 308.60000000009347 6.372533054119442e-16 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "3C2F7101-4502-C40D-8208-9B96E8D47E2B";
 	setAttr -keyable off ".visibility" no;
