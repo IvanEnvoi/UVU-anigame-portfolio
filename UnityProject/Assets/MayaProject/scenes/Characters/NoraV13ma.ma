@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: NoraV11.ma
-//Last modified: Mon, Dec 22, 2025 08:08:46 PM
+//Name: NoraV13ma.ma
+//Last modified: Mon, Dec 22, 2025 08:20:36 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "39D6648C-45BA-A8FE-E949-DEAFBE1855AB";
+fileInfo "UUID" "773D8A47-437D-68C0-EB63-2A8D3ABBF08E";
 createNode transform -shared -name "persp";
 	rename -uuid "AF1F716D-4124-DDB9-2D48-43A2FBF4522B";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 469.81768162758499 146.0538878997173 510.97398009324581 ;
-	setAttr ".rotate" -type "double3" -5.4000000000596504 -2841.1999999999998 -5.1013726146126764e-16 ;
+	setAttr ".translate" -type "double3" 19.272081258750489 115.45417776211823 580.91797607402555 ;
+	setAttr ".rotate" -type "double3" -3.5999999999999415 -3600.3999999999928 4.659129186366814e-18 ;
 	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 -1.9984014443252818e-13 
 		0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" 2.0393040498861664e-13 -1.6719020508373782e-13 
@@ -28,7 +28,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".panZoomEnabled" yes;
 	setAttr ".focalLength" 88.829839589066381;
-	setAttr ".centerOfInterest" 721.8747456938396;
+	setAttr ".centerOfInterest" 620.44197257275687;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -57,14 +57,14 @@ createNode camera -shared -name "topShape" -parent "top";
 createNode transform -shared -name "front";
 	rename -uuid "E49D014E-4C16-6E6C-C1E3-F2A8BD9B75F9";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 22.819081933309725 6.8931859590694016 1006.8387345897281 ;
+	setAttr ".translate" -type "double3" 28.011366168375908 58.430890578495124 1006.8387345897281 ;
 	setAttr ".rotatePivotTranslate" -type "double3" 3.0824746570441122e-14 0 3.9561243159192618e-14 ;
 createNode camera -shared -name "frontShape" -parent "front";
 	rename -uuid "1C8F2A09-442B-586B-B53D-9B8C3E7AF69D";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".centerOfInterest" 1006.7897507375458;
-	setAttr ".orthographicWidth" 56.63511719739224;
+	setAttr ".orthographicWidth" 301.84543099095686;
 	setAttr ".imageName" -type "string" "front";
 	setAttr ".depthName" -type "string" "front_depth";
 	setAttr ".maskName" -type "string" "front_mask";
@@ -1032,9 +1032,7 @@ createNode mesh -name "EyeThoLShape" -parent "EyeThoL";
 	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "NoraOutline" -parent "NoraBest";
-	rename -uuid "22978500-4C90-E581-D297-5A93AE21C8EE";
-createNode transform -name "OutlineHair2" -parent "NoraOutline";
+createNode transform -name "OutlineHair2" -parent "NoraBest";
 	rename -uuid "6D30BCF4-4376-3E02-67B8-4CB45219E95F";
 createNode mesh -name "OutlineHair2Shape" -parent "OutlineHair2";
 	rename -uuid "A6A4FC93-4E96-DD5C-2A2E-E4911C6B679F";
@@ -5886,9 +5884,7 @@ createNode mesh -name "OutlineHair2Shape" -parent "OutlineHair2";
 	setAttr ".aiVisibleInDiffuseTransmission" no;
 	setAttr ".aiVisibleInSpecularTransmission" no;
 	setAttr ".aiVisibleInVolume" no;
-createNode transform -name "OutlineBody2" -parent "NoraOutline";
-	rename -uuid "52CECA63-4946-C72E-4C81-46B1937CD32C";
-createNode transform -name "OutlineTail" -parent "OutlineBody2";
+createNode transform -name "OutlineTail" -parent "NoraBest";
 	rename -uuid "8C5BBFD1-4698-B198-188D-01978D74E976";
 createNode mesh -name "OutlineTailShape" -parent "OutlineTail";
 	rename -uuid "E0A4DFA8-497E-78E4-A8E3-6D82E70A2B51";
@@ -7151,7 +7147,7 @@ createNode mesh -name "OutlineTailShape" -parent "OutlineTail";
 	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "OutlineBody" -parent "OutlineBody2";
+createNode transform -name "OutlineBody" -parent "NoraBest";
 	rename -uuid "C6FD215F-4411-2171-89C1-388A4D03EBA5";
 createNode mesh -name "OutlineBodyShape" -parent "OutlineBody";
 	rename -uuid "AD5EB2AB-4B4C-C474-FDA7-69BCA12A54B2";
@@ -23432,9 +23428,7 @@ createNode mesh -name "NoraHairShape" -parent "NoraHair";
 	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "NoraBody" -parent "NoraTho";
-	rename -uuid "29586FDD-4B10-A40C-0C36-8595E22FC075";
-createNode transform -name "NoraTail" -parent "|geo|NoraBest|NoraTho|NoraBody";
+createNode transform -name "NoraTail" -parent "NoraTho";
 	rename -uuid "80E5E144-4588-CAA1-6C43-C7AA225B8B02";
 createNode mesh -name "NoraTailShape" -parent "NoraTail";
 	rename -uuid "305104B8-4F50-62BE-5C5F-258437A903B2";
@@ -24697,15 +24691,17 @@ createNode mesh -name "NoraTailShape" -parent "NoraTail";
 	setAttr ".creaseVertexData" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -name "NoraBody" -parent "|geo|NoraBest|NoraTho|NoraBody";
+createNode transform -name "NoraBody" -parent "NoraTho";
 	rename -uuid "807BD3F1-4013-0DF7-AF5A-BDB589C34807";
-createNode mesh -name "NoraBodyShape" -parent "|geo|NoraBest|NoraTho|NoraBody|NoraBody";
+createNode mesh -name "NoraBodyShape" -parent "NoraBody";
 	rename -uuid "C82CA83B-47C2-3F6F-65CA-DEBB8C0D43FD";
 	setAttr -keyable off ".visibility";
+	setAttr -size 2 ".instObjGroups[0].objectGroups";
 	setAttr ".instObjGroups[0].objectGroups[1].objectGrpCompList" -type "componentList" 
 		1 "f[0:4085]";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
+	setAttr ".uvPivot" -type "double2" 0.52008873224258423 0.50184211134910583 ;
 	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
 	setAttr -size 5280 ".uvSet[0].uvSetPoints";
 	setAttr ".uvSet[0].uvSetPoints[0:249]" -type "float2" 0.84658521 0.75690824
@@ -36775,7 +36771,7 @@ createNode script -name "chibi_nora_9_remaking_dress_top:uiConfigurationScriptNo
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
 		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 788\n            -height 569\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
-		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
+		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 789\n            -height 569\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
 		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
@@ -36897,7 +36893,7 @@ createNode materialInfo -name "materialInfo6";
 createNode bump2d -name "bump2d1";
 	rename -uuid "38525FE3-41D1-EEEA-F22F-129EAE7A6FCC";
 	setAttr ".bumpInterp" 1;
-	setAttr ".vertexCameraOne" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vertexCameraOne" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vertexCameraTwo" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode multiplyDivide -name "multiplyDivide1";
 	rename -uuid "0B74F9E4-4E53-3258-BC19-98AD76AA41C7";
@@ -36939,7 +36935,7 @@ createNode aiStandardSurface -name "NorasBody";
 createNode bump2d -name "bump2d2";
 	rename -uuid "7A5716A3-49A8-8B8A-86AE-A7BE6E302B0B";
 	setAttr ".bumpInterp" 1;
-	setAttr ".vertexCameraOne" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vertexCameraOne" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vertexCameraTwo" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode aiStandardSurface -name "Outline";
 	rename -uuid "75C74DEF-4D7C-72E7-4701-04AE95A03BF5";
@@ -37159,7 +37155,6 @@ connectAttr "file20.outColor" "aiSkyDomeLightShape1.color";
 connectAttr "eyes.drawInfo" "EyeThoR.drawOverride";
 connectAttr "eyes.drawInfo" "EyeThoL.drawOverride";
 connectAttr "body.drawInfo" "OutlineHair2.drawOverride";
-connectAttr "body.drawInfo" "OutlineBody2.drawOverride";
 connectAttr "groupId208.groupId" "OutlineTailShape.instObjGroups.objectGroups[0].objectGroupId"
 		;
 connectAttr "aiStandardSurface2SG.memberWireframeColor" "OutlineTailShape.instObjGroups.objectGroups[0].objectGrpColor"
@@ -37169,7 +37164,6 @@ connectAttr "groupId210.groupId" "OutlineBodyShape.instObjGroups.objectGroups[1]
 connectAttr "aiStandardSurface2SG.memberWireframeColor" "OutlineBodyShape.instObjGroups.objectGroups[1].objectGrpColor"
 		;
 connectAttr "body.drawInfo" "NoraHair.drawOverride";
-connectAttr "body.drawInfo" "|geo|NoraBest|NoraTho|NoraBody.drawOverride";
 connectAttr "groupId207.groupId" "NoraTailShape.instObjGroups.objectGroups[0].objectGroupId"
 		;
 connectAttr "set6.memberWireframeColor" "NoraTailShape.instObjGroups.objectGroups[0].objectGrpColor"
@@ -37509,4 +37503,4 @@ connectAttr "groupId42.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "aiSkyDomeLight1.instObjGroups" ":defaultLightSet.dagSetMembers" -nextAvailable
 		;
-// End of NoraV11.ma
+// End of NoraV13ma.ma
