@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: NoraV15Skinning.ma
-//Last modified: Sun, Jan 04, 2026 06:06:31 AM
+//Name: NoraV16_ForAnimationRef_NoFaceControlsYet.ma
+//Last modified: Sun, Jan 04, 2026 06:39:58 AM
 //Codeset: 1252
 file -rdi 1 -ns "model" -rfn "modelRN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Rigging/NoraRigRef.ma";
 file -r -ns "model" -dr 1 -rfn "modelRN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Rigging/NoraRigRef.ma";
@@ -16,11 +16,11 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "990CF097-44F1-3A84-1E58-D7AFE4F361DE";
+fileInfo "UUID" "CF797422-499A-76BD-A615-E584B6BC2410";
 createNode transform -shared -name "persp";
 	rename -uuid "42FA0E7A-4535-2D09-6A6C-FDB11FA51B85";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -229.63164247930411 144.72407154236416 -19.21598188034416 ;
+	setAttr ".translate" -type "double3" -1270.8541079892079 505.32943871445536 -161.84571787981119 ;
 	setAttr ".rotate" -type "double3" -378.93835294532869 1702.2000000005262 0 ;
 	setAttr ".rotatePivot" -type "double3" 0 0 1.4210854715202004e-14 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -1.3782084903747148e-14 -1.1054874040888613e-15 
@@ -29,7 +29,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "80A93E79-43B6-A42A-F767-F4B7AA79BD5B";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 216.71726394576663;
+	setAttr ".centerOfInterest" 1327.808482121445;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -315,7 +315,7 @@ createNode joint -name "Chest" -parent "Spine1";
 	addAttr -cachedInternally true -shortName "fatWidthAbs" -longName "fatWidthAbs" 
 		-attributeType "double";
 	setAttr ".translate" -type "double3" 7.7522672910183559 2.3092638912203256e-14 -4.8293276889201357e-15 ;
-	setAttr ".rotate" -type "double3" -5.1156357993296106e-15 -9.3825837071603984e-14 
+	setAttr ".rotate" -type "double3" -5.1156357993296106e-15 -9.3825837071603997e-14 
 		-2.0912147030622623e-13 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -711,7 +711,7 @@ createNode joint -name "Hair5" -parent "Hair4";
 		-attributeType "double";
 	setAttr ".translate" -type "double3" 12.658033376522908 1.5631940186722204e-13 1.9823477265798146e-15 ;
 	setAttr ".rotate" -type "double3" 1.1612553815336498e-15 -1.8980364013345017e-14 
-		2.7432284127622834e-13 ;
+		2.7432284127622839e-13 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -782,7 +782,7 @@ createNode joint -name "Hair8" -parent "Hair7";
 		-attributeType "double";
 	setAttr ".translate" -type "double3" 10.327385183388941 5.6843418860808015e-14 -4.2632564145606011e-14 ;
 	setAttr ".rotate" -type "double3" -2.7631068795214269e-14 4.2937488199757506e-14 
-		9.3826363103173749e-14 ;
+		9.3826363103173762e-14 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -1051,7 +1051,7 @@ createNode joint -name "ThumbFinger1" -parent "Wrist";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" -44.573354321275502 10.69674548109449 49.455682075501763 ;
+	setAttr ".jointOrient" -type "double3" -44.573354321275509 10.696745481094492 49.455682075501763 ;
 	setAttr ".preferredAngle" -type "double3" -34.462082586865911 -8.7285733235282201 
 		-1.7903981777634761 ;
 	setAttr ".type" 18;
@@ -1340,7 +1340,7 @@ createNode joint -name "PinkyFinger3" -parent "PinkyFinger2";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" 2.2777236039947812 2.7685871764193348 -1.5040033681594196 ;
+	setAttr ".jointOrient" -type "double3" 2.2777236039947817 2.7685871764193348 -1.5040033681594196 ;
 	setAttr ".preferredAngle" -type "double3" 0 0 5.7599997887354624 ;
 	setAttr ".type" 18;
 	setAttr ".otherType" -type "string" "10";
@@ -1576,7 +1576,7 @@ createNode joint -name "Bow5" -parent "Bow1";
 	addAttr -cachedInternally true -shortName "fatWidthAbs" -longName "fatWidthAbs" 
 		-attributeType "double";
 	setAttr ".translate" -type "double3" 7.2548705054983156 -5.2958451575314314 -2.0613402840729691 ;
-	setAttr ".rotate" -type "double3" -1.3358329662145587e-13 -6.520137097000234e-13 
+	setAttr ".rotate" -type "double3" -1.335832966214559e-13 -6.520137097000234e-13 
 		-2.0800827616771392e-12 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -1713,7 +1713,7 @@ createNode joint -name "Tail1" -parent "Tail0";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" -2.5068580620658542e-15 6.5536151883369868e-15 
+	setAttr ".jointOrient" -type "double3" -2.5068580620658546e-15 6.5536151883369868e-15 
 		-20.932617140633141 ;
 	setAttr ".type" 18;
 	setAttr ".otherType" -type "string" "30";
@@ -1836,7 +1836,7 @@ createNode joint -name "Tail5" -parent "Tail4";
 	setAttr ".translate" -type "double3" 25.104805407538905 3.5527136788005009e-15 2.2204460492503131e-15 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 1.5853077240419713e-14 7.1562480332929119e-15 
+	setAttr ".jointOrient" -type "double3" 1.5853077240419713e-14 7.1562480332929135e-15 
 		9.5416640443905471e-15 ;
 	setAttr ".type" 18;
 	setAttr ".otherType" -type "string" "28";
@@ -1997,7 +1997,7 @@ createNode joint -name "FootSideInner" -parent "Toes";
 	setAttr ".translate" -type "double3" 0.72572379371674245 -1.9702534794652147 -5.2105200110809422 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -22.902716624197257 89.999925274921779 0 ;
+	setAttr ".jointOrient" -type "double3" -22.902716624197257 89.999925274921793 0 ;
 	setAttr ".drawLabel" yes;
 	setAttr ".type" 18;
 	setAttr ".otherType" -type "string" "BigToe";
@@ -2020,7 +2020,7 @@ createNode joint -name "FootSideOuter" -parent "Toes";
 	setAttr ".translate" -type "double3" -0.42394857412975995 -2.0007510119204843 7.6575662475870132 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -22.902716624197257 89.999925274921779 0 ;
+	setAttr ".jointOrient" -type "double3" -22.902716624197257 89.999925274921793 0 ;
 	setAttr ".drawLabel" yes;
 	setAttr ".type" 18;
 	setAttr ".otherType" -type "string" "PinkyToe";
@@ -2973,7 +2973,7 @@ createNode joint -name "FKXEar1_R" -parent "CustomOrientReverseFKEar1_R";
 	setAttr ".translate" -type "double3" 0 -1.7763568394002505e-15 0 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 1.987846675914698e-16 2.9320738469741797e-15 
+	setAttr ".jointOrient" -type "double3" 1.987846675914698e-16 2.9320738469741801e-15 
 		7.9513867036587919e-16 ;
 	setAttr ".segmentScaleCompensate" no;
 	setAttr ".drawStyle" 2;
@@ -3980,7 +3980,7 @@ createNode joint -name "FKXShoulder_R" -parent "CustomOrientReverseFKShoulder_R"
 createNode transform -name "AlignIKToShoulder_R" -parent "FKXShoulder_R";
 	rename -uuid "5AF982D0-49E9-2FDC-7042-6FA9453C4450";
 	setAttr ".translate" -type "double3" 0 4.4408920985006262e-16 1.4210854715202004e-14 ;
-	setAttr ".rotate" -type "double3" -89.999999770741866 -3.0227994199769466 145.81663238975094 ;
+	setAttr ".rotate" -type "double3" -89.999999770741866 -3.0227994199769466 145.81663238975096 ;
 	setAttr ".rotateOrder" 5;
 	setAttr ".scale" -type "double3" 1 1.0000000000000002 1.0000000000000002 ;
 createNode transform -name "FKOffsetElbow_R" -parent "CustomOrientReverseFKShoulder_R";
@@ -5439,7 +5439,7 @@ createNode joint -name "FKXPinkyFinger2_R" -parent "CustomOrientReverseFKPinkyFi
 		0 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -3.975693351829395e-16 1.789062008323228e-15 
+	setAttr ".jointOrient" -type "double3" -3.975693351829395e-16 1.7890620083232284e-15 
 		0 ;
 	setAttr ".segmentScaleCompensate" no;
 	setAttr ".drawStyle" 2;
@@ -5596,7 +5596,7 @@ createNode joint -name "FKXRingFinger1_R" -parent "CustomOrientReverseFKRingFing
 		-1.4210854715202004e-14 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -3.975693351829395e-16 4.174478019420866e-15 
+	setAttr ".jointOrient" -type "double3" -3.975693351829395e-16 4.1744780194208675e-15 
 		-7.9513867036587919e-16 ;
 	setAttr ".segmentScaleCompensate" no;
 	setAttr ".drawStyle" 2;
@@ -7346,7 +7346,7 @@ createNode nurbsCurve -name "FKAnkle_LShape" -parent "FKAnkle_L";
 createNode transform -name "CustomOrientReverseFKAnkle_L" -parent "FKAnkle_L";
 	rename -uuid "BDD7B69C-49B9-7E69-70A5-FAB7A10AD24F";
 	setAttr ".translate" -type "double3" 0 8.8817841970012523e-16 1.7763568394002505e-15 ;
-	setAttr ".rotate" -type "double3" 179.99999949509353 -4.739395799433465e-23 65.303032328365333 ;
+	setAttr ".rotate" -type "double3" 179.99999949509353 -4.7393957994334661e-23 65.303032328365333 ;
 	setAttr ".scale" -type "double3" 1 0.99999999999999978 1 ;
 createNode joint -name "FKXAnkle_L" -parent "CustomOrientReverseFKAnkle_L";
 	rename -uuid "CBF6F326-4269-A6B5-16AD-C0A1023BFB43";
@@ -7354,7 +7354,7 @@ createNode joint -name "FKXAnkle_L" -parent "CustomOrientReverseFKAnkle_L";
 	setAttr ".rotateOrder" 3;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 0 -2.7387405798141624e-27 5.480306059659077e-28 ;
+	setAttr ".jointOrient" -type "double3" 0 -2.7387405798141624e-27 5.4803060596590779e-28 ;
 	setAttr ".segmentScaleCompensate" no;
 	setAttr ".drawStyle" 2;
 createNode transform -name "AlignIKToAnkle_L" -parent "FKXAnkle_L";
@@ -7371,7 +7371,7 @@ createNode transform -name "FKOffsetToes_L" -parent "CustomOrientReverseFKAnkle_
 	setAttr ".inheritsTransform" no;
 createNode transform -name "CustomOrientFKToes_L" -parent "FKOffsetToes_L";
 	rename -uuid "E1317A6C-4138-B19B-BE43-2ABE7C0B7B4A";
-	setAttr ".rotate" -type "double3" 179.99999999999955 -6.8049085549149948e-06 8.0141325026784747e-06 ;
+	setAttr ".rotate" -type "double3" 179.99999999999955 -6.8049085549149957e-06 8.0141325026784747e-06 ;
 createNode transform -name "FKExtraToes_L" -parent "CustomOrientFKToes_L";
 	rename -uuid "A65A6178-448A-CEA0-19B4-BDB49C14D11E";
 	setAttr -lock on -keyable off ".visibility";
@@ -7435,7 +7435,7 @@ createNode transform -name "CustomOrientReverseFKToes_L" -parent "FKToes_L";
 	rename -uuid "973A89C8-427A-8291-A840-918E081CFB4E";
 	setAttr ".translate" -type "double3" 1.7763568394002505e-15 8.8817841970012523e-16 
 		1.7763568394002505e-15 ;
-	setAttr ".rotate" -type "double3" 179.9999999999996 -6.8049085672980304e-06 8.0141325083037289e-06 ;
+	setAttr ".rotate" -type "double3" 179.99999999999963 -6.8049085672980304e-06 8.0141325083037289e-06 ;
 	setAttr ".scale" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
 createNode joint -name "FKXToes_L" -parent "CustomOrientReverseFKToes_L";
 	rename -uuid "EE45D02A-483F-33C1-CB78-6AA598E977BC";
@@ -7443,7 +7443,7 @@ createNode joint -name "FKXToes_L" -parent "CustomOrientReverseFKToes_L";
 	setAttr ".rotateOrder" 5;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 3.2449316007897084e-16 -8.1338648164868972e-17 
+	setAttr ".jointOrient" -type "double3" 3.2449316007897084e-16 -8.1338648164868984e-17 
 		0 ;
 	setAttr ".segmentScaleCompensate" no;
 	setAttr ".drawStyle" 2;
@@ -7451,7 +7451,7 @@ createNode transform -name "AlignIKToToes_L" -parent "FKXToes_L";
 	rename -uuid "51B67F61-4795-3BBA-3A86-C1AADD48FEBE";
 	addAttr -cachedInternally true -shortName "CustomOrient" -longName "CustomOrient" 
 		-defaultValue 1 -minValue 0 -maxValue 1 -attributeType "bool";
-	setAttr ".rotate" -type "double3" -179.9999999999996 6.8042462807328573e-06 -8.1682049477248326e-06 ;
+	setAttr ".rotate" -type "double3" -179.99999999999963 6.8042462807328573e-06 -8.1682049477248326e-06 ;
 	setAttr ".rotateOrder" 5;
 createNode transform -name "FKOffsetRoot_M" -parent "FKSystem";
 	rename -uuid "12DC61A5-4567-CA11-7369-A9A5563A8FE4";
@@ -9199,7 +9199,7 @@ createNode transform -name "SDKFKRingFinger1_L" -parent "FKOffsetRingFinger1_L";
 	rename -uuid "AAB45D26-4CA0-22F6-BAAE-16981A364A42";
 createNode transform -name "CustomOrientFKRingFinger1_L" -parent "SDKFKRingFinger1_L";
 	rename -uuid "17548BB5-44FA-6386-D8C4-8A90666AFC87";
-	setAttr ".rotate" -type "double3" -180 4.2077951511070338e-12 1.127087986903672e-13 ;
+	setAttr ".rotate" -type "double3" -180 4.2077951511070346e-12 1.127087986903672e-13 ;
 createNode transform -name "FKExtraRingFinger1_L" -parent "CustomOrientFKRingFinger1_L";
 	rename -uuid "7D20D57A-463E-B264-BA2D-4A89121D82DB";
 	setAttr -lock on -keyable off ".visibility";
@@ -9429,7 +9429,7 @@ createNode joint -name "FKXRingFinger3_L" -parent "CustomOrientReverseFKRingFing
 		0 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 0 2.5345045117912401e-15 0 ;
+	setAttr ".jointOrient" -type "double3" 0 2.5345045117912405e-15 0 ;
 	setAttr ".segmentScaleCompensate" no;
 	setAttr ".drawStyle" 2;
 createNode transform -name "IKSystem" -parent "MotionSystem";
@@ -9495,7 +9495,7 @@ createNode joint -name "IKfake0Spline_M" -parent "IKParentConstraintHair1_M";
 	rename -uuid "4C9DCE48-444D-A86C-A8B4-21BCC49864B2";
 	setAttr -lock on ".visibility" no;
 	setAttr ".translate" -type "double3" 16.811418891702541 -0.82891919399150371 16.190064416398457 ;
-	setAttr ".rotate" -type "double3" 5.7063911407486088e-13 -18.643841822191991 2.8700385275560163 ;
+	setAttr ".rotate" -type "double3" -1.9961879303023162e-13 -18.643841822191966 2.8700385275560003 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" 97.109205787508202 65.596900941263456 6.4797413741387251 ;
@@ -9503,7 +9503,7 @@ createNode joint -name "IKSpHair2_M" -parent "IKfake0Spline_M";
 	rename -uuid "CA4D1F8B-442E-0C72-03FE-628355C65616";
 	setAttr ".translate" -type "double3" 16.774118423461914 -4.2632564145606011e-14 
 		-1.5833896349762497e-16 ;
-	setAttr ".rotate" -type "double3" -5.8171127941587804 42.622950508813467 -12.553591932164201 ;
+	setAttr ".rotate" -type "double3" -5.8171127941589429 42.622950508813524 -12.553591932164389 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" -4.676230630028947e-15 1.2511858886526878e-15 
@@ -9512,7 +9512,7 @@ createNode joint -name "IKSpHair3_M" -parent "IKSpHair2_M";
 	rename -uuid "DCE80B97-4252-5121-8EB8-DC81E617DCA0";
 	setAttr ".translate" -type "double3" 13.018136024475098 -1.1368683772161603e-13 
 		2.6128895384196398e-14 ;
-	setAttr ".rotate" -type "double3" -0.88582819629855747 -3.187815074756791 0.040170439493770756 ;
+	setAttr ".rotate" -type "double3" -0.88582819629896903 -3.1878150747567924 0.040170439493848922 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" 1.8770775779124444e-14 8.3000930374414501e-15 
@@ -9521,11 +9521,11 @@ createNode joint -name "IKSpHair4_M" -parent "IKSpHair3_M";
 	rename -uuid "49661628-4C62-53DD-ADAF-EBA471EFE1AB";
 	setAttr ".translate" -type "double3" 14.713861465454102 8.5265128291212022e-14 
 		-3.5301207979265203e-14 ;
-	setAttr ".rotate" -type "double3" -10.126778179739809 -47.545983194478289 23.808718755938706 ;
+	setAttr ".rotate" -type "double3" -10.126778179738253 -47.545983194478687 23.808718755938433 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" 1.8975229669654814e-14 7.8213954486524202e-15 
-		1.4531805890847516 ;
+		1.4531805890847518 ;
 createNode joint -name "IKSpHair5_M" -parent "IKSpHair4_M";
 	rename -uuid "D220DD74-421A-55AF-E85B-45B397115D08";
 	setAttr ".translate" -type "double3" 12.65803337652288 1.9895196601282805e-13 -1.8212968728422284e-15 ;
@@ -9674,17 +9674,17 @@ createNode transform -name "IKX2Tail4_M" -parent "IKXTail4_M";
 createNode joint -name "IKfake0SplineTail_M" -parent "IKParentConstraintTail0_M";
 	rename -uuid "4841F8E6-4299-C192-12ED-B88EC4F5E703";
 	setAttr -lock on ".visibility" no;
-	setAttr ".translate" -type "double3" -11.283198622839123 -11.894100389712705 -5.961496019145813e-15 ;
-	setAttr ".rotate" -type "double3" 2.1257873035524539e-16 2.2006003212467693e-16 
-		-5.3754662608390555 ;
+	setAttr ".translate" -type "double3" -11.283198622839123 -11.894100389712705 -5.9614960191458122e-15 ;
+	setAttr ".rotate" -type "double3" 2.1257873035524021e-16 2.2006003212466019e-16 
+		-5.3754662608389197 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 0 180 35.992957391641561 ;
+	setAttr ".jointOrient" -type "double3" 0 180 35.992957391641568 ;
 createNode joint -name "IKSpTail1_M" -parent "IKfake0SplineTail_M";
 	rename -uuid "0DA8620E-4996-C98D-B3F6-24A9ECD41924";
 	setAttr ".translate" -type "double3" 16.237964630126953 -7.815970093361102e-14 
 		6.7286025523687797e-16 ;
-	setAttr ".rotate" -type "double3" -3.001997111205093e-16 -3.3942193412195778e-14 
+	setAttr ".rotate" -type "double3" -3.0019971112054652e-16 -3.394219341219911e-14 
 		1.2828113253314222 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -9694,7 +9694,7 @@ createNode joint -name "IKSpTail2_M" -parent "IKSpTail1_M";
 	rename -uuid "58026AD8-4174-045B-007F-3FB0093AD72E";
 	setAttr ".translate" -type "double3" 18.617774963378906 1.4210854715202004e-14 
 		-1.1579185407594892e-15 ;
-	setAttr ".rotate" -type "double3" 2.0374267515504315e-13 2.0274220381540697e-11 
+	setAttr ".rotate" -type "double3" 2.0374267515506986e-13 2.0274220381543318e-11 
 		1.1692064229297845 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -9704,8 +9704,8 @@ createNode joint -name "IKSpTail3_M" -parent "IKSpTail2_M";
 	rename -uuid "2FC68877-482A-76A5-E33A-FD8E0FAE212D";
 	setAttr ".translate" -type "double3" 22.311031341552734 -7.1054273576010019e-14 
 		5.9676751929616311e-14 ;
-	setAttr ".rotate" -type "double3" 9.0934773160143655e-12 -1.3024142889020967e-11 
-		7.6672860962228713 ;
+	setAttr ".rotate" -type "double3" 9.0934773160141506e-12 -1.3024142889020733e-11 
+		7.6672860962226803 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" 2.1524723583534268e-14 9.389696667780211e-15 
@@ -9757,8 +9757,8 @@ createNode joint -name "IKXKnee_R" -parent "IKXHip_R";
 	rename -uuid "D528D361-40D5-E4FE-48EB-8590803A5563";
 	setAttr ".translate" -type "double3" 25.262920379638672 -2.6645352591003757e-14 
 		-1.0480505352461478e-13 ;
-	setAttr ".rotate" -type "double3" 6.9238650809462438e-21 -7.6146852151639078e-20 
-		-1.9918319000173708e-06 ;
+	setAttr ".rotate" -type "double3" 6.9238650809460332e-21 -7.6146852151636779e-20 
+		-1.9918319000173102e-06 ;
 	setAttr ".rotateOrder" 2;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -9914,28 +9914,28 @@ createNode joint -name "IKfake0Spine_M" -parent "IKParentConstraintRoot_M";
 	rename -uuid "24491626-4267-6AF5-1F61-229A55E9C643";
 	setAttr -lock on ".visibility" no;
 	setAttr ".translate" -type "double3" 0 0 -6.5081024680733474e-30 ;
-	setAttr ".rotate" -type "double3" -2.6637867518807324e-14 -28.28842098291576 -9.7384860589025983 ;
+	setAttr ".rotate" -type "double3" 1.2099912703458243e-13 -28.288420982915778 -9.7384860589025859 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 createNode joint -name "IKSpRootPart1_M" -parent "IKfake0Spine_M";
 	rename -uuid "728A069D-4ECD-46AC-8D18-A886B08A50C1";
 	setAttr ".translate" -type "double3" 5.1973943710327148 -2.6645352591003757e-15 
 		-1.9871653397573672e-15 ;
-	setAttr ".rotate" -type "double3" 17.012591159458207 47.822842813991024 34.631404300873733 ;
+	setAttr ".rotate" -type "double3" 17.012591159457596 47.822842813991059 34.631404300873704 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 createNode joint -name "IKSpRootPart2_M" -parent "IKSpRootPart1_M";
 	rename -uuid "8964B1C2-4395-D2C9-9A09-9289B16235C0";
 	setAttr ".translate" -type "double3" 5.1973943710327148 -8.8817841970012523e-16 
 		-1.987165339757368e-15 ;
-	setAttr ".rotate" -type "double3" -6.3765113530494881 8.5135856950518587 14.141350514766929 ;
+	setAttr ".rotate" -type "double3" -6.3765113530488149 8.5135856950517095 14.141350514767018 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 createNode joint -name "IKSpSpine1_M" -parent "IKSpRootPart2_M";
 	rename -uuid "70962652-4E75-0C3A-1E5C-AF90993758C3";
 	setAttr ".translate" -type "double3" 5.1973943710327148 -7.9936057773011271e-15 
 		-1.987165339757368e-15 ;
-	setAttr ".rotate" -type "double3" 12.450845734088047 -19.452085854752269 -36.028814351893217 ;
+	setAttr ".rotate" -type "double3" 12.450845734088075 -19.452085854752418 -36.028814351893246 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" 0 0 11.3813371668363 ;
@@ -9943,7 +9943,7 @@ createNode joint -name "IKSpSpine1Part1_M" -parent "IKSpSpine1_M";
 	rename -uuid "3721525C-4500-CE01-81CA-98AECCD4F0D3";
 	setAttr ".translate" -type "double3" 3.1603937149047852 1.7763568394002505e-14 
 		-1.6097758963067093e-15 ;
-	setAttr ".rotate" -type "double3" 3.9065540300462605 -25.538596482257049 -25.348233063571062 ;
+	setAttr ".rotate" -type "double3" 3.9065540300465855 -25.538596482257319 -25.348233063571229 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" 0 0 1.590277340731758e-15 ;
@@ -9951,7 +9951,7 @@ createNode joint -name "IKSpSpine1Part2_M" -parent "IKSpSpine1Part1_M";
 	rename -uuid "8A145493-459B-0DE5-4AB7-BBA7759D3EC2";
 	setAttr ".translate" -type "double3" 3.1603937149047852 1.0658141036401503e-14 
 		-1.6097758963067124e-15 ;
-	setAttr ".rotate" -type "double3" -4.8135712947500355 -31.119875195884038 -10.627621799925905 ;
+	setAttr ".rotate" -type "double3" -4.8135712947504476 -31.119875195884255 -10.627621799925269 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" 0 0 1.590277340731758e-15 ;
@@ -9987,8 +9987,8 @@ createNode transform -name "IKXOffsetShoulder_L" -parent "IKParentConstraintShou
 createNode joint -name "IKXShoulder_L" -parent "IKXOffsetShoulder_L";
 	rename -uuid "2292BFFA-4783-272F-1B5D-5A9BDDA5583E";
 	setAttr ".translate" -type "double3" 0 -2.2204460492503131e-16 -1.4210854715202004e-14 ;
-	setAttr ".rotate" -type "double3" -6.5861573565464926e-15 1.3570869507595079e-13 
-		1.3950776330441617e-05 ;
+	setAttr ".rotate" -type "double3" -5.5937324340944128e-15 1.1525970565079886e-13 
+		1.3898428017007624e-05 ;
 	setAttr ".rotateOrder" 5;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -9999,8 +9999,8 @@ createNode joint -name "IKXElbow_L" -parent "IKXShoulder_L";
 	rename -uuid "9FAC8F5A-41A0-8C5B-EEF8-8DA76E625510";
 	setAttr ".translate" -type "double3" -24.697486877441406 5.1070259132757201e-15 
 		2.1316282072803006e-13 ;
-	setAttr ".rotate" -type "double3" -9.4057280686769969e-16 -8.4598686303685488e-13 
-		-2.8063356461845026e-05 ;
+	setAttr ".rotate" -type "double3" -7.7453935221643367e-16 -8.4428568098247741e-13 
+		-2.8063101484056028e-05 ;
 	setAttr ".rotateOrder" 5;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -10060,7 +10060,7 @@ createNode transform -name "IKXOffsetHip_L" -parent "IKParentConstraintHip_L";
 createNode joint -name "IKXHip_L" -parent "IKXOffsetHip_L";
 	rename -uuid "8972FCD1-47B9-B04B-696C-70886D26A5E6";
 	setAttr ".translate" -type "double3" 0 -1.7763568394002505e-15 1.7763568394002505e-15 ;
-	setAttr ".rotate" -type "double3" 1.3959112339796072e-14 -1.4422275151779008e-15 
+	setAttr ".rotate" -type "double3" 1.3959112339796072e-14 -1.4422275151779012e-15 
 		-2.0900290738371646e-30 ;
 	setAttr ".rotateOrder" 2;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
@@ -10072,8 +10072,8 @@ createNode joint -name "IKXKnee_L" -parent "IKXHip_L";
 	rename -uuid "2F90024F-418D-3C7E-9271-418D51682124";
 	setAttr ".translate" -type "double3" -25.262920379638672 3.2862601528904634e-14 
 		9.5923269327613525e-14 ;
-	setAttr ".rotate" -type "double3" 6.5319370940603661e-21 -4.1974778600649297e-14 
-		-1.9918313859748133e-06 ;
+	setAttr ".rotate" -type "double3" 6.5319370940603616e-21 -4.1974778600649284e-14 
+		-1.9918313859748121e-06 ;
 	setAttr ".rotateOrder" 2;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -10448,7 +10448,7 @@ createNode parentConstraint -name "IKFollowEndSpline3_M_parentConstraint1" -pare
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".lastTargetRotate" -type "double3" 73.570697981547056 -89.999999999999986 
+	setAttr ".lastTargetRotate" -type "double3" 73.570697981547056 -89.999999999999957 
 		0 ;
 	setAttr ".restTranslate" -type "double3" 2.8914566983253201e-14 96.621560194033648 
 		-34.457913649112186 ;
@@ -10480,7 +10480,7 @@ createNode parentConstraint -name "IKOffsetSpline2_M_parentConstraint1" -parent 
 		-23.903997013670747 -9.9728990428626112 ;
 	setAttr ".target[1].targetOffsetTranslate" -type "double3" 2.0167331584750566e-14 
 		23.94038603882862 9.8916047360947523 ;
-	setAttr ".lastTargetRotate" -type "double3" 70.999695162932241 -89.999999999999986 
+	setAttr ".lastTargetRotate" -type "double3" 70.999695162932241 -89.999999999999957 
 		0 ;
 	setAttr ".restTranslate" -type "double3" 4.9081898568003767e-14 120.56194623286227 
 		-24.566308913017433 ;
@@ -10587,7 +10587,7 @@ createNode parentConstraint -name "IKSpline2X_M_parentConstraint3" -parent "IKSp
 		5.6843418860808015e-14 1.4654943925052066e-14 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -20.758087539307095 18.892207469141255 
 		-21.508596247804562 ;
-	setAttr ".lastTargetRotate" -type "double3" 69.208223676436788 -89.999999999999957 
+	setAttr ".lastTargetRotate" -type "double3" 69.208223676436788 -89.999999999999972 
 		0 ;
 	setAttr ".restTranslate" -type "double3" -3.5527136788005009e-14 0 -5.6843418860808015e-14 ;
 	setAttr ".restRotate" -type "double3" 69.208223676436816 -89.999999999999972 0 ;
@@ -10625,7 +10625,7 @@ createNode parentConstraint -name "IKFollowEndSpine1_M_parentConstraint1" -paren
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".lastTargetRotate" -type "double3" -94.908090385680794 -89.999999999999957 
+	setAttr ".lastTargetRotate" -type "double3" -94.908090385680808 -89.999999999999986 
 		0 ;
 	setAttr ".restTranslate" -type "double3" 1.560345257194494e-15 68.958679937175802 
 		-4.5088545063213372 ;
@@ -10651,7 +10651,7 @@ createNode parentConstraint -name "IKFollowEndSpine3_M_parentConstraint1" -paren
 	setAttr ".enableRestPosition" yes;
 	setAttr ".lastTargetRotate" -type "double3" -100.97043768212299 -89.999999999999986 
 		0 ;
-	setAttr ".restTranslate" -type "double3" -4.892765154577162e-15 89.347634012975007 
+	setAttr ".restTranslate" -type "double3" -4.8927651545771628e-15 89.347634012975007 
 		-5.3467050763976962 ;
 	setAttr -keyable on ".IKSpine3X_MW0";
 createNode transform -name "IKOffsetSpine2_M" -parent "IKHandleFollowMain";
@@ -10681,7 +10681,7 @@ createNode parentConstraint -name "IKOffsetSpine2_M_parentConstraint1" -parent "
 		10.174855475480598 -1.1798764700922861 ;
 	setAttr ".target[1].targetOffsetTranslate" -type "double3" 1.6577078906741651e-15 
 		-10.214098600318621 -0.34202590001592714 ;
-	setAttr ".lastTargetRotate" -type "double3" -97.939264033901893 -89.999999999999957 
+	setAttr ".lastTargetRotate" -type "double3" -97.939264033901907 -89.999999999999986 
 		0 ;
 	setAttr ".restTranslate" -type "double3" -3.2350572639029965e-15 79.133535412656386 
 		-5.6887309764136234 ;
@@ -11251,7 +11251,7 @@ createNode nurbsCurve -name "IKhybridSpline2_MShape" -parent "IKhybridSpline2_M"
 createNode transform -name "CustomOrientReverseIKhybridSpline2_M" -parent "IKhybridSpline2_M";
 	rename -uuid "904E48EA-4799-2FC6-3249-C7A090AFFC70";
 	setAttr ".translate" -type "double3" 0 1.4210854715202004e-14 0 ;
-	setAttr ".rotate" -type "double3" 0 0 0.21699872621444091 ;
+	setAttr ".rotate" -type "double3" 0 0 0.21699872621444094 ;
 	setAttr ".scale" -type "double3" 0.99999999999999978 0.99999999999999989 1 ;
 createNode transform -name "IKhybridOffsetSpline3_M" -parent "CustomOrientReverseIKhybridSpline2_M";
 	rename -uuid "B8DF4B2F-4260-784E-5383-FEBF0E077A3C";
@@ -11467,7 +11467,7 @@ createNode parentConstraint -name "IKSpline3X_M_parentConstraint3" -parent "IKSp
 		-7.1054273576010019e-15 -1.4210854715201991e-14 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -106.429302018453 -3.7518860605433861e-14 
 		-106.42930201845246 ;
-	setAttr ".lastTargetRotate" -type "double3" 73.570697981547056 -89.999999999999986 
+	setAttr ".lastTargetRotate" -type "double3" 73.570697981547056 -89.999999999999972 
 		0 ;
 	setAttr ".restTranslate" -type "double3" -1.4210854715202007e-14 0 7.1054273576010019e-15 ;
 	setAttr ".restRotate" -type "double3" 73.570697981547042 -89.999999999999986 0 ;
@@ -11774,7 +11774,7 @@ createNode poleVectorConstraint -name "IKArmHandle_R_poleVectorConstraint1" -par
 createNode transform -name "IKFKAlignedOffsetArm_R" -parent "CustomOrientReverseIKArm_R";
 	rename -uuid "2B87DB69-403F-03DD-B4E7-AD8508C91FAA";
 	setAttr ".translate" -type "double3" 7.1054273576010019e-15 0 2.2204460492503131e-16 ;
-	setAttr ".rotate" -type "double3" 89.973505903362792 2.7253830145582261 -154.42487242560603 ;
+	setAttr ".rotate" -type "double3" 89.973505903362806 2.7253830145582261 -154.42487242560603 ;
 createNode transform -name "IKFKAlignedArm_R" -parent "IKFKAlignedOffsetArm_R";
 	rename -uuid "36C0B4C9-48FA-9409-805B-D9A365386AB9";
 createNode transform -name "IKmessureConstrainToArm_R" -parent "CustomOrientReverseIKArm_R";
@@ -11785,7 +11785,7 @@ createNode ikHandle -name "IKSpineHandle_M" -parent "IKHandle";
 	rename -uuid "0E398288-4349-67FA-14AF-BD938564B647";
 	setAttr -lock on ".visibility" no;
 	setAttr ".translate" -type "double3" 0.18335720939288036 89.429149000117292 -5.4248926629811578 ;
-	setAttr ".rotate" -type "double3" 62.040619721508094 17.901568602295157 38.697349202549503 ;
+	setAttr ".rotate" -type "double3" 62.040619721508094 17.901568602295161 38.697349202549503 ;
 	setAttr ".rootOnCurve" yes;
 	setAttr ".dWorldUpType" 4;
 	setAttr ".dTwistValueType" 2;
@@ -12104,7 +12104,7 @@ createNode transform -name "CustomOrientReverseIKhybridSpine1_M" -parent "IKhybr
 createNode transform -name "IKhybridOffsetSpine2_M" -parent "CustomOrientReverseIKhybridSpine1_M";
 	rename -uuid "90631214-4971-A80B-7FF6-B8A95065928E";
 	setAttr ".translate" -type "double3" 10.243034027345388 0.0068078072509774046 -4.7954025210974918e-15 ;
-	setAttr ".rotate" -type "double3" 0 0 0.61219095622268649 ;
+	setAttr ".rotate" -type "double3" 0 0 0.6121909562226866 ;
 	setAttr ".scale" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
 createNode transform -name "CustomOrientIKhybridSpine2_M" -parent "IKhybridOffsetSpine2_M";
 	rename -uuid "2CC2DDAB-4EF6-2B4B-A84F-3FA053BA66D3";
@@ -12175,7 +12175,7 @@ createNode nurbsCurve -name "IKhybridSpine2_MShape" -parent "IKhybridSpine2_M";
 		"tempCluster" 1 "cv[0:15]";
 createNode transform -name "CustomOrientReverseIKhybridSpine2_M" -parent "IKhybridSpine2_M";
 	rename -uuid "FE1C44AE-4CCB-1980-E285-1D8B07912374";
-	setAttr ".translate" -type "double3" 0 0 -3.944304526105059e-31 ;
+	setAttr ".translate" -type "double3" 0 0 -3.9443045261050599e-31 ;
 	setAttr ".rotate" -type "double3" 0 0 -14.343378160089896 ;
 createNode transform -name "IKhybridOffsetSpine3_M" -parent "CustomOrientReverseIKhybridSpine2_M";
 	rename -uuid "D24AD8FF-4A58-1CC9-E992-C388E279FD01";
@@ -12185,7 +12185,7 @@ createNode transform -name "IKhybridOffsetSpine3_M" -parent "CustomOrientReverse
 createNode transform -name "CustomOrientIKhybridSpine3_M" -parent "IKhybridOffsetSpine3_M";
 	rename -uuid "1D687811-485F-3B1E-0F4F-15997586C3A1";
 	setAttr ".rotate" -type "double3" -3.7982143300877583e-15 -6.9663018575043895e-14 
-		6.2416586631023518 ;
+		6.2416586631023527 ;
 createNode transform -name "IKhybridExtraSpine3_M" -parent "CustomOrientIKhybridSpine3_M";
 	rename -uuid "68975005-4D1E-8675-B6A5-3EB529E32BD9";
 	setAttr -lock on -keyable off ".visibility";
@@ -12421,7 +12421,7 @@ createNode transform -name "IKOffsetConstrainedSpine1_M" -parent "IKHandle";
 	rename -uuid "FC4D9C73-421A-C307-6439-D3AA09B3F475";
 createNode transform -name "IKhybridOffsetSpine1_M" -parent "IKOffsetConstrainedSpine1_M";
 	rename -uuid "44391AC5-46CF-CDCD-CB60-EBB19A044F0F";
-	setAttr ".translate" -type "double3" 3.944304526105059e-31 0 0 ;
+	setAttr ".translate" -type "double3" 3.9443045261050599e-31 0 0 ;
 	setAttr ".rotate" -type "double3" 90 6.6525581329947823 90 ;
 	setAttr ".scale" -type "double3" 1 0.99999999999999989 1 ;
 createNode transform -name "IKOffsetSpine1_M" -parent "IKhybridOffsetSpine1_M";
@@ -12536,7 +12536,7 @@ createNode parentConstraint -name "IKSpine1X_M_parentConstraint3" -parent "IKSpi
 	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 0 -1.2621774483536189e-29 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 85.091909614319249 -3.8116750105779865e-14 
 		85.091909614319221 ;
-	setAttr ".lastTargetRotate" -type "double3" -94.908090385680794 -89.999999999999972 
+	setAttr ".lastTargetRotate" -type "double3" -94.908090385680794 -89.999999999999986 
 		0 ;
 	setAttr ".restTranslate" -type "double3" -6.3108872417680944e-30 0 0 ;
 	setAttr ".restRotate" -type "double3" -94.908090385680794 -89.999999999999972 0 ;
@@ -12954,7 +12954,7 @@ createNode parentConstraint -name "IKSplineTail3X_M_parentConstraint1" -parent "
 	setAttr -keyable on ".IKSplineTail3_MW0";
 createNode transform -name "IKSplineTail3LocalOrient0_M" -parent "IKSplineTail3_M";
 	rename -uuid "52F71808-4687-52BB-E0EF-F59853DD1D2F";
-	setAttr ".rotate" -type "double3" -90.000000000000071 69.894165692396172 89.999999999999872 ;
+	setAttr ".rotate" -type "double3" -90.000000000000071 69.894165692396186 89.999999999999872 ;
 	setAttr ".scale" -type "double3" 1 1.0000000000000002 1 ;
 createNode transform -name "IKSplineTailLocator4_M" -parent "IKSplineTail3_M";
 	rename -uuid "37E8BAAA-4493-7218-8404-378264DF23A0";
@@ -12980,7 +12980,7 @@ createNode transform -name "IKOffsetConstrainedSplineTail1_M" -parent "IKHandle"
 	rename -uuid "2FC5E290-4974-B309-3BCF-89BA62CB010E";
 createNode transform -name "IKhybridOffsetSplineTail1_M" -parent "IKOffsetConstrainedSplineTail1_M";
 	rename -uuid "21A9D9B9-45CE-2D42-15F6-999A7BC39CF5";
-	setAttr ".translate" -type "double3" -11.283198625915851 -11.894100386794046 3.944304526105059e-31 ;
+	setAttr ".translate" -type "double3" -11.283198625915851 -11.894100386794046 3.9443045261050599e-31 ;
 	setAttr ".rotate" -type "double3" 0 180 35.992957391641582 ;
 	setAttr ".scale" -type "double3" 1.0000000000000002 1.0000000000000004 1 ;
 createNode transform -name "IKOffsetSplineTail1_M" -parent "IKhybridOffsetSplineTail1_M";
@@ -13059,14 +13059,14 @@ createNode transform -name "IKSplineTail1LocalOrient0_M" -parent "IKSplineTail1_
 createNode transform -name "IKSplineTailLocator0_M" -parent "IKSplineTail1_M";
 	rename -uuid "384B104D-45E6-BD64-2132-3D9D06FD0E1B";
 	setAttr -lock on ".visibility" no;
-	setAttr ".translate" -type "double3" -3.944304526105059e-31 2.7178259642823832e-09 
+	setAttr ".translate" -type "double3" -3.9443045261050599e-31 2.7178259642823832e-09 
 		-3.2554297035858326e-09 ;
 createNode locator -name "IKSplineTailLocator0_MShape" -parent "IKSplineTailLocator0_M";
 	rename -uuid "BCF7F9F9-40CF-0BE4-1791-0E8E9F698016";
 	setAttr -keyable off ".visibility";
 createNode transform -name "IKSplineTail1LocalOrient1_M" -parent "IKSplineTail1_M";
 	rename -uuid "A680359F-4E41-4A2F-2564-CFB34CECA4DA";
-	setAttr ".translate" -type "double3" 3.944304526105059e-31 0 3.5527136788005009e-15 ;
+	setAttr ".translate" -type "double3" 3.9443045261050599e-31 0 3.5527136788005009e-15 ;
 	setAttr ".rotate" -type "double3" 90 29.340399243825928 -89.999999999999986 ;
 createNode transform -name "IKSplineTail1LocalOrient2_M" -parent "IKSplineTail1LocalOrient1_M";
 	rename -uuid "14D2F1A5-4057-8FFC-E7D4-34829B12C1A0";
@@ -13550,7 +13550,7 @@ createNode transform -name "CustomOrientReverseIKArm_L" -parent "IKArm_L";
 	rename -uuid "058911F9-4909-686B-9F86-999DCE328952";
 	setAttr ".translate" -type "double3" -1.7763568394002505e-15 -2.2204460492503131e-16 
 		-1.4210854715202004e-14 ;
-	setAttr ".rotate" -type "double3" 89.970663277298343 -25.576383897776829 177.28728222139736 ;
+	setAttr ".rotate" -type "double3" 89.970663277298343 -25.576383897776832 177.28728222139736 ;
 	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999978 0.99999999999999989 ;
 createNode ikHandle -name "IKArmHandle_L" -parent "CustomOrientReverseIKArm_L";
 	rename -uuid "DEDD6E79-4D4E-3ACA-F64C-30A4FF666D8B";
@@ -13710,7 +13710,7 @@ createNode transform -name "IKLegFootRockOuterPivot_L" -parent "IKLegFootRockInn
 createNode transform -name "IKFKAlignedLeg_L" -parent "IKLegFootRockOuterPivot_L";
 	rename -uuid "D8F5484C-404D-7C7B-531C-E5848FC1E3AB";
 	setAttr ".translate" -type "double3" -7.5397765291915881 7.0394309052076425 -8.2801991706636251 ;
-	setAttr ".rotate" -type "double3" -90.00000000008373 -3.1805546814635168e-15 89.999999777211386 ;
+	setAttr ".rotate" -type "double3" -90.00000000008373 -3.1805546814635168e-15 89.9999997772114 ;
 	setAttr ".scale" -type "double3" 0.99999999999999989 1.0000000000000002 1 ;
 createNode transform -name "IKLegFootRoll_L" -parent "IKLegFootRockOuterPivot_L";
 	rename -uuid "B0C3B6D3-4DCA-26B5-074E-738E3E902EB7";
@@ -14336,9 +14336,9 @@ createNode nurbsCurve -name "IKSplineCurve_MShape" -parent "IKSplineCurve_M";
 		7 0 0 0 1 2 2 2
 		5
 		2.5435781211296863e-14 144.46594321879888 -14.593410359449809
-		10.551890996705525 137.83048934228555 -20.598672294610957
-		-0.1510642749343018 119.08049678849562 -24.349243404452526
-		-9.5161760473718626 101.04029805549625 -28.79505208642426
+		10.551890996705518 137.83048934228555 -20.598672294610957
+		-0.15106427493432256 119.08049678849561 -24.349243404452519
+		-9.5161760473718644 101.04029805549624 -28.795052086424253
 		3.4531648358079451e-14 96.621560013256655 -34.457913766307961
 		;
 createNode transform -name "IKSpineCurve_M" -parent "IKCurve";
@@ -14356,10 +14356,10 @@ createNode nurbsCurve -name "IKSpineCurve_MShape" -parent "IKSpineCurve_M";
 		9 0 0 0 1 2 3 4 4 4
 		7
 		1.5603452571944875e-15 68.958679937175802 -4.5088545063213372
-		3.6103870947947465 70.308875047419662 -5.797278609760899
-		1.7587722448639214 76.895107714822515 -6.2558093948933635
-		-2.3926073209883665 81.75203474850116 -3.2018544619874403
-		-2.9641728862031314 84.422873569724942 -2.6105697148165161
+		3.6103870947947474 70.308875047419662 -5.7972786097608981
+		1.7587722448639225 76.895107714822515 -6.2558093948933617
+		-2.3926073209883665 81.75203474850116 -3.2018544619874394
+		-2.9641728862031314 84.422873569724942 -2.6105697148165152
 		-2.3697709618104232 88.294106648180275 -4.3361827755637909
 		-4.0045867251301751e-15 89.347634017618091 -5.3467051246323667
 		;
@@ -14377,8 +14377,8 @@ createNode nurbsCurve -name "IKSplineTailCurve_MShape" -parent "IKSplineTailCurv
 		3 2 0 no 3
 		7 0 0 0 1 2 2 2
 		5
-		-4.4011507619513192e-15 56.373540324656773 -15.015731120063752
-		-6.7849733033323611e-15 42.218517130870282 -22.972288655828887
+		-4.4011507619513184e-15 56.373540324656773 -15.015731120063752
+		-6.784973303332358e-15 42.218517130870282 -22.972288655828887
 		-6.7322293867722063e-15 30.319336369504004 -37.291194594066113
 		-5.445054917358043e-14 26.213071852135833 -59.221099825313971
 		3.009970231001678e-11 34.594931352207894 -82.118381768965676
@@ -16838,8 +16838,8 @@ createNode joint -name "Spine2_M" -parent "Spine1_M";
 		-minValue 0 -maxValue 1 -attributeType "bool";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".offsetParentMatrix" -type "matrix" 0.99347357134067626 -0.11406254007167393 -0 0
-		 0.11406254007167393 0.99347357134067626 0 0 0 -0 1 0 36.565324230926421 -1.0602849600423667 1.2415945498648536e-14 1;
+	setAttr ".offsetParentMatrix" -type "matrix" 0.99347357134067626 -0.11406254007167393 0 0
+		 0.11406254007167393 0.99347357134067626 0 0 0 0 1 0 36.565324230926421 -1.0602849600423667 1.2415945498648536e-14 1;
 	setAttr ".jointOrient" -type "double3" 0 0 -6.5495567606976142 ;
 	setAttr ".segmentScaleCompensate" no;
 createNode joint -name "Tail0_M" -parent "Root_M";
@@ -27197,7 +27197,7 @@ createNode mesh -name "RootPart2Box_MShapeOrig" -parent "RootPart2Box_M";
 	setAttr ".pinData[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -name "modelRNfosterParent1";
-	rename -uuid "626CE915-4305-3318-F11B-B1AC1F44101A";
+	rename -uuid "BDDDABD3-434E-3B5C-5C69-D086E4B7DD17";
 createNode transform -name "model:EyeThoLBase" -parent "modelRNfosterParent1";
 	rename -uuid "665FD211-41C2-115F-010D-FEAE4F1437B0";
 	setAttr ".visibility" no;
@@ -27737,15 +27737,15 @@ createNode mesh -name "EyeThoRShapeDeformed" -parent "modelRNfosterParent1";
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
 	setAttr ".vertexColorSource" 2;
 createNode lightLinker -shared -name "lightLinker1";
-	rename -uuid "FCB557D0-4EFC-5F1E-0F95-E2B298A08406";
+	rename -uuid "D742C4C8-41B2-F0EE-706E-479A297BCF50";
 	setAttr -size 16 ".link";
 	setAttr -size 16 ".shadowLink";
 createNode shapeEditorManager -name "shapeEditorManager";
-	rename -uuid "C200EFD6-498D-123A-0D1F-E3A21E0F9497";
+	rename -uuid "26790139-4908-77E8-D55D-DD934C218D0B";
 createNode poseInterpolatorManager -name "poseInterpolatorManager";
-	rename -uuid "76E540C1-49F9-C724-F95F-6F8C8B5C6FC5";
+	rename -uuid "08328467-4440-2DDA-BA8C-37BCB70B6F7E";
 createNode displayLayerManager -name "layerManager";
-	rename -uuid "82E690A7-41C4-1E7C-091C-55B47297432F";
+	rename -uuid "AA3FF576-4C15-B6C2-996E-69AC79697A68";
 	setAttr ".currentDisplayLayer" 1;
 	setAttr -size 26 ".displayLayerId[1:25]"  17 2 1 9 3 
 		4 5 6 0 0 0 7 10 11 12 13 0 0 0 0 0 0 
@@ -27755,7 +27755,7 @@ createNode displayLayer -name "defaultLayer";
 	rename -uuid "6AEBFE60-47BA-A7B7-97A1-C2AE4AF7FF46";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 createNode renderLayerManager -name "renderLayerManager";
-	rename -uuid "3D65DC62-49FC-0643-4AAB-A39E3C7D901A";
+	rename -uuid "4AD96C14-4CD6-E1F3-DC41-FD86CB108F8F";
 createNode renderLayer -name "defaultRenderLayer";
 	rename -uuid "F9778DF7-4A1A-9DAD-12DB-F8A4AB30F570";
 	setAttr ".global" yes;
@@ -27765,45 +27765,46 @@ createNode script -name "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 783\n            -height 511\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 745\n            -height 280\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 782\n            -height 511\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 745\n            -height 279\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 783\n            -height 511\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 745\n            -height 280\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
 		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1574\n            -height 1089\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1574\n            -height 626\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 1\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
 		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
 		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
-		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n"
-		+ "                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
-		+ "                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n"
-		+ "                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n"
-		+ "                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"|persp\" \n                -useInteractiveMode 0\n"
-		+ "                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
-		+ "                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n"
-		+ "                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
-		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1574\\n    -height 1089\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1574\\n    -height 1089\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n"
+		+ "                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n"
+		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
+		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
+		+ "                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n"
+		+ "                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n"
+		+ "                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n"
+		+ "                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
+		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1574\\n    -height 626\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1574\\n    -height 626\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
@@ -27991,66 +27992,66 @@ createNode reference -name "modelRN";
 		2 "model:sky" "displayType" " 2"
 		2 "model:sky" "visibility" " 1"
 		2 "model:sky" "displayOrder" " 4"
+		3 "model:sky.drawInfo" "|model:aiSkyDomeLight1.drawOverride" ""
 		3 "model:body.drawInfo" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineHair2.drawOverride" 
 		""
-		3 "model:sky.drawInfo" "|model:aiSkyDomeLight1.drawOverride" ""
-		5 0 "modelRN" "model:sky.drawInfo" "|model:aiSkyDomeLight1.drawOverride" 
-		"modelRN.placeHolderList[1]" "modelRN.placeHolderList[2]" "model:aiSkyDomeLight1.do"
-		
-		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest.message" "modelRN.placeHolderList[3]" 
+		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest.message" "modelRN.placeHolderList[1]" 
 		""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:EyeThoR|model:EyeThoRShape.worldMesh" 
-		"modelRN.placeHolderList[4]" ""
+		"modelRN.placeHolderList[2]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:EyeThoR|model:EyeThoRShape.outMesh" 
-		"modelRN.placeHolderList[5]" ""
+		"modelRN.placeHolderList[3]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:EyeThoL.lockInfluenceWeights" 
-		"modelRN.placeHolderList[6]" ""
+		"modelRN.placeHolderList[4]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:EyeThoL.message" 
-		"modelRN.placeHolderList[7]" ""
+		"modelRN.placeHolderList[5]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:EyeThoL.worldMatrix" 
-		"modelRN.placeHolderList[8]" ""
+		"modelRN.placeHolderList[6]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:EyeThoL.objectColorRGB" 
-		"modelRN.placeHolderList[9]" ""
+		"modelRN.placeHolderList[7]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:EyeThoL|model:EyeThoLShape.worldMesh" 
-		"modelRN.placeHolderList[10]" ""
+		"modelRN.placeHolderList[8]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:EyeThoL|model:EyeThoLShape.outMesh" 
-		"modelRN.placeHolderList[11]" ""
+		"modelRN.placeHolderList[9]" ""
 		5 4 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineHair2.drawOverride" 
-		"modelRN.placeHolderList[12]" ""
+		"modelRN.placeHolderList[10]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineHair2|model:OutlineHair2Shape.worldMesh" 
-		"modelRN.placeHolderList[13]" ""
+		"modelRN.placeHolderList[11]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineHair2|model:OutlineHair2Shape.outMesh" 
-		"modelRN.placeHolderList[14]" ""
+		"modelRN.placeHolderList[12]" ""
 		5 4 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineTail.drawOverride" 
-		"modelRN.placeHolderList[15]" ""
+		"modelRN.placeHolderList[13]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineTail|model:OutlineTailShape.outMesh" 
-		"modelRN.placeHolderList[16]" ""
+		"modelRN.placeHolderList[14]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineTail|model:OutlineTailShape.worldMesh" 
-		"modelRN.placeHolderList[17]" ""
+		"modelRN.placeHolderList[15]" ""
 		5 4 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineBody.drawOverride" 
-		"modelRN.placeHolderList[18]" ""
+		"modelRN.placeHolderList[16]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineBody|model:OutlineBodyShape.outMesh" 
-		"modelRN.placeHolderList[19]" ""
+		"modelRN.placeHolderList[17]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:OutlineBody|model:OutlineBodyShape.worldMesh" 
-		"modelRN.placeHolderList[20]" ""
+		"modelRN.placeHolderList[18]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:NoraTho|model:NoraHair|model:NoraHairShape.outMesh" 
-		"modelRN.placeHolderList[21]" ""
+		"modelRN.placeHolderList[19]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:NoraTho|model:NoraHair|model:NoraHairShape.worldMesh" 
-		"modelRN.placeHolderList[22]" ""
+		"modelRN.placeHolderList[20]" ""
 		5 0 "modelRN" "model:body.drawInfo" "|Group|Geometry|model:geo|model:NoraBest|model:NoraTho|model:NoraTail.drawOverride" 
-		"modelRN.placeHolderList[23]" "modelRN.placeHolderList[24]" "model:OutlineHair2.do"
+		"modelRN.placeHolderList[21]" "modelRN.placeHolderList[22]" "model:OutlineHair2.do"
 		
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:NoraTho|model:NoraTail|model:NoraTailShape.outMesh" 
-		"modelRN.placeHolderList[25]" ""
+		"modelRN.placeHolderList[23]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:NoraTho|model:NoraTail|model:NoraTailShape.worldMesh" 
-		"modelRN.placeHolderList[26]" ""
+		"modelRN.placeHolderList[24]" ""
 		5 0 "modelRN" "model:body.drawInfo" "|Group|Geometry|model:geo|model:NoraBest|model:NoraTho|model:NoraBody.drawOverride" 
-		"modelRN.placeHolderList[27]" "modelRN.placeHolderList[28]" "model:OutlineHair2.do"
+		"modelRN.placeHolderList[25]" "modelRN.placeHolderList[26]" "model:OutlineHair2.do"
 		
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:NoraTho|model:NoraBody|model:NoraBodyShape.outMesh" 
-		"modelRN.placeHolderList[29]" ""
+		"modelRN.placeHolderList[27]" ""
 		5 3 "modelRN" "|Group|Geometry|model:geo|model:NoraBest|model:NoraTho|model:NoraBody|model:NoraBodyShape.worldMesh" 
-		"modelRN.placeHolderList[30]" ""
+		"modelRN.placeHolderList[28]" ""
+		5 0 "modelRN" "model:sky.drawInfo" "|model:aiSkyDomeLight1.drawOverride" 
+		"modelRN.placeHolderList[29]" "modelRN.placeHolderList[30]" "model:aiSkyDomeLight1.do"
+		
 		5 3 "modelRN" "model:eyes.drawInfo" "modelRN.placeHolderList[31]" ""
 		
 		5 4 "modelRN" "model:set5.dagSetMembers" "modelRN.placeHolderList[32]" 
@@ -28215,7 +28216,7 @@ createNode aiOptions -shared -name "defaultArnoldRenderOptions";
 	setAttr ".AASamples" 1;
 	setAttr ".GITransmissionSamples" 1;
 	setAttr ".version" -type "string" "5.4.5";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;";
 createNode aiImagerDenoiserOidn -shared -name "defaultArnoldDenoiser";
 	rename -uuid "0FB30E75-4321-D9BE-AA10-F3935898A704";
 createNode aiAOVFilter -shared -name "defaultArnoldFilter";
@@ -29615,13 +29616,13 @@ createNode dagPose -name "bindPose56";
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[12]" -type "matrix" "xform" 1 1 1 0 0 0 5 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
-	setAttr ".xformMatrix[13]" -type "matrix" "xform" 1 1 1 0 0 0 0 -0 0 0 0 0 0 0
+	setAttr ".xformMatrix[13]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[14]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[15]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
-	setAttr ".xformMatrix[16]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 -0 0 0 0 0 0
+	setAttr ".xformMatrix[16]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[17]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
@@ -29631,11 +29632,11 @@ createNode dagPose -name "bindPose56";
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[20]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
-	setAttr ".xformMatrix[21]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 -0 0 0 0 0
+	setAttr ".xformMatrix[21]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[22]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
-	setAttr ".xformMatrix[23]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 -0 0 0 0 0
+	setAttr ".xformMatrix[23]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[24]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
@@ -29683,7 +29684,7 @@ createNode dagPose -name "bindPose56";
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[46]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
-	setAttr ".xformMatrix[47]" -type "matrix" "xform" 1 1 1 0 0 0 2 -0 0 0 0 0 0 0
+	setAttr ".xformMatrix[47]" -type "matrix" "xform" 1 1 1 0 0 0 2 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[48]" -type "matrix" "xform" 1 1 1 0 0 0 5 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
@@ -29733,17 +29734,17 @@ createNode dagPose -name "bindPose56";
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[71]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
-	setAttr ".xformMatrix[72]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 -0 0 0 0 0
+	setAttr ".xformMatrix[72]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[73]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[74]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
-	setAttr ".xformMatrix[75]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 -0 0 0 0 0
+	setAttr ".xformMatrix[75]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[76]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
-	setAttr ".xformMatrix[77]" -type "matrix" "xform" 1 1 1 0 0 0 0 -0 0 0 0 0 0 0
+	setAttr ".xformMatrix[77]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
 	setAttr ".xformMatrix[78]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
@@ -29779,7 +29780,7 @@ createNode dagPose -name "bindPose56";
 		0 0 0 1 1 1 1 yes;
 	setAttr -size 93 ".members";
 	setAttr -size 93 ".parents";
-	setAttr -size 93 ".global";
+	setAttr -size 3 ".global";
 	setAttr ".global[0]" yes;
 	setAttr ".global[1]" yes;
 	setAttr ".global[93]" yes;
@@ -33303,252 +33304,252 @@ createNode skinCluster -name "skinCluster3";
 		6 9 0.00063441979000344872 21 0.080284074955641507 22 1.5077887796880509e-09 
 		23 0.91861484058971066 24 7.5156840684651533e-06 25 0.00045914747278716356;
 	setAttr -size 88 ".bindPreMatrix";
-	setAttr ".bindPreMatrix[0]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
-	setAttr ".bindPreMatrix[1]" -type "matrix" -0 -0 1 -0 0.99659610431516354 -0.082439097907710771 -0 0
-		 0.082439097907710868 0.99659610431516354 -0 -0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
-	setAttr ".bindPreMatrix[2]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
-	setAttr ".bindPreMatrix[3]" -type "matrix" -0 -0 1 -0 0.99659610431516399 -0.082439097907710812 -0 0
-		 0.082439097907710923 0.99659610431516399 -0 -0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
-	setAttr ".bindPreMatrix[4]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
-	setAttr ".bindPreMatrix[5]" -type "matrix" 0 -0 1 -0 0.98144467562890902 -0.19174553105526851 -0 0
-		 0.19174553105526865 0.9814446756289088 0 -0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
-	setAttr ".bindPreMatrix[6]" -type "matrix" -0 -0 1 -0 0.98144467562890891 -0.1917455310552684 -0 0
-		 0.1917455310552684 0.98144467562890858 0 -0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
-	setAttr ".bindPreMatrix[7]" -type "matrix" -0 -0 1 -0 0.9965961043151631 -0.082439097907710743 -0 0
-		 0.08243909790771084 0.9965961043151631 -0 -0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
-	setAttr ".bindPreMatrix[8]" -type "matrix" -0 -0 1 -0 0.98172550254916213 -0.19030248985390025 -0 0
-		 0.19030248985390036 0.98172550254916224 -0 -0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
-	setAttr ".bindPreMatrix[9]" -type "matrix" 0 -0 1 -0 0.99869188949195753 -0.051132278093041238 -0 0
-		 0.051132278093041265 0.99869188949195764 0 -0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
-	setAttr ".bindPreMatrix[10]" -type "matrix" 0 -0 1 -0 0.98144467562890991 -0.19174553105526893 -0 0
-		 0.19174553105526901 0.98144467562890936 0 -0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
-	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 -0
-		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 -0
+	setAttr ".bindPreMatrix[0]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
+	setAttr ".bindPreMatrix[1]" -type "matrix" 0 0 1 0 0.99659610431516354 -0.082439097907710771 0 0
+		 0.082439097907710868 0.99659610431516354 0 0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
+	setAttr ".bindPreMatrix[2]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
+	setAttr ".bindPreMatrix[3]" -type "matrix" 0 0 1 0 0.99659610431516399 -0.082439097907710812 0 0
+		 0.082439097907710923 0.99659610431516399 0 0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
+	setAttr ".bindPreMatrix[4]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
+	setAttr ".bindPreMatrix[5]" -type "matrix" 0 0 1 0 0.98144467562890902 -0.19174553105526851 0 0
+		 0.19174553105526865 0.9814446756289088 0 0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
+	setAttr ".bindPreMatrix[6]" -type "matrix" 0 0 1 0 0.98144467562890891 -0.1917455310552684 0 0
+		 0.1917455310552684 0.98144467562890858 0 0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
+	setAttr ".bindPreMatrix[7]" -type "matrix" 0 0 1 0 0.9965961043151631 -0.082439097907710743 0 0
+		 0.08243909790771084 0.9965961043151631 0 0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
+	setAttr ".bindPreMatrix[8]" -type "matrix" 0 0 1 0 0.98172550254916213 -0.19030248985390025 0 0
+		 0.19030248985390036 0.98172550254916224 0 0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
+	setAttr ".bindPreMatrix[9]" -type "matrix" 0 0 1 0 0.99869188949195753 -0.051132278093041238 0 0
+		 0.051132278093041265 0.99869188949195764 0 0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
+	setAttr ".bindPreMatrix[10]" -type "matrix" 0 0 1 0 0.98144467562890991 -0.19174553105526893 0 0
+		 0.19174553105526901 0.98144467562890936 0 0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
+	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 0
+		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 0
 		 133.79568083020493 7.5177611410476324 51.751829482427006 1;
-	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 -0
-		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 -0
+	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 0
+		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 0
 		 103.57434158040842 -8.463334792315047 110.28612159483698 1;
-	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 -0
-		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 -0
+	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 0
+		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 0
 		 125.85473488042882 29.46740927454055 20.472348063641281 1;
-	setAttr ".bindPreMatrix[14]" -type "matrix" 0 -0 1 -0 -0.91185412111760744 0.4105143868378261 -0 0
-		 -0.41051438683782615 -0.91185412111760744 0 -0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
-	setAttr ".bindPreMatrix[15]" -type "matrix" 0 -0 1 -0 -0.95916945495750394 0.28283202908532912 -0 0
-		 -0.28283202908532895 -0.95916945495750394 0 -0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
-	setAttr ".bindPreMatrix[16]" -type "matrix" 0 -0 1 -0 -0.91753609536389391 0.39765250370691785 -0 0
-		 -0.39765250370691785 -0.9175360953638938 0 -0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
-	setAttr ".bindPreMatrix[17]" -type "matrix" 0 -0 1 -0 -0.93946861427306017 0.34263497018818262 -0 0
-		 -0.34263497018818284 -0.93946861427306017 0 -0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
-	setAttr ".bindPreMatrix[18]" -type "matrix" 0 -0 1 -0 -0.92732549310256085 0.37425583474689283 -0 0
-		 -0.37425583474689311 -0.92732549310256063 0 -0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
+	setAttr ".bindPreMatrix[14]" -type "matrix" 0 0 1 0 -0.91185412111760744 0.4105143868378261 0 0
+		 -0.41051438683782615 -0.91185412111760744 0 0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
+	setAttr ".bindPreMatrix[15]" -type "matrix" 0 0 1 0 -0.95916945495750394 0.28283202908532912 0 0
+		 -0.28283202908532895 -0.95916945495750394 0 0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
+	setAttr ".bindPreMatrix[16]" -type "matrix" 0 0 1 0 -0.91753609536389391 0.39765250370691785 0 0
+		 -0.39765250370691785 -0.9175360953638938 0 0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
+	setAttr ".bindPreMatrix[17]" -type "matrix" 0 0 1 0 -0.93946861427306017 0.34263497018818262 0 0
+		 -0.34263497018818284 -0.93946861427306017 0 0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
+	setAttr ".bindPreMatrix[18]" -type "matrix" 0 0 1 0 -0.92732549310256085 0.37425583474689283 0 0
+		 -0.37425583474689311 -0.92732549310256063 0 0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
 	setAttr ".bindPreMatrix[19]" -type "matrix" -0.50149054742199073 -0.57171153819303522 -0.64934824858726303 0
-		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 -0
+		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 0
 		 96.431874889197729 -50.494861706156826 -45.911383372962909 1;
 	setAttr ".bindPreMatrix[20]" -type "matrix" -0.24333303631670589 -0.42034270223957648 -0.87412873543364489 0
-		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 -0
+		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 0
 		 100.30764895385705 -33.877086110887774 -29.364739525936272 1;
-	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 -0
+	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 0
 		 0.83970040417574121 -0.50238876926677678 -0.20617651598014664 0 -0.20835177233249991 -0.64865355836195593 0.73200963121415263 0
 		 -96.43187480727245 50.494861994837308 45.911383227537669 1;
-	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 -0
-		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 -0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 -0
+	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 0
+		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 0
 		 -103.57434026371725 8.4633358906566496 -110.28612274711067 1;
-	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 -0
+	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 0
 		 0.91503606458378384 -0.39839941124434664 -0.063141979943449611 0 -0.32171110209880838 -0.81522384602431452 0.48157247394311714 0
 		 -100.30764886902189 33.877086429616995 29.364739476831808 1;
-	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 -0
+	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 0
 		 0.98063959373379073 0.052798068744496378 0.18856922107936186 0 -0.022916332224807275 0.98729129864798681 -0.1572600818114189 0
 		 -133.79568032916322 -7.5177601506741469 -51.751831224805237 1;
-	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 -0
-		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 -0
+	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 0
+		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 0
 		 -125.8547349939906 -29.467408295638041 -20.472349879300378 1;
-	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 -0
-		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 -0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 -0
+	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 0
+		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 0
 		 -34.050662706045586 0.66627029252388281 -103.08607605689102 1;
 	setAttr ".bindPreMatrix[27]" -type "matrix" -0.90099974467557453 -0.042690499845575963 -0.43171400407849159 0
-		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 -0
+		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 0
 		 -13.942256237890504 -1.3900021469788471 -98.008339526396227 1;
 	setAttr ".bindPreMatrix[28]" -type "matrix" -0.82609270443588734 -0.043623314522089174 -0.56184326115733452 0
-		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 -0
+		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 0
 		 49.779845092493083 1.6478018442985809 -98.998313930745269 1;
 	setAttr ".bindPreMatrix[29]" -type "matrix" -0.8264073826962206 0.037188542822660334 -0.56184326115733407 0
-		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 -0
+		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 0
 		 25.123455851769254 -0.80740230140237279 -98.998313930744942 1;
 	setAttr ".bindPreMatrix[30]" -type "matrix" -0.58600553258442001 -0.03298142091352476 -0.80963556101185208 0
-		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 -0
+		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 0
 		 23.186943721424878 0.43130511469000976 -97.55225001823338 1;
-	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 -0
-		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 -0
+	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 0
+		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 0
 		 4.158250507364972 73.798162640407753 -63.670983757913959 1;
 	setAttr ".bindPreMatrix[32]" -type "matrix" -0.55312747182076216 -0.059241104597870735 -0.83098766022318171 0
-		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 -0
+		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 0
 		 23.495089012635304 1.6023562422294408 -96.739593116985958 1;
 	setAttr ".bindPreMatrix[33]" -type "matrix" -0.68645498680549122 -0.0070778227519026939 -0.72713785179631896 0
-		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 -0
+		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 0
 		 13.762267279025494 -0.40863653088361784 -99.729192181398261 1;
-	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 -0
-		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 -0
+	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 0
+		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 0
 		 28.754630524673583 74.649998915870526 -53.725080464253914 1;
 	setAttr ".bindPreMatrix[35]" -type "matrix" -0.74406133134772878 0.087858590255345384 -0.66230929580626363 0
-		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 -0
+		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 0
 		 4.7491983952980483 -3.5708841658519663 -99.679927875834096 1;
 	setAttr ".bindPreMatrix[36]" -type "matrix" -0.67894184077787068 0.10086252680845229 -0.72723086260620995 0
-		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 -0
+		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 0
 		 7.716870641645281 -0.60610271364339963 -99.187357763245089 1;
-	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 -0
-		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 -0
+	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 0
+		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 0
 		 26.190704203262776 73.406226357568556 -58.529874983348286 1;
 	setAttr ".bindPreMatrix[38]" -type "matrix" -0.68765047753172182 0.055669062829509022 -0.72390453527663468 0
-		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 -0
+		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 0
 		 10.061785573238605 -3.1915068775062836 -99.192767035376079 1;
 	setAttr ".bindPreMatrix[39]" -type "matrix" -0.61892476662694029 -0.21827620940220693 -0.7545115172512562 0
-		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 -0
+		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 0
 		 17.033303770021949 9.5105596313829075 -96.977666852403758 1;
 	setAttr ".bindPreMatrix[40]" -type "matrix" -0.85753020433127902 0.25422595500363904 -0.4472260194376485 0
-		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 -0
+		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 0
 		 -14.61728315555149 7.651303606215369 -98.236583236146757 1;
 	setAttr ".bindPreMatrix[41]" -type "matrix" -0.59309425420437567 -0.12812705835112656 -0.79487273355427324 0
-		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 -0
+		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 0
 		 22.132123624293385 6.2850397242643483 -95.77326152561929 1;
 	setAttr ".bindPreMatrix[42]" -type "matrix" -0.51692568591107879 -0.071551441339396615 -0.85303471587480906 0
-		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 -0
+		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 0
 		 31.412399622493179 3.4754466098049672 -94.841662395476519 1;
 	setAttr ".bindPreMatrix[43]" -type "matrix" -0.55044482211798895 -0.17622195161297885 -0.81606146923697487 0
-		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 -0
+		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 0
 		 23.711008822349335 3.0182958680262737 -94.933512216159784 1;
 	setAttr ".bindPreMatrix[44]" -type "matrix" -0.66610917296712713 -0.085420581645840432 -0.74094662015582335 0
-		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 -0
+		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 0
 		 15.795645566627869 3.0963584648545632 -99.060143169231594 1;
 	setAttr ".bindPreMatrix[45]" -type "matrix" -0.82609270473016227 -0.043623306770143845 -0.5618432613265395 0
-		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 -0
+		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 0
 		 -49.779845168607274 -1.6478005862664618 98.99831391551615 1;
 	setAttr ".bindPreMatrix[46]" -type "matrix" -0.41713360267390942 -0.089815904768804924 -0.90439629630535667 0
-		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 -0
+		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 0
 		 38.274453528088991 3.5709798375888711 -91.179939775452297 1;
-	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 -0
-		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 -0
+	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 0
+		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 0
 		 34.050662737506883 -0.66626903249394664 103.08607605464265 1;
 	setAttr ".bindPreMatrix[48]" -type "matrix" -0.58600553323754356 -0.032981429838558771 -0.80963556017555605 0
-		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 -0
+		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 0
 		 -23.186943807168191 -0.43130092087886746 97.552250081131703 1;
-	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 -0
+	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 0
 		 0.56127524838519116 -0.025257561130827152 -0.82724370723255702 0 -0.044954771203624282 -0.99898902323600569 3.1369226369259971e-08 0
 		 -25.123455518269772 0.80740648314929908 98.998313964389936 1;
-	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 -0
-		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 -0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 -0
+	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 0
+		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 0
 		 13.942256186946206 1.390006341807084 98.008339539872722 1;
 	setAttr ".bindPreMatrix[51]" -type "matrix" -0.68645498771967406 -0.0070778316426157624 -0.72713785084674321 0
-		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 -0
+		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 0
 		 -13.76226717963474 0.40864072448457078 99.729192237904371 1;
-	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 -0
+	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 0
 		 0.45849022230919811 0.35974177151728592 -0.81263311147926154 0 -0.71539697008826031 -0.39310059231241512 -0.57764963387174917 0
 		 -4.1582474101333737 -73.798161090618635 63.670986125332306 1;
-	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 -0
+	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 0
 		 0.80012860266318797 0.34310329757113167 -0.49201051451779898 0 -0.38643802765971957 -0.33248643678747181 -0.86030135425374943 0
 		 -28.754628797769474 -74.649997625588071 53.72508406318876 1;
 	setAttr ".bindPreMatrix[54]" -type "matrix" -0.55312747207551394 -0.059241113545791368 -0.83098765941571406 0
-		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 -0
+		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 0
 		 -23.495089301854769 -1.6023520575029819 96.739593178435598 1;
-	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 -0
+	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 0
 		 0.71288380658844053 0.30995673748209535 -0.62906557622670067 0 -0.54662558111255899 -0.31633696655029803 -0.77532663933797152 0
 		 -26.190701812161127 -73.406225139289361 58.529878207908432 1;
-	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 -0
+	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 0
 		 0.72343217490139611 -0.031925712337947131 -0.68965689818137177 0 -0.061503715039628232 -0.99793872823821661 -0.018319053431234234 0
 		 -10.061785180931288 3.1915110519226153 99.192767175742702 1;
-	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 -0
+	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 0
 		 0.65922048829113522 -0.064640646358668827 -0.74916615957711885 0 -0.10863277700713558 -0.99403342825735663 -0.0098215714956213767 0
 		 -4.7491978010108458 3.5708883176633157 99.679927968815861 1;
 	setAttr ".bindPreMatrix[58]" -type "matrix" -0.61892476492831117 -0.21827621815425 -0.75451151611271772 0
-		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 -0
+		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 0
 		 -17.033304911764304 -9.5105555948482419 96.977666805445168 1;
-	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 -0
+	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 0
 		 0.7277890272699542 -0.038073001637481403 -0.68474343978731633 0 -0.096752809343252991 -0.99417161446274438 -0.047557279997159911 0
 		 -7.7168701025320932 0.6061068656539802 99.187358026919654 1;
-	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 -0
+	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 0
 		 0.42953438743592132 -0.12456716864518505 -0.89441781651852625 0 -0.283093894943792 -0.95908924951988761 -0.0023786762981579061 0
 		 14.617284484699253 -7.6512996272522216 98.236583260223568 1;
 	setAttr ".bindPreMatrix[61]" -type "matrix" -0.5930942539473173 -0.12812706724888562 -0.79487273231182975 0
-		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 -0
+		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 0
 		 -22.132124128162825 -6.285035561206084 95.773261405395914 1;
 	setAttr ".bindPreMatrix[62]" -type "matrix" -0.55044482168806652 -0.17622196044364052 -0.81606146762005038 0
-		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 -0
+		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 0
 		 -23.711009428789477 -3.018291728853896 94.933511901716372 1;
 	setAttr ".bindPreMatrix[63]" -type "matrix" -0.51692568629468139 -0.071551450265334438 -0.85303471489365501 0
-		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 -0
+		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 0
 		 -31.412399870203242 -3.4754424221397531 94.841662357272696 1;
 	setAttr ".bindPreMatrix[64]" -type "matrix" -0.66610917303186845 -0.085420590567554064 -0.74094661906907222 0
-		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 -0
+		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 0
 		 -15.79564587749463 -3.0963542812568332 99.060143153983873 1;
 	setAttr ".bindPreMatrix[65]" -type "matrix" -0.4171336029492157 -0.089815913695130603 -0.9043962952918998 0
-		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 -0
+		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 0
 		 -38.274453870709713 -3.5709756577226579 91.179939672064677 1;
-	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 -0
+	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 0
 		 0.024134944584303642 0.97171475424335352 0.23492113748169094 0 -0.072391073202730583 0.23607141673644688 -0.96903550952511708 0
 		 -3.2003206005037299 -77.899988140525451 -35.426609466928412 1;
-	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 -0
-		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 -0
+	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 0
+		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 0
 		 -5.8256849692137029 -49.281346381588165 70.703280241826192 1;
-	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 -0
-		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 -0
+	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 0
+		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 0
 		 -8.3580963631788485 -49.257975202320779 72.143487220581534 1;
-	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 -0
+	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 0
 		 -0.6193742170174974 0.59552734849789857 -0.5115884639874364 0 -0.44204297819871052 -0.80305049690817731 -0.39963471425883962 0
 		 36.840956368518675 -59.799664679232663 39.505162005827856 1;
-	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 -0
-		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 -0 0.41038798450533415 0.8520877198038338 0.3248510734677546 -0
+	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 0
+		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 0 0.41038798450533415 0.8520877198038338 0.3248510734677546 0
 		 8.3580975111938596 49.257975600279963 -72.143487238699251 1;
-	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 -0
+	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 0
 		 -0.60265710922764393 0.61243910081930253 -0.51158846398743674 0 -0.46409634659016252 -0.79051038971092569 -0.39963471425883984 0
 		 20.479416590213244 -60.389514556602585 39.505162005827735 1;
-	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 -0
-		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 -0 0.48347785649071207 0.79841305742548196 0.35886731812139233 -0
+	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 0
+		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 0 0.48347785649071207 0.79841305742548196 0.35886731812139233 0
 		 5.8256861524044696 49.281346656110664 -70.70328020528531 1;
-	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 -0
-		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 -0
+	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 0
+		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 0
 		 -20.479414933073791 60.389513429412489 -39.505165596958264 1;
-	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 -0
-		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 -0
+	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 0
+		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 0
 		 -36.84095471340185 59.799664775226795 -39.505163797210656 1;
-	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 -0
-		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 -0
+	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 0
+		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 0
 		 41.784501041860516 40.712451437911739 1.6176847507577662e-14 1;
-	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 -0
-		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 -0
+	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 0
+		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 0
 		 -31.074005786092126 36.66471765750839 -8.8467899613237008e-16 1;
 	setAttr ".bindPreMatrix[77]" -type "matrix" -3.7919490700984674e-32 3.1511546580459096e-32 -0.99999999999999956 0
-		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 -0
+		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 0
 		 9.3151688497340892 47.152485229179469 1.4851721469859807e-16 1;
 	setAttr ".bindPreMatrix[78]" -type "matrix" -0.00028419380823610187 2.9992216969582393e-05 -0.99999995916717266 0
-		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 -0
+		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 0
 		 58.985979588892484 -4.4158766682246151 -13.624596468617483 1;
-	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 -0
-		 0.34375531853509206 -0.93905925317779471 -0 0 -0.9390592531777946 -0.34375531853509211 -0 0
+	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 0
+		 0.34375531853509206 -0.93905925317779471 0 0 -0.9390592531777946 -0.34375531853509211 0 0
 		 -64.623004546272796 4.2580594527907394 -5.7220339928583523e-14 1;
-	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 -0
+	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 0
 		 0.61925492727793341 -0.78515057620744177 0.0078681461046324046 0 -0.78508720729289649 -0.61930491091313211 -0.0099751824002620431 0
 		 -85.893172476184432 -23.694087232606531 -1.0913438079276407 1;
 	setAttr ".bindPreMatrix[81]" -type "matrix" -0.00028451534118351709 -2.6770774171015668e-05 -0.99999995916717288 0
-		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 -0
+		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 0
 		 33.930587364342692 2.336649372609195 -13.62459646861738 1;
-	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 -0
-		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 -0
+	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 0
+		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 0
 		 7.0394308392255001 2.1387193804494369 -13.558755908727951 1;
-	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 -0
+	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 0
 		 0.99999999999999822 -5.6891626879313423e-08 2.6100846192255774e-09 0 -5.6772812330172001e-08 -0.99944283522543076 -0.033376924911509599 0
 		 -7.0394308430776045 -2.1387194017290247 13.558755904681769 1;
-	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 -0
+	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 0
 		 0.99447729551044795 -0.10495154619430543 -0.000285772024368715 0 -0.10495155047977374 -0.99447733611776756 7.6516148695944865e-14 0
 		 -58.985979590126107 4.4158766529653919 13.624596468222286 1;
-	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 -0
-		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 -0
+	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 0
+		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 0
 		 -6.1647744734161698 -5.9918209040313144 -13.182977783826168 1;
 	setAttr ".bindPreMatrix[86]" -type "matrix" -0.00028451533461715245 -2.6791846275409926e-05 -0.99999995916660989 0
-		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.098082973939466e-08 -0
+		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.0980829739394663e-08 0
 		 -33.930587362535725 -2.3366491006984398 13.624596517463372 1;
-	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 -0
+	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 0
 		 0.38937967170586468 -0.9201800445901811 0.040646731728956789 0 -0.92094114934023663 -0.38970168007102707 1.3050470395927635e-06 0
 		 6.1647744523920922 5.9918208958986678 13.182977798034011 1;
 	setAttr ".geomMatrix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -34347,252 +34348,252 @@ createNode skinCluster -name "skinCluster4";
 		4 2 0.010943881833975246 75 0.60413460630591997 76 0.0083765594675267192 
 		77 0.37654495239257812;
 	setAttr -size 88 ".bindPreMatrix";
-	setAttr ".bindPreMatrix[0]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
-	setAttr ".bindPreMatrix[1]" -type "matrix" -0 -0 1 -0 0.99659610431516354 -0.082439097907710771 -0 0
-		 0.082439097907710868 0.99659610431516354 -0 -0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
-	setAttr ".bindPreMatrix[2]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
-	setAttr ".bindPreMatrix[3]" -type "matrix" -0 -0 1 -0 0.99659610431516399 -0.082439097907710812 -0 0
-		 0.082439097907710923 0.99659610431516399 -0 -0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
-	setAttr ".bindPreMatrix[4]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
-	setAttr ".bindPreMatrix[5]" -type "matrix" 0 -0 1 -0 0.98144467562890902 -0.19174553105526851 -0 0
-		 0.19174553105526865 0.9814446756289088 0 -0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
-	setAttr ".bindPreMatrix[6]" -type "matrix" -0 -0 1 -0 0.98144467562890891 -0.1917455310552684 -0 0
-		 0.1917455310552684 0.98144467562890858 0 -0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
-	setAttr ".bindPreMatrix[7]" -type "matrix" -0 -0 1 -0 0.9965961043151631 -0.082439097907710743 -0 0
-		 0.08243909790771084 0.9965961043151631 -0 -0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
-	setAttr ".bindPreMatrix[8]" -type "matrix" -0 -0 1 -0 0.98172550254916213 -0.19030248985390025 -0 0
-		 0.19030248985390036 0.98172550254916224 -0 -0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
-	setAttr ".bindPreMatrix[9]" -type "matrix" 0 -0 1 -0 0.99869188949195753 -0.051132278093041238 -0 0
-		 0.051132278093041265 0.99869188949195764 0 -0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
-	setAttr ".bindPreMatrix[10]" -type "matrix" 0 -0 1 -0 0.98144467562890991 -0.19174553105526893 -0 0
-		 0.19174553105526901 0.98144467562890936 0 -0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
-	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 -0
-		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 -0
+	setAttr ".bindPreMatrix[0]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
+	setAttr ".bindPreMatrix[1]" -type "matrix" 0 0 1 0 0.99659610431516354 -0.082439097907710771 0 0
+		 0.082439097907710868 0.99659610431516354 0 0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
+	setAttr ".bindPreMatrix[2]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
+	setAttr ".bindPreMatrix[3]" -type "matrix" 0 0 1 0 0.99659610431516399 -0.082439097907710812 0 0
+		 0.082439097907710923 0.99659610431516399 0 0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
+	setAttr ".bindPreMatrix[4]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
+	setAttr ".bindPreMatrix[5]" -type "matrix" 0 0 1 0 0.98144467562890902 -0.19174553105526851 0 0
+		 0.19174553105526865 0.9814446756289088 0 0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
+	setAttr ".bindPreMatrix[6]" -type "matrix" 0 0 1 0 0.98144467562890891 -0.1917455310552684 0 0
+		 0.1917455310552684 0.98144467562890858 0 0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
+	setAttr ".bindPreMatrix[7]" -type "matrix" 0 0 1 0 0.9965961043151631 -0.082439097907710743 0 0
+		 0.08243909790771084 0.9965961043151631 0 0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
+	setAttr ".bindPreMatrix[8]" -type "matrix" 0 0 1 0 0.98172550254916213 -0.19030248985390025 0 0
+		 0.19030248985390036 0.98172550254916224 0 0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
+	setAttr ".bindPreMatrix[9]" -type "matrix" 0 0 1 0 0.99869188949195753 -0.051132278093041238 0 0
+		 0.051132278093041265 0.99869188949195764 0 0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
+	setAttr ".bindPreMatrix[10]" -type "matrix" 0 0 1 0 0.98144467562890991 -0.19174553105526893 0 0
+		 0.19174553105526901 0.98144467562890936 0 0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
+	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 0
+		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 0
 		 133.79568083020493 7.5177611410476324 51.751829482427006 1;
-	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 -0
-		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 -0
+	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 0
+		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 0
 		 103.57434158040842 -8.463334792315047 110.28612159483698 1;
-	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 -0
-		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 -0
+	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 0
+		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 0
 		 125.85473488042882 29.46740927454055 20.472348063641281 1;
-	setAttr ".bindPreMatrix[14]" -type "matrix" 0 -0 1 -0 -0.91185412111760744 0.4105143868378261 -0 0
-		 -0.41051438683782615 -0.91185412111760744 0 -0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
-	setAttr ".bindPreMatrix[15]" -type "matrix" 0 -0 1 -0 -0.95916945495750394 0.28283202908532912 -0 0
-		 -0.28283202908532895 -0.95916945495750394 0 -0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
-	setAttr ".bindPreMatrix[16]" -type "matrix" 0 -0 1 -0 -0.91753609536389391 0.39765250370691785 -0 0
-		 -0.39765250370691785 -0.9175360953638938 0 -0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
-	setAttr ".bindPreMatrix[17]" -type "matrix" 0 -0 1 -0 -0.93946861427306017 0.34263497018818262 -0 0
-		 -0.34263497018818284 -0.93946861427306017 0 -0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
-	setAttr ".bindPreMatrix[18]" -type "matrix" 0 -0 1 -0 -0.92732549310256085 0.37425583474689283 -0 0
-		 -0.37425583474689311 -0.92732549310256063 0 -0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
+	setAttr ".bindPreMatrix[14]" -type "matrix" 0 0 1 0 -0.91185412111760744 0.4105143868378261 0 0
+		 -0.41051438683782615 -0.91185412111760744 0 0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
+	setAttr ".bindPreMatrix[15]" -type "matrix" 0 0 1 0 -0.95916945495750394 0.28283202908532912 0 0
+		 -0.28283202908532895 -0.95916945495750394 0 0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
+	setAttr ".bindPreMatrix[16]" -type "matrix" 0 0 1 0 -0.91753609536389391 0.39765250370691785 0 0
+		 -0.39765250370691785 -0.9175360953638938 0 0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
+	setAttr ".bindPreMatrix[17]" -type "matrix" 0 0 1 0 -0.93946861427306017 0.34263497018818262 0 0
+		 -0.34263497018818284 -0.93946861427306017 0 0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
+	setAttr ".bindPreMatrix[18]" -type "matrix" 0 0 1 0 -0.92732549310256085 0.37425583474689283 0 0
+		 -0.37425583474689311 -0.92732549310256063 0 0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
 	setAttr ".bindPreMatrix[19]" -type "matrix" -0.50149054742199073 -0.57171153819303522 -0.64934824858726303 0
-		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 -0
+		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 0
 		 96.431874889197729 -50.494861706156826 -45.911383372962909 1;
 	setAttr ".bindPreMatrix[20]" -type "matrix" -0.24333303631670589 -0.42034270223957648 -0.87412873543364489 0
-		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 -0
+		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 0
 		 100.30764895385705 -33.877086110887774 -29.364739525936272 1;
-	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 -0
+	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 0
 		 0.83970040417574121 -0.50238876926677678 -0.20617651598014664 0 -0.20835177233249991 -0.64865355836195593 0.73200963121415263 0
 		 -96.43187480727245 50.494861994837308 45.911383227537669 1;
-	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 -0
-		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 -0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 -0
+	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 0
+		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 0
 		 -103.57434026371725 8.4633358906566496 -110.28612274711067 1;
-	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 -0
+	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 0
 		 0.91503606458378384 -0.39839941124434664 -0.063141979943449611 0 -0.32171110209880838 -0.81522384602431452 0.48157247394311714 0
 		 -100.30764886902189 33.877086429616995 29.364739476831808 1;
-	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 -0
+	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 0
 		 0.98063959373379073 0.052798068744496378 0.18856922107936186 0 -0.022916332224807275 0.98729129864798681 -0.1572600818114189 0
 		 -133.79568032916322 -7.5177601506741469 -51.751831224805237 1;
-	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 -0
-		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 -0
+	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 0
+		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 0
 		 -125.8547349939906 -29.467408295638041 -20.472349879300378 1;
-	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 -0
-		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 -0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 -0
+	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 0
+		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 0
 		 -34.050662706045586 0.66627029252388281 -103.08607605689102 1;
 	setAttr ".bindPreMatrix[27]" -type "matrix" -0.90099974467557453 -0.042690499845575963 -0.43171400407849159 0
-		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 -0
+		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 0
 		 -13.942256237890504 -1.3900021469788471 -98.008339526396227 1;
 	setAttr ".bindPreMatrix[28]" -type "matrix" -0.82609270443588734 -0.043623314522089174 -0.56184326115733452 0
-		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 -0
+		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 0
 		 49.779845092493083 1.6478018442985809 -98.998313930745269 1;
 	setAttr ".bindPreMatrix[29]" -type "matrix" -0.8264073826962206 0.037188542822660334 -0.56184326115733407 0
-		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 -0
+		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 0
 		 25.123455851769254 -0.80740230140237279 -98.998313930744942 1;
 	setAttr ".bindPreMatrix[30]" -type "matrix" -0.58600553258442001 -0.03298142091352476 -0.80963556101185208 0
-		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 -0
+		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 0
 		 23.186943721424878 0.43130511469000976 -97.55225001823338 1;
-	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 -0
-		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 -0
+	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 0
+		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 0
 		 4.158250507364972 73.798162640407753 -63.670983757913959 1;
 	setAttr ".bindPreMatrix[32]" -type "matrix" -0.55312747182076216 -0.059241104597870735 -0.83098766022318171 0
-		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 -0
+		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 0
 		 23.495089012635304 1.6023562422294408 -96.739593116985958 1;
 	setAttr ".bindPreMatrix[33]" -type "matrix" -0.68645498680549122 -0.0070778227519026939 -0.72713785179631896 0
-		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 -0
+		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 0
 		 13.762267279025494 -0.40863653088361784 -99.729192181398261 1;
-	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 -0
-		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 -0
+	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 0
+		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 0
 		 28.754630524673583 74.649998915870526 -53.725080464253914 1;
 	setAttr ".bindPreMatrix[35]" -type "matrix" -0.74406133134772878 0.087858590255345384 -0.66230929580626363 0
-		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 -0
+		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 0
 		 4.7491983952980483 -3.5708841658519663 -99.679927875834096 1;
 	setAttr ".bindPreMatrix[36]" -type "matrix" -0.67894184077787068 0.10086252680845229 -0.72723086260620995 0
-		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 -0
+		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 0
 		 7.716870641645281 -0.60610271364339963 -99.187357763245089 1;
-	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 -0
-		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 -0
+	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 0
+		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 0
 		 26.190704203262776 73.406226357568556 -58.529874983348286 1;
 	setAttr ".bindPreMatrix[38]" -type "matrix" -0.68765047753172182 0.055669062829509022 -0.72390453527663468 0
-		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 -0
+		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 0
 		 10.061785573238605 -3.1915068775062836 -99.192767035376079 1;
 	setAttr ".bindPreMatrix[39]" -type "matrix" -0.61892476662694029 -0.21827620940220693 -0.7545115172512562 0
-		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 -0
+		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 0
 		 17.033303770021949 9.5105596313829075 -96.977666852403758 1;
 	setAttr ".bindPreMatrix[40]" -type "matrix" -0.85753020433127902 0.25422595500363904 -0.4472260194376485 0
-		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 -0
+		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 0
 		 -14.61728315555149 7.651303606215369 -98.236583236146757 1;
 	setAttr ".bindPreMatrix[41]" -type "matrix" -0.59309425420437567 -0.12812705835112656 -0.79487273355427324 0
-		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 -0
+		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 0
 		 22.132123624293385 6.2850397242643483 -95.77326152561929 1;
 	setAttr ".bindPreMatrix[42]" -type "matrix" -0.51692568591107879 -0.071551441339396615 -0.85303471587480906 0
-		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 -0
+		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 0
 		 31.412399622493179 3.4754466098049672 -94.841662395476519 1;
 	setAttr ".bindPreMatrix[43]" -type "matrix" -0.55044482211798895 -0.17622195161297885 -0.81606146923697487 0
-		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 -0
+		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 0
 		 23.711008822349335 3.0182958680262737 -94.933512216159784 1;
 	setAttr ".bindPreMatrix[44]" -type "matrix" -0.66610917296712713 -0.085420581645840432 -0.74094662015582335 0
-		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 -0
+		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 0
 		 15.795645566627869 3.0963584648545632 -99.060143169231594 1;
 	setAttr ".bindPreMatrix[45]" -type "matrix" -0.82609270473016227 -0.043623306770143845 -0.5618432613265395 0
-		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 -0
+		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 0
 		 -49.779845168607274 -1.6478005862664618 98.99831391551615 1;
 	setAttr ".bindPreMatrix[46]" -type "matrix" -0.41713360267390942 -0.089815904768804924 -0.90439629630535667 0
-		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 -0
+		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 0
 		 38.274453528088991 3.5709798375888711 -91.179939775452297 1;
-	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 -0
-		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 -0
+	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 0
+		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 0
 		 34.050662737506883 -0.66626903249394664 103.08607605464265 1;
 	setAttr ".bindPreMatrix[48]" -type "matrix" -0.58600553323754356 -0.032981429838558771 -0.80963556017555605 0
-		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 -0
+		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 0
 		 -23.186943807168191 -0.43130092087886746 97.552250081131703 1;
-	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 -0
+	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 0
 		 0.56127524838519116 -0.025257561130827152 -0.82724370723255702 0 -0.044954771203624282 -0.99898902323600569 3.1369226369259971e-08 0
 		 -25.123455518269772 0.80740648314929908 98.998313964389936 1;
-	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 -0
-		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 -0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 -0
+	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 0
+		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 0
 		 13.942256186946206 1.390006341807084 98.008339539872722 1;
 	setAttr ".bindPreMatrix[51]" -type "matrix" -0.68645498771967406 -0.0070778316426157624 -0.72713785084674321 0
-		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 -0
+		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 0
 		 -13.76226717963474 0.40864072448457078 99.729192237904371 1;
-	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 -0
+	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 0
 		 0.45849022230919811 0.35974177151728592 -0.81263311147926154 0 -0.71539697008826031 -0.39310059231241512 -0.57764963387174917 0
 		 -4.1582474101333737 -73.798161090618635 63.670986125332306 1;
-	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 -0
+	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 0
 		 0.80012860266318797 0.34310329757113167 -0.49201051451779898 0 -0.38643802765971957 -0.33248643678747181 -0.86030135425374943 0
 		 -28.754628797769474 -74.649997625588071 53.72508406318876 1;
 	setAttr ".bindPreMatrix[54]" -type "matrix" -0.55312747207551394 -0.059241113545791368 -0.83098765941571406 0
-		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 -0
+		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 0
 		 -23.495089301854769 -1.6023520575029819 96.739593178435598 1;
-	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 -0
+	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 0
 		 0.71288380658844053 0.30995673748209535 -0.62906557622670067 0 -0.54662558111255899 -0.31633696655029803 -0.77532663933797152 0
 		 -26.190701812161127 -73.406225139289361 58.529878207908432 1;
-	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 -0
+	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 0
 		 0.72343217490139611 -0.031925712337947131 -0.68965689818137177 0 -0.061503715039628232 -0.99793872823821661 -0.018319053431234234 0
 		 -10.061785180931288 3.1915110519226153 99.192767175742702 1;
-	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 -0
+	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 0
 		 0.65922048829113522 -0.064640646358668827 -0.74916615957711885 0 -0.10863277700713558 -0.99403342825735663 -0.0098215714956213767 0
 		 -4.7491978010108458 3.5708883176633157 99.679927968815861 1;
 	setAttr ".bindPreMatrix[58]" -type "matrix" -0.61892476492831117 -0.21827621815425 -0.75451151611271772 0
-		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 -0
+		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 0
 		 -17.033304911764304 -9.5105555948482419 96.977666805445168 1;
-	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 -0
+	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 0
 		 0.7277890272699542 -0.038073001637481403 -0.68474343978731633 0 -0.096752809343252991 -0.99417161446274438 -0.047557279997159911 0
 		 -7.7168701025320932 0.6061068656539802 99.187358026919654 1;
-	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 -0
+	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 0
 		 0.42953438743592132 -0.12456716864518505 -0.89441781651852625 0 -0.283093894943792 -0.95908924951988761 -0.0023786762981579061 0
 		 14.617284484699253 -7.6512996272522216 98.236583260223568 1;
 	setAttr ".bindPreMatrix[61]" -type "matrix" -0.5930942539473173 -0.12812706724888562 -0.79487273231182975 0
-		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 -0
+		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 0
 		 -22.132124128162825 -6.285035561206084 95.773261405395914 1;
 	setAttr ".bindPreMatrix[62]" -type "matrix" -0.55044482168806652 -0.17622196044364052 -0.81606146762005038 0
-		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 -0
+		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 0
 		 -23.711009428789477 -3.018291728853896 94.933511901716372 1;
 	setAttr ".bindPreMatrix[63]" -type "matrix" -0.51692568629468139 -0.071551450265334438 -0.85303471489365501 0
-		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 -0
+		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 0
 		 -31.412399870203242 -3.4754424221397531 94.841662357272696 1;
 	setAttr ".bindPreMatrix[64]" -type "matrix" -0.66610917303186845 -0.085420590567554064 -0.74094661906907222 0
-		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 -0
+		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 0
 		 -15.79564587749463 -3.0963542812568332 99.060143153983873 1;
 	setAttr ".bindPreMatrix[65]" -type "matrix" -0.4171336029492157 -0.089815913695130603 -0.9043962952918998 0
-		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 -0
+		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 0
 		 -38.274453870709713 -3.5709756577226579 91.179939672064677 1;
-	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 -0
+	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 0
 		 0.024134944584303642 0.97171475424335352 0.23492113748169094 0 -0.072391073202730583 0.23607141673644688 -0.96903550952511708 0
 		 -3.2003206005037299 -77.899988140525451 -35.426609466928412 1;
-	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 -0
-		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 -0
+	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 0
+		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 0
 		 -5.8256849692137029 -49.281346381588165 70.703280241826192 1;
-	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 -0
-		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 -0
+	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 0
+		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 0
 		 -8.3580963631788485 -49.257975202320779 72.143487220581534 1;
-	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 -0
+	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 0
 		 -0.6193742170174974 0.59552734849789857 -0.5115884639874364 0 -0.44204297819871052 -0.80305049690817731 -0.39963471425883962 0
 		 36.840956368518675 -59.799664679232663 39.505162005827856 1;
-	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 -0
-		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 -0 0.41038798450533415 0.8520877198038338 0.3248510734677546 -0
+	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 0
+		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 0 0.41038798450533415 0.8520877198038338 0.3248510734677546 0
 		 8.3580975111938596 49.257975600279963 -72.143487238699251 1;
-	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 -0
+	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 0
 		 -0.60265710922764393 0.61243910081930253 -0.51158846398743674 0 -0.46409634659016252 -0.79051038971092569 -0.39963471425883984 0
 		 20.479416590213244 -60.389514556602585 39.505162005827735 1;
-	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 -0
-		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 -0 0.48347785649071207 0.79841305742548196 0.35886731812139233 -0
+	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 0
+		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 0 0.48347785649071207 0.79841305742548196 0.35886731812139233 0
 		 5.8256861524044696 49.281346656110664 -70.70328020528531 1;
-	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 -0
-		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 -0
+	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 0
+		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 0
 		 -20.479414933073791 60.389513429412489 -39.505165596958264 1;
-	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 -0
-		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 -0
+	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 0
+		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 0
 		 -36.84095471340185 59.799664775226795 -39.505163797210656 1;
-	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 -0
-		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 -0
+	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 0
+		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 0
 		 41.784501041860516 40.712451437911739 1.6176847507577662e-14 1;
-	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 -0
-		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 -0
+	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 0
+		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 0
 		 -31.074005786092126 36.66471765750839 -8.8467899613237008e-16 1;
 	setAttr ".bindPreMatrix[77]" -type "matrix" -3.7919490700984674e-32 3.1511546580459096e-32 -0.99999999999999956 0
-		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 -0
+		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 0
 		 9.3151688497340892 47.152485229179469 1.4851721469859807e-16 1;
 	setAttr ".bindPreMatrix[78]" -type "matrix" -0.00028419380823610187 2.9992216969582393e-05 -0.99999995916717266 0
-		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 -0
+		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 0
 		 58.985979588892484 -4.4158766682246151 -13.624596468617483 1;
-	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 -0
-		 0.34375531853509206 -0.93905925317779471 -0 0 -0.9390592531777946 -0.34375531853509211 -0 0
+	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 0
+		 0.34375531853509206 -0.93905925317779471 0 0 -0.9390592531777946 -0.34375531853509211 0 0
 		 -64.623004546272796 4.2580594527907394 -5.7220339928583523e-14 1;
-	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 -0
+	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 0
 		 0.61925492727793341 -0.78515057620744177 0.0078681461046324046 0 -0.78508720729289649 -0.61930491091313211 -0.0099751824002620431 0
 		 -85.893172476184432 -23.694087232606531 -1.0913438079276407 1;
 	setAttr ".bindPreMatrix[81]" -type "matrix" -0.00028451534118351709 -2.6770774171015668e-05 -0.99999995916717288 0
-		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 -0
+		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 0
 		 33.930587364342692 2.336649372609195 -13.62459646861738 1;
-	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 -0
-		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 -0
+	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 0
+		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 0
 		 7.0394308392255001 2.1387193804494369 -13.558755908727951 1;
-	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 -0
+	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 0
 		 0.99999999999999822 -5.6891626879313423e-08 2.6100846192255774e-09 0 -5.6772812330172001e-08 -0.99944283522543076 -0.033376924911509599 0
 		 -7.0394308430776045 -2.1387194017290247 13.558755904681769 1;
-	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 -0
+	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 0
 		 0.99447729551044795 -0.10495154619430543 -0.000285772024368715 0 -0.10495155047977374 -0.99447733611776756 7.6516148695944865e-14 0
 		 -58.985979590126107 4.4158766529653919 13.624596468222286 1;
-	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 -0
-		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 -0
+	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 0
+		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 0
 		 -6.1647744734161698 -5.9918209040313144 -13.182977783826168 1;
 	setAttr ".bindPreMatrix[86]" -type "matrix" -0.00028451533461715245 -2.6791846275409926e-05 -0.99999995916660989 0
-		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.098082973939466e-08 -0
+		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.0980829739394663e-08 0
 		 -33.930587362535725 -2.3366491006984398 13.624596517463372 1;
-	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 -0
+	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 0
 		 0.38937967170586468 -0.9201800445901811 0.040646731728956789 0 -0.92094114934023663 -0.38970168007102707 1.3050470395927635e-06 0
 		 6.1647744523920922 5.9918208958986678 13.182977798034011 1;
 	setAttr ".geomMatrix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -34711,7 +34712,7 @@ createNode skinCluster -name "skinCluster5";
 		75 0.11366453269946612 76 8.2000438875490041e-05 77 0.0042193019721981822 
 		79 5.2557473331430596e-06
 		10 0 0.010904081165790558 1 0.011696187515307746 2 0.23471469687438265 
-		3 0.081161042420683158 4 0.01429913534867415 8 1.789642374088113e-06 
+		3 0.081161042420683158 4 0.01429913534867415 8 1.7896423740881132e-06 
 		9 2.0712597017392367e-10 75 0.00019422078554377117 78 0.32351441778789475 
 		84 0.3235144282522231
 		10 0 0.1154484897851944 1 0.015798439180872557 2 0.2023130766510268 
@@ -34771,10 +34772,10 @@ createNode skinCluster -name "skinCluster5";
 		6 2 0.19722328440914708 3 0.00025699037017680161 4 1.3321404424004868e-08 
 		81 0.28774218928220935 84 0.22703530070350805 86 0.2877422219135542
 		9 1 1.6542698398171115e-06 2 0.20519131929797277 3 0.0008450217572567283 
-		4 6.7179479401602293e-07 8 4.359944979921116e-10 75 2.8682634921602433e-05 
+		4 6.7179479401602293e-07 8 4.3599449799211165e-10 75 2.8682634921602433e-05 
 		83 0.12387332739939977 84 0.29775631458806673 86 0.37230300782175418
 		9 1 1.6542698398171115e-06 2 0.20519131929797277 3 0.0008450217572567283 
-		4 6.7179479401602293e-07 8 4.359944979921116e-10 75 2.8682634921602433e-05 
+		4 6.7179479401602293e-07 8 4.3599449799211165e-10 75 2.8682634921602433e-05 
 		78 0.29775631458806673 81 0.37230300782175418 82 0.12387332739939977
 		8 1 2.2035104539519859e-10 2 0.20720370210051509 3 0.00024244324232330577 
 		4 1.4967262984555418e-08 75 0.0049410945126558978 83 0.052687382296787405 
@@ -36787,14 +36788,14 @@ createNode skinCluster -name "skinCluster5";
 		75 5.3688063671484849e-06
 		10 0 0.047368250787258148 1 0.28282434134695628 2 0.022553006581527642 
 		3 0.59411448791134747 4 0.053001976375280181 7 6.6611166071479767e-07 
-		8 0.00013717215276974905 9 1.5301326023752733e-09 50 4.565211311682426e-10 
+		8 0.00013717215276974905 9 1.5301326023752733e-09 50 4.5652113116824265e-10 
 		75 9.674654609338711e-08
 		9 0 0.076671138405799866 1 0.221210797595809 2 0.04503705876384885 
 		3 0.58454997492941418 4 0.072292183163880322 7 9.3083625237767311e-06 
 		8 0.00022953530249827323 9 2.9162748460427351e-09 27 5.5995085991121873e-10
 		10 0 0.047368250787258148 1 0.28282434134695628 2 0.022553006581527642 
 		3 0.59411448791134747 4 0.053001976375280181 7 6.6611166071479767e-07 
-		8 0.00013717215276974905 9 1.5301326023752733e-09 27 4.565211311682426e-10 
+		8 0.00013717215276974905 9 1.5301326023752733e-09 27 4.5652113116824265e-10 
 		75 9.674654609338711e-08
 		10 0 0.057405386120080948 1 0.21709645620992499 2 0.025266712817716922 
 		3 0.63995471301657725 4 0.060085200698940668 7 6.5207662267848321e-07 
@@ -36889,7 +36890,7 @@ createNode skinCluster -name "skinCluster5";
 		68 2.9645766794956788e-10 69 0.22566356942397198 75 0.0010115008504345306 
 		77 3.4001916351782047e-05
 		12 1 0.28315318072229295 2 0.17341700315935651 3 0.32435123611779099 
-		4 9.9092663731426001e-05 7 9.1544706953218347e-06 8 9.66398421828663e-05 
+		4 9.9092663731426001e-05 7 9.1544706953218347e-06 8 9.6639842182866313e-05 
 		9 1.7250351671910426e-08 27 7.9542042471920273e-09 66 0.087105582517552696 
 		69 0.12615783961775101 75 0.0055442436268149931 77 6.6002057275226455e-05
 		13 1 0.3894242514824543 2 0.087996572697723624 3 0.24007284857355363 
@@ -36989,19 +36990,19 @@ createNode skinCluster -name "skinCluster5";
 		66 0.014729669759974662 67 2.4980336316630846e-08 69 0.15386031927310256
 		11 1 0.46155874858690377 2 0.01327907700508634 3 0.058265356462433408 
 		4 0.0050021144561469555 7 0.12438355455650525 8 0.0067155359170448306 
-		9 1.1307544051897744e-07 27 1.099408361556811e-07 66 0.20658473078446973 
+		9 1.1307544051897744e-07 27 1.0994083615568111e-07 66 0.20658473078446973 
 		69 0.12420919845299838 75 1.4607621345348108e-06
 		12 1 0.20944146839636502 2 0.013709811752255703 3 0.060511499469688035 
 		4 0.00049556751037016511 7 0.046709041631910871 8 0.0036636838922653645 
-		9 1.2972290634950081e-07 27 1.109714563601966e-07 66 0.64470610521574345 
-		68 1.038694995257056e-08 69 0.020676051403460214 75 8.6519646628549171e-05
+		9 1.2972290634950081e-07 27 1.1097145636019661e-07 66 0.64470610521574345 
+		68 1.0386949952570562e-08 69 0.020676051403460214 75 8.6519646628549171e-05
 		12 1 0.20944146839636502 2 0.013709811752255703 3 0.060511499469688035 
 		4 0.00049556751037016511 7 0.046709041631910871 8 0.0036636838922653645 
-		9 1.2972290634950081e-07 50 1.109714563601966e-07 66 0.64470610521574345 
-		70 1.038694995257056e-08 74 0.020676051403460214 75 8.6519646628549171e-05
+		9 1.2972290634950081e-07 50 1.1097145636019661e-07 66 0.64470610521574345 
+		70 1.0386949952570562e-08 74 0.020676051403460214 75 8.6519646628549171e-05
 		11 1 0.46155874858690377 2 0.01327907700508634 3 0.058265356462433408 
 		4 0.0050021144561469555 7 0.12438355455650525 8 0.0067155359170448306 
-		9 1.1307544051897744e-07 50 1.099408361556811e-07 66 0.20658473078446973 
+		9 1.1307544051897744e-07 50 1.0994083615568111e-07 66 0.20658473078446973 
 		74 0.12420919845299838 75 1.4607621345348108e-06
 		12 0 0.00031428725924342871 1 0.56527149136574495 2 0.018613530950840833 
 		3 0.06445246384156067 4 0.026160352922566934 7 0.14204254785975276 
@@ -37030,7 +37031,7 @@ createNode skinCluster -name "skinCluster5";
 		9 1.2962078346175451e-07 27 8.6881092887369952e-08
 		10 0 0.00015714362962171435 1 0.53033279768637731 2 0.0063259647913025503 
 		3 0.040622526128931573 4 0.02055012993228025 7 0.37203738093449612 
-		8 0.029941557131187731 9 2.4804512048359179e-07 27 2.19651769638966e-07 
+		8 0.029941557131187731 9 2.4804512048359179e-07 27 2.1965176963896602e-07 
 		66 3.2032068912720468e-05
 		5 1 0.37780873417301353 3 0.058145426757284617 4 0.0091460160911083221 
 		7 0.55188755502229658 66 0.0030122679562969209
@@ -37054,7 +37055,7 @@ createNode skinCluster -name "skinCluster5";
 		7 0.55188755502229658 66 0.0030122679562969209
 		10 0 0.00015714362962171435 1 0.53033279768637731 2 0.0063259647913025503 
 		3 0.040622526128931573 4 0.02055012993228025 7 0.37203738093449612 
-		8 0.029941557131187731 9 2.4804512048359179e-07 50 2.19651769638966e-07 
+		8 0.029941557131187731 9 2.4804512048359179e-07 50 2.1965176963896602e-07 
 		66 3.2032068912720468e-05
 		8 1 0.60570145738232106 2 0.0037244046095689007 3 0.018490236193345159 
 		4 0.0013636798830702901 7 0.32521195776163164 8 0.045507288095024447 
@@ -37665,7 +37666,7 @@ createNode skinCluster -name "skinCluster5";
 		8 0.95776985192128716 9 0.00056625586746306708 50 6.0372948737590916e-06
 		7 2 1.8856419119748838e-10 3 3.4088413940480677e-06 5 0.024802678407708605 
 		6 0.081669083481191243 8 0.89200001869025469 9 0.0015146351218919985 
-		27 1.017526899531504e-05
+		27 1.0175268995315041e-05
 		6 3 1.3265531606521108e-06 5 0.011009344598182905 6 0.030647183765032369 
 		8 0.95776985192128716 9 0.00056625586746306708 27 6.0372948737590916e-06
 		8 2 2.3410755778091432e-10 3 1.0853926113441048e-07 6 0.34077771287509723 
@@ -37765,7 +37766,7 @@ createNode skinCluster -name "skinCluster5";
 		8 3 2.82344263524692e-08 8 0.032652943404463605 9 0.00018190570060777755 
 		19 0.030807412777854034 26 0.045531889196352308 27 0.0022599595225113226 
 		28 0.87299871811299123 29 0.015567143050793484
-		8 2 2.204095596331068e-10 3 5.6468852704938399e-08 8 0.11522168760538713 
+		8 2 2.2040955963310683e-10 3 5.6468852704938399e-08 8 0.11522168760538713 
 		9 0.0003706919339594724 45 0.4977404716105871 47 0.38467844326893108 
 		49 0.0011329416041917974 50 0.00085570728768125874
 		9 2 7.2502685579475118e-10 3 7.4685272011265624e-07 8 0.12275287281822708 
@@ -37774,7 +37775,7 @@ createNode skinCluster -name "skinCluster5";
 		9 2 7.2502685579475118e-10 3 7.4685272011265624e-07 8 0.12275287281822708 
 		9 0.00044419907518695881 19 0.059594061109887485 26 0.14566931057484706 
 		27 0.0012466753612021529 28 0.66603660729395564 29 0.0042555261889466308
-		8 2 2.204095596331068e-10 3 5.6468852704938399e-08 8 0.11522168760538713 
+		8 2 2.2040955963310683e-10 3 5.6468852704938399e-08 8 0.11522168760538713 
 		9 0.0003706919339594724 26 0.38467844326893108 27 0.00085570728768125874 
 		28 0.4977404716105871 29 0.0011329416041917974
 		5 8 8.1300095189362764e-06 9 7.338014875838441e-07 45 0.33820014308476531 
@@ -38430,7 +38431,7 @@ createNode skinCluster -name "skinCluster5";
 		3 1 0.00017228000566025514 7 0.00019543105736374855 8 0.99963228893697598
 		4 1 0.0078900542153855988 3 4.3426238963212063e-07 7 0.020040510222315788 
 		8 0.97206900129990903
-		9 1 0.0070402282337360903 2 1.480246593508863e-06 3 5.5141323777481125e-06 
+		9 1 0.0070402282337360903 2 1.4802465935088628e-06 3 5.5141323777481125e-06 
 		7 0.033706851303577423 8 0.91248022334001289 9 2.7605818865574236e-05 
 		26 0.020045383684022634 27 2.5059938980513916e-05 28 0.026667653301833672
 		4 1 0.0042388864823522526 3 5.5880230044129599e-05 7 0.021916383877396584 
@@ -38451,7 +38452,7 @@ createNode skinCluster -name "skinCluster5";
 		8 0.97896885813326451
 		4 1 0.0042388864823522526 3 5.5880230044129599e-05 7 0.021916383877396584 
 		8 0.97378884941020705
-		9 1 0.0070402282337360903 2 1.480246593508863e-06 3 5.5141323777481125e-06 
+		9 1 0.0070402282337360903 2 1.4802465935088628e-06 3 5.5141323777481125e-06 
 		7 0.033706851303577423 8 0.91248022334001289 9 2.7605818865574236e-05 
 		45 0.026667653301833672 47 0.020045383684022634 50 2.5059938980513916e-05
 		4 1 0.0078900542153855988 3 4.3426238963212063e-07 7 0.020040510222315788 
@@ -39151,7 +39152,7 @@ createNode skinCluster -name "skinCluster5";
 		4 1.8043599993688986e-05 7 0.00026675517839488212 8 0.0001241486495776741 
 		9 1.5407473029950286e-08 27 1.1892373931573201e-08 66 0.17750828272841138 
 		67 0.0058073359787700349 68 3.9909686876812284e-10 69 0.72674107527572607 
-		75 0.0028749560964969 77 2.309883158660367e-05
+		75 0.0028749560964969 77 2.3098831586603673e-05
 		2 4 2.9043298127362505e-05 69 0.99997095670187264
 		2 4 4.6115064833429642e-06 69 0.99999538849351666
 		2 4 1.4641494772149599e-07 69 0.99999985358505228
@@ -39289,7 +39290,7 @@ createNode skinCluster -name "skinCluster5";
 		2 67 0.55867603421211243 68 0.44132396578788757
 		3 66 5.6149398005800322e-05 67 0.99409536986371583 68 0.0058484807382784224
 		13 1 0.00056132748665156163 2 0.00068315246074265716 3 0.016244040308294273 
-		4 2.4437674994715053e-08 7 8.0643258435369222e-07 8 1.605219297848166e-06 
+		4 2.4437674994715053e-08 7 8.0643258435369222e-07 8 1.6052192978481662e-06 
 		9 2.009185829087219e-09 27 1.0942870162403273e-09 66 0.025007390957268442 
 		67 0.75761394960918671 68 0.00988203728636519 69 0.19000551996743176 
 		75 1.4273102943804058e-07
@@ -39386,7 +39387,7 @@ createNode skinCluster -name "skinCluster5";
 		4 1.8043599993688986e-05 7 0.00026675517839488212 8 0.0001241486495776741 
 		9 1.5407473029950286e-08 50 1.1892373931573201e-08 66 0.17750828272841138 
 		70 3.9909686876812284e-10 72 0.0058073359787700349 74 0.72674107527572607 
-		75 0.0028749560964969 77 2.309883158660367e-05
+		75 0.0028749560964969 77 2.3098831586603673e-05
 		2 4 2.9043298127362505e-05 74 0.99997095670187264
 		2 4 4.6115064833429642e-06 74 0.99999538849351666
 		2 4 1.4641494772149599e-07 74 0.99999985358505228
@@ -39524,7 +39525,7 @@ createNode skinCluster -name "skinCluster5";
 		2 70 0.44132396578788757 72 0.55867603421211243
 		3 66 5.6149398005800322e-05 70 0.0058484807382784224 72 0.99409536986371583
 		13 1 0.00056132748665156163 2 0.00068315246074265716 3 0.016244040308294273 
-		4 2.4437674994715053e-08 7 8.0643258435369222e-07 8 1.605219297848166e-06 
+		4 2.4437674994715053e-08 7 8.0643258435369222e-07 8 1.6052192978481662e-06 
 		9 2.009185829087219e-09 50 1.0942870162403273e-09 66 0.025007390957268442 
 		70 0.00988203728636519 72 0.75761394960918671 74 0.19000551996743176 
 		75 1.4273102943804058e-07
@@ -42275,252 +42276,252 @@ createNode skinCluster -name "skinCluster5";
 		4 5 0.23922225292104957 6 0.14087448722174239 9 0.36231076717376709 
 		10 0.25759249268344092;
 	setAttr -size 88 ".bindPreMatrix";
-	setAttr ".bindPreMatrix[0]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
-	setAttr ".bindPreMatrix[1]" -type "matrix" -0 -0 1 -0 0.99659610431516354 -0.082439097907710771 -0 0
-		 0.082439097907710868 0.99659610431516354 -0 -0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
-	setAttr ".bindPreMatrix[2]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
-	setAttr ".bindPreMatrix[3]" -type "matrix" -0 -0 1 -0 0.99659610431516399 -0.082439097907710812 -0 0
-		 0.082439097907710923 0.99659610431516399 -0 -0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
-	setAttr ".bindPreMatrix[4]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
-	setAttr ".bindPreMatrix[5]" -type "matrix" 0 -0 1 -0 0.98144467562890902 -0.19174553105526851 -0 0
-		 0.19174553105526865 0.9814446756289088 0 -0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
-	setAttr ".bindPreMatrix[6]" -type "matrix" -0 -0 1 -0 0.98144467562890891 -0.1917455310552684 -0 0
-		 0.1917455310552684 0.98144467562890858 0 -0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
-	setAttr ".bindPreMatrix[7]" -type "matrix" -0 -0 1 -0 0.9965961043151631 -0.082439097907710743 -0 0
-		 0.08243909790771084 0.9965961043151631 -0 -0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
-	setAttr ".bindPreMatrix[8]" -type "matrix" -0 -0 1 -0 0.98172550254916213 -0.19030248985390025 -0 0
-		 0.19030248985390036 0.98172550254916224 -0 -0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
-	setAttr ".bindPreMatrix[9]" -type "matrix" 0 -0 1 -0 0.99869188949195753 -0.051132278093041238 -0 0
-		 0.051132278093041265 0.99869188949195764 0 -0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
-	setAttr ".bindPreMatrix[10]" -type "matrix" 0 -0 1 -0 0.98144467562890991 -0.19174553105526893 -0 0
-		 0.19174553105526901 0.98144467562890936 0 -0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
-	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 -0
-		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 -0
+	setAttr ".bindPreMatrix[0]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
+	setAttr ".bindPreMatrix[1]" -type "matrix" 0 0 1 0 0.99659610431516354 -0.082439097907710771 0 0
+		 0.082439097907710868 0.99659610431516354 0 0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
+	setAttr ".bindPreMatrix[2]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
+	setAttr ".bindPreMatrix[3]" -type "matrix" 0 0 1 0 0.99659610431516399 -0.082439097907710812 0 0
+		 0.082439097907710923 0.99659610431516399 0 0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
+	setAttr ".bindPreMatrix[4]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
+	setAttr ".bindPreMatrix[5]" -type "matrix" 0 0 1 0 0.98144467562890902 -0.19174553105526851 0 0
+		 0.19174553105526865 0.9814446756289088 0 0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
+	setAttr ".bindPreMatrix[6]" -type "matrix" 0 0 1 0 0.98144467562890891 -0.1917455310552684 0 0
+		 0.1917455310552684 0.98144467562890858 0 0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
+	setAttr ".bindPreMatrix[7]" -type "matrix" 0 0 1 0 0.9965961043151631 -0.082439097907710743 0 0
+		 0.08243909790771084 0.9965961043151631 0 0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
+	setAttr ".bindPreMatrix[8]" -type "matrix" 0 0 1 0 0.98172550254916213 -0.19030248985390025 0 0
+		 0.19030248985390036 0.98172550254916224 0 0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
+	setAttr ".bindPreMatrix[9]" -type "matrix" 0 0 1 0 0.99869188949195753 -0.051132278093041238 0 0
+		 0.051132278093041265 0.99869188949195764 0 0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
+	setAttr ".bindPreMatrix[10]" -type "matrix" 0 0 1 0 0.98144467562890991 -0.19174553105526893 0 0
+		 0.19174553105526901 0.98144467562890936 0 0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
+	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 0
+		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 0
 		 133.79568083020493 7.5177611410476324 51.751829482427006 1;
-	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 -0
-		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 -0
+	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 0
+		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 0
 		 103.57434158040842 -8.463334792315047 110.28612159483698 1;
-	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 -0
-		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 -0
+	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 0
+		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 0
 		 125.85473488042882 29.46740927454055 20.472348063641281 1;
-	setAttr ".bindPreMatrix[14]" -type "matrix" 0 -0 1 -0 -0.91185412111760744 0.4105143868378261 -0 0
-		 -0.41051438683782615 -0.91185412111760744 0 -0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
-	setAttr ".bindPreMatrix[15]" -type "matrix" 0 -0 1 -0 -0.95916945495750394 0.28283202908532912 -0 0
-		 -0.28283202908532895 -0.95916945495750394 0 -0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
-	setAttr ".bindPreMatrix[16]" -type "matrix" 0 -0 1 -0 -0.91753609536389391 0.39765250370691785 -0 0
-		 -0.39765250370691785 -0.9175360953638938 0 -0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
-	setAttr ".bindPreMatrix[17]" -type "matrix" 0 -0 1 -0 -0.93946861427306017 0.34263497018818262 -0 0
-		 -0.34263497018818284 -0.93946861427306017 0 -0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
-	setAttr ".bindPreMatrix[18]" -type "matrix" 0 -0 1 -0 -0.92732549310256085 0.37425583474689283 -0 0
-		 -0.37425583474689311 -0.92732549310256063 0 -0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
+	setAttr ".bindPreMatrix[14]" -type "matrix" 0 0 1 0 -0.91185412111760744 0.4105143868378261 0 0
+		 -0.41051438683782615 -0.91185412111760744 0 0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
+	setAttr ".bindPreMatrix[15]" -type "matrix" 0 0 1 0 -0.95916945495750394 0.28283202908532912 0 0
+		 -0.28283202908532895 -0.95916945495750394 0 0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
+	setAttr ".bindPreMatrix[16]" -type "matrix" 0 0 1 0 -0.91753609536389391 0.39765250370691785 0 0
+		 -0.39765250370691785 -0.9175360953638938 0 0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
+	setAttr ".bindPreMatrix[17]" -type "matrix" 0 0 1 0 -0.93946861427306017 0.34263497018818262 0 0
+		 -0.34263497018818284 -0.93946861427306017 0 0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
+	setAttr ".bindPreMatrix[18]" -type "matrix" 0 0 1 0 -0.92732549310256085 0.37425583474689283 0 0
+		 -0.37425583474689311 -0.92732549310256063 0 0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
 	setAttr ".bindPreMatrix[19]" -type "matrix" -0.50149054742199073 -0.57171153819303522 -0.64934824858726303 0
-		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 -0
+		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 0
 		 96.431874889197729 -50.494861706156826 -45.911383372962909 1;
 	setAttr ".bindPreMatrix[20]" -type "matrix" -0.24333303631670589 -0.42034270223957648 -0.87412873543364489 0
-		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 -0
+		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 0
 		 100.30764895385705 -33.877086110887774 -29.364739525936272 1;
-	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 -0
+	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 0
 		 0.83970040417574121 -0.50238876926677678 -0.20617651598014664 0 -0.20835177233249991 -0.64865355836195593 0.73200963121415263 0
 		 -96.43187480727245 50.494861994837308 45.911383227537669 1;
-	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 -0
-		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 -0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 -0
+	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 0
+		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 0
 		 -103.57434026371725 8.4633358906566496 -110.28612274711067 1;
-	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 -0
+	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 0
 		 0.91503606458378384 -0.39839941124434664 -0.063141979943449611 0 -0.32171110209880838 -0.81522384602431452 0.48157247394311714 0
 		 -100.30764886902189 33.877086429616995 29.364739476831808 1;
-	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 -0
+	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 0
 		 0.98063959373379073 0.052798068744496378 0.18856922107936186 0 -0.022916332224807275 0.98729129864798681 -0.1572600818114189 0
 		 -133.79568032916322 -7.5177601506741469 -51.751831224805237 1;
-	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 -0
-		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 -0
+	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 0
+		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 0
 		 -125.8547349939906 -29.467408295638041 -20.472349879300378 1;
-	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 -0
-		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 -0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 -0
+	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 0
+		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 0
 		 -34.050662706045586 0.66627029252388281 -103.08607605689102 1;
 	setAttr ".bindPreMatrix[27]" -type "matrix" -0.90099974467557453 -0.042690499845575963 -0.43171400407849159 0
-		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 -0
+		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 0
 		 -13.942256237890504 -1.3900021469788471 -98.008339526396227 1;
 	setAttr ".bindPreMatrix[28]" -type "matrix" -0.82609270443588734 -0.043623314522089174 -0.56184326115733452 0
-		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 -0
+		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 0
 		 49.779845092493083 1.6478018442985809 -98.998313930745269 1;
 	setAttr ".bindPreMatrix[29]" -type "matrix" -0.8264073826962206 0.037188542822660334 -0.56184326115733407 0
-		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 -0
+		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 0
 		 25.123455851769254 -0.80740230140237279 -98.998313930744942 1;
 	setAttr ".bindPreMatrix[30]" -type "matrix" -0.58600553258442001 -0.03298142091352476 -0.80963556101185208 0
-		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 -0
+		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 0
 		 23.186943721424878 0.43130511469000976 -97.55225001823338 1;
-	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 -0
-		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 -0
+	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 0
+		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 0
 		 4.158250507364972 73.798162640407753 -63.670983757913959 1;
 	setAttr ".bindPreMatrix[32]" -type "matrix" -0.55312747182076216 -0.059241104597870735 -0.83098766022318171 0
-		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 -0
+		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 0
 		 23.495089012635304 1.6023562422294408 -96.739593116985958 1;
 	setAttr ".bindPreMatrix[33]" -type "matrix" -0.68645498680549122 -0.0070778227519026939 -0.72713785179631896 0
-		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 -0
+		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 0
 		 13.762267279025494 -0.40863653088361784 -99.729192181398261 1;
-	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 -0
-		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 -0
+	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 0
+		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 0
 		 28.754630524673583 74.649998915870526 -53.725080464253914 1;
 	setAttr ".bindPreMatrix[35]" -type "matrix" -0.74406133134772878 0.087858590255345384 -0.66230929580626363 0
-		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 -0
+		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 0
 		 4.7491983952980483 -3.5708841658519663 -99.679927875834096 1;
 	setAttr ".bindPreMatrix[36]" -type "matrix" -0.67894184077787068 0.10086252680845229 -0.72723086260620995 0
-		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 -0
+		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 0
 		 7.716870641645281 -0.60610271364339963 -99.187357763245089 1;
-	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 -0
-		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 -0
+	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 0
+		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 0
 		 26.190704203262776 73.406226357568556 -58.529874983348286 1;
 	setAttr ".bindPreMatrix[38]" -type "matrix" -0.68765047753172182 0.055669062829509022 -0.72390453527663468 0
-		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 -0
+		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 0
 		 10.061785573238605 -3.1915068775062836 -99.192767035376079 1;
 	setAttr ".bindPreMatrix[39]" -type "matrix" -0.61892476662694029 -0.21827620940220693 -0.7545115172512562 0
-		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 -0
+		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 0
 		 17.033303770021949 9.5105596313829075 -96.977666852403758 1;
 	setAttr ".bindPreMatrix[40]" -type "matrix" -0.85753020433127902 0.25422595500363904 -0.4472260194376485 0
-		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 -0
+		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 0
 		 -14.61728315555149 7.651303606215369 -98.236583236146757 1;
 	setAttr ".bindPreMatrix[41]" -type "matrix" -0.59309425420437567 -0.12812705835112656 -0.79487273355427324 0
-		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 -0
+		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 0
 		 22.132123624293385 6.2850397242643483 -95.77326152561929 1;
 	setAttr ".bindPreMatrix[42]" -type "matrix" -0.51692568591107879 -0.071551441339396615 -0.85303471587480906 0
-		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 -0
+		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 0
 		 31.412399622493179 3.4754466098049672 -94.841662395476519 1;
 	setAttr ".bindPreMatrix[43]" -type "matrix" -0.55044482211798895 -0.17622195161297885 -0.81606146923697487 0
-		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 -0
+		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 0
 		 23.711008822349335 3.0182958680262737 -94.933512216159784 1;
 	setAttr ".bindPreMatrix[44]" -type "matrix" -0.66610917296712713 -0.085420581645840432 -0.74094662015582335 0
-		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 -0
+		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 0
 		 15.795645566627869 3.0963584648545632 -99.060143169231594 1;
 	setAttr ".bindPreMatrix[45]" -type "matrix" -0.82609270473016227 -0.043623306770143845 -0.5618432613265395 0
-		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 -0
+		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 0
 		 -49.779845168607274 -1.6478005862664618 98.99831391551615 1;
 	setAttr ".bindPreMatrix[46]" -type "matrix" -0.41713360267390942 -0.089815904768804924 -0.90439629630535667 0
-		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 -0
+		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 0
 		 38.274453528088991 3.5709798375888711 -91.179939775452297 1;
-	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 -0
-		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 -0
+	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 0
+		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 0
 		 34.050662737506883 -0.66626903249394664 103.08607605464265 1;
 	setAttr ".bindPreMatrix[48]" -type "matrix" -0.58600553323754356 -0.032981429838558771 -0.80963556017555605 0
-		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 -0
+		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 0
 		 -23.186943807168191 -0.43130092087886746 97.552250081131703 1;
-	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 -0
+	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 0
 		 0.56127524838519116 -0.025257561130827152 -0.82724370723255702 0 -0.044954771203624282 -0.99898902323600569 3.1369226369259971e-08 0
 		 -25.123455518269772 0.80740648314929908 98.998313964389936 1;
-	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 -0
-		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 -0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 -0
+	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 0
+		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 0
 		 13.942256186946206 1.390006341807084 98.008339539872722 1;
 	setAttr ".bindPreMatrix[51]" -type "matrix" -0.68645498771967406 -0.0070778316426157624 -0.72713785084674321 0
-		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 -0
+		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 0
 		 -13.76226717963474 0.40864072448457078 99.729192237904371 1;
-	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 -0
+	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 0
 		 0.45849022230919811 0.35974177151728592 -0.81263311147926154 0 -0.71539697008826031 -0.39310059231241512 -0.57764963387174917 0
 		 -4.1582474101333737 -73.798161090618635 63.670986125332306 1;
-	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 -0
+	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 0
 		 0.80012860266318797 0.34310329757113167 -0.49201051451779898 0 -0.38643802765971957 -0.33248643678747181 -0.86030135425374943 0
 		 -28.754628797769474 -74.649997625588071 53.72508406318876 1;
 	setAttr ".bindPreMatrix[54]" -type "matrix" -0.55312747207551394 -0.059241113545791368 -0.83098765941571406 0
-		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 -0
+		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 0
 		 -23.495089301854769 -1.6023520575029819 96.739593178435598 1;
-	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 -0
+	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 0
 		 0.71288380658844053 0.30995673748209535 -0.62906557622670067 0 -0.54662558111255899 -0.31633696655029803 -0.77532663933797152 0
 		 -26.190701812161127 -73.406225139289361 58.529878207908432 1;
-	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 -0
+	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 0
 		 0.72343217490139611 -0.031925712337947131 -0.68965689818137177 0 -0.061503715039628232 -0.99793872823821661 -0.018319053431234234 0
 		 -10.061785180931288 3.1915110519226153 99.192767175742702 1;
-	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 -0
+	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 0
 		 0.65922048829113522 -0.064640646358668827 -0.74916615957711885 0 -0.10863277700713558 -0.99403342825735663 -0.0098215714956213767 0
 		 -4.7491978010108458 3.5708883176633157 99.679927968815861 1;
 	setAttr ".bindPreMatrix[58]" -type "matrix" -0.61892476492831117 -0.21827621815425 -0.75451151611271772 0
-		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 -0
+		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 0
 		 -17.033304911764304 -9.5105555948482419 96.977666805445168 1;
-	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 -0
+	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 0
 		 0.7277890272699542 -0.038073001637481403 -0.68474343978731633 0 -0.096752809343252991 -0.99417161446274438 -0.047557279997159911 0
 		 -7.7168701025320932 0.6061068656539802 99.187358026919654 1;
-	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 -0
+	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 0
 		 0.42953438743592132 -0.12456716864518505 -0.89441781651852625 0 -0.283093894943792 -0.95908924951988761 -0.0023786762981579061 0
 		 14.617284484699253 -7.6512996272522216 98.236583260223568 1;
 	setAttr ".bindPreMatrix[61]" -type "matrix" -0.5930942539473173 -0.12812706724888562 -0.79487273231182975 0
-		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 -0
+		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 0
 		 -22.132124128162825 -6.285035561206084 95.773261405395914 1;
 	setAttr ".bindPreMatrix[62]" -type "matrix" -0.55044482168806652 -0.17622196044364052 -0.81606146762005038 0
-		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 -0
+		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 0
 		 -23.711009428789477 -3.018291728853896 94.933511901716372 1;
 	setAttr ".bindPreMatrix[63]" -type "matrix" -0.51692568629468139 -0.071551450265334438 -0.85303471489365501 0
-		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 -0
+		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 0
 		 -31.412399870203242 -3.4754424221397531 94.841662357272696 1;
 	setAttr ".bindPreMatrix[64]" -type "matrix" -0.66610917303186845 -0.085420590567554064 -0.74094661906907222 0
-		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 -0
+		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 0
 		 -15.79564587749463 -3.0963542812568332 99.060143153983873 1;
 	setAttr ".bindPreMatrix[65]" -type "matrix" -0.4171336029492157 -0.089815913695130603 -0.9043962952918998 0
-		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 -0
+		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 0
 		 -38.274453870709713 -3.5709756577226579 91.179939672064677 1;
-	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 -0
+	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 0
 		 0.024134944584303642 0.97171475424335352 0.23492113748169094 0 -0.072391073202730583 0.23607141673644688 -0.96903550952511708 0
 		 -3.2003206005037299 -77.899988140525451 -35.426609466928412 1;
-	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 -0
-		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 -0
+	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 0
+		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 0
 		 -5.8256849692137029 -49.281346381588165 70.703280241826192 1;
-	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 -0
-		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 -0
+	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 0
+		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 0
 		 -8.3580963631788485 -49.257975202320779 72.143487220581534 1;
-	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 -0
+	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 0
 		 -0.6193742170174974 0.59552734849789857 -0.5115884639874364 0 -0.44204297819871052 -0.80305049690817731 -0.39963471425883962 0
 		 36.840956368518675 -59.799664679232663 39.505162005827856 1;
-	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 -0
-		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 -0 0.41038798450533415 0.8520877198038338 0.3248510734677546 -0
+	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 0
+		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 0 0.41038798450533415 0.8520877198038338 0.3248510734677546 0
 		 8.3580975111938596 49.257975600279963 -72.143487238699251 1;
-	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 -0
+	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 0
 		 -0.60265710922764393 0.61243910081930253 -0.51158846398743674 0 -0.46409634659016252 -0.79051038971092569 -0.39963471425883984 0
 		 20.479416590213244 -60.389514556602585 39.505162005827735 1;
-	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 -0
-		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 -0 0.48347785649071207 0.79841305742548196 0.35886731812139233 -0
+	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 0
+		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 0 0.48347785649071207 0.79841305742548196 0.35886731812139233 0
 		 5.8256861524044696 49.281346656110664 -70.70328020528531 1;
-	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 -0
-		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 -0
+	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 0
+		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 0
 		 -20.479414933073791 60.389513429412489 -39.505165596958264 1;
-	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 -0
-		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 -0
+	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 0
+		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 0
 		 -36.84095471340185 59.799664775226795 -39.505163797210656 1;
-	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 -0
-		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 -0
+	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 0
+		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 0
 		 41.784501041860516 40.712451437911739 1.6176847507577662e-14 1;
-	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 -0
-		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 -0
+	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 0
+		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 0
 		 -31.074005786092126 36.66471765750839 -8.8467899613237008e-16 1;
 	setAttr ".bindPreMatrix[77]" -type "matrix" -3.7919490700984674e-32 3.1511546580459096e-32 -0.99999999999999956 0
-		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 -0
+		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 0
 		 9.3151688497340892 47.152485229179469 1.4851721469859807e-16 1;
 	setAttr ".bindPreMatrix[78]" -type "matrix" -0.00028419380823610187 2.9992216969582393e-05 -0.99999995916717266 0
-		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 -0
+		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 0
 		 58.985979588892484 -4.4158766682246151 -13.624596468617483 1;
-	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 -0
-		 0.34375531853509206 -0.93905925317779471 -0 0 -0.9390592531777946 -0.34375531853509211 -0 0
+	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 0
+		 0.34375531853509206 -0.93905925317779471 0 0 -0.9390592531777946 -0.34375531853509211 0 0
 		 -64.623004546272796 4.2580594527907394 -5.7220339928583523e-14 1;
-	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 -0
+	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 0
 		 0.61925492727793341 -0.78515057620744177 0.0078681461046324046 0 -0.78508720729289649 -0.61930491091313211 -0.0099751824002620431 0
 		 -85.893172476184432 -23.694087232606531 -1.0913438079276407 1;
 	setAttr ".bindPreMatrix[81]" -type "matrix" -0.00028451534118351709 -2.6770774171015668e-05 -0.99999995916717288 0
-		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 -0
+		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 0
 		 33.930587364342692 2.336649372609195 -13.62459646861738 1;
-	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 -0
-		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 -0
+	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 0
+		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 0
 		 7.0394308392255001 2.1387193804494369 -13.558755908727951 1;
-	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 -0
+	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 0
 		 0.99999999999999822 -5.6891626879313423e-08 2.6100846192255774e-09 0 -5.6772812330172001e-08 -0.99944283522543076 -0.033376924911509599 0
 		 -7.0394308430776045 -2.1387194017290247 13.558755904681769 1;
-	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 -0
+	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 0
 		 0.99447729551044795 -0.10495154619430543 -0.000285772024368715 0 -0.10495155047977374 -0.99447733611776756 7.6516148695944865e-14 0
 		 -58.985979590126107 4.4158766529653919 13.624596468222286 1;
-	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 -0
-		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 -0
+	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 0
+		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 0
 		 -6.1647744734161698 -5.9918209040313144 -13.182977783826168 1;
 	setAttr ".bindPreMatrix[86]" -type "matrix" -0.00028451533461715245 -2.6791846275409926e-05 -0.99999995916660989 0
-		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.098082973939466e-08 -0
+		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.0980829739394663e-08 0
 		 -33.930587362535725 -2.3366491006984398 13.624596517463372 1;
-	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 -0
+	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 0
 		 0.38937967170586468 -0.9201800445901811 0.040646731728956789 0 -0.92094114934023663 -0.38970168007102707 1.3050470395927635e-06 0
 		 6.1647744523920922 5.9918208958986678 13.182977798034011 1;
 	setAttr ".geomMatrix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -43319,252 +43320,252 @@ createNode skinCluster -name "skinCluster7";
 		4 2 0.010943881833975246 75 0.60413460630591997 76 0.0083765594675267192 
 		77 0.37654495239257812;
 	setAttr -size 88 ".bindPreMatrix";
-	setAttr ".bindPreMatrix[0]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
-	setAttr ".bindPreMatrix[1]" -type "matrix" -0 -0 1 -0 0.99659610431516354 -0.082439097907710771 -0 0
-		 0.082439097907710868 0.99659610431516354 -0 -0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
-	setAttr ".bindPreMatrix[2]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
-	setAttr ".bindPreMatrix[3]" -type "matrix" -0 -0 1 -0 0.99659610431516399 -0.082439097907710812 -0 0
-		 0.082439097907710923 0.99659610431516399 -0 -0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
-	setAttr ".bindPreMatrix[4]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
-	setAttr ".bindPreMatrix[5]" -type "matrix" 0 -0 1 -0 0.98144467562890902 -0.19174553105526851 -0 0
-		 0.19174553105526865 0.9814446756289088 0 -0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
-	setAttr ".bindPreMatrix[6]" -type "matrix" -0 -0 1 -0 0.98144467562890891 -0.1917455310552684 -0 0
-		 0.1917455310552684 0.98144467562890858 0 -0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
-	setAttr ".bindPreMatrix[7]" -type "matrix" -0 -0 1 -0 0.9965961043151631 -0.082439097907710743 -0 0
-		 0.08243909790771084 0.9965961043151631 -0 -0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
-	setAttr ".bindPreMatrix[8]" -type "matrix" -0 -0 1 -0 0.98172550254916213 -0.19030248985390025 -0 0
-		 0.19030248985390036 0.98172550254916224 -0 -0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
-	setAttr ".bindPreMatrix[9]" -type "matrix" 0 -0 1 -0 0.99869188949195753 -0.051132278093041238 -0 0
-		 0.051132278093041265 0.99869188949195764 0 -0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
-	setAttr ".bindPreMatrix[10]" -type "matrix" 0 -0 1 -0 0.98144467562890991 -0.19174553105526893 -0 0
-		 0.19174553105526901 0.98144467562890936 0 -0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
-	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 -0
-		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 -0
+	setAttr ".bindPreMatrix[0]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
+	setAttr ".bindPreMatrix[1]" -type "matrix" 0 0 1 0 0.99659610431516354 -0.082439097907710771 0 0
+		 0.082439097907710868 0.99659610431516354 0 0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
+	setAttr ".bindPreMatrix[2]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
+	setAttr ".bindPreMatrix[3]" -type "matrix" 0 0 1 0 0.99659610431516399 -0.082439097907710812 0 0
+		 0.082439097907710923 0.99659610431516399 0 0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
+	setAttr ".bindPreMatrix[4]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
+	setAttr ".bindPreMatrix[5]" -type "matrix" 0 0 1 0 0.98144467562890902 -0.19174553105526851 0 0
+		 0.19174553105526865 0.9814446756289088 0 0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
+	setAttr ".bindPreMatrix[6]" -type "matrix" 0 0 1 0 0.98144467562890891 -0.1917455310552684 0 0
+		 0.1917455310552684 0.98144467562890858 0 0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
+	setAttr ".bindPreMatrix[7]" -type "matrix" 0 0 1 0 0.9965961043151631 -0.082439097907710743 0 0
+		 0.08243909790771084 0.9965961043151631 0 0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
+	setAttr ".bindPreMatrix[8]" -type "matrix" 0 0 1 0 0.98172550254916213 -0.19030248985390025 0 0
+		 0.19030248985390036 0.98172550254916224 0 0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
+	setAttr ".bindPreMatrix[9]" -type "matrix" 0 0 1 0 0.99869188949195753 -0.051132278093041238 0 0
+		 0.051132278093041265 0.99869188949195764 0 0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
+	setAttr ".bindPreMatrix[10]" -type "matrix" 0 0 1 0 0.98144467562890991 -0.19174553105526893 0 0
+		 0.19174553105526901 0.98144467562890936 0 0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
+	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 0
+		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 0
 		 133.79568083020493 7.5177611410476324 51.751829482427006 1;
-	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 -0
-		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 -0
+	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 0
+		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 0
 		 103.57434158040842 -8.463334792315047 110.28612159483698 1;
-	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 -0
-		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 -0
+	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 0
+		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 0
 		 125.85473488042882 29.46740927454055 20.472348063641281 1;
-	setAttr ".bindPreMatrix[14]" -type "matrix" 0 -0 1 -0 -0.91185412111760744 0.4105143868378261 -0 0
-		 -0.41051438683782615 -0.91185412111760744 0 -0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
-	setAttr ".bindPreMatrix[15]" -type "matrix" 0 -0 1 -0 -0.95916945495750394 0.28283202908532912 -0 0
-		 -0.28283202908532895 -0.95916945495750394 0 -0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
-	setAttr ".bindPreMatrix[16]" -type "matrix" 0 -0 1 -0 -0.91753609536389391 0.39765250370691785 -0 0
-		 -0.39765250370691785 -0.9175360953638938 0 -0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
-	setAttr ".bindPreMatrix[17]" -type "matrix" 0 -0 1 -0 -0.93946861427306017 0.34263497018818262 -0 0
-		 -0.34263497018818284 -0.93946861427306017 0 -0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
-	setAttr ".bindPreMatrix[18]" -type "matrix" 0 -0 1 -0 -0.92732549310256085 0.37425583474689283 -0 0
-		 -0.37425583474689311 -0.92732549310256063 0 -0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
+	setAttr ".bindPreMatrix[14]" -type "matrix" 0 0 1 0 -0.91185412111760744 0.4105143868378261 0 0
+		 -0.41051438683782615 -0.91185412111760744 0 0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
+	setAttr ".bindPreMatrix[15]" -type "matrix" 0 0 1 0 -0.95916945495750394 0.28283202908532912 0 0
+		 -0.28283202908532895 -0.95916945495750394 0 0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
+	setAttr ".bindPreMatrix[16]" -type "matrix" 0 0 1 0 -0.91753609536389391 0.39765250370691785 0 0
+		 -0.39765250370691785 -0.9175360953638938 0 0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
+	setAttr ".bindPreMatrix[17]" -type "matrix" 0 0 1 0 -0.93946861427306017 0.34263497018818262 0 0
+		 -0.34263497018818284 -0.93946861427306017 0 0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
+	setAttr ".bindPreMatrix[18]" -type "matrix" 0 0 1 0 -0.92732549310256085 0.37425583474689283 0 0
+		 -0.37425583474689311 -0.92732549310256063 0 0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
 	setAttr ".bindPreMatrix[19]" -type "matrix" -0.50149054742199073 -0.57171153819303522 -0.64934824858726303 0
-		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 -0
+		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 0
 		 96.431874889197729 -50.494861706156826 -45.911383372962909 1;
 	setAttr ".bindPreMatrix[20]" -type "matrix" -0.24333303631670589 -0.42034270223957648 -0.87412873543364489 0
-		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 -0
+		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 0
 		 100.30764895385705 -33.877086110887774 -29.364739525936272 1;
-	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 -0
+	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 0
 		 0.83970040417574121 -0.50238876926677678 -0.20617651598014664 0 -0.20835177233249991 -0.64865355836195593 0.73200963121415263 0
 		 -96.43187480727245 50.494861994837308 45.911383227537669 1;
-	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 -0
-		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 -0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 -0
+	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 0
+		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 0
 		 -103.57434026371725 8.4633358906566496 -110.28612274711067 1;
-	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 -0
+	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 0
 		 0.91503606458378384 -0.39839941124434664 -0.063141979943449611 0 -0.32171110209880838 -0.81522384602431452 0.48157247394311714 0
 		 -100.30764886902189 33.877086429616995 29.364739476831808 1;
-	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 -0
+	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 0
 		 0.98063959373379073 0.052798068744496378 0.18856922107936186 0 -0.022916332224807275 0.98729129864798681 -0.1572600818114189 0
 		 -133.79568032916322 -7.5177601506741469 -51.751831224805237 1;
-	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 -0
-		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 -0
+	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 0
+		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 0
 		 -125.8547349939906 -29.467408295638041 -20.472349879300378 1;
-	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 -0
-		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 -0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 -0
+	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 0
+		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 0
 		 -34.050662706045586 0.66627029252388281 -103.08607605689102 1;
 	setAttr ".bindPreMatrix[27]" -type "matrix" -0.90099974467557453 -0.042690499845575963 -0.43171400407849159 0
-		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 -0
+		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 0
 		 -13.942256237890504 -1.3900021469788471 -98.008339526396227 1;
 	setAttr ".bindPreMatrix[28]" -type "matrix" -0.82609270443588734 -0.043623314522089174 -0.56184326115733452 0
-		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 -0
+		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 0
 		 49.779845092493083 1.6478018442985809 -98.998313930745269 1;
 	setAttr ".bindPreMatrix[29]" -type "matrix" -0.8264073826962206 0.037188542822660334 -0.56184326115733407 0
-		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 -0
+		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 0
 		 25.123455851769254 -0.80740230140237279 -98.998313930744942 1;
 	setAttr ".bindPreMatrix[30]" -type "matrix" -0.58600553258442001 -0.03298142091352476 -0.80963556101185208 0
-		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 -0
+		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 0
 		 23.186943721424878 0.43130511469000976 -97.55225001823338 1;
-	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 -0
-		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 -0
+	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 0
+		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 0
 		 4.158250507364972 73.798162640407753 -63.670983757913959 1;
 	setAttr ".bindPreMatrix[32]" -type "matrix" -0.55312747182076216 -0.059241104597870735 -0.83098766022318171 0
-		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 -0
+		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 0
 		 23.495089012635304 1.6023562422294408 -96.739593116985958 1;
 	setAttr ".bindPreMatrix[33]" -type "matrix" -0.68645498680549122 -0.0070778227519026939 -0.72713785179631896 0
-		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 -0
+		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 0
 		 13.762267279025494 -0.40863653088361784 -99.729192181398261 1;
-	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 -0
-		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 -0
+	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 0
+		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 0
 		 28.754630524673583 74.649998915870526 -53.725080464253914 1;
 	setAttr ".bindPreMatrix[35]" -type "matrix" -0.74406133134772878 0.087858590255345384 -0.66230929580626363 0
-		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 -0
+		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 0
 		 4.7491983952980483 -3.5708841658519663 -99.679927875834096 1;
 	setAttr ".bindPreMatrix[36]" -type "matrix" -0.67894184077787068 0.10086252680845229 -0.72723086260620995 0
-		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 -0
+		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 0
 		 7.716870641645281 -0.60610271364339963 -99.187357763245089 1;
-	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 -0
-		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 -0
+	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 0
+		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 0
 		 26.190704203262776 73.406226357568556 -58.529874983348286 1;
 	setAttr ".bindPreMatrix[38]" -type "matrix" -0.68765047753172182 0.055669062829509022 -0.72390453527663468 0
-		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 -0
+		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 0
 		 10.061785573238605 -3.1915068775062836 -99.192767035376079 1;
 	setAttr ".bindPreMatrix[39]" -type "matrix" -0.61892476662694029 -0.21827620940220693 -0.7545115172512562 0
-		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 -0
+		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 0
 		 17.033303770021949 9.5105596313829075 -96.977666852403758 1;
 	setAttr ".bindPreMatrix[40]" -type "matrix" -0.85753020433127902 0.25422595500363904 -0.4472260194376485 0
-		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 -0
+		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 0
 		 -14.61728315555149 7.651303606215369 -98.236583236146757 1;
 	setAttr ".bindPreMatrix[41]" -type "matrix" -0.59309425420437567 -0.12812705835112656 -0.79487273355427324 0
-		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 -0
+		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 0
 		 22.132123624293385 6.2850397242643483 -95.77326152561929 1;
 	setAttr ".bindPreMatrix[42]" -type "matrix" -0.51692568591107879 -0.071551441339396615 -0.85303471587480906 0
-		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 -0
+		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 0
 		 31.412399622493179 3.4754466098049672 -94.841662395476519 1;
 	setAttr ".bindPreMatrix[43]" -type "matrix" -0.55044482211798895 -0.17622195161297885 -0.81606146923697487 0
-		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 -0
+		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 0
 		 23.711008822349335 3.0182958680262737 -94.933512216159784 1;
 	setAttr ".bindPreMatrix[44]" -type "matrix" -0.66610917296712713 -0.085420581645840432 -0.74094662015582335 0
-		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 -0
+		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 0
 		 15.795645566627869 3.0963584648545632 -99.060143169231594 1;
 	setAttr ".bindPreMatrix[45]" -type "matrix" -0.82609270473016227 -0.043623306770143845 -0.5618432613265395 0
-		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 -0
+		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 0
 		 -49.779845168607274 -1.6478005862664618 98.99831391551615 1;
 	setAttr ".bindPreMatrix[46]" -type "matrix" -0.41713360267390942 -0.089815904768804924 -0.90439629630535667 0
-		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 -0
+		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 0
 		 38.274453528088991 3.5709798375888711 -91.179939775452297 1;
-	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 -0
-		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 -0
+	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 0
+		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 0
 		 34.050662737506883 -0.66626903249394664 103.08607605464265 1;
 	setAttr ".bindPreMatrix[48]" -type "matrix" -0.58600553323754356 -0.032981429838558771 -0.80963556017555605 0
-		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 -0
+		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 0
 		 -23.186943807168191 -0.43130092087886746 97.552250081131703 1;
-	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 -0
+	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 0
 		 0.56127524838519116 -0.025257561130827152 -0.82724370723255702 0 -0.044954771203624282 -0.99898902323600569 3.1369226369259971e-08 0
 		 -25.123455518269772 0.80740648314929908 98.998313964389936 1;
-	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 -0
-		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 -0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 -0
+	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 0
+		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 0
 		 13.942256186946206 1.390006341807084 98.008339539872722 1;
 	setAttr ".bindPreMatrix[51]" -type "matrix" -0.68645498771967406 -0.0070778316426157624 -0.72713785084674321 0
-		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 -0
+		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 0
 		 -13.76226717963474 0.40864072448457078 99.729192237904371 1;
-	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 -0
+	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 0
 		 0.45849022230919811 0.35974177151728592 -0.81263311147926154 0 -0.71539697008826031 -0.39310059231241512 -0.57764963387174917 0
 		 -4.1582474101333737 -73.798161090618635 63.670986125332306 1;
-	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 -0
+	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 0
 		 0.80012860266318797 0.34310329757113167 -0.49201051451779898 0 -0.38643802765971957 -0.33248643678747181 -0.86030135425374943 0
 		 -28.754628797769474 -74.649997625588071 53.72508406318876 1;
 	setAttr ".bindPreMatrix[54]" -type "matrix" -0.55312747207551394 -0.059241113545791368 -0.83098765941571406 0
-		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 -0
+		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 0
 		 -23.495089301854769 -1.6023520575029819 96.739593178435598 1;
-	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 -0
+	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 0
 		 0.71288380658844053 0.30995673748209535 -0.62906557622670067 0 -0.54662558111255899 -0.31633696655029803 -0.77532663933797152 0
 		 -26.190701812161127 -73.406225139289361 58.529878207908432 1;
-	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 -0
+	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 0
 		 0.72343217490139611 -0.031925712337947131 -0.68965689818137177 0 -0.061503715039628232 -0.99793872823821661 -0.018319053431234234 0
 		 -10.061785180931288 3.1915110519226153 99.192767175742702 1;
-	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 -0
+	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 0
 		 0.65922048829113522 -0.064640646358668827 -0.74916615957711885 0 -0.10863277700713558 -0.99403342825735663 -0.0098215714956213767 0
 		 -4.7491978010108458 3.5708883176633157 99.679927968815861 1;
 	setAttr ".bindPreMatrix[58]" -type "matrix" -0.61892476492831117 -0.21827621815425 -0.75451151611271772 0
-		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 -0
+		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 0
 		 -17.033304911764304 -9.5105555948482419 96.977666805445168 1;
-	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 -0
+	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 0
 		 0.7277890272699542 -0.038073001637481403 -0.68474343978731633 0 -0.096752809343252991 -0.99417161446274438 -0.047557279997159911 0
 		 -7.7168701025320932 0.6061068656539802 99.187358026919654 1;
-	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 -0
+	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 0
 		 0.42953438743592132 -0.12456716864518505 -0.89441781651852625 0 -0.283093894943792 -0.95908924951988761 -0.0023786762981579061 0
 		 14.617284484699253 -7.6512996272522216 98.236583260223568 1;
 	setAttr ".bindPreMatrix[61]" -type "matrix" -0.5930942539473173 -0.12812706724888562 -0.79487273231182975 0
-		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 -0
+		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 0
 		 -22.132124128162825 -6.285035561206084 95.773261405395914 1;
 	setAttr ".bindPreMatrix[62]" -type "matrix" -0.55044482168806652 -0.17622196044364052 -0.81606146762005038 0
-		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 -0
+		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 0
 		 -23.711009428789477 -3.018291728853896 94.933511901716372 1;
 	setAttr ".bindPreMatrix[63]" -type "matrix" -0.51692568629468139 -0.071551450265334438 -0.85303471489365501 0
-		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 -0
+		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 0
 		 -31.412399870203242 -3.4754424221397531 94.841662357272696 1;
 	setAttr ".bindPreMatrix[64]" -type "matrix" -0.66610917303186845 -0.085420590567554064 -0.74094661906907222 0
-		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 -0
+		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 0
 		 -15.79564587749463 -3.0963542812568332 99.060143153983873 1;
 	setAttr ".bindPreMatrix[65]" -type "matrix" -0.4171336029492157 -0.089815913695130603 -0.9043962952918998 0
-		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 -0
+		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 0
 		 -38.274453870709713 -3.5709756577226579 91.179939672064677 1;
-	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 -0
+	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 0
 		 0.024134944584303642 0.97171475424335352 0.23492113748169094 0 -0.072391073202730583 0.23607141673644688 -0.96903550952511708 0
 		 -3.2003206005037299 -77.899988140525451 -35.426609466928412 1;
-	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 -0
-		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 -0
+	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 0
+		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 0
 		 -5.8256849692137029 -49.281346381588165 70.703280241826192 1;
-	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 -0
-		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 -0
+	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 0
+		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 0
 		 -8.3580963631788485 -49.257975202320779 72.143487220581534 1;
-	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 -0
+	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 0
 		 -0.6193742170174974 0.59552734849789857 -0.5115884639874364 0 -0.44204297819871052 -0.80305049690817731 -0.39963471425883962 0
 		 36.840956368518675 -59.799664679232663 39.505162005827856 1;
-	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 -0
-		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 -0 0.41038798450533415 0.8520877198038338 0.3248510734677546 -0
+	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 0
+		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 0 0.41038798450533415 0.8520877198038338 0.3248510734677546 0
 		 8.3580975111938596 49.257975600279963 -72.143487238699251 1;
-	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 -0
+	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 0
 		 -0.60265710922764393 0.61243910081930253 -0.51158846398743674 0 -0.46409634659016252 -0.79051038971092569 -0.39963471425883984 0
 		 20.479416590213244 -60.389514556602585 39.505162005827735 1;
-	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 -0
-		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 -0 0.48347785649071207 0.79841305742548196 0.35886731812139233 -0
+	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 0
+		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 0 0.48347785649071207 0.79841305742548196 0.35886731812139233 0
 		 5.8256861524044696 49.281346656110664 -70.70328020528531 1;
-	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 -0
-		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 -0
+	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 0
+		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 0
 		 -20.479414933073791 60.389513429412489 -39.505165596958264 1;
-	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 -0
-		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 -0
+	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 0
+		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 0
 		 -36.84095471340185 59.799664775226795 -39.505163797210656 1;
-	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 -0
-		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 -0
+	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 0
+		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 0
 		 41.784501041860516 40.712451437911739 1.6176847507577662e-14 1;
-	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 -0
-		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 -0
+	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 0
+		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 0
 		 -31.074005786092126 36.66471765750839 -8.8467899613237008e-16 1;
 	setAttr ".bindPreMatrix[77]" -type "matrix" -3.7919490700984674e-32 3.1511546580459096e-32 -0.99999999999999956 0
-		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 -0
+		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 0
 		 9.3151688497340892 47.152485229179469 1.4851721469859807e-16 1;
 	setAttr ".bindPreMatrix[78]" -type "matrix" -0.00028419380823610187 2.9992216969582393e-05 -0.99999995916717266 0
-		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 -0
+		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 0
 		 58.985979588892484 -4.4158766682246151 -13.624596468617483 1;
-	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 -0
-		 0.34375531853509206 -0.93905925317779471 -0 0 -0.9390592531777946 -0.34375531853509211 -0 0
+	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 0
+		 0.34375531853509206 -0.93905925317779471 0 0 -0.9390592531777946 -0.34375531853509211 0 0
 		 -64.623004546272796 4.2580594527907394 -5.7220339928583523e-14 1;
-	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 -0
+	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 0
 		 0.61925492727793341 -0.78515057620744177 0.0078681461046324046 0 -0.78508720729289649 -0.61930491091313211 -0.0099751824002620431 0
 		 -85.893172476184432 -23.694087232606531 -1.0913438079276407 1;
 	setAttr ".bindPreMatrix[81]" -type "matrix" -0.00028451534118351709 -2.6770774171015668e-05 -0.99999995916717288 0
-		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 -0
+		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 0
 		 33.930587364342692 2.336649372609195 -13.62459646861738 1;
-	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 -0
-		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 -0
+	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 0
+		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 0
 		 7.0394308392255001 2.1387193804494369 -13.558755908727951 1;
-	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 -0
+	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 0
 		 0.99999999999999822 -5.6891626879313423e-08 2.6100846192255774e-09 0 -5.6772812330172001e-08 -0.99944283522543076 -0.033376924911509599 0
 		 -7.0394308430776045 -2.1387194017290247 13.558755904681769 1;
-	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 -0
+	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 0
 		 0.99447729551044795 -0.10495154619430543 -0.000285772024368715 0 -0.10495155047977374 -0.99447733611776756 7.6516148695944865e-14 0
 		 -58.985979590126107 4.4158766529653919 13.624596468222286 1;
-	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 -0
-		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 -0
+	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 0
+		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 0
 		 -6.1647744734161698 -5.9918209040313144 -13.182977783826168 1;
 	setAttr ".bindPreMatrix[86]" -type "matrix" -0.00028451533461715245 -2.6791846275409926e-05 -0.99999995916660989 0
-		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.098082973939466e-08 -0
+		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.0980829739394663e-08 0
 		 -33.930587362535725 -2.3366491006984398 13.624596517463372 1;
-	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 -0
+	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 0
 		 0.38937967170586468 -0.9201800445901811 0.040646731728956789 0 -0.92094114934023663 -0.38970168007102707 1.3050470395927635e-06 0
 		 6.1647744523920922 5.9918208958986678 13.182977798034011 1;
 	setAttr ".geomMatrix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -47093,252 +47094,252 @@ createNode skinCluster -name "skinCluster6";
 		4 9 0.011650210246443748 22 0.37761910360481243 24 0.49167644200310606 
 		25 0.11905424414563771;
 	setAttr -size 88 ".bindPreMatrix";
-	setAttr ".bindPreMatrix[0]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
-	setAttr ".bindPreMatrix[1]" -type "matrix" -0 -0 1 -0 0.99659610431516354 -0.082439097907710771 -0 0
-		 0.082439097907710868 0.99659610431516354 -0 -0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
-	setAttr ".bindPreMatrix[2]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
-	setAttr ".bindPreMatrix[3]" -type "matrix" -0 -0 1 -0 0.99659610431516399 -0.082439097907710812 -0 0
-		 0.082439097907710923 0.99659610431516399 -0 -0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
-	setAttr ".bindPreMatrix[4]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
-	setAttr ".bindPreMatrix[5]" -type "matrix" 0 -0 1 -0 0.98144467562890902 -0.19174553105526851 -0 0
-		 0.19174553105526865 0.9814446756289088 0 -0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
-	setAttr ".bindPreMatrix[6]" -type "matrix" -0 -0 1 -0 0.98144467562890891 -0.1917455310552684 -0 0
-		 0.1917455310552684 0.98144467562890858 0 -0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
-	setAttr ".bindPreMatrix[7]" -type "matrix" -0 -0 1 -0 0.9965961043151631 -0.082439097907710743 -0 0
-		 0.08243909790771084 0.9965961043151631 -0 -0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
-	setAttr ".bindPreMatrix[8]" -type "matrix" -0 -0 1 -0 0.98172550254916213 -0.19030248985390025 -0 0
-		 0.19030248985390036 0.98172550254916224 -0 -0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
-	setAttr ".bindPreMatrix[9]" -type "matrix" 0 -0 1 -0 0.99869188949195753 -0.051132278093041238 -0 0
-		 0.051132278093041265 0.99869188949195764 0 -0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
-	setAttr ".bindPreMatrix[10]" -type "matrix" 0 -0 1 -0 0.98144467562890991 -0.19174553105526893 -0 0
-		 0.19174553105526901 0.98144467562890936 0 -0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
-	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 -0
-		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 -0
+	setAttr ".bindPreMatrix[0]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
+	setAttr ".bindPreMatrix[1]" -type "matrix" 0 0 1 0 0.99659610431516354 -0.082439097907710771 0 0
+		 0.082439097907710868 0.99659610431516354 0 0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
+	setAttr ".bindPreMatrix[2]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
+	setAttr ".bindPreMatrix[3]" -type "matrix" 0 0 1 0 0.99659610431516399 -0.082439097907710812 0 0
+		 0.082439097907710923 0.99659610431516399 0 0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
+	setAttr ".bindPreMatrix[4]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
+	setAttr ".bindPreMatrix[5]" -type "matrix" 0 0 1 0 0.98144467562890902 -0.19174553105526851 0 0
+		 0.19174553105526865 0.9814446756289088 0 0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
+	setAttr ".bindPreMatrix[6]" -type "matrix" 0 0 1 0 0.98144467562890891 -0.1917455310552684 0 0
+		 0.1917455310552684 0.98144467562890858 0 0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
+	setAttr ".bindPreMatrix[7]" -type "matrix" 0 0 1 0 0.9965961043151631 -0.082439097907710743 0 0
+		 0.08243909790771084 0.9965961043151631 0 0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
+	setAttr ".bindPreMatrix[8]" -type "matrix" 0 0 1 0 0.98172550254916213 -0.19030248985390025 0 0
+		 0.19030248985390036 0.98172550254916224 0 0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
+	setAttr ".bindPreMatrix[9]" -type "matrix" 0 0 1 0 0.99869188949195753 -0.051132278093041238 0 0
+		 0.051132278093041265 0.99869188949195764 0 0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
+	setAttr ".bindPreMatrix[10]" -type "matrix" 0 0 1 0 0.98144467562890991 -0.19174553105526893 0 0
+		 0.19174553105526901 0.98144467562890936 0 0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
+	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 0
+		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 0
 		 133.79568083020493 7.5177611410476324 51.751829482427006 1;
-	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 -0
-		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 -0
+	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 0
+		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 0
 		 103.57434158040842 -8.463334792315047 110.28612159483698 1;
-	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 -0
-		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 -0
+	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 0
+		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 0
 		 125.85473488042882 29.46740927454055 20.472348063641281 1;
-	setAttr ".bindPreMatrix[14]" -type "matrix" 0 -0 1 -0 -0.91185412111760744 0.4105143868378261 -0 0
-		 -0.41051438683782615 -0.91185412111760744 0 -0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
-	setAttr ".bindPreMatrix[15]" -type "matrix" 0 -0 1 -0 -0.95916945495750394 0.28283202908532912 -0 0
-		 -0.28283202908532895 -0.95916945495750394 0 -0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
-	setAttr ".bindPreMatrix[16]" -type "matrix" 0 -0 1 -0 -0.91753609536389391 0.39765250370691785 -0 0
-		 -0.39765250370691785 -0.9175360953638938 0 -0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
-	setAttr ".bindPreMatrix[17]" -type "matrix" 0 -0 1 -0 -0.93946861427306017 0.34263497018818262 -0 0
-		 -0.34263497018818284 -0.93946861427306017 0 -0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
-	setAttr ".bindPreMatrix[18]" -type "matrix" 0 -0 1 -0 -0.92732549310256085 0.37425583474689283 -0 0
-		 -0.37425583474689311 -0.92732549310256063 0 -0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
+	setAttr ".bindPreMatrix[14]" -type "matrix" 0 0 1 0 -0.91185412111760744 0.4105143868378261 0 0
+		 -0.41051438683782615 -0.91185412111760744 0 0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
+	setAttr ".bindPreMatrix[15]" -type "matrix" 0 0 1 0 -0.95916945495750394 0.28283202908532912 0 0
+		 -0.28283202908532895 -0.95916945495750394 0 0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
+	setAttr ".bindPreMatrix[16]" -type "matrix" 0 0 1 0 -0.91753609536389391 0.39765250370691785 0 0
+		 -0.39765250370691785 -0.9175360953638938 0 0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
+	setAttr ".bindPreMatrix[17]" -type "matrix" 0 0 1 0 -0.93946861427306017 0.34263497018818262 0 0
+		 -0.34263497018818284 -0.93946861427306017 0 0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
+	setAttr ".bindPreMatrix[18]" -type "matrix" 0 0 1 0 -0.92732549310256085 0.37425583474689283 0 0
+		 -0.37425583474689311 -0.92732549310256063 0 0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
 	setAttr ".bindPreMatrix[19]" -type "matrix" -0.50149054742199073 -0.57171153819303522 -0.64934824858726303 0
-		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 -0
+		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 0
 		 96.431874889197729 -50.494861706156826 -45.911383372962909 1;
 	setAttr ".bindPreMatrix[20]" -type "matrix" -0.24333303631670589 -0.42034270223957648 -0.87412873543364489 0
-		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 -0
+		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 0
 		 100.30764895385705 -33.877086110887774 -29.364739525936272 1;
-	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 -0
+	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 0
 		 0.83970040417574121 -0.50238876926677678 -0.20617651598014664 0 -0.20835177233249991 -0.64865355836195593 0.73200963121415263 0
 		 -96.43187480727245 50.494861994837308 45.911383227537669 1;
-	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 -0
-		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 -0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 -0
+	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 0
+		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 0
 		 -103.57434026371725 8.4633358906566496 -110.28612274711067 1;
-	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 -0
+	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 0
 		 0.91503606458378384 -0.39839941124434664 -0.063141979943449611 0 -0.32171110209880838 -0.81522384602431452 0.48157247394311714 0
 		 -100.30764886902189 33.877086429616995 29.364739476831808 1;
-	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 -0
+	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 0
 		 0.98063959373379073 0.052798068744496378 0.18856922107936186 0 -0.022916332224807275 0.98729129864798681 -0.1572600818114189 0
 		 -133.79568032916322 -7.5177601506741469 -51.751831224805237 1;
-	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 -0
-		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 -0
+	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 0
+		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 0
 		 -125.8547349939906 -29.467408295638041 -20.472349879300378 1;
-	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 -0
-		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 -0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 -0
+	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 0
+		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 0
 		 -34.050662706045586 0.66627029252388281 -103.08607605689102 1;
 	setAttr ".bindPreMatrix[27]" -type "matrix" -0.90099974467557453 -0.042690499845575963 -0.43171400407849159 0
-		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 -0
+		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 0
 		 -13.942256237890504 -1.3900021469788471 -98.008339526396227 1;
 	setAttr ".bindPreMatrix[28]" -type "matrix" -0.82609270443588734 -0.043623314522089174 -0.56184326115733452 0
-		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 -0
+		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 0
 		 49.779845092493083 1.6478018442985809 -98.998313930745269 1;
 	setAttr ".bindPreMatrix[29]" -type "matrix" -0.8264073826962206 0.037188542822660334 -0.56184326115733407 0
-		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 -0
+		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 0
 		 25.123455851769254 -0.80740230140237279 -98.998313930744942 1;
 	setAttr ".bindPreMatrix[30]" -type "matrix" -0.58600553258442001 -0.03298142091352476 -0.80963556101185208 0
-		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 -0
+		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 0
 		 23.186943721424878 0.43130511469000976 -97.55225001823338 1;
-	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 -0
-		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 -0
+	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 0
+		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 0
 		 4.158250507364972 73.798162640407753 -63.670983757913959 1;
 	setAttr ".bindPreMatrix[32]" -type "matrix" -0.55312747182076216 -0.059241104597870735 -0.83098766022318171 0
-		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 -0
+		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 0
 		 23.495089012635304 1.6023562422294408 -96.739593116985958 1;
 	setAttr ".bindPreMatrix[33]" -type "matrix" -0.68645498680549122 -0.0070778227519026939 -0.72713785179631896 0
-		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 -0
+		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 0
 		 13.762267279025494 -0.40863653088361784 -99.729192181398261 1;
-	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 -0
-		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 -0
+	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 0
+		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 0
 		 28.754630524673583 74.649998915870526 -53.725080464253914 1;
 	setAttr ".bindPreMatrix[35]" -type "matrix" -0.74406133134772878 0.087858590255345384 -0.66230929580626363 0
-		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 -0
+		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 0
 		 4.7491983952980483 -3.5708841658519663 -99.679927875834096 1;
 	setAttr ".bindPreMatrix[36]" -type "matrix" -0.67894184077787068 0.10086252680845229 -0.72723086260620995 0
-		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 -0
+		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 0
 		 7.716870641645281 -0.60610271364339963 -99.187357763245089 1;
-	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 -0
-		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 -0
+	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 0
+		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 0
 		 26.190704203262776 73.406226357568556 -58.529874983348286 1;
 	setAttr ".bindPreMatrix[38]" -type "matrix" -0.68765047753172182 0.055669062829509022 -0.72390453527663468 0
-		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 -0
+		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 0
 		 10.061785573238605 -3.1915068775062836 -99.192767035376079 1;
 	setAttr ".bindPreMatrix[39]" -type "matrix" -0.61892476662694029 -0.21827620940220693 -0.7545115172512562 0
-		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 -0
+		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 0
 		 17.033303770021949 9.5105596313829075 -96.977666852403758 1;
 	setAttr ".bindPreMatrix[40]" -type "matrix" -0.85753020433127902 0.25422595500363904 -0.4472260194376485 0
-		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 -0
+		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 0
 		 -14.61728315555149 7.651303606215369 -98.236583236146757 1;
 	setAttr ".bindPreMatrix[41]" -type "matrix" -0.59309425420437567 -0.12812705835112656 -0.79487273355427324 0
-		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 -0
+		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 0
 		 22.132123624293385 6.2850397242643483 -95.77326152561929 1;
 	setAttr ".bindPreMatrix[42]" -type "matrix" -0.51692568591107879 -0.071551441339396615 -0.85303471587480906 0
-		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 -0
+		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 0
 		 31.412399622493179 3.4754466098049672 -94.841662395476519 1;
 	setAttr ".bindPreMatrix[43]" -type "matrix" -0.55044482211798895 -0.17622195161297885 -0.81606146923697487 0
-		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 -0
+		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 0
 		 23.711008822349335 3.0182958680262737 -94.933512216159784 1;
 	setAttr ".bindPreMatrix[44]" -type "matrix" -0.66610917296712713 -0.085420581645840432 -0.74094662015582335 0
-		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 -0
+		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 0
 		 15.795645566627869 3.0963584648545632 -99.060143169231594 1;
 	setAttr ".bindPreMatrix[45]" -type "matrix" -0.82609270473016227 -0.043623306770143845 -0.5618432613265395 0
-		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 -0
+		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 0
 		 -49.779845168607274 -1.6478005862664618 98.99831391551615 1;
 	setAttr ".bindPreMatrix[46]" -type "matrix" -0.41713360267390942 -0.089815904768804924 -0.90439629630535667 0
-		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 -0
+		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 0
 		 38.274453528088991 3.5709798375888711 -91.179939775452297 1;
-	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 -0
-		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 -0
+	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 0
+		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 0
 		 34.050662737506883 -0.66626903249394664 103.08607605464265 1;
 	setAttr ".bindPreMatrix[48]" -type "matrix" -0.58600553323754356 -0.032981429838558771 -0.80963556017555605 0
-		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 -0
+		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 0
 		 -23.186943807168191 -0.43130092087886746 97.552250081131703 1;
-	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 -0
+	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 0
 		 0.56127524838519116 -0.025257561130827152 -0.82724370723255702 0 -0.044954771203624282 -0.99898902323600569 3.1369226369259971e-08 0
 		 -25.123455518269772 0.80740648314929908 98.998313964389936 1;
-	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 -0
-		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 -0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 -0
+	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 0
+		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 0
 		 13.942256186946206 1.390006341807084 98.008339539872722 1;
 	setAttr ".bindPreMatrix[51]" -type "matrix" -0.68645498771967406 -0.0070778316426157624 -0.72713785084674321 0
-		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 -0
+		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 0
 		 -13.76226717963474 0.40864072448457078 99.729192237904371 1;
-	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 -0
+	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 0
 		 0.45849022230919811 0.35974177151728592 -0.81263311147926154 0 -0.71539697008826031 -0.39310059231241512 -0.57764963387174917 0
 		 -4.1582474101333737 -73.798161090618635 63.670986125332306 1;
-	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 -0
+	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 0
 		 0.80012860266318797 0.34310329757113167 -0.49201051451779898 0 -0.38643802765971957 -0.33248643678747181 -0.86030135425374943 0
 		 -28.754628797769474 -74.649997625588071 53.72508406318876 1;
 	setAttr ".bindPreMatrix[54]" -type "matrix" -0.55312747207551394 -0.059241113545791368 -0.83098765941571406 0
-		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 -0
+		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 0
 		 -23.495089301854769 -1.6023520575029819 96.739593178435598 1;
-	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 -0
+	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 0
 		 0.71288380658844053 0.30995673748209535 -0.62906557622670067 0 -0.54662558111255899 -0.31633696655029803 -0.77532663933797152 0
 		 -26.190701812161127 -73.406225139289361 58.529878207908432 1;
-	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 -0
+	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 0
 		 0.72343217490139611 -0.031925712337947131 -0.68965689818137177 0 -0.061503715039628232 -0.99793872823821661 -0.018319053431234234 0
 		 -10.061785180931288 3.1915110519226153 99.192767175742702 1;
-	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 -0
+	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 0
 		 0.65922048829113522 -0.064640646358668827 -0.74916615957711885 0 -0.10863277700713558 -0.99403342825735663 -0.0098215714956213767 0
 		 -4.7491978010108458 3.5708883176633157 99.679927968815861 1;
 	setAttr ".bindPreMatrix[58]" -type "matrix" -0.61892476492831117 -0.21827621815425 -0.75451151611271772 0
-		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 -0
+		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 0
 		 -17.033304911764304 -9.5105555948482419 96.977666805445168 1;
-	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 -0
+	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 0
 		 0.7277890272699542 -0.038073001637481403 -0.68474343978731633 0 -0.096752809343252991 -0.99417161446274438 -0.047557279997159911 0
 		 -7.7168701025320932 0.6061068656539802 99.187358026919654 1;
-	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 -0
+	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 0
 		 0.42953438743592132 -0.12456716864518505 -0.89441781651852625 0 -0.283093894943792 -0.95908924951988761 -0.0023786762981579061 0
 		 14.617284484699253 -7.6512996272522216 98.236583260223568 1;
 	setAttr ".bindPreMatrix[61]" -type "matrix" -0.5930942539473173 -0.12812706724888562 -0.79487273231182975 0
-		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 -0
+		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 0
 		 -22.132124128162825 -6.285035561206084 95.773261405395914 1;
 	setAttr ".bindPreMatrix[62]" -type "matrix" -0.55044482168806652 -0.17622196044364052 -0.81606146762005038 0
-		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 -0
+		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 0
 		 -23.711009428789477 -3.018291728853896 94.933511901716372 1;
 	setAttr ".bindPreMatrix[63]" -type "matrix" -0.51692568629468139 -0.071551450265334438 -0.85303471489365501 0
-		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 -0
+		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 0
 		 -31.412399870203242 -3.4754424221397531 94.841662357272696 1;
 	setAttr ".bindPreMatrix[64]" -type "matrix" -0.66610917303186845 -0.085420590567554064 -0.74094661906907222 0
-		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 -0
+		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 0
 		 -15.79564587749463 -3.0963542812568332 99.060143153983873 1;
 	setAttr ".bindPreMatrix[65]" -type "matrix" -0.4171336029492157 -0.089815913695130603 -0.9043962952918998 0
-		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 -0
+		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 0
 		 -38.274453870709713 -3.5709756577226579 91.179939672064677 1;
-	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 -0
+	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 0
 		 0.024134944584303642 0.97171475424335352 0.23492113748169094 0 -0.072391073202730583 0.23607141673644688 -0.96903550952511708 0
 		 -3.2003206005037299 -77.899988140525451 -35.426609466928412 1;
-	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 -0
-		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 -0
+	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 0
+		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 0
 		 -5.8256849692137029 -49.281346381588165 70.703280241826192 1;
-	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 -0
-		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 -0
+	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 0
+		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 0
 		 -8.3580963631788485 -49.257975202320779 72.143487220581534 1;
-	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 -0
+	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 0
 		 -0.6193742170174974 0.59552734849789857 -0.5115884639874364 0 -0.44204297819871052 -0.80305049690817731 -0.39963471425883962 0
 		 36.840956368518675 -59.799664679232663 39.505162005827856 1;
-	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 -0
-		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 -0 0.41038798450533415 0.8520877198038338 0.3248510734677546 -0
+	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 0
+		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 0 0.41038798450533415 0.8520877198038338 0.3248510734677546 0
 		 8.3580975111938596 49.257975600279963 -72.143487238699251 1;
-	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 -0
+	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 0
 		 -0.60265710922764393 0.61243910081930253 -0.51158846398743674 0 -0.46409634659016252 -0.79051038971092569 -0.39963471425883984 0
 		 20.479416590213244 -60.389514556602585 39.505162005827735 1;
-	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 -0
-		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 -0 0.48347785649071207 0.79841305742548196 0.35886731812139233 -0
+	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 0
+		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 0 0.48347785649071207 0.79841305742548196 0.35886731812139233 0
 		 5.8256861524044696 49.281346656110664 -70.70328020528531 1;
-	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 -0
-		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 -0
+	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 0
+		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 0
 		 -20.479414933073791 60.389513429412489 -39.505165596958264 1;
-	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 -0
-		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 -0
+	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 0
+		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 0
 		 -36.84095471340185 59.799664775226795 -39.505163797210656 1;
-	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 -0
-		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 -0
+	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 0
+		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 0
 		 41.784501041860516 40.712451437911739 1.6176847507577662e-14 1;
-	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 -0
-		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 -0
+	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 0
+		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 0
 		 -31.074005786092126 36.66471765750839 -8.8467899613237008e-16 1;
 	setAttr ".bindPreMatrix[77]" -type "matrix" -3.7919490700984674e-32 3.1511546580459096e-32 -0.99999999999999956 0
-		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 -0
+		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 0
 		 9.3151688497340892 47.152485229179469 1.4851721469859807e-16 1;
 	setAttr ".bindPreMatrix[78]" -type "matrix" -0.00028419380823610187 2.9992216969582393e-05 -0.99999995916717266 0
-		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 -0
+		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 0
 		 58.985979588892484 -4.4158766682246151 -13.624596468617483 1;
-	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 -0
-		 0.34375531853509206 -0.93905925317779471 -0 0 -0.9390592531777946 -0.34375531853509211 -0 0
+	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 0
+		 0.34375531853509206 -0.93905925317779471 0 0 -0.9390592531777946 -0.34375531853509211 0 0
 		 -64.623004546272796 4.2580594527907394 -5.7220339928583523e-14 1;
-	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 -0
+	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 0
 		 0.61925492727793341 -0.78515057620744177 0.0078681461046324046 0 -0.78508720729289649 -0.61930491091313211 -0.0099751824002620431 0
 		 -85.893172476184432 -23.694087232606531 -1.0913438079276407 1;
 	setAttr ".bindPreMatrix[81]" -type "matrix" -0.00028451534118351709 -2.6770774171015668e-05 -0.99999995916717288 0
-		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 -0
+		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 0
 		 33.930587364342692 2.336649372609195 -13.62459646861738 1;
-	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 -0
-		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 -0
+	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 0
+		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 0
 		 7.0394308392255001 2.1387193804494369 -13.558755908727951 1;
-	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 -0
+	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 0
 		 0.99999999999999822 -5.6891626879313423e-08 2.6100846192255774e-09 0 -5.6772812330172001e-08 -0.99944283522543076 -0.033376924911509599 0
 		 -7.0394308430776045 -2.1387194017290247 13.558755904681769 1;
-	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 -0
+	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 0
 		 0.99447729551044795 -0.10495154619430543 -0.000285772024368715 0 -0.10495155047977374 -0.99447733611776756 7.6516148695944865e-14 0
 		 -58.985979590126107 4.4158766529653919 13.624596468222286 1;
-	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 -0
-		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 -0
+	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 0
+		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 0
 		 -6.1647744734161698 -5.9918209040313144 -13.182977783826168 1;
 	setAttr ".bindPreMatrix[86]" -type "matrix" -0.00028451533461715245 -2.6791846275409926e-05 -0.99999995916660989 0
-		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.098082973939466e-08 -0
+		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.0980829739394663e-08 0
 		 -33.930587362535725 -2.3366491006984398 13.624596517463372 1;
-	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 -0
+	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 0
 		 0.38937967170586468 -0.9201800445901811 0.040646731728956789 0 -0.92094114934023663 -0.38970168007102707 1.3050470395927635e-06 0
 		 6.1647744523920922 5.9918208958986678 13.182977798034011 1;
 	setAttr ".geomMatrix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -47457,7 +47458,7 @@ createNode skinCluster -name "skinCluster8";
 		75 0.11366453269946612 76 8.2000438875490041e-05 77 0.0042193019721981822 
 		79 5.2557473331430596e-06
 		10 0 0.010904081165790558 1 0.011696187515307746 2 0.23471469687438265 
-		3 0.081161042420683158 4 0.01429913534867415 8 1.789642374088113e-06 
+		3 0.081161042420683158 4 0.01429913534867415 8 1.7896423740881132e-06 
 		9 2.0712597017392367e-10 75 0.00019422078554377117 78 0.32351441778789475 
 		84 0.3235144282522231
 		10 0 0.1154484897851944 1 0.015798439180872557 2 0.2023130766510268 
@@ -47517,10 +47518,10 @@ createNode skinCluster -name "skinCluster8";
 		6 2 0.19722328440914708 3 0.00025699037017680161 4 1.3321404424004868e-08 
 		81 0.28774218928220935 84 0.22703530070350805 86 0.2877422219135542
 		9 1 1.6542698398171115e-06 2 0.20519131929797277 3 0.0008450217572567283 
-		4 6.7179479401602293e-07 8 4.359944979921116e-10 75 2.8682634921602433e-05 
+		4 6.7179479401602293e-07 8 4.3599449799211165e-10 75 2.8682634921602433e-05 
 		83 0.12387332739939977 84 0.29775631458806673 86 0.37230300782175418
 		9 1 1.6542698398171115e-06 2 0.20519131929797277 3 0.0008450217572567283 
-		4 6.7179479401602293e-07 8 4.359944979921116e-10 75 2.8682634921602433e-05 
+		4 6.7179479401602293e-07 8 4.3599449799211165e-10 75 2.8682634921602433e-05 
 		78 0.29775631458806673 81 0.37230300782175418 82 0.12387332739939977
 		8 1 2.2035104539519859e-10 2 0.20720370210051509 3 0.00024244324232330577 
 		4 1.4967262984555418e-08 75 0.0049410945126558978 83 0.052687382296787405 
@@ -49533,14 +49534,14 @@ createNode skinCluster -name "skinCluster8";
 		75 5.3688063671484849e-06
 		10 0 0.047368250787258148 1 0.28282434134695628 2 0.022553006581527642 
 		3 0.59411448791134747 4 0.053001976375280181 7 6.6611166071479767e-07 
-		8 0.00013717215276974905 9 1.5301326023752733e-09 50 4.565211311682426e-10 
+		8 0.00013717215276974905 9 1.5301326023752733e-09 50 4.5652113116824265e-10 
 		75 9.674654609338711e-08
 		9 0 0.076671138405799866 1 0.221210797595809 2 0.04503705876384885 
 		3 0.58454997492941418 4 0.072292183163880322 7 9.3083625237767311e-06 
 		8 0.00022953530249827323 9 2.9162748460427351e-09 27 5.5995085991121873e-10
 		10 0 0.047368250787258148 1 0.28282434134695628 2 0.022553006581527642 
 		3 0.59411448791134747 4 0.053001976375280181 7 6.6611166071479767e-07 
-		8 0.00013717215276974905 9 1.5301326023752733e-09 27 4.565211311682426e-10 
+		8 0.00013717215276974905 9 1.5301326023752733e-09 27 4.5652113116824265e-10 
 		75 9.674654609338711e-08
 		10 0 0.057405386120080948 1 0.21709645620992499 2 0.025266712817716922 
 		3 0.63995471301657725 4 0.060085200698940668 7 6.5207662267848321e-07 
@@ -49635,7 +49636,7 @@ createNode skinCluster -name "skinCluster8";
 		68 2.9645766794956788e-10 69 0.22566356942397198 75 0.0010115008504345306 
 		77 3.4001916351782047e-05
 		12 1 0.28315318072229295 2 0.17341700315935651 3 0.32435123611779099 
-		4 9.9092663731426001e-05 7 9.1544706953218347e-06 8 9.66398421828663e-05 
+		4 9.9092663731426001e-05 7 9.1544706953218347e-06 8 9.6639842182866313e-05 
 		9 1.7250351671910426e-08 27 7.9542042471920273e-09 66 0.087105582517552696 
 		69 0.12615783961775101 75 0.0055442436268149931 77 6.6002057275226455e-05
 		13 1 0.3894242514824543 2 0.087996572697723624 3 0.24007284857355363 
@@ -49735,19 +49736,19 @@ createNode skinCluster -name "skinCluster8";
 		66 0.014729669759974662 67 2.4980336316630846e-08 69 0.15386031927310256
 		11 1 0.46155874858690377 2 0.01327907700508634 3 0.058265356462433408 
 		4 0.0050021144561469555 7 0.12438355455650525 8 0.0067155359170448306 
-		9 1.1307544051897744e-07 27 1.099408361556811e-07 66 0.20658473078446973 
+		9 1.1307544051897744e-07 27 1.0994083615568111e-07 66 0.20658473078446973 
 		69 0.12420919845299838 75 1.4607621345348108e-06
 		12 1 0.20944146839636502 2 0.013709811752255703 3 0.060511499469688035 
 		4 0.00049556751037016511 7 0.046709041631910871 8 0.0036636838922653645 
-		9 1.2972290634950081e-07 27 1.109714563601966e-07 66 0.64470610521574345 
-		68 1.038694995257056e-08 69 0.020676051403460214 75 8.6519646628549171e-05
+		9 1.2972290634950081e-07 27 1.1097145636019661e-07 66 0.64470610521574345 
+		68 1.0386949952570562e-08 69 0.020676051403460214 75 8.6519646628549171e-05
 		12 1 0.20944146839636502 2 0.013709811752255703 3 0.060511499469688035 
 		4 0.00049556751037016511 7 0.046709041631910871 8 0.0036636838922653645 
-		9 1.2972290634950081e-07 50 1.109714563601966e-07 66 0.64470610521574345 
-		70 1.038694995257056e-08 74 0.020676051403460214 75 8.6519646628549171e-05
+		9 1.2972290634950081e-07 50 1.1097145636019661e-07 66 0.64470610521574345 
+		70 1.0386949952570562e-08 74 0.020676051403460214 75 8.6519646628549171e-05
 		11 1 0.46155874858690377 2 0.01327907700508634 3 0.058265356462433408 
 		4 0.0050021144561469555 7 0.12438355455650525 8 0.0067155359170448306 
-		9 1.1307544051897744e-07 50 1.099408361556811e-07 66 0.20658473078446973 
+		9 1.1307544051897744e-07 50 1.0994083615568111e-07 66 0.20658473078446973 
 		74 0.12420919845299838 75 1.4607621345348108e-06
 		12 0 0.00031428725924342871 1 0.56527149136574495 2 0.018613530950840833 
 		3 0.06445246384156067 4 0.026160352922566934 7 0.14204254785975276 
@@ -49776,7 +49777,7 @@ createNode skinCluster -name "skinCluster8";
 		9 1.2962078346175451e-07 27 8.6881092887369952e-08
 		10 0 0.00015714362962171435 1 0.53033279768637731 2 0.0063259647913025503 
 		3 0.040622526128931573 4 0.02055012993228025 7 0.37203738093449612 
-		8 0.029941557131187731 9 2.4804512048359179e-07 27 2.19651769638966e-07 
+		8 0.029941557131187731 9 2.4804512048359179e-07 27 2.1965176963896602e-07 
 		66 3.2032068912720468e-05
 		5 1 0.37780873417301353 3 0.058145426757284617 4 0.0091460160911083221 
 		7 0.55188755502229658 66 0.0030122679562969209
@@ -49800,7 +49801,7 @@ createNode skinCluster -name "skinCluster8";
 		7 0.55188755502229658 66 0.0030122679562969209
 		10 0 0.00015714362962171435 1 0.53033279768637731 2 0.0063259647913025503 
 		3 0.040622526128931573 4 0.02055012993228025 7 0.37203738093449612 
-		8 0.029941557131187731 9 2.4804512048359179e-07 50 2.19651769638966e-07 
+		8 0.029941557131187731 9 2.4804512048359179e-07 50 2.1965176963896602e-07 
 		66 3.2032068912720468e-05
 		8 1 0.60570145738232106 2 0.0037244046095689007 3 0.018490236193345159 
 		4 0.0013636798830702901 7 0.32521195776163164 8 0.045507288095024447 
@@ -50411,7 +50412,7 @@ createNode skinCluster -name "skinCluster8";
 		8 0.95776985192128716 9 0.00056625586746306708 50 6.0372948737590916e-06
 		7 2 1.8856419119748838e-10 3 3.4088413940480677e-06 5 0.024802678407708605 
 		6 0.081669083481191243 8 0.89200001869025469 9 0.0015146351218919985 
-		27 1.017526899531504e-05
+		27 1.0175268995315041e-05
 		6 3 1.3265531606521108e-06 5 0.011009344598182905 6 0.030647183765032369 
 		8 0.95776985192128716 9 0.00056625586746306708 27 6.0372948737590916e-06
 		8 2 2.3410755778091432e-10 3 1.0853926113441048e-07 6 0.34077771287509723 
@@ -50511,7 +50512,7 @@ createNode skinCluster -name "skinCluster8";
 		8 3 2.82344263524692e-08 8 0.032652943404463605 9 0.00018190570060777755 
 		19 0.030807412777854034 26 0.045531889196352308 27 0.0022599595225113226 
 		28 0.87299871811299123 29 0.015567143050793484
-		8 2 2.204095596331068e-10 3 5.6468852704938399e-08 8 0.11522168760538713 
+		8 2 2.2040955963310683e-10 3 5.6468852704938399e-08 8 0.11522168760538713 
 		9 0.0003706919339594724 45 0.4977404716105871 47 0.38467844326893108 
 		49 0.0011329416041917974 50 0.00085570728768125874
 		9 2 7.2502685579475118e-10 3 7.4685272011265624e-07 8 0.12275287281822708 
@@ -50520,7 +50521,7 @@ createNode skinCluster -name "skinCluster8";
 		9 2 7.2502685579475118e-10 3 7.4685272011265624e-07 8 0.12275287281822708 
 		9 0.00044419907518695881 19 0.059594061109887485 26 0.14566931057484706 
 		27 0.0012466753612021529 28 0.66603660729395564 29 0.0042555261889466308
-		8 2 2.204095596331068e-10 3 5.6468852704938399e-08 8 0.11522168760538713 
+		8 2 2.2040955963310683e-10 3 5.6468852704938399e-08 8 0.11522168760538713 
 		9 0.0003706919339594724 26 0.38467844326893108 27 0.00085570728768125874 
 		28 0.4977404716105871 29 0.0011329416041917974
 		5 8 8.1300095189362764e-06 9 7.338014875838441e-07 45 0.33820014308476531 
@@ -51176,7 +51177,7 @@ createNode skinCluster -name "skinCluster8";
 		3 1 0.00017228000566025514 7 0.00019543105736374855 8 0.99963228893697598
 		4 1 0.0078900542153855988 3 4.3426238963212063e-07 7 0.020040510222315788 
 		8 0.97206900129990903
-		9 1 0.0070402282337360903 2 1.480246593508863e-06 3 5.5141323777481125e-06 
+		9 1 0.0070402282337360903 2 1.4802465935088628e-06 3 5.5141323777481125e-06 
 		7 0.033706851303577423 8 0.91248022334001289 9 2.7605818865574236e-05 
 		26 0.020045383684022634 27 2.5059938980513916e-05 28 0.026667653301833672
 		4 1 0.0042388864823522526 3 5.5880230044129599e-05 7 0.021916383877396584 
@@ -51197,7 +51198,7 @@ createNode skinCluster -name "skinCluster8";
 		8 0.97896885813326451
 		4 1 0.0042388864823522526 3 5.5880230044129599e-05 7 0.021916383877396584 
 		8 0.97378884941020705
-		9 1 0.0070402282337360903 2 1.480246593508863e-06 3 5.5141323777481125e-06 
+		9 1 0.0070402282337360903 2 1.4802465935088628e-06 3 5.5141323777481125e-06 
 		7 0.033706851303577423 8 0.91248022334001289 9 2.7605818865574236e-05 
 		45 0.026667653301833672 47 0.020045383684022634 50 2.5059938980513916e-05
 		4 1 0.0078900542153855988 3 4.3426238963212063e-07 7 0.020040510222315788 
@@ -51896,7 +51897,7 @@ createNode skinCluster -name "skinCluster8";
 		4 1.8043599993688986e-05 7 0.00026675517839488212 8 0.0001241486495776741 
 		9 1.5407473029950286e-08 27 1.1892373931573201e-08 66 0.17750828272841138 
 		67 0.0058073359787700349 68 3.9909686876812284e-10 69 0.72674107527572607 
-		75 0.0028749560964969 77 2.309883158660367e-05
+		75 0.0028749560964969 77 2.3098831586603673e-05
 		2 4 2.9043298127362505e-05 69 0.99997095670187264
 		2 4 4.6115064833429642e-06 69 0.99999538849351666
 		2 4 1.4641494772149599e-07 69 0.99999985358505228
@@ -52034,7 +52035,7 @@ createNode skinCluster -name "skinCluster8";
 		2 67 0.55867603421211243 68 0.44132396578788757
 		3 66 5.6149398005800322e-05 67 0.99409536986371583 68 0.0058484807382784224
 		13 1 0.00056132748665156163 2 0.00068315246074265716 3 0.016244040308294273 
-		4 2.4437674994715053e-08 7 8.0643258435369222e-07 8 1.605219297848166e-06 
+		4 2.4437674994715053e-08 7 8.0643258435369222e-07 8 1.6052192978481662e-06 
 		9 2.009185829087219e-09 27 1.0942870162403273e-09 66 0.025007390957268442 
 		67 0.75761394960918671 68 0.00988203728636519 69 0.19000551996743176 
 		75 1.4273102943804058e-07
@@ -52131,7 +52132,7 @@ createNode skinCluster -name "skinCluster8";
 		4 1.8043599993688986e-05 7 0.00026675517839488212 8 0.0001241486495776741 
 		9 1.5407473029950286e-08 50 1.1892373931573201e-08 66 0.17750828272841138 
 		70 3.9909686876812284e-10 72 0.0058073359787700349 74 0.72674107527572607 
-		75 0.0028749560964969 77 2.309883158660367e-05
+		75 0.0028749560964969 77 2.3098831586603673e-05
 		2 4 2.9043298127362505e-05 74 0.99997095670187264
 		2 4 4.6115064833429642e-06 74 0.99999538849351666
 		2 4 1.4641494772149599e-07 74 0.99999985358505228
@@ -52270,7 +52271,7 @@ createNode skinCluster -name "skinCluster8";
 		2 70 0.44132396578788757 72 0.55867603421211243
 		3 66 5.6149398005800322e-05 70 0.0058484807382784224 72 0.99409536986371583
 		13 1 0.00056132748665156163 2 0.00068315246074265716 3 0.016244040308294273 
-		4 2.4437674994715053e-08 7 8.0643258435369222e-07 8 1.605219297848166e-06 
+		4 2.4437674994715053e-08 7 8.0643258435369222e-07 8 1.6052192978481662e-06 
 		9 2.009185829087219e-09 50 1.0942870162403273e-09 66 0.025007390957268442 
 		70 0.00988203728636519 72 0.75761394960918671 74 0.19000551996743176 
 		75 1.4273102943804058e-07
@@ -55020,252 +55021,252 @@ createNode skinCluster -name "skinCluster8";
 		4 5 0.23922225292104957 6 0.14087448722174239 9 0.36231076717376709 
 		10 0.25759249268344092;
 	setAttr -size 88 ".bindPreMatrix";
-	setAttr ".bindPreMatrix[0]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
-	setAttr ".bindPreMatrix[1]" -type "matrix" -0 -0 1 -0 0.99659610431516354 -0.082439097907710771 -0 0
-		 0.082439097907710868 0.99659610431516354 -0 -0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
-	setAttr ".bindPreMatrix[2]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
-	setAttr ".bindPreMatrix[3]" -type "matrix" -0 -0 1 -0 0.99659610431516399 -0.082439097907710812 -0 0
-		 0.082439097907710923 0.99659610431516399 -0 -0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
-	setAttr ".bindPreMatrix[4]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
-	setAttr ".bindPreMatrix[5]" -type "matrix" 0 -0 1 -0 0.98144467562890902 -0.19174553105526851 -0 0
-		 0.19174553105526865 0.9814446756289088 0 -0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
-	setAttr ".bindPreMatrix[6]" -type "matrix" -0 -0 1 -0 0.98144467562890891 -0.1917455310552684 -0 0
-		 0.1917455310552684 0.98144467562890858 0 -0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
-	setAttr ".bindPreMatrix[7]" -type "matrix" -0 -0 1 -0 0.9965961043151631 -0.082439097907710743 -0 0
-		 0.08243909790771084 0.9965961043151631 -0 -0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
-	setAttr ".bindPreMatrix[8]" -type "matrix" -0 -0 1 -0 0.98172550254916213 -0.19030248985390025 -0 0
-		 0.19030248985390036 0.98172550254916224 -0 -0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
-	setAttr ".bindPreMatrix[9]" -type "matrix" 0 -0 1 -0 0.99869188949195753 -0.051132278093041238 -0 0
-		 0.051132278093041265 0.99869188949195764 0 -0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
-	setAttr ".bindPreMatrix[10]" -type "matrix" 0 -0 1 -0 0.98144467562890991 -0.19174553105526893 -0 0
-		 0.19174553105526901 0.98144467562890936 0 -0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
-	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 -0
-		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 -0
+	setAttr ".bindPreMatrix[0]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
+	setAttr ".bindPreMatrix[1]" -type "matrix" 0 0 1 0 0.99659610431516354 -0.082439097907710771 0 0
+		 0.082439097907710868 0.99659610431516354 0 0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
+	setAttr ".bindPreMatrix[2]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
+	setAttr ".bindPreMatrix[3]" -type "matrix" 0 0 1 0 0.99659610431516399 -0.082439097907710812 0 0
+		 0.082439097907710923 0.99659610431516399 0 0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
+	setAttr ".bindPreMatrix[4]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
+	setAttr ".bindPreMatrix[5]" -type "matrix" 0 0 1 0 0.98144467562890902 -0.19174553105526851 0 0
+		 0.19174553105526865 0.9814446756289088 0 0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
+	setAttr ".bindPreMatrix[6]" -type "matrix" 0 0 1 0 0.98144467562890891 -0.1917455310552684 0 0
+		 0.1917455310552684 0.98144467562890858 0 0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
+	setAttr ".bindPreMatrix[7]" -type "matrix" 0 0 1 0 0.9965961043151631 -0.082439097907710743 0 0
+		 0.08243909790771084 0.9965961043151631 0 0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
+	setAttr ".bindPreMatrix[8]" -type "matrix" 0 0 1 0 0.98172550254916213 -0.19030248985390025 0 0
+		 0.19030248985390036 0.98172550254916224 0 0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
+	setAttr ".bindPreMatrix[9]" -type "matrix" 0 0 1 0 0.99869188949195753 -0.051132278093041238 0 0
+		 0.051132278093041265 0.99869188949195764 0 0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
+	setAttr ".bindPreMatrix[10]" -type "matrix" 0 0 1 0 0.98144467562890991 -0.19174553105526893 0 0
+		 0.19174553105526901 0.98144467562890936 0 0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
+	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 0
+		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 0
 		 133.79568083020493 7.5177611410476324 51.751829482427006 1;
-	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 -0
-		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 -0
+	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 0
+		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 0
 		 103.57434158040842 -8.463334792315047 110.28612159483698 1;
-	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 -0
-		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 -0
+	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 0
+		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 0
 		 125.85473488042882 29.46740927454055 20.472348063641281 1;
-	setAttr ".bindPreMatrix[14]" -type "matrix" 0 -0 1 -0 -0.91185412111760744 0.4105143868378261 -0 0
-		 -0.41051438683782615 -0.91185412111760744 0 -0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
-	setAttr ".bindPreMatrix[15]" -type "matrix" 0 -0 1 -0 -0.95916945495750394 0.28283202908532912 -0 0
-		 -0.28283202908532895 -0.95916945495750394 0 -0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
-	setAttr ".bindPreMatrix[16]" -type "matrix" 0 -0 1 -0 -0.91753609536389391 0.39765250370691785 -0 0
-		 -0.39765250370691785 -0.9175360953638938 0 -0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
-	setAttr ".bindPreMatrix[17]" -type "matrix" 0 -0 1 -0 -0.93946861427306017 0.34263497018818262 -0 0
-		 -0.34263497018818284 -0.93946861427306017 0 -0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
-	setAttr ".bindPreMatrix[18]" -type "matrix" 0 -0 1 -0 -0.92732549310256085 0.37425583474689283 -0 0
-		 -0.37425583474689311 -0.92732549310256063 0 -0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
+	setAttr ".bindPreMatrix[14]" -type "matrix" 0 0 1 0 -0.91185412111760744 0.4105143868378261 0 0
+		 -0.41051438683782615 -0.91185412111760744 0 0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
+	setAttr ".bindPreMatrix[15]" -type "matrix" 0 0 1 0 -0.95916945495750394 0.28283202908532912 0 0
+		 -0.28283202908532895 -0.95916945495750394 0 0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
+	setAttr ".bindPreMatrix[16]" -type "matrix" 0 0 1 0 -0.91753609536389391 0.39765250370691785 0 0
+		 -0.39765250370691785 -0.9175360953638938 0 0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
+	setAttr ".bindPreMatrix[17]" -type "matrix" 0 0 1 0 -0.93946861427306017 0.34263497018818262 0 0
+		 -0.34263497018818284 -0.93946861427306017 0 0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
+	setAttr ".bindPreMatrix[18]" -type "matrix" 0 0 1 0 -0.92732549310256085 0.37425583474689283 0 0
+		 -0.37425583474689311 -0.92732549310256063 0 0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
 	setAttr ".bindPreMatrix[19]" -type "matrix" -0.50149054742199073 -0.57171153819303522 -0.64934824858726303 0
-		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 -0
+		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 0
 		 96.431874889197729 -50.494861706156826 -45.911383372962909 1;
 	setAttr ".bindPreMatrix[20]" -type "matrix" -0.24333303631670589 -0.42034270223957648 -0.87412873543364489 0
-		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 -0
+		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 0
 		 100.30764895385705 -33.877086110887774 -29.364739525936272 1;
-	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 -0
+	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 0
 		 0.83970040417574121 -0.50238876926677678 -0.20617651598014664 0 -0.20835177233249991 -0.64865355836195593 0.73200963121415263 0
 		 -96.43187480727245 50.494861994837308 45.911383227537669 1;
-	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 -0
-		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 -0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 -0
+	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 0
+		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 0
 		 -103.57434026371725 8.4633358906566496 -110.28612274711067 1;
-	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 -0
+	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 0
 		 0.91503606458378384 -0.39839941124434664 -0.063141979943449611 0 -0.32171110209880838 -0.81522384602431452 0.48157247394311714 0
 		 -100.30764886902189 33.877086429616995 29.364739476831808 1;
-	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 -0
+	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 0
 		 0.98063959373379073 0.052798068744496378 0.18856922107936186 0 -0.022916332224807275 0.98729129864798681 -0.1572600818114189 0
 		 -133.79568032916322 -7.5177601506741469 -51.751831224805237 1;
-	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 -0
-		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 -0
+	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 0
+		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 0
 		 -125.8547349939906 -29.467408295638041 -20.472349879300378 1;
-	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 -0
-		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 -0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 -0
+	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 0
+		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 0
 		 -34.050662706045586 0.66627029252388281 -103.08607605689102 1;
 	setAttr ".bindPreMatrix[27]" -type "matrix" -0.90099974467557453 -0.042690499845575963 -0.43171400407849159 0
-		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 -0
+		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 0
 		 -13.942256237890504 -1.3900021469788471 -98.008339526396227 1;
 	setAttr ".bindPreMatrix[28]" -type "matrix" -0.82609270443588734 -0.043623314522089174 -0.56184326115733452 0
-		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 -0
+		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 0
 		 49.779845092493083 1.6478018442985809 -98.998313930745269 1;
 	setAttr ".bindPreMatrix[29]" -type "matrix" -0.8264073826962206 0.037188542822660334 -0.56184326115733407 0
-		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 -0
+		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 0
 		 25.123455851769254 -0.80740230140237279 -98.998313930744942 1;
 	setAttr ".bindPreMatrix[30]" -type "matrix" -0.58600553258442001 -0.03298142091352476 -0.80963556101185208 0
-		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 -0
+		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 0
 		 23.186943721424878 0.43130511469000976 -97.55225001823338 1;
-	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 -0
-		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 -0
+	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 0
+		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 0
 		 4.158250507364972 73.798162640407753 -63.670983757913959 1;
 	setAttr ".bindPreMatrix[32]" -type "matrix" -0.55312747182076216 -0.059241104597870735 -0.83098766022318171 0
-		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 -0
+		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 0
 		 23.495089012635304 1.6023562422294408 -96.739593116985958 1;
 	setAttr ".bindPreMatrix[33]" -type "matrix" -0.68645498680549122 -0.0070778227519026939 -0.72713785179631896 0
-		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 -0
+		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 0
 		 13.762267279025494 -0.40863653088361784 -99.729192181398261 1;
-	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 -0
-		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 -0
+	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 0
+		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 0
 		 28.754630524673583 74.649998915870526 -53.725080464253914 1;
 	setAttr ".bindPreMatrix[35]" -type "matrix" -0.74406133134772878 0.087858590255345384 -0.66230929580626363 0
-		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 -0
+		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 0
 		 4.7491983952980483 -3.5708841658519663 -99.679927875834096 1;
 	setAttr ".bindPreMatrix[36]" -type "matrix" -0.67894184077787068 0.10086252680845229 -0.72723086260620995 0
-		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 -0
+		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 0
 		 7.716870641645281 -0.60610271364339963 -99.187357763245089 1;
-	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 -0
-		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 -0
+	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 0
+		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 0
 		 26.190704203262776 73.406226357568556 -58.529874983348286 1;
 	setAttr ".bindPreMatrix[38]" -type "matrix" -0.68765047753172182 0.055669062829509022 -0.72390453527663468 0
-		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 -0
+		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 0
 		 10.061785573238605 -3.1915068775062836 -99.192767035376079 1;
 	setAttr ".bindPreMatrix[39]" -type "matrix" -0.61892476662694029 -0.21827620940220693 -0.7545115172512562 0
-		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 -0
+		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 0
 		 17.033303770021949 9.5105596313829075 -96.977666852403758 1;
 	setAttr ".bindPreMatrix[40]" -type "matrix" -0.85753020433127902 0.25422595500363904 -0.4472260194376485 0
-		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 -0
+		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 0
 		 -14.61728315555149 7.651303606215369 -98.236583236146757 1;
 	setAttr ".bindPreMatrix[41]" -type "matrix" -0.59309425420437567 -0.12812705835112656 -0.79487273355427324 0
-		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 -0
+		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 0
 		 22.132123624293385 6.2850397242643483 -95.77326152561929 1;
 	setAttr ".bindPreMatrix[42]" -type "matrix" -0.51692568591107879 -0.071551441339396615 -0.85303471587480906 0
-		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 -0
+		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 0
 		 31.412399622493179 3.4754466098049672 -94.841662395476519 1;
 	setAttr ".bindPreMatrix[43]" -type "matrix" -0.55044482211798895 -0.17622195161297885 -0.81606146923697487 0
-		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 -0
+		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 0
 		 23.711008822349335 3.0182958680262737 -94.933512216159784 1;
 	setAttr ".bindPreMatrix[44]" -type "matrix" -0.66610917296712713 -0.085420581645840432 -0.74094662015582335 0
-		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 -0
+		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 0
 		 15.795645566627869 3.0963584648545632 -99.060143169231594 1;
 	setAttr ".bindPreMatrix[45]" -type "matrix" -0.82609270473016227 -0.043623306770143845 -0.5618432613265395 0
-		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 -0
+		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 0
 		 -49.779845168607274 -1.6478005862664618 98.99831391551615 1;
 	setAttr ".bindPreMatrix[46]" -type "matrix" -0.41713360267390942 -0.089815904768804924 -0.90439629630535667 0
-		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 -0
+		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 0
 		 38.274453528088991 3.5709798375888711 -91.179939775452297 1;
-	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 -0
-		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 -0
+	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 0
+		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 0
 		 34.050662737506883 -0.66626903249394664 103.08607605464265 1;
 	setAttr ".bindPreMatrix[48]" -type "matrix" -0.58600553323754356 -0.032981429838558771 -0.80963556017555605 0
-		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 -0
+		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 0
 		 -23.186943807168191 -0.43130092087886746 97.552250081131703 1;
-	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 -0
+	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 0
 		 0.56127524838519116 -0.025257561130827152 -0.82724370723255702 0 -0.044954771203624282 -0.99898902323600569 3.1369226369259971e-08 0
 		 -25.123455518269772 0.80740648314929908 98.998313964389936 1;
-	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 -0
-		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 -0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 -0
+	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 0
+		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 0
 		 13.942256186946206 1.390006341807084 98.008339539872722 1;
 	setAttr ".bindPreMatrix[51]" -type "matrix" -0.68645498771967406 -0.0070778316426157624 -0.72713785084674321 0
-		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 -0
+		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 0
 		 -13.76226717963474 0.40864072448457078 99.729192237904371 1;
-	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 -0
+	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 0
 		 0.45849022230919811 0.35974177151728592 -0.81263311147926154 0 -0.71539697008826031 -0.39310059231241512 -0.57764963387174917 0
 		 -4.1582474101333737 -73.798161090618635 63.670986125332306 1;
-	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 -0
+	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 0
 		 0.80012860266318797 0.34310329757113167 -0.49201051451779898 0 -0.38643802765971957 -0.33248643678747181 -0.86030135425374943 0
 		 -28.754628797769474 -74.649997625588071 53.72508406318876 1;
 	setAttr ".bindPreMatrix[54]" -type "matrix" -0.55312747207551394 -0.059241113545791368 -0.83098765941571406 0
-		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 -0
+		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 0
 		 -23.495089301854769 -1.6023520575029819 96.739593178435598 1;
-	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 -0
+	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 0
 		 0.71288380658844053 0.30995673748209535 -0.62906557622670067 0 -0.54662558111255899 -0.31633696655029803 -0.77532663933797152 0
 		 -26.190701812161127 -73.406225139289361 58.529878207908432 1;
-	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 -0
+	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 0
 		 0.72343217490139611 -0.031925712337947131 -0.68965689818137177 0 -0.061503715039628232 -0.99793872823821661 -0.018319053431234234 0
 		 -10.061785180931288 3.1915110519226153 99.192767175742702 1;
-	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 -0
+	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 0
 		 0.65922048829113522 -0.064640646358668827 -0.74916615957711885 0 -0.10863277700713558 -0.99403342825735663 -0.0098215714956213767 0
 		 -4.7491978010108458 3.5708883176633157 99.679927968815861 1;
 	setAttr ".bindPreMatrix[58]" -type "matrix" -0.61892476492831117 -0.21827621815425 -0.75451151611271772 0
-		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 -0
+		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 0
 		 -17.033304911764304 -9.5105555948482419 96.977666805445168 1;
-	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 -0
+	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 0
 		 0.7277890272699542 -0.038073001637481403 -0.68474343978731633 0 -0.096752809343252991 -0.99417161446274438 -0.047557279997159911 0
 		 -7.7168701025320932 0.6061068656539802 99.187358026919654 1;
-	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 -0
+	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 0
 		 0.42953438743592132 -0.12456716864518505 -0.89441781651852625 0 -0.283093894943792 -0.95908924951988761 -0.0023786762981579061 0
 		 14.617284484699253 -7.6512996272522216 98.236583260223568 1;
 	setAttr ".bindPreMatrix[61]" -type "matrix" -0.5930942539473173 -0.12812706724888562 -0.79487273231182975 0
-		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 -0
+		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 0
 		 -22.132124128162825 -6.285035561206084 95.773261405395914 1;
 	setAttr ".bindPreMatrix[62]" -type "matrix" -0.55044482168806652 -0.17622196044364052 -0.81606146762005038 0
-		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 -0
+		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 0
 		 -23.711009428789477 -3.018291728853896 94.933511901716372 1;
 	setAttr ".bindPreMatrix[63]" -type "matrix" -0.51692568629468139 -0.071551450265334438 -0.85303471489365501 0
-		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 -0
+		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 0
 		 -31.412399870203242 -3.4754424221397531 94.841662357272696 1;
 	setAttr ".bindPreMatrix[64]" -type "matrix" -0.66610917303186845 -0.085420590567554064 -0.74094661906907222 0
-		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 -0
+		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 0
 		 -15.79564587749463 -3.0963542812568332 99.060143153983873 1;
 	setAttr ".bindPreMatrix[65]" -type "matrix" -0.4171336029492157 -0.089815913695130603 -0.9043962952918998 0
-		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 -0
+		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 0
 		 -38.274453870709713 -3.5709756577226579 91.179939672064677 1;
-	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 -0
+	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 0
 		 0.024134944584303642 0.97171475424335352 0.23492113748169094 0 -0.072391073202730583 0.23607141673644688 -0.96903550952511708 0
 		 -3.2003206005037299 -77.899988140525451 -35.426609466928412 1;
-	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 -0
-		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 -0
+	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 0
+		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 0
 		 -5.8256849692137029 -49.281346381588165 70.703280241826192 1;
-	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 -0
-		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 -0
+	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 0
+		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 0
 		 -8.3580963631788485 -49.257975202320779 72.143487220581534 1;
-	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 -0
+	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 0
 		 -0.6193742170174974 0.59552734849789857 -0.5115884639874364 0 -0.44204297819871052 -0.80305049690817731 -0.39963471425883962 0
 		 36.840956368518675 -59.799664679232663 39.505162005827856 1;
-	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 -0
-		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 -0 0.41038798450533415 0.8520877198038338 0.3248510734677546 -0
+	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 0
+		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 0 0.41038798450533415 0.8520877198038338 0.3248510734677546 0
 		 8.3580975111938596 49.257975600279963 -72.143487238699251 1;
-	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 -0
+	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 0
 		 -0.60265710922764393 0.61243910081930253 -0.51158846398743674 0 -0.46409634659016252 -0.79051038971092569 -0.39963471425883984 0
 		 20.479416590213244 -60.389514556602585 39.505162005827735 1;
-	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 -0
-		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 -0 0.48347785649071207 0.79841305742548196 0.35886731812139233 -0
+	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 0
+		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 0 0.48347785649071207 0.79841305742548196 0.35886731812139233 0
 		 5.8256861524044696 49.281346656110664 -70.70328020528531 1;
-	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 -0
-		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 -0
+	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 0
+		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 0
 		 -20.479414933073791 60.389513429412489 -39.505165596958264 1;
-	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 -0
-		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 -0
+	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 0
+		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 0
 		 -36.84095471340185 59.799664775226795 -39.505163797210656 1;
-	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 -0
-		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 -0
+	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 0
+		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 0
 		 41.784501041860516 40.712451437911739 1.6176847507577662e-14 1;
-	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 -0
-		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 -0
+	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 0
+		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 0
 		 -31.074005786092126 36.66471765750839 -8.8467899613237008e-16 1;
 	setAttr ".bindPreMatrix[77]" -type "matrix" -3.7919490700984674e-32 3.1511546580459096e-32 -0.99999999999999956 0
-		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 -0
+		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 0
 		 9.3151688497340892 47.152485229179469 1.4851721469859807e-16 1;
 	setAttr ".bindPreMatrix[78]" -type "matrix" -0.00028419380823610187 2.9992216969582393e-05 -0.99999995916717266 0
-		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 -0
+		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 0
 		 58.985979588892484 -4.4158766682246151 -13.624596468617483 1;
-	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 -0
-		 0.34375531853509206 -0.93905925317779471 -0 0 -0.9390592531777946 -0.34375531853509211 -0 0
+	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 0
+		 0.34375531853509206 -0.93905925317779471 0 0 -0.9390592531777946 -0.34375531853509211 0 0
 		 -64.623004546272796 4.2580594527907394 -5.7220339928583523e-14 1;
-	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 -0
+	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 0
 		 0.61925492727793341 -0.78515057620744177 0.0078681461046324046 0 -0.78508720729289649 -0.61930491091313211 -0.0099751824002620431 0
 		 -85.893172476184432 -23.694087232606531 -1.0913438079276407 1;
 	setAttr ".bindPreMatrix[81]" -type "matrix" -0.00028451534118351709 -2.6770774171015668e-05 -0.99999995916717288 0
-		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 -0
+		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 0
 		 33.930587364342692 2.336649372609195 -13.62459646861738 1;
-	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 -0
-		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 -0
+	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 0
+		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 0
 		 7.0394308392255001 2.1387193804494369 -13.558755908727951 1;
-	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 -0
+	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 0
 		 0.99999999999999822 -5.6891626879313423e-08 2.6100846192255774e-09 0 -5.6772812330172001e-08 -0.99944283522543076 -0.033376924911509599 0
 		 -7.0394308430776045 -2.1387194017290247 13.558755904681769 1;
-	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 -0
+	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 0
 		 0.99447729551044795 -0.10495154619430543 -0.000285772024368715 0 -0.10495155047977374 -0.99447733611776756 7.6516148695944865e-14 0
 		 -58.985979590126107 4.4158766529653919 13.624596468222286 1;
-	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 -0
-		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 -0
+	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 0
+		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 0
 		 -6.1647744734161698 -5.9918209040313144 -13.182977783826168 1;
 	setAttr ".bindPreMatrix[86]" -type "matrix" -0.00028451533461715245 -2.6791846275409926e-05 -0.99999995916660989 0
-		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.098082973939466e-08 -0
+		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.0980829739394663e-08 0
 		 -33.930587362535725 -2.3366491006984398 13.624596517463372 1;
-	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 -0
+	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 0
 		 0.38937967170586468 -0.9201800445901811 0.040646731728956789 0 -0.92094114934023663 -0.38970168007102707 1.3050470395927635e-06 0
 		 6.1647744523920922 5.9918208958986678 13.182977798034011 1;
 	setAttr ".geomMatrix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -55431,256 +55432,256 @@ createNode skinCluster -name "skinCluster2";
 		2 88 0.49713920582780075 89 1
 		2 88 0.4967737730375113 89 1;
 	setAttr -size 89 ".bindPreMatrix";
-	setAttr ".bindPreMatrix[0]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
-	setAttr ".bindPreMatrix[1]" -type "matrix" -0 -0 1 -0 0.99659610431516354 -0.082439097907710771 -0 0
-		 0.082439097907710868 0.99659610431516354 -0 -0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
-	setAttr ".bindPreMatrix[2]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
-	setAttr ".bindPreMatrix[3]" -type "matrix" -0 -0 1 -0 0.99659610431516399 -0.082439097907710812 -0 0
-		 0.082439097907710923 0.99659610431516399 -0 -0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
-	setAttr ".bindPreMatrix[4]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
-	setAttr ".bindPreMatrix[5]" -type "matrix" 0 -0 1 -0 0.98144467562890902 -0.19174553105526851 -0 0
-		 0.19174553105526865 0.9814446756289088 0 -0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
-	setAttr ".bindPreMatrix[6]" -type "matrix" -0 -0 1 -0 0.98144467562890891 -0.1917455310552684 -0 0
-		 0.1917455310552684 0.98144467562890858 0 -0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
-	setAttr ".bindPreMatrix[7]" -type "matrix" -0 -0 1 -0 0.9965961043151631 -0.082439097907710743 -0 0
-		 0.08243909790771084 0.9965961043151631 -0 -0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
-	setAttr ".bindPreMatrix[8]" -type "matrix" -0 -0 1 -0 0.98172550254916213 -0.19030248985390025 -0 0
-		 0.19030248985390036 0.98172550254916224 -0 -0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
-	setAttr ".bindPreMatrix[9]" -type "matrix" 0 -0 1 -0 0.99869188949195753 -0.051132278093041238 -0 0
-		 0.051132278093041265 0.99869188949195764 0 -0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
-	setAttr ".bindPreMatrix[10]" -type "matrix" 0 -0 1 -0 0.98144467562890991 -0.19174553105526893 -0 0
-		 0.19174553105526901 0.98144467562890936 0 -0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
-	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 -0
-		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 -0
+	setAttr ".bindPreMatrix[0]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
+	setAttr ".bindPreMatrix[1]" -type "matrix" 0 0 1 0 0.99659610431516354 -0.082439097907710771 0 0
+		 0.082439097907710868 0.99659610431516354 0 0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
+	setAttr ".bindPreMatrix[2]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
+	setAttr ".bindPreMatrix[3]" -type "matrix" 0 0 1 0 0.99659610431516399 -0.082439097907710812 0 0
+		 0.082439097907710923 0.99659610431516399 0 0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
+	setAttr ".bindPreMatrix[4]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
+	setAttr ".bindPreMatrix[5]" -type "matrix" 0 0 1 0 0.98144467562890902 -0.19174553105526851 0 0
+		 0.19174553105526865 0.9814446756289088 0 0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
+	setAttr ".bindPreMatrix[6]" -type "matrix" 0 0 1 0 0.98144467562890891 -0.1917455310552684 0 0
+		 0.1917455310552684 0.98144467562890858 0 0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
+	setAttr ".bindPreMatrix[7]" -type "matrix" 0 0 1 0 0.9965961043151631 -0.082439097907710743 0 0
+		 0.08243909790771084 0.9965961043151631 0 0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
+	setAttr ".bindPreMatrix[8]" -type "matrix" 0 0 1 0 0.98172550254916213 -0.19030248985390025 0 0
+		 0.19030248985390036 0.98172550254916224 0 0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
+	setAttr ".bindPreMatrix[9]" -type "matrix" 0 0 1 0 0.99869188949195753 -0.051132278093041238 0 0
+		 0.051132278093041265 0.99869188949195764 0 0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
+	setAttr ".bindPreMatrix[10]" -type "matrix" 0 0 1 0 0.98144467562890991 -0.19174553105526893 0 0
+		 0.19174553105526901 0.98144467562890936 0 0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
+	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 0
+		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 0
 		 133.79568083020493 7.5177611410476324 51.751829482427006 1;
-	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 -0
-		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 -0
+	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 0
+		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 0
 		 103.57434158040842 -8.463334792315047 110.28612159483698 1;
-	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 -0
-		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 -0
+	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 0
+		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 0
 		 125.85473488042882 29.46740927454055 20.472348063641281 1;
-	setAttr ".bindPreMatrix[14]" -type "matrix" 0 -0 1 -0 -0.91185412111760744 0.4105143868378261 -0 0
-		 -0.41051438683782615 -0.91185412111760744 0 -0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
-	setAttr ".bindPreMatrix[15]" -type "matrix" 0 -0 1 -0 -0.95916945495750394 0.28283202908532912 -0 0
-		 -0.28283202908532895 -0.95916945495750394 0 -0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
-	setAttr ".bindPreMatrix[16]" -type "matrix" 0 -0 1 -0 -0.91753609536389391 0.39765250370691785 -0 0
-		 -0.39765250370691785 -0.9175360953638938 0 -0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
-	setAttr ".bindPreMatrix[17]" -type "matrix" 0 -0 1 -0 -0.93946861427306017 0.34263497018818262 -0 0
-		 -0.34263497018818284 -0.93946861427306017 0 -0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
-	setAttr ".bindPreMatrix[18]" -type "matrix" 0 -0 1 -0 -0.92732549310256085 0.37425583474689283 -0 0
-		 -0.37425583474689311 -0.92732549310256063 0 -0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
+	setAttr ".bindPreMatrix[14]" -type "matrix" 0 0 1 0 -0.91185412111760744 0.4105143868378261 0 0
+		 -0.41051438683782615 -0.91185412111760744 0 0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
+	setAttr ".bindPreMatrix[15]" -type "matrix" 0 0 1 0 -0.95916945495750394 0.28283202908532912 0 0
+		 -0.28283202908532895 -0.95916945495750394 0 0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
+	setAttr ".bindPreMatrix[16]" -type "matrix" 0 0 1 0 -0.91753609536389391 0.39765250370691785 0 0
+		 -0.39765250370691785 -0.9175360953638938 0 0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
+	setAttr ".bindPreMatrix[17]" -type "matrix" 0 0 1 0 -0.93946861427306017 0.34263497018818262 0 0
+		 -0.34263497018818284 -0.93946861427306017 0 0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
+	setAttr ".bindPreMatrix[18]" -type "matrix" 0 0 1 0 -0.92732549310256085 0.37425583474689283 0 0
+		 -0.37425583474689311 -0.92732549310256063 0 0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
 	setAttr ".bindPreMatrix[19]" -type "matrix" -0.50149054742199073 -0.57171153819303522 -0.64934824858726303 0
-		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 -0
+		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 0
 		 96.431874889197729 -50.494861706156826 -45.911383372962909 1;
 	setAttr ".bindPreMatrix[20]" -type "matrix" -0.24333303631670589 -0.42034270223957648 -0.87412873543364489 0
-		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 -0
+		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 0
 		 100.30764895385705 -33.877086110887774 -29.364739525936272 1;
-	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 -0
+	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 0
 		 0.83970040417574121 -0.50238876926677678 -0.20617651598014664 0 -0.20835177233249991 -0.64865355836195593 0.73200963121415263 0
 		 -96.43187480727245 50.494861994837308 45.911383227537669 1;
-	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 -0
-		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 -0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 -0
+	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 0
+		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 0
 		 -103.57434026371725 8.4633358906566496 -110.28612274711067 1;
-	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 -0
+	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 0
 		 0.91503606458378384 -0.39839941124434664 -0.063141979943449611 0 -0.32171110209880838 -0.81522384602431452 0.48157247394311714 0
 		 -100.30764886902189 33.877086429616995 29.364739476831808 1;
-	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 -0
+	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 0
 		 0.98063959373379073 0.052798068744496378 0.18856922107936186 0 -0.022916332224807275 0.98729129864798681 -0.1572600818114189 0
 		 -133.79568032916322 -7.5177601506741469 -51.751831224805237 1;
-	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 -0
-		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 -0
+	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 0
+		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 0
 		 -125.8547349939906 -29.467408295638041 -20.472349879300378 1;
-	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 -0
-		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 -0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 -0
+	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 0
+		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 0
 		 -34.050662706045586 0.66627029252388281 -103.08607605689102 1;
 	setAttr ".bindPreMatrix[27]" -type "matrix" -0.90099974467557453 -0.042690499845575963 -0.43171400407849159 0
-		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 -0
+		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 0
 		 -13.942256237890504 -1.3900021469788471 -98.008339526396227 1;
 	setAttr ".bindPreMatrix[28]" -type "matrix" -0.82609270443588734 -0.043623314522089174 -0.56184326115733452 0
-		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 -0
+		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 0
 		 49.779845092493083 1.6478018442985809 -98.998313930745269 1;
 	setAttr ".bindPreMatrix[29]" -type "matrix" -0.8264073826962206 0.037188542822660334 -0.56184326115733407 0
-		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 -0
+		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 0
 		 25.123455851769254 -0.80740230140237279 -98.998313930744942 1;
 	setAttr ".bindPreMatrix[30]" -type "matrix" -0.58600553258442001 -0.03298142091352476 -0.80963556101185208 0
-		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 -0
+		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 0
 		 23.186943721424878 0.43130511469000976 -97.55225001823338 1;
-	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 -0
-		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 -0
+	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 0
+		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 0
 		 4.158250507364972 73.798162640407753 -63.670983757913959 1;
 	setAttr ".bindPreMatrix[32]" -type "matrix" -0.55312747182076216 -0.059241104597870735 -0.83098766022318171 0
-		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 -0
+		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 0
 		 23.495089012635304 1.6023562422294408 -96.739593116985958 1;
 	setAttr ".bindPreMatrix[33]" -type "matrix" -0.68645498680549122 -0.0070778227519026939 -0.72713785179631896 0
-		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 -0
+		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 0
 		 13.762267279025494 -0.40863653088361784 -99.729192181398261 1;
-	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 -0
-		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 -0
+	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 0
+		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 0
 		 28.754630524673583 74.649998915870526 -53.725080464253914 1;
 	setAttr ".bindPreMatrix[35]" -type "matrix" -0.74406133134772878 0.087858590255345384 -0.66230929580626363 0
-		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 -0
+		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 0
 		 4.7491983952980483 -3.5708841658519663 -99.679927875834096 1;
 	setAttr ".bindPreMatrix[36]" -type "matrix" -0.67894184077787068 0.10086252680845229 -0.72723086260620995 0
-		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 -0
+		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 0
 		 7.716870641645281 -0.60610271364339963 -99.187357763245089 1;
-	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 -0
-		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 -0
+	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 0
+		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 0
 		 26.190704203262776 73.406226357568556 -58.529874983348286 1;
 	setAttr ".bindPreMatrix[38]" -type "matrix" -0.68765047753172182 0.055669062829509022 -0.72390453527663468 0
-		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 -0
+		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 0
 		 10.061785573238605 -3.1915068775062836 -99.192767035376079 1;
 	setAttr ".bindPreMatrix[39]" -type "matrix" -0.61892476662694029 -0.21827620940220693 -0.7545115172512562 0
-		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 -0
+		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 0
 		 17.033303770021949 9.5105596313829075 -96.977666852403758 1;
 	setAttr ".bindPreMatrix[40]" -type "matrix" -0.85753020433127902 0.25422595500363904 -0.4472260194376485 0
-		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 -0
+		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 0
 		 -14.61728315555149 7.651303606215369 -98.236583236146757 1;
 	setAttr ".bindPreMatrix[41]" -type "matrix" -0.59309425420437567 -0.12812705835112656 -0.79487273355427324 0
-		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 -0
+		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 0
 		 22.132123624293385 6.2850397242643483 -95.77326152561929 1;
 	setAttr ".bindPreMatrix[42]" -type "matrix" -0.51692568591107879 -0.071551441339396615 -0.85303471587480906 0
-		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 -0
+		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 0
 		 31.412399622493179 3.4754466098049672 -94.841662395476519 1;
 	setAttr ".bindPreMatrix[43]" -type "matrix" -0.55044482211798895 -0.17622195161297885 -0.81606146923697487 0
-		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 -0
+		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 0
 		 23.711008822349335 3.0182958680262737 -94.933512216159784 1;
 	setAttr ".bindPreMatrix[44]" -type "matrix" -0.66610917296712713 -0.085420581645840432 -0.74094662015582335 0
-		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 -0
+		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 0
 		 15.795645566627869 3.0963584648545632 -99.060143169231594 1;
 	setAttr ".bindPreMatrix[45]" -type "matrix" -0.82609270473016227 -0.043623306770143845 -0.5618432613265395 0
-		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 -0
+		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 0
 		 -49.779845168607274 -1.6478005862664618 98.99831391551615 1;
 	setAttr ".bindPreMatrix[46]" -type "matrix" -0.41713360267390942 -0.089815904768804924 -0.90439629630535667 0
-		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 -0
+		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 0
 		 38.274453528088991 3.5709798375888711 -91.179939775452297 1;
-	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 -0
-		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 -0
+	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 0
+		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 0
 		 34.050662737506883 -0.66626903249394664 103.08607605464265 1;
 	setAttr ".bindPreMatrix[48]" -type "matrix" -0.58600553323754356 -0.032981429838558771 -0.80963556017555605 0
-		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 -0
+		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 0
 		 -23.186943807168191 -0.43130092087886746 97.552250081131703 1;
-	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 -0
+	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 0
 		 0.56127524838519116 -0.025257561130827152 -0.82724370723255702 0 -0.044954771203624282 -0.99898902323600569 3.1369226369259971e-08 0
 		 -25.123455518269772 0.80740648314929908 98.998313964389936 1;
-	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 -0
-		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 -0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 -0
+	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 0
+		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 0
 		 13.942256186946206 1.390006341807084 98.008339539872722 1;
 	setAttr ".bindPreMatrix[51]" -type "matrix" -0.68645498771967406 -0.0070778316426157624 -0.72713785084674321 0
-		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 -0
+		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 0
 		 -13.76226717963474 0.40864072448457078 99.729192237904371 1;
-	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 -0
+	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 0
 		 0.45849022230919811 0.35974177151728592 -0.81263311147926154 0 -0.71539697008826031 -0.39310059231241512 -0.57764963387174917 0
 		 -4.1582474101333737 -73.798161090618635 63.670986125332306 1;
-	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 -0
+	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 0
 		 0.80012860266318797 0.34310329757113167 -0.49201051451779898 0 -0.38643802765971957 -0.33248643678747181 -0.86030135425374943 0
 		 -28.754628797769474 -74.649997625588071 53.72508406318876 1;
 	setAttr ".bindPreMatrix[54]" -type "matrix" -0.55312747207551394 -0.059241113545791368 -0.83098765941571406 0
-		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 -0
+		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 0
 		 -23.495089301854769 -1.6023520575029819 96.739593178435598 1;
-	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 -0
+	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 0
 		 0.71288380658844053 0.30995673748209535 -0.62906557622670067 0 -0.54662558111255899 -0.31633696655029803 -0.77532663933797152 0
 		 -26.190701812161127 -73.406225139289361 58.529878207908432 1;
-	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 -0
+	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 0
 		 0.72343217490139611 -0.031925712337947131 -0.68965689818137177 0 -0.061503715039628232 -0.99793872823821661 -0.018319053431234234 0
 		 -10.061785180931288 3.1915110519226153 99.192767175742702 1;
-	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 -0
+	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 0
 		 0.65922048829113522 -0.064640646358668827 -0.74916615957711885 0 -0.10863277700713558 -0.99403342825735663 -0.0098215714956213767 0
 		 -4.7491978010108458 3.5708883176633157 99.679927968815861 1;
 	setAttr ".bindPreMatrix[58]" -type "matrix" -0.61892476492831117 -0.21827621815425 -0.75451151611271772 0
-		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 -0
+		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 0
 		 -17.033304911764304 -9.5105555948482419 96.977666805445168 1;
-	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 -0
+	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 0
 		 0.7277890272699542 -0.038073001637481403 -0.68474343978731633 0 -0.096752809343252991 -0.99417161446274438 -0.047557279997159911 0
 		 -7.7168701025320932 0.6061068656539802 99.187358026919654 1;
-	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 -0
+	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 0
 		 0.42953438743592132 -0.12456716864518505 -0.89441781651852625 0 -0.283093894943792 -0.95908924951988761 -0.0023786762981579061 0
 		 14.617284484699253 -7.6512996272522216 98.236583260223568 1;
 	setAttr ".bindPreMatrix[61]" -type "matrix" -0.5930942539473173 -0.12812706724888562 -0.79487273231182975 0
-		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 -0
+		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 0
 		 -22.132124128162825 -6.285035561206084 95.773261405395914 1;
 	setAttr ".bindPreMatrix[62]" -type "matrix" -0.55044482168806652 -0.17622196044364052 -0.81606146762005038 0
-		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 -0
+		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 0
 		 -23.711009428789477 -3.018291728853896 94.933511901716372 1;
 	setAttr ".bindPreMatrix[63]" -type "matrix" -0.51692568629468139 -0.071551450265334438 -0.85303471489365501 0
-		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 -0
+		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 0
 		 -31.412399870203242 -3.4754424221397531 94.841662357272696 1;
 	setAttr ".bindPreMatrix[64]" -type "matrix" -0.66610917303186845 -0.085420590567554064 -0.74094661906907222 0
-		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 -0
+		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 0
 		 -15.79564587749463 -3.0963542812568332 99.060143153983873 1;
 	setAttr ".bindPreMatrix[65]" -type "matrix" -0.4171336029492157 -0.089815913695130603 -0.9043962952918998 0
-		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 -0
+		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 0
 		 -38.274453870709713 -3.5709756577226579 91.179939672064677 1;
-	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 -0
+	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 0
 		 0.024134944584303642 0.97171475424335352 0.23492113748169094 0 -0.072391073202730583 0.23607141673644688 -0.96903550952511708 0
 		 -3.2003206005037299 -77.899988140525451 -35.426609466928412 1;
-	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 -0
-		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 -0
+	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 0
+		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 0
 		 -5.8256849692137029 -49.281346381588165 70.703280241826192 1;
-	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 -0
-		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 -0
+	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 0
+		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 0
 		 -8.3580963631788485 -49.257975202320779 72.143487220581534 1;
-	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 -0
+	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 0
 		 -0.6193742170174974 0.59552734849789857 -0.5115884639874364 0 -0.44204297819871052 -0.80305049690817731 -0.39963471425883962 0
 		 36.840956368518675 -59.799664679232663 39.505162005827856 1;
-	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 -0
-		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 -0 0.41038798450533415 0.8520877198038338 0.3248510734677546 -0
+	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 0
+		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 0 0.41038798450533415 0.8520877198038338 0.3248510734677546 0
 		 8.3580975111938596 49.257975600279963 -72.143487238699251 1;
-	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 -0
+	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 0
 		 -0.60265710922764393 0.61243910081930253 -0.51158846398743674 0 -0.46409634659016252 -0.79051038971092569 -0.39963471425883984 0
 		 20.479416590213244 -60.389514556602585 39.505162005827735 1;
-	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 -0
-		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 -0 0.48347785649071207 0.79841305742548196 0.35886731812139233 -0
+	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 0
+		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 0 0.48347785649071207 0.79841305742548196 0.35886731812139233 0
 		 5.8256861524044696 49.281346656110664 -70.70328020528531 1;
-	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 -0
-		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 -0
+	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 0
+		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 0
 		 -20.479414933073791 60.389513429412489 -39.505165596958264 1;
-	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 -0
-		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 -0
+	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 0
+		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 0
 		 -36.84095471340185 59.799664775226795 -39.505163797210656 1;
-	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 -0
-		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 -0
+	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 0
+		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 0
 		 41.784501041860516 40.712451437911739 1.6176847507577662e-14 1;
-	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 -0
-		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 -0
+	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 0
+		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 0
 		 -31.074005786092126 36.66471765750839 -8.8467899613237008e-16 1;
 	setAttr ".bindPreMatrix[77]" -type "matrix" -3.7919490700984674e-32 3.1511546580459096e-32 -0.99999999999999956 0
-		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 -0
+		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 0
 		 9.3151688497340892 47.152485229179469 1.4851721469859807e-16 1;
 	setAttr ".bindPreMatrix[78]" -type "matrix" -0.00028419380823610187 2.9992216969582393e-05 -0.99999995916717266 0
-		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 -0
+		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 0
 		 58.985979588892484 -4.4158766682246151 -13.624596468617483 1;
-	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 -0
-		 0.34375531853509206 -0.93905925317779471 -0 0 -0.9390592531777946 -0.34375531853509211 -0 0
+	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 0
+		 0.34375531853509206 -0.93905925317779471 0 0 -0.9390592531777946 -0.34375531853509211 0 0
 		 -64.623004546272796 4.2580594527907394 -5.7220339928583523e-14 1;
-	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 -0
+	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 0
 		 0.61925492727793341 -0.78515057620744177 0.0078681461046324046 0 -0.78508720729289649 -0.61930491091313211 -0.0099751824002620431 0
 		 -85.893172476184432 -23.694087232606531 -1.0913438079276407 1;
 	setAttr ".bindPreMatrix[81]" -type "matrix" -0.00028451534118351709 -2.6770774171015668e-05 -0.99999995916717288 0
-		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 -0
+		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 0
 		 33.930587364342692 2.336649372609195 -13.62459646861738 1;
-	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 -0
-		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 -0
+	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 0
+		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 0
 		 7.0394308392255001 2.1387193804494369 -13.558755908727951 1;
-	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 -0
+	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 0
 		 0.99999999999999822 -5.6891626879313423e-08 2.6100846192255774e-09 0 -5.6772812330172001e-08 -0.99944283522543076 -0.033376924911509599 0
 		 -7.0394308430776045 -2.1387194017290247 13.558755904681769 1;
-	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 -0
+	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 0
 		 0.99447729551044795 -0.10495154619430543 -0.000285772024368715 0 -0.10495155047977374 -0.99447733611776756 7.6516148695944865e-14 0
 		 -58.985979590126107 4.4158766529653919 13.624596468222286 1;
-	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 -0
-		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 -0
+	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 0
+		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 0
 		 -6.1647744734161698 -5.9918209040313144 -13.182977783826168 1;
 	setAttr ".bindPreMatrix[86]" -type "matrix" -0.00028451533461715245 -2.6791846275409926e-05 -0.99999995916660989 0
-		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.098082973939466e-08 -0
+		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.0980829739394663e-08 0
 		 -33.930587362535725 -2.3366491006984398 13.624596517463372 1;
-	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 -0
+	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 0
 		 0.38937967170586468 -0.9201800445901811 0.040646731728956789 0 -0.92094114934023663 -0.38970168007102707 1.3050470395927635e-06 0
 		 6.1647744523920922 5.9918208958986678 13.182977798034011 1;
-	setAttr ".bindPreMatrix[89]" -type "matrix" 9.0628559817698885e-17 -2.6244174413415049e-20 1 -0
-		 -0.00057915898191168041 -0.99999983228742306 2.6244174424202746e-20 0 0.99999983228742306 -0.00057915898191167347 -9.0628559817698873e-17 -0
+	setAttr ".bindPreMatrix[89]" -type "matrix" 9.0628559817698885e-17 -2.6244174413415049e-20 1 0
+		 -0.00057915898191168041 -0.99999983228742306 2.6244174424202746e-20 0 0.99999983228742306 -0.00057915898191167347 -9.0628559817698873e-17 0
 		 -13.689788025134616 134.21476248087566 -8.4986991882324041 1;
 	setAttr ".geomMatrix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -size 89 ".matrix";
@@ -55930,261 +55931,261 @@ createNode skinCluster -name "skinCluster1";
 		1 88 1
 		1 88 1;
 	setAttr -size 91 ".bindPreMatrix";
-	setAttr ".bindPreMatrix[0]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
-	setAttr ".bindPreMatrix[1]" -type "matrix" -0 -0 1 -0 0.99659610431516354 -0.082439097907710771 -0 0
-		 0.082439097907710868 0.99659610431516354 -0 -0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
-	setAttr ".bindPreMatrix[2]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
-	setAttr ".bindPreMatrix[3]" -type "matrix" -0 -0 1 -0 0.99659610431516399 -0.082439097907710812 -0 0
-		 0.082439097907710923 0.99659610431516399 -0 -0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
-	setAttr ".bindPreMatrix[4]" -type "matrix" 0 -0 1 -0 0.99326691436109427 0.11584833548908156 -0 0
-		 -0.11584833548908159 0.99326691436109427 0 -0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
-	setAttr ".bindPreMatrix[5]" -type "matrix" 0 -0 1 -0 0.98144467562890902 -0.19174553105526851 -0 0
-		 0.19174553105526865 0.9814446756289088 0 -0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
-	setAttr ".bindPreMatrix[6]" -type "matrix" -0 -0 1 -0 0.98144467562890891 -0.1917455310552684 -0 0
-		 0.1917455310552684 0.98144467562890858 0 -0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
-	setAttr ".bindPreMatrix[7]" -type "matrix" -0 -0 1 -0 0.9965961043151631 -0.082439097907710743 -0 0
-		 0.08243909790771084 0.9965961043151631 -0 -0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
-	setAttr ".bindPreMatrix[8]" -type "matrix" -0 -0 1 -0 0.98172550254916213 -0.19030248985390025 -0 0
-		 0.19030248985390036 0.98172550254916224 -0 -0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
-	setAttr ".bindPreMatrix[9]" -type "matrix" 0 -0 1 -0 0.99869188949195753 -0.051132278093041238 -0 0
-		 0.051132278093041265 0.99869188949195764 0 -0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
-	setAttr ".bindPreMatrix[10]" -type "matrix" 0 -0 1 -0 0.98144467562890991 -0.19174553105526893 -0 0
-		 0.19174553105526901 0.98144467562890936 0 -0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
-	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 -0
-		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 -0
+	setAttr ".bindPreMatrix[0]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -73.266356604213414 -3.5102522854492157 6.388316101834976e-15 1;
+	setAttr ".bindPreMatrix[1]" -type "matrix" 0 0 1 0 0.99659610431516354 -0.082439097907710771 0 0
+		 0.082439097907710868 0.99659610431516354 0 0 -83.434548249818945 12.694243798278045 1.1972422677656423e-14 1;
+	setAttr ".bindPreMatrix[2]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -69.016718529132717 -3.5102522854492211 4.4011507620776064e-15 1;
+	setAttr ".bindPreMatrix[3]" -type "matrix" 0 0 1 0 0.99659610431516399 -0.082439097907710812 0 0
+		 0.082439097907710923 0.99659610431516399 0 0 -80.85045915281286 12.694243798278054 1.0362646781349711e-14 1;
+	setAttr ".bindPreMatrix[4]" -type "matrix" 0 0 1 0 0.99326691436109427 0.11584833548908156 0 0
+		 -0.11584833548908159 0.99326691436109427 0 0 -77.515994679294167 -3.5102522854492122 8.3754814415923448e-15 1;
+	setAttr ".bindPreMatrix[5]" -type "matrix" 0 0 1 0 0.98144467562890902 -0.19174553105526851 0 0
+		 0.19174553105526865 0.9814446756289088 0 0 -116.15765098959606 22.415407656767762 -2.5044140026495937e-14 1;
+	setAttr ".bindPreMatrix[6]" -type "matrix" 0 0 1 0 0.98144467562890891 -0.1917455310552684 0 0
+		 0.1917455310552684 0.98144467562890858 0 0 -111.08639706466141 22.415407656768185 -2.4800542766827458e-14 1;
+	setAttr ".bindPreMatrix[7]" -type "matrix" 0 0 1 0 0.9965961043151631 -0.082439097907710743 0 0
+		 0.08243909790771084 0.9965961043151631 0 0 -86.018637346825017 12.694243798278029 1.3582198573963135e-14 1;
+	setAttr ".bindPreMatrix[8]" -type "matrix" 0 0 1 0 0.98172550254916213 -0.19030248985390025 0 0
+		 0.19030248985390036 0.98172550254916224 0 0 -86.6973596144136 22.252073943332888 1.5191974470269853e-14 1;
+	setAttr ".bindPreMatrix[9]" -type "matrix" 0 0 1 0 0.99869188949195753 -0.051132278093041238 0 0
+		 0.051132278093041265 0.99869188949195764 0 0 -128.20031321310555 4.342846457660869 -2.5531334545832944e-14 1;
+	setAttr ".bindPreMatrix[10]" -type "matrix" 0 0 1 0 0.98144467562890991 -0.19174553105526893 0 0
+		 0.19174553105526901 0.98144467562890936 0 0 -121.22890491453074 22.415407656767368 -2.5287737286164449e-14 1;
+	setAttr ".bindPreMatrix[11]" -type "matrix" -0.19447576917837794 0.14989416417688181 0.96938687568389958 0
+		 -0.98063959576185622 -0.052798073355715007 -0.18856920924145351 0 0.022916335363682809 -0.9872912959180985 0.15726009849246808 0
 		 133.79568083020493 7.5177611410476324 51.751829482427006 1;
-	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 -0
-		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 -0
+	setAttr ".bindPreMatrix[12]" -type "matrix" -0.63847192459634217 0.077380791982113561 0.76574526739279514 0
+		 -0.76485319554748077 0.047058552366527368 -0.64248352656700392 0 -0.085750747886240292 -0.99589040846941967 0.029139381523340051 0
 		 103.57434158040842 -8.463334792315047 110.28612159483698 1;
-	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 -0
-		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 -0
+	setAttr ".bindPreMatrix[13]" -type "matrix" 0.024234080653667684 0.15986458000514628 0.98684143883131026 0
+		 -0.97328370672484599 -0.2216784294056609 0.059812207451187802 0 0.22832331365591221 -0.96192618739486324 0.15022141806402428 0
 		 125.85473488042882 29.46740927454055 20.472348063641281 1;
-	setAttr ".bindPreMatrix[14]" -type "matrix" 0 -0 1 -0 -0.91185412111760744 0.4105143868378261 -0 0
-		 -0.41051438683782615 -0.91185412111760744 0 -0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
-	setAttr ".bindPreMatrix[15]" -type "matrix" 0 -0 1 -0 -0.95916945495750394 0.28283202908532912 -0 0
-		 -0.28283202908532895 -0.95916945495750394 0 -0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
-	setAttr ".bindPreMatrix[16]" -type "matrix" 0 -0 1 -0 -0.91753609536389391 0.39765250370691785 -0 0
-		 -0.39765250370691785 -0.9175360953638938 0 -0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
-	setAttr ".bindPreMatrix[17]" -type "matrix" 0 -0 1 -0 -0.93946861427306017 0.34263497018818262 -0 0
-		 -0.34263497018818284 -0.93946861427306017 0 -0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
-	setAttr ".bindPreMatrix[18]" -type "matrix" 0 -0 1 -0 -0.92732549310256085 0.37425583474689283 -0 0
-		 -0.37425583474689311 -0.92732549310256063 0 -0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
+	setAttr ".bindPreMatrix[14]" -type "matrix" 0 0 1 0 -0.91185412111760744 0.4105143868378261 0 0
+		 -0.41051438683782615 -0.91185412111760744 0 0 125.74106100577384 -72.612409042057735 -2.7212138050697079e-14 1;
+	setAttr ".bindPreMatrix[15]" -type "matrix" 0 0 1 0 -0.95916945495750394 0.28283202908532912 0 0
+		 -0.28283202908532895 -0.95916945495750394 0 0 82.930647593029505 -60.378650176860489 -2.9143231770595653e-14 1;
+	setAttr ".bindPreMatrix[16]" -type "matrix" 0 0 1 0 -0.91753609536389391 0.39765250370691785 0 0
+		 -0.39765250370691785 -0.9175360953638938 0 0 87.609526809837789 -70.03818486721859 -2.7160884044015857e-14 1;
+	setAttr ".bindPreMatrix[17]" -type "matrix" 0 0 1 0 -0.93946861427306017 0.34263497018818262 0 0
+		 -0.34263497018818284 -0.93946861427306017 0 0 115.99925945716282 -64.290144336424845 -2.8558263828915586e-14 1;
+	setAttr ".bindPreMatrix[18]" -type "matrix" 0 0 1 0 -0.92732549310256085 0.37425583474689283 0 0
+		 -0.37425583474689311 -0.92732549310256063 0 0 102.30585944154927 -67.793875858894424 -5.8426032759576108e-14 1;
 	setAttr ".bindPreMatrix[19]" -type "matrix" -0.50149054742199073 -0.57171153819303522 -0.64934824858726303 0
-		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 -0
+		 -0.8397004047804677 0.50238876762099027 0.20617651752753285 0 0.20835177238965416 0.64865356182265466 -0.73200962813126524 0
 		 96.431874889197729 -50.494861706156826 -45.911383372962909 1;
 	setAttr ".bindPreMatrix[20]" -type "matrix" -0.24333303631670589 -0.42034270223957648 -0.87412873543364489 0
-		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 -0
+		 -0.91503606539041249 0.39839940924731426 0.063141980854448276 0 0.32171110094574756 0.81522384863626407 -0.48157247029180639 0
 		 100.30764895385705 -33.877086110887774 -29.364739525936272 1;
-	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 -0
+	setAttr ".bindPreMatrix[21]" -type "matrix" -0.50149054845829799 -0.57171154067325547 -0.64934824560324256 0
 		 0.83970040417574121 -0.50238876926677678 -0.20617651598014664 0 -0.20835177233249991 -0.64865355836195593 0.73200963121415263 0
 		 -96.43187480727245 50.494861994837308 45.911383227537669 1;
-	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 -0
-		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 -0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 -0
+	setAttr ".bindPreMatrix[22]" -type "matrix" -0.63847193451579565 0.07738077660464604 0.76574526067597704 0
+		 0.76485318786413536 -0.047058557843110367 0.64248353531261559 0 0.085750742560796858 0.99589040940546703 -0.029139365203851735 0
 		 -103.57434026371725 8.4633358906566496 -110.28612274711067 1;
-	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 -0
+	setAttr ".bindPreMatrix[23]" -type "matrix" -0.24333303782551025 -0.4203427054124782 -0.87412873348788134 0
 		 0.91503606458378384 -0.39839941124434664 -0.063141979943449611 0 -0.32171110209880838 -0.81522384602431452 0.48157247394311714 0
 		 -100.30764886902189 33.877086429616995 29.364739476831808 1;
-	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 -0
+	setAttr ".bindPreMatrix[24]" -type "matrix" -0.19447577977472694 0.14989414782046481 0.9693868760872455 0
 		 0.98063959373379073 0.052798068744496378 0.18856922107936186 0 -0.022916332224807275 0.98729129864798681 -0.1572600818114189 0
 		 -133.79568032916322 -7.5177601506741469 -51.751831224805237 1;
-	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 -0
-		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 -0
+	setAttr ".bindPreMatrix[25]" -type "matrix" 0.024234073419722613 0.1598645621659209 0.98684144189884215 0
+		 0.97328370844966217 0.22167842506741797 -0.05981219546298016 0 -0.22832330707126697 0.96192619135936164 -0.1502214026858768 0
 		 -125.8547349939906 -29.467408295638041 -20.472349879300378 1;
-	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 -0
-		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 -0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 -0
+	setAttr ".bindPreMatrix[26]" -type "matrix" -0.96935335302946335 0.03777466663641281 0.24274915351251825 0
+		 0.24254319105240907 -0.010012363874364638 0.9700889407903599 0 0.039075279201187973 0.99923612181013299 0.00054353030642999972 0
 		 -34.050662706045586 0.66627029252388281 -103.08607605689102 1;
 	setAttr ".bindPreMatrix[27]" -type "matrix" -0.90099974467557453 -0.042690499845575963 -0.43171400407849159 0
-		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 -0
+		 -0.43120593155586351 -0.020943716178421525 0.90201042418792343 0 -0.047548971446172324 0.99886880118240384 0.00046188617481854647 0
 		 -13.942256237890504 -1.3900021469788471 -98.008339526396227 1;
 	setAttr ".bindPreMatrix[28]" -type "matrix" -0.82609270443588734 -0.043623314522089174 -0.56184326115733452 0
-		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 -0
+		 -0.56106152907358098 -0.029627870350795504 0.82724370646871159 0 -0.052733331692741005 0.99860862990892674 3.9957434166959532e-09 0
 		 49.779845092493083 1.6478018442985809 -98.998313930745269 1;
 	setAttr ".bindPreMatrix[29]" -type "matrix" -0.8264073826962206 0.037188542822660334 -0.56184326115733407 0
-		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 -0
+		 -0.56127525115929167 0.025257524502255432 0.82724370646871104 0 0.044954757937896397 0.99898902383296773 3.9957423966785444e-09 0
 		 25.123455851769254 -0.80740230140237279 -98.998313930744942 1;
 	setAttr ".bindPreMatrix[30]" -type "matrix" -0.58600553258442001 -0.03298142091352476 -0.80963556101185208 0
-		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 -0
+		 -0.80874778784555579 -0.038149704556577985 0.58691704328394378 0 -0.050244715496970446 0.99872760346191058 -0.0043177132672007198 0
 		 23.186943721424878 0.43130511469000976 -97.55225001823338 1;
-	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 -0
-		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 -0
+	setAttr ".bindPreMatrix[31]" -type "matrix" -0.52725125308125409 0.84620197877791803 0.077125399425760993 0
+		 -0.45849024929270837 -0.35974178480002261 0.81263309037498854 0 0.71539695793856783 0.39310057158598805 0.57764966302336962 0
 		 4.158250507364972 73.798162640407753 -63.670983757913959 1;
 	setAttr ".bindPreMatrix[32]" -type "matrix" -0.55312747182076216 -0.059241104597870735 -0.83098766022318171 0
-		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 -0
+		 -0.8273212843648583 -0.078187007208281853 0.55626098581573735 0 -0.097925953424287907 0.99517701110397305 -0.0057640451167547003 0
 		 23.495089012635304 1.6023562422294408 -96.739593116985958 1;
 	setAttr ".bindPreMatrix[33]" -type "matrix" -0.68645498680549122 -0.0070778227519026939 -0.72713785179631896 0
-		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 -0
+		 -0.72712411882526062 -0.0048295524642693408 0.68648903213786561 0 -0.0083705980946034968 0.99996328925020417 -0.0018311852585421078 0
 		 13.762267279025494 -0.40863653088361784 -99.729192181398261 1;
-	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 -0
-		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 -0
+	setAttr ".bindPreMatrix[34]" -type "matrix" -0.45875904986226368 0.87848329668683145 -0.13344373949987048 0
+		 -0.80012861747544151 -0.34310330858445592 0.4920104827493389 0 0.38643800235783082 0.33248641638514509 0.86030137350410729 0
 		 28.754630524673583 74.649998915870526 -53.725080464253914 1;
 	setAttr ".bindPreMatrix[35]" -type "matrix" -0.74406133134772878 0.087858590255345384 -0.66230929580626363 0
-		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 -0
+		 -0.65922049329130139 0.064640609980936653 0.74916615831607469 0 0.10863275941362462 0.99403342985014154 0.0098216048864621982 0
 		 4.7491983952980483 -3.5708841658519663 -99.679927875834096 1;
 	setAttr ".bindPreMatrix[36]" -type "matrix" -0.67894184077787068 0.10086252680845229 -0.72723086260620995 0
-		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 -0
+		 -0.72778903174540044 0.038072965272356048 0.68474343705249452 0 0.096752788653610741 0.99417161496453266 0.047557311599432453 0
 		 7.716870641645281 -0.60610271364339963 -99.187357763245089 1;
-	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 -0
-		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 -0
+	setAttr ".bindPreMatrix[37]" -type "matrix" -0.43931440593125348 0.89658114539538736 -0.056081213099982229 0
+		 -0.71288382725574462 -0.3099567478778672 0.62906554768337053 0 0.54662555884121655 0.31633694720419875 0.77532666293315122 0
 		 26.190704203262776 73.406226357568556 -58.529874983348286 1;
 	setAttr ".bindPreMatrix[38]" -type "matrix" -0.68765047753172182 0.055669062829509022 -0.72390453527663468 0
-		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 -0
+		 -0.72343217809446703 0.03192567577306505 0.68965689652459028 0 0.0615036945873247 0.99793872891581792 0.018319085184358149 0
 		 10.061785573238605 -3.1915068775062836 -99.192767035376079 1;
 	setAttr ".bindPreMatrix[39]" -type "matrix" -0.61892476662694029 -0.21827620940220693 -0.7545115172512562 0
-		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 -0
+		 -0.72501282513266019 -0.21075466226966205 0.65569724395086537 0 -0.30213992892192765 0.95285779040767993 -0.027811771077151985 0
 		 17.033303770021949 9.5105596313829075 -96.977666852403758 1;
 	setAttr ".bindPreMatrix[40]" -type "matrix" -0.85753020433127902 0.25422595500363904 -0.4472260194376485 0
-		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 -0
+		 -0.42953439899591106 0.12456713377665304 0.89441781582317126 0 0.28309388679160413 0.95908925183486327 0.0023787131111948257 0
 		 -14.61728315555149 7.651303606215369 -98.236583236146757 1;
 	setAttr ".bindPreMatrix[41]" -type "matrix" -0.59309425420437567 -0.12812705835112656 -0.79487273355427324 0
-		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 -0
+		 -0.7910398042883019 -0.091179367734871786 0.60493169112801026 0 -0.14998411136277201 0.98755748177903846 -0.047275644056570726 0
 		 22.132123624293385 6.2850397242643483 -95.77326152561929 1;
 	setAttr ".bindPreMatrix[42]" -type "matrix" -0.51692568591107879 -0.071551441339396615 -0.85303471587480906 0
-		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 -0
+		 -0.85158392216398082 -0.05845153175119263 0.52094936601146946 0 -0.08713586378279152 0.9957227574371269 -0.03071695890925082 0
 		 31.412399622493179 3.4754466098049672 -94.841662395476519 1;
 	setAttr ".bindPreMatrix[43]" -type "matrix" -0.55044482211798895 -0.17622195161297885 -0.81606146923697487 0
-		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 -0
+		 -0.81667341158649964 -0.089321308102921243 0.57014580830385098 0 -0.17336388496790225 0.98028951217918059 -0.094749330870144075 0
 		 23.711008822349335 3.0182958680262737 -94.933512216159784 1;
 	setAttr ".bindPreMatrix[44]" -type "matrix" -0.66610917296712713 -0.085420581645840432 -0.74094662015582335 0
-		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 -0
+		 -0.73832733363952596 -0.065259099132538467 0.67127788462093629 0 -0.10569445628697804 0.9942054989848409 -0.019598665732755711 0
 		 15.795645566627869 3.0963584648545632 -99.060143169231594 1;
 	setAttr ".bindPreMatrix[45]" -type "matrix" -0.82609270473016227 -0.043623306770143845 -0.5618432613265395 0
-		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 -0
+		 0.5610615298866487 0.029627858162469701 -0.82724370635379108 0 0.052733318432064254 -0.99860863060918015 1.7503755077308268e-09 0
 		 -49.779845168607274 -1.6478005862664618 98.99831391551615 1;
 	setAttr ".bindPreMatrix[46]" -type "matrix" -0.41713360267390942 -0.089815904768804924 -0.90439629630535667 0
-		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 -0
+		 -0.90251052232898443 -0.076349389489905481 0.4238461133595342 0 -0.10711822723397368 0.9930276300159433 -0.049211903226466347 0
 		 38.274453528088991 3.5709798375888711 -91.179939775452297 1;
-	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 -0
-		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 -0
+	setAttr ".bindPreMatrix[47]" -type "matrix" -0.96935335277597945 0.037774674389213239 0.24274915331831007 0
+		 -0.24254319133141033 0.010012351661724461 -0.97008894084665032 0 -0.039075283757667778 -0.99923612163941999 -0.00054351657460019768 0
 		 34.050662737506883 -0.66626903249394664 103.08607605464265 1;
 	setAttr ".bindPreMatrix[48]" -type "matrix" -0.58600553323754356 -0.032981429838558771 -0.80963556017555605 0
-		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 -0
+		 0.80874778889365651 0.038149667842207025 -0.58691704422614122 0 0.050244691009135402 -0.99872760456960075 0.0043177420097779392 0
 		 -23.186943807168191 -0.43130092087886746 97.552250081131703 1;
-	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 -0
+	setAttr ".bindPreMatrix[49]" -type "matrix" -0.82640738385869383 0.037188533981507198 -0.56184326003266682 0
 		 0.56127524838519116 -0.025257561130827152 -0.82724370723255702 0 -0.044954771203624282 -0.99898902323600569 3.1369226369259971e-08 0
 		 -25.123455518269772 0.80740648314929908 98.998313964389936 1;
-	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 -0
-		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 -0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 -0
+	setAttr ".bindPreMatrix[50]" -type "matrix" -0.90099974483936629 -0.042690508748473077 -0.43171400285627964 0
+		 0.43120593207674185 0.020943679445665886 -0.9020104247918117 0 0.047548963618815915 -0.99886880157209523 -0.00046184922082670037 0
 		 13.942256186946206 1.390006341807084 98.008339539872722 1;
 	setAttr ".bindPreMatrix[51]" -type "matrix" -0.68645498771967406 -0.0070778316426157624 -0.72713785084674321 0
-		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 -0
+		 0.72712411819933664 0.0048295157397454337 -0.68648903305920062 0 0.008370577496124007 -0.99996328936464352 0.0018312169240815115 0
 		 -13.76226717963474 0.40864072448457078 99.729192237904371 1;
-	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 -0
+	setAttr ".bindPreMatrix[52]" -type "matrix" -0.52725126006051259 0.8462019747963444 0.077125395398452659 0
 		 0.45849022230919811 0.35974177151728592 -0.81263311147926154 0 -0.71539697008826031 -0.39310059231241512 -0.57764963387174917 0
 		 -4.1582474101333737 -73.798161090618635 63.670986125332306 1;
-	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 -0
+	setAttr ".bindPreMatrix[53]" -type "matrix" -0.45875905438336567 0.87848329326640351 -0.13344374647428817 0
 		 0.80012860266318797 0.34310329757113167 -0.49201051451779898 0 -0.38643802765971957 -0.33248643678747181 -0.86030135425374943 0
 		 -28.754628797769474 -74.649997625588071 53.72508406318876 1;
 	setAttr ".bindPreMatrix[54]" -type "matrix" -0.55312747207551394 -0.059241113545791368 -0.83098765941571406 0
-		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 -0
+		 0.82732128720833387 0.078186970588574725 -0.55626098673385937 0 0.097925927962399587 -0.99517701344837972 0.0057640729234581323 0
 		 -23.495089301854769 -1.6023520575029819 96.739593178435598 1;
-	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 -0
+	setAttr ".bindPreMatrix[55]" -type "matrix" -0.43931441175692443 0.89658114216350271 -0.056081219133113328 0
 		 0.71288380658844053 0.30995673748209535 -0.62906557622670067 0 -0.54662558111255899 -0.31633696655029803 -0.77532663933797152 0
 		 -26.190701812161127 -73.406225139289361 58.529878207908432 1;
-	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 -0
+	setAttr ".bindPreMatrix[56]" -type "matrix" -0.68765047906168164 0.055669054006753697 -0.72390453450177605 0
 		 0.72343217490139611 -0.031925712337947131 -0.68965689818137177 0 -0.061503715039628232 -0.99793872823821661 -0.018319053431234234 0
 		 -10.061785180931288 3.1915110519226153 99.192767175742702 1;
-	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 -0
+	setAttr ".bindPreMatrix[57]" -type "matrix" -0.74406133320910695 0.087858581511763137 -0.66230929487500456 0
 		 0.65922048829113522 -0.064640646358668827 -0.74916615957711885 0 -0.10863277700713558 -0.99403342825735663 -0.0098215714956213767 0
 		 -4.7491978010108458 3.5708883176633157 99.679927968815861 1;
 	setAttr ".bindPreMatrix[58]" -type "matrix" -0.61892476492831117 -0.21827621815425 -0.75451151611271772 0
-		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 -0
+		 0.7250128353846963 0.21075462698739619 -0.65569724395550577 0 0.30213990780080324 -0.95285779620659139 0.027811801855333201 0
 		 -17.033304911764304 -9.5105555948482419 96.977666805445168 1;
-	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 -0
+	setAttr ".bindPreMatrix[59]" -type "matrix" -0.67894184262692336 0.10086251802752338 -0.72723086209779741 0
 		 0.7277890272699542 -0.038073001637481403 -0.68474343978731633 0 -0.096752809343252991 -0.99417161446274438 -0.047557279997159911 0
 		 -7.7168701025320932 0.6061068656539802 99.187358026919654 1;
-	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 -0
+	setAttr ".bindPreMatrix[60]" -type "matrix" -0.85753020743038511 0.25422594665198944 -0.44722601824278818 0
 		 0.42953438743592132 -0.12456716864518505 -0.89441781651852625 0 -0.283093894943792 -0.95908924951988761 -0.0023786762981579061 0
 		 14.617284484699253 -7.6512996272522216 98.236583260223568 1;
 	setAttr ".bindPreMatrix[61]" -type "matrix" -0.5930942539473173 -0.12812706724888562 -0.79487273231182975 0
-		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 -0
+		 0.79103980898884185 0.091179331301120548 -0.60493169047287998 0 0.14998408758788789 -0.98755748398849197 0.04727567332940575 0
 		 -22.132124128162825 -6.285035561206084 95.773261405395914 1;
 	setAttr ".bindPreMatrix[62]" -type "matrix" -0.55044482168806652 -0.17622196044364052 -0.81606146762005038 0
-		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 -0
+		 0.81667341720344355 0.089321271870636265 -0.57014580593446484 0 0.17336385987293185 -0.98028951389312091 0.094749359054014368 0
 		 -23.711009428789477 -3.018291728853896 94.933511901716372 1;
 	setAttr ".bindPreMatrix[63]" -type "matrix" -0.51692568629468139 -0.071551450265334438 -0.85303471489365501 0
-		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 -0
+		 0.85158392466050259 0.05845149509471062 -0.52094936604338826 0 0.087135837108435296 -0.99572275894755014 0.030716985615320769 0
 		 -31.412399870203242 -3.4754424221397531 94.841662357272696 1;
 	setAttr ".bindPreMatrix[64]" -type "matrix" -0.66610917303186845 -0.085420590567554064 -0.74094661906907222 0
-		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 -0
+		 0.73832733661463001 0.065259062512908292 -0.67127788490868812 0 0.1056944350963953 -0.99420550062199164 0.019598696962482707 0
 		 -15.79564587749463 -3.0963542812568332 99.060143153983873 1;
 	setAttr ".bindPreMatrix[65]" -type "matrix" -0.4171336029492157 -0.089815913695130603 -0.9043962952918998 0
-		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 -0
+		 0.90251052569485468 0.076349352907547588 -0.42384611278221546 0 0.10711819780318382 -0.99302763202123834 0.04921192682358979 0
 		 -38.274453870709713 -3.5709756577226579 91.179939672064677 1;
-	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 -0
+	setAttr ".bindPreMatrix[66]" -type "matrix" -0.99708426773792258 0.0063814250623052179 0.076041044467476199 0
 		 0.024134944584303642 0.97171475424335352 0.23492113748169094 0 -0.072391073202730583 0.23607141673644688 -0.96903550952511708 0
 		 -3.2003206005037299 -77.899988140525451 -35.426609466928412 1;
-	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 -0
-		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 -0
+	setAttr ".bindPreMatrix[67]" -type "matrix" -0.86777611415914446 0.38332484340786899 0.31626994817906534 0
+		 -0.11495130203493276 0.4643259964002513 -0.87817285725954164 0 -0.48347783181375514 -0.79841307197042233 -0.35886731900721158 0
 		 -5.8256849692137029 -49.281346381588165 70.703280241826192 1;
-	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 -0
-		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 -0
+	setAttr ".bindPreMatrix[68]" -type "matrix" -0.889983464776396 0.29659532526782545 0.34635335346127943 0
+		 -0.19877413301493968 0.43125133104591618 -0.88006314177750022 0 -0.41038795848411558 -0.85208773169222296 -0.32485107515728145 0
 		 -8.3580963631788485 -49.257975202320779 72.143487220581534 1;
-	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 -0
+	setAttr ".bindPreMatrix[69]" -type "matrix" -0.64882477196788424 -0.021379350003969944 0.76063745547680717 0
 		 -0.6193742170174974 0.59552734849789857 -0.5115884639874364 0 -0.44204297819871052 -0.80305049690817731 -0.39963471425883962 0
 		 36.840956368518675 -59.799664679232663 39.505162005827856 1;
-	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 -0
-		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 -0 0.41038798450533415 0.8520877198038338 0.3248510734677546 -0
+	setAttr ".bindPreMatrix[70]" -type "matrix" -0.88998345471041485 0.2965953509450775 0.34635335733825423 0
+		 0.19877412436070149 -0.43125133687592154 0.88006314087533888 0 0.41038798450533415 0.8520877198038338 0.3248510734677546 0
 		 8.3580975111938596 49.257975600279963 -72.143487238699251 1;
-	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 -0
+	setAttr ".bindPreMatrix[71]" -type "matrix" -0.64916792109518495 -0.0034163645480056212 0.76063745547680695 0
 		 -0.60265710922764393 0.61243910081930253 -0.51158846398743674 0 -0.46409634659016252 -0.79051038971092569 -0.39963471425883984 0
 		 20.479416590213244 -60.389514556602585 39.505162005827735 1;
-	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 -0
-		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 -0 0.48347785649071207 0.79841305742548196 0.35886731812139233 -0
+	setAttr ".bindPreMatrix[72]" -type "matrix" -0.86777610162554686 0.38332486780865038 0.31626995299435262 0
+		 0.11495129286230696 -0.46432600126632462 0.87817285588733018 0 0.48347785649071207 0.79841305742548196 0.35886731812139233 0
 		 5.8256861524044696 49.281346656110664 -70.70328020528531 1;
-	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 -0
-		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 -0
+	setAttr ".bindPreMatrix[73]" -type "matrix" -0.64916793342069767 -0.0034163174274883246 0.76063744516920462 0
+		 0.60265709177584859 -0.61243908473284392 0.51158850380346976 0 0.46409635201171007 0.7905104023773698 0.39963468290751714 0
 		 -20.479414933073791 60.389513429412489 -39.505165596958264 1;
-	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 -0
-		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 -0
+	setAttr ".bindPreMatrix[74]" -type "matrix" -0.64882478496532525 -0.021379325902661311 0.76063744506739084 0
+		 0.61937419954914252 -0.59552734814122787 0.51158848555136238 0 0.44204298359725025 0.80305049781431903 0.39963470646656363 0
 		 -36.84095471340185 59.799664775226795 -39.505163797210656 1;
-	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 -0
-		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 -0
+	setAttr ".bindPreMatrix[75]" -type "matrix" 1.3315077145342318e-16 3.2956315997568799e-16 -1.0000000000000004 0
+		 -0.8717239923273038 -0.48999722570739879 -3.2956315997568809e-16 0 -0.48999722570739918 0.87172399232730335 1.3315077145342308e-16 0
 		 41.784501041860516 40.712451437911739 1.6176847507577662e-14 1;
-	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 -0
-		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 -0
+	setAttr ".bindPreMatrix[76]" -type "matrix" 5.0371858347672547e-49 2.6901579426062945e-48 -1.0000000000000002 0
+		 -0.18404638362630932 -0.98291755944945791 5.3803158852125889e-48 0 -0.98291755944945791 0.18404638362630937 -1.0074371669534513e-48 0
 		 -31.074005786092126 36.66471765750839 -8.8467899613237008e-16 1;
 	setAttr ".bindPreMatrix[77]" -type "matrix" -3.7919490700984674e-32 3.1511546580459096e-32 -0.99999999999999956 0
-		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 -0
+		 -0.63913009498942086 -0.76909864235923175 -3.9389433225573887e-32 0 -0.76909864235923198 0.63913009498942064 -4.7399363376230841e-32 0
 		 9.3151688497340892 47.152485229179469 1.4851721469859807e-16 1;
 	setAttr ".bindPreMatrix[78]" -type "matrix" -0.00028419380823610187 2.9992216969582393e-05 -0.99999995916717266 0
-		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 -0
+		 -0.99447729548329766 0.10495154645155333 0.00028577203102906788 0 0.10495155073702173 0.99447733609061939 -8.4881352570591041e-13 0
 		 58.985979588892484 -4.4158766682246151 -13.624596468617483 1;
-	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 -0
-		 0.34375531853509206 -0.93905925317779471 -0 0 -0.9390592531777946 -0.34375531853509211 -0 0
+	setAttr ".bindPreMatrix[79]" -type "matrix" 2.0890572256737316e-64 -5.7068164837327054e-64 -1 0
+		 0.34375531853509206 -0.93905925317779471 0 0 -0.9390592531777946 -0.34375531853509211 0 0
 		 -64.623004546272796 4.2580594527907394 -5.7220339928583523e-14 1;
-	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 -0
+	setAttr ".bindPreMatrix[80]" -type "matrix" 0.012704801731720962 9.4542429440736024e-17 -0.99991929074948738 0
 		 0.61925492727793341 -0.78515057620744177 0.0078681461046324046 0 -0.78508720729289649 -0.61930491091313211 -0.0099751824002620431 0
 		 -85.893172476184432 -23.694087232606531 -1.0913438079276407 1;
 	setAttr ".bindPreMatrix[81]" -type "matrix" -0.00028451534118351709 -2.6770774171015668e-05 -0.99999995916717288 0
-		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 -0
+		 -0.99560243394313708 -0.093678769531029216 0.00028577203102901909 0 -0.093678773356198494 0.99560247459640172 -8.4838167442808228e-13 0
 		 33.930587364342692 2.336649372609195 -13.62459646861738 1;
-	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 -0
-		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 -0
+	setAttr ".bindPreMatrix[82]" -type "matrix" 4.2213633184887384e-09 0.03337692433472321 -0.99944283524469535 0
+		 -0.99999999999999867 5.6891634569493053e-08 -2.3237902107030376e-09 0 5.6782375546056746e-08 0.99944283524469346 0.033376924334723376 0
 		 7.0394308392255001 2.1387193804494369 -13.558755908727951 1;
-	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 -0
+	setAttr ".bindPreMatrix[83]" -type "matrix" 4.507497906604503e-09 0.033376924911509474 -0.99944283522543242 0
 		 0.99999999999999822 -5.6891626879313423e-08 2.6100846192255774e-09 0 -5.6772812330172001e-08 -0.99944283522543076 -0.033376924911509599 0
 		 -7.0394308430776045 -2.1387194017290247 13.558755904681769 1;
-	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 -0
+	setAttr ".bindPreMatrix[84]" -type "matrix" -0.00028419380153919767 2.9992216965055504e-05 -0.99999995916717388 0
 		 0.99447729551044795 -0.10495154619430543 -0.000285772024368715 0 -0.10495155047977374 -0.99447733611776756 7.6516148695944865e-14 0
 		 -58.985979590126107 4.4158766529653919 13.624596468222286 1;
-	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 -0
-		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 -0
+	setAttr ".bindPreMatrix[85]" -type "matrix" 0.01583889812302965 -0.037433755955782043 -0.99917358012574187 0
+		 -0.38937967170158905 0.92018004460461922 -0.040646731443058325 0 0.92094114935310156 0.38970168004062328 -1.3056232823806257e-06 0
 		 -6.1647744734161698 -5.9918209040313144 -13.182977783826168 1;
 	setAttr ".bindPreMatrix[86]" -type "matrix" -0.00028451533461715245 -2.6791846275409926e-05 -0.99999995916660989 0
-		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.098082973939466e-08 -0
+		 0.99560243391889547 0.093678769782667357 -0.00028577399850049373 0 0.093678773613858624 -0.99560247457215734 2.0980829739394663e-08 0
 		 -33.930587362535725 -2.3366491006984398 13.624596517463372 1;
-	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 -0
+	setAttr ".bindPreMatrix[87]" -type "matrix" 0.015838898765927849 -0.037433755994177559 -0.99917358011411161 0
 		 0.38937967170586468 -0.9201800445901811 0.040646731728956789 0 -0.92094114934023663 -0.38970168007102707 1.3050470395927635e-06 0
 		 6.1647744523920922 5.9918208958986678 13.182977798034011 1;
-	setAttr ".bindPreMatrix[88]" -type "matrix" 1.8125711963721304e-16 -5.2488348827357316e-20 1.0000000000000002 -0
-		 -0.00057915898190760045 -0.99999983228742328 5.2488348848191695e-20 0 0.99999983228742295 -0.00057915898190760045 -1.8125711963721301e-16 -0
+	setAttr ".bindPreMatrix[88]" -type "matrix" 1.8125711963721304e-16 -5.2488348827357316e-20 1.0000000000000002 0
+		 -0.00057915898190760045 -0.99999983228742328 5.2488348848191695e-20 0 0.99999983228742295 -0.00057915898190760045 -1.8125711963721301e-16 0
 		 -13.689788025135149 134.21476248087569 8.4986991882324201 1;
-	setAttr ".bindPreMatrix[89]" -type "matrix" 9.0628559817698885e-17 -2.6244174413415049e-20 1 -0
-		 -0.00057915898191168041 -0.99999983228742306 2.6244174424202746e-20 0 0.99999983228742306 -0.00057915898191167347 -9.0628559817698873e-17 -0
+	setAttr ".bindPreMatrix[89]" -type "matrix" 9.0628559817698885e-17 -2.6244174413415049e-20 1 0
+		 -0.00057915898191168041 -0.99999983228742306 2.6244174424202746e-20 0 0.99999983228742306 -0.00057915898191167347 -9.0628559817698873e-17 0
 		 -13.689788025134616 134.21476248087566 -8.4986991882324041 1;
-	setAttr ".bindPreMatrix[90]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".bindPreMatrix[90]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".geomMatrix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -size 91 ".matrix";
 	setAttr -size 91 ".dropoff[0:90]"  4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
@@ -56349,7 +56350,7 @@ createNode objectSet -name "AllSet";
 	rename -uuid "2B08B4C4-4800-C125-22C8-2FAEB2FB5410";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 1512 ".dagSetMembers";
-	setAttr -size 1672 ".dnSetMembers";
+	setAttr -size 1668 ".dnSetMembers";
 createNode objectSet -name "Sets";
 	rename -uuid "65E08B4F-48F4-6255-FF04-54900067B817";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -56737,8 +56738,8 @@ createNode multMatrix -name "Hair5FKMM_M";
 	rename -uuid "9C2D5AC3-4FA0-A7DA-71EB-FAB23637DADC";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99254146098831109 -0.12190753963225115 -0 0
-		 0.12190753963225115 0.99254146098831109 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99254146098831109 -0.12190753963225115 0 0
+		 0.12190753963225115 0.99254146098831109 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "Hair5PM_M";
 	rename -uuid "5533044B-48A4-137D-47E5-678E4221BED7";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -56808,8 +56809,8 @@ createNode multMatrix -name "Hair2FKMM_M";
 	rename -uuid "0E9B77F6-49AA-DA48-708A-14978FD6F30D";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99731491228153579 -0.073232272536584334 -0 0
-		 0.073232272536584334 0.99731491228153579 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99731491228153579 -0.073232272536584334 0 0
+		 0.073232272536584334 0.99731491228153579 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "Hair2PM_M";
 	rename -uuid "3495DF7F-48B2-26D7-2B83-4A830AE3E7DF";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -56826,8 +56827,8 @@ createNode multMatrix -name "Hair1FKMM_M";
 	rename -uuid "72031200-4246-DC6B-1A55-64B6030A5222";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" -0.93165185094895731 -0.3633522101534295 -0 0
-		 0.3633522101534295 -0.93165185094895731 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" -0.93165185094895731 -0.3633522101534295 0 0
+		 0.3633522101534295 -0.93165185094895731 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "Hair1PM_M";
 	rename -uuid "4A499E67-45D4-9623-6C15-DBACC3424788";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -56844,8 +56845,8 @@ createNode multMatrix -name "HeadFKMM_M";
 	rename -uuid "7E350D4A-48A9-E2E5-40D0-319D74DFF302";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.98996522335267145 -0.14131120462403307 -0 0
-		 0.14131120462403307 0.98996522335267145 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.98996522335267145 -0.14131120462403307 0 0
+		 0.14131120462403307 0.98996522335267145 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "HeadPM_M";
 	rename -uuid "B1F81959-4A77-3BA1-CF80-01A9455BF67E";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -57358,8 +57359,8 @@ createNode multMatrix -name "Tail3FKMM_M";
 	rename -uuid "C7CF65DB-4DD9-BCFE-CE6C-17A0F1701A8B";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.85975090608325422 -0.51071359830047924 -0 0
-		 0.51071359830047924 0.85975090608325422 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.85975090608325422 -0.51071359830047924 0 0
+		 0.51071359830047924 0.85975090608325422 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "Tail3PM_M";
 	rename -uuid "C27475AB-4534-8F81-F76F-D7BBF003FEA4";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -57375,8 +57376,8 @@ createNode multMatrix -name "Tail2FKMM_M";
 	rename -uuid "8693CDE2-4E46-D954-B642-B3A689DDD5F6";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.87359014317316974 -0.48666236935958052 -0 0
-		 0.48666236935958052 0.87359014317316974 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.87359014317316974 -0.48666236935958052 0 0
+		 0.48666236935958052 0.87359014317316974 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "Tail2PM_M";
 	rename -uuid "6566FCCF-45A8-6CEB-7974-86938F2D795D";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -57392,8 +57393,8 @@ createNode multMatrix -name "Tail1FKMM_M";
 	rename -uuid "25906091-4136-0F18-40EF-CC9A33AE37BB";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.93400123907205712 -0.35726976559997642 -0 0
-		 0.35726976559997642 0.93400123907205712 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.93400123907205712 -0.35726976559997642 0 0
+		 0.35726976559997642 0.93400123907205712 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "Tail1PM_M";
 	rename -uuid "4267B565-45DA-79B7-2C9D-8A8E10AEFA06";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -57446,8 +57447,8 @@ createNode multMatrix -name "KneeFKMM_R";
 	rename -uuid "35EF07E1-4049-741B-0B2E-6CB25144B313";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.98027237107807152 -0.1976514065241522 -0 0
-		 0.1976514065241522 0.98027237107807152 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.98027237107807152 -0.1976514065241522 0 0
+		 0.1976514065241522 0.98027237107807152 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "KneePM_R";
 	rename -uuid "AE4F7932-4CC2-3165-9C8C-2DA579C887BD";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -57955,8 +57956,8 @@ createNode multMatrix -name "KneeFKMM_L";
 	rename -uuid "2AC63316-427C-69B7-524A-93A9EA4C7F8A";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.98027237107807141 -0.1976514065241525 -0 0
-		 0.1976514065241525 0.98027237107807141 0 0 0 -0 1 0 0 0 0 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.98027237107807141 -0.1976514065241525 0 0
+		 0.1976514065241525 0.98027237107807141 0 0 0 0 1 0 0 0 0 1;
 createNode pickMatrix -name "KneePM_L";
 	rename -uuid "E598212C-45C5-1065-056A-D2A848C10DB2";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -59221,8 +59222,8 @@ createNode ramp -name "IKSplineRamp_M";
 createNode multMatrix -name "IKSpline2MM1_M";
 	rename -uuid "83493862-4751-7D32-ABB2-F3BE6CECB8C1";
 	setAttr -size 2 ".matrixIn";
-	setAttr ".matrixIn[1]" -type "matrix" -4.1082101170564256e-16 6.3348351192416551e-16 1.0000000000000002 -0
-		 -0.9335255302388048 0.35851092646160543 -4.2619920437485973e-16 0 -0.35851092646160554 -0.93352553023880491 4.9042642873311681e-16 -0
+	setAttr ".matrixIn[1]" -type "matrix" -4.1082101170564256e-16 6.3348351192416551e-16 1.0000000000000002 0
+		 -0.9335255302388048 0.35851092646160543 -4.2619920437485973e-16 0 -0.35851092646160554 -0.93352553023880491 4.9042642873311681e-16 0
 		 103.74036461550715 -66.156051593992586 1.4349474141692416e-14 1;
 createNode multMatrix -name "IKSpline2MM2_M";
 	rename -uuid "D8C20EAA-494D-8CFE-927F-868BBB59B6A7";
@@ -59266,7 +59267,7 @@ createNode multDoubleLinear -name "IKSpline3_MFollowMainMDL_M";
 createNode multMatrix -name "IKhybridFollowSpline1MMMain_M";
 	rename -uuid "38761A4D-4B38-DC1E-BE8B-8E84486F5580";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".matrixIn";
+	setAttr -size 2 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 0 -0.91185412324179582 -0.41051438211947594 0
 		 0 0.41051438211947583 -0.91185412324179604 0 1.0000000000000002 0 0 0 3.3173634069969199e-14 144.46594324653293 -14.593409870154801 1;
 createNode multDoubleLinear -name "IKSpline3_MFollowRootMDL_M";
@@ -59279,7 +59280,7 @@ createNode multMatrix -name "IKhybridFollowSpline1MMRoot_M";
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 0 -0.91185412324179582 -0.41051438211947594 0
 		 0 0.41051438211947583 -0.91185412324179604 0 1.0000000000000002 0 0 0 3.3173634069969199e-14 144.46594324653293 -14.593409870154801 1;
-	setAttr ".matrixIn[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
+	setAttr ".matrixIn[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
 createNode multDoubleLinear -name "IKSpline3_MFollowChestMDL_M";
 	rename -uuid "3DE2B50F-4A86-6F6B-8EC3-42B4A7E4F784";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -59289,8 +59290,8 @@ createNode multMatrix -name "IKhybridFollowSpline1MMChest_M";
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 0 -0.91185412324179582 -0.41051438211947594 0
 		 0 0.41051438211947583 -0.91185412324179604 0 1.0000000000000002 0 0 0 3.3173634069969199e-14 144.46594324653293 -14.593409870154801 1;
-	setAttr ".matrixIn[1]" -type "matrix" -0 -0 1 -0 0.98172550254916224 -0.19030248985390028 -0 0
-		 0.19030248985390039 0.98172550254916224 -0 -0 -86.697359614413514 22.252073943332846 9.2304784509977398e-15 1;
+	setAttr ".matrixIn[1]" -type "matrix" 0 0 1 0 0.98172550254916224 -0.19030248985390028 0 0
+		 0.19030248985390039 0.98172550254916224 0 0 -86.697359614413514 22.252073943332846 9.2304784509977398e-15 1;
 createNode multDoubleLinear -name "IKSpline3_MFollowHeadMDL_M";
 	rename -uuid "13F132A3-4A50-1CA8-4587-BAB0D962360E";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -59300,8 +59301,8 @@ createNode multMatrix -name "IKhybridFollowSpline1MMHead_M";
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 0 -0.91185412324179582 -0.41051438211947594 0
 		 0 0.41051438211947583 -0.91185412324179604 0 1.0000000000000002 0 0 0 3.3173634069969199e-14 144.46594324653293 -14.593409870154801 1;
-	setAttr ".matrixIn[1]" -type "matrix" 0 -0 1 -0 0.99869188949195764 -0.051132278093041182 -0 0
-		 0.051132278093041238 0.99869188949195753 0 -0 -128.20031321310543 4.3428464576608352 -3.1492830565105061e-14 1;
+	setAttr ".matrixIn[1]" -type "matrix" 0 0 1 0 0.99869188949195764 -0.051132278093041182 0 0
+		 0.051132278093041238 0.99869188949195753 0 0 -128.20031321310543 4.3428464576608352 -3.1492830565105061e-14 1;
 createNode multMatrix -name "IKOffsetConstrainedSpline1MM_M";
 	rename -uuid "92EC281D-4982-5C69-1601-41AA2B29EEF0";
 	setAttr -size 2 ".matrixIn";
@@ -59404,8 +59405,8 @@ createNode pickMatrix -name "IKAcHair1FollowOffsetPM_M";
 createNode multMatrix -name "IKAcHair2FollowOffsetMM_M";
 	rename -uuid "52F53682-4BCA-06C3-F424-9C940A0E98F9";
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99966787052935269 -0.025771081298808011 -0 0
-		 0.025771081298808 0.99966787052935235 0 0 0 -0 1 0 -0.0078830901936441933 0.1922672783574626 -5.7064387629380737e-15 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99966787052935269 -0.025771081298808011 0 0
+		 0.025771081298808 0.99966787052935235 0 0 0 0 1 0 -0.0078830901936441933 0.1922672783574626 -5.7064387629380737e-15 1;
 createNode pickMatrix -name "IKAcHair2FollowOffsetPM_M";
 	rename -uuid "F9A5B411-40E6-AA4B-134C-3D95CAAFEE38";
 	setAttr ".useScale" no;
@@ -59452,8 +59453,8 @@ createNode multMatrix -name "Hair1IkMM_M";
 createNode multMatrix -name "IKSpHair2FollowOffsetMM_M";
 	rename -uuid "15D95E3F-4315-E281-AEAE-2EBCB869AFC0";
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99966787070279728 -0.025771074570840651 -0 0
-		 0.02577107457084064 0.99966787070279695 0 0 0 -0 1 0 -0.0078886866702703173 0.19226718403373866 3.282355959306842e-15 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99966787070279728 -0.025771074570840651 0 0
+		 0.02577107457084064 0.99966787070279695 0 0 0 0 1 0 -0.0078886866702703173 0.19226718403373866 3.282355959306842e-15 1;
 createNode blendMatrix -name "Hair2IkBM_M";
 	rename -uuid "BD6F681D-4634-CA33-0C17-3988344D15DF";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -59558,7 +59559,7 @@ createNode multDoubleLinear -name "IKArm_RFollowMainMDL_R";
 createNode multMatrix -name "IKOffsetArmMMMain_R";
 	rename -uuid "DFBB13FB-4DB9-7173-2A0C-5E93827AB66C";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".matrixIn";
+	setAttr -size 2 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -54.932881887006559 82.363448510654678 0.77075853148721341 1;
 createNode multDoubleLinear -name "IKArm_RFollowRootMDL_R";
 	rename -uuid "70ACD836-4F99-05D8-B31C-8A8DFBBE98FD";
@@ -59569,7 +59570,7 @@ createNode multMatrix -name "IKOffsetArmMMRoot_R";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -54.932881887006559 82.363448510654678 0.77075853148721341 1;
-	setAttr ".matrixIn[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
+	setAttr ".matrixIn[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
 createNode multDoubleLinear -name "IKArm_RFollowChestMDL_R";
 	rename -uuid "9E99B8E2-4C73-40DF-8AF1-75994095DAC6";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -59578,8 +59579,8 @@ createNode multMatrix -name "IKOffsetArmMMChest_R";
 	rename -uuid "7E8D7C6A-4C1C-20EB-F774-DE90055909EC";
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -54.932881887006559 82.363448510654678 0.77075853148721341 1;
-	setAttr ".matrixIn[1]" -type "matrix" -0 -0 1 -0 0.98172550254916224 -0.19030248985390028 -0 0
-		 0.19030248985390039 0.98172550254916224 -0 -0 -86.697359614413514 22.252073943332846 9.2304784509977398e-15 1;
+	setAttr ".matrixIn[1]" -type "matrix" 0 0 1 0 0.98172550254916224 -0.19030248985390028 0 0
+		 0.19030248985390039 0.98172550254916224 0 0 -86.697359614413514 22.252073943332846 9.2304784509977398e-15 1;
 createNode multMatrix -name "IKcvOffsetSpine1MM1_M";
 	rename -uuid "C3E93FF9-4990-1F1F-3479-E8A519F673D0";
 	setAttr -size 2 ".matrixIn";
@@ -59721,8 +59722,8 @@ createNode ramp -name "IKSpineRamp_M";
 createNode multMatrix -name "IKSpine2MM1_M";
 	rename -uuid "020154B4-4C49-9A54-BB01-2D9F2F35F654";
 	setAttr -size 2 ".matrixIn";
-	setAttr ".matrixIn[1]" -type "matrix" -3.5458327916896554e-16 1.8576347732210819e-16 1 -0
-		 0.99444800404696509 0.10522911786671409 4.2994084940252655e-16 0 -0.10522911786671403 0.99444800404696509 -1.571370228951953e-16 0
+	setAttr ".matrixIn[1]" -type "matrix" -3.5458327916896554e-16 1.8576347732210819e-16 1 0
+		 0.99444800404696509 0.10522911786671409 4.2994084940252655e-16 0 -0.10522911786671403 0.99444800404696509 -1.5713702289519532e-16 0
 		 -79.292806486725041 -2.6700049600935434 -3.1681592417324724e-14 1;
 createNode multMatrix -name "IKSpine2MM2_M";
 	rename -uuid "E3F34AA0-4FED-CA32-7CD4-729AB0853E53";
@@ -59766,7 +59767,7 @@ createNode multDoubleLinear -name "IKSpine3_MFollowMainMDL_M";
 createNode multMatrix -name "IKhybridFollowSpine1MMMain_M";
 	rename -uuid "FF0FA50D-4E7B-F988-8A6C-C4AD8392914F";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".matrixIn";
+	setAttr -size 2 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 0 0.99326691439106096 -0.11584833523215068 0
 		 0 0.11584833523215075 0.99326691439106085 0 1 0 0 0 1.5603452571944946e-15 68.958679937175802 -4.5088545063213372 1;
 createNode multDoubleLinear -name "IKSpine3_MFollowRootMDL_M";
@@ -59779,7 +59780,7 @@ createNode multMatrix -name "IKhybridFollowSpine1MMRoot_M";
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 0 0.99326691439106096 -0.11584833523215068 0
 		 0 0.11584833523215075 0.99326691439106085 0 1 0 0 0 1.5603452571944946e-15 68.958679937175802 -4.5088545063213372 1;
-	setAttr ".matrixIn[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
+	setAttr ".matrixIn[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
 createNode multMatrix -name "IKOffsetConstrainedSpine1MM_M";
 	rename -uuid "0AB42150-4893-AD50-88A4-2DA6673CEA82";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -59915,8 +59916,8 @@ createNode pickMatrix -name "IKAcRootFollowOffsetPM_M";
 createNode multMatrix -name "IKAcRootPart1FollowOffsetMM_M";
 	rename -uuid "A7AC0EF9-4964-F15A-7971-3795EF21031A";
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99999999998095346 -6.1718450238140701e-06 -0 0
-		 6.1718450238140701e-06 0.99999999998095346 0 0 0 -0 1 0 2.0889861929163089e-06 -1.112155700866424e-09 -9.768269166811891e-22 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99999999998095346 -6.1718450238140701e-06 0 0
+		 6.1718450238140701e-06 0.99999999998095346 0 0 0 0 1 0 2.0889861929163089e-06 -1.112155700866424e-09 -9.768269166811891e-22 1;
 createNode pickMatrix -name "IKAcRootPart1FollowOffsetPM_M";
 	rename -uuid "B3B79836-4958-DED3-D017-E1B5953B795B";
 	setAttr ".useScale" no;
@@ -59924,8 +59925,8 @@ createNode pickMatrix -name "IKAcRootPart1FollowOffsetPM_M";
 createNode multMatrix -name "IKAcRootPart2FollowOffsetMM_M";
 	rename -uuid "122E2537-4DE4-9250-BF60-DDBEEFE0D55B";
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99967304414329761 -0.025569607217797771 -0 0
-		 0.025569607217797771 0.99967304414329761 0 0 0 -0 1 0 -1.8339377447773586e-06 -2.6190897145728087e-05 2.2412693281480531e-20 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99967304414329761 -0.025569607217797771 0 0
+		 0.025569607217797771 0.99967304414329761 0 0 0 0 1 0 -1.8339377447773586e-06 -2.6190897145728087e-05 2.2412693281480531e-20 1;
 createNode pickMatrix -name "IKAcRootPart2FollowOffsetPM_M";
 	rename -uuid "4F441007-4E94-B0D0-9002-46A71CB9FD5D";
 	setAttr ".useScale" no;
@@ -59980,8 +59981,8 @@ createNode multMatrix -name "RootIkMM_M";
 createNode multMatrix -name "IKSpRootPart1FollowOffsetMM_M";
 	rename -uuid "5D6C32DE-4645-639D-CC72-009E29239A06";
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99999999998095501 -6.171779629582378e-06 -0 0
-		 6.171779629582378e-06 0.99999999998095501 0 0 0 -0 1 0 -5.5161848422358162e-09 3.730349362740526e-14 1.873544649899903e-30 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99999999998095501 -6.171779629582378e-06 0 0
+		 6.171779629582378e-06 0.99999999998095501 0 0 0 0 1 0 -5.5161848422358162e-09 3.730349362740526e-14 1.8735446498999034e-30 1;
 createNode blendMatrix -name "RootPart1IkBM_M";
 	rename -uuid "9E3DA5A0-40DF-F020-AF72-45809EA987A5";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -59992,8 +59993,8 @@ createNode multMatrix -name "RootPart1IkMM_M";
 createNode multMatrix -name "IKSpRootPart2FollowOffsetMM_M";
 	rename -uuid "049E786D-4429-BAF9-2DA6-6CAF178F13DD";
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99967304401274093 -0.02556961232203472 -0 0
-		 0.02556961232203472 0.99967304401274093 0 0 0 -0 1 0 -6.8158331600898237e-07 -2.6218974368497072e-05 3.944304526105059e-31 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99967304401274093 -0.02556961232203472 0 0
+		 0.02556961232203472 0.99967304401274093 0 0 0 0 1 0 -6.8158331600898237e-07 -2.6218974368497072e-05 3.9443045261050599e-31 1;
 createNode blendMatrix -name "RootPart2IkBM_M";
 	rename -uuid "AA91D4CA-4FF1-AAB8-0D8C-668C743F4578";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -60171,8 +60172,8 @@ createNode ramp -name "IKSplineTailRamp_M";
 createNode multMatrix -name "IKSplineTail2MM1_M";
 	rename -uuid "13A78A69-46F4-2105-183F-3C9E905DF26D";
 	setAttr -size 2 ".matrixIn";
-	setAttr ".matrixIn[1]" -type "matrix" 6.9929276817747909e-14 6.3231242661126051e-14 -0.99999999999999967 -0
-		 -0.30777965478871483 -0.9514576627985819 -8.1693123012957125e-14 0 -0.95145766279858179 0.30777965478871483 -4.7202932311466335e-14 -0
+	setAttr ".matrixIn[1]" -type "matrix" 6.9929276817747909e-14 6.3231242661126051e-14 -0.99999999999999967 0
+		 -0.30777965478871483 -0.9514576627985819 -8.1693123012957125e-14 0 -0.95145766279858179 0.30777965478871483 -4.7202932311466335e-14 0
 		 -32.031329602659 42.508336625938988 5.3359162898284858e-13 1;
 createNode multMatrix -name "IKSplineTail2MM2_M";
 	rename -uuid "7B70905B-41FF-2F80-502C-89B610045320";
@@ -60216,7 +60217,7 @@ createNode multDoubleLinear -name "IKSplineTail3_MFollowMainMDL_M";
 createNode multMatrix -name "IKhybridFollowSplineTail1MMMain_M";
 	rename -uuid "9C549E0A-46B1-9F3D-74FD-35AB4B3B94FE";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".matrixIn";
+	setAttr -size 2 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 0 -0.87172399207380602 -0.48999722615838154 0
 		 0 -0.48999722615838159 0.87172399207380602 0 -1 0 0 0 1.5603452571944946e-15 56.37354032465673 -15.015731120063743 1;
 createNode multDoubleLinear -name "IKSplineTail3_MFollowRootMDL_M";
@@ -60229,7 +60230,7 @@ createNode multMatrix -name "IKhybridFollowSplineTail1MMRoot_M";
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 0 -0.87172399207380602 -0.48999722615838154 0
 		 0 -0.48999722615838159 0.87172399207380602 0 -1 0 0 0 1.5603452571944946e-15 56.37354032465673 -15.015731120063743 1;
-	setAttr ".matrixIn[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
+	setAttr ".matrixIn[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
 createNode multMatrix -name "IKOffsetConstrainedSplineTail1MM_M";
 	rename -uuid "44B13DB0-4EED-E454-C629-179BEB6B854C";
 	setAttr -size 2 ".matrixIn";
@@ -60350,8 +60351,8 @@ createNode pickMatrix -name "IKAcTail2FollowOffsetPM_M";
 createNode multMatrix -name "IKAcTail3FollowOffsetMM_M";
 	rename -uuid "75E4679A-4938-0A31-CC06-5CB62038E16D";
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99551176689331045 -0.094637846430267625 -0 0
-		 0.094637846430267611 0.99551176689331022 0 0 0 -0 1 0 -2.9660586638288322 2.307575245835185 7.8734958806179106e-12 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99551176689331045 -0.094637846430267625 0 0
+		 0.094637846430267611 0.99551176689331022 0 0 0 0 1 0 -2.9660586638288322 2.307575245835185 7.8734958806179106e-12 1;
 createNode pickMatrix -name "IKAcTail3FollowOffsetPM_M";
 	rename -uuid "AB26CE8D-41C3-379D-C6E7-A8B45A7A8CD8";
 	setAttr ".useScale" no;
@@ -60404,8 +60405,8 @@ createNode multMatrix -name "Tail2IkMM_M";
 createNode multMatrix -name "IKSpTail3FollowOffsetMM_M";
 	rename -uuid "4C95E9BF-49AC-6268-2B28-5899FF0CAF38";
 	setAttr -size 3 ".matrixIn";
-	setAttr ".matrixIn[0]" -type "matrix" 0.99657440312598244 -0.082701021965220473 -0 0
-		 0.082701021965220459 0.99657440312598233 0 0 0 -0 1 0 -2.9934982075531877 2.2718649924043959 -2.451129656008345e-15 1;
+	setAttr ".matrixIn[0]" -type "matrix" 0.99657440312598244 -0.082701021965220473 0 0
+		 0.082701021965220459 0.99657440312598233 0 0 0 0 1 0 -2.9934982075531877 2.2718649924043959 -2.451129656008345e-15 1;
 createNode blendMatrix -name "Tail3IkBM_M";
 	rename -uuid "562EE96C-4C91-40FE-0701-6F83F63DB545";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -60497,7 +60498,7 @@ createNode multDoubleLinear -name "IKLeg_RFollowMainMDL_R";
 createNode multMatrix -name "IKOffsetLegMMMain_R";
 	rename -uuid "87C22000-41A8-01AB-83D0-02955A1DA61E";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".matrixIn";
+	setAttr -size 2 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -13.622585352397421 7.0394309052372783 -1.6849776129764478 1;
 createNode multDoubleLinear -name "IKLeg_RFollowRootMDL_R";
 	rename -uuid "BF6DE0FA-40F6-3F3C-0B02-ED8C101B1892";
@@ -60508,7 +60509,7 @@ createNode multMatrix -name "IKOffsetLegMMRoot_R";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -13.622585352397421 7.0394309052372783 -1.6849776129764478 1;
-	setAttr ".matrixIn[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
+	setAttr ".matrixIn[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
 createNode multMatrix -name "IKXWristOrientConstrainedMM_L";
 	rename -uuid "9FC6A2BE-434B-0DA4-A2F8-AAB70660EF18";
 	setAttr -size 2 ".matrixIn";
@@ -60551,7 +60552,7 @@ createNode multDoubleLinear -name "IKArm_LFollowMainMDL_L";
 createNode multMatrix -name "IKOffsetArmMMMain_L";
 	rename -uuid "66B2343B-4581-52B5-17D1-558F6CB37F06";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".matrixIn";
+	setAttr -size 2 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 54.93288188132054 82.363448501666738 0.77075921187219443 1;
 createNode multDoubleLinear -name "IKArm_LFollowRootMDL_L";
 	rename -uuid "61125CEC-432F-6939-A74C-E6A69C99068F";
@@ -60562,7 +60563,7 @@ createNode multMatrix -name "IKOffsetArmMMRoot_L";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 54.93288188132054 82.363448501666738 0.77075921187219443 1;
-	setAttr ".matrixIn[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
+	setAttr ".matrixIn[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
 createNode multDoubleLinear -name "IKArm_LFollowChestMDL_L";
 	rename -uuid "2E2424D0-4568-DBE8-4B85-55889E9E1417";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -60571,8 +60572,8 @@ createNode multMatrix -name "IKOffsetArmMMChest_L";
 	rename -uuid "25056ED6-48F0-F728-C3E9-17B27313A0DF";
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 54.93288188132054 82.363448501666738 0.77075921187219443 1;
-	setAttr ".matrixIn[1]" -type "matrix" -0 -0 1 -0 0.98172550254916269 -0.19030248985390033 -0 0
-		 0.19030248985390047 0.98172550254916258 -0 -0 -86.697359614413571 22.252073943332871 9.2304784509977445e-15 1;
+	setAttr ".matrixIn[1]" -type "matrix" 0 0 1 0 0.98172550254916269 -0.19030248985390033 0 0
+		 0.19030248985390047 0.98172550254916258 0 0 -86.697359614413571 22.252073943332871 9.2304784509977445e-15 1;
 createNode multMatrix -name "IKXAnkleOrientConstrainedMM_L";
 	rename -uuid "AEDF08FB-41F1-DECF-C07C-BBBFAB6353E2";
 	setAttr -size 2 ".matrixIn";
@@ -60626,7 +60627,7 @@ createNode multDoubleLinear -name "IKLeg_LFollowMainMDL_L";
 createNode multMatrix -name "IKOffsetLegMMMain_L";
 	rename -uuid "212A9DA3-418F-D93D-6759-468646A1F5CD";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 3 ".matrixIn";
+	setAttr -size 2 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 13.622585352050418 7.0394309052076451 -1.6849776264504461 1;
 createNode multDoubleLinear -name "IKLeg_LFollowRootMDL_L";
 	rename -uuid "35E7DE69-49DB-4C7C-B788-75A05B431DA4";
@@ -60637,7 +60638,7 @@ createNode multMatrix -name "IKOffsetLegMMRoot_L";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 3 ".matrixIn";
 	setAttr ".matrixIn[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 13.622585352050418 7.0394309052076451 -1.6849776264504461 1;
-	setAttr ".matrixIn[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
+	setAttr ".matrixIn[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.5603452571944942e-15 -68.958679937175802 4.5088545063213372 1;
 createNode multMatrix -name "FKIKParentConstraintSplineMM_M";
 	rename -uuid "DB40ABF5-4E75-D497-89E7-D6A34BAE5729";
 createNode unitConversion -name "FKIKBlendSpline_MUnitConversion";
@@ -61402,6 +61403,7 @@ createNode distanceBetween -name "IKdistanceArm_RShape";
 	rename -uuid "B90C46BB-4E88-2051-7899-119EABFA7DB0";
 	addAttr -cachedInternally true -shortName "antiPop" -longName "antiPop" -attributeType "double";
 	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".antiPop" 48.973680599419431;
 createNode pickMatrix -name "MainPM_M";
 	rename -uuid "2345CF90-43C0-4EEB-5C4A-0B8860C94425";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -61421,26 +61423,6 @@ createNode multiplyDivide -name "IKmessureDivArm_R";
 createNode blendTwoAttr -name "IKmessureBlendAntiPopArm_R";
 	rename -uuid "4852DAC7-4A40-BA35-4E27-55B79A84D960";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 2 ".input";
-	setAttr -size 2 ".input";
-createNode animCurveUU -name "IKdistanceArm_RShape_antiPop";
-	rename -uuid "2EC3538E-475D-9A13-A059-8F964F71C227";
-	setAttr ".tangentType" 9;
-	setAttr ".weightedTangents" no;
-	setAttr -size 5 ".keyTimeValue[0:4]"  4.9023966129346626 49.023966129346618 
-		34.316776290542627 49.023966129346618 41.670371209944626 44.121569516411959 49.023967742919922 
-		49.023966129346618 58.828759355215936 58.828759355215936;
-	setAttr -size 5 ".keyTanInType[1:4]"  2 9 9 9;
-	setAttr -size 5 ".keyTanOutType[3:4]"  2 9;
-	setAttr ".postInfinity" 1;
-createNode animCurveUU -name "IKdistanceArm_RShape_normal";
-	rename -uuid "4895A090-430C-7CF8-6070-4681EA53AD8F";
-	setAttr ".tangentType" 9;
-	setAttr ".weightedTangents" no;
-	setAttr -size 2 ".keyTimeValue[0:1]"  49.023967742919922 49.023966129346618 
-		58.828759355215936 58.828759355215936;
-	setAttr -size 2 ".keyTanOutType[0:1]"  2 9;
-	setAttr ".postInfinity" 1;
 createNode clamp -name "IKdistanceClampArm_R";
 	rename -uuid "855D4658-4ED2-F692-699D-4EB4408793E3";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -61541,9 +61523,9 @@ createNode animCurveUU -name "IKdistanceLeg_RShape_antiPop";
 	rename -uuid "44072C36-49C1-765C-BCE8-53906BB0E204";
 	setAttr ".tangentType" 9;
 	setAttr ".weightedTangents" no;
-	setAttr -size 5 ".keyTimeValue[0:4]"  5.2346755672114185 52.346755672114185 
-		36.642728970479929 52.346755672114185 44.494742321297053 47.112080104902766 52.346755981445312 
-		52.346755672114185 62.816106806537022 62.816106806537022;
+	setAttr -size 5 ".keyTimeValue[0:4]"  5.234675407409668 52.346755672114185 
+		36.642730712890625 52.346755672114185 44.494743347167969 47.112080104902766 52.346755981445312 
+		52.346755672114185 62.816108703613281 62.816106806537022;
 	setAttr -size 5 ".keyTanInType[1:4]"  2 9 9 9;
 	setAttr -size 5 ".keyTanOutType[3:4]"  2 9;
 	setAttr ".postInfinity" 1;
@@ -61552,7 +61534,7 @@ createNode animCurveUU -name "IKdistanceLeg_RShape_normal";
 	setAttr ".tangentType" 9;
 	setAttr ".weightedTangents" no;
 	setAttr -size 2 ".keyTimeValue[0:1]"  52.346755981445312 52.346755672114185 
-		62.816106806537022 62.816106806537022;
+		62.816108703613281 62.816106806537022;
 	setAttr -size 2 ".keyTanOutType[0:1]"  2 9;
 	setAttr ".postInfinity" 1;
 createNode clamp -name "IKdistanceClampLeg_R";
@@ -61633,6 +61615,7 @@ createNode distanceBetween -name "IKdistanceArm_LShape";
 	rename -uuid "EEF09A8D-4B5A-3EBE-FBFF-A6A296329FD0";
 	addAttr -cachedInternally true -shortName "antiPop" -longName "antiPop" -attributeType "double";
 	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".antiPop" 48.973680599419382;
 createNode multMatrix -name "IKXOffsetMMShoulder_L";
 	rename -uuid "C4F93A38-4843-7C72-D39D-9BB4DC2E0DD1";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -61649,26 +61632,6 @@ createNode multiplyDivide -name "IKmessureDivArm_L";
 createNode blendTwoAttr -name "IKmessureBlendAntiPopArm_L";
 	rename -uuid "07707525-4772-8F0A-D3CD-6E9F7CE14EE8";
 	setAttr ".isHistoricallyInteresting" 0;
-	setAttr -size 2 ".input";
-	setAttr -size 2 ".input";
-createNode animCurveUU -name "IKdistanceArm_LShape_antiPop";
-	rename -uuid "DE560CBD-4B8D-9BAF-B829-A881815E94D9";
-	setAttr ".tangentType" 9;
-	setAttr ".weightedTangents" no;
-	setAttr -size 5 ".keyTimeValue[0:4]"  4.9023966129346626 49.023966129346618 
-		34.316776290542627 49.023966129346618 41.670371209944626 44.121569516411959 49.023967742919922 
-		49.023966129346618 58.828759355215936 58.828759355215936;
-	setAttr -size 5 ".keyTanInType[1:4]"  2 9 9 9;
-	setAttr -size 5 ".keyTanOutType[3:4]"  2 9;
-	setAttr ".postInfinity" 1;
-createNode animCurveUU -name "IKdistanceArm_LShape_normal";
-	rename -uuid "94F9511F-4344-66D0-E1AD-05B7DEFF8EB5";
-	setAttr ".tangentType" 9;
-	setAttr ".weightedTangents" no;
-	setAttr -size 2 ".keyTimeValue[0:1]"  49.023967742919922 49.023966129346618 
-		58.828759355215936 58.828759355215936;
-	setAttr -size 2 ".keyTanOutType[0:1]"  2 9;
-	setAttr ".postInfinity" 1;
 createNode clamp -name "IKdistanceClampArm_L";
 	rename -uuid "5F4BD3B5-44BC-F39A-9479-B9A547B5C046";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -61771,9 +61734,9 @@ createNode animCurveUU -name "IKdistanceLeg_LShape_antiPop";
 	rename -uuid "67BFB285-478C-7381-6D2D-34A82D07B9F2";
 	setAttr ".tangentType" 9;
 	setAttr ".weightedTangents" no;
-	setAttr -size 5 ".keyTimeValue[0:4]"  5.2346755672114185 52.346755672114185 
-		36.642728970479929 52.346755672114185 44.494742321297053 47.112080104902766 52.346755981445312 
-		52.346755672114185 62.816106806537022 62.816106806537022;
+	setAttr -size 5 ".keyTimeValue[0:4]"  5.234675407409668 52.346755672114185 
+		36.642730712890625 52.346755672114185 44.494743347167969 47.112080104902766 52.346755981445312 
+		52.346755672114185 62.816108703613281 62.816106806537022;
 	setAttr -size 5 ".keyTanInType[1:4]"  2 9 9 9;
 	setAttr -size 5 ".keyTanOutType[3:4]"  2 9;
 	setAttr ".postInfinity" 1;
@@ -61782,7 +61745,7 @@ createNode animCurveUU -name "IKdistanceLeg_LShape_normal";
 	setAttr ".tangentType" 9;
 	setAttr ".weightedTangents" no;
 	setAttr -size 2 ".keyTimeValue[0:1]"  52.346755981445312 52.346755672114185 
-		62.816106806537022 62.816106806537022;
+		62.816108703613281 62.816106806537022;
 	setAttr -size 2 ".keyTanOutType[0:1]"  2 9;
 	setAttr ".postInfinity" 1;
 createNode clamp -name "IKdistanceClampLeg_L";
@@ -63774,34 +63737,34 @@ select -noExpand :hardwareRenderGlobals;
 	setAttr -keyable on ".hardwareDepth";
 	setAttr -keyable on ".hardwareQual";
 select -noExpand :ikSystem;
-	setAttr -size 4 ".ikSolver";
-connectAttr "modelRN.placeHolderList[1]" "modelRN.placeHolderList[2]";
-connectAttr "modelRN.placeHolderList[3]" "bindPose56.parents[93]";
-connectAttr "modelRN.placeHolderList[4]" "tweak1.input[0].inputGeometry";
-connectAttr "modelRN.placeHolderList[5]" "skinCluster1.originalGeometry[0]";
-connectAttr "modelRN.placeHolderList[6]" "skinCluster1.lockWeights[90]";
-connectAttr "modelRN.placeHolderList[7]" "bindPose56.members[93]";
-connectAttr "modelRN.placeHolderList[8]" "skinCluster1.matrix[90]";
-connectAttr "modelRN.placeHolderList[9]" "skinCluster1.influenceColor[90]";
-connectAttr "modelRN.placeHolderList[10]" "tweak2.input[0].inputGeometry";
-connectAttr "modelRN.placeHolderList[11]" "skinCluster2.originalGeometry[0]";
-connectAttr "model:outline.drawInfo" "modelRN.placeHolderList[12]";
-connectAttr "modelRN.placeHolderList[13]" "tweak3.input[0].inputGeometry";
-connectAttr "modelRN.placeHolderList[14]" "skinCluster3.originalGeometry[0]";
-connectAttr "model:outline.drawInfo" "modelRN.placeHolderList[15]";
-connectAttr "modelRN.placeHolderList[16]" "skinCluster4.originalGeometry[0]";
-connectAttr "modelRN.placeHolderList[17]" "tweak4.input[0].inputGeometry";
-connectAttr "model:outline.drawInfo" "modelRN.placeHolderList[18]";
-connectAttr "modelRN.placeHolderList[19]" "skinCluster5.originalGeometry[0]";
-connectAttr "modelRN.placeHolderList[20]" "tweak5.input[0].inputGeometry";
-connectAttr "modelRN.placeHolderList[21]" "skinCluster6.originalGeometry[0]";
-connectAttr "modelRN.placeHolderList[22]" "skinCluster6.input[0].inputGeometry";
-connectAttr "modelRN.placeHolderList[23]" "modelRN.placeHolderList[24]";
-connectAttr "modelRN.placeHolderList[25]" "skinCluster7.originalGeometry[0]";
-connectAttr "modelRN.placeHolderList[26]" "skinCluster7.input[0].inputGeometry";
-connectAttr "modelRN.placeHolderList[27]" "modelRN.placeHolderList[28]";
-connectAttr "modelRN.placeHolderList[29]" "skinCluster8.originalGeometry[0]";
-connectAttr "modelRN.placeHolderList[30]" "skinCluster8.input[0].inputGeometry";
+	setAttr -size 3 ".ikSolver";
+connectAttr "modelRN.placeHolderList[1]" "bindPose56.parents[93]";
+connectAttr "modelRN.placeHolderList[2]" "tweak1.input[0].inputGeometry";
+connectAttr "modelRN.placeHolderList[3]" "skinCluster1.originalGeometry[0]";
+connectAttr "modelRN.placeHolderList[4]" "skinCluster1.lockWeights[90]";
+connectAttr "modelRN.placeHolderList[5]" "bindPose56.members[93]";
+connectAttr "modelRN.placeHolderList[6]" "skinCluster1.matrix[90]";
+connectAttr "modelRN.placeHolderList[7]" "skinCluster1.influenceColor[90]";
+connectAttr "modelRN.placeHolderList[8]" "tweak2.input[0].inputGeometry";
+connectAttr "modelRN.placeHolderList[9]" "skinCluster2.originalGeometry[0]";
+connectAttr "model:outline.drawInfo" "modelRN.placeHolderList[10]";
+connectAttr "modelRN.placeHolderList[11]" "tweak3.input[0].inputGeometry";
+connectAttr "modelRN.placeHolderList[12]" "skinCluster3.originalGeometry[0]";
+connectAttr "model:outline.drawInfo" "modelRN.placeHolderList[13]";
+connectAttr "modelRN.placeHolderList[14]" "skinCluster4.originalGeometry[0]";
+connectAttr "modelRN.placeHolderList[15]" "tweak4.input[0].inputGeometry";
+connectAttr "model:outline.drawInfo" "modelRN.placeHolderList[16]";
+connectAttr "modelRN.placeHolderList[17]" "skinCluster5.originalGeometry[0]";
+connectAttr "modelRN.placeHolderList[18]" "tweak5.input[0].inputGeometry";
+connectAttr "modelRN.placeHolderList[19]" "skinCluster6.originalGeometry[0]";
+connectAttr "modelRN.placeHolderList[20]" "skinCluster6.input[0].inputGeometry";
+connectAttr "modelRN.placeHolderList[21]" "modelRN.placeHolderList[22]";
+connectAttr "modelRN.placeHolderList[23]" "skinCluster7.originalGeometry[0]";
+connectAttr "modelRN.placeHolderList[24]" "skinCluster7.input[0].inputGeometry";
+connectAttr "modelRN.placeHolderList[25]" "modelRN.placeHolderList[26]";
+connectAttr "modelRN.placeHolderList[27]" "skinCluster8.originalGeometry[0]";
+connectAttr "modelRN.placeHolderList[28]" "skinCluster8.input[0].inputGeometry";
+connectAttr "modelRN.placeHolderList[29]" "modelRN.placeHolderList[30]";
 connectAttr "modelRN.placeHolderList[31]" "model:EyeThoLBase.drawOverride";
 connectAttr "EyeThoRShapeDeformed.instObjGroups" "modelRN.placeHolderList[32]";
 connectAttr "EyeThoLShapeDeformed.instObjGroups" "modelRN.placeHolderList[33]";
@@ -69518,96 +69481,6 @@ connectAttr "Toes_L.objectColorRGB" "skinCluster2.influenceColor[87]";
 connectAttr "Eye_L.objectColorRGB" "skinCluster2.influenceColor[89]";
 connectAttr "bindPose56.message" "skinCluster2.bindPose";
 connectAttr "Eye_L.message" "skinCluster2.paintTrans";
-connectAttr "RootPart1_M.worldMatrix" "skinCluster1.matrix[0]";
-connectAttr "Spine1Part1_M.worldMatrix" "skinCluster1.matrix[1]";
-connectAttr "Root_M.worldMatrix" "skinCluster1.matrix[2]";
-connectAttr "Spine1_M.worldMatrix" "skinCluster1.matrix[3]";
-connectAttr "RootPart2_M.worldMatrix" "skinCluster1.matrix[4]";
-connectAttr "NeckPart1_M.worldMatrix" "skinCluster1.matrix[5]";
-connectAttr "Neck_M.worldMatrix" "skinCluster1.matrix[6]";
-connectAttr "Spine1Part2_M.worldMatrix" "skinCluster1.matrix[7]";
-connectAttr "Chest_M.worldMatrix" "skinCluster1.matrix[8]";
-connectAttr "Head_M.worldMatrix" "skinCluster1.matrix[9]";
-connectAttr "NeckPart2_M.worldMatrix" "skinCluster1.matrix[10]";
-connectAttr "Ear2_R.worldMatrix" "skinCluster1.matrix[11]";
-connectAttr "Ear1_R.worldMatrix" "skinCluster1.matrix[12]";
-connectAttr "Ear3_R.worldMatrix" "skinCluster1.matrix[13]";
-connectAttr "Hair1_M.worldMatrix" "skinCluster1.matrix[14]";
-connectAttr "Hair5_M.worldMatrix" "skinCluster1.matrix[15]";
-connectAttr "Hair4_M.worldMatrix" "skinCluster1.matrix[16]";
-connectAttr "Hair2_M.worldMatrix" "skinCluster1.matrix[17]";
-connectAttr "Hair3_M.worldMatrix" "skinCluster1.matrix[18]";
-connectAttr "Hair7_R.worldMatrix" "skinCluster1.matrix[19]";
-connectAttr "Hair8_R.worldMatrix" "skinCluster1.matrix[20]";
-connectAttr "Hair7_L.worldMatrix" "skinCluster1.matrix[21]";
-connectAttr "Ear1_L.worldMatrix" "skinCluster1.matrix[22]";
-connectAttr "Hair8_L.worldMatrix" "skinCluster1.matrix[23]";
-connectAttr "Ear2_L.worldMatrix" "skinCluster1.matrix[24]";
-connectAttr "Ear3_L.worldMatrix" "skinCluster1.matrix[25]";
-connectAttr "Scapula_R.worldMatrix" "skinCluster1.matrix[26]";
-connectAttr "Wrist_R.worldMatrix" "skinCluster1.matrix[27]";
-connectAttr "Shoulder_R.worldMatrix" "skinCluster1.matrix[28]";
-connectAttr "Elbow_R.worldMatrix" "skinCluster1.matrix[29]";
-connectAttr "MiddleFinger2_R.worldMatrix" "skinCluster1.matrix[30]";
-connectAttr "ThumbFinger1_R.worldMatrix" "skinCluster1.matrix[31]";
-connectAttr "MiddleFinger3_R.worldMatrix" "skinCluster1.matrix[32]";
-connectAttr "MiddleFinger1_R.worldMatrix" "skinCluster1.matrix[33]";
-connectAttr "ThumbFinger3_R.worldMatrix" "skinCluster1.matrix[34]";
-connectAttr "IndexFinger1_R.worldMatrix" "skinCluster1.matrix[35]";
-connectAttr "IndexFinger3_R.worldMatrix" "skinCluster1.matrix[36]";
-connectAttr "ThumbFinger2_R.worldMatrix" "skinCluster1.matrix[37]";
-connectAttr "IndexFinger2_R.worldMatrix" "skinCluster1.matrix[38]";
-connectAttr "PinkyFinger1_R.worldMatrix" "skinCluster1.matrix[39]";
-connectAttr "Cup_R.worldMatrix" "skinCluster1.matrix[40]";
-connectAttr "PinkyFinger2_R.worldMatrix" "skinCluster1.matrix[41]";
-connectAttr "RingFinger2_R.worldMatrix" "skinCluster1.matrix[42]";
-connectAttr "PinkyFinger3_R.worldMatrix" "skinCluster1.matrix[43]";
-connectAttr "RingFinger1_R.worldMatrix" "skinCluster1.matrix[44]";
-connectAttr "Shoulder_L.worldMatrix" "skinCluster1.matrix[45]";
-connectAttr "RingFinger3_R.worldMatrix" "skinCluster1.matrix[46]";
-connectAttr "Scapula_L.worldMatrix" "skinCluster1.matrix[47]";
-connectAttr "MiddleFinger2_L.worldMatrix" "skinCluster1.matrix[48]";
-connectAttr "Elbow_L.worldMatrix" "skinCluster1.matrix[49]";
-connectAttr "Wrist_L.worldMatrix" "skinCluster1.matrix[50]";
-connectAttr "MiddleFinger1_L.worldMatrix" "skinCluster1.matrix[51]";
-connectAttr "ThumbFinger1_L.worldMatrix" "skinCluster1.matrix[52]";
-connectAttr "ThumbFinger3_L.worldMatrix" "skinCluster1.matrix[53]";
-connectAttr "MiddleFinger3_L.worldMatrix" "skinCluster1.matrix[54]";
-connectAttr "ThumbFinger2_L.worldMatrix" "skinCluster1.matrix[55]";
-connectAttr "IndexFinger2_L.worldMatrix" "skinCluster1.matrix[56]";
-connectAttr "IndexFinger1_L.worldMatrix" "skinCluster1.matrix[57]";
-connectAttr "PinkyFinger1_L.worldMatrix" "skinCluster1.matrix[58]";
-connectAttr "IndexFinger3_L.worldMatrix" "skinCluster1.matrix[59]";
-connectAttr "Cup_L.worldMatrix" "skinCluster1.matrix[60]";
-connectAttr "PinkyFinger2_L.worldMatrix" "skinCluster1.matrix[61]";
-connectAttr "PinkyFinger3_L.worldMatrix" "skinCluster1.matrix[62]";
-connectAttr "RingFinger2_L.worldMatrix" "skinCluster1.matrix[63]";
-connectAttr "RingFinger1_L.worldMatrix" "skinCluster1.matrix[64]";
-connectAttr "RingFinger3_L.worldMatrix" "skinCluster1.matrix[65]";
-connectAttr "Bow1_M.worldMatrix" "skinCluster1.matrix[66]";
-connectAttr "Bow2_R.worldMatrix" "skinCluster1.matrix[67]";
-connectAttr "Bow3_R.worldMatrix" "skinCluster1.matrix[68]";
-connectAttr "Bow5_R.worldMatrix" "skinCluster1.matrix[69]";
-connectAttr "Bow3_L.worldMatrix" "skinCluster1.matrix[70]";
-connectAttr "Bow6_R.worldMatrix" "skinCluster1.matrix[71]";
-connectAttr "Bow2_L.worldMatrix" "skinCluster1.matrix[72]";
-connectAttr "Bow6_L.worldMatrix" "skinCluster1.matrix[73]";
-connectAttr "Bow5_L.worldMatrix" "skinCluster1.matrix[74]";
-connectAttr "Tail0_M.worldMatrix" "skinCluster1.matrix[75]";
-connectAttr "Tail2_M.worldMatrix" "skinCluster1.matrix[76]";
-connectAttr "Tail1_M.worldMatrix" "skinCluster1.matrix[77]";
-connectAttr "Hip_R.worldMatrix" "skinCluster1.matrix[78]";
-connectAttr "Tail3_M.worldMatrix" "skinCluster1.matrix[79]";
-connectAttr "Tail4_M.worldMatrix" "skinCluster1.matrix[80]";
-connectAttr "Knee_R.worldMatrix" "skinCluster1.matrix[81]";
-connectAttr "Ankle_R.worldMatrix" "skinCluster1.matrix[82]";
-connectAttr "Ankle_L.worldMatrix" "skinCluster1.matrix[83]";
-connectAttr "Hip_L.worldMatrix" "skinCluster1.matrix[84]";
-connectAttr "Toes_R.worldMatrix" "skinCluster1.matrix[85]";
-connectAttr "Knee_L.worldMatrix" "skinCluster1.matrix[86]";
-connectAttr "Toes_L.worldMatrix" "skinCluster1.matrix[87]";
-connectAttr "Eye_R.worldMatrix" "skinCluster1.matrix[88]";
-connectAttr "Eye_L.worldMatrix" "skinCluster1.matrix[89]";
 connectAttr "RootPart1_M.lockInfluenceWeights" "skinCluster1.lockWeights[0]";
 connectAttr "Spine1Part1_M.lockInfluenceWeights" "skinCluster1.lockWeights[1]";
 connectAttr "Root_M.lockInfluenceWeights" "skinCluster1.lockWeights[2]";
@@ -69722,6 +69595,96 @@ connectAttr "Knee_L.lockInfluenceWeights" "skinCluster1.lockWeights[86]";
 connectAttr "Toes_L.lockInfluenceWeights" "skinCluster1.lockWeights[87]";
 connectAttr "Eye_R.lockInfluenceWeights" "skinCluster1.lockWeights[88]";
 connectAttr "Eye_L.lockInfluenceWeights" "skinCluster1.lockWeights[89]";
+connectAttr "RootPart1_M.worldMatrix" "skinCluster1.matrix[0]";
+connectAttr "Spine1Part1_M.worldMatrix" "skinCluster1.matrix[1]";
+connectAttr "Root_M.worldMatrix" "skinCluster1.matrix[2]";
+connectAttr "Spine1_M.worldMatrix" "skinCluster1.matrix[3]";
+connectAttr "RootPart2_M.worldMatrix" "skinCluster1.matrix[4]";
+connectAttr "NeckPart1_M.worldMatrix" "skinCluster1.matrix[5]";
+connectAttr "Neck_M.worldMatrix" "skinCluster1.matrix[6]";
+connectAttr "Spine1Part2_M.worldMatrix" "skinCluster1.matrix[7]";
+connectAttr "Chest_M.worldMatrix" "skinCluster1.matrix[8]";
+connectAttr "Head_M.worldMatrix" "skinCluster1.matrix[9]";
+connectAttr "NeckPart2_M.worldMatrix" "skinCluster1.matrix[10]";
+connectAttr "Ear2_R.worldMatrix" "skinCluster1.matrix[11]";
+connectAttr "Ear1_R.worldMatrix" "skinCluster1.matrix[12]";
+connectAttr "Ear3_R.worldMatrix" "skinCluster1.matrix[13]";
+connectAttr "Hair1_M.worldMatrix" "skinCluster1.matrix[14]";
+connectAttr "Hair5_M.worldMatrix" "skinCluster1.matrix[15]";
+connectAttr "Hair4_M.worldMatrix" "skinCluster1.matrix[16]";
+connectAttr "Hair2_M.worldMatrix" "skinCluster1.matrix[17]";
+connectAttr "Hair3_M.worldMatrix" "skinCluster1.matrix[18]";
+connectAttr "Hair7_R.worldMatrix" "skinCluster1.matrix[19]";
+connectAttr "Hair8_R.worldMatrix" "skinCluster1.matrix[20]";
+connectAttr "Hair7_L.worldMatrix" "skinCluster1.matrix[21]";
+connectAttr "Ear1_L.worldMatrix" "skinCluster1.matrix[22]";
+connectAttr "Hair8_L.worldMatrix" "skinCluster1.matrix[23]";
+connectAttr "Ear2_L.worldMatrix" "skinCluster1.matrix[24]";
+connectAttr "Ear3_L.worldMatrix" "skinCluster1.matrix[25]";
+connectAttr "Scapula_R.worldMatrix" "skinCluster1.matrix[26]";
+connectAttr "Wrist_R.worldMatrix" "skinCluster1.matrix[27]";
+connectAttr "Shoulder_R.worldMatrix" "skinCluster1.matrix[28]";
+connectAttr "Elbow_R.worldMatrix" "skinCluster1.matrix[29]";
+connectAttr "MiddleFinger2_R.worldMatrix" "skinCluster1.matrix[30]";
+connectAttr "ThumbFinger1_R.worldMatrix" "skinCluster1.matrix[31]";
+connectAttr "MiddleFinger3_R.worldMatrix" "skinCluster1.matrix[32]";
+connectAttr "MiddleFinger1_R.worldMatrix" "skinCluster1.matrix[33]";
+connectAttr "ThumbFinger3_R.worldMatrix" "skinCluster1.matrix[34]";
+connectAttr "IndexFinger1_R.worldMatrix" "skinCluster1.matrix[35]";
+connectAttr "IndexFinger3_R.worldMatrix" "skinCluster1.matrix[36]";
+connectAttr "ThumbFinger2_R.worldMatrix" "skinCluster1.matrix[37]";
+connectAttr "IndexFinger2_R.worldMatrix" "skinCluster1.matrix[38]";
+connectAttr "PinkyFinger1_R.worldMatrix" "skinCluster1.matrix[39]";
+connectAttr "Cup_R.worldMatrix" "skinCluster1.matrix[40]";
+connectAttr "PinkyFinger2_R.worldMatrix" "skinCluster1.matrix[41]";
+connectAttr "RingFinger2_R.worldMatrix" "skinCluster1.matrix[42]";
+connectAttr "PinkyFinger3_R.worldMatrix" "skinCluster1.matrix[43]";
+connectAttr "RingFinger1_R.worldMatrix" "skinCluster1.matrix[44]";
+connectAttr "Shoulder_L.worldMatrix" "skinCluster1.matrix[45]";
+connectAttr "RingFinger3_R.worldMatrix" "skinCluster1.matrix[46]";
+connectAttr "Scapula_L.worldMatrix" "skinCluster1.matrix[47]";
+connectAttr "MiddleFinger2_L.worldMatrix" "skinCluster1.matrix[48]";
+connectAttr "Elbow_L.worldMatrix" "skinCluster1.matrix[49]";
+connectAttr "Wrist_L.worldMatrix" "skinCluster1.matrix[50]";
+connectAttr "MiddleFinger1_L.worldMatrix" "skinCluster1.matrix[51]";
+connectAttr "ThumbFinger1_L.worldMatrix" "skinCluster1.matrix[52]";
+connectAttr "ThumbFinger3_L.worldMatrix" "skinCluster1.matrix[53]";
+connectAttr "MiddleFinger3_L.worldMatrix" "skinCluster1.matrix[54]";
+connectAttr "ThumbFinger2_L.worldMatrix" "skinCluster1.matrix[55]";
+connectAttr "IndexFinger2_L.worldMatrix" "skinCluster1.matrix[56]";
+connectAttr "IndexFinger1_L.worldMatrix" "skinCluster1.matrix[57]";
+connectAttr "PinkyFinger1_L.worldMatrix" "skinCluster1.matrix[58]";
+connectAttr "IndexFinger3_L.worldMatrix" "skinCluster1.matrix[59]";
+connectAttr "Cup_L.worldMatrix" "skinCluster1.matrix[60]";
+connectAttr "PinkyFinger2_L.worldMatrix" "skinCluster1.matrix[61]";
+connectAttr "PinkyFinger3_L.worldMatrix" "skinCluster1.matrix[62]";
+connectAttr "RingFinger2_L.worldMatrix" "skinCluster1.matrix[63]";
+connectAttr "RingFinger1_L.worldMatrix" "skinCluster1.matrix[64]";
+connectAttr "RingFinger3_L.worldMatrix" "skinCluster1.matrix[65]";
+connectAttr "Bow1_M.worldMatrix" "skinCluster1.matrix[66]";
+connectAttr "Bow2_R.worldMatrix" "skinCluster1.matrix[67]";
+connectAttr "Bow3_R.worldMatrix" "skinCluster1.matrix[68]";
+connectAttr "Bow5_R.worldMatrix" "skinCluster1.matrix[69]";
+connectAttr "Bow3_L.worldMatrix" "skinCluster1.matrix[70]";
+connectAttr "Bow6_R.worldMatrix" "skinCluster1.matrix[71]";
+connectAttr "Bow2_L.worldMatrix" "skinCluster1.matrix[72]";
+connectAttr "Bow6_L.worldMatrix" "skinCluster1.matrix[73]";
+connectAttr "Bow5_L.worldMatrix" "skinCluster1.matrix[74]";
+connectAttr "Tail0_M.worldMatrix" "skinCluster1.matrix[75]";
+connectAttr "Tail2_M.worldMatrix" "skinCluster1.matrix[76]";
+connectAttr "Tail1_M.worldMatrix" "skinCluster1.matrix[77]";
+connectAttr "Hip_R.worldMatrix" "skinCluster1.matrix[78]";
+connectAttr "Tail3_M.worldMatrix" "skinCluster1.matrix[79]";
+connectAttr "Tail4_M.worldMatrix" "skinCluster1.matrix[80]";
+connectAttr "Knee_R.worldMatrix" "skinCluster1.matrix[81]";
+connectAttr "Ankle_R.worldMatrix" "skinCluster1.matrix[82]";
+connectAttr "Ankle_L.worldMatrix" "skinCluster1.matrix[83]";
+connectAttr "Hip_L.worldMatrix" "skinCluster1.matrix[84]";
+connectAttr "Toes_R.worldMatrix" "skinCluster1.matrix[85]";
+connectAttr "Knee_L.worldMatrix" "skinCluster1.matrix[86]";
+connectAttr "Toes_L.worldMatrix" "skinCluster1.matrix[87]";
+connectAttr "Eye_R.worldMatrix" "skinCluster1.matrix[88]";
+connectAttr "Eye_L.worldMatrix" "skinCluster1.matrix[89]";
 connectAttr "RootPart1_M.objectColorRGB" "skinCluster1.influenceColor[0]";
 connectAttr "Spine1Part1_M.objectColorRGB" "skinCluster1.influenceColor[1]";
 connectAttr "Root_M.objectColorRGB" "skinCluster1.influenceColor[2]";
@@ -73972,10 +73935,6 @@ connectAttr "PoleArmUnitConversion_L.message" "AllSet.dnSetMembers" -nextAvailab
 connectAttr "IKmessureBlendStretchArm_L.message" "AllSet.dnSetMembers" -nextAvailable
 		;
 connectAttr "IKdistanceClampArm_L.message" "AllSet.dnSetMembers" -nextAvailable;
-connectAttr "IKdistanceArm_LShape_normal.message" "AllSet.dnSetMembers" -nextAvailable
-		;
-connectAttr "IKdistanceArm_LShape_antiPop.message" "AllSet.dnSetMembers" -nextAvailable
-		;
 connectAttr "IKmessureBlendAntiPopArm_L.message" "AllSet.dnSetMembers" -nextAvailable
 		;
 connectAttr "IKmessureDivArm_L.message" "AllSet.dnSetMembers" -nextAvailable;
@@ -74060,10 +74019,6 @@ connectAttr "PoleArmUnitConversion_R.message" "AllSet.dnSetMembers" -nextAvailab
 connectAttr "IKmessureBlendStretchArm_R.message" "AllSet.dnSetMembers" -nextAvailable
 		;
 connectAttr "IKdistanceClampArm_R.message" "AllSet.dnSetMembers" -nextAvailable;
-connectAttr "IKdistanceArm_RShape_normal.message" "AllSet.dnSetMembers" -nextAvailable
-		;
-connectAttr "IKdistanceArm_RShape_antiPop.message" "AllSet.dnSetMembers" -nextAvailable
-		;
 connectAttr "IKmessureBlendAntiPopArm_R.message" "AllSet.dnSetMembers" -nextAvailable
 		;
 connectAttr "IKmessureDivArm_R.message" "AllSet.dnSetMembers" -nextAvailable;
@@ -78918,8 +78873,6 @@ connectAttr "IKArm_R.antiPop" "IKSetRangeAntiPopArm_R.valueX";
 connectAttr "IKXOffsetMMShoulder_R.matrixSum" "IKdistanceArm_RShape.inMatrix1";
 connectAttr "IKmessureConstrainToMMArm_R.matrixSum" "IKdistanceArm_RShape.inMatrix2"
 		;
-connectAttr "IKdistanceArm_RShape_antiPop.output" "IKdistanceArm_RShape.antiPop"
-		;
 connectAttr "Main.worldInverseMatrix" "MainPM_M.inputMatrix";
 connectAttr "IKXOffsetShoulder_R.worldMatrix" "IKXOffsetMMShoulder_R.matrixIn[0]"
 		;
@@ -78930,13 +78883,6 @@ connectAttr "MainPM_M.outputMatrix" "IKmessureConstrainToMMArm_R.matrixIn[1]";
 connectAttr "IKmessureBlendStretchArm_R.output" "IKmessureDivArm_R.input1X";
 connectAttr "IKSetRangeAntiPopArm_R.outValueX" "IKmessureBlendAntiPopArm_R.attributesBlender"
 		;
-connectAttr "IKdistanceArm_RShape_normal.output" "IKmessureBlendAntiPopArm_R.input[0]"
-		;
-connectAttr "IKdistanceArm_RShape_antiPop.output" "IKmessureBlendAntiPopArm_R.input[1]"
-		;
-connectAttr "IKdistanceArm_RShape.distance" "IKdistanceArm_RShape_antiPop.input"
-		;
-connectAttr "IKdistanceArm_RShape.distance" "IKdistanceArm_RShape_normal.input";
 connectAttr "IKmessureBlendAntiPopArm_R.output" "IKdistanceClampArm_R.inputR";
 connectAttr "IKSetRangeStretchArm_R.outValueX" "IKmessureBlendStretchArm_R.attributesBlender"
 		;
@@ -79056,8 +79002,6 @@ connectAttr "IKArm_L.antiPop" "IKSetRangeAntiPopArm_L.valueX";
 connectAttr "IKXOffsetMMShoulder_L.matrixSum" "IKdistanceArm_LShape.inMatrix1";
 connectAttr "IKmessureConstrainToMMArm_L.matrixSum" "IKdistanceArm_LShape.inMatrix2"
 		;
-connectAttr "IKdistanceArm_LShape_antiPop.output" "IKdistanceArm_LShape.antiPop"
-		;
 connectAttr "IKXOffsetShoulder_L.worldMatrix" "IKXOffsetMMShoulder_L.matrixIn[0]"
 		;
 connectAttr "MainPM_M.outputMatrix" "IKXOffsetMMShoulder_L.matrixIn[1]";
@@ -79067,13 +79011,6 @@ connectAttr "MainPM_M.outputMatrix" "IKmessureConstrainToMMArm_L.matrixIn[1]";
 connectAttr "IKmessureBlendStretchArm_L.output" "IKmessureDivArm_L.input1X";
 connectAttr "IKSetRangeAntiPopArm_L.outValueX" "IKmessureBlendAntiPopArm_L.attributesBlender"
 		;
-connectAttr "IKdistanceArm_LShape_normal.output" "IKmessureBlendAntiPopArm_L.input[0]"
-		;
-connectAttr "IKdistanceArm_LShape_antiPop.output" "IKmessureBlendAntiPopArm_L.input[1]"
-		;
-connectAttr "IKdistanceArm_LShape.distance" "IKdistanceArm_LShape_antiPop.input"
-		;
-connectAttr "IKdistanceArm_LShape.distance" "IKdistanceArm_LShape_normal.input";
 connectAttr "IKmessureBlendAntiPopArm_L.output" "IKdistanceClampArm_L.inputR";
 connectAttr "IKSetRangeStretchArm_L.outValueX" "IKmessureBlendStretchArm_L.attributesBlender"
 		;
@@ -79971,4 +79908,4 @@ connectAttr "JawBox_MShape.instObjGroups" ":initialShadingGroup.dagSetMembers" -
 connectAttr "ikSCsolver.message" ":ikSystem.ikSolver" -nextAvailable;
 connectAttr "ikRPsolver.message" ":ikSystem.ikSolver" -nextAvailable;
 connectAttr "ikSplineSolver.message" ":ikSystem.ikSolver" -nextAvailable;
-// End of NoraV15Skinning.ma
+// End of NoraV16_ForAnimationRef_NoFaceControlsYet.ma
