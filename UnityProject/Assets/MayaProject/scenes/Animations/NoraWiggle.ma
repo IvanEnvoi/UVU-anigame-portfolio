@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: NoraWiggle.ma
-//Last modified: Mon, Jan 05, 2026 11:15:07 AM
+//Last modified: Mon, Jan 05, 2026 12:10:49 PM
 //Codeset: 1252
 file -rdi 1 -ns "model" -rfn "modelRN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Animations/NoraV16_ForAnimationRef_NoFaceControlsYet.ma";
 file -rdi 2 -ns "model" -rfn "model:modelRN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Rigging/NoraRigRef.ma";
@@ -9,24 +9,23 @@ requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.5";
-requires "stereoCamera" "10.0";
 currentUnit -linear centimeter -angle degree -time film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "1AA08572-46A8-E0AD-5D64-9C959773EE2F";
+fileInfo "UUID" "013B4135-4E0F-27E7-A1A0-03985294A148";
 createNode transform -shared -name "persp";
 	rename -uuid "DAB34C60-4F77-1990-50E1-D9962237923B";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -606.73468354436795 -90.347692474905045 41.363234313277601 ;
-	setAttr ".rotate" -type "double3" -342.3383527359025 -84.999999999952038 0 ;
+	setAttr ".translate" -type "double3" -38.224870698102748 101.06969068982562 247.71070645193231 ;
+	setAttr ".rotate" -type "double3" -360.93835273571335 -9.7999999999109928 -1.2608019220856376e-17 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "54D977B4-461B-2E63-0EAA-36B5B0D3324D";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 629.80125931560826;
+	setAttr ".centerOfInterest" 216.45472907763528;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -82,20 +81,20 @@ createNode camera -shared -name "sideShape" -parent "side";
 	setAttr ".orthographic" yes;
 	setAttr ".aiTranslator" -type "string" "orthographic";
 createNode lightLinker -shared -name "lightLinker1";
-	rename -uuid "360F4FBB-425C-5C6B-0ADC-90AC93F03F02";
+	rename -uuid "032F8029-4E83-FFE5-305F-D48FEE776E4D";
 	setAttr -size 16 ".link";
 	setAttr -size 16 ".shadowLink";
 createNode shapeEditorManager -name "shapeEditorManager";
-	rename -uuid "132CD70E-4C8D-44E1-2CAC-2E9C3548BF57";
+	rename -uuid "088F305A-4807-23A0-0979-C9A9C1BDD089";
 createNode poseInterpolatorManager -name "poseInterpolatorManager";
-	rename -uuid "3663F6CF-40AB-EA5E-82E5-EB9327AB2E86";
+	rename -uuid "9EAA3BE0-44C3-4929-E7B5-A5BA28FF371B";
 createNode displayLayerManager -name "layerManager";
-	rename -uuid "82BD99D9-4C70-8E44-4F94-F988F24A6D7B";
+	rename -uuid "A6F9EAB9-40B0-4BD8-45C9-EFA72CC83A26";
 createNode displayLayer -name "defaultLayer";
 	rename -uuid "18E62CA1-413F-939A-2B1E-12B9FD02F138";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 createNode renderLayerManager -name "renderLayerManager";
-	rename -uuid "B3524023-4F98-B9FA-5F1F-99BE681D2589";
+	rename -uuid "442CABBA-4124-7887-A41B-08A4E2FA5C69";
 createNode renderLayer -name "defaultRenderLayer";
 	rename -uuid "77E7049A-4366-300C-8BE3-278583B552B1";
 	setAttr ".global" yes;
@@ -5709,7 +5708,7 @@ createNode reference -name "modelRN";
 		"modelRN" 0
 		"model:modelRN" 1
 		2 "model:model:sky" "visibility" " 0"
-		"modelRN" 925
+		"modelRN" 926
 		2 "|model:Group|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKHandleFollowMain|model:IKOffsetSplineTail2_M|model:IKExtraSplineTail2_M|model:IKSplineTail2_M|model:IKSplineTail2_MShape" 
 		"controlPoints" " -s 11"
 		2 "|model:Group|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKHandleFollowMain|model:IKOffsetSplineTail2_M|model:IKExtraSplineTail2_M|model:IKSplineTail2_M|model:IKSplineTail2_MShape" 
@@ -5734,6 +5733,8 @@ createNode reference -name "modelRN";
 		
 		2 "|model:Group|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKHandleFollowMain|model:IKOffsetSplineTail2_M|model:IKExtraSplineTail2_M|model:IKSplineTail2_M|model:IKSplineTail2_MShape" 
 		"controlPoints[7]" " -type \"double3\" -15.7918810900000004 0 0"
+		2 "|model:Group|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_R|model:FKIKArm_R" 
+		"FKIKBlend" " -k 1"
 		2 "|model:Group|model:MotionSystem|model:DrivingSystem|model:Fingers_L" "rotatePivotTranslate" 
 		" -type \"double3\" 0 0 0"
 		5 4 "modelRN" "|model:VisualizePoleVector_Arm1.translateX" "modelRN.placeHolderList[1]" 
@@ -12337,8 +12338,8 @@ select -noExpand :time1;
 	setAttr -channelBox on ".isHistoricallyInteresting";
 	setAttr -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr ".outTime" 32;
-	setAttr ".unwarpedTime" 32;
+	setAttr ".outTime" 7;
+	setAttr ".unwarpedTime" 7;
 select -noExpand :hardwareRenderingGlobals;
 	setAttr ".objectTypeFilterNameArray" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".objectTypeFilterValueArray" -type "Int32Array" 22 0 1 1
