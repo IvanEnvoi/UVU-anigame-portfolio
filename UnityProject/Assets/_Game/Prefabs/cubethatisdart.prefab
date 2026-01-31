@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4542314172527867825}
   - component: {fileID: 6754217420745604301}
   - component: {fileID: 7309812525078715353}
+  - component: {fileID: 7106752282253139944}
   m_Layer: 16
   m_Name: cubethatisdart
   m_TagString: Untagged
@@ -33,8 +34,7 @@ Transform:
   m_LocalPosition: {x: -2.47, y: 0, z: 0}
   m_LocalScale: {x: 2.104112, y: 0.27522, z: 0.27522}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8048296823274124534}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7672681619057298809
@@ -127,16 +127,16 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 98304
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65536
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!75 &7309812525078715353
 ConstantForce:
@@ -150,63 +150,16 @@ ConstantForce:
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 3, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
---- !u!1 &8341330566530363136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8048296823274124534}
-  - component: {fileID: 1258719807368428009}
-  m_Layer: 0
-  m_Name: DartSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8048296823274124534
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8341330566530363136}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4752599, y: 3.6334567, z: 3.6334567}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6686120025135287448}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1258719807368428009
+--- !u!114 &7106752282253139944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8341330566530363136}
+  m_GameObject: {fileID: 4135865071163324808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efebce7f9c5853d42bea0573f1770be7, type: 3}
+  m_Script: {fileID: 11500000, guid: f48ffe1e7c66f4ef0bcb54b9ce957f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 1
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1ca3eab50f22bda4baecb73de3d3c541, type: 2}
-        m_TargetAssemblyTypeName: Instancer2, Assembly-CSharp
-        m_MethodName: InstanceFromTransform2
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8048296823274124534}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  holdTime: 0.01

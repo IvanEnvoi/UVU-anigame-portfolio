@@ -12,12 +12,6 @@ public class SpawnPrefabAction : ScriptableObject
 
     public void Spawn()
     {
-        if (prefab == null)
-        {
-            Debug.LogWarning("No prefab assigned!");
-            return;
-        }
-
         Vector3 randomPos = new Vector3(
             Random.Range(minRange.x, maxRange.x),
             Random.Range(minRange.y, maxRange.y),

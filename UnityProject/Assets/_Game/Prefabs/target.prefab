@@ -110,8 +110,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0000004, y: 11.301222, z: 1.0000001}
-  m_Center: {x: 0.00000004386278, y: 0.022003565, z: -0.00000008772556}
+  m_Size: {x: 1.0000004, y: 0.95420086, z: 1.0000001}
+  m_Center: {x: 0.00000004386278, y: -0.018518845, z: -0.00000008772556}
 --- !u!114 &2931074426971712049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,15 +158,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  triggerEnterRepeatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerEnterEndEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ca40e839d7d9ddb4192224f00170c246, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: f7755f952e8dad94687c5f022c6c4df5, type: 2}
         m_TargetAssemblyTypeName: SpawnPrefabAction, Assembly-CSharp
         m_MethodName: Spawn
@@ -177,14 +180,23 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
+  triggerEnterRepeatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   enterHoldTime: 0.01
   repeatHoldTime: 0.01
   exitHoldTime: 0.01
   canRepeat: 0
   canRepeatWithLimits: 0
-  repeatLimit: 0
+  repeatLimit: 1
 --- !u!114 &3553852631622202694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +218,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6532769055604496569}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1.02
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -214,10 +226,10 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65536
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32768
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
