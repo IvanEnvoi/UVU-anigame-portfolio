@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 3553852631622202694}
   - component: {fileID: 5027883034329453806}
   - component: {fileID: 3933848968571302231}
+  - component: {fileID: 4978003644608970158}
+  - component: {fileID: 3526162817254361979}
   m_Layer: 15
   m_Name: target
   m_TagString: Untagged
@@ -130,22 +132,22 @@ MonoBehaviour:
       m_Calls: []
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
-  triggerEnterEvent:
-    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5027883034329453806}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_useGravity
-        m_Mode: 6
+      - m_Target: {fileID: 4978003644608970158}
+        m_TargetAssemblyTypeName: ImpulseApplier, Assembly-CSharp
+        m_MethodName: ApplyImpulse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 3933848968571302231}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -170,17 +172,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: f7755f952e8dad94687c5f022c6c4df5, type: 2}
-        m_TargetAssemblyTypeName: SpawnPrefabAction, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 1
+      - m_Target: {fileID: 1022016295475947101}
+        m_TargetAssemblyTypeName: UnityEngine.BoxCollider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   triggerEnterRepeatEvent:
     m_PersistentCalls:
@@ -209,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48ffe1e7c66f4ef0bcb54b9ce957f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 3.18
+  holdTime: 0.3
 --- !u!54 &5027883034329453806
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -232,7 +234,7 @@ Rigidbody:
     m_Bits: 32768
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -334,3 +336,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4978003644608970158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532769055604496569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88bcd0bab3637c47b1c27648322e907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impulseForce: {x: 0, y: 25.4, z: 0}
+--- !u!114 &3526162817254361979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532769055604496569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33e92b43689542cbba2b63d5a00d04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 10
+  useTrigger: 0
