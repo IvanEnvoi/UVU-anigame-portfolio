@@ -1,32 +1,32 @@
 //Maya ASCII 2025ff03 scene
 //Name: LurkerRig4 walk cycle.ma
-//Last modified: Thu, Feb 19, 2026 11:08:23 AM
+//Last modified: Tue, Feb 24, 2026 11:02:39 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
 		 "mtoa" "5.4.5";
-requires -nodeType "ngst2SkinLayerData" -dataType "ngst2SkinLayerDataStorage" "ngSkinTools2" "2.4.0";
 requires "stereoCamera" "10.0";
+requires -nodeType "ngst2SkinLayerData" -dataType "ngst2SkinLayerDataStorage" "ngSkinTools2" "2.4.0";
 currentUnit -linear centimeter -angle degree -time film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "02A53C71-40E2-4B11-FEB9-7E813F666F48";
+fileInfo "UUID" "8DD5DED3-40AB-7846-ACFB-58A4CE0A7FCA";
 createNode transform -shared -name "persp";
 	rename -uuid "5B931FCA-4078-B85B-723E-09B0D6840065";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -61.074070011858254 51.90681384035269 105.8621501530896 ;
-	setAttr ".rotate" -type "double3" -21.600000000000293 -393.59999999998297 9.5463848381130686e-16 ;
+	setAttr ".translate" -type "double3" -40.790114362931554 30.954066485035515 86.399060547188341 ;
+	setAttr ".rotate" -type "double3" -13.199999999997548 -26.400000000000809 0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -1.778194141973322e-15 -7.0323647248425738e-15 
 		2.3998615295356276e-15 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "8695B1F1-4298-5D82-E501-448AEE39F506";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999979;
-	setAttr ".centerOfInterest" 126.79552452749473;
+	setAttr ".centerOfInterest" 91.185077902969923;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -48530,8 +48530,8 @@ createNode parentConstraint -name "L_Arm_FK_03_Jnt_parentConstraint1" -parent "L
 		3.1974423109204508e-14 6.2172489379008766e-15 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 7.3049672449026299e-15 1.6697912077683461e-14 
 		-5.6442915522617929e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" -7.3053365339865207e-15 -1.0367862819067592e-14 
-		5.9411767526400533e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -6.90776719880358e-15 -7.9762347871077225e-15 
+		5.6243636886661486e-14 ;
 	setAttr ".restTranslate" -type "double3" 6.0264278264921645 7.1054273576010019e-15 
 		1.7763568394002505e-15 ;
 	setAttr ".restRotate" -type "double3" -7.1065518663950523e-15 -1.5154224893418452e-14 
@@ -48591,8 +48591,8 @@ createNode parentConstraint -name "L_Arm_FK_02_Jnt_parentConstraint1" -parent "L
 		1.4210854715202004e-14 6.6613381477509392e-15 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 2.782985346280576e-15 3.180554681463516e-15 
 		6.659286364314237e-15 ;
-	setAttr ".lastTargetRotate" -type "double3" -5.1187051904803476e-15 6.2570580134846245e-15 
-		-3.876301018033661e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.3417965062424212e-14 9.3382203611524055e-15 
+		-4.8702243559910125e-15 ;
 	setAttr ".restTranslate" -type "double3" 5.6425546433747824 2.1316282072803006e-14 
 		7.1054273576010019e-15 ;
 	setAttr ".restRotate" -type "double3" -3.0314661807699147e-15 3.0609732798655236e-15 
@@ -48660,8 +48660,7 @@ createNode joint -name "L_Arm_IK_02_Jnt" -parent "L_Arm_IK_01_Jnt";
 	setAttr ".overrideColor" 14;
 	setAttr ".overrideColorRGB" -type "float3" 0.99999988 2.9342051e-09 2.3476108e-09 ;
 	setAttr ".translate" -type "double3" 5.6425546433747842 2.1316282072803006e-14 7.1054273576010019e-15 ;
-	setAttr ".rotate" -type "double3" 7.3649568526734522e-28 -4.1553142597605683e-13 
-		-1.6234132439431192e-14 ;
+	setAttr ".rotate" -type "double3" 1.1223181509761687e-13 -63.497203270747363 -2.4807317641727282 ;
 	setAttr ".scale" -type "double3" 0.99999999999999967 0.99999999999999944 0.99999999999999933 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -48764,8 +48763,8 @@ createNode orientConstraint -name "L_Arm_IK_03_Jnt_orientConstraint1" -parent "L
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".lastTargetRotate" -type "double3" -8.696829207126817e-15 -1.9940586967769308e-14 
-		7.1298469446284212e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 162.3113515349184 -144.07581009995931 
+		-181.71184216454029 ;
 	setAttr ".restRotate" -type "double3" -7.056855699497188e-15 -1.8344097606175318e-14 
 		5.7827702206531006e-14 ;
 	setAttr -keyable on ".L_Arm_IK_Jnt_CtrlW0";
@@ -48901,8 +48900,8 @@ createNode parentConstraint -name "L_Arm_IK_01_Jnt_parentConstraint1" -parent "L
 		-1.2519404876343287e-05 -2.2967194679424097e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -0.95894965492946438 9.9417429523057912 
 		-5.5376143808198712 ;
-	setAttr ".lastTargetRotate" -type "double3" -9.9392333795734874e-17 1.5902773407317584e-15 
-		1.6027013824562253e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" -48.218962965542822 -13.981522787241405 
+		-41.283846223998786 ;
 	setAttr ".restTranslate" -type "double3" -6.6613381477509392e-16 -3.5527136788005009e-15 
 		2.6645352591003757e-15 ;
 	setAttr ".restRotate" -type "double3" -9.9392333795734874e-17 1.5902773407317584e-15 
@@ -49026,6 +49025,8 @@ createNode parentConstraint -name "L_Arm_RK_03_Jnt_parentConstraint1" -parent "L
 		-3.5527136788005009e-15 -3.5527136788005009e-15 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 0 -3.180554681463516e-15 
 		1.1930073359483935e-17 ;
+	setAttr ".lastTargetRotate" -type "double3" 162.3113515349184 -144.07581009995931 
+		-181.71184216454029 ;
 	setAttr ".restTranslate" -type "double3" 6.0264278264921698 9.5923269327613525e-14 
 		-3.8191672047105385e-14 ;
 	setAttr ".restRotate" -type "double3" 4.9696166897867449e-17 1.5933833511628751e-15 
@@ -49082,6 +49083,8 @@ createNode parentConstraint -name "L_Arm_RK_02_Jnt_parentConstraint1" -parent "L
 		-9.2370555648813024e-14 3.3306690738754696e-14 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" -1.192708005548819e-15 3.180554681463516e-15 
 		-1.9878466759146975e-16 ;
+	setAttr ".lastTargetRotate" -type "double3" -4.4546432653416678e-16 -63.497203270747363 
+		-2.4807317641727278 ;
 	setAttr ".restTranslate" -type "double3" 5.6425546433747806 4.6185277824406512e-14 
 		2.6645352591003757e-14 ;
 	setAttr ".restRotate" -type "double3" 6.2120208622334334e-16 7.765026077791789e-18 
@@ -49134,6 +49137,8 @@ createNode parentConstraint -name "L_Arm_RK_01_Jnt_parentConstraint1" -parent "L
 		-1.0658141036401503e-13 1.2434497875801753e-14 ;
 	setAttr ".target[1].targetOffsetTranslate" -type "double3" 6.4392935428259079e-15 
 		-1.1368683772161603e-13 1.3322676295501878e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -21.26625803069793 -15.00678674155432 
+		-18.67289134919001 ;
 	setAttr ".restTranslate" -type "double3" 6.4392935428259079e-15 -1.1013412404281553e-13 
 		1.4210854715202004e-14 ;
 	setAttr -keyable on ".L_Arm_IK_01_JntW0";
@@ -49227,8 +49232,8 @@ createNode parentConstraint -name "R_Arm_FK_03_Jnt_parentConstraint1" -parent "R
 		2.2978861274225437e-05 2.7998800566919613e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 179.99999999999983 -2.6239576122074008e-14 
 		7.1643624964997846e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" -8.6968292071268233e-15 -3.1109800478065016e-14 
-		7.1298469446284212e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -3.4290355159528555e-14 -2.9699671742338015e-14 
+		7.2130880241823503e-14 ;
 	setAttr ".restTranslate" -type "double3" -6.0263929887613203 1.921599854881606e-05 
 		-6.2568791192596507e-06 ;
 	setAttr ".restRotate" -type "double3" -8.7465253740246877e-15 -2.632343840371416e-14 
@@ -49271,8 +49276,8 @@ createNode parentConstraint -name "R_Arm_FK_02_Jnt_parentConstraint1" -parent "R
 		3.8203900125211021e-05 1.0622543027416498e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -179.21938154099558 6.9457052332042801 
 		6.4284824732378185 ;
-	setAttr ".lastTargetRotate" -type "double3" 1.2647674475507271e-14 -6.2151268726645499e-15 
-		1.4908850069360234e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.1604054970652052e-14 -3.0640792902966409e-15 
+		-3.1028240492757691e-31 ;
 	setAttr ".restTranslate" -type "double3" -5.6425456323074696 -2.4940912279447502e-05 
 		2.415659642096557e-06 ;
 	setAttr ".restRotate" -type "double3" 1.0958004800979776e-14 1.2579342246022691e-16 
@@ -49315,8 +49320,8 @@ createNode parentConstraint -name "R_Arm_FK_01_Jnt_parentConstraint1" -parent "R
 		1.2519404872790574e-05 2.2967194697187665e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 179.04105034507066 -9.9417429523058107 
 		5.5376143808198366 ;
-	setAttr ".lastTargetRotate" -type "double3" 3.975693351829396e-16 1.5902773407317584e-15 
-		1.5902773407317584e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 6.9574633657014429e-16 -1.4483130040477084e-32 
+		2.3854160110976376e-15 ;
 	setAttr ".restTranslate" -type "double3" 2.2204460492503131e-16 -3.5527136788005009e-15 
 		-2.6645352591003757e-15 ;
 	setAttr ".restRotate" -type "double3" 3.975693351829396e-16 1.5902773407317584e-15 
@@ -49364,8 +49369,7 @@ createNode joint -name "R_Arm_IK_02_Jnt" -parent "R_Arm_IK_01_Jnt";
 	setAttr ".overrideColorRGB" -type "float3" 0.99999988 2.9342051e-09 2.3476108e-09 ;
 	setAttr ".translate" -type "double3" -5.6425456323074696 -2.4940912279447502e-05 
 		2.415659642096557e-06 ;
-	setAttr ".rotate" -type "double3" -1.4218583613542477e-18 -4.5166304366300513e-13 
-		-1.7657226483975273e-14 ;
+	setAttr ".rotate" -type "double3" -0.00031438100292680195 -99.865278083250473 -3.9041136035845132 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" 1.9432862040092924 -16.868306183400652 -1.2150721406748444 ;
@@ -49409,8 +49413,8 @@ createNode orientConstraint -name "R_Arm_IK_03_Jnt_orientConstraint1" -parent "R
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".lastTargetRotate" -type "double3" 0.24631718443828268 -0.02587484581210777 
-		-0.0053225906359003743 ;
+	setAttr ".lastTargetRotate" -type "double3" -18.522941228940656 -15.926640042498999 
+		4.3842966977485869 ;
 	setAttr ".restRotate" -type "double3" -8.597436873331082e-15 -2.5528299733348274e-14 
 		6.9711298115983537e-14 ;
 	setAttr -keyable on ".R_Arm_IK_Jnt_CtrlW0";
@@ -49438,8 +49442,8 @@ createNode parentConstraint -name "R_Arm_IK_01_Jnt_parentConstraint1" -parent "R
 		7.1054273576010019e-15 0 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -0.2448556280902511 0.0025444403432044876 
 		-0.037537412873832547 ;
-	setAttr ".lastTargetRotate" -type "double3" -0.2448556280902511 0.0025444403432044881 
-		-0.037537412873832547 ;
+	setAttr ".lastTargetRotate" -type "double3" -8.9232913830616667 -23.721613077886726 
+		-15.770011779977542 ;
 	setAttr ".restTranslate" -type "double3" 6.6613381477509392e-16 3.5527136788005009e-15 
 		-2.6645352591003757e-15 ;
 	setAttr ".restRotate" -type "double3" -0.2448556280902511 0.0025444403432044881 
@@ -49538,8 +49542,8 @@ createNode parentConstraint -name "R_Arm_RK_03_Jnt_parentConstraint1" -parent "R
 		-6.3948846218409017e-14 -1.5987211554602254e-14 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" -1.4908850069360235e-16 
 		7.9513867036587899e-16 -3.2737349943970175e-15 ;
-	setAttr ".lastTargetRotate" -type "double3" 0.24631718443828268 -0.02587484581210777 
-		-0.0053225906359003752 ;
+	setAttr ".lastTargetRotate" -type "double3" -18.522941228940649 -15.926640042499006 
+		4.3842966977485869 ;
 	setAttr ".restTranslate" -type "double3" -6.0263929887613576 1.9215998335653239e-05 
 		-6.2568791503458954e-06 ;
 	setAttr ".restRotate" -type "double3" 0.24631718444108008 -0.025874845812397906 
@@ -49573,7 +49577,8 @@ createNode parentConstraint -name "R_Arm_RK_02_Jnt_parentConstraint1" -parent "R
 		0.0037026954374681509 0.00013681770470030941 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" -0.24521144807023698 -0.0013000095365090171 
 		0.035203029513680262 ;
-	setAttr ".lastTargetRotate" -type "double3" 0 3.1805546814635168e-15 0 ;
+	setAttr ".lastTargetRotate" -type "double3" -0.00031438100294018209 -99.865278083250487 
+		-3.9041136035845132 ;
 	setAttr ".restTranslate" -type "double3" -5.6425456323074883 -2.4940912130233528e-05 
 		2.4156596794000507e-06 ;
 	setAttr ".restRotate" -type "double3" 2.4848083448933735e-16 4.6590156466750742e-18 
@@ -49607,8 +49612,8 @@ createNode parentConstraint -name "R_Arm_RK_01_Jnt_parentConstraint1" -parent "R
 		-1.0658141036401503e-14 -1.3322676295501878e-14 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" -0.24485562809170575 0.0025444403432191014 
 		-0.037537412874055202 ;
-	setAttr ".lastTargetRotate" -type "double3" -0.24485562808879699 0.0025444403431898362 
-		-0.037537412873609358 ;
+	setAttr ".lastTargetRotate" -type "double3" -6.1022059951614906 6.325707534246253 
+		-22.380093701890804 ;
 	setAttr ".restTranslate" -type "double3" 9.9920072216264089e-15 -2.1316282072803006e-14 
 		-1.6875389974302379e-14 ;
 	setAttr ".restRotate" -type "double3" -0.24485562809170566 0.0025444403432191018 
@@ -49669,7 +49674,8 @@ createNode parentConstraint -name "Head_Jnt_parentConstraint1" -parent "Head_Jnt
 		8.8817841970012523e-16 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 0 -4.1744780194208675e-15 
 		0 ;
-	setAttr ".lastTargetRotate" -type "double3" 0 4.174478019420866e-15 0 ;
+	setAttr ".lastTargetRotate" -type "double3" 17.448153319711349 32.851941552640398 
+		2.7371254882899332 ;
 	setAttr ".restTranslate" -type "double3" 1.4412904999187823 0 3.4694469519536142e-18 ;
 	setAttr ".restRotate" -type "double3" 0 4.1744780194208675e-15 0 ;
 	setAttr -keyable on ".Head_CtrlW0";
@@ -49783,8 +49789,8 @@ createNode parentConstraint -name "L_Mandi_01_Jnt_parentConstraint1" -parent "L_
 	setAttr ".enableRestPosition" yes;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -9.5416640443905503e-15 
 		-3.1805546814635168e-15 -1.2649193377045036e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" 9.5416640443905519e-15 1.9083328088781101e-14 
-		4.7708320221952767e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.5902773407317587e-14 3.8166656177562189e-14 
+		2.3059021440610497e-14 ;
 	setAttr ".restTranslate" -type "double3" 0.53355044525273587 0.36244929607961396 
 		-0.26366500167505791 ;
 	setAttr ".restRotate" -type "double3" 9.5416640443905503e-15 9.5416640443905503e-15 
@@ -49850,7 +49856,8 @@ createNode parentConstraint -name "R_Mandi_02_Jnt_parentConstraint1" -parent "R_
 	setAttr ".target[0].targetOffsetTranslate" -type "double3" -0.034723331000397761 
 		-3.7674709624013758e-05 2.1529059130998007e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 180 36.284664986956209 103.52515754325739 ;
-	setAttr ".lastTargetRotate" -type "double3" 0 -3.1805546814635176e-15 0 ;
+	setAttr ".lastTargetRotate" -type "double3" -3.1805546814635183e-15 -4.7708320221952752e-15 
+		1.9083328088781104e-14 ;
 	setAttr ".restTranslate" -type "double3" -0.81953274065813098 -3.7878724921114326e-06 
 		9.1667274872975213e-06 ;
 	setAttr ".restRotate" -type "double3" 0 -3.1805546814635176e-15 0 ;
@@ -49934,6 +49941,7 @@ createNode parentConstraint -name "Neck_Jnt_parentConstraint1" -parent "Neck_Jnt
 	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 -8.8817841970012523e-16 
 		0 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 0 0 -3.1805546814635168e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 0 0 6.3611093629270335e-15 ;
 	setAttr ".restTranslate" -type "double3" 1.4141536685458789 0 0.29839628341937985 ;
 	setAttr -keyable on ".Head_CtrlW0";
 createNode scaleConstraint -name "Neck_Jnt_scaleConstraint1" -parent "Neck_Jnt";
@@ -49970,6 +49978,7 @@ createNode parentConstraint -name "Spine_03_Jnt_parentConstraint2" -parent "Spin
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
 	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 0 8.8817841970012523e-16 ;
+	setAttr ".lastTargetRotate" -type "double3" 0 -57.922601373241172 0 ;
 	setAttr ".restTranslate" -type "double3" 2.1145341891926499 0 8.8817841970012523e-16 ;
 	setAttr -keyable on ".Spine_03_CtrlW0";
 createNode scaleConstraint -name "Spine_03_Jnt_scaleConstraint2" -parent "Spine_03_Jnt";
@@ -50005,6 +50014,7 @@ createNode parentConstraint -name "Spine_02_Jnt_parentConstraint1" -parent "Spin
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
+	setAttr ".lastTargetRotate" -type "double3" 0 0.84267585192040162 0 ;
 	setAttr ".restTranslate" -type "double3" 2.1731230567163955 0 0 ;
 	setAttr -keyable on ".Spine_02_CtrlW0";
 createNode scaleConstraint -name "Spine_02_Jnt_scaleConstraint1" -parent "Spine_02_Jnt";
@@ -50186,8 +50196,7 @@ createNode joint -name "L_Leg_IK_01_Jnt" -parent "L_Hip_Jnt";
 	setAttr ".objectColor" 2;
 	setAttr ".translate" -type "double3" 1.7763568394002505e-15 -2.6645352591003757e-15 
 		8.8817841970012523e-16 ;
-	setAttr ".rotate" -type "double3" -1.3475843131254256e-14 3.7855495993739665e-15 
-		1.00404365098852e-15 ;
+	setAttr ".rotate" -type "double3" -4.4925946769954095 15.513397352041418 -3.6294705753040799 ;
 	setAttr ".scale" -type "double3" 1 1.0000000000000002 1.0000000000000002 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -50208,8 +50217,7 @@ createNode joint -name "L_Leg_IK_02_Jnt" -parent "L_Leg_IK_01_Jnt";
 	setAttr ".overrideColor" 14;
 	setAttr ".overrideColorRGB" -type "float3" 0.99999988 2.9342051e-09 2.3476108e-09 ;
 	setAttr ".translate" -type "double3" 6.2561324130730567 1.7763568394002505e-15 1.2212453270876722e-15 ;
-	setAttr ".rotate" -type "double3" -2.7424603586116263e-30 7.7918069852378554e-15 
-		6.6142198057398269e-14 ;
+	setAttr ".rotate" -type "double3" -2.0623975266841492e-15 5.8596301690538164 49.740556961811407 ;
 	setAttr ".scale" -type "double3" 1 1 1.0000000000000002 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
@@ -50350,8 +50358,8 @@ createNode parentConstraint -name "L_Leg_RK_02_Jnt_parentConstraint1" -parent "L
 		-0.012302008944226506 -0.20237371996837816 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 6.4788664681230088 -1.5256777022887109 
 		0.092765731974528309 ;
-	setAttr ".lastTargetRotate" -type "double3" 3.180554681463516e-15 -7.9513867036587899e-16 
-		-2.2069531490250782e-32 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.5986301891684805e-15 5.8596301690538137 
+		49.7405569618114 ;
 	setAttr ".restTranslate" -type "double3" 6.2561324130730558 -1.0658141036401503e-14 
 		1.5404344466674047e-15 ;
 	setAttr ".restRotate" -type "double3" 6.361109362927032e-15 -2.3854160110976372e-15 
@@ -50385,6 +50393,8 @@ createNode parentConstraint -name "L_Leg_RK_01_Jnt_parentConstraint1" -parent "L
 		2.6645352591003757e-15 -1.3322676295501878e-15 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 6.4026464971744073 -1.7656372523106829 
 		-0.57563598396111249 ;
+	setAttr ".lastTargetRotate" -type "double3" -4.4925946769954086 15.513397352041414 
+		-3.6294705753040799 ;
 	setAttr ".restTranslate" -type "double3" -3.5527136788005009e-15 -1.7763568394002505e-15 
 		-2.2204460492503131e-16 ;
 	setAttr ".restRotate" -type "double3" 6.4026464971743922 -1.7656372523106822 -0.57563598396111215 ;
@@ -50600,8 +50610,7 @@ createNode joint -name "R_Leg_IK_01_Jnt" -parent "R_Hip_Jnt";
 	setAttr ".objectColor" 2;
 	setAttr ".translate" -type "double3" 1.7763568394002505e-15 1.7763568394002505e-15 
 		-0.034800000000001052 ;
-	setAttr ".rotate" -type "double3" 1.3475842811137756e-14 -3.7855494480155986e-15 
-		-1.0040485181099607e-15 ;
+	setAttr ".rotate" -type "double3" -29.901132578393533 -4.2055629926957501 58.921789339615835 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" -23.670140751504707 3.7465410721504901 1.0178712821142837 ;
@@ -50622,8 +50631,7 @@ createNode joint -name "R_Leg_IK_02_Jnt" -parent "R_Leg_IK_01_Jnt";
 	setAttr ".overrideColorRGB" -type "float3" 0.99999988 2.9342051e-09 2.3476108e-09 ;
 	setAttr ".translate" -type "double3" -6.2561441567885421 4.3156708295910562e-06 
 		7.8756390259338005e-06 ;
-	setAttr ".rotate" -type "double3" 3.8938438084674268e-20 1.7531952780444729e-14 
-		1.4881993645839546e-13 ;
+	setAttr ".rotate" -type "double3" 9.0070584605848434e-06 4.0554098055574235 34.42433579041959 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrient" -type "double3" -160.2806937182111 7.2490286457621353 -28.657861913211232 ;
@@ -50764,6 +50772,8 @@ createNode parentConstraint -name "R_Leg_RK_02_Jnt_parentConstraint1" -parent "R
 		0.012302527367527683 0.20237664444917902 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 6.4789690463378635 -1.5257012252692397 
 		0.092768044952094966 ;
+	setAttr ".lastTargetRotate" -type "double3" 9.0070584589581624e-06 4.055409805557427 
+		34.42433579041959 ;
 	setAttr ".restTranslate" -type "double3" -6.2561441567885439 4.3156708109393094e-06 
 		7.8756390224782313e-06 ;
 	setAttr ".restRotate" -type "double3" -9.9392333795734899e-17 -3.975693351829396e-16 
@@ -50797,6 +50807,8 @@ createNode parentConstraint -name "R_Leg_RK_01_Jnt_parentConstraint1" -parent "R
 		1.2434497875801753e-14 5.0515147620444623e-15 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 6.4027478254173564 -1.7656644403355608 
 		-0.57564894223585017 ;
+	setAttr ".lastTargetRotate" -type "double3" -29.90113257839354 -4.2055629926957474 
+		58.921789339615835 ;
 	setAttr ".restTranslate" -type "double3" 8.8817841970012523e-15 1.5099033134902129e-14 
 		-0.034800000000001718 ;
 	setAttr ".restRotate" -type "double3" 6.4027478254173573 -1.7656644403355604 -0.57564894223584995 ;
@@ -50938,8 +50950,8 @@ createNode parentConstraint -name "R_Pnky_Fngr_02_Jnt_parentConstraint1" -parent
 		1.9414568722453396e-05 2.4771262392420113e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 179.99999999999886 -7.2932460851726679 
 		30.244231485699625 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.3020395727241269e-14 9.9392333795734879e-16 
-		1.7828499874609945e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.2518464441572808e-13 6.6394078975550865e-14 
+		1.7934104229267985e-14 ;
 	setAttr ".restTranslate" -type "double3" -0.96698521753062039 2.6023840938194098e-05 
 		-8.9446039019946966e-08 ;
 	setAttr ".restRotate" -type "double3" -1.2101016639630722e-14 -5.3423379415207472e-16 
@@ -50982,8 +50994,8 @@ createNode parentConstraint -name "R_Pnky_Fngr_01_Jnt_parentConstraint1" -parent
 		4.370299065215022e-05 2.3982844594705455e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -180 -9.1662286421039738 
 		21.203572134941197 ;
-	setAttr ".lastTargetRotate" -type "double3" 5.9635400277440939e-16 1.7890620083232284e-15 
-		7.4544250346801187e-17 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.3119788061037007e-13 5.2777329245535208e-14 
+		2.0126947593636375e-14 ;
 	setAttr ".restTranslate" -type "double3" -1.3805999999999994 -0.0036999999999949296 
 		0.58119999999999994 ;
 	setAttr ".restRotate" -type "double3" 5.9635400277440939e-16 1.7890620083232284e-15 
@@ -51054,8 +51066,8 @@ createNode parentConstraint -name "R_Indx_Fngr_02_Jnt_parentConstraint1" -parent
 		1.9414568694031686e-05 4.41902213843548e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -180 -0.73766287161338429 
 		23.914645422751605 ;
-	setAttr ".lastTargetRotate" -type "double3" 5.7771794018770908e-16 -7.745613512597311e-17 
-		2.3892499927235473e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.2960760326963831e-13 5.7194076078583185e-14 
+		9.5812171459743675e-15 ;
 	setAttr ".restTranslate" -type "double3" -1.0188004416101606 1.3226314980130383e-05 
 		-4.4408920985006262e-16 ;
 	setAttr ".restRotate" -type "double3" 4.9385565854755778e-16 -7.7844386429862712e-17 
@@ -51098,8 +51110,8 @@ createNode parentConstraint -name "R_Indx_Fngr_01_Jnt_parentConstraint1" -parent
 		4.3702990645044792e-05 4.4190221353268555e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -180 -2.3780735747080171e-15 
 		19.81083190364685 ;
-	setAttr ".lastTargetRotate" -type "double3" 4.1527192070410351e-16 -2.3780735747080163e-15 
-		-3.180554681463516e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.3331090670467131e-13 4.5495681667616061e-14 
+		-3.1805546814634631e-15 ;
 	setAttr ".restTranslate" -type "double3" -1.4489999999999998 -0.0036999999999984823 
 		0.18753999999999893 ;
 	setAttr ".restRotate" -type "double3" 4.1527192070410351e-16 -2.3780735747080163e-15 
@@ -51170,8 +51182,8 @@ createNode parentConstraint -name "R_Mid_Fngr_02_Jnt_parentConstraint1" -parent 
 		1.9414568704689827e-05 8.7544405769079958e-07 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -179.99999999999963 5.8808896313024617 
 		23.914645422751647 ;
-	setAttr ".lastTargetRotate" -type "double3" -6.1995968205089643e-14 -1.7331538205631298e-15 
-		-4.8081041473686758e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 7.9712651704179392e-14 5.4317910419369135e-14 
+		-1.134936211530044e-14 ;
 	setAttr ".restTranslate" -type "double3" -1.2980443831036688 3.3051933591821125e-05 
 		7.5531824972330242e-07 ;
 	setAttr ".restRotate" -type "double3" -1.1107093301673377e-14 -1.2175560889977527e-15 
@@ -51214,8 +51226,8 @@ createNode parentConstraint -name "R_Mid_Fngr_01_Jnt_parentConstraint1" -parent 
 		4.3702990637939365e-05 3.1327070706410609e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -180 3.0232657140567372 
 		15.44788262060035 ;
-	setAttr ".lastTargetRotate" -type "double3" 3.9756933518293969e-16 8.3862281640151325e-16 
-		3.1727896553857255e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.3641597813464615e-13 3.8334380740842512e-14 
+		-3.5983130844486692e-15 ;
 	setAttr ".restTranslate" -type "double3" -1.2778999999999954 -0.0036999999999949296 
 		-0.15477000000000007 ;
 	setAttr ".restRotate" -type "double3" 3.9756933518293969e-16 8.3862281640151325e-16 
@@ -51285,8 +51297,8 @@ createNode parentConstraint -name "R_Pntr_Fngr_02_Jnt_parentConstraint1" -parent
 		1.9414568694031686e-05 -1.6183442932415915e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 179.99999999999991 9.8468631449366786 
 		29.788849326914942 ;
-	setAttr ".lastTargetRotate" -type "double3" 8.9453100416161399e-16 7.9513867036587899e-16 
-		4.8329522308176087e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.1847566188451597e-13 4.7360447053667685e-14 
+		-1.5542476197307995e-14 ;
 	setAttr ".restTranslate" -type "double3" -1.1332086793273168 3.8578217285589744e-05 
 		-1.0438455534167446e-05 ;
 	setAttr ".restRotate" -type "double3" 1.4908850069360232e-15 -7.4544250346801169e-16 
@@ -51329,8 +51341,8 @@ createNode parentConstraint -name "R_Pntr_Fngr_01_Jnt_parentConstraint1" -parent
 		4.3702990637939365e-05 -2.589292241061969e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -180 13.983944840410757 
 		18.299474530712128 ;
-	setAttr ".lastTargetRotate" -type "double3" 3.9756933518293969e-16 -1.5902773407317588e-15 
-		-4.9696166897867462e-17 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.3040274194000422e-13 4.2838095865961784e-14 
+		-3.2153419982920199e-14 ;
 	setAttr ".restTranslate" -type "double3" -1.2607999999999997 -0.0036999999999949296 
 		-0.47995999999999928 ;
 	setAttr ".restRotate" -type "double3" 3.9756933518293969e-16 4.9696166897867462e-17 
@@ -51400,8 +51412,8 @@ createNode parentConstraint -name "R_Thmb_02_Jnt_parentConstraint1" -parent "R_T
 		-2.2436262341329893e-06 -7.2623812208405525e-07 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -179.99999999999997 27.585241820416062 
 		39.35426718919441 ;
-	setAttr ".lastTargetRotate" -type "double3" 6.3611093629270335e-15 2.3854160110976372e-15 
-		3.5781240166464568e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.2284892457152831e-13 1.0416316581793021e-13 
+		-3.4986101496098574e-14 ;
 	setAttr ".restTranslate" -type "double3" -0.92364915123278468 -4.3947251615605865e-05 
 		4.3538355184224997e-05 ;
 	setAttr ".restRotate" -type "double3" 6.3611093629270335e-15 2.3854160110976372e-15 
@@ -51443,8 +51455,8 @@ createNode parentConstraint -name "R_Thmb_01_Jnt_parentConstraint1" -parent "R_T
 	setAttr ".target[0].targetOffsetTranslate" -type "double3" -0.034773884584646808 
 		4.3702990648597506e-05 -4.8465552540122303e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 180 43.287740371014543 67.550376043812946 ;
-	setAttr ".lastTargetRotate" -type "double3" -6.361109362927032e-15 6.361109362927032e-15 
-		-4.7708320221952744e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 3.1805546814635124e-14 1.3835412864366294e-13 
+		-3.4986101496098631e-14 ;
 	setAttr ".restTranslate" -type "double3" -0.55899999999999928 -0.0036999999999949296 
 		-0.54842000000000013 ;
 	setAttr ".restRotate" -type "double3" -6.361109362927032e-15 6.361109362927032e-15 
@@ -51487,7 +51499,8 @@ createNode parentConstraint -name "R_Hand_Jnt_parentConstraint1" -parent "R_Hand
 		-3.5527136788005009e-15 0 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.6670004330731853e-13 0 
 		0 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.412556058556104e-13 0 0 ;
+	setAttr ".lastTargetRotate" -type "double3" 54.446167094452811 -59.476071549390099 
+		-106.16199274887914 ;
 	setAttr ".restTranslate" -type "double3" -12.885500000000011 22.041100000000025 
 		4.1035700000000057 ;
 	setAttr ".restRotate" -type "double3" -1.6670004330731853e-13 0 0 ;
@@ -51567,8 +51580,8 @@ createNode parentConstraint -name "L_Pnky_Fngr_02_Jnt_parentConstraint1" -parent
 		1.4210854715202004e-14 8.8817841970012523e-16 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -2.9420130803537534e-13 
 		2.1866313435061676e-15 3.1494945771523496e-15 ;
-	setAttr ".lastTargetRotate" -type "double3" 2.9857457072238766e-13 -6.5847421139672345e-16 
-		-7.7650260777917912e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 2.6589934098703978e-13 -2.7432284127622951e-14 
+		5.1938706429133653e-14 ;
 	setAttr ".restTranslate" -type "double3" 0.96698515813261121 1.0658141036401503e-14 
 		8.8817841970012523e-16 ;
 	setAttr ".restRotate" -type "double3" 2.9435039653606888e-13 -2.1617832600572224e-15 
@@ -51611,8 +51624,8 @@ createNode parentConstraint -name "L_Pnky_Fngr_01_Jnt_parentConstraint1" -parent
 		3.5527136788005009e-15 -8.8817841970012523e-16 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -7.9513867036587919e-16 
 		-1.1131941385122309e-14 9.6582460593541519e-15 ;
-	setAttr ".lastTargetRotate" -type "double3" 5.96354002774409e-16 1.1529510720305249e-14 
-		-3.155706598014583e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" -9.740448711982025e-15 -1.1479814553407375e-14 
+		6.0057817696072808e-14 ;
 	setAttr ".restTranslate" -type "double3" 1.3805252439639411 0.0036792758705956885 
 		-0.58119959840439961 ;
 	setAttr ".restRotate" -type "double3" 1.1927080055488182e-15 9.8895372126756228e-15 
@@ -51681,8 +51694,8 @@ createNode parentConstraint -name "L_Indx_Fngr_02_Jnt_parentConstraint1" -parent
 		7.1054273576010019e-15 2.6645352591003757e-15 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.2424041724466859e-17 -4.9696166897867449e-16 
 		-7.9513867036587919e-16 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.2424041724466855e-16 7.9630342427754799e-16 
-		9.5412515273801676e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.1274817864953852e-15 -2.3088722665358049e-14 
+		8.6666499479613361e-14 ;
 	setAttr ".restTranslate" -type "double3" 1.0187654922684324 1.4210854715202004e-14 
 		0 ;
 	setAttr ".restRotate" -type "double3" -1.2424041724466858e-17 5.9713050538218852e-16 
@@ -51724,7 +51737,7 @@ createNode parentConstraint -name "L_Indx_Fngr_01_Jnt_parentConstraint1" -parent
 	setAttr ".target[0].targetOffsetTranslate" -type "double3" -8.8817841970012523e-16 
 		3.5527136788005009e-15 8.8817841970012523e-16 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 0 0 6.3611093629270351e-15 ;
-	setAttr ".lastTargetRotate" -type "double3" 0 0 -6.361109362927032e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 0 0 6.0430538947806803e-14 ;
 	setAttr ".restTranslate" -type "double3" 1.4489875012269557 0.0036792758705992412 
 		-0.18754161914207312 ;
 	setAttr ".restRotate" -type "double3" 0 0 -1.2722218725854064e-14 ;
@@ -51793,8 +51806,8 @@ createNode parentConstraint -name "L_Mid_Fngr_02_Jnt_parentConstraint1" -parent 
 		-2.1316282072803006e-14 -3.1086244689504383e-15 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 4.1595691693515045e-13 -7.9513867036587899e-16 
 		-1.5231875154196371e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" -4.1625509393653774e-13 4.2241741863192304e-16 
-		1.3681975949069129e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -4.2997123600034916e-13 -1.833788558531276e-14 
+		8.7160864717997354e-14 ;
 	setAttr ".restTranslate" -type "double3" 1.2980728805334074 -1.7763568394002505e-14 
 		-8.8817841970012523e-16 ;
 	setAttr ".restRotate" -type "double3" -4.1625509393653774e-13 4.2241741863192304e-16 
@@ -51837,8 +51850,8 @@ createNode parentConstraint -name "L_Mid_Fngr_01_Jnt_parentConstraint1" -parent 
 		-7.1054273576010019e-15 0 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 9.9392333795734924e-17 3.180554681463516e-15 
 		0 ;
-	setAttr ".lastTargetRotate" -type "double3" 6.460501696722767e-16 -1.6213374450429256e-15 
-		1.2714453699776276e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 4.0253895187272516e-15 -1.7822287853747717e-14 
+		7.9461064859258935e-14 ;
 	setAttr ".restTranslate" -type "double3" 1.2778318580694226 0.0036792758705956885 
 		0.15476966717299057 ;
 	setAttr ".restRotate" -type "double3" 0 -2.4351121779955051e-15 0 ;
@@ -51906,8 +51919,8 @@ createNode parentConstraint -name "L_Pntr_Fngr_02_Jnt_parentConstraint1" -parent
 		-3.5527136788005009e-15 2.6645352591003757e-15 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -7.7526020360673222e-14 
 		-4.7708320221952759e-15 2.0201491843983121e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" 7.4593946513699062e-14 -1.143011838650942e-15 
-		-1.5008242403155972e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 6.9872810658401647e-14 -1.7145177579764303e-14 
+		4.6552884341577333e-14 ;
 	setAttr ".restTranslate" -type "double3" 1.1332465777270171 3.5527136788005009e-15 
 		2.2204460492503131e-15 ;
 	setAttr ".restRotate" -type "double3" 7.8271462864141238e-14 3.2302508483613961e-15 
@@ -51950,8 +51963,8 @@ createNode parentConstraint -name "L_Pntr_Fngr_01_Jnt_parentConstraint1" -parent
 		-3.5527136788005009e-15 4.4408920985006262e-16 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 0 1.2722218725854067e-14 
 		0 ;
-	setAttr ".lastTargetRotate" -type "double3" -3.975693351829392e-16 -1.7940316250130154e-14 
-		-3.1308585145656501e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.5902773407317568e-14 -3.7520606007889946e-14 
+		6.2617170291312998e-14 ;
 	setAttr ".restTranslate" -type "double3" 1.2607162937536689 0.0036792758705956885 
 		0.47996538917230236 ;
 	setAttr ".restRotate" -type "double3" 3.9756933518293969e-16 -1.4610673067973032e-14 
@@ -52020,8 +52033,8 @@ createNode parentConstraint -name "L_Thmb_02_Jnt_parentConstraint1" -parent "L_T
 		-7.1054273576010019e-15 -1.0658141036401503e-14 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 3.1805546814635176e-15 1.113194138512231e-14 
 		3.9756933518293974e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" -2.6637145457256954e-14 -3.5781240166464678e-15 
-		-4.7708320221952748e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.1927080055488148e-15 -9.9392333795734887e-15 
+		4.2142349529391588e-14 ;
 	setAttr ".restTranslate" -type "double3" 0.9235969203929093 3.5527136788005009e-15 
 		-1.0658141036401503e-14 ;
 	setAttr ".restRotate" -type "double3" -2.782985346280572e-15 -1.4710065401768764e-14 
@@ -52064,8 +52077,8 @@ createNode parentConstraint -name "L_Thmb_01_Jnt_parentConstraint1" -parent "L_T
 		3.5527136788005009e-15 0 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 9.5416640443905503e-15 1.9083328088781097e-14 
 		6.3667886986280073e-15 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.9083328088781101e-14 -9.5416640443905535e-15 
-		-1.5902773407317581e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 3.1805546814635155e-14 -2.7034714792439897e-14 
+		3.1805546814635155e-14 ;
 	setAttr ".restTranslate" -type "double3" 0.55897815680778606 0.0036792758705992412 
 		0.54842764643531172 ;
 	setAttr ".restRotate" -type "double3" -1.5902773407317581e-14 -1.4312496066585827e-14 
@@ -52106,6 +52119,8 @@ createNode parentConstraint -name "L_Hand_Jnt_parentConstraint1" -parent "L_Hand
 	setAttr ".enableRestPosition" yes;
 	setAttr ".target[0].targetOffsetTranslate" -type "double3" -0.034752041392431821 
 		-2.2978861263567296e-05 -2.7998800611328534e-06 ;
+	setAttr ".lastTargetRotate" -type "double3" 40.340071874854779 -66.244335561793264 
+		-99.438486239556084 ;
 	setAttr ".restTranslate" -type "double3" 12.850747958607586 22.041077021138754 4.1035672001199464 ;
 	setAttr -keyable on ".L_Hand_CtrlW0";
 createNode scaleConstraint -name "L_Hand_Jnt_scaleConstraint1" -parent "L_Hand_Jnt";
@@ -52193,6 +52208,8 @@ createNode parentConstraint -name "R_FK_Ft_02_Jnt_parentConstraint1" -parent "|M
 	setAttr ".enableRestPosition" yes;
 	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 4.4408920985006262e-16 
 		-6.6613381477509392e-16 ;
+	setAttr ".lastTargetRotate" -type "double3" 0.038980024398335165 -0.20495262596789207 
+		13.631915428137955 ;
 	setAttr ".restTranslate" -type "double3" -0.3281472668099501 1.7261319908061012 
 		0.078274696530403309 ;
 	setAttr -keyable on ".R_RK_Ft_02_JntW0";
@@ -52308,8 +52325,8 @@ createNode parentConstraint -name "R_IK_Ft_01_Jnt_parentConstraint1" -parent "R_
 		0.0016970978411052773 -0.034742691947978521 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 5.9635400277440943e-15 3.8961794847928081e-14 
 		-1.2722218725854067e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" 9.5416640443905314e-15 -5.0888874903416268e-14 
-		4.1347210859025715e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 5.4166477045776973e-15 -5.0998051226563169e-14 
+		2.1243988457186753 ;
 	setAttr ".restTranslate" -type "double3" -1.95837 1.6040500000000011 2.5957699999999995 ;
 	setAttr ".restRotate" -type "double3" 6.361109362927032e-15 -3.1805546814635168e-14 
 		6.361109362927032e-15 ;
@@ -52395,8 +52412,8 @@ createNode parentConstraint -name "R__FK_Inr_Toe_Jnt_parentConstraint1" -parent 
 		4.4408920985006262e-16 0 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -90.000000000002075 75.657030080681849 
 		94.642754797993661 ;
-	setAttr ".lastTargetRotate" -type "double3" -5.4069429584879776e-14 -5.565970692561148e-15 
-		1.2722218725854067e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 0.037676339331887271 -0.071498613388302337 
+		1.3645587679470719 ;
 	setAttr ".restTranslate" -type "double3" 0.064956392544308628 0.67765540149552583 
 		0.28170443630792996 ;
 	setAttr ".restRotate" -type "double3" -5.4069429584879776e-14 -5.565970692561148e-15 
@@ -52451,8 +52468,8 @@ createNode parentConstraint -name "R_FK_Outr_Toe_Jnt_parentConstraint1" -parent 
 		2.2204460492503131e-16 0 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -90.000000000000256 75.702160283137971 
 		90.000000000000057 ;
-	setAttr ".lastTargetRotate" -type "double3" -7.5140604349575557e-14 -5.9635400277440801e-15 
-		1.9083328088781101e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 0.011559378091247572 0.036067863318181334 
+		1.3664521717036884 ;
 	setAttr ".restTranslate" -type "double3" 0.079433494090400458 0.71605791096467586 
 		-0.50446506093633325 ;
 	setAttr ".restRotate" -type "double3" -3.8365440845153665e-14 -3.9756933518293738e-16 
@@ -52519,6 +52536,8 @@ createNode parentConstraint -name "R_RK_Ft_01_Jnt_parentConstraint1" -parent "R_
 		1.3322676295501878e-15 -6.6613381477509392e-16 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 1.3517357396219947e-14 -1.2523434058262597e-14 
 		-3.1805546814635168e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 0.011363915856926898 -0.059769149536897562 
+		2.121682561695458 ;
 	setAttr ".restTranslate" -type "double3" -1.9235800000000016 1.6040499999999955 
 		2.5957699999999981 ;
 	setAttr ".restRotate" -type "double3" -3.1805546814635168e-15 -8.8278125961003172e-32 
@@ -52657,8 +52676,8 @@ createNode parentConstraint -name "L_IK_Ft_01_Jnt_parentConstraint1" -parent "L_
 		1.5543122344752192e-15 -4.4408920985006262e-16 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 6.4788664681229937 -1.5256777022886416 
 		0.092765731974575869 ;
-	setAttr ".lastTargetRotate" -type "double3" 6.4788664681229928 -1.5256777022886208 
-		0.092765731974526061 ;
+	setAttr ".lastTargetRotate" -type "double3" 6.478866468123007 -1.5256777022886225 
+		53.801326475547256 ;
 	setAttr ".restTranslate" -type "double3" 1.9235794807805016 1.6040501420115125 2.5957711261446543 ;
 	setAttr ".restRotate" -type "double3" 6.4788664681229999 -1.5256777022886521 0.092765731974565668 ;
 	setAttr -keyable on ".L_Leg_IK_CtrlW0";
@@ -52743,8 +52762,8 @@ createNode parentConstraint -name "L_FK_Inr_Toe_Jnt_parentConstraint1" -parent "
 		4.1295964536836038e-07 -2.4327722814021513e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 89.999999999999119 -75.657030080682262 
 		-94.642754797993817 ;
-	setAttr ".lastTargetRotate" -type "double3" -6.6791648310733022e-14 -4.2937488199758718e-14 
-		-2.1691382927581178e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" 0.13770433987398381 -1.4139676202604505 
+		17.561665824350065 ;
 	setAttr ".restTranslate" -type "double3" -0.064957536120376247 -0.67765676876787939 
 		-0.28170173765411755 ;
 	setAttr ".restRotate" -type "double3" 2.7034714792439888e-14 1.8288189418415208e-14 
@@ -52799,8 +52818,8 @@ createNode parentConstraint -name "L_FK_Outr_Toe_Jnt_parentConstraint1" -parent 
 		-2.4327722814021513e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 89.999999999999901 -75.702160283138397 
 		-89.999999999999957 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.0535587382343598e-14 -2.2999386040333077e-13 
-		-2.1436938553064112e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.0788227732002448e-13 -1.9248378722208054e-13 
+		17.62027885045444 ;
 	setAttr ".restTranslate" -type "double3" -0.07943457114384822 -0.71605910177660181 
 		0.50446414712295051 ;
 	setAttr ".restRotate" -type "double3" 4.1148426191434251e-14 -5.1684013573782175e-15 
@@ -52850,8 +52869,8 @@ createNode parentConstraint -name "L_RK_Ft_02_Jnt_parentConstraint1" -parent "L_
 		0.01126544730883472 0.0015603290081023236 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" -0.034969569266350087 -0.088472647344831942 
 		1.8224567874100424 ;
-	setAttr ".lastTargetRotate" -type "double3" -0.034969569266358094 -0.088472647344786728 
-		1.8224567874100308 ;
+	setAttr ".lastTargetRotate" -type "double3" -0.034970105149127996 -0.088472630293827612 
+		1.8224567882375304 ;
 	setAttr ".restTranslate" -type "double3" 0.38299884858058686 -1.714861890778947 
 		-0.07671410171392079 ;
 	setAttr ".restRotate" -type "double3" -0.034969569266351301 -0.088472647344831831 
@@ -52902,8 +52921,8 @@ createNode parentConstraint -name "L_RK_Ft_01_Jnt_parentConstraint1" -parent "L_
 		2.6645352591003757e-15 -1.9984014443252818e-15 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 0 1.987846675914698e-16 
 		-3.1805546814635168e-15 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.272221872585407e-14 4.7708320221952742e-14 
-		-1.5902773407317584e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -5.3615334020077401e-07 -1.4222196574160892e-06 
+		53.708589859009543 ;
 	setAttr ".restTranslate" -type "double3" 1.9235794807804996 1.6040501420115154 2.5957711261446534 ;
 	setAttr ".restRotate" -type "double3" -9.5416640443905503e-15 6.3611093629270335e-15 
 		-5.2966875576601903e-31 ;
@@ -52923,7 +52942,7 @@ createNode transform -name "COG_Ctrl" -parent "COG_Ctrl_Grp";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr -keyable on ".globalScale";
-	setAttr -keyable on ".IKFK" 1;
+	setAttr -keyable on ".IKFK";
 createNode nurbsCurve -name "COG_CtrlShape" -parent "COG_Ctrl";
 	rename -uuid "6EC54A60-4298-DF05-BA16-7BA2675D39BB";
 	setAttr -keyable off ".visibility";
@@ -53503,7 +53522,6 @@ createNode transform -name "R_Arm_IK_Shldr_Ctrl_Grp" -parent "Spine_03_Ctrl";
 	rename -uuid "67941CBA-43C8-AE7D-7E47-C884A7AC13BA";
 createNode transform -name "R_Arm_IK_Shldr_Ctrl" -parent "R_Arm_IK_Shldr_Ctrl_Grp";
 	rename -uuid "EF436DB6-417F-CCE1-3516-77BCD3B19CEE";
-	setAttr ".scale" -type "double3" 1.0000000000000002 1 1.0000000000000002 ;
 createNode nurbsCurve -name "R_Arm_IK_Shldr_CtrlShape" -parent "R_Arm_IK_Shldr_Ctrl";
 	rename -uuid "7A77D2F8-40E8-B356-D12F-D48BA9975408";
 	setAttr -keyable off ".visibility";
@@ -53676,8 +53694,8 @@ createNode transform -name "L_Arm_IK_Shldr_Ctrl" -parent "L_Arm_IK_Shldr_Ctrl_Gr
 	rename -uuid "17F1BDB8-4E8A-058A-F4A5-C9A05BA509C4";
 	setAttr ".rotatePivot" -type "double3" -2.2204460492503131e-16 3.5527136788005009e-15 
 		8.8817841970012523e-16 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 1.2325951644078309e-31 6.8254957229083639e-31 
-		6.4711246131411125e-32 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 1.3805065841367707e-29 -1.400228106767296e-29 
+		0 ;
 	setAttr ".scalePivot" -type "double3" -2.2204460492503131e-16 3.5527136788005009e-15 
 		8.8817841970012523e-16 ;
 createNode nurbsCurve -name "L_Arm_IK_Shldr_CtrlShape" -parent "L_Arm_IK_Shldr_Ctrl";
@@ -53711,7 +53729,7 @@ createNode transform -name "L_Arm_IK_Jnt_Ctrl" -parent "|Monster_Node|Control_Gr
 	rename -uuid "79293231-4AB9-C509-3C39-FDBF970BE023";
 	addAttr -cachedInternally true -keyable true -shortName "FollowTarget" -longName "FollowTarget" 
 		-minValue 0 -maxValue 3 -enumName "None:COG:Transform:World" -attributeType "enum";
-	setAttr ".scale" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
+	setAttr -keyable on ".FollowTarget";
 createNode nurbsCurve -name "L_Arm_IK_Jnt_CtrlShape" -parent "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl";
 	rename -uuid "E9A2C930-440E-B94E-3CA7-EF96E40D1219";
 	setAttr -keyable off ".visibility";
@@ -53812,6 +53830,8 @@ createNode transform -name "L_Hand_Ctrl" -parent "L_Hand_Ctrl_Grp";
 	rename -uuid "7DE671B0-461B-B40F-E5CD-B8B3B66092F2";
 	setAttr ".rotatePivot" -type "double3" 5.3290705182007514e-15 3.907985046680551e-14 
 		1.7763568394002505e-15 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -9.4663308626521417e-30 -9.959368928415274e-30 
+		-1.2621774483536189e-29 ;
 	setAttr ".scalePivot" -type "double3" 5.3290705182007514e-15 3.907985046680551e-14 
 		1.7763568394002505e-15 ;
 createNode nurbsCurve -name "L_Hand_CtrlShape" -parent "L_Hand_Ctrl";
@@ -53872,7 +53892,6 @@ createNode transform -name "L_Pnky_Fngr_02_Ctrl_Grp" -parent "L_Pnky_Fngr_01_Ctr
 	setAttr ".scale" -type "double3" 0.99999999999999989 1.0000000000000002 1 ;
 createNode transform -name "L_Pnky_Fngr_02_Ctrl" -parent "L_Pnky_Fngr_02_Ctrl_Grp";
 	rename -uuid "6160496C-4F4C-730B-965D-C69719B6034E";
-	setAttr ".scale" -type "double3" 1.0000000000000002 0.99999999999999989 1 ;
 createNode nurbsCurve -name "L_Pnky_Fngr_02_CtrlShape" -parent "L_Pnky_Fngr_02_Ctrl";
 	rename -uuid "69AE5F35-49D1-AB3A-CFD1-ACBEC350AB36";
 	setAttr -keyable off ".visibility";
@@ -53901,7 +53920,6 @@ createNode transform -name "L_Index_Fngr_01_Ctrl_Grp" -parent "L_Hand_Ctrl";
 	setAttr ".scale" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
 createNode transform -name "L_Index_Fngr_01_Ctrl" -parent "L_Index_Fngr_01_Ctrl_Grp";
 	rename -uuid "B8D122DC-4BE7-80FE-25E9-CFA45B53D784";
-	setAttr ".scale" -type "double3" 1 1 0.99999999999999989 ;
 createNode nurbsCurve -name "L_Index_Fngr_01_CtrlShape" -parent "L_Index_Fngr_01_Ctrl";
 	rename -uuid "625B5243-456A-3BCB-C1D8-08AD1DFA5D8F";
 	setAttr -keyable off ".visibility";
@@ -53931,7 +53949,6 @@ createNode transform -name "L_Index_Fngr_02_Ctrl_Grp" -parent "L_Index_Fngr_01_C
 	setAttr ".scale" -type "double3" 1 1.0000000000000002 1 ;
 createNode transform -name "L_Index_Fngr_02_Ctrl" -parent "L_Index_Fngr_02_Ctrl_Grp";
 	rename -uuid "88A8976E-4F8E-88D6-82CE-FF925D84E99D";
-	setAttr ".scale" -type "double3" 0.99999999999999989 1 1 ;
 createNode nurbsCurve -name "L_Index_Fngr_02_CtrlShape" -parent "L_Index_Fngr_02_Ctrl";
 	rename -uuid "436E61FE-42A9-E1FA-F856-B4B57776739D";
 	setAttr -keyable off ".visibility";
@@ -53960,7 +53977,6 @@ createNode transform -name "L_Pntr_Fngr_01_Ctrl_Grp" -parent "L_Hand_Ctrl";
 	setAttr ".scale" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
 createNode transform -name "L_Pntr_Fngr_01_Ctrl" -parent "L_Pntr_Fngr_01_Ctrl_Grp";
 	rename -uuid "1701E447-41C6-E97C-7773-DCA79149CE59";
-	setAttr ".scale" -type "double3" 1.0000000000000004 1.0000000000000004 1.0000000000000004 ;
 createNode nurbsCurve -name "L_Pntr_Fngr_01_CtrlShape" -parent "L_Pntr_Fngr_01_Ctrl";
 	rename -uuid "40B7ED5B-48CE-2C3A-8DEF-0CA8AADE6C2F";
 	setAttr -keyable off ".visibility";
@@ -53990,7 +54006,6 @@ createNode transform -name "L_Pntr_Fngr_02_Ctrl_Grp" -parent "L_Pntr_Fngr_01_Ctr
 	setAttr ".scale" -type "double3" 0.99999999999999944 0.99999999999999967 0.99999999999999933 ;
 createNode transform -name "L_Pntr_Fngr_02_Ctrl" -parent "L_Pntr_Fngr_02_Ctrl_Grp";
 	rename -uuid "055DC804-4FD8-1AC3-4A9B-D5B6C8CFE7D1";
-	setAttr ".scale" -type "double3" 1 1 0.99999999999999989 ;
 createNode nurbsCurve -name "L_Pntr_Fngr_02_CtrlShape" -parent "L_Pntr_Fngr_02_Ctrl";
 	rename -uuid "1F6A37B4-483E-B8CF-800B-7B969BDC3FB3";
 	setAttr -keyable off ".visibility";
@@ -54019,7 +54034,6 @@ createNode transform -name "L_Mddle_Fngr_01_Ctrl_Grp" -parent "L_Hand_Ctrl";
 	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999978 0.99999999999999989 ;
 createNode transform -name "L_Mddle_Fngr_01_Ctrl" -parent "L_Mddle_Fngr_01_Ctrl_Grp";
 	rename -uuid "C3382BEC-4D2F-76A0-43C1-D2AB9871DC94";
-	setAttr ".scale" -type "double3" 0.99999999999999967 1.0000000000000004 1 ;
 createNode nurbsCurve -name "L_Mddle_Fngr_01_CtrlShape" -parent "L_Mddle_Fngr_01_Ctrl";
 	rename -uuid "E0AD07E7-4C54-383D-1931-ECA8F03D815F";
 	setAttr -keyable off ".visibility";
@@ -54078,7 +54092,6 @@ createNode transform -name "L_Thumb_Fnger_01_Ctrl_Grp" -parent "L_Hand_Ctrl";
 	setAttr ".scale" -type "double3" 1.0000000000000007 0.99999999999999933 0.99999999999999967 ;
 createNode transform -name "L_Thumb_Fnger_01_Ctrl" -parent "L_Thumb_Fnger_01_Ctrl_Grp";
 	rename -uuid "1C36F911-4907-4809-A07F-4392A51CFC4C";
-	setAttr ".scale" -type "double3" 0.99999999999999989 1.0000000000000002 1.0000000000000002 ;
 createNode nurbsCurve -name "L_Thumb_Fnger_01_CtrlShape" -parent "L_Thumb_Fnger_01_Ctrl";
 	rename -uuid "BE7D5847-4656-9CC0-1E1D-02B439C581C3";
 	setAttr -keyable off ".visibility";
@@ -54107,7 +54120,6 @@ createNode transform -name "L_Thumb_02_Fnger_Ctrl_Grp" -parent "L_Thumb_Fnger_01
 	setAttr ".scale" -type "double3" 0.99999999999999967 1.0000000000000004 0.99999999999999989 ;
 createNode transform -name "L_Thumb_02_Fnger_Ctrl" -parent "L_Thumb_02_Fnger_Ctrl_Grp";
 	rename -uuid "8AD807AB-4D7D-0559-26A9-268C80418D25";
-	setAttr ".scale" -type "double3" 0.99999999999999978 1.0000000000000002 0.99999999999999978 ;
 createNode nurbsCurve -name "L_Thumb_02_Fnger_CtrlShape" -parent "L_Thumb_02_Fnger_Ctrl";
 	rename -uuid "C504783C-4236-6EC8-84CB-68B5C5FE08C0";
 	setAttr -keyable off ".visibility";
@@ -54149,8 +54161,8 @@ createNode parentConstraint -name "L_Hand_Ctrl_Grp_parentConstraint1" -parent "L
 		2.2978861284883578e-05 2.7998800566919613e-06 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.5097695503572129e-13 -1.8288189418415375e-14 
 		5.7257536486351431e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.5075273046745559e-13 1.8062215258804601e-14 
-		-90.000000000000071 ;
+	setAttr ".lastTargetRotate" -type "double3" 72.219630920180279 -65.23921688537169 
+		-208.44946534619987 ;
 	setAttr ".restTranslate" -type "double3" 12.885500000000013 22.041100000000025 4.1035700000000048 ;
 	setAttr ".restRotate" -type "double3" -1.5107634736951704e-13 1.8319249522726313e-14 
 		-5.7113319807374206e-14 ;
@@ -54180,7 +54192,8 @@ createNode transform -name "R_Hand_Ctrl_Grp" -parent "Spine_02_Ctrl";
 createNode transform -name "R_Hand_Ctrl" -parent "R_Hand_Ctrl_Grp";
 	rename -uuid "03688056-4B8D-365C-55EC-208B0D763B00";
 	setAttr ".rotatePivot" -type "double3" 0 7.0997481469891062e-30 3.4694469519545017e-18 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 0 5.4365238722876438e-14 -8.9511731360403404e-16 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -7.0064923216240854e-46 5.4365238722876438e-14 
+		-8.9511731360403404e-16 ;
 	setAttr ".scalePivotTranslate" -type "double3" 0 7.0997481469891062e-30 3.4694469519545017e-18 ;
 createNode nurbsCurve -name "R_Hand_CtrlShape" -parent "R_Hand_Ctrl";
 	rename -uuid "6C100916-4F2F-3FDF-A179-78A937D20D92";
@@ -54223,8 +54236,8 @@ createNode parentConstraint -name "R_Hand_Ctrl_parentConstraint1" -parent "R_Han
 		5.6843418860808027e-14 1.7798262863522049e-15 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 8.7465253740246451e-15 -2.2263882770244633e-14 
 		7.1269381264131495e-14 ;
-	setAttr ".lastTargetRotate" -type "double3" 2.2363275104040353e-13 -6.7897388024211443e-15 
-		2.4475362197199585e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 53.995121323472901 -58.665906364856639 
+		-105.77507333709775 ;
 	setAttr ".restTranslate" -type "double3" -1.7763568394002505e-15 -4.7259811365275442e-14 
 		3.469446951954403e-18 ;
 	setAttr ".restRotate" -type "double3" -8.6968292071268154e-15 2.3295078233375356e-14 
@@ -54263,7 +54276,7 @@ createNode transform -name "R_Pnky_Fngr_01_Ctrl" -parent "R_Pnky_Fngr_01_Ctrl_Gr
 	rename -uuid "BFBA05B4-400F-364F-5BFE-49819D399DBF";
 	setAttr ".rotatePivot" -type "double3" 1.7763568394002505e-15 -3.5527136788005009e-15 
 		0 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -9.8607613152626476e-30 7.8886090522101181e-30 
+	setAttr ".rotatePivotTranslate" -type "double3" -9.7621537021100211e-30 7.6913938259048651e-30 
 		0 ;
 	setAttr ".scalePivot" -type "double3" 1.7763568394002505e-15 -3.5527136788005009e-15 
 		0 ;
@@ -54611,7 +54624,6 @@ createNode transform -name "L_Arm_IK_PV_Offset_Grp" -parent "L_Arm_IK_PV_Ctrl_Gr
 	rename -uuid "6359054E-4CC4-867B-4D31-5C8036829AE8";
 createNode transform -name "L_Arm_IK_PV_Ctrl" -parent "L_Arm_IK_PV_Offset_Grp";
 	rename -uuid "9DBFB119-4A2D-F73D-9269-B0BAFD97DE48";
-	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999967 0.99999999999999978 ;
 	setAttr ".rotatePivot" -type "double3" -2.2204460492503123e-16 3.552713678800499e-15 
 		8.8817841970012504e-16 ;
 	setAttr ".scalePivot" -type "double3" -2.2204460492503131e-16 3.5527136788005009e-15 
@@ -54892,8 +54904,6 @@ createNode transform -name "R_Leg_IK_01_Ctrl_Grp" -parent "Hip_Ctrl";
 	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999989 1 ;
 createNode transform -name "R_Leg_IK_01_Ctrl" -parent "R_Leg_IK_01_Ctrl_Grp";
 	rename -uuid "68980918-445E-8333-7FA8-699D44B54F9A";
-	setAttr ".translate" -type "double3" 0 0 -4.4408920985006262e-16 ;
-	setAttr ".scale" -type "double3" 1.0000000000000002 1.0000000000000002 1 ;
 createNode nurbsCurve -name "R_Leg_IK_01_CtrlShape" -parent "R_Leg_IK_01_Ctrl";
 	rename -uuid "07A1EBB1-4EA0-8EAD-57D4-62BAC2C06A15";
 	setAttr -keyable off ".visibility";
@@ -54913,7 +54923,6 @@ createNode transform -name "R_Leg_IK_02_Ctrl" -parent "R_Leg_IK_02_Ctrl_Grp";
 	rename -uuid "21094FF7-41E3-5823-6E5C-E5A31C17BC9D";
 	addAttr -cachedInternally true -keyable true -shortName "FollowTarget" -longName "FollowTarget" 
 		-minValue 0 -maxValue 3 -enumName "None:COG:Transform:World" -attributeType "enum";
-	setAttr ".scale" -type "double3" 1.0000000000000002 0.99999999999999978 0.99999999999999978 ;
 	setAttr -keyable on ".FollowTarget";
 createNode nurbsCurve -name "R_Leg_IK_02_CtrlShape" -parent "R_Leg_IK_02_Ctrl";
 	rename -uuid "6890640F-42A7-D7F9-6FAB-8D9BC83D1598";
@@ -54970,8 +54979,9 @@ createNode transform -name "R_Ft_Toe_Ctrl_Grp" -parent "R_Leg_IK_02_Ctrl";
 	setAttr ".scale" -type "double3" 1 1 0.99999999999999989 ;
 createNode transform -name "R_Ft_Toe_Ctrl" -parent "R_Ft_Toe_Ctrl_Grp";
 	rename -uuid "542E8FC6-426E-953B-2A1D-D7AA2BA8A7D4";
-	setAttr ".scale" -type "double3" 1 1.0000000000000002 1 ;
 	setAttr ".rotatePivot" -type "double3" 0 -2.2204460492503136e-16 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 8.6281661508548166e-32 4.5991207071967192e-31 
+		0 ;
 	setAttr ".scalePivot" -type "double3" 0 -2.2204460492503131e-16 0 ;
 	setAttr ".scalePivotTranslate" -type "double3" 0 -4.930380657631326e-32 0 ;
 createNode nurbsCurve -name "R_Ft_Toe_CtrlShape" -parent "R_Ft_Toe_Ctrl";
@@ -55097,9 +55107,6 @@ createNode transform -name "L_Leg_IK_01_Ctrl_Grp" -parent "Hip_Ctrl";
 	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999989 1 ;
 createNode transform -name "L_Leg_IK_01_Ctrl" -parent "L_Leg_IK_01_Ctrl_Grp";
 	rename -uuid "11E07DB3-47B4-E4DE-1B6A-42BB5C8FA8A3";
-	setAttr ".translate" -type "double3" 1.7763568394002505e-15 -8.8817841970012523e-16 
-		4.4408920985006262e-16 ;
-	setAttr ".scale" -type "double3" 1.0000000000000002 1.0000000000000002 1 ;
 createNode nurbsCurve -name "L_Leg_IK_01_CtrlShape" -parent "L_Leg_IK_01_Ctrl";
 	rename -uuid "821C818C-4E89-D187-3AEF-D9BB76AAD3B6";
 	setAttr -keyable off ".visibility";
@@ -55132,7 +55139,6 @@ createNode transform -name "L_Leg_IK_02_Ctrl" -parent "L_Leg_IK_02_Ctrl_Grp";
 	rename -uuid "21058C09-4D24-D6BE-FBE2-A69EA91A9F3B";
 	addAttr -cachedInternally true -keyable true -shortName "FollowTarget" -longName "FollowTarget" 
 		-minValue 0 -maxValue 3 -enumName "None:COG:Transform:World" -attributeType "enum";
-	setAttr ".scale" -type "double3" 0.99999999999999989 1 1 ;
 	setAttr -keyable on ".FollowTarget";
 createNode nurbsCurve -name "L_Leg_IK_02_CtrlShape" -parent "L_Leg_IK_02_Ctrl";
 	rename -uuid "914A8538-4B3C-7D5B-AF5C-14B37550EEDB";
@@ -55192,6 +55198,7 @@ createNode transform -name "L_Ft_Toe_Ctrl" -parent "L_Ft_Toe_Ctrl_Grp";
 	rename -uuid "9A961EC0-4933-C8F8-748E-7EB724650E44";
 	setAttr ".rotatePivot" -type "double3" -2.2204460492503131e-16 7.7715611723760958e-16 
 		0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 0 -2.0954117794933126e-30 -4.9303806576313238e-32 ;
 	setAttr ".scalePivot" -type "double3" -2.2204460492503131e-16 7.7715611723760958e-16 
 		0 ;
 createNode nurbsCurve -name "L_Ft_Toe_CtrlShape" -parent "L_Ft_Toe_Ctrl";
@@ -55276,7 +55283,6 @@ createNode transform -name "L_Leg_IK_PV_Offset_Grp" -parent "L_Leg_IK_PV_Ctrl_Gr
 	rename -uuid "7154E2C7-41F9-C5E8-5BBB-FFB69035A176";
 createNode transform -name "L_Leg_IK_PV_Ctrl" -parent "L_Leg_IK_PV_Offset_Grp";
 	rename -uuid "612AAEB3-4C62-3CA7-E5F4-9CB5F321017F";
-	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999967 0.99999999999999978 ;
 	setAttr ".rotatePivot" -type "double3" -2.2204460492503123e-16 3.552713678800499e-15 
 		8.8817841970012504e-16 ;
 	setAttr ".scalePivot" -type "double3" -2.2204460492503131e-16 3.5527136788005009e-15 
@@ -55365,8 +55371,8 @@ createNode parentConstraint -name "R_Outr_Toe_Ctrl_parentConstraint1" -parent "R
 		0.67595830365442389 0.3164471282559056 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 3.8893356989723875e-13 -87.01167949782095 
 		-110.65560097873939 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.8129161684342051e-13 -1.9083328088781104e-14 
-		3.0191119078663098e-29 ;
+	setAttr ".lastTargetRotate" -type "double3" 0.75504150712439477 -0.0002597056399087673 
+		0.039414577917592473 ;
 	setAttr ".restTranslate" -type "double3" -1.5543122344752194e-15 1.5543122344752192e-15 
 		-8.8817841970012523e-16 ;
 	setAttr ".restRotate" -type "double3" -9.0645808421710267e-14 -9.5416640443905535e-15 
@@ -55453,8 +55459,8 @@ createNode parentConstraint -name "R_Innr_Toe_Ctrl_parentConstraint1" -parent "R
 		0.67595830365442389 0.3164471282559056 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 3.8893356989723875e-13 -87.01167949782095 
 		-110.65560097873939 ;
-	setAttr ".lastTargetRotate" -type "double3" -1.8129161684342051e-13 -1.9083328088781104e-14 
-		3.0191119078663098e-29 ;
+	setAttr ".lastTargetRotate" -type "double3" 0.75504150712439477 -0.0002597056399087673 
+		0.039414577917592473 ;
 	setAttr ".restTranslate" -type "double3" -1.5543122344752194e-15 1.5543122344752192e-15 
 		-8.8817841970012523e-16 ;
 	setAttr ".restRotate" -type "double3" -9.0645808421710267e-14 -9.5416640443905535e-15 
@@ -55543,7 +55549,8 @@ createNode parentConstraint -name "L_Outr_Toe_Ctrl_parentConstraint1" -parent "L
 	setAttr ".target[1].targetOffsetTranslate" -type "double3" -0.2818599999999869 -0.24688330461495156 
 		0.63485284289995292 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 1.8249109156295693 0 0 ;
-	setAttr ".lastTargetRotate" -type "double3" 3.975693351829396e-16 0 0 ;
+	setAttr ".lastTargetRotate" -type "double3" 36.001151165483378 1.1401335780335504 
+		-2.4463174634963831 ;
 	setAttr ".restTranslate" -type "double3" -2.2204460492503131e-16 -6.6613381477509432e-16 
 		-3.5527136788005009e-15 ;
 	setAttr -keyable on ".L_Leg_03_FK_CtrlW0";
@@ -55630,7 +55637,8 @@ createNode parentConstraint -name "L_Innr_Toe_Ctrl_parentConstraint1" -parent "L
 	setAttr ".target[1].targetOffsetTranslate" -type "double3" -0.2818599999999869 -0.24688330461495156 
 		0.63485284289995292 ;
 	setAttr ".target[1].targetOffsetRotate" -type "double3" 1.8249109156295693 0 0 ;
-	setAttr ".lastTargetRotate" -type "double3" 3.975693351829396e-16 0 0 ;
+	setAttr ".lastTargetRotate" -type "double3" 36.001151165483378 1.1401335780335504 
+		-2.4463174634963831 ;
 	setAttr ".restTranslate" -type "double3" -2.2204460492503131e-16 -6.6613381477509432e-16 
 		-3.5527136788005009e-15 ;
 	setAttr -keyable on ".L_Leg_03_FK_CtrlW0";
@@ -55676,12 +55684,12 @@ createNode camera -name "bottomShape" -parent "bottom";
 	setAttr ".orthographic" yes;
 	setAttr ".aiTranslator" -type "string" "orthographic";
 createNode lightLinker -shared -name "lightLinker1";
-	rename -uuid "CC9175BB-4DE8-351F-D431-DE8E518BD49B";
+	rename -uuid "1DE97126-4880-3E8D-2F60-AEBA23479D05";
 	setAttr -size 143 ".link";
 	setAttr -size 143 ".shadowLink";
 createNode displayLayerManager -name "layerManager";
-	rename -uuid "5FD869CB-4B50-E5A5-5AD9-62BF4DD652ED";
-	setAttr ".currentDisplayLayer" 3;
+	rename -uuid "EFF56116-4BAD-1203-7764-04B5A6A225B3";
+	setAttr ".currentDisplayLayer" 1;
 	setAttr -size 9 ".displayLayerId[1:8]"  1 2 3 4 5 
 		6 7 8;
 	setAttr -size 7 ".displayLayerId";
@@ -55689,14 +55697,14 @@ createNode displayLayer -name "defaultLayer";
 	rename -uuid "F3570316-4040-F342-C509-CF848A39CBF6";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 createNode renderLayerManager -name "renderLayerManager";
-	rename -uuid "13E60479-4FD0-3D46-5D77-28A03C2CA7B8";
+	rename -uuid "89381132-4CE2-DF7A-91F5-8C8948D7AEE3";
 createNode renderLayer -name "defaultRenderLayer";
 	rename -uuid "51EBACBA-4F6D-7C40-1103-65B958BD4B4B";
 	setAttr ".global" yes;
 createNode shapeEditorManager -name "shapeEditorManager";
-	rename -uuid "5AE42D35-4E0D-9E0F-5C45-4696EE431649";
+	rename -uuid "942554B3-4A6A-E336-0281-A181D095916A";
 createNode poseInterpolatorManager -name "poseInterpolatorManager";
-	rename -uuid "DA789B20-4AFF-AE79-C562-3E9A4DF027A6";
+	rename -uuid "2A33CEB8-41E7-2DBB-94EC-3C8A8DA99427";
 createNode script -name "uiConfigurationScriptNode";
 	rename -uuid "B1FAE093-427F-3D98-CF1F-F88B6B636D3B";
 	setAttr ".before" -type "string" (
@@ -55713,12 +55721,12 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1553\n            -height 766\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1553\n            -height 700\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
-		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
-		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
+		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
+		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
 		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 1\n"
@@ -55741,13 +55749,13 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
 		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1553\\n    -height 766\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1553\\n    -height 766\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1553\\n    -height 700\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1553\\n    -height 700\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
 	rename -uuid "1B4D6C46-415D-95DA-B9F6-679756A3EF06";
-	setAttr ".before" -type "string" "playbackOptions -min 0 -max 24 -ast 0 -aet 24 ";
+	setAttr ".before" -type "string" "playbackOptions -min 0 -max 47 -ast 0 -aet 50 ";
 	setAttr ".scriptType" 6;
 createNode aiOptions -shared -name "defaultArnoldRenderOptions";
 	rename -uuid "E180E480-4162-0A9D-25C1-8E9D64C11B6C";
@@ -56832,7 +56840,6 @@ createNode materialInfo -name "materialInfo191";
 createNode bump2d -name "bump2d1";
 	rename -uuid "5868C6D8-4F79-E990-FC1E-ABBA2DE924FD";
 	setAttr ".bumpInterp" 1;
-	setAttr ".vertexCameraOne" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vertexCameraTwo" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode displacementShader -name "displacementShader1";
 	rename -uuid "06EF90C4-4A99-EC74-2159-E09DDB1EB7D2";
@@ -83838,13 +83845,3163 @@ createNode nodeGraphEditorInfo -name "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tabGraphInfo[0].nodeInfo[46].positionX" -1490.43408203125;
 	setAttr ".tabGraphInfo[0].nodeInfo[46].positionY" 136.24290466308594;
 	setAttr ".tabGraphInfo[0].nodeInfo[46].nodeVisualState" 18306;
+createNode animCurveTA -name "R_Arm_IK_Jnt_Ctrl_rotateX";
+	rename -uuid "379CEB6C-4E85-E483-FF24-58BBFB821294";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -84.824363318157836;
+createNode animCurveTA -name "R_Arm_IK_Jnt_Ctrl_rotateY";
+	rename -uuid "58C4637F-4825-9BE9-26EA-C28ACEA2EC4C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -77.306483539933865;
+createNode animCurveTA -name "R_Arm_IK_Jnt_Ctrl_rotateZ";
+	rename -uuid "1AD85EC6-4775-7103-7DFC-16A84D02A2C3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 55.159280748224468;
+createNode animCurveTU -name "R_Arm_IK_Jnt_Ctrl_visibility";
+	rename -uuid "D4DFC6EC-4155-DF86-E15A-90AE8BEBA89B";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTL -name "R_Arm_IK_Jnt_Ctrl_translateX";
+	rename -uuid "3B5B24B0-4A5E-A15E-5EA4-C6880D6D5A60";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 5.7972598677326017;
+createNode animCurveTL -name "R_Arm_IK_Jnt_Ctrl_translateY";
+	rename -uuid "11BB4EEA-44C8-2A0A-DD4F-6CBE204B251D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -0.30711654864110494;
+createNode animCurveTL -name "R_Arm_IK_Jnt_Ctrl_translateZ";
+	rename -uuid "41055A73-4844-5E5A-D734-818A81441B0A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -2.4573894296323524;
+createNode animCurveTU -name "R_Arm_IK_Jnt_Ctrl_scaleX";
+	rename -uuid "DD955CA6-4E50-B746-F120-F784731C7E7D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Arm_IK_Jnt_Ctrl_scaleY";
+	rename -uuid "6EEF232E-402B-62C5-3E02-91881A3A0E1E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Arm_IK_Jnt_Ctrl_scaleZ";
+	rename -uuid "A6A149A4-4DF9-3ED0-1129-EABFB636B167";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Arm_IK_Jnt_Ctrl_FollowTarget";
+	rename -uuid "8C9B3F14-42C3-EA0F-6145-41A8F87CA0DA";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Leg_IK_02_Ctrl_rotateX";
+	rename -uuid "8A6136A9-4B63-FCFC-1431-679EA20F23FD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 12 0 24 0 36 0 45 0 48 0;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 0 0 0 0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0 0 0 0 0;
+createNode animCurveTA -name "L_Leg_IK_02_Ctrl_rotateY";
+	rename -uuid "2987AD21-48C3-FDBA-9C28-2184CD87AF81";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 12 0 24 0 36 0 45 0 48 0;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 0 0 0 0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0 0 0 0 0;
+createNode animCurveTA -name "L_Leg_IK_02_Ctrl_rotateZ";
+	rename -uuid "728B1E16-42A6-1F41-3C01-D3A04C5D4466";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 14.385972800472524 12 -7.1004793372435948
+		 24 32.064096315150984 36 88.294250566550687 45 68.286199798753458 48 14.385972800472524;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 0.51488516925403482 1 0.36141355535686853 
+		1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 0.85725915712942025 0 -0.932405620963488 
+		0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 1 0.51488516925403482 1 0.36141355535686848 
+		1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0 0.85725915712942025 0 -0.932405620963488 
+		0;
+createNode animCurveTU -name "L_Leg_IK_02_Ctrl_visibility";
+	rename -uuid "214F505D-4268-6E11-1693-E6AF4F35726F";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1 12 1 24 1 36 1 45 1 48 1;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 9 9 9 9 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 0 0 0 0;
+createNode animCurveTL -name "L_Leg_IK_02_Ctrl_translateX";
+	rename -uuid "AAE43A31-40B3-37D1-F3D7-EC9CA627DE38";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 -8.2043954058820638 12 -1.7318237812162722
+		 24 -2.6165023796195368 36 -4.984295912174173 45 -8.4535054577782098 48 -8.2043954058820638;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 0.2938816328175875 0.14824924108555471 
+		1 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 -0.95584182053960609 -0.98895003034408024 
+		0 0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 1 0.2938816328175875 0.14824924108555471 
+		1 1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0 -0.95584182053960609 -0.98895003034408024 
+		0 0;
+createNode animCurveTL -name "L_Leg_IK_02_Ctrl_translateY";
+	rename -uuid "89A38C64-4919-158B-65C5-F6A3E7F026A5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 -8.3919112677272256 12 1.0496584637573945
+		 24 7.594054652659004 36 4.2687224969762108 45 -4.0698628704108364 48 -8.3919112677272256;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 0.062432834692212835 1 0.07480747732866766 
+		0.039461732368750224 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0.99804916770282148 0 -0.99719799505199602 
+		-0.99922108248297947 0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 0.062432834692212835 1 0.074807477328667674 
+		0.039461732368750231 1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0.99804916770282148 0 -0.99719799505199624 
+		-0.99922108248297947 0;
+createNode animCurveTL -name "L_Leg_IK_02_Ctrl_translateZ";
+	rename -uuid "91C2CCD9-4EA1-1C4D-FBD6-8E9BA1F11679";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 -0.56100665172635666 12 0.019382245694651749
+		 24 0.3227693085932764 36 0.11673245830153305 45 -0.35447216577164092 48 -0.56100665172635666;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 0.74930862438740931 1 0.79080152042983054 
+		0.59367088151805247 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0.66222094909376594 0 -0.61207267157247625 
+		-0.80470794977903526 0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 0.74930862438740931 1 0.79080152042983054 
+		0.59367088151805247 1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0.66222094909376594 0 -0.61207267157247625 
+		-0.80470794977903526 0;
+createNode animCurveTU -name "L_Leg_IK_02_Ctrl_scaleX";
+	rename -uuid "B33BDECD-4B51-344D-4C83-728594351149";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0.99999999999999989 12 0.99999999999999989
+		 24 0.99999999999999989 36 0.99999999999999989 45 0.99999999999999989 48 0.99999999999999989;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 0 0 0 0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0 0 0 0 0;
+createNode animCurveTU -name "L_Leg_IK_02_Ctrl_scaleY";
+	rename -uuid "BE8B0D48-4992-7285-55EF-05BD7E70A3CB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1 12 1 24 1 36 1 45 1 48 1;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 0 0 0 0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0 0 0 0 0;
+createNode animCurveTU -name "L_Leg_IK_02_Ctrl_scaleZ";
+	rename -uuid "E093C976-48BA-7C62-5DBD-6BBD1E0CD7D5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1 12 1 24 1 36 1 45 1 48 1;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanOutType[0:5]"  1 18 18 18 18 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 0 0 0 0;
+	setAttr -size 6 ".keyTanOutX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanOutY[0:5]"  0 0 0 0 0 0;
+createNode animCurveTU -name "L_Leg_IK_02_Ctrl_FollowTarget";
+	rename -uuid "D668450A-4DDE-547F-759D-12941354E214";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 12 0 24 0 36 0 45 0 48 0;
+	setAttr -size 6 ".keyTanInType[0:5]"  1 9 9 9 9 1;
+	setAttr -size 6 ".keyTanInX[0:5]"  1 1 1 1 1 1;
+	setAttr -size 6 ".keyTanInY[0:5]"  0 0 0 0 0 0;
+createNode animCurveTA -name "L_Ft_Toe_Ctrl_rotateX";
+	rename -uuid "0B3DB12A-494D-8CE8-3286-E8B7C530EA3C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 -22.720470519163555 8 -13.620762153376958
+		 17 2.0153908420627316 23 -31.571590714880699 36 10.705783381479145 48 -22.720470519163555;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTA -name "L_Ft_Toe_Ctrl_rotateY";
+	rename -uuid "CFF0C09B-4C36-F409-E42A-2CAF99CA399B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 4 0 8 0 23 0 36 0 48 0;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTA -name "L_Ft_Toe_Ctrl_rotateZ";
+	rename -uuid "379E7CAA-43B2-277C-52A4-83B5B8D7AB7C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 4 0 8 0 23 0 36 0 48 0;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTU -name "L_Ft_Toe_Ctrl_visibility";
+	rename -uuid "012C0F38-4D7F-EB71-5EE1-36BAD4275C72";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1 4 1 8 1 23 1 36 1 48 1;
+	setAttr -size 6 ".keyTanInType[0:5]"  9 9 9 9 9 1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+createNode animCurveTL -name "L_Ft_Toe_Ctrl_translateX";
+	rename -uuid "24F1140A-4FE2-D0A5-C254-59B11DF1DB80";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 4 0 8 0 23 0 36 0 48 0;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTL -name "L_Ft_Toe_Ctrl_translateY";
+	rename -uuid "D6BF11A0-4B31-E59E-02C3-D6A5BBD44721";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 4 0 8 0 23 0 36 0 48 0;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTL -name "L_Ft_Toe_Ctrl_translateZ";
+	rename -uuid "89DBFD1C-40F5-6C05-1720-569866E7CF4C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 4 0 8 0 23 0 36 0 48 0;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTU -name "L_Ft_Toe_Ctrl_scaleX";
+	rename -uuid "7D2831D6-4373-ACEF-C7D8-49A4CFABDDEF";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1 4 1 8 1 23 1 36 1 48 1;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTU -name "L_Ft_Toe_Ctrl_scaleY";
+	rename -uuid "8F5501EA-4150-F73A-3AAA-F9B7CFC908C9";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1 4 1 8 1 23 1 36 1 48 1;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTU -name "L_Ft_Toe_Ctrl_scaleZ";
+	rename -uuid "B5046729-46F9-FCE6-6B75-90A74EA46C65";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1 4 1 8 1 23 1 36 1 48 1;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTA -name "R_Ft_Toe_Ctrl_rotateX";
+	rename -uuid "B7E584B9-40AC-5498-00B8-29AAD36DD0F6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 4 0 36 0 48 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTA -name "R_Ft_Toe_Ctrl_rotateY";
+	rename -uuid "48ADE7F9-4993-DC33-5D67-1999380E20CE";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 4 0 36 0 48 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTA -name "R_Ft_Toe_Ctrl_rotateZ";
+	rename -uuid "42A68983-4C91-4A9F-6701-AD85E27B20B8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 -18.866580085680756 4 -18.866580085680756
+		 36 1.8720876754454026 48 -18.866580085680756;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "R_Ft_Toe_Ctrl_visibility";
+	rename -uuid "37502BD7-4D6B-89DC-3335-3291B66A9AF3";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 4 1 36 1 48 1;
+	setAttr -size 4 ".keyTanInType[0:3]"  9 9 9 1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+createNode animCurveTL -name "R_Ft_Toe_Ctrl_translateX";
+	rename -uuid "C5089B1F-437E-3879-9491-83B9C705970D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 4 0 36 0 48 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTL -name "R_Ft_Toe_Ctrl_translateY";
+	rename -uuid "8DC4E9E1-4815-814E-FFA5-5EB4C3FEE7F9";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 4 0 36 0 48 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTL -name "R_Ft_Toe_Ctrl_translateZ";
+	rename -uuid "EFD05332-4681-695B-E1A6-33A1CA8829A2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 4 0 36 0 48 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "R_Ft_Toe_Ctrl_scaleX";
+	rename -uuid "7BE4933D-4D42-7177-018C-488D811984E3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 4 1 36 1 48 1;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "R_Ft_Toe_Ctrl_scaleY";
+	rename -uuid "AA853BAC-4960-B567-9843-88824748923B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1.0000000000000002 4 1.0000000000000002
+		 36 1.0000000000000002 48 1.0000000000000002;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "R_Ft_Toe_Ctrl_scaleZ";
+	rename -uuid "F6A0A1D4-49C7-8C55-177F-CB9BD0EF2086";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 4 1 36 1 48 1;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTL -name "R_Arm_IK_PV_Ctrl_translateX";
+	rename -uuid "A26E1185-4861-A818-DFB2-45A8A5700A8E";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -3.2752761052971895 29 -3.2752761052971895
+		 48 -3.2752761052971895;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTL -name "R_Arm_IK_PV_Ctrl_translateY";
+	rename -uuid "1A9D4AA2-4C63-618E-D0DC-CD89246613E5";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -4.412502106232786 29 8.3481383096035788
+		 48 -4.412502106232786;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTL -name "R_Arm_IK_PV_Ctrl_translateZ";
+	rename -uuid "6CC9E54E-4165-5846-CCE0-23AFCD36412D";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -8.5886362125450102 29 -9.4853397539005631
+		 48 -8.5886362125450102;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTU -name "R_Arm_IK_PV_Ctrl_visibility";
+	rename -uuid "511A2104-4EE2-2803-33EA-799F9913804D";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 29 1 48 1;
+	setAttr -size 3 ".keyTanInType[0:2]"  1 9 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+createNode animCurveTA -name "R_Arm_IK_PV_Ctrl_rotateX";
+	rename -uuid "756E165F-472D-D07E-6DBD-088FD4EE1101";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 29 0 48 0;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTA -name "R_Arm_IK_PV_Ctrl_rotateY";
+	rename -uuid "EC880908-4EF6-3DD6-17CB-EC8ED556BC2F";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 29 0 48 0;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTA -name "R_Arm_IK_PV_Ctrl_rotateZ";
+	rename -uuid "A2297522-42C1-0AD8-EF5D-4F8EBD79743D";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 29 0 48 0;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTU -name "R_Arm_IK_PV_Ctrl_scaleX";
+	rename -uuid "624A8273-4540-67DB-EF19-06B8D909A4DF";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 29 1 48 1;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTU -name "R_Arm_IK_PV_Ctrl_scaleY";
+	rename -uuid "58E01014-476C-2849-FC33-4AA690C802DA";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 29 1 48 1;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTU -name "R_Arm_IK_PV_Ctrl_scaleZ";
+	rename -uuid "3C3EBB59-4685-AD0B-2F8E-5B96E12FED09";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 29 1 48 1;
+	setAttr -size 3 ".keyTanInType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanOutType[1:2]"  18 1;
+	setAttr -size 3 ".keyTanInX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  1 1 1;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+createNode animCurveTL -name "COG_Ctrl_translateX";
+	rename -uuid "4C6E664D-45C1-FA5E-A69A-0799418FE973";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 48 0;
+createNode animCurveTL -name "COG_Ctrl_translateY";
+	rename -uuid "9D7CC935-4B78-AA62-CE65-6AA2D1C23B79";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 48 0;
+createNode animCurveTL -name "COG_Ctrl_translateZ";
+	rename -uuid "7551298A-4EF8-1894-9647-1EB42260DE9A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 48 0;
+createNode animCurveTL -name "L_Leg_IK_PV_Ctrl_translateX";
+	rename -uuid "D0FD7273-4B6E-CAD1-A4A8-D99C05CEBEFC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -6.4891804366837906 12 -5.5268765765911825
+		 48 -6.4891804366837906;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "L_Leg_IK_PV_Ctrl_translateY";
+	rename -uuid "AB6E1C15-4CB8-E4C7-8C1A-9DBDC43B56DA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -12.824925431964141 12 -10.272281659883712
+		 48 -12.824925431964141;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "L_Leg_IK_PV_Ctrl_translateZ";
+	rename -uuid "86C3E2C6-4723-E9F0-309F-A8BEF9BB3D4E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 4.4551841964948684 12 3.528838683627376
+		 48 4.4551841964948684;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "R_Leg_IK_PV_Ctrl_translateX";
+	rename -uuid "614635D9-4E8C-A9EC-77E0-30BAB8F2F479";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 6.2587679331041937 8 5.8063418034908656
+		 48 6.2587679331041937;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "R_Leg_IK_PV_Ctrl_translateY";
+	rename -uuid "F30606B1-48B5-B897-D011-9392BC0F05FE";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 12.213724472824987 8 11.013601736153442
+		 48 12.213724472824987;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "R_Leg_IK_PV_Ctrl_translateZ";
+	rename -uuid "58A6FE16-4A22-8FB5-EBDB-C287A5473A78";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -4.9307613898986782 8 -3.1997114056111693
+		 48 -4.9307613898986782;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Leg_IK_PV_Ctrl_visibility";
+	rename -uuid "2D60EA15-41DD-46C0-6B0E-C885386509C0";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 8 1 48 1;
+	setAttr -size 3 ".keyTanInType[0:2]"  9 9 1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+createNode animCurveTA -name "R_Leg_IK_PV_Ctrl_rotateX";
+	rename -uuid "6B77D91A-4C95-1E02-58FB-01BAE7542634";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 8 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "R_Leg_IK_PV_Ctrl_rotateY";
+	rename -uuid "713A04B5-445A-7696-DF48-5B826DC956D3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 8 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "R_Leg_IK_PV_Ctrl_rotateZ";
+	rename -uuid "EFC61D29-40C1-D3FC-A7F2-DEB2C579428C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 8 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Leg_IK_PV_Ctrl_scaleX";
+	rename -uuid "355E91AB-4AAD-1A79-D4F3-0786358359B2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 8 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Leg_IK_PV_Ctrl_scaleY";
+	rename -uuid "CCE30D21-4C65-4261-9DB4-73A2B343F7F5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 8 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Leg_IK_PV_Ctrl_scaleZ";
+	rename -uuid "474ECBB7-41A5-BCD6-FF2D-34A2CAE2A9C8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 8 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "L_Leg_IK_PV_Ctrl_visibility";
+	rename -uuid "C6BFCBE1-4BFE-3ABA-59CB-EBBAD9713B1F";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 12 1 48 1;
+	setAttr -size 3 ".keyTanInType[0:2]"  9 9 1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+createNode animCurveTA -name "L_Leg_IK_PV_Ctrl_rotateX";
+	rename -uuid "1B79777E-48D1-95DB-A167-02BF68D7FDC5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 12 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "L_Leg_IK_PV_Ctrl_rotateY";
+	rename -uuid "5E1E121E-4371-3DD0-63D9-07AA683D56AC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 12 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "L_Leg_IK_PV_Ctrl_rotateZ";
+	rename -uuid "2139BF3C-40B8-6B48-7DDF-E0AD1FE61002";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 12 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "L_Leg_IK_PV_Ctrl_scaleX";
+	rename -uuid "C37BF223-4DED-25CB-003E-E79188E8F5BA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0.99999999999999989 12 0.99999999999999989
+		 48 0.99999999999999989;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "L_Leg_IK_PV_Ctrl_scaleY";
+	rename -uuid "CDC73252-43DA-C956-876C-518C52D0A468";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0.99999999999999967 12 0.99999999999999967
+		 48 0.99999999999999967;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "L_Leg_IK_PV_Ctrl_scaleZ";
+	rename -uuid "2396AAA8-4035-7E95-1941-339D14823C82";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0.99999999999999978 12 0.99999999999999978
+		 48 0.99999999999999978;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "COG_Ctrl_visibility";
+	rename -uuid "80457483-483E-3112-4AAF-6FAE3A650FD0";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 1 48 1;
+	setAttr -size 2 ".keyTanOutType[0:1]"  5 5;
+createNode animCurveTA -name "COG_Ctrl_rotateX";
+	rename -uuid "D265AC1C-40C4-B6F9-C4D4-1388ECD38E66";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 48 0;
+createNode animCurveTA -name "COG_Ctrl_rotateY";
+	rename -uuid "9C4C87EC-41F3-FDBF-0D62-DAB35BE6B434";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 48 0;
+createNode animCurveTA -name "COG_Ctrl_rotateZ";
+	rename -uuid "5B047254-4F92-E2D9-EDDB-848A2A348A95";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 48 0;
+createNode animCurveTU -name "COG_Ctrl_globalScale";
+	rename -uuid "37F2A202-448D-E9C4-DDB6-F5B516ACB491";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 1 48 1;
+createNode animCurveTU -name "COG_Ctrl_IKFK";
+	rename -uuid "4DFD07C8-4516-43E8-979B-3E8B3ED21FC4";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 1 48 1;
+createNode animCurveTL -name "Body_Ctrl_translateX";
+	rename -uuid "D1A51F3F-4C07-7A30-3CF8-C4B22334201C";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -4.7307472230015595 12 -2.4372525511698058
+		 24 -4.7307472230015595 36 -2.4372525511698058 48 -4.7307472230015595;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTL -name "Body_Ctrl_translateY";
+	rename -uuid "7536CB0E-4191-A1A2-64C4-5A8B051E1FE0";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 12 0 24 0 36 0 48 0;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTL -name "Body_Ctrl_translateZ";
+	rename -uuid "F951D3BC-43BD-B5F1-69EF-BF8D382BE706";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -1.8256411592664068 12 -1.8256411592664068
+		 24 -1.8256411592664068 36 -1.8256411592664068 48 -1.8256411592664068;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTL -name "Hip_Ctrl_translateX";
+	rename -uuid "9D72E70A-44B4-6065-855B-0C8E79B1E994";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "Hip_Ctrl_translateY";
+	rename -uuid "0332F3CF-44ED-7DBA-36EE-478D3DDA8628";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "Hip_Ctrl_translateZ";
+	rename -uuid "8B7A3C50-4121-F1BD-094A-12BA723B3CAD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Leg_IK_01_Ctrl_translateX";
+	rename -uuid "3A3BC8E5-4EB8-32B8-F11D-2C879DD97CC7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.7763568394002505e-15;
+createNode animCurveTL -name "L_Leg_IK_01_Ctrl_translateY";
+	rename -uuid "FEEC2009-4983-F6FF-F7B4-1D82A50AB6EA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -8.8817841970012523e-16;
+createNode animCurveTL -name "L_Leg_IK_01_Ctrl_translateZ";
+	rename -uuid "7B31B6EE-4CFF-F8FB-EC9C-928282CA4919";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 4.4408920985006262e-16;
+createNode animCurveTL -name "R_Leg_IK_01_Ctrl_translateX";
+	rename -uuid "A2F242E4-4A58-347B-F56A-4594083E30FA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Leg_IK_01_Ctrl_translateY";
+	rename -uuid "C1D430D8-437B-AD62-A7B4-11A4BADD36A0";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Leg_IK_01_Ctrl_translateZ";
+	rename -uuid "E06DB67E-462C-183B-1F9F-E6A4514196EC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -4.4408920985006262e-16;
+createNode animCurveTL -name "Spine_02_Ctrl_translateX";
+	rename -uuid "9DA3B2CD-4740-9494-BF29-79910ACCC684";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 15 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "Spine_02_Ctrl_translateY";
+	rename -uuid "FB09ADE1-41C0-2021-ED49-E1A481954250";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 15 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "Spine_02_Ctrl_translateZ";
+	rename -uuid "9578D780-441D-6FE5-EBAC-65B4DAD30CFF";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 15 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "L_Arm_IK_PV_Ctrl_translateX";
+	rename -uuid "56306200-4DDA-ADFD-B9A8-1C98A729C9F6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -0.71432185303115125;
+createNode animCurveTL -name "L_Arm_IK_PV_Ctrl_translateY";
+	rename -uuid "42C69134-4658-FFEB-E08E-A29AFCAF7FB5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.6044636896067777;
+createNode animCurveTL -name "L_Arm_IK_PV_Ctrl_translateZ";
+	rename -uuid "91F545A3-4B79-0A0B-035F-C491040D8A4A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -4.3360689900116904;
+createNode animCurveTL -name "L_Hand_Ctrl_translateX";
+	rename -uuid "6EE2F79D-4D4D-F084-DA0F-7CA3877025F2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Hand_Ctrl_translateY";
+	rename -uuid "798A234E-479B-E78B-CFB4-8F9C37B51C97";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Hand_Ctrl_translateZ";
+	rename -uuid "3540C622-4E7A-D36B-74B7-BA9F1EB03D0A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Index_Fngr_01_Ctrl_translateX";
+	rename -uuid "E594259E-44C0-F48C-19FB-78AFC3C33329";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Index_Fngr_01_Ctrl_translateY";
+	rename -uuid "8FE16F80-4BFF-004A-F8A5-E8BFB174A3E9";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Index_Fngr_01_Ctrl_translateZ";
+	rename -uuid "73B04C6F-46B9-8247-668E-F6AFA3DF19D5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Index_Fngr_02_Ctrl_translateX";
+	rename -uuid "49DBD7D9-475D-0900-67DE-2EB7CD0EC76B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Index_Fngr_02_Ctrl_translateY";
+	rename -uuid "BC68C2EF-49F5-4F68-8818-A3864BCC0EE9";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Index_Fngr_02_Ctrl_translateZ";
+	rename -uuid "DBD4EF1D-4CFA-6585-B86E-8985DB0544CD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mddle_Fngr_01_Ctrl_translateX";
+	rename -uuid "E870AFF3-4805-D05E-9F13-738908D0362B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mddle_Fngr_01_Ctrl_translateY";
+	rename -uuid "3F442BFA-442C-3898-FB57-C29CAE6F2C15";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mddle_Fngr_01_Ctrl_translateZ";
+	rename -uuid "FD9BC8F1-4FCE-93A3-BFA8-7A89FE63E77E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mddle_Fngr_02_Ctrl_translateX";
+	rename -uuid "83746602-44EA-BF4B-FDD4-D6B45458B3FB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mddle_Fngr_02_Ctrl_translateY";
+	rename -uuid "787D75AA-443A-E482-DB77-BB9A7C91B897";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mddle_Fngr_02_Ctrl_translateZ";
+	rename -uuid "AC594FDF-4ADB-E6F3-A2B9-37B07351C25E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pnky_Fngr_01_Ctrl_translateX";
+	rename -uuid "298D2681-4001-1CEB-83B4-D4844A93C1BC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pnky_Fngr_01_Ctrl_translateY";
+	rename -uuid "ED5177C4-4F0E-5790-40AF-0B9AC2D6A7C4";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pnky_Fngr_01_Ctrl_translateZ";
+	rename -uuid "ED71DD94-4E92-F0BC-3F9D-C0AF926875AC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pnky_Fngr_02_Ctrl_translateX";
+	rename -uuid "5D650E8E-43BB-0E7A-49DE-BDAF91A3F194";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pnky_Fngr_02_Ctrl_translateY";
+	rename -uuid "448DC7F5-4880-9581-CE0B-7084B82AB2E2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pnky_Fngr_02_Ctrl_translateZ";
+	rename -uuid "133C4D34-46B8-30DD-D22F-DC860A72EEB9";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pntr_Fngr_01_Ctrl_translateX";
+	rename -uuid "7D9C22E3-4F49-A691-679A-29B9FB0E232B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pntr_Fngr_01_Ctrl_translateY";
+	rename -uuid "165AECD5-45E7-D5CD-FF23-D883A861A5A7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pntr_Fngr_01_Ctrl_translateZ";
+	rename -uuid "22F1E275-48D1-B7CB-A048-77A6FD543CA7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pntr_Fngr_02_Ctrl_translateX";
+	rename -uuid "23DA0E14-4F5D-296E-38B7-9BB4AC6144E3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pntr_Fngr_02_Ctrl_translateY";
+	rename -uuid "36B3BA37-4BD7-239A-61F8-79A69ADD3054";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Pntr_Fngr_02_Ctrl_translateZ";
+	rename -uuid "4FE81348-4EAA-24BA-6BF6-CDAE844EBBD1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Thumb_Fnger_01_Ctrl_translateX";
+	rename -uuid "05A4017F-43A3-1B55-CCEF-FDA70B489CCE";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Thumb_Fnger_01_Ctrl_translateY";
+	rename -uuid "B2E2700D-4FE6-69D4-04FB-D2897AF4EA34";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Thumb_Fnger_01_Ctrl_translateZ";
+	rename -uuid "97F1BE82-44CC-D458-0506-C0B844D384AD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Thumb_02_Fnger_Ctrl_translateX";
+	rename -uuid "70FAA07A-4635-D96B-6264-5D9746AC70BA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Thumb_02_Fnger_Ctrl_translateY";
+	rename -uuid "E7D7426F-4179-D212-2BA4-48ACCEB85F41";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Thumb_02_Fnger_Ctrl_translateZ";
+	rename -uuid "B6BA799D-4ED6-CECA-B3AA-4F8DF40D0D87";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Index_Fngr_01_Ctrl_translateX";
+	rename -uuid "1A290CC3-4101-8149-7191-E1A0C209FC5F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Index_Fngr_01_Ctrl_translateY";
+	rename -uuid "D100B9B5-4B4C-0041-BC54-02B3218F90B8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Index_Fngr_01_Ctrl_translateZ";
+	rename -uuid "8AC79ECE-47FB-B226-10A4-A3A8684A2C23";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Index_Fngr_02_Ctrl_translateX";
+	rename -uuid "5A531D95-4290-1971-750D-538994169E9A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Index_Fngr_02_Ctrl_translateY";
+	rename -uuid "44A893CD-479B-CA4C-ECFE-EFAF48278E02";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Index_Fngr_02_Ctrl_translateZ";
+	rename -uuid "5FBABB31-46DC-C3AC-DF70-A9A87A38C236";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mddle_Fngr_01_Ctrl_translateX";
+	rename -uuid "76DABEBB-463A-61BA-1D3F-06A95A06D961";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mddle_Fngr_01_Ctrl_translateY";
+	rename -uuid "0F8D7606-447A-7696-E1BF-32B07309AB54";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mddle_Fngr_01_Ctrl_translateZ";
+	rename -uuid "78D42A09-4283-159E-CBE1-55AA49449C8C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mddle_Fngr_02_Ctrl_translateX";
+	rename -uuid "AA61172F-4444-2BC3-2EC0-9E8FF1E1DDA5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mddle_Fngr_02_Ctrl_translateY";
+	rename -uuid "4D4A5AB8-4587-79BB-40F5-FCB932992B37";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mddle_Fngr_02_Ctrl_translateZ";
+	rename -uuid "8297EAA0-4057-9943-C566-F1AC891A3F83";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pnky_Fngr_01_Ctrl_translateX";
+	rename -uuid "49FCB813-4964-DC8F-20A1-F08520A3F356";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pnky_Fngr_01_Ctrl_translateY";
+	rename -uuid "E24F0170-4D2F-8C62-FE2A-1CB9D5233B0D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pnky_Fngr_01_Ctrl_translateZ";
+	rename -uuid "D98DAA6D-4DD7-94BB-FE6B-EDBB1CF6BD67";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pnky_Fngr_02_Ctrl_translateX";
+	rename -uuid "6D13DCE2-418B-CFEE-0326-AEBB7F8E7AEE";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pnky_Fngr_02_Ctrl_translateY";
+	rename -uuid "46761817-4CBA-3C60-8BC8-A98E6E9EB320";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pnky_Fngr_02_Ctrl_translateZ";
+	rename -uuid "5CC1A9D8-4BBD-2CB0-A8AA-36A491A7F2E0";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pntr_Fngr_01_Ctrl_translateX";
+	rename -uuid "DC14DF74-48EA-1BE8-715E-93994B85A796";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pntr_Fngr_01_Ctrl_translateY";
+	rename -uuid "6E05C0B5-4FE7-D3E6-F7B1-93B479C37B28";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pntr_Fngr_01_Ctrl_translateZ";
+	rename -uuid "6EFFF2C5-4112-6599-C60E-458385F2E251";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pntr_Fngr_02_Ctrl_translateX";
+	rename -uuid "FE41FDAC-4985-1F1B-8ACF-8D93CF2D5037";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pntr_Fngr_02_Ctrl_translateY";
+	rename -uuid "E50A4323-44F3-C5D9-D218-8587DB9AF04C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Pntr_Fngr_02_Ctrl_translateZ";
+	rename -uuid "5CA4E1D4-4BBC-8A27-3DDE-57897C89B6E1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Thumb_Fnger_01_Ctrl_translateX";
+	rename -uuid "33349632-4EDF-80AC-2B6A-D2862484C982";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Thumb_Fnger_01_Ctrl_translateY";
+	rename -uuid "8094D9EA-404F-F5B1-234E-A78FB2A9593B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Thumb_Fnger_01_Ctrl_translateZ";
+	rename -uuid "8773238F-400D-9668-ED45-409F337B8B0E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Thumb_02_Fnger_Ctrl_translateX";
+	rename -uuid "57ABDB53-4744-549C-EC08-F290F2CC9EC4";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Thumb_02_Fnger_Ctrl_translateY";
+	rename -uuid "8AA377F6-4996-5FDC-9B0D-368E73AA014C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Thumb_02_Fnger_Ctrl_translateZ";
+	rename -uuid "129E75EA-4C2D-059B-58B2-3CBE122E36C7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "Spine_03_Ctrl_translateX";
+	rename -uuid "2E457BB2-4F52-70F1-6C00-5F8E1CC5439F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 24 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "Spine_03_Ctrl_translateY";
+	rename -uuid "FBB2958A-4CB5-EE5B-CA63-B58450F02325";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 24 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "Spine_03_Ctrl_translateZ";
+	rename -uuid "DA43E5A1-4B50-ADF9-248F-79AE303D7124";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 24 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "L_Arm_IK_Shldr_Ctrl_translateX";
+	rename -uuid "4DDE647F-4826-006C-17F8-C69A0A021A44";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 15 0 25 0 48 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTL -name "L_Arm_IK_Shldr_Ctrl_translateY";
+	rename -uuid "01CFDCA0-44F9-F3AF-945B-8D86DE6A3BFA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 15 0 25 0 48 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTL -name "L_Arm_IK_Shldr_Ctrl_translateZ";
+	rename -uuid "5233FC27-45BA-DEF4-65BE-969F18D64476";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 0 15 0 25 0 48 0;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTL -name "L_Arm_IK_Jnt_Ctrl_translateX";
+	rename -uuid "A602F94F-4220-B0B5-09FF-CFAFA1BFEFBD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -5.1339435663450175;
+createNode animCurveTL -name "L_Arm_IK_Jnt_Ctrl_translateY";
+	rename -uuid "08096E8A-4812-2945-702C-EE91E42AF286";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -1.3911674662386624;
+createNode animCurveTL -name "L_Arm_IK_Jnt_Ctrl_translateZ";
+	rename -uuid "FED375FD-4529-7E2D-C454-47AA9F812F51";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 5.9450963982753562;
+createNode animCurveTL -name "Head_Ctrl_translateX";
+	rename -uuid "0CA38C2C-4239-E631-5F5B-11BCECE956CA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "Head_Ctrl_translateY";
+	rename -uuid "8D13723B-4131-781B-4349-CE9A9E9EB601";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "Head_Ctrl_translateZ";
+	rename -uuid "40AA19C8-4912-6F3A-CA2F-E78A21C1F0E3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "Head_Ctrl_translateX1";
+	rename -uuid "A24EFD8B-487C-A14F-E001-328C2459C612";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 8 0 16 0 20 0 48 0;
+createNode animCurveTL -name "Head_Ctrl_translateY1";
+	rename -uuid "9AA24521-4F5F-315B-5FAD-6392A925BB77";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 8 0 16 0 20 0 48 0;
+createNode animCurveTL -name "Head_Ctrl_translateZ1";
+	rename -uuid "52A4E1EB-4612-3869-56D8-93A428711F1F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 8 0 16 0 20 0 48 0;
+createNode animCurveTL -name "Lwr_Jaw_Ctrl_translateX";
+	rename -uuid "A4D26ED4-4B7F-4538-F00D-3393063689CC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "Lwr_Jaw_Ctrl_translateY";
+	rename -uuid "A1354736-4DB2-C042-B29F-DAB0C3F86256";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "Lwr_Jaw_Ctrl_translateZ";
+	rename -uuid "9F3450FA-4821-7DE8-D6FA-19B2ECFEA57E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mandi_01_Ctrl_translateX";
+	rename -uuid "6E88DF2E-429C-61F9-734A-FEA6555C5700";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mandi_01_Ctrl_translateY";
+	rename -uuid "E46B0F1C-4A2E-3174-CDF9-78A6169154EB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mandi_01_Ctrl_translateZ";
+	rename -uuid "05B712BD-4C2A-73A7-749D-34AB3487F8A8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mandi_02_Ctrl_translateX";
+	rename -uuid "24C6CE92-4561-8071-0C96-ADB270A98C25";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mandi_02_Ctrl_translateY";
+	rename -uuid "6F8A7A25-47FB-1864-FDF3-4BAB8A5E1EBB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "L_Mandi_02_Ctrl_translateZ";
+	rename -uuid "724E4318-4456-96C7-7A5F-D88AEB9B5C39";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mandi_01_Ctrl_translateX";
+	rename -uuid "9A6C9709-45CA-E032-5C2C-C99AA1EE88E3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mandi_01_Ctrl_translateY";
+	rename -uuid "2798E410-40C9-8479-9DE4-D5A8F6AD0E4D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mandi_01_Ctrl_translateZ";
+	rename -uuid "105CBB70-469B-6D1F-CD75-DE89620DBF06";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mandi_02_Ctrl_translateX";
+	rename -uuid "418D1DDD-43B5-70D5-6E57-C183CAC67F4B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mandi_02_Ctrl_translateY";
+	rename -uuid "791C118F-4743-01DF-46EB-0FB089F1306E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Mandi_02_Ctrl_translateZ";
+	rename -uuid "0916BDB8-4727-80F0-2C23-D6B1D2385B7B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTL -name "R_Arm_IK_Shldr_Ctrl_translateX";
+	rename -uuid "77B60B3F-4891-09DB-3037-DEBE3C504DEA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 24 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "R_Arm_IK_Shldr_Ctrl_translateY";
+	rename -uuid "610CD77F-4BE8-F226-B789-8D822BD06C64";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 24 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTL -name "R_Arm_IK_Shldr_Ctrl_translateZ";
+	rename -uuid "CEE4C0B9-4905-82BA-7A3C-BAB658A4DA24";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 24 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "L_Pntr_Fngr_01_Ctrl_visibility";
+	rename -uuid "417E1D95-4957-6BEB-691E-9B9127F888C9";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Pntr_Fngr_01_Ctrl_rotateX";
+	rename -uuid "705F7C3F-4932-6AE3-E223-9DA34484156A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Pntr_Fngr_01_Ctrl_rotateY";
+	rename -uuid "84F05B9A-4A8A-329E-588E-DEA3EC835E42";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Pntr_Fngr_01_Ctrl_rotateZ";
+	rename -uuid "D11E7DA8-4902-62BB-76DD-44A2E1BE83A6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Pntr_Fngr_01_Ctrl_scaleX";
+	rename -uuid "04C670E0-4C24-2DF9-3D96-94BE669413E7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000004;
+createNode animCurveTU -name "L_Pntr_Fngr_01_Ctrl_scaleY";
+	rename -uuid "8CEE6393-46F1-242C-11B8-CB9C1C3C02C9";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000004;
+createNode animCurveTU -name "L_Pntr_Fngr_01_Ctrl_scaleZ";
+	rename -uuid "CC044956-4A30-1404-E45D-76B41844B4F6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000004;
+createNode animCurveTU -name "L_Mandi_01_Ctrl_visibility";
+	rename -uuid "48ACE24D-46AC-EC2D-77A4-90920A40FA79";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Mandi_01_Ctrl_rotateX";
+	rename -uuid "C93F9B19-4C30-0FBF-FA37-C58DA7902C58";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Mandi_01_Ctrl_rotateY";
+	rename -uuid "880A0A12-4B4D-E487-BB48-29A4BE9D3193";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Mandi_01_Ctrl_rotateZ";
+	rename -uuid "D3D8AF13-4BFF-8D50-ED64-4592285371ED";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Mandi_01_Ctrl_scaleX";
+	rename -uuid "84EADA37-41AB-177B-A19B-8EB36B5CA319";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Mandi_01_Ctrl_scaleY";
+	rename -uuid "2C397255-4ACD-ADE8-E6EB-4F8DCE7CF2A1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Mandi_01_Ctrl_scaleZ";
+	rename -uuid "768398E2-4E8D-15E3-5CAA-AC92A73CE603";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mddle_Fngr_01_Ctrl_visibility";
+	rename -uuid "231246B0-4BF3-8118-CC75-C8A729EC8D88";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Mddle_Fngr_01_Ctrl_rotateX";
+	rename -uuid "42EF61A3-41DA-596B-869A-90AB2DF2C75A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Mddle_Fngr_01_Ctrl_rotateY";
+	rename -uuid "DB969AFC-45B2-1FA9-9A7A-B5B46B670774";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Mddle_Fngr_01_Ctrl_rotateZ";
+	rename -uuid "78839226-466A-0FBF-3936-A9B26BBEEF15";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Mddle_Fngr_01_Ctrl_scaleX";
+	rename -uuid "D54F8614-43CD-EB6D-DBCA-338B8E8B0A04";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mddle_Fngr_01_Ctrl_scaleY";
+	rename -uuid "24ACA0B8-4846-DE32-D228-FCB644ABEE4C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mddle_Fngr_01_Ctrl_scaleZ";
+	rename -uuid "FB7B8594-40DB-5C46-C213-09AB045B965A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mandi_01_Ctrl_visibility";
+	rename -uuid "D464EF29-49DB-1517-C585-379E54A0A40D";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Mandi_01_Ctrl_rotateX";
+	rename -uuid "C0DAD33D-4F72-97E5-4234-F19B93B1F1D3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Mandi_01_Ctrl_rotateY";
+	rename -uuid "1AEE1847-43B9-088D-E8B2-AAB414DCF385";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Mandi_01_Ctrl_rotateZ";
+	rename -uuid "3336D57D-481A-6A53-5E19-FCBFE9352427";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Mandi_01_Ctrl_scaleX";
+	rename -uuid "8DDFF3A4-4C4C-6264-1560-82905B28F516";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mandi_01_Ctrl_scaleY";
+	rename -uuid "E061C6FF-4308-AE0B-20BD-A6B7911C6400";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mandi_01_Ctrl_scaleZ";
+	rename -uuid "3AF89AF3-46C1-0919-7A19-3B9EE87BDDF2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Mddle_Fngr_01_Ctrl_visibility";
+	rename -uuid "A16DB5DB-4222-7498-012E-68B2A2F4925C";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Mddle_Fngr_01_Ctrl_rotateX";
+	rename -uuid "B6CF8717-431E-1A62-FA9A-C4A4A0E93A74";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Mddle_Fngr_01_Ctrl_rotateY";
+	rename -uuid "F60ED388-4C6E-8097-2C72-02A1CF5E2DA7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Mddle_Fngr_01_Ctrl_rotateZ";
+	rename -uuid "00CCB9AB-4D82-ECB0-DAB3-67A750A29B20";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Mddle_Fngr_01_Ctrl_scaleX";
+	rename -uuid "0CB1E5F3-4C98-7836-E5C5-3FB693DFDFB8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999967;
+createNode animCurveTU -name "L_Mddle_Fngr_01_Ctrl_scaleY";
+	rename -uuid "FC5EBA9F-4C74-D2C1-408F-7EA20EC3FAE8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000004;
+createNode animCurveTU -name "L_Mddle_Fngr_01_Ctrl_scaleZ";
+	rename -uuid "FA29E37C-45AB-F99E-4A9D-7EBC2AA027C3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Thumb_02_Fnger_Ctrl_visibility";
+	rename -uuid "A8A38603-491F-5010-7594-AFB504E3AC00";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Thumb_02_Fnger_Ctrl_rotateX";
+	rename -uuid "595A5618-4577-81D5-AAE3-89A7808E8512";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Thumb_02_Fnger_Ctrl_rotateY";
+	rename -uuid "9D957347-47AF-62AC-D253-9DAA56A9CEE5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Thumb_02_Fnger_Ctrl_rotateZ";
+	rename -uuid "7DEDA327-485A-A710-DA60-43A0F32019CD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Thumb_02_Fnger_Ctrl_scaleX";
+	rename -uuid "CFF73663-4B5E-04E0-7662-318A4A7599CA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999978;
+createNode animCurveTU -name "L_Thumb_02_Fnger_Ctrl_scaleY";
+	rename -uuid "FC585895-4D4F-EE9E-D320-89B20C9254D6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000002;
+createNode animCurveTU -name "L_Thumb_02_Fnger_Ctrl_scaleZ";
+	rename -uuid "AD078DB2-408F-EFF9-9F73-9E9B35DC7FFB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999978;
+createNode animCurveTU -name "L_Index_Fngr_01_Ctrl_visibility";
+	rename -uuid "EA2D7708-49B6-4620-5191-BE903DFA4DA3";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Index_Fngr_01_Ctrl_rotateX";
+	rename -uuid "48512362-4775-758A-1E0E-ADA6D9F097E1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Index_Fngr_01_Ctrl_rotateY";
+	rename -uuid "026BEC77-43EC-6A66-7047-8FB74ADBEB61";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Index_Fngr_01_Ctrl_rotateZ";
+	rename -uuid "6A03EA59-4B70-FF04-414A-17AFB5D2033F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Index_Fngr_01_Ctrl_scaleX";
+	rename -uuid "01EE24AB-4CD0-5013-376E-FF96107D91DC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Index_Fngr_01_Ctrl_scaleY";
+	rename -uuid "1DF0B6F7-4177-06C4-28CD-CCB15AF6B660";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Index_Fngr_01_Ctrl_scaleZ";
+	rename -uuid "9CD663D7-462A-628E-A9F7-769BBAAC90FC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999989;
+createNode animCurveTU -name "R_Thumb_Fnger_01_Ctrl_visibility";
+	rename -uuid "8A45AA66-4C48-9A6E-6ADA-A58775676CC6";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Thumb_Fnger_01_Ctrl_rotateX";
+	rename -uuid "0A6E28CD-40A3-F7EC-7227-13AF6B624B8A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Thumb_Fnger_01_Ctrl_rotateY";
+	rename -uuid "53ADA49E-481B-2928-ACF7-248C3F92F51D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Thumb_Fnger_01_Ctrl_rotateZ";
+	rename -uuid "1C2D3716-48FC-DE11-4181-4B8520DF73A7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Thumb_Fnger_01_Ctrl_scaleX";
+	rename -uuid "1511FCC3-4DB3-0782-FA2A-2393431A4FA1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Thumb_Fnger_01_Ctrl_scaleY";
+	rename -uuid "79FF43EF-40DA-C65B-0A6E-CABD8356AC3C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Thumb_Fnger_01_Ctrl_scaleZ";
+	rename -uuid "0FB6534E-4995-9DB4-CEF9-8090D7E885FB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pntr_Fngr_01_Ctrl_visibility";
+	rename -uuid "1B0F03B6-43BC-D5F8-D246-E5960B7CFE12";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Pntr_Fngr_01_Ctrl_rotateX";
+	rename -uuid "1DC6E0CF-4557-B879-3942-4D9A43CA2F8E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Pntr_Fngr_01_Ctrl_rotateY";
+	rename -uuid "D6A037BC-4D1B-0918-1143-A0AFAA0A0EA1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Pntr_Fngr_01_Ctrl_rotateZ";
+	rename -uuid "3CAC1E6E-4342-0333-BF0B-E5ACF6DA6AA9";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Pntr_Fngr_01_Ctrl_scaleX";
+	rename -uuid "21BD88AC-4ED1-BF97-B434-8094986D257F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pntr_Fngr_01_Ctrl_scaleY";
+	rename -uuid "1F7338A4-4C3E-C123-FAC0-0AAC14A67733";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pntr_Fngr_01_Ctrl_scaleZ";
+	rename -uuid "1E288AD7-4BA1-697E-ED7C-388B8C635245";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Mandi_02_Ctrl_visibility";
+	rename -uuid "E0244F6D-49F8-6E65-5C8F-47962865B2C6";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Mandi_02_Ctrl_rotateX";
+	rename -uuid "C03EF45A-4C4D-B82D-97BB-ABA47DC7B119";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Mandi_02_Ctrl_rotateY";
+	rename -uuid "1A91903A-4C6A-22B1-F668-778956546B13";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Mandi_02_Ctrl_rotateZ";
+	rename -uuid "2186BAD6-4B59-2D61-AAC6-A89BF47770D7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Mandi_02_Ctrl_scaleX";
+	rename -uuid "AC62738A-40C3-48A8-014C-82BFEE23086E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Mandi_02_Ctrl_scaleY";
+	rename -uuid "C6CC1FB1-4198-95B4-73F6-C9AC0A3E2E9A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Mandi_02_Ctrl_scaleZ";
+	rename -uuid "C2924E96-4354-4143-6DA0-61A5B3155175";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Spine_03_Ctrl_visibility";
+	rename -uuid "296E292E-4617-5D39-7B09-EF9633C0D259";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 24 1 48 1;
+	setAttr -size 3 ".keyTanInType[0:2]"  9 9 1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+createNode animCurveTA -name "Spine_03_Ctrl_rotateX";
+	rename -uuid "056F436F-49A4-7119-8C8C-868935ED3FB2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 24 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "Spine_03_Ctrl_rotateY";
+	rename -uuid "646AB367-4CF3-576F-8007-AC8E876BC218";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -53.146416778392442 24 -58.30469614082908
+		 48 -53.146416778392442;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "Spine_03_Ctrl_rotateZ";
+	rename -uuid "CD611B77-4833-D5DE-76A1-F0A56ED61C67";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 24 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "Spine_03_Ctrl_scaleX";
+	rename -uuid "C7513BDE-45A1-C69D-1785-8DA048903550";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 24 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "Spine_03_Ctrl_scaleY";
+	rename -uuid "D6C0F446-4C12-E655-3B39-8FB7F96EA327";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 24 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "Spine_03_Ctrl_scaleZ";
+	rename -uuid "F42AC2DB-4CFA-072F-5C78-FDABA28E2062";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 24 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Pntr_Fngr_02_Ctrl_visibility";
+	rename -uuid "292C14D2-46AE-F962-D841-D48B9E455497";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Pntr_Fngr_02_Ctrl_rotateX";
+	rename -uuid "B2640149-4230-EE73-BCF2-A69768E21978";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Pntr_Fngr_02_Ctrl_rotateY";
+	rename -uuid "B27D8E45-417D-48E4-E8A1-22A6336E3D29";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Pntr_Fngr_02_Ctrl_rotateZ";
+	rename -uuid "BA2D6FB8-4F74-4BBF-C14F-1CAF54E2BC43";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Pntr_Fngr_02_Ctrl_scaleX";
+	rename -uuid "371FBDE4-4234-813B-E777-AB994DA85F81";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pntr_Fngr_02_Ctrl_scaleY";
+	rename -uuid "947E0FE4-4B10-2B81-F70B-5AA42AB72B8C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pntr_Fngr_02_Ctrl_scaleZ";
+	rename -uuid "F0E5CC0D-45A7-883B-C64E-4AA37A1DDAB6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Spine_02_Ctrl_visibility";
+	rename -uuid "3728B213-49C5-10AB-39AA-96A4D5C03104";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 15 1 48 1;
+	setAttr -size 3 ".keyTanInType[0:2]"  9 9 1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+createNode animCurveTA -name "Spine_02_Ctrl_rotateX";
+	rename -uuid "8F2995A8-4A0E-94E2-1E25-3993194A0A8E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 15 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "Spine_02_Ctrl_rotateY";
+	rename -uuid "AED47139-451C-BF32-1CA1-A7AD2EF11F34";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 7.6139553720453952 15 -2.6970392090873134
+		 48 7.6139553720453952;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "Spine_02_Ctrl_rotateZ";
+	rename -uuid "64091AEF-4B95-808C-9475-9BA4B6D6FDA1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 0 15 0 48 0;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "Spine_02_Ctrl_scaleX";
+	rename -uuid "4D73B3CA-44CC-8860-8F90-6F9AB322204C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 15 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "Spine_02_Ctrl_scaleY";
+	rename -uuid "D1E423E7-46A0-4A8D-1375-90AB9AAA83E8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 15 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "Spine_02_Ctrl_scaleZ";
+	rename -uuid "4658BD41-4E24-DB58-4FFC-A2A81202624A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 15 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "L_Mddle_Fngr_02_Ctrl_visibility";
+	rename -uuid "A20F3B2A-48B6-FD1A-885C-A0987D86EBDE";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Mddle_Fngr_02_Ctrl_rotateX";
+	rename -uuid "01B54965-43EE-8425-08A1-E18F3025E4D7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Mddle_Fngr_02_Ctrl_rotateY";
+	rename -uuid "14A68A51-415A-06FA-42A2-B0AB3E0F64D1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Mddle_Fngr_02_Ctrl_rotateZ";
+	rename -uuid "25778F22-41AB-872A-681A-50B1F05F0D89";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Mddle_Fngr_02_Ctrl_scaleX";
+	rename -uuid "EB125A2B-48B7-6091-3F97-EAA965111353";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Mddle_Fngr_02_Ctrl_scaleY";
+	rename -uuid "82886DDD-4FF1-3E10-6C97-70BAF8ED60E7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Mddle_Fngr_02_Ctrl_scaleZ";
+	rename -uuid "45424EEA-4FFD-5FBF-6D7A-D4A70A83C8EF";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Lwr_Jaw_Ctrl_visibility";
+	rename -uuid "0C7E8587-4083-4F39-A752-7480D6CAA3B1";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "Lwr_Jaw_Ctrl_rotateX";
+	rename -uuid "184935A8-4BA6-1C0C-6125-768F4EEB9671";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "Lwr_Jaw_Ctrl_rotateY";
+	rename -uuid "07532DB1-4859-19AB-F363-82B85D7D1E55";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "Lwr_Jaw_Ctrl_rotateZ";
+	rename -uuid "836D8757-4E7A-9B03-AAC6-6E859E32998F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "Lwr_Jaw_Ctrl_scaleX";
+	rename -uuid "73F59113-450E-8A1B-5382-41B6CDAFA4E5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Lwr_Jaw_Ctrl_scaleY";
+	rename -uuid "F1A3D1F6-4F18-0EC8-DABE-E4A7C5173A07";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Lwr_Jaw_Ctrl_scaleZ";
+	rename -uuid "7D1A188E-4196-6700-4E1D-DE9F6D51E6CE";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Index_Fngr_01_Ctrl_visibility";
+	rename -uuid "CD2A3D52-4273-FC4E-79C4-9EA799286FE0";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Index_Fngr_01_Ctrl_rotateX";
+	rename -uuid "56B6C0B7-412D-46AE-65A0-5EB8EB722DAF";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Index_Fngr_01_Ctrl_rotateY";
+	rename -uuid "CA0112B4-492F-5D10-D3BC-DB81E3BF652A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Index_Fngr_01_Ctrl_rotateZ";
+	rename -uuid "ACD96026-4B15-C442-920E-09B71787FB24";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Index_Fngr_01_Ctrl_scaleX";
+	rename -uuid "A8D0923A-46F1-EC6B-9CA1-A69E8072AFDB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Index_Fngr_01_Ctrl_scaleY";
+	rename -uuid "6D1B5F48-4DD9-ACE1-BD59-62BEF4D39C80";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Index_Fngr_01_Ctrl_scaleZ";
+	rename -uuid "D9C01372-43C2-D54A-1AB6-DAAEB6643A8A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Leg_IK_01_Ctrl_visibility";
+	rename -uuid "95C8C70A-4408-7C69-3882-6FB4ECB3F90D";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Leg_IK_01_Ctrl_rotateX";
+	rename -uuid "A84A5E32-479C-6FB5-7818-75872B1D041C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Leg_IK_01_Ctrl_rotateY";
+	rename -uuid "F639A4C0-4B0B-B0B4-24EF-5AB96869A348";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Leg_IK_01_Ctrl_rotateZ";
+	rename -uuid "5D09FC5D-46B6-E62A-6D28-8C8C55583AE7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Leg_IK_01_Ctrl_scaleX";
+	rename -uuid "B59F4A99-49BD-29F6-E854-74BFFCD04F8A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000002;
+createNode animCurveTU -name "L_Leg_IK_01_Ctrl_scaleY";
+	rename -uuid "CBEB7EF8-47B7-9C2D-8407-ED92CEF5408A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000002;
+createNode animCurveTU -name "L_Leg_IK_01_Ctrl_scaleZ";
+	rename -uuid "4AFD4A79-4F7B-0616-A241-63BB8B856FDF";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Pnky_Fngr_01_Ctrl_visibility";
+	rename -uuid "F95D2C55-4CFB-887C-D71F-B48439B9723C";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Pnky_Fngr_01_Ctrl_rotateX";
+	rename -uuid "4F719541-4DF9-29AC-D33B-A796CD6F7396";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Pnky_Fngr_01_Ctrl_rotateY";
+	rename -uuid "6A0768C6-4B4B-B4AC-38C2-78890D032F77";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Pnky_Fngr_01_Ctrl_rotateZ";
+	rename -uuid "85A84949-491E-9F4B-CE40-D4817EAEE81D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Pnky_Fngr_01_Ctrl_scaleX";
+	rename -uuid "C7EED435-43C0-0CB3-D52A-C8A31D557D29";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Pnky_Fngr_01_Ctrl_scaleY";
+	rename -uuid "96C00E4B-4C0D-7282-C6FC-FB9B702033DB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Pnky_Fngr_01_Ctrl_scaleZ";
+	rename -uuid "C0ECF5BD-4F6F-89C8-F8B2-A88ADA82666E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Thumb_Fnger_01_Ctrl_visibility";
+	rename -uuid "985DD38C-4559-638B-A623-FA9D38C3D20C";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Thumb_Fnger_01_Ctrl_rotateX";
+	rename -uuid "F9DA0E5B-4712-11E0-AE58-3CAC6A3BB0DE";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Thumb_Fnger_01_Ctrl_rotateY";
+	rename -uuid "1FC79763-492B-D237-0223-689D3FED318A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Thumb_Fnger_01_Ctrl_rotateZ";
+	rename -uuid "425E1962-4C9D-CBC7-81BF-A896FCA8B479";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Thumb_Fnger_01_Ctrl_scaleX";
+	rename -uuid "9077AF88-450B-1DCD-DA10-649B470E8EC2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999989;
+createNode animCurveTU -name "L_Thumb_Fnger_01_Ctrl_scaleY";
+	rename -uuid "196C99BB-47E5-A900-52F3-DABFDD787465";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000002;
+createNode animCurveTU -name "L_Thumb_Fnger_01_Ctrl_scaleZ";
+	rename -uuid "3350306F-4FDA-6716-DAFE-D0A8CE5618C1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000002;
+createNode animCurveTU -name "R_Arm_IK_Shldr_Ctrl_visibility";
+	rename -uuid "BC3B9A48-4807-2A33-CB14-0FB3FFDF802E";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 24 1 48 1;
+	setAttr -size 3 ".keyTanInType[0:2]"  9 9 1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+createNode animCurveTA -name "R_Arm_IK_Shldr_Ctrl_rotateX";
+	rename -uuid "8606A49D-4351-A654-2C70-49B341EEABCD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -11.394677130361744 24 -8.4789282794462402
+		 48 -11.394677130361744;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "R_Arm_IK_Shldr_Ctrl_rotateY";
+	rename -uuid "34A55805-45EC-B801-8E35-2CA20956F79B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 -14.316387820720394 24 -24.470624718156895
+		 48 -14.316387820720394;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTA -name "R_Arm_IK_Shldr_Ctrl_rotateZ";
+	rename -uuid "C85C3849-4033-6AF0-9EB9-1684D84AA6EE";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 17.826699020680323 24 -18.413522069484099
+		 48 17.826699020680323;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Arm_IK_Shldr_Ctrl_scaleX";
+	rename -uuid "DC62CB6B-4172-6E63-1757-E6B713C486F4";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1.0000000000000002 24 1.0000000000000002
+		 48 1.0000000000000002;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Arm_IK_Shldr_Ctrl_scaleY";
+	rename -uuid "60A80367-4459-BE00-84E5-DCAEB1079D75";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1 24 1 48 1;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Arm_IK_Shldr_Ctrl_scaleZ";
+	rename -uuid "E4A083F6-4C8D-7374-06BA-5885369BB2DC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  0 1.0000000000000002 24 1.0000000000000002
+		 48 1.0000000000000002;
+	setAttr -size 3 ".keyTanInType[2]"  1;
+	setAttr -size 3 ".keyTanOutType[2]"  1;
+	setAttr -size 3 ".keyTanInX[2]"  1;
+	setAttr -size 3 ".keyTanInY[2]"  0;
+	setAttr -size 3 ".keyTanOutX[2]"  1;
+	setAttr -size 3 ".keyTanOutY[2]"  0;
+createNode animCurveTU -name "R_Pnky_Fngr_01_Ctrl_visibility";
+	rename -uuid "6B10A955-46CE-A46A-93EE-A192729F375F";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Pnky_Fngr_01_Ctrl_rotateX";
+	rename -uuid "5616DB16-47C4-0EB3-2BF5-97A0974B704F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Pnky_Fngr_01_Ctrl_rotateY";
+	rename -uuid "43640E61-4971-8538-A885-418B0C854595";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Pnky_Fngr_01_Ctrl_rotateZ";
+	rename -uuid "4A8002AF-48E5-8C5E-6F73-B590C42B7AE0";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Pnky_Fngr_01_Ctrl_scaleX";
+	rename -uuid "EC728BFE-437A-FD3B-D596-BDB284A73291";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pnky_Fngr_01_Ctrl_scaleY";
+	rename -uuid "4F723E56-4358-2F7E-6DC9-4DAF4A7FFAE5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pnky_Fngr_01_Ctrl_scaleZ";
+	rename -uuid "9E13C75A-4108-0055-767D-9A84C13481ED";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Arm_IK_Jnt_Ctrl_visibility";
+	rename -uuid "4EEFA935-419C-23BB-6D02-528E95AC95FD";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Arm_IK_Jnt_Ctrl_rotateX";
+	rename -uuid "DB61865E-44CD-C3B4-26D5-AEAD5C41BC81";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 110.05914841719982;
+createNode animCurveTA -name "L_Arm_IK_Jnt_Ctrl_rotateY";
+	rename -uuid "5F3A0088-4892-42B2-42FB-179FB06A2303";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -50.813506247054789;
+createNode animCurveTA -name "L_Arm_IK_Jnt_Ctrl_rotateZ";
+	rename -uuid "31EF4CF9-4768-F294-9112-758558E77A5E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -125.76979324156474;
+createNode animCurveTU -name "L_Arm_IK_Jnt_Ctrl_scaleX";
+	rename -uuid "FC032F68-47D0-011D-E133-74AC3B6D55B7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999989;
+createNode animCurveTU -name "L_Arm_IK_Jnt_Ctrl_scaleY";
+	rename -uuid "1EFC34CA-4AC1-2449-F346-FB8B1289CC98";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Arm_IK_Jnt_Ctrl_scaleZ";
+	rename -uuid "96DF8C11-410D-C6BD-9F84-888C6F6326B8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999989;
+createNode animCurveTU -name "L_Arm_IK_Jnt_Ctrl_FollowTarget";
+	rename -uuid "E2A10958-4A18-ADEF-857D-A0B04BABC4B4";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTU -name "L_Arm_IK_PV_Ctrl_visibility";
+	rename -uuid "25C846E8-4216-D46B-55DD-568AF3403864";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Arm_IK_PV_Ctrl_rotateX";
+	rename -uuid "0E3801B5-4EAD-EACD-7487-25824E76134C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Arm_IK_PV_Ctrl_rotateY";
+	rename -uuid "BCBD99E9-493F-BF05-1697-43906174DFCB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Arm_IK_PV_Ctrl_rotateZ";
+	rename -uuid "2017A7AC-4185-220E-9950-EF9EEB9BFFB2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Arm_IK_PV_Ctrl_scaleX";
+	rename -uuid "EBD39331-4291-42EF-3135-5A89C240AE30";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999989;
+createNode animCurveTU -name "L_Arm_IK_PV_Ctrl_scaleY";
+	rename -uuid "C06DC1DF-4DCC-ECB6-062A-F2AB1F466F54";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999967;
+createNode animCurveTU -name "L_Arm_IK_PV_Ctrl_scaleZ";
+	rename -uuid "639B9988-42BD-3267-A12D-5595BBB97CDB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999978;
+createNode animCurveTU -name "Hip_Ctrl_visibility";
+	rename -uuid "38DEF7CE-498E-CCA8-6420-5496204F7CEF";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "Hip_Ctrl_rotateX";
+	rename -uuid "82AFE3B6-4C39-A3A1-F12F-6A8B45928C8C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "Hip_Ctrl_rotateY";
+	rename -uuid "623A98ED-42B0-D233-E6C5-E0BFFA475FAD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "Hip_Ctrl_rotateZ";
+	rename -uuid "F1B3046C-4545-02DB-F661-08B2270AF3BB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "Hip_Ctrl_scaleX";
+	rename -uuid "5C527CDF-426C-9F29-C742-E4A0F56878BB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Hip_Ctrl_scaleY";
+	rename -uuid "58AD68CD-4F1D-066B-0B25-31A3FB98A750";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Hip_Ctrl_scaleZ";
+	rename -uuid "62C53CC1-4589-5E6B-CE1C-AF95B78B3B4F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Thumb_02_Fnger_Ctrl_visibility";
+	rename -uuid "487190B6-418F-3C52-51BF-38AC0BFE6855";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Thumb_02_Fnger_Ctrl_rotateX";
+	rename -uuid "06E8C121-42E9-393F-85C8-AC9368499695";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Thumb_02_Fnger_Ctrl_rotateY";
+	rename -uuid "B27201F9-4A41-5BF2-F83C-F7865A86FD66";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Thumb_02_Fnger_Ctrl_rotateZ";
+	rename -uuid "D876CAB9-4FDA-2C14-4CD1-1DA907C1BB92";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Thumb_02_Fnger_Ctrl_scaleX";
+	rename -uuid "76D80DD9-4303-E5F9-BD76-39930D49BD2A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Thumb_02_Fnger_Ctrl_scaleY";
+	rename -uuid "7467BE96-4BE1-F747-B553-70A7D267BECF";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Thumb_02_Fnger_Ctrl_scaleZ";
+	rename -uuid "C3C773EA-4A50-675F-B85A-57AB99C61F81";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Index_Fngr_02_Ctrl_visibility";
+	rename -uuid "34BA669B-4E10-C3A0-557D-BB8B7DAB7401";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Index_Fngr_02_Ctrl_rotateX";
+	rename -uuid "79FD4369-43A6-7FC0-AB40-DCA913A1B72C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Index_Fngr_02_Ctrl_rotateY";
+	rename -uuid "FB49C1D9-4E20-8BF8-BA23-F5BACE5FCDE1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Index_Fngr_02_Ctrl_rotateZ";
+	rename -uuid "F1E473CD-419E-4928-1553-71B5BBE340F3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Index_Fngr_02_Ctrl_scaleX";
+	rename -uuid "27866FF3-456C-9C0E-1466-51899704AE58";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Index_Fngr_02_Ctrl_scaleY";
+	rename -uuid "AC958120-4893-D49A-541A-F7AFA5A7D0B7";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Index_Fngr_02_Ctrl_scaleZ";
+	rename -uuid "6BEA8906-4E34-2C13-9AD9-C3B95F5167B6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Head_Ctrl_visibility";
+	rename -uuid "C67AF5AF-4BFA-8118-7D72-F2952ADF0F4C";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "Head_Ctrl_rotateX";
+	rename -uuid "AB7B9166-4E13-BAB6-88EE-138B924468B6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "Head_Ctrl_rotateY";
+	rename -uuid "75931C94-47D5-9DFE-631A-80BD0AD46852";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "Head_Ctrl_rotateZ";
+	rename -uuid "48D728C8-49DC-2600-E1A3-6C8AF8A0C364";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "Head_Ctrl_scaleX";
+	rename -uuid "09BE3D03-4E42-01D8-4A91-ECA09607868B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Head_Ctrl_scaleY";
+	rename -uuid "8449198F-4924-D1F8-CE62-D2AC8A9E83B6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Head_Ctrl_scaleZ";
+	rename -uuid "9B40B03B-49E9-9484-D3EF-73BF4FADDC79";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Pnky_Fngr_02_Ctrl_visibility";
+	rename -uuid "DA717F56-4CD3-DF97-51C8-A3A52CADFCF9";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Pnky_Fngr_02_Ctrl_rotateX";
+	rename -uuid "4CEA7B01-462E-1C50-DAE9-49A083501968";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Pnky_Fngr_02_Ctrl_rotateY";
+	rename -uuid "FB5F4BFC-4F0B-402E-348A-DA9C3F0D99DB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Pnky_Fngr_02_Ctrl_rotateZ";
+	rename -uuid "571A089D-47A3-5B93-E325-789923D879E3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Pnky_Fngr_02_Ctrl_scaleX";
+	rename -uuid "8E8E4078-493C-016A-BFD0-DDB5F4D44D23";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000002;
+createNode animCurveTU -name "L_Pnky_Fngr_02_Ctrl_scaleY";
+	rename -uuid "1FC94EBF-4524-4A7D-49F8-2083B2BC89F5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999989;
+createNode animCurveTU -name "L_Pnky_Fngr_02_Ctrl_scaleZ";
+	rename -uuid "6607F0D9-4E52-40DA-7B4A-C2B57625FB46";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mddle_Fngr_02_Ctrl_visibility";
+	rename -uuid "C4F3D023-4E6B-2EA2-4AF4-03B0CB3198F2";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Mddle_Fngr_02_Ctrl_rotateX";
+	rename -uuid "6587222A-4996-FF9A-DCF2-BC90777802A6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Mddle_Fngr_02_Ctrl_rotateY";
+	rename -uuid "2432388B-4AFC-881D-405A-0494543B9714";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Mddle_Fngr_02_Ctrl_rotateZ";
+	rename -uuid "5DBE9483-4D9F-7C64-B838-70B84CA6F057";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Mddle_Fngr_02_Ctrl_scaleX";
+	rename -uuid "8C20D112-402B-4926-512F-AB8B47AA7343";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mddle_Fngr_02_Ctrl_scaleY";
+	rename -uuid "4C4AE09B-400A-1790-A351-05B06355C04C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mddle_Fngr_02_Ctrl_scaleZ";
+	rename -uuid "3CAD1D52-49CB-63F3-3A28-E3AEC21D5887";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pnky_Fngr_02_Ctrl_visibility";
+	rename -uuid "24D198A5-4D24-8AEB-5D03-629EF943821B";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Pnky_Fngr_02_Ctrl_rotateX";
+	rename -uuid "D4552B6B-4C98-E421-6865-908CB965E030";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Pnky_Fngr_02_Ctrl_rotateY";
+	rename -uuid "0D890D25-47D3-F879-4C55-A1BD49F15FD6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Pnky_Fngr_02_Ctrl_rotateZ";
+	rename -uuid "7144EE96-49DC-CF9E-C824-509C2DB0E431";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Pnky_Fngr_02_Ctrl_scaleX";
+	rename -uuid "8FBDC54D-43CD-9DA4-74F4-4D99398FD1B4";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pnky_Fngr_02_Ctrl_scaleY";
+	rename -uuid "3BAA29F3-44D2-0575-BE70-7594C12FAE4C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Pnky_Fngr_02_Ctrl_scaleZ";
+	rename -uuid "D4D6410C-44B1-DF60-48BA-6C93F9C5390E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Leg_IK_01_Ctrl_visibility";
+	rename -uuid "F8A5841B-4F86-4173-8E02-0BABDAED60DD";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Leg_IK_01_Ctrl_rotateX";
+	rename -uuid "56276D0D-4168-C63A-A349-4E993F55FE09";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Leg_IK_01_Ctrl_rotateY";
+	rename -uuid "294528A3-4FDD-13C9-FD71-1D989401CDF8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Leg_IK_01_Ctrl_rotateZ";
+	rename -uuid "F8A9B693-47A9-8E85-3708-FA98A72CC9D3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Leg_IK_01_Ctrl_scaleX";
+	rename -uuid "704B7DB5-4155-2B10-F819-878E4B22F803";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000002;
+createNode animCurveTU -name "R_Leg_IK_01_Ctrl_scaleY";
+	rename -uuid "8A9E4FFF-4294-B817-2E30-A6AD14F11DD8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1.0000000000000002;
+createNode animCurveTU -name "R_Leg_IK_01_Ctrl_scaleZ";
+	rename -uuid "1835D53B-4D78-ADD9-D8A9-0387813C2284";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Hand_Ctrl_visibility";
+	rename -uuid "12C91FF0-4BF9-8B75-8EED-F9880E16B40F";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Hand_Ctrl_rotateX";
+	rename -uuid "D05DE392-4657-1A2B-CD26-E48E02A1CA51";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 -14.398520081328749;
+createNode animCurveTA -name "L_Hand_Ctrl_rotateY";
+	rename -uuid "21F670E3-456C-DEF3-C7CB-33B6DD216874";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 7.1013380696080279;
+createNode animCurveTA -name "L_Hand_Ctrl_rotateZ";
+	rename -uuid "06F8BA3F-4657-0540-F403-B38AC7BDF8A6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 3.7646845900993697;
+createNode animCurveTU -name "L_Hand_Ctrl_scaleX";
+	rename -uuid "0A27C906-4FDA-5335-522B-099CDB6BF2DD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Hand_Ctrl_scaleY";
+	rename -uuid "F734FC78-40AF-9404-6145-E98F966FAD13";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Hand_Ctrl_scaleZ";
+	rename -uuid "45876B41-4488-7810-5BF5-50A26FFD2757";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "Head_Ctrl_visibility1";
+	rename -uuid "7323B49F-4319-9C74-3A07-518FF0F088B7";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 8 1 16 1 20 1 48 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  5 5 5 5 5;
+createNode animCurveTA -name "Head_Ctrl_rotateX1";
+	rename -uuid "2AE0FBD2-4FCF-025E-E175-90948A8859E3";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -10.608286552526101 8 0.36732997595147554
+		 16 6.9464976096549265 20 24.385745724482799 48 -10.608286552526101;
+createNode animCurveTA -name "Head_Ctrl_rotateY1";
+	rename -uuid "4514A142-4D72-6CC1-3F41-E9A3B2E38C62";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 26.989095016632643 8 38.202717197357707
+		 16 36.285108280944975 20 35.780574806321098 48 26.989095016632643;
+createNode animCurveTA -name "Head_Ctrl_rotateZ1";
+	rename -uuid "E8162893-411C-E9C8-C290-2BA1724F439C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 9.5031870809663754 8 -1.2610018164734129
+		 16 9.6066084991143654 20 1.0640629853735799 48 9.5031870809663754;
+createNode animCurveTU -name "Head_Ctrl_scaleX1";
+	rename -uuid "80E78B85-45A0-1705-9E9F-2FB8DFC8DF62";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 8 1 16 1 20 1 48 1;
+createNode animCurveTU -name "Head_Ctrl_scaleY1";
+	rename -uuid "B943423F-4ED5-C219-1F1D-B4ADFC17531F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 8 1 16 1 20 1 48 1;
+createNode animCurveTU -name "Head_Ctrl_scaleZ1";
+	rename -uuid "779D64AD-4D22-090F-052B-E396A381750B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 8 1 16 1 20 1 48 1;
+createNode animCurveTU -name "R_Mandi_02_Ctrl_visibility";
+	rename -uuid "9571E922-44F4-5DC9-3F8C-64A58D9623AF";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "R_Mandi_02_Ctrl_rotateX";
+	rename -uuid "F9902049-4B3D-5138-CA1C-D5859A9EC656";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Mandi_02_Ctrl_rotateY";
+	rename -uuid "EEFF0DD2-4E46-4D5F-68C4-66892C4819DB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "R_Mandi_02_Ctrl_rotateZ";
+	rename -uuid "9B2CED4D-4F09-3961-204D-77BF00349DA9";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "R_Mandi_02_Ctrl_scaleX";
+	rename -uuid "CFE17050-45DB-4615-D74E-B483F686C379";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mandi_02_Ctrl_scaleY";
+	rename -uuid "1F0AF41A-4EAE-FC47-0F37-219BDCB87B9D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Mandi_02_Ctrl_scaleZ";
+	rename -uuid "BC1540D5-43B1-E755-3E47-3F9195020CFD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Arm_IK_Shldr_Ctrl_visibility";
+	rename -uuid "4951A651-4246-16D3-7DD2-B88425C195C0";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 15 1 25 1 48 1;
+	setAttr -size 4 ".keyTanInType[0:3]"  9 9 9 1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+createNode animCurveTA -name "L_Arm_IK_Shldr_Ctrl_rotateX";
+	rename -uuid "B6A5DFB6-4080-10C3-9836-0E8B0A875E26";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 -28.682188247824119 15 -49.906377017038224
+		 25 -57.925988152270847 48 -28.682188247824119;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTA -name "L_Arm_IK_Shldr_Ctrl_rotateY";
+	rename -uuid "900CE2B3-453B-122D-725F-0CA5C1049DAF";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 -21.343093793936823 15 -23.201508471591101
+		 25 -7.4605334150517919 48 -21.343093793936823;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTA -name "L_Arm_IK_Shldr_Ctrl_rotateZ";
+	rename -uuid "3333C36A-4F1F-2493-841F-8CA9FE2002CF";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 -36.697151665731177 15 -27.017709239497851
+		 25 -33.152886216200784 48 -36.697151665731177;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "L_Arm_IK_Shldr_Ctrl_scaleX";
+	rename -uuid "1E5C27A9-4DAD-9E19-C291-B5AFF30F0915";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 15 1 25 1 48 1;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "L_Arm_IK_Shldr_Ctrl_scaleY";
+	rename -uuid "FCBFB1BD-4B2F-D777-2C0A-CC98F1C9491A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 15 1 25 1 48 1;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "L_Arm_IK_Shldr_Ctrl_scaleZ";
+	rename -uuid "D4F41A1A-4A65-C1A2-DDFD-5ABE89D061A4";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 4 ".keyTimeValue[0:3]"  0 1 15 1 25 1 48 1;
+	setAttr -size 4 ".keyTanInType[3]"  1;
+	setAttr -size 4 ".keyTanOutType[3]"  1;
+	setAttr -size 4 ".keyTanInX[3]"  1;
+	setAttr -size 4 ".keyTanInY[3]"  0;
+	setAttr -size 4 ".keyTanOutX[3]"  1;
+	setAttr -size 4 ".keyTanOutY[3]"  0;
+createNode animCurveTU -name "L_Pntr_Fngr_02_Ctrl_visibility";
+	rename -uuid "9EF14253-4671-195B-700E-3E9CF4A83772";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Pntr_Fngr_02_Ctrl_rotateX";
+	rename -uuid "8A76F1C9-426B-2DDC-BF0B-A5BDC4AF5560";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Pntr_Fngr_02_Ctrl_rotateY";
+	rename -uuid "4A84A824-4AD7-050F-E31B-81AD9F16A02F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Pntr_Fngr_02_Ctrl_rotateZ";
+	rename -uuid "F9946B60-471B-FE2D-E8FE-308BB876461D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Pntr_Fngr_02_Ctrl_scaleX";
+	rename -uuid "59C3C078-47DC-4DFA-391D-7CBFD446D94B";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Pntr_Fngr_02_Ctrl_scaleY";
+	rename -uuid "ED067135-4171-0FAE-85F6-7685538E4031";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Pntr_Fngr_02_Ctrl_scaleZ";
+	rename -uuid "61CB1BB1-4DC6-C668-3AE0-9688B4C8D473";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999989;
+createNode animCurveTU -name "Body_Ctrl_visibility";
+	rename -uuid "55009034-400C-43DC-0028-27BBB21ED6E1";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 12 1 24 1 36 1 48 1;
+	setAttr -size 5 ".keyTanInType[0:4]"  9 9 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+createNode animCurveTA -name "Body_Ctrl_rotateX";
+	rename -uuid "F6529426-400D-374F-45CD-7EB9A97F3F27";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 12 0 24 0 36 0 48 0;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTA -name "Body_Ctrl_rotateY";
+	rename -uuid "06BBEAD6-4667-99A3-A329-B9A51406B750";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 12 0 24 0 36 0 48 0;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTA -name "Body_Ctrl_rotateZ";
+	rename -uuid "3028855E-4A06-CBA8-D53D-458CA267370A";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 12 0 24 0 36 0 48 0;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTU -name "Body_Ctrl_scaleX";
+	rename -uuid "346F35C9-4B01-A3FF-C9EA-2694E00525ED";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 12 1 24 1 36 1 48 1;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTU -name "Body_Ctrl_scaleY";
+	rename -uuid "38BEBE7D-434E-7013-1E45-04ADEF1CA197";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 12 1 24 1 36 1 48 1;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTU -name "Body_Ctrl_scaleZ";
+	rename -uuid "018E7CBB-49A9-2B1C-FB42-A3B250A71199";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 12 1 24 1 36 1 48 1;
+	setAttr -size 5 ".keyTanInType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanOutType[0:4]"  18 18 1 1 1;
+	setAttr -size 5 ".keyTanInX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanInY[2:4]"  0 0 0;
+	setAttr -size 5 ".keyTanOutX[2:4]"  1 1 1;
+	setAttr -size 5 ".keyTanOutY[2:4]"  0 0 0;
+createNode animCurveTU -name "L_Index_Fngr_02_Ctrl_visibility";
+	rename -uuid "0E06F926-431C-2D99-6A73-F0BB2928ADA5";
+	setAttr ".tangentType" 9;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+	setAttr ".keyTanOutType[0]"  5;
+createNode animCurveTA -name "L_Index_Fngr_02_Ctrl_rotateX";
+	rename -uuid "E8C3CEA3-4714-361C-52AB-D6A45070C280";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Index_Fngr_02_Ctrl_rotateY";
+	rename -uuid "6172B89A-4D0A-35A2-AF85-6FACE3F64EA2";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTA -name "L_Index_Fngr_02_Ctrl_rotateZ";
+	rename -uuid "6E1184D0-4243-96CB-6DF7-3C9CDC9DCF6C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0;
+createNode animCurveTU -name "L_Index_Fngr_02_Ctrl_scaleX";
+	rename -uuid "7FFA0BFA-4EDF-BC14-45D7-D28FB83B12E8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 0.99999999999999989;
+createNode animCurveTU -name "L_Index_Fngr_02_Ctrl_scaleY";
+	rename -uuid "22854143-44A5-4439-7F2A-918E016A2B2C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "L_Index_Fngr_02_Ctrl_scaleZ";
+	rename -uuid "E318EBD7-4CBA-41FC-4F1F-67A8B6F15F8D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr ".keyTimeValue[0]"  0 1;
+createNode animCurveTU -name "R_Leg_IK_02_Ctrl_FollowTarget";
+	rename -uuid "7DD3A191-4AEF-AB19-861E-DBB1A05C549C";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 11 0 20 0 24 0 36 0 48 0;
+	setAttr -size 6 ".keyTanInType[0:5]"  9 9 9 9 9 1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+createNode animCurveTU -name "R_Leg_IK_02_Ctrl_scaleZ";
+	rename -uuid "4ADD2F5C-47F3-70D6-FDE8-3EABAD062C07";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0.99999999999999978 11 0.99999999999999978
+		 20 0.99999999999999978 24 0.99999999999999978 36 0.99999999999999978 48 0.99999999999999978;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTU -name "R_Leg_IK_02_Ctrl_scaleY";
+	rename -uuid "6FCA77E8-4DE8-8599-F984-28A4CFAFD3FD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0.99999999999999978 11 0.99999999999999978
+		 20 0.99999999999999978 24 0.99999999999999978 36 0.99999999999999978 48 0.99999999999999978;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTU -name "R_Leg_IK_02_Ctrl_scaleX";
+	rename -uuid "13D45402-4468-6559-24ED-4190D0005912";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1.0000000000000002 11 1.0000000000000002
+		 20 1.0000000000000002 24 1.0000000000000002 36 1.0000000000000002 48 1.0000000000000002;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTA -name "R_Leg_IK_02_Ctrl_rotateZ";
+	rename -uuid "2306FB49-4306-3116-75A6-B8B64A4811D6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 19.183365562309056 11 94.225623236763312
+		 20 48.399924367154092 24 13.641279261925314 36 -7.0267043302640895 48 19.183365562309056;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTA -name "R_Leg_IK_02_Ctrl_rotateY";
+	rename -uuid "64D3D987-4BF3-523C-A6D8-139F97523700";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 11 0 20 0 24 0 36 0 48 0;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTA -name "R_Leg_IK_02_Ctrl_rotateX";
+	rename -uuid "1EC9CACA-483B-388B-EEC3-A5955A16D3C1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 0 11 0 20 0 24 0 36 0 48 0;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTL -name "R_Leg_IK_02_Ctrl_translateZ";
+	rename -uuid "A67D6C32-4731-5D37-7227-7D94AB8D9A54";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 -0.32528680740102722 11 0.22804989656812222
+		 20 0.37940003011212303 24 0.53811060610794448 36 0.067755213777579135 48 -0.32528680740102722;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTL -name "R_Leg_IK_02_Ctrl_translateY";
+	rename -uuid "A382300C-4726-0B97-5767-C9892095FF80";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 -7.5936051191155478 11 2.0879060065059036
+		 20 4.5504232850894271 24 8.0394987774380411 36 0.52793278458355053 48 -7.5936051191155478;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTL -name "R_Leg_IK_02_Ctrl_translateX";
+	rename -uuid "CBC01D9F-472C-49CA-C5B6-AD897E233D3E";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 2.4785988095007765 11 6.7637816694756987
+		 20 7.9021266290571681 24 7.8958634346782475 36 2.2789878545171032 48 2.4785988095007765;
+	setAttr -size 6 ".keyTanInType[5]"  1;
+	setAttr -size 6 ".keyTanOutType[5]"  1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
+	setAttr -size 6 ".keyTanOutX[5]"  1;
+	setAttr -size 6 ".keyTanOutY[5]"  0;
+createNode animCurveTU -name "R_Leg_IK_02_Ctrl_visibility";
+	rename -uuid "85029B05-4ADE-3988-F04B-B1ADD4B46C03";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 6 ".keyTimeValue[0:5]"  0 1 11 1 20 1 24 1 36 1 48 1;
+	setAttr -size 6 ".keyTanInType[0:5]"  9 9 9 9 9 1;
+	setAttr -size 6 ".keyTanInX[5]"  1;
+	setAttr -size 6 ".keyTanInY[5]"  0;
 select -noExpand :time1;
 	setAttr -alteredValue -keyable on ".caching";
 	setAttr -alteredValue -channelBox on ".isHistoricallyInteresting";
 	setAttr -alteredValue -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr -keyable on ".outTime" 0;
-	setAttr -alteredValue ".unwarpedTime";
+	setAttr -keyable on ".outTime" 28;
+	setAttr -alteredValue ".unwarpedTime" 28;
 	setAttr -alteredValue -keyable on ".enableTimewarp";
 	setAttr -alteredValue -keyable on ".timecodeProductionStart";
 	setAttr -alteredValue -keyable on ".timecodeMayaStart";
@@ -88316,9 +91473,138 @@ connectAttr "Control.drawInfo" "Control_Grp.drawOverride";
 connectAttr "COG_Ctrl.globalScale" "COG_Ctrl.scaleX" -lock on;
 connectAttr "COG_Ctrl.globalScale" "COG_Ctrl.scaleY" -lock on;
 connectAttr "COG_Ctrl.globalScale" "COG_Ctrl.scaleZ" -lock on;
+connectAttr "COG_Ctrl_IKFK.output" "COG_Ctrl.IKFK";
+connectAttr "COG_Ctrl_globalScale.output" "COG_Ctrl.globalScale";
+connectAttr "COG_Ctrl_translateX.output" "COG_Ctrl.translateX";
+connectAttr "COG_Ctrl_translateY.output" "COG_Ctrl.translateY";
+connectAttr "COG_Ctrl_translateZ.output" "COG_Ctrl.translateZ";
+connectAttr "COG_Ctrl_rotateX.output" "COG_Ctrl.rotateX";
+connectAttr "COG_Ctrl_rotateY.output" "COG_Ctrl.rotateY";
+connectAttr "COG_Ctrl_rotateZ.output" "COG_Ctrl.rotateZ";
+connectAttr "COG_Ctrl_visibility.output" "COG_Ctrl.visibility";
 connectAttr "makeNurbCircle2.outputCurve" "COG_CtrlShape.create";
+connectAttr "Body_Ctrl_translateX.output" "Body_Ctrl.translateX";
+connectAttr "Body_Ctrl_translateY.output" "Body_Ctrl.translateY";
+connectAttr "Body_Ctrl_translateZ.output" "Body_Ctrl.translateZ";
+connectAttr "Body_Ctrl_rotateX.output" "Body_Ctrl.rotateX";
+connectAttr "Body_Ctrl_rotateY.output" "Body_Ctrl.rotateY";
+connectAttr "Body_Ctrl_rotateZ.output" "Body_Ctrl.rotateZ";
+connectAttr "Body_Ctrl_scaleX.output" "Body_Ctrl.scaleX";
+connectAttr "Body_Ctrl_scaleY.output" "Body_Ctrl.scaleY";
+connectAttr "Body_Ctrl_scaleZ.output" "Body_Ctrl.scaleZ";
+connectAttr "Body_Ctrl_visibility.output" "Body_Ctrl.visibility";
+connectAttr "Spine_02_Ctrl_translateX.output" "Spine_02_Ctrl.translateX";
+connectAttr "Spine_02_Ctrl_translateY.output" "Spine_02_Ctrl.translateY";
+connectAttr "Spine_02_Ctrl_translateZ.output" "Spine_02_Ctrl.translateZ";
+connectAttr "Spine_02_Ctrl_rotateX.output" "Spine_02_Ctrl.rotateX";
+connectAttr "Spine_02_Ctrl_rotateY.output" "Spine_02_Ctrl.rotateY";
+connectAttr "Spine_02_Ctrl_rotateZ.output" "Spine_02_Ctrl.rotateZ";
+connectAttr "Spine_02_Ctrl_scaleX.output" "Spine_02_Ctrl.scaleX";
+connectAttr "Spine_02_Ctrl_scaleY.output" "Spine_02_Ctrl.scaleY";
+connectAttr "Spine_02_Ctrl_scaleZ.output" "Spine_02_Ctrl.scaleZ";
+connectAttr "Spine_02_Ctrl_visibility.output" "Spine_02_Ctrl.visibility";
+connectAttr "Spine_03_Ctrl_translateX.output" "Spine_03_Ctrl.translateX";
+connectAttr "Spine_03_Ctrl_translateY.output" "Spine_03_Ctrl.translateY";
+connectAttr "Spine_03_Ctrl_translateZ.output" "Spine_03_Ctrl.translateZ";
+connectAttr "Spine_03_Ctrl_rotateX.output" "Spine_03_Ctrl.rotateX";
+connectAttr "Spine_03_Ctrl_rotateY.output" "Spine_03_Ctrl.rotateY";
+connectAttr "Spine_03_Ctrl_rotateZ.output" "Spine_03_Ctrl.rotateZ";
+connectAttr "Spine_03_Ctrl_scaleX.output" "Spine_03_Ctrl.scaleX";
+connectAttr "Spine_03_Ctrl_scaleY.output" "Spine_03_Ctrl.scaleY";
+connectAttr "Spine_03_Ctrl_scaleZ.output" "Spine_03_Ctrl.scaleZ";
+connectAttr "Spine_03_Ctrl_visibility.output" "Spine_03_Ctrl.visibility";
 connectAttr "IKFK_REV.outputX" "L_Arm_FK_01_Jnt_Ctrl_Grp.visibility";
 connectAttr "IKFK_REV.outputX" "R_Arm_FK_01_Jnt_Ctrl_Grp.visibility";
+connectAttr "Head_Ctrl_translateX.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.translateX"
+		;
+connectAttr "Head_Ctrl_translateY.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.translateY"
+		;
+connectAttr "Head_Ctrl_translateZ.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.translateZ"
+		;
+connectAttr "Head_Ctrl_rotateX.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.rotateX"
+		;
+connectAttr "Head_Ctrl_rotateY.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.rotateY"
+		;
+connectAttr "Head_Ctrl_rotateZ.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.rotateZ"
+		;
+connectAttr "Head_Ctrl_scaleX.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.scaleX"
+		;
+connectAttr "Head_Ctrl_scaleY.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.scaleY"
+		;
+connectAttr "Head_Ctrl_scaleZ.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.scaleZ"
+		;
+connectAttr "Head_Ctrl_visibility.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl.visibility"
+		;
+connectAttr "Head_Ctrl_translateX1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.translateX"
+		;
+connectAttr "Head_Ctrl_translateY1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.translateY"
+		;
+connectAttr "Head_Ctrl_translateZ1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.translateZ"
+		;
+connectAttr "Head_Ctrl_rotateX1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.rotateX"
+		;
+connectAttr "Head_Ctrl_rotateY1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.rotateY"
+		;
+connectAttr "Head_Ctrl_rotateZ1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.rotateZ"
+		;
+connectAttr "Head_Ctrl_scaleX1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.scaleX"
+		;
+connectAttr "Head_Ctrl_scaleY1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.scaleY"
+		;
+connectAttr "Head_Ctrl_scaleZ1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.scaleZ"
+		;
+connectAttr "Head_Ctrl_visibility1.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|Neck_Ctrl_Grp|Head_Ctrl|Head_Ctrl_Grp|Head_Ctrl.visibility"
+		;
+connectAttr "Lwr_Jaw_Ctrl_rotateX.output" "Lwr_Jaw_Ctrl.rotateX";
+connectAttr "Lwr_Jaw_Ctrl_rotateY.output" "Lwr_Jaw_Ctrl.rotateY";
+connectAttr "Lwr_Jaw_Ctrl_rotateZ.output" "Lwr_Jaw_Ctrl.rotateZ";
+connectAttr "Lwr_Jaw_Ctrl_visibility.output" "Lwr_Jaw_Ctrl.visibility";
+connectAttr "Lwr_Jaw_Ctrl_translateX.output" "Lwr_Jaw_Ctrl.translateX";
+connectAttr "Lwr_Jaw_Ctrl_translateY.output" "Lwr_Jaw_Ctrl.translateY";
+connectAttr "Lwr_Jaw_Ctrl_translateZ.output" "Lwr_Jaw_Ctrl.translateZ";
+connectAttr "Lwr_Jaw_Ctrl_scaleX.output" "Lwr_Jaw_Ctrl.scaleX";
+connectAttr "Lwr_Jaw_Ctrl_scaleY.output" "Lwr_Jaw_Ctrl.scaleY";
+connectAttr "Lwr_Jaw_Ctrl_scaleZ.output" "Lwr_Jaw_Ctrl.scaleZ";
+connectAttr "L_Mandi_01_Ctrl_translateX.output" "L_Mandi_01_Ctrl.translateX";
+connectAttr "L_Mandi_01_Ctrl_translateY.output" "L_Mandi_01_Ctrl.translateY";
+connectAttr "L_Mandi_01_Ctrl_translateZ.output" "L_Mandi_01_Ctrl.translateZ";
+connectAttr "L_Mandi_01_Ctrl_rotateX.output" "L_Mandi_01_Ctrl.rotateX";
+connectAttr "L_Mandi_01_Ctrl_rotateY.output" "L_Mandi_01_Ctrl.rotateY";
+connectAttr "L_Mandi_01_Ctrl_rotateZ.output" "L_Mandi_01_Ctrl.rotateZ";
+connectAttr "L_Mandi_01_Ctrl_scaleX.output" "L_Mandi_01_Ctrl.scaleX";
+connectAttr "L_Mandi_01_Ctrl_scaleY.output" "L_Mandi_01_Ctrl.scaleY";
+connectAttr "L_Mandi_01_Ctrl_scaleZ.output" "L_Mandi_01_Ctrl.scaleZ";
+connectAttr "L_Mandi_01_Ctrl_visibility.output" "L_Mandi_01_Ctrl.visibility";
+connectAttr "L_Mandi_02_Ctrl_translateX.output" "L_Mandi_02_Ctrl.translateX";
+connectAttr "L_Mandi_02_Ctrl_translateY.output" "L_Mandi_02_Ctrl.translateY";
+connectAttr "L_Mandi_02_Ctrl_translateZ.output" "L_Mandi_02_Ctrl.translateZ";
+connectAttr "L_Mandi_02_Ctrl_rotateX.output" "L_Mandi_02_Ctrl.rotateX";
+connectAttr "L_Mandi_02_Ctrl_rotateY.output" "L_Mandi_02_Ctrl.rotateY";
+connectAttr "L_Mandi_02_Ctrl_rotateZ.output" "L_Mandi_02_Ctrl.rotateZ";
+connectAttr "L_Mandi_02_Ctrl_scaleX.output" "L_Mandi_02_Ctrl.scaleX";
+connectAttr "L_Mandi_02_Ctrl_scaleY.output" "L_Mandi_02_Ctrl.scaleY";
+connectAttr "L_Mandi_02_Ctrl_scaleZ.output" "L_Mandi_02_Ctrl.scaleZ";
+connectAttr "L_Mandi_02_Ctrl_visibility.output" "L_Mandi_02_Ctrl.visibility";
+connectAttr "R_Mandi_01_Ctrl_translateX.output" "R_Mandi_01_Ctrl.translateX";
+connectAttr "R_Mandi_01_Ctrl_translateY.output" "R_Mandi_01_Ctrl.translateY";
+connectAttr "R_Mandi_01_Ctrl_translateZ.output" "R_Mandi_01_Ctrl.translateZ";
+connectAttr "R_Mandi_01_Ctrl_rotateX.output" "R_Mandi_01_Ctrl.rotateX";
+connectAttr "R_Mandi_01_Ctrl_rotateY.output" "R_Mandi_01_Ctrl.rotateY";
+connectAttr "R_Mandi_01_Ctrl_rotateZ.output" "R_Mandi_01_Ctrl.rotateZ";
+connectAttr "R_Mandi_01_Ctrl_scaleX.output" "R_Mandi_01_Ctrl.scaleX";
+connectAttr "R_Mandi_01_Ctrl_scaleY.output" "R_Mandi_01_Ctrl.scaleY";
+connectAttr "R_Mandi_01_Ctrl_scaleZ.output" "R_Mandi_01_Ctrl.scaleZ";
+connectAttr "R_Mandi_01_Ctrl_visibility.output" "R_Mandi_01_Ctrl.visibility";
+connectAttr "R_Mandi_02_Ctrl_translateX.output" "R_Mandi_02_Ctrl.translateX";
+connectAttr "R_Mandi_02_Ctrl_translateY.output" "R_Mandi_02_Ctrl.translateY";
+connectAttr "R_Mandi_02_Ctrl_translateZ.output" "R_Mandi_02_Ctrl.translateZ";
+connectAttr "R_Mandi_02_Ctrl_rotateX.output" "R_Mandi_02_Ctrl.rotateX";
+connectAttr "R_Mandi_02_Ctrl_rotateY.output" "R_Mandi_02_Ctrl.rotateY";
+connectAttr "R_Mandi_02_Ctrl_rotateZ.output" "R_Mandi_02_Ctrl.rotateZ";
+connectAttr "R_Mandi_02_Ctrl_scaleX.output" "R_Mandi_02_Ctrl.scaleX";
+connectAttr "R_Mandi_02_Ctrl_scaleY.output" "R_Mandi_02_Ctrl.scaleY";
+connectAttr "R_Mandi_02_Ctrl_scaleZ.output" "R_Mandi_02_Ctrl.scaleZ";
+connectAttr "R_Mandi_02_Ctrl_visibility.output" "R_Mandi_02_Ctrl.visibility";
 connectAttr "R_Arm_IK_Shldr_Ctrl_Grp_parentConstraint1.constraintTranslateX" "R_Arm_IK_Shldr_Ctrl_Grp.translateX"
 		;
 connectAttr "R_Arm_IK_Shldr_Ctrl_Grp_parentConstraint1.constraintTranslateY" "R_Arm_IK_Shldr_Ctrl_Grp.translateY"
@@ -88338,6 +91624,20 @@ connectAttr "R_Arm_IK_Shldr_Ctrl_Grp_scaleConstraint1.constraintScaleY" "R_Arm_I
 connectAttr "R_Arm_IK_Shldr_Ctrl_Grp_scaleConstraint1.constraintScaleZ" "R_Arm_IK_Shldr_Ctrl_Grp.scaleZ"
 		;
 connectAttr "COG_Ctrl.IKFK" "R_Arm_IK_Shldr_Ctrl_Grp.visibility";
+connectAttr "R_Arm_IK_Shldr_Ctrl_translateX.output" "R_Arm_IK_Shldr_Ctrl.translateX"
+		;
+connectAttr "R_Arm_IK_Shldr_Ctrl_translateY.output" "R_Arm_IK_Shldr_Ctrl.translateY"
+		;
+connectAttr "R_Arm_IK_Shldr_Ctrl_translateZ.output" "R_Arm_IK_Shldr_Ctrl.translateZ"
+		;
+connectAttr "R_Arm_IK_Shldr_Ctrl_rotateX.output" "R_Arm_IK_Shldr_Ctrl.rotateX";
+connectAttr "R_Arm_IK_Shldr_Ctrl_rotateY.output" "R_Arm_IK_Shldr_Ctrl.rotateY";
+connectAttr "R_Arm_IK_Shldr_Ctrl_rotateZ.output" "R_Arm_IK_Shldr_Ctrl.rotateZ";
+connectAttr "R_Arm_IK_Shldr_Ctrl_scaleX.output" "R_Arm_IK_Shldr_Ctrl.scaleX";
+connectAttr "R_Arm_IK_Shldr_Ctrl_scaleY.output" "R_Arm_IK_Shldr_Ctrl.scaleY";
+connectAttr "R_Arm_IK_Shldr_Ctrl_scaleZ.output" "R_Arm_IK_Shldr_Ctrl.scaleZ";
+connectAttr "R_Arm_IK_Shldr_Ctrl_visibility.output" "R_Arm_IK_Shldr_Ctrl.visibility"
+		;
 connectAttr "R_Arm_IK_Jnt_Ctrl_Follow_PCon.constraintTranslateX" "R_Arm_IK_03_Jnt_Ctrl_Grp.translateX"
 		;
 connectAttr "R_Arm_IK_Jnt_Ctrl_Follow_PCon.constraintTranslateY" "R_Arm_IK_03_Jnt_Ctrl_Grp.translateY"
@@ -88350,6 +91650,22 @@ connectAttr "R_Arm_IK_Jnt_Ctrl_Follow_PCon.constraintRotateY" "R_Arm_IK_03_Jnt_C
 		;
 connectAttr "R_Arm_IK_Jnt_Ctrl_Follow_PCon.constraintRotateZ" "R_Arm_IK_03_Jnt_Ctrl_Grp.rotateZ"
 		;
+connectAttr "R_Arm_IK_Jnt_Ctrl_rotateX.output" "R_Arm_IK_Jnt_Ctrl.rotateX";
+connectAttr "R_Arm_IK_Jnt_Ctrl_rotateY.output" "R_Arm_IK_Jnt_Ctrl.rotateY";
+connectAttr "R_Arm_IK_Jnt_Ctrl_rotateZ.output" "R_Arm_IK_Jnt_Ctrl.rotateZ";
+connectAttr "R_Arm_IK_Jnt_Ctrl_FollowTarget.output" "R_Arm_IK_Jnt_Ctrl.FollowTarget"
+		;
+connectAttr "R_Arm_IK_Jnt_Ctrl_visibility.output" "R_Arm_IK_Jnt_Ctrl.visibility"
+		;
+connectAttr "R_Arm_IK_Jnt_Ctrl_translateX.output" "R_Arm_IK_Jnt_Ctrl.translateX"
+		;
+connectAttr "R_Arm_IK_Jnt_Ctrl_translateY.output" "R_Arm_IK_Jnt_Ctrl.translateY"
+		;
+connectAttr "R_Arm_IK_Jnt_Ctrl_translateZ.output" "R_Arm_IK_Jnt_Ctrl.translateZ"
+		;
+connectAttr "R_Arm_IK_Jnt_Ctrl_scaleX.output" "R_Arm_IK_Jnt_Ctrl.scaleX";
+connectAttr "R_Arm_IK_Jnt_Ctrl_scaleY.output" "R_Arm_IK_Jnt_Ctrl.scaleY";
+connectAttr "R_Arm_IK_Jnt_Ctrl_scaleZ.output" "R_Arm_IK_Jnt_Ctrl.scaleZ";
 connectAttr "R_Arm_IK_01_Jnt.message" "R_Arm_IK_Handle.startJoint";
 connectAttr "effector2.handlePath" "R_Arm_IK_Handle.endEffector";
 connectAttr "ikRPsolver.message" "R_Arm_IK_Handle.ikSolver";
@@ -88494,6 +91810,42 @@ connectAttr "L_Arm_IK_Shldr_Ctrl_Grp_scaleConstraint1.constraintScaleY" "L_Arm_I
 connectAttr "L_Arm_IK_Shldr_Ctrl_Grp_scaleConstraint1.constraintScaleZ" "L_Arm_IK_Shldr_Ctrl_Grp.scaleZ"
 		;
 connectAttr "COG_Ctrl.IKFK" "L_Arm_IK_Shldr_Ctrl_Grp.visibility";
+connectAttr "L_Arm_IK_Shldr_Ctrl_translateX.output" "L_Arm_IK_Shldr_Ctrl.translateX"
+		;
+connectAttr "L_Arm_IK_Shldr_Ctrl_translateY.output" "L_Arm_IK_Shldr_Ctrl.translateY"
+		;
+connectAttr "L_Arm_IK_Shldr_Ctrl_translateZ.output" "L_Arm_IK_Shldr_Ctrl.translateZ"
+		;
+connectAttr "L_Arm_IK_Shldr_Ctrl_rotateX.output" "L_Arm_IK_Shldr_Ctrl.rotateX";
+connectAttr "L_Arm_IK_Shldr_Ctrl_rotateY.output" "L_Arm_IK_Shldr_Ctrl.rotateY";
+connectAttr "L_Arm_IK_Shldr_Ctrl_rotateZ.output" "L_Arm_IK_Shldr_Ctrl.rotateZ";
+connectAttr "L_Arm_IK_Shldr_Ctrl_scaleX.output" "L_Arm_IK_Shldr_Ctrl.scaleX";
+connectAttr "L_Arm_IK_Shldr_Ctrl_scaleY.output" "L_Arm_IK_Shldr_Ctrl.scaleY";
+connectAttr "L_Arm_IK_Shldr_Ctrl_scaleZ.output" "L_Arm_IK_Shldr_Ctrl.scaleZ";
+connectAttr "L_Arm_IK_Shldr_Ctrl_visibility.output" "L_Arm_IK_Shldr_Ctrl.visibility"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_rotateX.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.rotateX"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_rotateY.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.rotateY"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_rotateZ.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.rotateZ"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_visibility.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.visibility"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_translateX.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.translateX"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_translateY.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.translateY"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_translateZ.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.translateZ"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_scaleX.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.scaleX"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_scaleY.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.scaleY"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_scaleZ.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.scaleZ"
+		;
+connectAttr "L_Arm_IK_Jnt_Ctrl_FollowTarget.output" "|Monster_Node|Control_Grp|COG_Ctrl_Grp|COG_Ctrl|Transform_Ctrl_Grp|Transform_Ctrl|Body_Ctrl_Grp|Body_Ctrl|Spine_02_Ctrl_Grp|Spine_02_Ctrl|Spine_03_Ctrl_Grp|Spine_03_Ctrl|L_Arm_IK_Shldr_Ctrl_Grp|L_Arm_IK_Shldr_Ctrl|L_Arm_IK_Jnt_Ctrl|L_Arm_IK_Jnt_Ctrl.FollowTarget"
+		;
 connectAttr "L_Arm_IK_01_Jnt.message" "L_Arm_IK_Handle.startJoint";
 connectAttr "effector1.handlePath" "L_Arm_IK_Handle.endEffector";
 connectAttr "ikRPsolver.message" "L_Arm_IK_Handle.ikSolver";
@@ -88574,6 +91926,180 @@ connectAttr "L_Hand_Ctrl_Grp_scaleConstraint1.constraintScaleX" "L_Hand_Ctrl_Grp
 connectAttr "L_Hand_Ctrl_Grp_scaleConstraint1.constraintScaleY" "L_Hand_Ctrl_Grp.scaleY"
 		;
 connectAttr "L_Hand_Ctrl_Grp_scaleConstraint1.constraintScaleZ" "L_Hand_Ctrl_Grp.scaleZ"
+		;
+connectAttr "L_Hand_Ctrl_translateX.output" "L_Hand_Ctrl.translateX";
+connectAttr "L_Hand_Ctrl_translateY.output" "L_Hand_Ctrl.translateY";
+connectAttr "L_Hand_Ctrl_translateZ.output" "L_Hand_Ctrl.translateZ";
+connectAttr "L_Hand_Ctrl_rotateX.output" "L_Hand_Ctrl.rotateX";
+connectAttr "L_Hand_Ctrl_rotateY.output" "L_Hand_Ctrl.rotateY";
+connectAttr "L_Hand_Ctrl_rotateZ.output" "L_Hand_Ctrl.rotateZ";
+connectAttr "L_Hand_Ctrl_scaleX.output" "L_Hand_Ctrl.scaleX";
+connectAttr "L_Hand_Ctrl_scaleY.output" "L_Hand_Ctrl.scaleY";
+connectAttr "L_Hand_Ctrl_scaleZ.output" "L_Hand_Ctrl.scaleZ";
+connectAttr "L_Hand_Ctrl_visibility.output" "L_Hand_Ctrl.visibility";
+connectAttr "L_Pnky_Fngr_01_Ctrl_translateX.output" "L_Pnky_Fngr_01_Ctrl.translateX"
+		;
+connectAttr "L_Pnky_Fngr_01_Ctrl_translateY.output" "L_Pnky_Fngr_01_Ctrl.translateY"
+		;
+connectAttr "L_Pnky_Fngr_01_Ctrl_translateZ.output" "L_Pnky_Fngr_01_Ctrl.translateZ"
+		;
+connectAttr "L_Pnky_Fngr_01_Ctrl_rotateX.output" "L_Pnky_Fngr_01_Ctrl.rotateX";
+connectAttr "L_Pnky_Fngr_01_Ctrl_rotateY.output" "L_Pnky_Fngr_01_Ctrl.rotateY";
+connectAttr "L_Pnky_Fngr_01_Ctrl_rotateZ.output" "L_Pnky_Fngr_01_Ctrl.rotateZ";
+connectAttr "L_Pnky_Fngr_01_Ctrl_scaleX.output" "L_Pnky_Fngr_01_Ctrl.scaleX";
+connectAttr "L_Pnky_Fngr_01_Ctrl_scaleY.output" "L_Pnky_Fngr_01_Ctrl.scaleY";
+connectAttr "L_Pnky_Fngr_01_Ctrl_scaleZ.output" "L_Pnky_Fngr_01_Ctrl.scaleZ";
+connectAttr "L_Pnky_Fngr_01_Ctrl_visibility.output" "L_Pnky_Fngr_01_Ctrl.visibility"
+		;
+connectAttr "L_Pnky_Fngr_02_Ctrl_translateX.output" "L_Pnky_Fngr_02_Ctrl.translateX"
+		;
+connectAttr "L_Pnky_Fngr_02_Ctrl_translateY.output" "L_Pnky_Fngr_02_Ctrl.translateY"
+		;
+connectAttr "L_Pnky_Fngr_02_Ctrl_translateZ.output" "L_Pnky_Fngr_02_Ctrl.translateZ"
+		;
+connectAttr "L_Pnky_Fngr_02_Ctrl_rotateX.output" "L_Pnky_Fngr_02_Ctrl.rotateX";
+connectAttr "L_Pnky_Fngr_02_Ctrl_rotateY.output" "L_Pnky_Fngr_02_Ctrl.rotateY";
+connectAttr "L_Pnky_Fngr_02_Ctrl_rotateZ.output" "L_Pnky_Fngr_02_Ctrl.rotateZ";
+connectAttr "L_Pnky_Fngr_02_Ctrl_scaleX.output" "L_Pnky_Fngr_02_Ctrl.scaleX";
+connectAttr "L_Pnky_Fngr_02_Ctrl_scaleY.output" "L_Pnky_Fngr_02_Ctrl.scaleY";
+connectAttr "L_Pnky_Fngr_02_Ctrl_scaleZ.output" "L_Pnky_Fngr_02_Ctrl.scaleZ";
+connectAttr "L_Pnky_Fngr_02_Ctrl_visibility.output" "L_Pnky_Fngr_02_Ctrl.visibility"
+		;
+connectAttr "L_Index_Fngr_01_Ctrl_translateX.output" "L_Index_Fngr_01_Ctrl.translateX"
+		;
+connectAttr "L_Index_Fngr_01_Ctrl_translateY.output" "L_Index_Fngr_01_Ctrl.translateY"
+		;
+connectAttr "L_Index_Fngr_01_Ctrl_translateZ.output" "L_Index_Fngr_01_Ctrl.translateZ"
+		;
+connectAttr "L_Index_Fngr_01_Ctrl_rotateX.output" "L_Index_Fngr_01_Ctrl.rotateX"
+		;
+connectAttr "L_Index_Fngr_01_Ctrl_rotateY.output" "L_Index_Fngr_01_Ctrl.rotateY"
+		;
+connectAttr "L_Index_Fngr_01_Ctrl_rotateZ.output" "L_Index_Fngr_01_Ctrl.rotateZ"
+		;
+connectAttr "L_Index_Fngr_01_Ctrl_scaleX.output" "L_Index_Fngr_01_Ctrl.scaleX";
+connectAttr "L_Index_Fngr_01_Ctrl_scaleY.output" "L_Index_Fngr_01_Ctrl.scaleY";
+connectAttr "L_Index_Fngr_01_Ctrl_scaleZ.output" "L_Index_Fngr_01_Ctrl.scaleZ";
+connectAttr "L_Index_Fngr_01_Ctrl_visibility.output" "L_Index_Fngr_01_Ctrl.visibility"
+		;
+connectAttr "L_Index_Fngr_02_Ctrl_translateX.output" "L_Index_Fngr_02_Ctrl.translateX"
+		;
+connectAttr "L_Index_Fngr_02_Ctrl_translateY.output" "L_Index_Fngr_02_Ctrl.translateY"
+		;
+connectAttr "L_Index_Fngr_02_Ctrl_translateZ.output" "L_Index_Fngr_02_Ctrl.translateZ"
+		;
+connectAttr "L_Index_Fngr_02_Ctrl_rotateX.output" "L_Index_Fngr_02_Ctrl.rotateX"
+		;
+connectAttr "L_Index_Fngr_02_Ctrl_rotateY.output" "L_Index_Fngr_02_Ctrl.rotateY"
+		;
+connectAttr "L_Index_Fngr_02_Ctrl_rotateZ.output" "L_Index_Fngr_02_Ctrl.rotateZ"
+		;
+connectAttr "L_Index_Fngr_02_Ctrl_scaleX.output" "L_Index_Fngr_02_Ctrl.scaleX";
+connectAttr "L_Index_Fngr_02_Ctrl_scaleY.output" "L_Index_Fngr_02_Ctrl.scaleY";
+connectAttr "L_Index_Fngr_02_Ctrl_scaleZ.output" "L_Index_Fngr_02_Ctrl.scaleZ";
+connectAttr "L_Index_Fngr_02_Ctrl_visibility.output" "L_Index_Fngr_02_Ctrl.visibility"
+		;
+connectAttr "L_Pntr_Fngr_01_Ctrl_translateX.output" "L_Pntr_Fngr_01_Ctrl.translateX"
+		;
+connectAttr "L_Pntr_Fngr_01_Ctrl_translateY.output" "L_Pntr_Fngr_01_Ctrl.translateY"
+		;
+connectAttr "L_Pntr_Fngr_01_Ctrl_translateZ.output" "L_Pntr_Fngr_01_Ctrl.translateZ"
+		;
+connectAttr "L_Pntr_Fngr_01_Ctrl_rotateX.output" "L_Pntr_Fngr_01_Ctrl.rotateX";
+connectAttr "L_Pntr_Fngr_01_Ctrl_rotateY.output" "L_Pntr_Fngr_01_Ctrl.rotateY";
+connectAttr "L_Pntr_Fngr_01_Ctrl_rotateZ.output" "L_Pntr_Fngr_01_Ctrl.rotateZ";
+connectAttr "L_Pntr_Fngr_01_Ctrl_scaleX.output" "L_Pntr_Fngr_01_Ctrl.scaleX";
+connectAttr "L_Pntr_Fngr_01_Ctrl_scaleY.output" "L_Pntr_Fngr_01_Ctrl.scaleY";
+connectAttr "L_Pntr_Fngr_01_Ctrl_scaleZ.output" "L_Pntr_Fngr_01_Ctrl.scaleZ";
+connectAttr "L_Pntr_Fngr_01_Ctrl_visibility.output" "L_Pntr_Fngr_01_Ctrl.visibility"
+		;
+connectAttr "L_Pntr_Fngr_02_Ctrl_translateX.output" "L_Pntr_Fngr_02_Ctrl.translateX"
+		;
+connectAttr "L_Pntr_Fngr_02_Ctrl_translateY.output" "L_Pntr_Fngr_02_Ctrl.translateY"
+		;
+connectAttr "L_Pntr_Fngr_02_Ctrl_translateZ.output" "L_Pntr_Fngr_02_Ctrl.translateZ"
+		;
+connectAttr "L_Pntr_Fngr_02_Ctrl_rotateX.output" "L_Pntr_Fngr_02_Ctrl.rotateX";
+connectAttr "L_Pntr_Fngr_02_Ctrl_rotateY.output" "L_Pntr_Fngr_02_Ctrl.rotateY";
+connectAttr "L_Pntr_Fngr_02_Ctrl_rotateZ.output" "L_Pntr_Fngr_02_Ctrl.rotateZ";
+connectAttr "L_Pntr_Fngr_02_Ctrl_scaleX.output" "L_Pntr_Fngr_02_Ctrl.scaleX";
+connectAttr "L_Pntr_Fngr_02_Ctrl_scaleY.output" "L_Pntr_Fngr_02_Ctrl.scaleY";
+connectAttr "L_Pntr_Fngr_02_Ctrl_scaleZ.output" "L_Pntr_Fngr_02_Ctrl.scaleZ";
+connectAttr "L_Pntr_Fngr_02_Ctrl_visibility.output" "L_Pntr_Fngr_02_Ctrl.visibility"
+		;
+connectAttr "L_Mddle_Fngr_01_Ctrl_translateX.output" "L_Mddle_Fngr_01_Ctrl.translateX"
+		;
+connectAttr "L_Mddle_Fngr_01_Ctrl_translateY.output" "L_Mddle_Fngr_01_Ctrl.translateY"
+		;
+connectAttr "L_Mddle_Fngr_01_Ctrl_translateZ.output" "L_Mddle_Fngr_01_Ctrl.translateZ"
+		;
+connectAttr "L_Mddle_Fngr_01_Ctrl_rotateX.output" "L_Mddle_Fngr_01_Ctrl.rotateX"
+		;
+connectAttr "L_Mddle_Fngr_01_Ctrl_rotateY.output" "L_Mddle_Fngr_01_Ctrl.rotateY"
+		;
+connectAttr "L_Mddle_Fngr_01_Ctrl_rotateZ.output" "L_Mddle_Fngr_01_Ctrl.rotateZ"
+		;
+connectAttr "L_Mddle_Fngr_01_Ctrl_scaleX.output" "L_Mddle_Fngr_01_Ctrl.scaleX";
+connectAttr "L_Mddle_Fngr_01_Ctrl_scaleY.output" "L_Mddle_Fngr_01_Ctrl.scaleY";
+connectAttr "L_Mddle_Fngr_01_Ctrl_scaleZ.output" "L_Mddle_Fngr_01_Ctrl.scaleZ";
+connectAttr "L_Mddle_Fngr_01_Ctrl_visibility.output" "L_Mddle_Fngr_01_Ctrl.visibility"
+		;
+connectAttr "L_Mddle_Fngr_02_Ctrl_translateX.output" "L_Mddle_Fngr_02_Ctrl.translateX"
+		;
+connectAttr "L_Mddle_Fngr_02_Ctrl_translateY.output" "L_Mddle_Fngr_02_Ctrl.translateY"
+		;
+connectAttr "L_Mddle_Fngr_02_Ctrl_translateZ.output" "L_Mddle_Fngr_02_Ctrl.translateZ"
+		;
+connectAttr "L_Mddle_Fngr_02_Ctrl_rotateX.output" "L_Mddle_Fngr_02_Ctrl.rotateX"
+		;
+connectAttr "L_Mddle_Fngr_02_Ctrl_rotateY.output" "L_Mddle_Fngr_02_Ctrl.rotateY"
+		;
+connectAttr "L_Mddle_Fngr_02_Ctrl_rotateZ.output" "L_Mddle_Fngr_02_Ctrl.rotateZ"
+		;
+connectAttr "L_Mddle_Fngr_02_Ctrl_scaleX.output" "L_Mddle_Fngr_02_Ctrl.scaleX";
+connectAttr "L_Mddle_Fngr_02_Ctrl_scaleY.output" "L_Mddle_Fngr_02_Ctrl.scaleY";
+connectAttr "L_Mddle_Fngr_02_Ctrl_scaleZ.output" "L_Mddle_Fngr_02_Ctrl.scaleZ";
+connectAttr "L_Mddle_Fngr_02_Ctrl_visibility.output" "L_Mddle_Fngr_02_Ctrl.visibility"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_translateX.output" "L_Thumb_Fnger_01_Ctrl.translateX"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_translateY.output" "L_Thumb_Fnger_01_Ctrl.translateY"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_translateZ.output" "L_Thumb_Fnger_01_Ctrl.translateZ"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_rotateX.output" "L_Thumb_Fnger_01_Ctrl.rotateX"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_rotateY.output" "L_Thumb_Fnger_01_Ctrl.rotateY"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_rotateZ.output" "L_Thumb_Fnger_01_Ctrl.rotateZ"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_scaleX.output" "L_Thumb_Fnger_01_Ctrl.scaleX"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_scaleY.output" "L_Thumb_Fnger_01_Ctrl.scaleY"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_scaleZ.output" "L_Thumb_Fnger_01_Ctrl.scaleZ"
+		;
+connectAttr "L_Thumb_Fnger_01_Ctrl_visibility.output" "L_Thumb_Fnger_01_Ctrl.visibility"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_translateX.output" "L_Thumb_02_Fnger_Ctrl.translateX"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_translateY.output" "L_Thumb_02_Fnger_Ctrl.translateY"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_translateZ.output" "L_Thumb_02_Fnger_Ctrl.translateZ"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_rotateX.output" "L_Thumb_02_Fnger_Ctrl.rotateX"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_rotateY.output" "L_Thumb_02_Fnger_Ctrl.rotateY"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_rotateZ.output" "L_Thumb_02_Fnger_Ctrl.rotateZ"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_scaleX.output" "L_Thumb_02_Fnger_Ctrl.scaleX"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_scaleY.output" "L_Thumb_02_Fnger_Ctrl.scaleY"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_scaleZ.output" "L_Thumb_02_Fnger_Ctrl.scaleZ"
+		;
+connectAttr "L_Thumb_02_Fnger_Ctrl_visibility.output" "L_Thumb_02_Fnger_Ctrl.visibility"
 		;
 connectAttr "L_Hand_Ctrl_Grp.rotateOrder" "L_Hand_Ctrl_Grp_parentConstraint1.constraintRotateOrder"
 		;
@@ -88669,10 +92195,214 @@ connectAttr "R_Arm_RK_03_Jnt.parentMatrix" "R_Hand_Ctrl_scaleConstraint1.target[
 		;
 connectAttr "R_Hand_Ctrl_scaleConstraint1.R_Arm_RK_03_JntW0" "R_Hand_Ctrl_scaleConstraint1.target[0].targetWeight"
 		;
+connectAttr "R_Pnky_Fngr_01_Ctrl_translateX.output" "R_Pnky_Fngr_01_Ctrl.translateX"
+		;
+connectAttr "R_Pnky_Fngr_01_Ctrl_translateY.output" "R_Pnky_Fngr_01_Ctrl.translateY"
+		;
+connectAttr "R_Pnky_Fngr_01_Ctrl_translateZ.output" "R_Pnky_Fngr_01_Ctrl.translateZ"
+		;
+connectAttr "R_Pnky_Fngr_01_Ctrl_rotateX.output" "R_Pnky_Fngr_01_Ctrl.rotateX";
+connectAttr "R_Pnky_Fngr_01_Ctrl_rotateY.output" "R_Pnky_Fngr_01_Ctrl.rotateY";
+connectAttr "R_Pnky_Fngr_01_Ctrl_rotateZ.output" "R_Pnky_Fngr_01_Ctrl.rotateZ";
+connectAttr "R_Pnky_Fngr_01_Ctrl_scaleX.output" "R_Pnky_Fngr_01_Ctrl.scaleX";
+connectAttr "R_Pnky_Fngr_01_Ctrl_scaleY.output" "R_Pnky_Fngr_01_Ctrl.scaleY";
+connectAttr "R_Pnky_Fngr_01_Ctrl_scaleZ.output" "R_Pnky_Fngr_01_Ctrl.scaleZ";
+connectAttr "R_Pnky_Fngr_01_Ctrl_visibility.output" "R_Pnky_Fngr_01_Ctrl.visibility"
+		;
+connectAttr "R_Pnky_Fngr_02_Ctrl_translateX.output" "R_Pnky_Fngr_02_Ctrl.translateX"
+		;
+connectAttr "R_Pnky_Fngr_02_Ctrl_translateY.output" "R_Pnky_Fngr_02_Ctrl.translateY"
+		;
+connectAttr "R_Pnky_Fngr_02_Ctrl_translateZ.output" "R_Pnky_Fngr_02_Ctrl.translateZ"
+		;
+connectAttr "R_Pnky_Fngr_02_Ctrl_rotateX.output" "R_Pnky_Fngr_02_Ctrl.rotateX";
+connectAttr "R_Pnky_Fngr_02_Ctrl_rotateY.output" "R_Pnky_Fngr_02_Ctrl.rotateY";
+connectAttr "R_Pnky_Fngr_02_Ctrl_rotateZ.output" "R_Pnky_Fngr_02_Ctrl.rotateZ";
+connectAttr "R_Pnky_Fngr_02_Ctrl_scaleX.output" "R_Pnky_Fngr_02_Ctrl.scaleX";
+connectAttr "R_Pnky_Fngr_02_Ctrl_scaleY.output" "R_Pnky_Fngr_02_Ctrl.scaleY";
+connectAttr "R_Pnky_Fngr_02_Ctrl_scaleZ.output" "R_Pnky_Fngr_02_Ctrl.scaleZ";
+connectAttr "R_Pnky_Fngr_02_Ctrl_visibility.output" "R_Pnky_Fngr_02_Ctrl.visibility"
+		;
+connectAttr "R_Index_Fngr_01_Ctrl_translateX.output" "R_Index_Fngr_01_Ctrl.translateX"
+		;
+connectAttr "R_Index_Fngr_01_Ctrl_translateY.output" "R_Index_Fngr_01_Ctrl.translateY"
+		;
+connectAttr "R_Index_Fngr_01_Ctrl_translateZ.output" "R_Index_Fngr_01_Ctrl.translateZ"
+		;
+connectAttr "R_Index_Fngr_01_Ctrl_rotateX.output" "R_Index_Fngr_01_Ctrl.rotateX"
+		;
+connectAttr "R_Index_Fngr_01_Ctrl_rotateY.output" "R_Index_Fngr_01_Ctrl.rotateY"
+		;
+connectAttr "R_Index_Fngr_01_Ctrl_rotateZ.output" "R_Index_Fngr_01_Ctrl.rotateZ"
+		;
+connectAttr "R_Index_Fngr_01_Ctrl_scaleX.output" "R_Index_Fngr_01_Ctrl.scaleX";
+connectAttr "R_Index_Fngr_01_Ctrl_scaleY.output" "R_Index_Fngr_01_Ctrl.scaleY";
+connectAttr "R_Index_Fngr_01_Ctrl_scaleZ.output" "R_Index_Fngr_01_Ctrl.scaleZ";
+connectAttr "R_Index_Fngr_01_Ctrl_visibility.output" "R_Index_Fngr_01_Ctrl.visibility"
+		;
+connectAttr "R_Index_Fngr_02_Ctrl_translateX.output" "R_Index_Fngr_02_Ctrl.translateX"
+		;
+connectAttr "R_Index_Fngr_02_Ctrl_translateY.output" "R_Index_Fngr_02_Ctrl.translateY"
+		;
+connectAttr "R_Index_Fngr_02_Ctrl_translateZ.output" "R_Index_Fngr_02_Ctrl.translateZ"
+		;
+connectAttr "R_Index_Fngr_02_Ctrl_rotateX.output" "R_Index_Fngr_02_Ctrl.rotateX"
+		;
+connectAttr "R_Index_Fngr_02_Ctrl_rotateY.output" "R_Index_Fngr_02_Ctrl.rotateY"
+		;
+connectAttr "R_Index_Fngr_02_Ctrl_rotateZ.output" "R_Index_Fngr_02_Ctrl.rotateZ"
+		;
+connectAttr "R_Index_Fngr_02_Ctrl_scaleX.output" "R_Index_Fngr_02_Ctrl.scaleX";
+connectAttr "R_Index_Fngr_02_Ctrl_scaleY.output" "R_Index_Fngr_02_Ctrl.scaleY";
+connectAttr "R_Index_Fngr_02_Ctrl_scaleZ.output" "R_Index_Fngr_02_Ctrl.scaleZ";
+connectAttr "R_Index_Fngr_02_Ctrl_visibility.output" "R_Index_Fngr_02_Ctrl.visibility"
+		;
+connectAttr "R_Pntr_Fngr_01_Ctrl_translateX.output" "R_Pntr_Fngr_01_Ctrl.translateX"
+		;
+connectAttr "R_Pntr_Fngr_01_Ctrl_translateY.output" "R_Pntr_Fngr_01_Ctrl.translateY"
+		;
+connectAttr "R_Pntr_Fngr_01_Ctrl_translateZ.output" "R_Pntr_Fngr_01_Ctrl.translateZ"
+		;
+connectAttr "R_Pntr_Fngr_01_Ctrl_rotateX.output" "R_Pntr_Fngr_01_Ctrl.rotateX";
+connectAttr "R_Pntr_Fngr_01_Ctrl_rotateY.output" "R_Pntr_Fngr_01_Ctrl.rotateY";
+connectAttr "R_Pntr_Fngr_01_Ctrl_rotateZ.output" "R_Pntr_Fngr_01_Ctrl.rotateZ";
+connectAttr "R_Pntr_Fngr_01_Ctrl_scaleX.output" "R_Pntr_Fngr_01_Ctrl.scaleX";
+connectAttr "R_Pntr_Fngr_01_Ctrl_scaleY.output" "R_Pntr_Fngr_01_Ctrl.scaleY";
+connectAttr "R_Pntr_Fngr_01_Ctrl_scaleZ.output" "R_Pntr_Fngr_01_Ctrl.scaleZ";
+connectAttr "R_Pntr_Fngr_01_Ctrl_visibility.output" "R_Pntr_Fngr_01_Ctrl.visibility"
+		;
+connectAttr "R_Pntr_Fngr_02_Ctrl_translateX.output" "R_Pntr_Fngr_02_Ctrl.translateX"
+		;
+connectAttr "R_Pntr_Fngr_02_Ctrl_translateY.output" "R_Pntr_Fngr_02_Ctrl.translateY"
+		;
+connectAttr "R_Pntr_Fngr_02_Ctrl_translateZ.output" "R_Pntr_Fngr_02_Ctrl.translateZ"
+		;
+connectAttr "R_Pntr_Fngr_02_Ctrl_rotateX.output" "R_Pntr_Fngr_02_Ctrl.rotateX";
+connectAttr "R_Pntr_Fngr_02_Ctrl_rotateY.output" "R_Pntr_Fngr_02_Ctrl.rotateY";
+connectAttr "R_Pntr_Fngr_02_Ctrl_rotateZ.output" "R_Pntr_Fngr_02_Ctrl.rotateZ";
+connectAttr "R_Pntr_Fngr_02_Ctrl_scaleX.output" "R_Pntr_Fngr_02_Ctrl.scaleX";
+connectAttr "R_Pntr_Fngr_02_Ctrl_scaleY.output" "R_Pntr_Fngr_02_Ctrl.scaleY";
+connectAttr "R_Pntr_Fngr_02_Ctrl_scaleZ.output" "R_Pntr_Fngr_02_Ctrl.scaleZ";
+connectAttr "R_Pntr_Fngr_02_Ctrl_visibility.output" "R_Pntr_Fngr_02_Ctrl.visibility"
+		;
+connectAttr "R_Mddle_Fngr_01_Ctrl_translateX.output" "R_Mddle_Fngr_01_Ctrl.translateX"
+		;
+connectAttr "R_Mddle_Fngr_01_Ctrl_translateY.output" "R_Mddle_Fngr_01_Ctrl.translateY"
+		;
+connectAttr "R_Mddle_Fngr_01_Ctrl_translateZ.output" "R_Mddle_Fngr_01_Ctrl.translateZ"
+		;
+connectAttr "R_Mddle_Fngr_01_Ctrl_rotateX.output" "R_Mddle_Fngr_01_Ctrl.rotateX"
+		;
+connectAttr "R_Mddle_Fngr_01_Ctrl_rotateY.output" "R_Mddle_Fngr_01_Ctrl.rotateY"
+		;
+connectAttr "R_Mddle_Fngr_01_Ctrl_rotateZ.output" "R_Mddle_Fngr_01_Ctrl.rotateZ"
+		;
+connectAttr "R_Mddle_Fngr_01_Ctrl_scaleX.output" "R_Mddle_Fngr_01_Ctrl.scaleX";
+connectAttr "R_Mddle_Fngr_01_Ctrl_scaleY.output" "R_Mddle_Fngr_01_Ctrl.scaleY";
+connectAttr "R_Mddle_Fngr_01_Ctrl_scaleZ.output" "R_Mddle_Fngr_01_Ctrl.scaleZ";
+connectAttr "R_Mddle_Fngr_01_Ctrl_visibility.output" "R_Mddle_Fngr_01_Ctrl.visibility"
+		;
+connectAttr "R_Mddle_Fngr_02_Ctrl_translateX.output" "R_Mddle_Fngr_02_Ctrl.translateX"
+		;
+connectAttr "R_Mddle_Fngr_02_Ctrl_translateY.output" "R_Mddle_Fngr_02_Ctrl.translateY"
+		;
+connectAttr "R_Mddle_Fngr_02_Ctrl_translateZ.output" "R_Mddle_Fngr_02_Ctrl.translateZ"
+		;
+connectAttr "R_Mddle_Fngr_02_Ctrl_rotateX.output" "R_Mddle_Fngr_02_Ctrl.rotateX"
+		;
+connectAttr "R_Mddle_Fngr_02_Ctrl_rotateY.output" "R_Mddle_Fngr_02_Ctrl.rotateY"
+		;
+connectAttr "R_Mddle_Fngr_02_Ctrl_rotateZ.output" "R_Mddle_Fngr_02_Ctrl.rotateZ"
+		;
+connectAttr "R_Mddle_Fngr_02_Ctrl_scaleX.output" "R_Mddle_Fngr_02_Ctrl.scaleX";
+connectAttr "R_Mddle_Fngr_02_Ctrl_scaleY.output" "R_Mddle_Fngr_02_Ctrl.scaleY";
+connectAttr "R_Mddle_Fngr_02_Ctrl_scaleZ.output" "R_Mddle_Fngr_02_Ctrl.scaleZ";
+connectAttr "R_Mddle_Fngr_02_Ctrl_visibility.output" "R_Mddle_Fngr_02_Ctrl.visibility"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_translateX.output" "R_Thumb_Fnger_01_Ctrl.translateX"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_translateY.output" "R_Thumb_Fnger_01_Ctrl.translateY"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_translateZ.output" "R_Thumb_Fnger_01_Ctrl.translateZ"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_rotateX.output" "R_Thumb_Fnger_01_Ctrl.rotateX"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_rotateY.output" "R_Thumb_Fnger_01_Ctrl.rotateY"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_rotateZ.output" "R_Thumb_Fnger_01_Ctrl.rotateZ"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_scaleX.output" "R_Thumb_Fnger_01_Ctrl.scaleX"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_scaleY.output" "R_Thumb_Fnger_01_Ctrl.scaleY"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_scaleZ.output" "R_Thumb_Fnger_01_Ctrl.scaleZ"
+		;
+connectAttr "R_Thumb_Fnger_01_Ctrl_visibility.output" "R_Thumb_Fnger_01_Ctrl.visibility"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_translateX.output" "R_Thumb_02_Fnger_Ctrl.translateX"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_translateY.output" "R_Thumb_02_Fnger_Ctrl.translateY"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_translateZ.output" "R_Thumb_02_Fnger_Ctrl.translateZ"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_rotateX.output" "R_Thumb_02_Fnger_Ctrl.rotateX"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_rotateY.output" "R_Thumb_02_Fnger_Ctrl.rotateY"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_rotateZ.output" "R_Thumb_02_Fnger_Ctrl.rotateZ"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_scaleX.output" "R_Thumb_02_Fnger_Ctrl.scaleX"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_scaleY.output" "R_Thumb_02_Fnger_Ctrl.scaleY"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_scaleZ.output" "R_Thumb_02_Fnger_Ctrl.scaleZ"
+		;
+connectAttr "R_Thumb_02_Fnger_Ctrl_visibility.output" "R_Thumb_02_Fnger_Ctrl.visibility"
+		;
 connectAttr "COG_Ctrl.IKFK" "L_Arm_IK_PV_Ctrl_Grp.visibility";
+connectAttr "L_Arm_IK_PV_Ctrl_translateX.output" "L_Arm_IK_PV_Ctrl.translateX";
+connectAttr "L_Arm_IK_PV_Ctrl_translateY.output" "L_Arm_IK_PV_Ctrl.translateY";
+connectAttr "L_Arm_IK_PV_Ctrl_translateZ.output" "L_Arm_IK_PV_Ctrl.translateZ";
+connectAttr "L_Arm_IK_PV_Ctrl_rotateX.output" "L_Arm_IK_PV_Ctrl.rotateX";
+connectAttr "L_Arm_IK_PV_Ctrl_rotateY.output" "L_Arm_IK_PV_Ctrl.rotateY";
+connectAttr "L_Arm_IK_PV_Ctrl_rotateZ.output" "L_Arm_IK_PV_Ctrl.rotateZ";
+connectAttr "L_Arm_IK_PV_Ctrl_visibility.output" "L_Arm_IK_PV_Ctrl.visibility";
+connectAttr "L_Arm_IK_PV_Ctrl_scaleX.output" "L_Arm_IK_PV_Ctrl.scaleX";
+connectAttr "L_Arm_IK_PV_Ctrl_scaleY.output" "L_Arm_IK_PV_Ctrl.scaleY";
+connectAttr "L_Arm_IK_PV_Ctrl_scaleZ.output" "L_Arm_IK_PV_Ctrl.scaleZ";
 connectAttr "COG_Ctrl.IKFK" "R_Arm_IK_PV_Ctrl_Grp.visibility";
+connectAttr "R_Arm_IK_PV_Ctrl_translateX.output" "R_Arm_IK_PV_Ctrl.translateX";
+connectAttr "R_Arm_IK_PV_Ctrl_translateY.output" "R_Arm_IK_PV_Ctrl.translateY";
+connectAttr "R_Arm_IK_PV_Ctrl_translateZ.output" "R_Arm_IK_PV_Ctrl.translateZ";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateX.output" "R_Arm_IK_PV_Ctrl.rotateX";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateY.output" "R_Arm_IK_PV_Ctrl.rotateY";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateZ.output" "R_Arm_IK_PV_Ctrl.rotateZ";
+connectAttr "R_Arm_IK_PV_Ctrl_visibility.output" "R_Arm_IK_PV_Ctrl.visibility";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleX.output" "R_Arm_IK_PV_Ctrl.scaleX";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleY.output" "R_Arm_IK_PV_Ctrl.scaleY";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleZ.output" "R_Arm_IK_PV_Ctrl.scaleZ";
+connectAttr "Hip_Ctrl_rotateX.output" "Hip_Ctrl.rotateX";
+connectAttr "Hip_Ctrl_rotateY.output" "Hip_Ctrl.rotateY";
+connectAttr "Hip_Ctrl_rotateZ.output" "Hip_Ctrl.rotateZ";
+connectAttr "Hip_Ctrl_visibility.output" "Hip_Ctrl.visibility";
+connectAttr "Hip_Ctrl_translateX.output" "Hip_Ctrl.translateX";
+connectAttr "Hip_Ctrl_translateY.output" "Hip_Ctrl.translateY";
+connectAttr "Hip_Ctrl_translateZ.output" "Hip_Ctrl.translateZ";
+connectAttr "Hip_Ctrl_scaleX.output" "Hip_Ctrl.scaleX";
+connectAttr "Hip_Ctrl_scaleY.output" "Hip_Ctrl.scaleY";
+connectAttr "Hip_Ctrl_scaleZ.output" "Hip_Ctrl.scaleZ";
 connectAttr "IKFK_REV.outputX" "L_Leg_01_FK_Ctrl_Grp.visibility";
 connectAttr "IKFK_REV.outputX" "R_Leg_01_FK_Ctrl_Grp.visibility";
+connectAttr "R_Leg_IK_01_Ctrl_translateX.output" "R_Leg_IK_01_Ctrl.translateX";
+connectAttr "R_Leg_IK_01_Ctrl_translateY.output" "R_Leg_IK_01_Ctrl.translateY";
+connectAttr "R_Leg_IK_01_Ctrl_translateZ.output" "R_Leg_IK_01_Ctrl.translateZ";
+connectAttr "R_Leg_IK_01_Ctrl_rotateX.output" "R_Leg_IK_01_Ctrl.rotateX";
+connectAttr "R_Leg_IK_01_Ctrl_rotateY.output" "R_Leg_IK_01_Ctrl.rotateY";
+connectAttr "R_Leg_IK_01_Ctrl_rotateZ.output" "R_Leg_IK_01_Ctrl.rotateZ";
+connectAttr "R_Leg_IK_01_Ctrl_scaleX.output" "R_Leg_IK_01_Ctrl.scaleX";
+connectAttr "R_Leg_IK_01_Ctrl_scaleY.output" "R_Leg_IK_01_Ctrl.scaleY";
+connectAttr "R_Leg_IK_01_Ctrl_scaleZ.output" "R_Leg_IK_01_Ctrl.scaleZ";
+connectAttr "R_Leg_IK_01_Ctrl_visibility.output" "R_Leg_IK_01_Ctrl.visibility";
 connectAttr "makeNurbCircle3.outputCurve" "R_Leg_IK_01_CtrlShape.create";
 connectAttr "COG_Ctrl.IKFK" "R_Leg_IK_02_Ctrl_Grp.visibility";
 connectAttr "R_Leg_IK_02_Ctrl_Follow_PCon.constraintTranslateX" "R_Leg_IK_02_Ctrl_Grp.translateX"
@@ -88687,6 +92417,18 @@ connectAttr "R_Leg_IK_02_Ctrl_Follow_PCon.constraintRotateY" "R_Leg_IK_02_Ctrl_G
 		;
 connectAttr "R_Leg_IK_02_Ctrl_Follow_PCon.constraintRotateZ" "R_Leg_IK_02_Ctrl_Grp.rotateZ"
 		;
+connectAttr "R_Leg_IK_02_Ctrl_translateX.output" "R_Leg_IK_02_Ctrl.translateX";
+connectAttr "R_Leg_IK_02_Ctrl_translateY.output" "R_Leg_IK_02_Ctrl.translateY";
+connectAttr "R_Leg_IK_02_Ctrl_translateZ.output" "R_Leg_IK_02_Ctrl.translateZ";
+connectAttr "R_Leg_IK_02_Ctrl_rotateX.output" "R_Leg_IK_02_Ctrl.rotateX";
+connectAttr "R_Leg_IK_02_Ctrl_rotateY.output" "R_Leg_IK_02_Ctrl.rotateY";
+connectAttr "R_Leg_IK_02_Ctrl_rotateZ.output" "R_Leg_IK_02_Ctrl.rotateZ";
+connectAttr "R_Leg_IK_02_Ctrl_scaleX.output" "R_Leg_IK_02_Ctrl.scaleX";
+connectAttr "R_Leg_IK_02_Ctrl_scaleY.output" "R_Leg_IK_02_Ctrl.scaleY";
+connectAttr "R_Leg_IK_02_Ctrl_scaleZ.output" "R_Leg_IK_02_Ctrl.scaleZ";
+connectAttr "R_Leg_IK_02_Ctrl_FollowTarget.output" "R_Leg_IK_02_Ctrl.FollowTarget"
+		;
+connectAttr "R_Leg_IK_02_Ctrl_visibility.output" "R_Leg_IK_02_Ctrl.visibility";
 connectAttr "R_Leg_IK_01_Jnt.message" "R_Leg_IK_Handle.startJoint";
 connectAttr "effector4.handlePath" "R_Leg_IK_Handle.endEffector";
 connectAttr "ikRPsolver.message" "R_Leg_IK_Handle.ikSolver";
@@ -88712,6 +92454,16 @@ connectAttr "R_Leg_IK_PV_Ctrl.parentMatrix" "R_Leg_IK_Handle_poleVectorConstrain
 		;
 connectAttr "R_Leg_IK_Handle_poleVectorConstraint1.R_Leg_IK_PV_CtrlW0" "R_Leg_IK_Handle_poleVectorConstraint1.target[0].targetWeight"
 		;
+connectAttr "R_Ft_Toe_Ctrl_translateX.output" "R_Ft_Toe_Ctrl.translateX";
+connectAttr "R_Ft_Toe_Ctrl_translateY.output" "R_Ft_Toe_Ctrl.translateY";
+connectAttr "R_Ft_Toe_Ctrl_translateZ.output" "R_Ft_Toe_Ctrl.translateZ";
+connectAttr "R_Ft_Toe_Ctrl_rotateX.output" "R_Ft_Toe_Ctrl.rotateX";
+connectAttr "R_Ft_Toe_Ctrl_rotateY.output" "R_Ft_Toe_Ctrl.rotateY";
+connectAttr "R_Ft_Toe_Ctrl_rotateZ.output" "R_Ft_Toe_Ctrl.rotateZ";
+connectAttr "R_Ft_Toe_Ctrl_scaleX.output" "R_Ft_Toe_Ctrl.scaleX";
+connectAttr "R_Ft_Toe_Ctrl_scaleY.output" "R_Ft_Toe_Ctrl.scaleY";
+connectAttr "R_Ft_Toe_Ctrl_scaleZ.output" "R_Ft_Toe_Ctrl.scaleZ";
+connectAttr "R_Ft_Toe_Ctrl_visibility.output" "R_Ft_Toe_Ctrl.visibility";
 connectAttr "R_IK_Ft_01_Jnt.message" "R_Ft_IK_Handle.startJoint";
 connectAttr "effector6.handlePath" "R_Ft_IK_Handle.endEffector";
 connectAttr "ikSCsolver.message" "R_Ft_IK_Handle.ikSolver";
@@ -88778,6 +92530,26 @@ connectAttr "R_Leg_IK_02_Ctrl_TRANSFORM_CTRL_Follow_MDL.o" "R_Leg_IK_02_Ctrl_Fol
 connectAttr "R_Leg_IK_02_Ctrl__Follow_MDL.o" "R_Leg_IK_02_Ctrl_Follow_PCon.WorldPOSW2"
 		;
 connectAttr "COG_Ctrl.IKFK" "R_Leg_IK_PV_Ctrl_Grp.visibility";
+connectAttr "R_Leg_IK_PV_Ctrl_translateX.output" "R_Leg_IK_PV_Ctrl.translateX";
+connectAttr "R_Leg_IK_PV_Ctrl_translateY.output" "R_Leg_IK_PV_Ctrl.translateY";
+connectAttr "R_Leg_IK_PV_Ctrl_translateZ.output" "R_Leg_IK_PV_Ctrl.translateZ";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateX.output" "R_Leg_IK_PV_Ctrl.rotateX";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateY.output" "R_Leg_IK_PV_Ctrl.rotateY";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateZ.output" "R_Leg_IK_PV_Ctrl.rotateZ";
+connectAttr "R_Leg_IK_PV_Ctrl_visibility.output" "R_Leg_IK_PV_Ctrl.visibility";
+connectAttr "R_Leg_IK_PV_Ctrl_scaleX.output" "R_Leg_IK_PV_Ctrl.scaleX";
+connectAttr "R_Leg_IK_PV_Ctrl_scaleY.output" "R_Leg_IK_PV_Ctrl.scaleY";
+connectAttr "R_Leg_IK_PV_Ctrl_scaleZ.output" "R_Leg_IK_PV_Ctrl.scaleZ";
+connectAttr "L_Leg_IK_01_Ctrl_translateX.output" "L_Leg_IK_01_Ctrl.translateX";
+connectAttr "L_Leg_IK_01_Ctrl_translateY.output" "L_Leg_IK_01_Ctrl.translateY";
+connectAttr "L_Leg_IK_01_Ctrl_translateZ.output" "L_Leg_IK_01_Ctrl.translateZ";
+connectAttr "L_Leg_IK_01_Ctrl_rotateX.output" "L_Leg_IK_01_Ctrl.rotateX";
+connectAttr "L_Leg_IK_01_Ctrl_rotateY.output" "L_Leg_IK_01_Ctrl.rotateY";
+connectAttr "L_Leg_IK_01_Ctrl_rotateZ.output" "L_Leg_IK_01_Ctrl.rotateZ";
+connectAttr "L_Leg_IK_01_Ctrl_scaleX.output" "L_Leg_IK_01_Ctrl.scaleX";
+connectAttr "L_Leg_IK_01_Ctrl_scaleY.output" "L_Leg_IK_01_Ctrl.scaleY";
+connectAttr "L_Leg_IK_01_Ctrl_scaleZ.output" "L_Leg_IK_01_Ctrl.scaleZ";
+connectAttr "L_Leg_IK_01_Ctrl_visibility.output" "L_Leg_IK_01_Ctrl.visibility";
 connectAttr "COG_Ctrl.IKFK" "L_Leg_IK_02_Ctrl_Grp.visibility";
 connectAttr "L_Leg_IK_02_Ctrl_Follow_PCon.constraintTranslateX" "L_Leg_IK_02_Ctrl_Grp.translateX"
 		;
@@ -88791,6 +92563,18 @@ connectAttr "L_Leg_IK_02_Ctrl_Follow_PCon.constraintRotateY" "L_Leg_IK_02_Ctrl_G
 		;
 connectAttr "L_Leg_IK_02_Ctrl_Follow_PCon.constraintRotateZ" "L_Leg_IK_02_Ctrl_Grp.rotateZ"
 		;
+connectAttr "L_Leg_IK_02_Ctrl_translateX.output" "L_Leg_IK_02_Ctrl.translateX";
+connectAttr "L_Leg_IK_02_Ctrl_translateY.output" "L_Leg_IK_02_Ctrl.translateY";
+connectAttr "L_Leg_IK_02_Ctrl_translateZ.output" "L_Leg_IK_02_Ctrl.translateZ";
+connectAttr "L_Leg_IK_02_Ctrl_rotateX.output" "L_Leg_IK_02_Ctrl.rotateX";
+connectAttr "L_Leg_IK_02_Ctrl_rotateY.output" "L_Leg_IK_02_Ctrl.rotateY";
+connectAttr "L_Leg_IK_02_Ctrl_rotateZ.output" "L_Leg_IK_02_Ctrl.rotateZ";
+connectAttr "L_Leg_IK_02_Ctrl_scaleX.output" "L_Leg_IK_02_Ctrl.scaleX";
+connectAttr "L_Leg_IK_02_Ctrl_scaleY.output" "L_Leg_IK_02_Ctrl.scaleY";
+connectAttr "L_Leg_IK_02_Ctrl_scaleZ.output" "L_Leg_IK_02_Ctrl.scaleZ";
+connectAttr "L_Leg_IK_02_Ctrl_FollowTarget.output" "L_Leg_IK_02_Ctrl.FollowTarget"
+		;
+connectAttr "L_Leg_IK_02_Ctrl_visibility.output" "L_Leg_IK_02_Ctrl.visibility";
 connectAttr "L_Leg_IK_01_Jnt.message" "L_Leg_IK_Handle.startJoint";
 connectAttr "effector3.handlePath" "L_Leg_IK_Handle.endEffector";
 connectAttr "ikRPsolver.message" "L_Leg_IK_Handle.ikSolver";
@@ -88816,6 +92600,16 @@ connectAttr "L_Leg_IK_PV_Ctrl.parentMatrix" "L_Leg_IK_Handle_poleVectorConstrain
 		;
 connectAttr "L_Leg_IK_Handle_poleVectorConstraint1.L_Leg_IK_PV_CtrlW0" "L_Leg_IK_Handle_poleVectorConstraint1.target[0].targetWeight"
 		;
+connectAttr "L_Ft_Toe_Ctrl_translateX.output" "L_Ft_Toe_Ctrl.translateX";
+connectAttr "L_Ft_Toe_Ctrl_translateY.output" "L_Ft_Toe_Ctrl.translateY";
+connectAttr "L_Ft_Toe_Ctrl_translateZ.output" "L_Ft_Toe_Ctrl.translateZ";
+connectAttr "L_Ft_Toe_Ctrl_rotateX.output" "L_Ft_Toe_Ctrl.rotateX";
+connectAttr "L_Ft_Toe_Ctrl_rotateY.output" "L_Ft_Toe_Ctrl.rotateY";
+connectAttr "L_Ft_Toe_Ctrl_rotateZ.output" "L_Ft_Toe_Ctrl.rotateZ";
+connectAttr "L_Ft_Toe_Ctrl_scaleX.output" "L_Ft_Toe_Ctrl.scaleX";
+connectAttr "L_Ft_Toe_Ctrl_scaleY.output" "L_Ft_Toe_Ctrl.scaleY";
+connectAttr "L_Ft_Toe_Ctrl_scaleZ.output" "L_Ft_Toe_Ctrl.scaleZ";
+connectAttr "L_Ft_Toe_Ctrl_visibility.output" "L_Ft_Toe_Ctrl.visibility";
 connectAttr "L_IK_Ft_01_Jnt.message" "L_Ft_Toe_IK_Handle.startJoint";
 connectAttr "effector7.handlePath" "L_Ft_Toe_IK_Handle.endEffector";
 connectAttr "ikSCsolver.message" "L_Ft_Toe_IK_Handle.ikSolver";
@@ -88882,6 +92676,16 @@ connectAttr "L_Leg_IK_02_Ctrl_TRANSFORM_CTRL_Follow_MDL.o" "L_Leg_IK_02_Ctrl_Fol
 connectAttr "L_Leg_IK_02_Ctrl__Follow_MDL.o" "L_Leg_IK_02_Ctrl_Follow_PCon.WorldPOSW2"
 		;
 connectAttr "COG_Ctrl.IKFK" "L_Leg_IK_PV_Ctrl_Grp.visibility";
+connectAttr "L_Leg_IK_PV_Ctrl_translateX.output" "L_Leg_IK_PV_Ctrl.translateX";
+connectAttr "L_Leg_IK_PV_Ctrl_translateY.output" "L_Leg_IK_PV_Ctrl.translateY";
+connectAttr "L_Leg_IK_PV_Ctrl_translateZ.output" "L_Leg_IK_PV_Ctrl.translateZ";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateX.output" "L_Leg_IK_PV_Ctrl.rotateX";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateY.output" "L_Leg_IK_PV_Ctrl.rotateY";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateZ.output" "L_Leg_IK_PV_Ctrl.rotateZ";
+connectAttr "L_Leg_IK_PV_Ctrl_visibility.output" "L_Leg_IK_PV_Ctrl.visibility";
+connectAttr "L_Leg_IK_PV_Ctrl_scaleX.output" "L_Leg_IK_PV_Ctrl.scaleX";
+connectAttr "L_Leg_IK_PV_Ctrl_scaleY.output" "L_Leg_IK_PV_Ctrl.scaleY";
+connectAttr "L_Leg_IK_PV_Ctrl_scaleZ.output" "L_Leg_IK_PV_Ctrl.scaleZ";
 connectAttr "R_Outr_Toe_Ctrl_parentConstraint1.constraintTranslateX" "R_Outr_Toe_Ctrl.translateX"
 		;
 connectAttr "R_Outr_Toe_Ctrl_parentConstraint1.constraintTranslateY" "R_Outr_Toe_Ctrl.translateY"

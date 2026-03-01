@@ -1,8 +1,9 @@
 //Maya ASCII 2025ff03 scene
-//Name: LampRigRK.ma
-//Last modified: Sat, Feb 28, 2026 03:06:29 PM
+//Name: IKFKRIGYAY.ma
+//Last modified: Wed, Feb 25, 2026 12:06:24 AM
 //Codeset: 1252
 requires maya "2025ff03";
+requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.5";
 currentUnit -linear centimeter -angle degree -time film;
@@ -11,37 +12,32 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "611A4127-4089-4A8F-761D-5FA48E402AD9";
+fileInfo "UUID" "60DA3D04-42F5-A43E-1C3A-3A8D0D5D656A";
 createNode transform -shared -name "persp";
-	rename -uuid "146DF36D-48ED-6F07-D3E8-FBAFD4EADA56";
+	rename -uuid "B9B37C16-42A4-18A5-EAE8-6F9EB3EA6E67";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 112.63412170088904 12.311190584695703 38.080368585077288 ;
-	setAttr ".rotate" -type "double3" 2.6616472742234172 -278.59999999999184 2.6586981112794538e-15 ;
-	setAttr ".rotatePivot" -type "double3" 5.3290705182007514e-15 0 -1.4210854715202004e-14 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -9.9317105790838025e-15 -5.0320769174998932e-15 
-		6.5204611374831038e-16 ;
+	setAttr ".translate" -type "double3" -95.85269191668516 21.597909713243531 9.082800353068933 ;
+	setAttr ".rotate" -type "double3" -2.1383527294684148 -86.600000000108551 3.3518263824241176e-15 ;
 createNode camera -shared -name "perspShape" -parent "persp";
-	rename -uuid "ACBC5A79-4F12-C0D9-F747-C3B7077F1BC2";
+	rename -uuid "2D3AA65E-4F5F-9511-DD8D-D586D3D825D1";
 	setAttr -keyable off ".visibility" no;
-	setAttr ".focalLength" 34.999999999999979;
-	setAttr ".centerOfInterest" 111.87019182775325;
+	setAttr ".focalLength" 34.999999999999993;
+	setAttr ".centerOfInterest" 97.066293797136495;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
-	setAttr ".tumblePivot" -type "double3" 1.9984014443252818e-14 22.842789191405039 
-		5.1081206166172626 ;
 	setAttr ".homeCommand" -type "string" "viewSet -p %camera";
 createNode transform -shared -name "top";
-	rename -uuid "3393CF13-4961-FFFB-D624-6395FE1CA708";
+	rename -uuid "4CF7C2AA-4583-09EA-46F2-32AC28E9B3D3";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 3.0882352941176445 1000.1 0.96719457013574051 ;
+	setAttr ".translate" -type "double3" 0 1000.1 0 ;
 	setAttr ".rotate" -type "double3" -90 0 0 ;
 createNode camera -shared -name "topShape" -parent "top";
-	rename -uuid "34CE23BB-4EC7-42E8-5E99-E0831F904227";
+	rename -uuid "0AD069FF-4C4C-03FD-8A4A-EB853B73AE95";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".centerOfInterest" 1000.1;
-	setAttr ".orthographicWidth" 30.197398251605811;
+	setAttr ".orthographicWidth" 30;
 	setAttr ".imageName" -type "string" "top";
 	setAttr ".depthName" -type "string" "top_depth";
 	setAttr ".maskName" -type "string" "top_mask";
@@ -49,15 +45,15 @@ createNode camera -shared -name "topShape" -parent "top";
 	setAttr ".orthographic" yes;
 	setAttr ".aiTranslator" -type "string" "orthographic";
 createNode transform -shared -name "front";
-	rename -uuid "1FFC2A21-4878-696E-E5EB-80A75BF402C1";
+	rename -uuid "D5105560-4AED-8B3C-5563-40A75F02126E";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 0.5482282964117704 13.008674290570692 1000.1 ;
+	setAttr ".translate" -type "double3" 0 0 1000.1 ;
 createNode camera -shared -name "frontShape" -parent "front";
-	rename -uuid "32BDD114-466B-F13E-B1E3-FBBFCF23BDDF";
+	rename -uuid "5B25AF7C-4C55-AD02-876F-FDA7B0243EB6";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".centerOfInterest" 1000.1;
-	setAttr ".orthographicWidth" 13.846680400800111;
+	setAttr ".orthographicWidth" 30;
 	setAttr ".imageName" -type "string" "front";
 	setAttr ".depthName" -type "string" "front_depth";
 	setAttr ".maskName" -type "string" "front_mask";
@@ -65,38 +61,38 @@ createNode camera -shared -name "frontShape" -parent "front";
 	setAttr ".orthographic" yes;
 	setAttr ".aiTranslator" -type "string" "orthographic";
 createNode transform -shared -name "side";
-	rename -uuid "1C23EA05-4ADE-6150-34E9-999E3546AB0A";
+	rename -uuid "AB7F9921-4C74-DEDC-0013-C6BD0604CF81";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 1000.1 14.832283871309706 -11.611757589807631 ;
+	setAttr ".translate" -type "double3" 1000.1 10.517067965996205 -2.2481915777278818 ;
 	setAttr ".rotate" -type "double3" 0 90 0 ;
 createNode camera -shared -name "sideShape" -parent "side";
-	rename -uuid "8330D8F6-43DB-5A05-5297-14A97FFB9437";
+	rename -uuid "AC124C46-4DB9-E9AC-6FA7-A68F42347FD5";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".centerOfInterest" 1000.1;
-	setAttr ".orthographicWidth" 55.445883282485205;
+	setAttr ".orthographicWidth" 50.173686075849915;
 	setAttr ".imageName" -type "string" "side";
 	setAttr ".depthName" -type "string" "side_depth";
 	setAttr ".maskName" -type "string" "side_mask";
-	setAttr ".tumblePivot" -type "double3" 0 4.0919045797742912 1.4461972855390841 ;
 	setAttr ".homeCommand" -type "string" "viewSet -s %camera";
 	setAttr ".orthographic" yes;
 	setAttr ".aiTranslator" -type "string" "orthographic";
-createNode transform -name "Geometry";
-	rename -uuid "1E3863C6-45D2-312A-3F78-5CBF18CD43B9";
+createNode transform -name "Lamp";
+	rename -uuid "0116F046-4244-87D4-FE3E-BB8936D59E62";
+createNode transform -name "Geometry" -parent "Lamp";
+	rename -uuid "80D23B36-4E25-98F9-3EBB-0EBD50D7EEF5";
 createNode transform -name "base_geo" -parent "Geometry";
-	rename -uuid "E895995E-4CFB-CA71-0F52-F69CAB69D18D";
+	rename -uuid "EDEE2724-4A9A-AFBC-78F7-9AB6D3648F0D";
 	addAttr -internalSet true -cachedInternally true -keyable true -shortName "currentUVSet" 
 		-longName "currentUVSet" -dataType "string";
 	setAttr ".rotatePivot" -type "double3" 0 1.6517660569516075 0 ;
 	setAttr ".scalePivot" -type "double3" 0 1.6517660569516075 0 ;
 	setAttr -keyable on ".currentUVSet" -type "string" "map1";
 createNode mesh -name "base_geoShape" -parent "base_geo";
-	rename -uuid "51098FF8-4F3D-E687-8891-F3953ED2A2FF";
+	rename -uuid "77B8BBC3-4E47-07DE-1FE6-96A2A25C73BB";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
-	setAttr ".uvPivot" -type "double2" 0.58333331346511841 0.49902507662773132 ;
 	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
 	setAttr -size 247 ".uvSet[0].uvSetPoints[0:246]" -type "float2" 0.3958334
 		 0.31474134 0.375 0.68619841 0.41666669 0.31474137 0.39583337 0.68619841 0.4375 0.3147414
@@ -787,9 +783,9 @@ createNode mesh -name "base_geoShape" -parent "base_geo";
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".displaySmoothMesh" 2;
 createNode parentConstraint -name "base_geo_parentConstraint1" -parent "base_geo";
-	rename -uuid "73C9A5B3-4034-335E-5B52-7FBB6D013809";
+	rename -uuid "AE3A3E24-4E89-72BE-50A8-CEADD792296B";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "RK_baseW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "BaseW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -802,21 +798,20 @@ createNode parentConstraint -name "base_geo_parentConstraint1" -parent "base_geo
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.1624376821934539 -4.2396499445742344e-11 
-		7.0202299756052408e-06 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -0.00034601946247621269 
-		0.00034601946247621258 -89.999999999999986 ;
-	setAttr ".lastTargetRotate" -type "double3" -4.8531412986198669e-20 -6.8633782444960292e-20 
-		-4.1449169051239963e-25 ;
-	setAttr ".restTranslate" -type "double3" 2.6387397279642845e-27 6.6613381477509392e-16 
-		5.082197683525802e-21 ;
-	setAttr ".restRotate" -type "double3" -4.8531412986198669e-20 -6.8633782444960292e-20 
-		-4.1449169051239963e-25 ;
-	setAttr -keyable on ".RK_baseW0";
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.6669330672394242 9.2502270469724021e-16 
+		0.029882878182835387 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -1.3169124057932773 7.3096887317971621e-16 
+		-89.999999999999972 ;
+	setAttr ".lastTargetRotate" -type "double3" 4.0410519086152573e-35 -5.9635400277440939e-16 
+		-7.765026077791789e-18 ;
+	setAttr ".restTranslate" -type "double3" 1.6702627442698303e-31 0 0 ;
+	setAttr ".restRotate" -type "double3" 4.0410519086152573e-35 -5.9635400277440939e-16 
+		-7.765026077791789e-18 ;
+	setAttr -keyable on ".BaseW0";
 createNode scaleConstraint -name "base_geo_scaleConstraint1" -parent "base_geo";
-	rename -uuid "F51BB690-473D-B6E2-3A8C-76AE1110A994";
+	rename -uuid "AF5A9716-4A16-50DE-B894-08B08CDC9BF7";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "RK_baseW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "BaseW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -829,9 +824,9 @@ createNode scaleConstraint -name "base_geo_scaleConstraint1" -parent "base_geo";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".RK_baseW0";
+	setAttr -keyable on ".BaseW0";
 createNode transform -name "lower_arm_geo" -parent "Geometry";
-	rename -uuid "F6D2888F-4F0C-C785-BDDE-DD9FBD38CAD8";
+	rename -uuid "D5FD011D-42F9-A04F-0B76-B6ABF98F0A7E";
 	addAttr -internalSet true -cachedInternally true -keyable true -shortName "currentUVSet" 
 		-longName "currentUVSet" -dataType "string";
 	setAttr ".rotatePivot" -type "double3" -0.0088138314227734389 7.7685333410733488 
@@ -840,7 +835,7 @@ createNode transform -name "lower_arm_geo" -parent "Geometry";
 		-5.7011069029400812 ;
 	setAttr -keyable on ".currentUVSet" -type "string" "map1";
 createNode mesh -name "lower_arm_geoShape" -parent "lower_arm_geo";
-	rename -uuid "798B33BA-483F-9CD3-D8F7-BBBBB269822C";
+	rename -uuid "F4BEBCF0-4BB0-E8E1-D049-ABAE3D63E7EC";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
@@ -1374,9 +1369,9 @@ createNode mesh -name "lower_arm_geoShape" -parent "lower_arm_geo";
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".displaySmoothMesh" 2;
 createNode parentConstraint -name "lower_arm_geo_parentConstraint1" -parent "lower_arm_geo";
-	rename -uuid "01252973-4EE2-9772-7319-A7B4B316C11A";
+	rename -uuid "16FF0B96-4DB9-5528-06EF-D487CF7F8FF0";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "RK_arm1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LowerArmW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -1389,21 +1384,21 @@ createNode parentConstraint -name "lower_arm_geo_parentConstraint1" -parent "low
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 7.5529999355237845 -0.0088087546004955927 
-		-5.3378095437039974e-06 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -130.99107352132489 -0.00066295753217130219 
-		90.000038511450754 ;
-	setAttr ".lastTargetRotate" -type "double3" 4.7631005188398139e-10 -4.8145380370590664e-05 
-		-3.3093661041567116e-06 ;
-	setAttr ".restTranslate" -type "double3" 3.4694469519536142e-18 -4.4408920985006262e-15 
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 7.4936399417450108 0.0088138314227764487 
+		0.028877721652249111 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 49.741379376273507 -2.4271933806843002e-14 
+		-89.999999999999986 ;
+	setAttr ".lastTargetRotate" -type "double3" -24.648283767419187 1.128652642666926e-14 
+		-2.8434157047576366e-14 ;
+	setAttr ".restTranslate" -type "double3" 1.7347234759768071e-18 8.8817841970012523e-16 
 		-2.6645352591003757e-15 ;
-	setAttr ".restRotate" -type "double3" 6.5946425222166232e-15 2.4014608422003599e-15 
-		-1.2722191561519393e-14 ;
-	setAttr -keyable on ".RK_arm1W0";
+	setAttr ".restRotate" -type "double3" -8.9453100416161419e-16 4.2738703532166017e-15 
+		-6.3129662012447243e-15 ;
+	setAttr -keyable on ".LowerArmW0";
 createNode scaleConstraint -name "lower_arm_geo_scaleConstraint1" -parent "lower_arm_geo";
-	rename -uuid "F3E257C6-4BE7-6FD6-5A71-61BAE1065BD3";
+	rename -uuid "80D4E316-46E2-6686-3AC4-5F8A679EAE54";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "RK_arm1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LowerArmW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -1416,9 +1411,9 @@ createNode scaleConstraint -name "lower_arm_geo_scaleConstraint1" -parent "lower
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".RK_arm1W0";
+	setAttr -keyable on ".LowerArmW0";
 createNode transform -name "upper_arm_geo" -parent "Geometry";
-	rename -uuid "F392BF8A-4EE7-60C9-2FF2-CCABBF559334";
+	rename -uuid "477EE728-4F46-673D-A1E6-AD8E0266251D";
 	addAttr -internalSet true -cachedInternally true -keyable true -shortName "currentUVSet" 
 		-longName "currentUVSet" -dataType "string";
 	setAttr ".rotatePivot" -type "double3" -0.0088138282299041731 12.813642501831055 
@@ -1427,7 +1422,7 @@ createNode transform -name "upper_arm_geo" -parent "Geometry";
 		-11.506677627563477 ;
 	setAttr -keyable on ".currentUVSet" -type "string" "map1";
 createNode mesh -name "upper_arm_geoShape" -parent "upper_arm_geo";
-	rename -uuid "23465F16-421A-5EA5-CF2E-3CBCCE61247D";
+	rename -uuid "869F40B4-412C-2222-9B6F-838EA13C45EE";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
@@ -1930,9 +1925,9 @@ createNode mesh -name "upper_arm_geoShape" -parent "upper_arm_geo";
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".displaySmoothMesh" 2;
 createNode parentConstraint -name "upper_arm_geo_parentConstraint1" -parent "upper_arm_geo";
-	rename -uuid "5314922F-4858-1C49-7EB7-AB80244EE23D";
+	rename -uuid "9B908255-4823-51AB-AAFC-0FA9874F81E3";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "RK_arm2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "UpperArmW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -1945,19 +1940,20 @@ createNode parentConstraint -name "upper_arm_geo_parentConstraint1" -parent "upp
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.348307903104029e-06 
-		0.0088035816694727181 3.3069473914792979e-07 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -50.239984591930352 0.0013507439101079993 
-		-89.999965105781996 ;
-	setAttr ".lastTargetRotate" -type "double3" 4.7631720871133806e-10 -4.8145380373631451e-05 
-		-3.3093660966801597e-06 ;
-	setAttr ".restTranslate" -type "double3" 0 -1.7763568394002505e-15 -1.7763568394002505e-15 ;
-	setAttr ".restRotate" -type "double3" 0 6.3611093629270335e-15 0 ;
-	setAttr -keyable on ".RK_arm2W0";
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0.12902920031580978 -0.0088138282298228388 
+		0.0011536036919004289 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 129.53870865538983 4.5615252609102636e-13 
+		89.999999999999901 ;
+	setAttr ".lastTargetRotate" -type "double3" 2.0450666457457576 3.7893811047930734e-13 
+		1.5627334365350917e-13 ;
+	setAttr ".restTranslate" -type "double3" 0 -1.7763568394002505e-15 0 ;
+	setAttr ".restRotate" -type "double3" 9.0776396925699538e-28 2.8943047601317996e-13 
+		3.594026790053773e-13 ;
+	setAttr -keyable on ".UpperArmW0";
 createNode scaleConstraint -name "upper_arm_geo_scaleConstraint1" -parent "upper_arm_geo";
-	rename -uuid "3CC424C8-4345-08C2-8CE3-D2B40AAEEA79";
+	rename -uuid "61C52D08-4FCD-E41B-B775-00AE85C399BD";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "RK_arm2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "UpperArmW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -1970,9 +1966,9 @@ createNode scaleConstraint -name "upper_arm_geo_scaleConstraint1" -parent "upper
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".RK_arm2W0";
+	setAttr -keyable on ".UpperArmW0";
 createNode transform -name "head_geo" -parent "Geometry";
-	rename -uuid "28D7B29D-4875-7F49-34DF-719C9938C0D0";
+	rename -uuid "D4D11AEC-4399-E4CF-8A94-CB85D7F57864";
 	addAttr -internalSet true -cachedInternally true -keyable true -shortName "currentUVSet" 
 		-longName "currentUVSet" -dataType "string";
 	setAttr ".rotatePivot" -type "double3" -0.0088138316745693945 23.695306752477052 
@@ -1981,7 +1977,7 @@ createNode transform -name "head_geo" -parent "Geometry";
 		1.6059521708569855 ;
 	setAttr -keyable on ".currentUVSet" -type "string" "map1";
 createNode mesh -name "head_geoShape" -parent "head_geo";
-	rename -uuid "62BE73DE-4117-459C-EB7D-FE96BA973E6B";
+	rename -uuid "63E5E6DC-4478-9515-E9B1-6FBD9FD41E62";
 	setAttr -keyable off ".visibility";
 	setAttr ".visibleInReflections" yes;
 	setAttr ".visibleInRefractions" yes;
@@ -2950,9 +2946,9 @@ createNode mesh -name "head_geoShape" -parent "head_geo";
 	setAttr ".holeFaceData" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".displaySmoothMesh" 2;
 createNode parentConstraint -name "head_geo_parentConstraint1" -parent "head_geo";
-	rename -uuid "A4BAAFB0-4431-0E43-F1A7-85A8BE2F85D6";
+	rename -uuid "D030C13F-412F-1E4E-8A6F-38802507760C";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "RK_lampW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LampHeadW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -2965,20 +2961,20 @@ createNode parentConstraint -name "head_geo_parentConstraint1" -parent "head_geo
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0.21500649687742879 0.0088134574769002886 
-		0.021427134380285651 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -50.239984591930352 0.0013507439101017656 
-		-89.999965105781996 ;
-	setAttr ".lastTargetRotate" -type "double3" 4.7628222261509552e-10 -4.8145380370450917e-05 
-		-3.3093661094023646e-06 ;
-	setAttr ".restTranslate" -type "double3" 0 1.0658141036401503e-14 -2.2204460492503131e-16 ;
-	setAttr ".restRotate" -type "double3" -3.1805546814635168e-15 3.1805546814635164e-15 
-		-1.2722218725854067e-14 ;
-	setAttr -keyable on ".RK_lampW0";
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.2706969670591519 -0.0088138316745203019 
+		0.04554315610606352 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 129.53870865538983 4.5881745839623552e-13 
+		89.999999999999886 ;
+	setAttr ".lastTargetRotate" -type "double3" -28.859565512829509 4.2881725100334687e-13 
+		2.1150825017041099e-13 ;
+	setAttr ".restTranslate" -type "double3" 0 0 2.4424906541753444e-15 ;
+	setAttr ".restRotate" -type "double3" 9.5416640443914654e-15 2.8943047601317996e-13 
+		3.6258323368684097e-13 ;
+	setAttr -keyable on ".LampHeadW0";
 createNode scaleConstraint -name "head_geo_scaleConstraint1" -parent "head_geo";
-	rename -uuid "4A26BA6B-42C6-9458-E701-45A8E532DDEA";
+	rename -uuid "2DC6E912-43B6-A56B-6914-6FAB60F3ECDA";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "RK_lampW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LampHeadW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -2991,89 +2987,39 @@ createNode scaleConstraint -name "head_geo_scaleConstraint1" -parent "head_geo";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".RK_lampW0";
-createNode transform -name "FK_jnt";
-	rename -uuid "041CB726-4777-9741-C2CE-A1A86D12E8E1";
-createNode joint -name "FK_root" -parent "FK_jnt";
-	rename -uuid "DD068129-4FD1-E8DF-9E08-BEAC7AF9A8F4";
+	setAttr -keyable on ".LampHeadW0";
+createNode transform -name "Skeleton" -parent "Lamp";
+	rename -uuid "CCE7F6DC-40B5-1F67-D43C-25B3023DD27B";
+createNode joint -name "Base" -parent "Skeleton";
+	rename -uuid "707ECFDC-4FAD-49A3-3FAE-A6A66918AF28";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -0.00034601946247621258 -0.00034601946247621258 
-		90 ;
-	setAttr ".radius" 5;
-createNode joint -name "FK_base" -parent "FK_root";
-	rename -uuid "18F87714-4F21-1179-688E-CBA139139D07";
+	setAttr ".jointOrient" -type "double3" 0 -1.3169124057932773 89.999999999999972 ;
+	setAttr ".radius" 0.5;
+createNode joint -name "LowerArmRK" -parent "Base";
+	rename -uuid "FD8AEC97-4288-5FCC-0190-BFA01CD58FCD";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrientType" -type "string" "none";
-	setAttr ".radius" 13;
-createNode parentConstraint -name "FK_base_parentConstraint1" -parent "FK_base";
-	rename -uuid "6ACDF1A3-4D70-EAD0-39C7-9D99B2ADC3BD";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_base_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 7.7169121293262374e-27 
-		8.8817841970012523e-16 -6.0857208151570948e-11 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -0.00034601946247621258 
-		-0.00034601946247621253 89.999999999999986 ;
-	setAttr ".lastTargetRotate" -type "double3" -9.7062825972397338e-20 -6.274593474991718e-20 
-		2.0724584525619977e-25 ;
-	setAttr ".restTranslate" -type "double3" 2.8142037392175805 6.2487875741586861e-16 
-		1.0164395367051604e-20 ;
-	setAttr ".restRotate" -type "double3" -9.7062825972397338e-20 -6.274593474991718e-20 
-		2.0724584525619977e-25 ;
-	setAttr -keyable on ".fk_base_ctrlW0";
-createNode scaleConstraint -name "FK_base_scaleConstraint1" -parent "FK_base";
-	rename -uuid "00E445F4-4DEA-E090-4FD1-5BBD26D080F0";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_base_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".fk_base_ctrlW0";
-createNode joint -name "FK_arm1" -parent "FK_root";
-	rename -uuid "009E9FF2-406D-AFB0-DEB8-C396E5A164F8";
+	setAttr ".jointOrient" -type "double3" 0 51.058291782066782 0 ;
+	setAttr ".radius" 1.2348003744201739;
+createNode joint -name "UpperArmRK" -parent "LowerArmRK";
+	rename -uuid "2AF9F0F3-4418-4948-3266-278E9CA721B1";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 179.99983547931546 49.009272496915727 0.0003981799856060039 ;
-	setAttr ".radius" 3;
-createNode joint -name "FK_arm2" -parent "FK_arm1";
-	rename -uuid "107AEBDA-453C-B581-AAC4-79AB4ECD733E";
-	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
-	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -0.0056898528165510468 80.751088902441055 
-		179.99575020513942 ;
-	setAttr ".radius" 2;
-createNode joint -name "FK_lamp" -parent "FK_arm2";
-	rename -uuid "75D7F693-4F6B-BEC3-91F1-C8A3579B530F";
+	setAttr ".jointOrient" -type "double3" 0 -79.797329279116312 -179.99999999999952 ;
+	setAttr ".radius" 1.4020367507348761;
+createNode joint -name "LampHeadRK" -parent "UpperArmRK";
+	rename -uuid "CB5ED5E4-489E-401F-8DAB-C3880047356C";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrientType" -type "string" "none";
-	setAttr ".radius" 2;
-createNode parentConstraint -name "FK_lamp_parentConstraint1" -parent "FK_lamp";
-	rename -uuid "18DFD5AC-4F14-F87A-7B93-8F9CE571504E";
+	setAttr ".radius" 1.4020367507348761;
+createNode parentConstraint -name "LampHeadRK_parentConstraint1" -parent "LampHeadRK";
+	rename -uuid "95B42EF4-4A92-1D47-AA19-B79DD29659C6";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_lamp_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LampHeadFKW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
+		-longName "LampHeadIKW1" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3086,21 +3032,26 @@ createNode parentConstraint -name "FK_lamp_parentConstraint1" -parent "FK_lamp";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.3924544613199177e-15 
-		-5.9590270851117566e-07 -6.4845879226282932e-06 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -0.001384080423238145 -50.239984593238056 
-		90.000000000000014 ;
-	setAttr ".lastTargetRotate" -type "double3" 2.2263882770244605e-14 -2.544443745170815e-14 
-		5.8840261607075055e-14 ;
-	setAttr ".restTranslate" -type "double3" 16.824687515536276 2.8351886810495941e-17 
-		-7.1054273576010019e-15 ;
-	setAttr ".restRotate" -type "double3" 6.3611093629270335e-15 -9.5416640443905503e-15 
-		4.7708320221952744e-15 ;
-	setAttr -keyable on ".fk_lamp_ctrlW0";
-createNode scaleConstraint -name "FK_lamp_scaleConstraint1" -parent "FK_lamp";
-	rename -uuid "BA36F23D-48C5-EEE8-13DA-A9BBBD9786C8";
+	setAttr -size 2 ".target";
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 4.0481490259332448e-17 
+		2.1316282072803006e-14 ;
+	setAttr ".target[1].targetOffsetTranslate" -type "double3" 5.2848888317020927e-07 
+		-1.8144348956639078e-05 -1.9322057340787069e-06 ;
+	setAttr ".target[1].targetOffsetRotate" -type "double3" -179.9999999999994 -50.461291344610203 
+		89.999999999999829 ;
+	setAttr ".lastTargetRotate" -type "double3" 0 -68.348052884952253 0 ;
+	setAttr ".restTranslate" -type "double3" 18.439377180874267 7.0694950620988886e-16 
+		2.4868995751603507e-14 ;
+	setAttr ".restRotate" -type "double3" 3.7967095007362954e-15 1.6112429111417963e-15 
+		-2.0864625071026542e-15 ;
+	setAttr -keyable on ".LampHeadFKW0";
+	setAttr -keyable on ".LampHeadIKW1";
+createNode scaleConstraint -name "LampHeadRK_scaleConstraint1" -parent "LampHeadRK";
+	rename -uuid "22AFC0FA-4715-BC91-C16D-7682136C15D4";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_lamp_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LampHeadFKW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
+		-longName "LampHeadIKW1" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3113,11 +3064,15 @@ createNode scaleConstraint -name "FK_lamp_scaleConstraint1" -parent "FK_lamp";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".fk_lamp_ctrlW0";
-createNode parentConstraint -name "FK_arm2_parentConstraint1" -parent "FK_arm2";
-	rename -uuid "5123FFDD-4BBB-F5CA-D90C-02B4DF863307";
+	setAttr -size 2 ".target";
+	setAttr -keyable on ".LampHeadFKW0";
+	setAttr -keyable on ".LampHeadIKW1";
+createNode parentConstraint -name "UpperArmRK_parentConstraint1" -parent "UpperArmRK";
+	rename -uuid "940FD295-4090-176C-5816-00B6BFDAFFD4";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_arm_2_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "UpperArmFKW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
+		-longName "UpperArmIKW1" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3130,21 +3085,29 @@ createNode parentConstraint -name "FK_arm2_parentConstraint1" -parent "FK_arm2";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.4381795695743878e-15 
-		-3.5527136788005009e-15 -6.5342670101387057e-06 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -0.001384080423229366 -50.239984593238063 
-		90 ;
-	setAttr ".lastTargetRotate" -type "double3" 1.1214056535894936e-14 -3.8166656177562201e-14 
-		5.4342564377166097e-14 ;
-	setAttr ".restTranslate" -type "double3" 15.244409191373421 3.3881317890172014e-21 
-		-1.3322676295501878e-15 ;
-	setAttr ".restRotate" -type "double3" 9.6482390273082411e-15 -5.9673057552948895e-31 
-		7.087333426852509e-15 ;
-	setAttr -keyable on ".fk_arm_2_ctrlW0";
-createNode scaleConstraint -name "FK_arm2_scaleConstraint1" -parent "FK_arm2";
-	rename -uuid "5FDCA91B-499F-8A70-DC1F-58B6FD5F37FE";
+	setAttr -size 2 ".target";
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.8873791418627661e-15 
+		4.5171845199939523e-18 1.0658141036401503e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 0 -1.590277340731758e-15 
+		-2.8362227033053644e-30 ;
+	setAttr ".target[1].targetOffsetTranslate" -type "double3" 0.0020164282107524301 
+		-0.13923121114585557 0.23548862580946306 ;
+	setAttr ".target[1].targetOffsetRotate" -type "double3" -1.9239684999486182 0.73178141305848354 
+		0.43266576815190438 ;
+	setAttr ".lastTargetRotate" -type "double3" -3.2438438453042223e-29 -70.296540619210163 
+		-3.2438438453042223e-29 ;
+	setAttr ".restTranslate" -type "double3" 15.206140572123383 8.7283466659259416e-14 
+		3.9968028886505635e-15 ;
+	setAttr ".restRotate" -type "double3" 2.8093376974319878e-16 6.3611093629270351e-15 
+		4.2108507889855582e-17 ;
+	setAttr -keyable on ".UpperArmFKW0";
+	setAttr -keyable on ".UpperArmIKW1";
+createNode scaleConstraint -name "UpperArmRK_scaleConstraint1" -parent "UpperArmRK";
+	rename -uuid "E85A088C-463B-40D3-87B4-1997187BFFF5";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_arm_2_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "UpperArmFKW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
+		-longName "UpperArmIKW1" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3157,11 +3120,15 @@ createNode scaleConstraint -name "FK_arm2_scaleConstraint1" -parent "FK_arm2";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".fk_arm_2_ctrlW0";
-createNode parentConstraint -name "FK_arm1_parentConstraint1" -parent "FK_arm1";
-	rename -uuid "A41FF9EC-4455-50F8-A96B-83A309692AB9";
+	setAttr -size 2 ".target";
+	setAttr -keyable on ".UpperArmFKW0";
+	setAttr -keyable on ".UpperArmIKW1";
+createNode parentConstraint -name "LowerArmRK_parentConstraint1" -parent "LowerArmRK";
+	rename -uuid "B87DB21E-4407-6283-5E7D-3BA369B92700";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_arm_1_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LowerArmFKW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
+		-longName "LowerArmIKW1" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3174,21 +3141,26 @@ createNode parentConstraint -name "FK_arm1_parentConstraint1" -parent "FK_arm1";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.7893848876018253e-26 
-		8.8817841970012523e-16 -2.3529807697523906e-05 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" 179.99930795986617 49.008926478655589 
-		90 ;
-	setAttr ".lastTargetRotate" -type "double3" -6.9449034360206127e-14 6.3611093629270296e-15 
-		-2.1662966814649537e-15 ;
-	setAttr ".restTranslate" -type "double3" 2.8142037391149413 1.0263936799946793e-10 
-		-1.699547982991537e-05 ;
-	setAttr ".restRotate" -type "double3" -1.8560159456789871e-14 -1.2722218725854061e-14 
-		-2.1662966814649478e-15 ;
-	setAttr -keyable on ".fk_arm_1_ctrlW0";
-createNode scaleConstraint -name "FK_arm1_scaleConstraint1" -parent "FK_arm1";
-	rename -uuid "C1C6011A-437A-4396-16D2-89B5D5091A17";
+	setAttr -size 2 ".target";
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 -1.9721522630525295e-31 
+		-4.4408920985006262e-16 ;
+	setAttr ".target[1].targetOffsetTranslate" -type "double3" 0.2413803268463206 0.62276892375540061 
+		-0.23294756893147417 ;
+	setAttr ".target[1].targetOffsetRotate" -type "double3" 0.80122616729684126 -1.0475437631219937 
+		-1.8225515274509663 ;
+	setAttr ".lastTargetRotate" -type "double3" 0 -38.393160809254702 0 ;
+	setAttr ".restTranslate" -type "double3" 2.9186256379163025 1.2916129688704105e-15 
+		-1.6653345369377348e-16 ;
+	setAttr ".restRotate" -type "double3" -2.5313985013601228e-16 6.3611093629270335e-15 
+		-2.4149231101932463e-16 ;
+	setAttr -keyable on ".LowerArmFKW0";
+	setAttr -keyable on ".LowerArmIKW1";
+createNode scaleConstraint -name "LowerArmRK_scaleConstraint1" -parent "LowerArmRK";
+	rename -uuid "6CE4A02F-4A7B-7FF2-F880-D7A9D59C1C50";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_arm_1_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LowerArmFKW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
+		-longName "LowerArmIKW1" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3201,129 +3173,31 @@ createNode scaleConstraint -name "FK_arm1_scaleConstraint1" -parent "FK_arm1";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".fk_arm_1_ctrlW0";
-createNode parentConstraint -name "FK_root_parentConstraint1" -parent "FK_root";
-	rename -uuid "B4A08833-4D29-EFA1-9944-B5AD4FD74D0A";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_root_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 0 -1.6995540688569122e-05 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -0.00034601946247621253 
-		-0.00034601946247621258 89.999999999999986 ;
-	setAttr ".lastTargetRotate" -type "double3" -9.706282597239741e-20 1.313797171948775e-19 
-		-1.9083328088573854e-14 ;
-	setAttr ".restTranslate" -type "double3" 0 0 -1.6995540688569122e-05 ;
-	setAttr ".restRotate" -type "double3" -9.706282597239741e-20 1.3137971719487752e-19 
-		-1.9083328088573854e-14 ;
-	setAttr -keyable on ".fk_root_ctrlW0";
-createNode scaleConstraint -name "FK_root_scaleConstraint1" -parent "FK_root";
-	rename -uuid "A6F33FE1-4653-6889-C892-968F625E9BFB";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "fk_root_ctrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".fk_root_ctrlW0";
-createNode transform -name "IK_jnt";
-	rename -uuid "C2722FFE-435C-A224-D9B7-69A9F95D5A32";
-createNode ikHandle -name "ikHandle1" -parent "IK_jnt";
-	rename -uuid "3EDE65B0-4BAC-B750-BF9A-E6B6BA4C3A8E";
-	setAttr ".rootOnCurve" yes;
-createNode poleVectorConstraint -name "ikHandle1_poleVectorConstraint1" -parent "ikHandle1";
-	rename -uuid "E0438715-42B4-11FF-FCA0-D497F73C08F8";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "nurbsCircle1W0" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr ".restTranslate" -type "double3" -3.1243937875963309e-16 10.001626864402539 
-		-23.21094346962396 ;
-	setAttr -keyable on ".nurbsCircle1W0";
-createNode parentConstraint -name "ikHandle1_parentConstraint1" -parent "ikHandle1";
-	rename -uuid "F79F9294-4F87-23D7-6F7C-92AC9F92B9F9";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "nurbsCircle2W0" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.2245069835278333e-15 
-		-4.4021039225104701 -1.9597497143014999 ;
-	setAttr ".restTranslate" -type "double3" 1.2245069835278333e-15 23.574265837813112 
-		1.4269661208079383 ;
-	setAttr -keyable on ".nurbsCircle2W0";
-createNode scaleConstraint -name "ikHandle1_scaleConstraint1" -parent "ikHandle1";
-	rename -uuid "DCBB3DBE-4D2A-A51F-C6A1-4193E823C1CF";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "nurbsCircle2W0" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".nurbsCircle2W0";
-createNode joint -name "IK_root" -parent "IK_jnt";
-	rename -uuid "E29F5E35-4D0B-39D4-CFD2-2A91B93F9A46";
-	setAttr ".translate" -type "double3" 0 0 -1.6995540688569122e-05 ;
+	setAttr -size 2 ".target";
+	setAttr -keyable on ".LowerArmFKW0";
+	setAttr -keyable on ".LowerArmIKW1";
+createNode joint -name "LowerArmFK" -parent "Base";
+	rename -uuid "D0DF5021-48D1-B9B4-708B-78ABA584BD56";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -0.00034601946247621258 -0.00034601946247621264 
-		89.999999999999986 ;
-	setAttr ".radius" 5;
-createNode joint -name "IK_base" -parent "IK_root";
-	rename -uuid "EA60BAB3-4E85-0CDB-EFBA-058BDE4099F7";
+	setAttr ".jointOrient" -type "double3" 0 51.058291782066782 0 ;
+	setAttr ".radius" 1.2348003744201739;
+createNode joint -name "UpperArmFK" -parent "LowerArmFK";
+	rename -uuid "1A86BB30-4403-B401-7CB9-78B1C3C4BD3E";
+	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
+	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
+	setAttr ".jointOrient" -type "double3" 0 -79.797329279116312 -179.99999999999952 ;
+	setAttr ".radius" 1.4020367507348761;
+createNode joint -name "LampHeadFK" -parent "UpperArmFK";
+	rename -uuid "A7837A5A-4B98-BF47-9A39-5B95DEFD841F";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrientType" -type "string" "none";
-	setAttr ".radius" 12;
-createNode parentConstraint -name "IK_base_parentConstraint1" -parent "IK_base";
-	rename -uuid "FCB67BB5-4FBC-B427-B00E-1F80D0BF2D4C";
+	setAttr ".radius" 1.4020367507348761;
+createNode parentConstraint -name "LampHead_parentConstraint1" -parent "LampHeadFK";
+	rename -uuid "331E04B7-4070-9EDE-24EC-8E8487BD014B";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "ikbaseW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LampHead_FK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3336,21 +3210,21 @@ createNode parentConstraint -name "IK_base_parentConstraint1" -parent "IK_base";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 3.1243937871069921e-16 
-		8.8817841970012523e-16 -6.085720815495908e-11 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -0.00034601946247621269 
-		-0.00034601946247621258 89.999999999999986 ;
-	setAttr ".lastTargetRotate" -type "double3" -4.8531412986198669e-20 6.8633782444960292e-20 
-		4.1449169051239963e-25 ;
-	setAttr ".restTranslate" -type "double3" 2.8142037392175796 6.248787574675674e-16 
-		3.3881317890172014e-21 ;
-	setAttr ".restRotate" -type "double3" -4.8531412986198669e-20 6.8633782444960292e-20 
-		4.1449169051239963e-25 ;
-	setAttr -keyable on ".ikbaseW0";
-createNode scaleConstraint -name "IK_base_scaleConstraint1" -parent "IK_base";
-	rename -uuid "B321FDA8-4029-CEB3-BE9C-1B9117A508FE";
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 2.7921852997585464e-16 
+		1.7763568394002505e-14 -1.9539925233402755e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -179.99999999999986 -50.461291344610203 
+		89.999999999999829 ;
+	setAttr ".lastTargetRotate" -type "double3" -6.2218580832270295e-14 -30.904632158575236 
+		-1.8079113454896504e-13 ;
+	setAttr ".restTranslate" -type "double3" 18.439377180874267 7.0694947022483115e-16 
+		1.4210854715202004e-14 ;
+	setAttr ".restRotate" -type "double3" -3.1805546814635168e-15 9.5416640443905503e-15 
+		-2.6483437788300952e-31 ;
+	setAttr -keyable on ".LampHead_FK_CtrlW0";
+createNode scaleConstraint -name "LampHead_scaleConstraint1" -parent "LampHeadFK";
+	rename -uuid "FCDB5382-4B82-A922-160C-DCA5DCEDB802";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "ikbaseW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "LampHead_FK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3363,62 +3237,148 @@ createNode scaleConstraint -name "IK_base_scaleConstraint1" -parent "IK_base";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".ikbaseW0";
-createNode joint -name "IK_arm1" -parent "IK_root";
-	rename -uuid "BE0E0F69-4323-708C-F9D4-218EF9CBA06D";
-	setAttr ".translate" -type "double3" 2.8142037391149408 1.0263936799946795e-10 
-		-1.6995479829915373e-05 ;
-	setAttr ".rotate" -type "double3" -5.1451475128175772e-07 -8.2262448206691988e-12 
-		6.8132520402691574e-07 ;
+	setAttr -keyable on ".LampHead_FK_CtrlW0";
+createNode parentConstraint -name "UpperArm_parentConstraint1" -parent "UpperArmFK";
+	rename -uuid "DCB71D9E-4D43-56B4-20C6-CB9AE2AF6C99";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "UpperArm_FK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.7843372942113558e-16 
+		5.3290705182007514e-15 -8.8817841970012523e-15 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -179.9999999999994 -50.461291344610189 
+		89.999999999999872 ;
+	setAttr ".lastTargetRotate" -type "double3" -7.3383169539159673e-15 26.693350413164922 
+		-2.3870785082125456e-13 ;
+	setAttr ".restTranslate" -type "double3" 15.206140572123369 8.7319430964998679e-14 
+		3.5527136788005009e-15 ;
+	setAttr ".restRotate" -type "double3" 2.1593953750379561e-14 1.2722218725854065e-14 
+		5.5603594642310527e-15 ;
+	setAttr -keyable on ".UpperArm_FK_CtrlW0";
+createNode scaleConstraint -name "UpperArm_scaleConstraint1" -parent "UpperArmFK";
+	rename -uuid "D5133B8A-4A88-D8F2-9462-15AAF369E7B8";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "UpperArm_FK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".UpperArm_FK_CtrlW0";
+createNode parentConstraint -name "LowerArm_parentConstraint1" -parent "LowerArmFK";
+	rename -uuid "75544FA5-476A-7D06-330C-BE91530B0704";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "LowerARm_FK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 -8.8817841970012523e-16 
+		-1.3877787807814457e-17 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.1311126247793679e-15 49.741379376273507 
+		89.999999999999972 ;
+	setAttr ".lastTargetRotate" -type "double3" -6.7388071975211246e-15 24.648283767419191 
+		-4.5537970520103541e-15 ;
+	setAttr ".restTranslate" -type "double3" 2.918625637916302 1.2961301533903857e-15 
+		0 ;
+	setAttr ".restRotate" -type "double3" 5.7185612158877219e-15 -6.3611093629270335e-15 
+		-4.5935463728699641e-15 ;
+	setAttr -keyable on ".LowerARm_FK_CtrlW0";
+createNode scaleConstraint -name "LowerArm_scaleConstraint1" -parent "LowerArmFK";
+	rename -uuid "BBE06F9D-4FED-3833-FDF4-A9BA1FFE0AFA";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "LowerARm_FK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".LowerARm_FK_CtrlW0";
+createNode joint -name "LowerArmIK" -parent "Base";
+	rename -uuid "DEE01A68-4B68-476E-E657-929337DEB30F";
+	setAttr ".rotate" -type "double3" -0.767641023426059 1.0723972432953541 1.8080425268682738 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 179.99983547931546 49.009272496915727 0.00039817998560600406 ;
-	setAttr ".radius" 3;
-createNode joint -name "IK_arm2" -parent "IK_arm1";
-	rename -uuid "E6FE087F-4793-9A97-D85C-5F80F72AFBD1";
-	setAttr ".translate" -type "double3" 15.244409191373421 6.7762635780344027e-20 
-		-2.6645352591003757e-15 ;
-	setAttr ".rotate" -type "double3" 8.5679542148662557e-31 -5.1101479253577227e-13 
-		-1.3696817409099893e-17 ;
+	setAttr ".jointOrient" -type "double3" 1.4045186200881629e-31 51.058291782066782 
+		2.2472297921410606e-30 ;
+	setAttr ".radius" 1.2348003744201739;
+createNode joint -name "UpperArmIK" -parent "LowerArmIK";
+	rename -uuid "1B585C9E-441D-C9F4-EBF1-CB9E202FCA1C";
+	setAttr ".translate" -type "double3" 15.206140572123369 8.7319430964998679e-14 
+		3.5527136788005009e-15 ;
+	setAttr ".rotate" -type "double3" -1.2873098556145392e-17 0.33576928728423211 -1.0700018968852424e-15 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -0.0056898528165510564 80.751088902441055 
-		179.99575020513942 ;
-	setAttr ".radius" 2;
-createNode joint -name "IK_lamp" -parent "IK_arm2";
-	rename -uuid "29EB64BA-4E88-3B6F-187E-50B9DEC079C3";
-	setAttr ".translate" -type "double3" 16.824687515536276 2.8351886810495941e-17 
-		-1.7763568394002505e-15 ;
+	setAttr ".jointOrient" -type "double3" 0 -79.797329279116312 -179.99999999999952 ;
+	setAttr ".radius" 1.4020367507348761;
+createNode joint -name "LampHeadIK" -parent "UpperArmIK";
+	rename -uuid "E02E5881-4C35-A412-56A6-1DBCFE122613";
+	setAttr ".translate" -type "double3" 18.439377180874267 7.0694947022483115e-16 
+		1.4210854715202004e-14 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".jointOrientType" -type "string" "none";
-	setAttr ".radius" 2;
-createNode ikEffector -name "IK_effector1" -parent "IK_arm2";
-	rename -uuid "AE9BCC47-4CF1-3F41-D8EE-24A589215D18";
+	setAttr ".radius" 1.4020367507348761;
+createNode orientConstraint -name "LampHeadIK_orientConstraint1" -parent "LampHeadIK";
+	rename -uuid "56AD758E-4C6F-D989-D6E1-DFB9BB5996C8";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "Arm_IK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".lastTargetRotate" -type "double3" 130.11343157555103 1.9053692604810473 
+		90.447338056311992 ;
+	setAttr ".restRotate" -type "double3" 130.27090279161578 1.923811520500184 90.457247254722461 ;
+	setAttr -keyable on ".Arm_IK_CtrlW0";
+createNode ikEffector -name "effector1" -parent "UpperArmIK";
+	rename -uuid "7F14675B-4FCE-F7EA-5F6A-CEBCE79935B7";
 	setAttr ".visibility" no;
 	setAttr ".hideDisplay" yes;
-createNode transform -name "RK_RK_jnt";
-	rename -uuid "0AA9A9D5-4E4C-24BB-C6D1-158C94777AE5";
-createNode joint -name "RK_root" -parent "RK_RK_jnt";
-	rename -uuid "618CA5A0-4D9D-8B61-E4DC-73A856F0FC90";
-	setAttr ".translate" -type "double3" 0 0 -1.6995540688569122e-05 ;
-	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
-	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -0.00034601946247621258 -0.00034601946247621264 
-		89.999999999999986 ;
-	setAttr ".radius" 5;
-createNode joint -name "RK_base" -parent "RK_root";
-	rename -uuid "ECC85292-459C-7E91-A3CD-AFBBE1E6388D";
-	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
-	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrientType" -type "string" "none";
-	setAttr ".radius" 14;
-createNode parentConstraint -name "RK_base_parentConstraint1" -parent "RK_base";
-	rename -uuid "507E588D-4000-F5C3-34CB-73A1238BF3EA";
+createNode pointConstraint -name "LowerArmIK_pointConstraint1" -parent "LowerArmIK";
+	rename -uuid "F605CF85-49BA-5A4D-A40D-23AAF3C3380F";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "IK_baseW0" -defaultValue 1 -minValue 0 -attributeType "double";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
-		-longName "FK_baseW1" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "ARM_IK_Base_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3431,20 +3391,37 @@ createNode parentConstraint -name "RK_base_parentConstraint1" -parent "RK_base";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -size 2 ".target";
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 0 -3.3881317890172014e-21 ;
-	setAttr ".target[1].targetOffsetTranslate" -type "double3" 4.4408920985006262e-16 
-		-3.1243937869500961e-16 -6.7762635780344027e-21 ;
-	setAttr ".restTranslate" -type "double3" 2.8142037392175796 6.248787574675674e-16 
+	setAttr ".restTranslate" -type "double3" 2.9732742308687965 -0.62675565481185747 
+		0.32335900312910892 ;
+	setAttr -keyable on ".ARM_IK_Base_CtrlW0";
+createNode parentConstraint -name "Base_parentConstraint1" -parent "Base";
+	rename -uuid "D76263FE-4B05-FFD5-D1CE-BDA87810C402";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "Base_FK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 -2.6870534778768942 
 		0 ;
-	setAttr -keyable on ".IK_baseW0";
-	setAttr -keyable on ".FK_baseW1";
-createNode scaleConstraint -name "RK_base_scaleConstraint1" -parent "RK_base";
-	rename -uuid "A5F48B88-4A9D-663F-611B-47946503A945";
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 0 -1.3169124057932773 89.999999999999972 ;
+	setAttr ".lastTargetRotate" -type "double3" 0 -1.987846675914698e-16 0 ;
+	setAttr ".restTranslate" -type "double3" 5.2481590984552177e-33 -0.014039940298495424 
+		-0.0681851640044564 ;
+	setAttr ".restRotate" -type "double3" 0 -1.987846675914698e-16 0 ;
+	setAttr -keyable on ".Base_FK_CtrlW0";
+createNode scaleConstraint -name "Base_scaleConstraint1" -parent "Base";
+	rename -uuid "1250EE34-4181-0CBD-4AA9-E9957552A310";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "IK_baseW0" -defaultValue 1 -minValue 0 -attributeType "double";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
-		-longName "FK_baseW1" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "Base_FK_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -3457,467 +3434,254 @@ createNode scaleConstraint -name "RK_base_scaleConstraint1" -parent "RK_base";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -size 2 ".target";
-	setAttr -keyable on ".IK_baseW0";
-	setAttr -keyable on ".FK_baseW1";
-createNode joint -name "RK_arm1" -parent "RK_root";
-	rename -uuid "834195E4-4530-6A41-99A3-93AE14DC0763";
-	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
-	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" 179.99983547931546 49.009272496915727 0.00039817998560600406 ;
-	setAttr ".radius" 3;
-createNode joint -name "RK_arm2" -parent "RK_arm1";
-	rename -uuid "C614AB89-4A68-4AED-0A06-9C88323EB924";
-	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
-	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrient" -type "double3" -0.0056898528165510607 80.751088902441055 
-		179.99575020513942 ;
-	setAttr ".radius" 2;
-createNode joint -name "RK_lamp" -parent "RK_arm2";
-	rename -uuid "0A06D817-47F0-06D6-106E-0AAFCB0C9A94";
-	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
-	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".jointOrientType" -type "string" "none";
-	setAttr ".radius" 2;
-createNode parentConstraint -name "RK_lamp_parentConstraint2" -parent "RK_lamp";
-	rename -uuid "46569082-42E4-64ED-C2EF-D4AEFE979E64";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "lampW0" -defaultValue 1 -minValue 0 -attributeType "double";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
-		-longName "lampW1" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -size 2 ".target";
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 5.0230873647194585e-06 
-		-1.0095717989898334e-10 4.1791432607851675e-06 ;
-	setAttr ".target[1].targetOffsetTranslate" -type "double3" -1.1958434242842486e-10 
-		1.606679199406269e-15 -1.1425171919654531e-10 ;
-	setAttr ".target[1].targetOffsetRotate" -type "double3" 3.3336513140618227e-05 2.0302569680989325e-11 
-		-3.4894217973065035e-05 ;
-	setAttr ".restTranslate" -type "double3" 16.824687515536279 2.8243466593247391e-17 
-		0 ;
-	setAttr ".restRotate" -type "double3" 3.1827378144119135e-22 -1.015128484049294e-11 
-		5.9014540903630012e-18 ;
-	setAttr -keyable on ".lampW0";
-	setAttr -keyable on ".lampW1";
-createNode scaleConstraint -name "RK_lamp_scaleConstraint2" -parent "RK_lamp";
-	rename -uuid "0FAF9610-4A3D-9A79-EE38-C9811DD58FFA";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "lampW0" -defaultValue 1 -minValue 0 -attributeType "double";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
-		-longName "lampW1" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -size 2 ".target";
-	setAttr -keyable on ".lampW0";
-	setAttr -keyable on ".lampW1";
-createNode parentConstraint -name "RK_arm2_parentConstraint2" -parent "RK_arm2";
-	rename -uuid "4168946D-4724-34E8-5566-FE898F204BE8";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "arm2W0" -defaultValue 1 -minValue 0 -attributeType "double";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
-		-longName "arm2W1" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -size 2 ".target";
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 5.0230873549494959e-06 
-		-1.0095598548766002e-10 4.1791432607851675e-06 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -1.0968099334880905e-17 
-		3.1805546814635152e-15 1.9412565194479463e-19 ;
-	setAttr ".target[1].targetOffsetTranslate" -type "double3" -1.1646961173283898e-10 
-		1.0246554258698829e-05 2.6998137059308647e-10 ;
-	setAttr ".target[1].targetOffsetRotate" -type "double3" 3.3336513139835657e-05 1.3084658834580242e-09 
-		-3.4894217972316149e-05 ;
-	setAttr ".lastTargetRotate" -type "double3" 1.3782921288080425e-17 1.2722218725854067e-14 
-		5.8237695583438571e-19 ;
-	setAttr ".restTranslate" -type "double3" 15.244409191373421 2.3716922523120409e-20 
-		-1.3322676295501878e-15 ;
-	setAttr ".restRotate" -type "double3" 7.959151727560961e-18 -6.5423373686768244e-10 
-		3.8106865476758663e-16 ;
-	setAttr -keyable on ".arm2W0";
-	setAttr -keyable on ".arm2W1";
-createNode scaleConstraint -name "RK_arm2_scaleConstraint2" -parent "RK_arm2";
-	rename -uuid "BBD1C1ED-40B8-00CC-0213-1A980361AA8C";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "arm2W0" -defaultValue 1 -minValue 0 -attributeType "double";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
-		-longName "arm2W1" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -size 2 ".target";
-	setAttr -keyable on ".arm2W0";
-	setAttr -keyable on ".arm2W1";
-createNode parentConstraint -name "RK_arm1_parentConstraint2" -parent "RK_arm1";
-	rename -uuid "C6C6EC8A-4063-E024-EBC6-3B8A1A8D9EE2";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "arm1W0" -defaultValue 1 -minValue 0 -attributeType "double";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
-		-longName "arm1W1" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -size 2 ".target";
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" -4.9321417305847604e-06 
-		5.1769410061423306e-11 -4.2860965110413929e-06 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" -2.0625850519134441e-19 
-		-3.1805546814635168e-15 -4.8531412986198681e-20 ;
-	setAttr ".target[1].targetOffsetTranslate" -type "double3" 0 -3.3881317890172014e-21 
-		0 ;
-	setAttr ".target[1].targetOffsetRotate" -type "double3" 2.9082601653503128e-05 1.95540501816377e-11 
-		-3.8511450751998468e-05 ;
-	setAttr ".lastTargetRotate" -type "double3" 1.4559423895859604e-19 6.3611093629270335e-15 
-		9.7062825972397362e-20 ;
-	setAttr ".restTranslate" -type "double3" 2.8142037391149408 1.0263936800364473e-10 
-		-1.6995479829911134e-05 ;
-	setAttr ".restRotate" -type "double3" 9.7062825971975259e-20 -9.7706639814559219e-12 
-		4.9502041245922565e-18 ;
-	setAttr -keyable on ".arm1W0";
-	setAttr -keyable on ".arm1W1";
-createNode scaleConstraint -name "RK_arm1_scaleConstraint2" -parent "RK_arm1";
-	rename -uuid "5EA2A522-4185-488F-9856-DFBCFEE6CBE3";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "arm1W0" -defaultValue 1 -minValue 0 -attributeType "double";
-	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w1" 
-		-longName "arm1W1" -defaultValue 1 -minValue 0 -attributeType "double";
-	setAttr -keyable on ".nodeState";
-	setAttr -keyable off ".visibility";
-	setAttr -keyable off ".translateX";
-	setAttr -keyable off ".translateY";
-	setAttr -keyable off ".translateZ";
-	setAttr -keyable off ".rotateX";
-	setAttr -keyable off ".rotateY";
-	setAttr -keyable off ".rotateZ";
-	setAttr -keyable off ".scaleX";
-	setAttr -keyable off ".scaleY";
-	setAttr -keyable off ".scaleZ";
-	setAttr ".enableRestPosition" yes;
-	setAttr -size 2 ".target";
-	setAttr -keyable on ".arm1W0";
-	setAttr -keyable on ".arm1W1";
-createNode transform -name "IKFK";
-	rename -uuid "ECE39591-49EF-2937-436D-778B9106C8FC";
-	addAttr -cachedInternally true -shortName "IKFKswitch" -longName "IKFKswitch" -minValue 
+	setAttr -keyable on ".Base_FK_CtrlW0";
+createNode transform -name "Controls" -parent "Lamp";
+	rename -uuid "D5F9248E-4E68-0A51-8FC3-4DA53E951FE5";
+createNode transform -name "Base_FK_Ctrl_Grp" -parent "Controls";
+	rename -uuid "9F5BF9F8-4B59-86A3-D496-8AB6D35959CE";
+createNode transform -name "Base_FK_Ctrl" -parent "Base_FK_Ctrl_Grp";
+	rename -uuid "45590C0E-4A05-6625-C952-EB85CA57D7B2";
+	addAttr -cachedInternally true -shortName "Arm_IKFK" -longName "Arm_IKFK" -minValue 
 		0 -maxValue 1 -attributeType "double";
-	setAttr -keyable on ".IKFKswitch" 1;
-createNode nurbsCurve -name "IKFKShape" -parent "IKFK";
-	rename -uuid "D5480906-465C-7212-D383-1DA37E480997";
+	setAttr ".rotatePivot" -type "double3" 0 3.2831191855893245 0 ;
+	setAttr ".scalePivot" -type "double3" 0 3.2831191855893245 0 ;
+	setAttr -keyable on ".Arm_IKFK";
+createNode nurbsCurve -name "Base_FK_CtrlShape" -parent "Base_FK_Ctrl";
+	rename -uuid "89B8F001-4057-02B6-5217-7499D8EF61E8";
 	setAttr -keyable off ".visibility";
 	setAttr ".tweak" yes;
-	setAttr -size 11 ".controlPoints[0:10]" -type "double3" 3.5767652192286903 
-		-2.1901370385149978e-16 3.5767652192286885 0 0 0 3.5767652192286885 2.1901370385149978e-16 
-		-3.5767652192286885 0 0 0 -3.5767652192286903 2.1901370385149978e-16 -3.5767652192286885 
-		0 0 0 -3.5767652192286885 -2.1901370385149978e-16 3.5767652192286885 0 0 0 0 0 0 
-		0 0 0 0 0 0;
-createNode transform -name "fk_root_ctrl" -parent "IKFK";
-	rename -uuid "029E5671-44C5-E2E3-B700-A2AE16830ED2";
-	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 9;
-createNode nurbsCurve -name "fk_root_ctrlShape" -parent "fk_root_ctrl";
-	rename -uuid "B0D6693D-4F2A-4293-BCB6-D99B9C1D5388";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-8.0078011723755385 4.9033640369790624e-16 -8.0078011723755385
-		-11.324741022760653 4.246097783749335e-32 -6.9344039223482777e-16
-		-8.0078011723755367 -4.9033640369790624e-16 8.0078011723755385
-		-5.8707657441931711e-16 -6.9344039223482807e-16 11.324741022760657
-		8.0078011723755385 -4.9033640369790624e-16 8.0078011723755385
-		11.32474102276066 -6.9462398355762834e-32 1.1344070535949673e-15
-		8.0078011723755367 4.9033640369790624e-16 -8.0078011723755385
-		1.5443509347589154e-15 6.9344039223482807e-16 -11.324741022760657
-		-8.0078011723755385 4.9033640369790624e-16 -8.0078011723755385
-		-11.324741022760653 4.246097783749335e-32 -6.9344039223482777e-16
-		-8.0078011723755367 -4.9033640369790624e-16 8.0078011723755385
-		;
-createNode transform -name "fk_base_ctrl" -parent "fk_root_ctrl";
-	rename -uuid "401C2C6E-46B1-9E1D-8C17-F9807CED879A";
-	setAttr ".rotatePivot" -type "double3" 0 2.8142037391662598 0 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -1.3877787807814457e-17 -9.9061384095655569e-15 
-		-1.124100812432971e-15 ;
-	setAttr ".scalePivot" -type "double3" 0 2.8142037391662598 0 ;
-createNode nurbsCurve -name "fk_base_ctrlShape" -parent "fk_base_ctrl";
-	rename -uuid "D2BF54EC-44C4-1C1B-C1ED-CC8F34C18662";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-4.8397825564532786 2.8142037391662602 -4.8397825564532786
-		-6.8444861302729532 2.8142037391662598 -4.1910390156236124e-16
-		-4.8397825564532768 2.8142037391662593 4.8397825564532786
-		-3.5481936963902773e-16 2.8142037391662593 6.8444861302729558
-		4.8397825564532786 2.8142037391662593 4.8397825564532786
-		6.8444861302729576 2.8142037391662598 6.8561685682784915e-16
-		4.8397825564532768 2.8142037391662602 -4.8397825564532786
-		9.3338015694903091e-16 2.8142037391662602 -6.8444861302729558
-		-4.8397825564532786 2.8142037391662602 -4.8397825564532786
-		-6.8444861302729532 2.8142037391662598 -4.1910390156236124e-16
-		-4.8397825564532768 2.8142037391662593 4.8397825564532786
-		;
-createNode transform -name "fk_arm_1_ctrl" -parent "fk_root_ctrl";
-	rename -uuid "787E9C9A-4389-52C1-5C1A-4CA6EF143B7B";
-	setAttr ".rotatePivot" -type "double3" 0 2.8142037391662598 0 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 0 -7.2034392339936915e-15 4.3021142204224816e-16 ;
-	setAttr ".scalePivot" -type "double3" 0 2.8142037391662598 0 ;
-createNode nurbsCurve -name "fk_arm_1_ctrlShape" -parent "fk_arm_1_ctrl";
-	rename -uuid "C39679F1-4840-7362-21FC-1BB062A6B889";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-3.4957668339417949 2.8142037391662602 -3.4957668339417949
-		-4.9437608674545395 2.8142037391662598 -3.0271804610390712e-16
-		-3.4957668339417935 2.8142037391662593 3.4957668339417949
-		-2.5628543637159197e-16 2.8142037391662593 4.9437608674545412
-		3.4957668339417949 2.8142037391662593 3.4957668339417949
-		4.9437608674545421 2.8142037391662598 4.9521990728579794e-16
-		3.4957668339417935 2.8142037391662602 -3.4957668339417949
-		6.7417892396242983e-16 2.8142037391662602 -4.9437608674545412
-		-3.4957668339417949 2.8142037391662602 -3.4957668339417949
-		-4.9437608674545395 2.8142037391662598 -3.0271804610390712e-16
-		-3.4957668339417935 2.8142037391662593 3.4957668339417949
-		;
-createNode transform -name "fk_arm_2_ctrl" -parent "fk_arm_1_ctrl";
-	rename -uuid "31B363BB-49FF-4705-3BA9-02ABD25B3E33";
-	setAttr ".overrideColor" 14;
-	setAttr ".rotatePivot" -type "double3" 0 12.813643455505376 -11.50667667388916 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -2.6645352591003757e-15 -6.7723604502134549e-14 
-		1.2290168882600483e-13 ;
-	setAttr ".scalePivot" -type "double3" 0 12.813643455505376 -11.50667667388916 ;
-createNode nurbsCurve -name "fk_arm_2_ctrlShape" -parent "fk_arm_2_ctrl";
-	rename -uuid "E9359C2E-4DC9-3C97-54D2-49BAB3A714E6";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-4.8397825564532795 12.813643455505376 -16.34645923034244
-		-6.8444861302729549 12.813643455505376 -11.50667667388916
-		-4.8397825564532777 12.813643455505376 -6.6668941174358807
-		-3.5481936963902783e-16 12.813643455505376 -4.6621905436162026
-		4.8397825564532795 12.813643455505376 -6.6668941174358807
-		6.8444861302729594 12.813643455505376 -11.50667667388916
-		4.8397825564532777 12.813643455505376 -16.34645923034244
-		9.3338015694903111e-16 12.813643455505376 -18.351162804162115
-		-4.8397825564532795 12.813643455505376 -16.34645923034244
-		-6.8444861302729549 12.813643455505376 -11.50667667388916
-		-4.8397825564532777 12.813643455505376 -6.6668941174358807
-		;
-createNode transform -name "fk_lamp_ctrl" -parent "fk_arm_2_ctrl";
-	rename -uuid "C91DFC76-4AF6-9C49-8221-55AF95FE3835";
-	setAttr ".rotatePivot" -type "double3" 0 23.574266433715827 1.426966071128847 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 1.5987211554602254e-14 -2.5757174171303632e-13 
-		1.0125233984581428e-13 ;
-	setAttr ".scalePivot" -type "double3" 0 23.574266433715827 1.426966071128847 ;
-createNode nurbsCurve -name "fk_lamp_ctrlShape" -parent "fk_lamp_ctrl";
-	rename -uuid "3443358A-46D5-E548-5AB2-31A8CFD880BA";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-4.8397825564532795 23.574266433715827 -3.4128164853244343
-		-6.8444861302729549 23.574266433715827 1.426966071128847
-		-4.8397825564532777 23.574266433715827 6.2667486275821256
-		-3.5481936963902783e-16 23.574266433715827 8.2714522014018037
-		4.8397825564532795 23.574266433715827 6.2667486275821256
-		6.8444861302729594 23.574266433715827 1.426966071128847
-		4.8397825564532777 23.574266433715827 -3.4128164853244343
-		9.3338015694903111e-16 23.574266433715827 -5.4175200591441097
-		-4.8397825564532795 23.574266433715827 -3.4128164853244343
-		-6.8444861302729549 23.574266433715827 1.426966071128847
-		-4.8397825564532777 23.574266433715827 6.2667486275821256
-		;
-createNode transform -name "IK_ctrl" -parent "IKFK";
-	rename -uuid "38923A1E-4301-0973-55D7-B48C812FB543";
-createNode transform -name "ikpv" -parent "IK_ctrl";
-	rename -uuid "B57D1F3D-410A-F5D0-39C4-18A6D53FD768";
-	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 17;
-	setAttr ".rotatePivot" -type "double3" 0 12.815830603568799 -23.210960465164646 ;
-	setAttr ".scalePivot" -type "double3" 0 12.815830603568799 -23.210960465164646 ;
-createNode nurbsCurve -name "ikpvShape" -parent "ikpv";
-	rename -uuid "56115438-4156-0922-DEFB-D292899A1434";
+createNode transform -name "LowerArm_FK_Ctrl_Grp" -parent "Base_FK_Ctrl";
+	rename -uuid "2E04DA23-4D77-36A2-47CC-B2A69054E3F2";
+	setAttr ".translate" -type "double3" 3.2403253834759613e-16 0.23080126049138183 
+		0.067077120422259967 ;
+createNode transform -name "LowerARm_FK_Ctrl" -parent "LowerArm_FK_Ctrl_Grp";
+	rename -uuid "67A7C12E-457E-EBD2-4624-5C88E8064296";
+	setAttr ".rotatePivot" -type "double3" 0 3.2502379751522259 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 0 -5.8286708792820718e-16 8.8817841970012523e-16 ;
+	setAttr ".scalePivot" -type "double3" 0 3.2502379751522259 0 ;
+createNode nurbsCurve -name "LowerARm_FK_CtrlShape" -parent "LowerARm_FK_Ctrl";
+	rename -uuid "536B75AC-4CF9-AD60-94E5-6985E6A95FEC";
 	setAttr -keyable off ".visibility";
 	setAttr ".tweak" yes;
-createNode transform -name "iklamp" -parent "IK_ctrl";
-	rename -uuid "2ED44708-4787-DBEF-3EC6-F5B5707420A8";
-	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 22;
-	setAttr ".rotatePivot" -type "double3" 0 27.976369760323582 3.3867158351094382 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -3.5749181392930041e-14 -7.0832228971084987e-14 
-		-2.9309887850104133e-14 ;
-	setAttr ".scalePivot" -type "double3" 0 27.976369760323582 3.3867158351094382 ;
-createNode nurbsCurve -name "iklampShape" -parent "iklamp";
-	rename -uuid "546458E2-408B-4525-68FA-0BAB85714B16";
+createNode transform -name "UpperArm_FK_Ctrl_Grp" -parent "LowerARm_FK_Ctrl";
+	rename -uuid "4EBCE436-4015-FF6F-26B8-D3BD043324C5";
+	setAttr ".translate" -type "double3" 0 -0.032881210437098574 0 ;
+createNode transform -name "UpperArm_FK_Ctrl" -parent "UpperArm_FK_Ctrl_Grp";
+	rename -uuid "B3349563-447A-8B2B-844C-CBBB640D336D";
+	setAttr ".rotatePivot" -type "double3" 3.0694717517706196 12.801205457290422 -12.13504309218548 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 0 -3.8191672047105385e-14 1.5099033134902129e-14 ;
+	setAttr ".scalePivot" -type "double3" 3.0694717517706196 12.801205457290422 -12.13504309218548 ;
+createNode nurbsCurve -name "UpperArm_FK_CtrlShape" -parent "UpperArm_FK_Ctrl";
+	rename -uuid "8C3C123D-4E9A-3AC4-EE43-9C83831D655B";
+	setAttr -keyable off ".visibility";
+	setAttr ".tweak" yes;
+createNode transform -name "LampHead_FK_Ctrl_Grp" -parent "UpperArm_FK_Ctrl";
+	rename -uuid "4885AFA8-4C03-4253-DA8D-E48717EB5A83";
+	setAttr ".translate" -type "double3" 3.0694717517707013 -0.30871187015987545 -0.53070125913463606 ;
+createNode transform -name "LampHead_FK_Ctrl" -parent "LampHead_FK_Ctrl_Grp";
+	rename -uuid "1A3D8F58-46E1-E6D6-D2E6-84A65D093801";
+	setAttr ".rotatePivot" -type "double3" 4.3246062207028348 24.817773274745594 3.3741222546831473 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 0 -1.1590728377086634e-13 -4.9737991503207013e-14 ;
+	setAttr ".scalePivot" -type "double3" 4.3246062207028348 24.817773274745594 3.3741222546831473 ;
+createNode nurbsCurve -name "LampHead_FK_CtrlShape" -parent "LampHead_FK_Ctrl";
+	rename -uuid "3248E9C6-4A5D-DF3C-022A-ADA4DA7767D1";
+	setAttr -keyable off ".visibility";
+	setAttr ".tweak" yes;
+createNode transform -name "Arm_IK_Main_Ctrl_Grp" -parent "Base_FK_Ctrl";
+	rename -uuid "C6EC0B2B-4BFB-71C0-9CED-E6AF3668FB76";
+	setAttr ".translate" -type "double3" -5.2481590984552177e-33 0.61010564801092571 
+		0.0681851640044564 ;
+createNode transform -name "Arm_IK_Base_Ctrl_Grp" -parent "Arm_IK_Main_Ctrl_Grp";
+	rename -uuid "45D30AA2-4B89-F69F-6B0E-67B69185620F";
+createNode transform -name "ARM_IK_Base_Ctrl" -parent "Arm_IK_Base_Ctrl_Grp";
+	rename -uuid "3EF34395-40AA-DC24-B75F-E286D2A86410";
+	setAttr ".rotatePivot" -type "double3" 0.62675565481185913 2.9510173797607422 0.32342150807380676 ;
+	setAttr ".scalePivot" -type "double3" 0.62675565481185913 2.9510173797607422 0.32342150807380676 ;
+createNode nurbsCurve -name "ARM_IK_Base_CtrlShape" -parent "ARM_IK_Base_Ctrl";
+	rename -uuid "90B594B2-41AA-DA81-7166-B2B3A9566D9F";
+	setAttr -keyable off ".visibility";
+	setAttr ".tweak" yes;
+createNode transform -name "Arm_IK_Ctrl_Grp" -parent "Arm_IK_Main_Ctrl_Grp";
+	rename -uuid "04890B53-4B91-69E6-1484-53924454766B";
+createNode transform -name "Arm_IK_Ctrl" -parent "Arm_IK_Ctrl_Grp";
+	rename -uuid "0C4C0B64-4F06-CC74-918E-E08C641D2B37";
+	setAttr ".rotatePivot" -type "double3" -0.0088138505816459656 24.954656600952148 
+		2.2024116516113281 ;
+	setAttr ".scalePivot" -type "double3" -0.0088138505816459656 24.954656600952148 
+		2.2024116516113281 ;
+createNode nurbsCurve -name "Arm_IK_CtrlShape" -parent "Arm_IK_Ctrl";
+	rename -uuid "62656BA1-4F95-A10C-8403-488A83D0328E";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		4.7982373409884725e-17 28.759981385214807 2.6031042102182136
-		4.1550626846842558e-33 29.084563947877971 3.3867158351094382
-		-4.7982373409884725e-17 28.759981385214807 4.1703274600006628
-		-6.7857323231109146e-17 27.976369760323582 4.4949100226638263
-		-4.7982373409884725e-17 27.192758135432356 4.1703274600006628
-		-6.7973144778085889e-33 26.868175572769193 3.3867158351094382
-		4.7982373409884725e-17 27.192758135432356 2.6031042102182136
-		6.7857323231109146e-17 27.976369760323582 2.27852164755505
-		4.7982373409884725e-17 28.759981385214807 2.6031042102182136
-		4.1550626846842558e-33 29.084563947877971 3.3867158351094382
-		-4.7982373409884725e-17 28.759981385214807 4.1703274600006628
+		-0.0088138505816459656 29.13536920614294 -1.9783009535794642
+		-0.0088138505816459656 24.954656600952148 -3.7100088150336425
+		-0.0088138505816459656 20.773943995761357 -1.9783009535794633
+		-0.0088138505816459656 19.042236134307174 2.2024116516113277
+		-0.0088138505816459656 20.773943995761357 6.3831242568021205
+		-0.0088138505816459656 24.954656600952148 8.1148321182563024
+		-0.0088138505816459656 29.13536920614294 6.3831242568021196
+		-0.0088138505816459656 30.867077067597123 2.202411651611329
+		-0.0088138505816459656 29.13536920614294 -1.9783009535794642
+		-0.0088138505816459656 24.954656600952148 -3.7100088150336425
+		-0.0088138505816459656 20.773943995761357 -1.9783009535794633
 		;
-createNode transform -name "ikbase" -parent "IK_ctrl";
-	rename -uuid "CD398812-4ADF-40B0-0684-A695310EC9DB";
-	setAttr ".overrideEnabled" yes;
-	setAttr ".overrideColor" 22;
-	setAttr ".rotatePivot" -type "double3" 0 2.8142037391662598 0 ;
-	setAttr ".scalePivot" -type "double3" 0 2.8142037391662598 0 ;
-createNode nurbsCurve -name "ikbaseShape" -parent "ikbase";
-	rename -uuid "528BBFBF-492D-0A1A-FF0F-A4BF46B3238A";
+createNode ikHandle -name "ArmIKHandle" -parent "Arm_IK_Ctrl";
+	rename -uuid "30E2F525-4F58-FC30-8B1E-FF883AECA620";
+	setAttr ".translate" -type "double3" -4.6350148504280701e-14 24.469109013826138 
+		2.6148996528858888 ;
+	setAttr ".rootOnCurve" yes;
+createNode poleVectorConstraint -name "ArmIKHandle_poleVectorConstraint1" -parent
+		 "ArmIKHandle";
+	rename -uuid "41F5D5D8-4B19-88A4-857C-B38654886601";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "Arm_IK_PV_CtrlW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".restTranslate" -type "double3" -0.62675565481194073 9.7795955601700282 
+		-20.848016652031685 ;
+	setAttr -keyable on ".Arm_IK_PV_CtrlW0";
+createNode transform -name "Arm_IK_PV_Ctrl_Grp" -parent "Arm_IK_Main_Ctrl_Grp";
+	rename -uuid "D343F5BC-44ED-7252-4CFE-B1A849C96E06";
+	setAttr ".translate" -type "double3" -8.156681580348506e-14 12.730612939930761 
+		-11.605449876633047 ;
+	setAttr ".rotate" -type "double3" 5.8522206138928706e-13 -129.53870865538985 -90.000000000000156 ;
+	setAttr ".scale" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
+createNode transform -name "Arm__PV_Ctrl_Offset_Grp" -parent "Arm_IK_PV_Ctrl_Grp";
+	rename -uuid "84732220-4259-31B1-25FC-B38A6A9A8103";
+	setAttr ".translate" -type "double3" -6.8783973537603087 -2.0712354674209896e-16 
+		5.6779223439059292 ;
+createNode transform -name "Arm_IK_PV_Ctrl" -parent "Arm__PV_Ctrl_Offset_Grp";
+	rename -uuid "6853BD62-4CD3-CFA7-BFD0-84B5212036C3";
+	setAttr ".rotatePivot" -type "double3" 5.3290705182007514e-15 0 0 ;
+	setAttr ".scalePivot" -type "double3" 5.3290705182007514e-15 0 0 ;
+createNode nurbsCurve -name "Arm_IK_PV_CtrlShape" -parent "Arm_IK_PV_Ctrl";
+	rename -uuid "87E132A1-4F1C-17C7-8D79-E28D03A80283";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		-4.6292262516366494 2.8142037391662602 -4.6292262516366476
-		-6.5467145483581106 2.8142037391662598 -4.0087065082890854e-16
-		-4.6292262516366476 2.8142037391662593 4.6292262516366476
-		-3.3938283825004139e-16 2.8142037391662593 6.5467145483581142
-		4.6292262516366476 2.8142037391662593 4.6292262516366476
-		6.5467145483581151 2.8142037391662598 6.5578887381212936e-16
-		4.6292262516366476 2.8142037391662602 -4.6292262516366476
-		8.9277315145984699e-16 2.8142037391662602 -6.5467145483581142
-		-4.6292262516366494 2.8142037391662602 -4.6292262516366476
-		-6.5467145483581106 2.8142037391662598 -4.0087065082890854e-16
-		-4.6292262516366476 2.8142037391662593 4.6292262516366476
+		-2.0832917379099558 3.2410265949679564 -2.4827704130760271
+		-2.9462194301320741 2.8065866083328004e-16 -3.5111675904307678
+		-2.0832917379099554 -3.2410265949679564 -2.4827704130760266
+		1.6236243038788395e-15 -4.5835037666155767 -1.8201954791366437e-16
+		2.0832917379099585 -3.2410265949679564 2.4827704130760266
+		2.946219430132079 -4.5913270710364575e-16 3.51116759043077
+		2.0832917379099585 3.2410265949679564 2.4827704130760266
+		2.1781317428426069e-15 4.5835037666155767 4.7881668459161969e-16
+		-2.0832917379099558 3.2410265949679564 -2.4827704130760271
+		-2.9462194301320741 2.8065866083328004e-16 -3.5111675904307678
+		-2.0832917379099554 -3.2410265949679564 -2.4827704130760266
 		;
 createNode lightLinker -shared -name "lightLinker1";
-	rename -uuid "D1CB905F-4232-7C8B-7C01-63A6DDDB5954";
+	rename -uuid "E01EDB4B-4E49-7A1B-96D3-16A5B6E4ED31";
 	setAttr -size 3 ".link";
 	setAttr -size 3 ".shadowLink";
 createNode shapeEditorManager -name "shapeEditorManager";
-	rename -uuid "31F9C1B9-4C47-CADA-F699-A5A7EF8EABEC";
+	rename -uuid "E4CF748D-4846-5E05-4FD7-4CB92A34A107";
 createNode poseInterpolatorManager -name "poseInterpolatorManager";
-	rename -uuid "6E6157F9-422F-796F-DCF9-5FB716B0B171";
+	rename -uuid "50D8DA71-4122-C585-39B4-23B9B36463F7";
 createNode displayLayerManager -name "layerManager";
-	rename -uuid "3CF0F3E4-428A-87C6-1F2F-9C891B85CB1F";
-	setAttr ".currentDisplayLayer" 2;
-	setAttr -size 4 ".displayLayerId[1:3]"  1 2 3;
+	rename -uuid "2815ED4A-4BBB-360E-EC4F-85B864888ECB";
+	setAttr ".currentDisplayLayer" 7;
+	setAttr -size 8 ".displayLayerId[1:7]"  1 2 3 4 5 
+		6 7;
 	setAttr -size 4 ".displayLayerId";
 createNode displayLayer -name "defaultLayer";
-	rename -uuid "128F30E2-44C3-DFDD-A923-D1BE13DB2EB1";
+	rename -uuid "026E60D0-4E81-4EDF-5070-92934B7D346C";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 createNode renderLayerManager -name "renderLayerManager";
-	rename -uuid "3885D24D-4FC8-8BA9-AF97-75B05F1AFC1B";
+	rename -uuid "5AA22E43-44C7-0881-966E-E4A7DBBB6091";
 createNode renderLayer -name "defaultRenderLayer";
-	rename -uuid "64CC0A49-4C14-C7AA-BA8B-CAB3FB12E41D";
+	rename -uuid "3A7B9573-40F1-6D31-674D-1697A76595B6";
 	setAttr ".global" yes;
+createNode aiOptions -shared -name "defaultArnoldRenderOptions";
+	rename -uuid "7F00CC88-4238-E6FB-C34C-DF90F3DFF006";
+	addAttr -cachedInternally true -shortName "ARV_options" -longName "ARV_options" 
+		-dataType "string";
+	setAttr ".version" -type "string" "5.5.0";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;";
+createNode aiAOVFilter -shared -name "defaultArnoldFilter";
+	rename -uuid "086CB551-4D43-FFE9-C473-CF93875A6B26";
+	setAttr ".aiTranslator" -type "string" "gaussian";
+createNode aiAOVDriver -shared -name "defaultArnoldDriver";
+	rename -uuid "BDA8DC6A-4E23-3B2E-03B4-0A8790F1A6A3";
+	setAttr ".aiTranslator" -type "string" "exr";
+createNode aiAOVDriver -shared -name "defaultArnoldDisplayDriver";
+	rename -uuid "72CABAE0-412A-B9F7-A9F8-019AC942B139";
+	setAttr ".aiTranslator" -type "string" "maya";
+	setAttr ".outputMode" 0;
+createNode aiImagerDenoiserOidn -shared -name "defaultArnoldDenoiser";
+	rename -uuid "7D429830-44DB-90C3-5318-AD9A4E657BB6";
 createNode lambert -name "lambert2";
-	rename -uuid "C038F348-4241-A793-5923-848E4875C105";
+	rename -uuid "ECD3C879-44B4-214C-6DDF-8F8B56EFF2E1";
 	setAttr ".color" -type "float3" 0.54119998 0.81999999 0.81999999 ;
 createNode shadingEngine -name "base_geoSG";
-	rename -uuid "97F67C0A-491F-CD46-0E5F-F280189DA58C";
+	rename -uuid "464416B3-414A-1706-0909-8F96B3069A37";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr -size 4 ".dagSetMembers";
 	setAttr ".renderableOnlySet" yes;
 createNode materialInfo -name "materialInfo1";
-	rename -uuid "4F2882E4-437F-444E-2D1F-2E8F28CF29DC";
-createNode displayLayer -name "geo_layer";
-	rename -uuid "2822BA7A-4FB3-B4AC-FA37-EF856BD10C36";
-	setAttr ".displayType" 2;
-	setAttr ".ufeMembers" -type "stringArray" 0  ;
-	setAttr ".displayOrder" 1;
-createNode aiOptions -shared -name "defaultArnoldRenderOptions";
-	rename -uuid "2B75B984-48B2-550F-56B0-049F4DBD1063";
-	addAttr -cachedInternally true -shortName "ARV_options" -longName "ARV_options" 
-		-dataType "string";
-	setAttr ".version" -type "string" "5.4.5";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;";
-createNode aiAOVFilter -shared -name "defaultArnoldFilter";
-	rename -uuid "41F38978-4ED4-7A55-57E9-18A10FAFA69C";
-	setAttr ".aiTranslator" -type "string" "gaussian";
-createNode aiAOVDriver -shared -name "defaultArnoldDriver";
-	rename -uuid "D1FD973A-4376-D1E8-3EA7-EABA41D9D3F0";
-	setAttr ".aiTranslator" -type "string" "exr";
-createNode aiAOVDriver -shared -name "defaultArnoldDisplayDriver";
-	rename -uuid "16A289FA-4D9B-D970-204C-5AA9C649CCCF";
-	setAttr ".aiTranslator" -type "string" "maya";
-	setAttr ".outputMode" 0;
-createNode aiImagerDenoiserOidn -shared -name "defaultArnoldDenoiser";
-	rename -uuid "074E1ECB-4358-3A35-E66F-1D81A093CB05";
-createNode ikRPsolver -name "ikRPsolver";
-	rename -uuid "39B3CE1B-4DFC-99C6-C049-B49884DF9F3F";
+	rename -uuid "33CAF36C-4BAA-FD5C-AE37-ADBF78E59A4B";
+createNode makeNurbCircle -name "makeNurbCircle1";
+	rename -uuid "B3B7CC64-4A56-7259-167A-1B999915A9B4";
+	setAttr ".normal" -type "double3" 0 1 0 ;
+createNode makeNurbCircle -name "makeNurbCircle2";
+	rename -uuid "D2CFA3D9-4C27-FA0E-A3DA-90A90B4FF187";
+	setAttr ".normal" -type "double3" 0 1 0 ;
+createNode makeNurbCircle -name "makeNurbCircle3";
+	rename -uuid "CE76A866-4A05-3DC8-A579-66AEF012BC69";
+	setAttr ".normal" -type "double3" 0 1 0 ;
+createNode makeNurbCircle -name "makeNurbCircle4";
+	rename -uuid "4E09B0E1-4A0A-10D0-8B38-A7AB2AD695B6";
+	setAttr ".normal" -type "double3" 0 1 0 ;
+createNode transformGeometry -name "transformGeometry1";
+	rename -uuid "A63EA679-45AB-23DE-6C1B-5BA39BB5089E";
+	setAttr ".transform" -type "matrix" 0 3.1163975023817625 0 0 -3.1163975023817625 0 0 0
+		 0 0 3.1163975023817625 0 3.0694717517706196 12.801205457290422 -12.13504309218548 1;
+createNode transformGeometry -name "transformGeometry2";
+	rename -uuid "4DBBA546-4A6F-EFA0-975A-FBB914FD441C";
+	setAttr ".transform" -type "matrix" 0 3.8544930336520826 0 0 -3.8544930336520826 0 0 0
+		 0 0 3.8544930336520826 0 4.3246062207028348 24.817773274745594 3.3741222546831473 1;
+createNode transformGeometry -name "transformGeometry3";
+	rename -uuid "7BCF37FD-49DE-C0B2-EA02-E1BF0A60059C";
+	setAttr ".transform" -type "matrix" 3.4535538126366276 0 0 0 0 3.4535538126366276 0 0
+		 0 0 3.4535538126366276 0 0 3.2502379751522259 0 1;
+createNode transformGeometry -name "transformGeometry4";
+	rename -uuid "B878586F-4D8A-08B4-E253-93B329FD11C9";
+	setAttr ".transform" -type "matrix" 5.3273259436302274 0 0 0 0 5.3273259436302274 0 0
+		 0 0 5.3273259436302274 0 0 3.2831191855893245 0 1;
 createNode script -name "uiConfigurationScriptNode";
-	rename -uuid "765AB3A3-4A5A-61BD-971E-8CA05678BCCB";
+	rename -uuid "978F77E0-4E28-C0C8-B362-D79DAFB2A133";
 	setAttr ".before" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 763\n            -height 361\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 762\n            -height 360\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 763\n            -height 360\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1540\n            -height 788\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 1\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1553\n            -height 700\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
 		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
@@ -3938,103 +3702,535 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
-		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1540\\n    -height 788\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1540\\n    -height 788\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1553\\n    -height 700\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1553\\n    -height 700\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
-	rename -uuid "5A93F9B6-4805-91F1-2ADF-0C8528962154";
-	setAttr ".before" -type "string" "playbackOptions -min 0 -max 84 -ast 0 -aet 200 ";
+	rename -uuid "D55E2E6F-4B7C-509C-B255-90A4CE6CBEB0";
+	setAttr ".before" -type "string" "playbackOptions -min 0 -max 24 -ast 0 -aet 30 ";
 	setAttr ".scriptType" 6;
-createNode displayLayer -name "Joints";
-	rename -uuid "5CF13F05-41C8-D8C3-AC4B-B9875F08A2EC";
-	setAttr ".visibility" no;
+createNode ikRPsolver -name "ikRPsolver";
+	rename -uuid "0AB8615A-4574-2014-1C65-88AF8987D07C";
+createNode makeNurbCircle -name "makeNurbCircle6";
+	rename -uuid "B71DA6CC-40C0-09A2-D42E-228909F34258";
+	setAttr ".normal" -type "double3" 0 1 0 ;
+createNode transformGeometry -name "transformGeometry5";
+	rename -uuid "F0F37C1B-4B0F-CB79-A65F-04A9FD93F316";
+	setAttr ".transform" -type "matrix" 4.4612213545071446 0 0 0 0 4.4612213545071446 0 0
+		 0 0 4.4612213545071446 0 0.62675565481185913 2.9510173797607422 0.32342150807380676 1;
+createNode reverse -name "Arm_IKFK_Rev";
+	rename -uuid "4BEC637B-427F-6D46-3CBB-C28F401BA246";
+createNode nodeGraphEditorInfo -name "MayaNodeEditorSavedTabsInfo";
+	rename -uuid "1978B406-4D0E-5BEC-203F-E69929511884";
+	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
+	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -563.20004660547431 -625.77468655666564 ;
+	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 1167.5279109543631 411.3152179733537 ;
+	setAttr -size 9 ".tabGraphInfo[0].nodeInfo";
+	setAttr ".tabGraphInfo[0].nodeInfo[0].positionX" 1048.8095703125;
+	setAttr ".tabGraphInfo[0].nodeInfo[0].positionY" 69.047615051269531;
+	setAttr ".tabGraphInfo[0].nodeInfo[0].nodeVisualState" 18304;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].positionX" 827.3809814453125;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].positionY" 69.047615051269531;
+	setAttr ".tabGraphInfo[0].nodeInfo[1].nodeVisualState" 18304;
+	setAttr ".tabGraphInfo[0].nodeInfo[2].positionX" -229.72084045410156;
+	setAttr ".tabGraphInfo[0].nodeInfo[2].positionY" -121.11969757080078;
+	setAttr ".tabGraphInfo[0].nodeInfo[2].nodeVisualState" 18304;
+	setAttr ".tabGraphInfo[0].nodeInfo[3].positionX" 605.952392578125;
+	setAttr ".tabGraphInfo[0].nodeInfo[3].positionY" 69.047615051269531;
+	setAttr ".tabGraphInfo[0].nodeInfo[3].nodeVisualState" 18304;
+	setAttr ".tabGraphInfo[0].nodeInfo[4].positionX" 163.09524536132812;
+	setAttr ".tabGraphInfo[0].nodeInfo[4].positionY" 69.047615051269531;
+	setAttr ".tabGraphInfo[0].nodeInfo[4].nodeVisualState" 18304;
+	setAttr ".tabGraphInfo[0].nodeInfo[5].positionX" 384.5238037109375;
+	setAttr ".tabGraphInfo[0].nodeInfo[5].positionY" 69.047615051269531;
+	setAttr ".tabGraphInfo[0].nodeInfo[5].nodeVisualState" 18304;
+	setAttr ".tabGraphInfo[0].nodeInfo[6].positionX" -58.333332061767578;
+	setAttr ".tabGraphInfo[0].nodeInfo[6].positionY" 69.047615051269531;
+	setAttr ".tabGraphInfo[0].nodeInfo[6].nodeVisualState" 18304;
+	setAttr ".tabGraphInfo[0].nodeInfo[7].positionX" -527.85711669921875;
+	setAttr ".tabGraphInfo[0].nodeInfo[7].positionY" 22.142854690551758;
+	setAttr ".tabGraphInfo[0].nodeInfo[7].nodeVisualState" 18304;
+	setAttr ".tabGraphInfo[0].nodeInfo[8].positionX" -526.6666259765625;
+	setAttr ".tabGraphInfo[0].nodeInfo[8].positionY" 152.63597106933594;
+	setAttr ".tabGraphInfo[0].nodeInfo[8].nodeVisualState" 18305;
+createNode displayLayer -name "GeoLayer";
+	rename -uuid "321F9AFD-4C03-25BC-23E7-5D89D11C29BF";
 	setAttr ".color" 6;
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
-	setAttr ".displayOrder" 2;
-createNode nodeGraphEditorInfo -name "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uuid "2492A6CD-457D-C60D-9C76-91B7FC0F45D1";
-	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
-	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" -36.507935057241504 -8.7301583832534035 ;
-	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 36.507935057241504 8.7301583832534035 ;
-createNode makeNurbCircle -name "makeNurbCircle3";
-	rename -uuid "DF81271A-4388-B03C-6774-299FBB921DFB";
-	setAttr ".normal" -type "double3" 1 0 0 ;
-	setAttr ".tolerance" 0;
-createNode transformGeometry -name "transformGeometry2";
-	rename -uuid "C6419B40-4ECD-63C2-2669-16B17A4507EF";
-	setAttr ".transform" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 12.815830603568799 -23.210960465164646 1;
-createNode makeNurbCircle -name "makeNurbCircle1";
-	rename -uuid "581AB7C4-4D9F-D321-9216-6CB7F9C7CB1D";
-	setAttr ".normal" -type "double3" 1 0 0 ;
-	setAttr ".tolerance" 0;
-createNode transformGeometry -name "transformGeometry3";
-	rename -uuid "F3165183-4BFC-74FF-EE9C-69B13FBC44CA";
-	setAttr ".transform" -type "matrix" 0 15.23433646105266 0 0 -15.23433646105266 0 0 0
-		 0 0 15.23433646105266 0 0 0 0 1;
-createNode reverse -name "Arm_IKFK_reverse";
-	rename -uuid "3CA8B085-4E05-A8EA-AC3E-4CAD3C02CDF5";
-createNode displayLayer -name "Controls";
-	rename -uuid "3793AC3A-40F4-8BFA-A858-FCBC53A8FD52";
+	setAttr ".displayOrder" 1;
+createNode displayLayer -name "SkeletonLayer";
+	rename -uuid "09B631C1-4ACA-C9A6-0ABF-0098ED864F28";
+	setAttr ".visibility" no;
 	setAttr ".color" 9;
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
+	setAttr ".displayOrder" 2;
+createNode displayLayer -name "ControlsLayer";
+	rename -uuid "0646D3A5-40EA-106D-110E-C39C207AAD53";
+	setAttr ".color" 13;
+	setAttr ".ufeMembers" -type "stringArray" 0  ;
 	setAttr ".displayOrder" 3;
-createNode reverse -name "reverse1";
-	rename -uuid "E5C5E885-4657-1C4F-AB19-1098D5E2D60E";
-createNode reverse -name "reverse2";
-	rename -uuid "505B7291-4DD3-318A-54D3-1DBDE0D62FCE";
-createNode nodeGraphEditorInfo -name "MayaNodeEditorSavedTabsInfo";
-	rename -uuid "64F92FDE-4E2F-7DEB-D1AD-14B2163E3F31";
-	setAttr ".tabGraphInfo[0].tabName" -type "string" "Untitled_1";
-	setAttr ".tabGraphInfo[0].viewRectLow" -type "double2" 1010.0003637597249 -1038.0951968450411 ;
-	setAttr ".tabGraphInfo[0].viewRectHigh" -type "double2" 3075.7137596028679 13.492062955937172 ;
-	setAttr -size 14 ".tabGraphInfo[0].nodeInfo";
-	setAttr ".tabGraphInfo[0].nodeInfo[0].positionX" 2740;
-	setAttr ".tabGraphInfo[0].nodeInfo[0].positionY" -271.42855834960938;
-	setAttr ".tabGraphInfo[0].nodeInfo[0].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].positionX" 2142.857177734375;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].positionY" -278.57144165039062;
-	setAttr ".tabGraphInfo[0].nodeInfo[1].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[2].positionX" 2142.857177734375;
-	setAttr ".tabGraphInfo[0].nodeInfo[2].positionY" -18.571428298950195;
-	setAttr ".tabGraphInfo[0].nodeInfo[2].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[3].positionX" 2142.857177734375;
-	setAttr ".tabGraphInfo[0].nodeInfo[3].positionY" -538.5714111328125;
-	setAttr ".tabGraphInfo[0].nodeInfo[3].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[4].positionX" 2740;
-	setAttr ".tabGraphInfo[0].nodeInfo[4].positionY" -401.42855834960938;
-	setAttr ".tabGraphInfo[0].nodeInfo[4].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[5].positionX" 1783.99462890625;
-	setAttr ".tabGraphInfo[0].nodeInfo[5].positionY" -771.35076904296875;
-	setAttr ".tabGraphInfo[0].nodeInfo[5].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[6].positionX" 1234.8533935546875;
-	setAttr ".tabGraphInfo[0].nodeInfo[6].positionY" -282.45437622070312;
-	setAttr ".tabGraphInfo[0].nodeInfo[6].nodeVisualState" 18306;
-	setAttr ".tabGraphInfo[0].nodeInfo[7].positionX" 2698.58251953125;
-	setAttr ".tabGraphInfo[0].nodeInfo[7].positionY" -623.3465576171875;
-	setAttr ".tabGraphInfo[0].nodeInfo[7].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[8].positionX" 2438.874755859375;
-	setAttr ".tabGraphInfo[0].nodeInfo[8].positionY" -549.7626953125;
-	setAttr ".tabGraphInfo[0].nodeInfo[8].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[9].positionX" 2142.857177734375;
-	setAttr ".tabGraphInfo[0].nodeInfo[9].positionY" -408.57144165039062;
-	setAttr ".tabGraphInfo[0].nodeInfo[9].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[10].positionX" 2142.857177734375;
-	setAttr ".tabGraphInfo[0].nodeInfo[10].positionY" 111.42857360839844;
-	setAttr ".tabGraphInfo[0].nodeInfo[10].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[11].positionX" 2142.857177734375;
-	setAttr ".tabGraphInfo[0].nodeInfo[11].positionY" -148.57142639160156;
-	setAttr ".tabGraphInfo[0].nodeInfo[11].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[12].positionX" 1303.03369140625;
-	setAttr ".tabGraphInfo[0].nodeInfo[12].positionY" -135.4447021484375;
-	setAttr ".tabGraphInfo[0].nodeInfo[12].nodeVisualState" 18304;
-	setAttr ".tabGraphInfo[0].nodeInfo[13].positionX" 2378.669189453125;
-	setAttr ".tabGraphInfo[0].nodeInfo[13].positionY" -674.1871337890625;
-	setAttr ".tabGraphInfo[0].nodeInfo[13].nodeVisualState" 18304;
+createNode animCurveTA -name "LowerARm_FK_Ctrl_rotateX";
+	rename -uuid "36FA8863-4D82-8741-B28F-42842DDC3995";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 -24.648283767419198 12 38.393160809254681
+		 18 -8.9195244574833392 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTA -name "LowerARm_FK_Ctrl_rotateY";
+	rename -uuid "DC59C45E-4273-6F65-C0D0-FC95B3ED4080";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 0 12 0 18 0 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTA -name "LowerARm_FK_Ctrl_rotateZ";
+	rename -uuid "B5D5E977-474C-F770-6B36-2598337F0AF5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 0 12 0 18 0 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "LowerARm_FK_Ctrl_visibility";
+	rename -uuid "1A71F9DB-4366-52DB-40B3-E088F394766E";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[0:4]"  9 9 9 9 1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+createNode animCurveTL -name "LowerARm_FK_Ctrl_translateX";
+	rename -uuid "5106E3D7-4B4A-ECE5-10C8-40882BC2D40A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 0 12 0 18 0 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTL -name "LowerARm_FK_Ctrl_translateY";
+	rename -uuid "719CF71A-4F47-32BF-1764-21A2A1C9A474";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0.032881210437098574 6 0.032881210437098574
+		 12 0.032881210437098574 18 0.032881210437098574 25 0.032881210437098574;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTL -name "LowerARm_FK_Ctrl_translateZ";
+	rename -uuid "14A904BC-4318-1087-3BA0-F586390BEEED";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 0 12 0 18 0 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "LowerARm_FK_Ctrl_scaleX";
+	rename -uuid "594AF0CF-43CB-07F8-FDC5-48A06D9CFC0C";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "LowerARm_FK_Ctrl_scaleY";
+	rename -uuid "0310842A-43B3-4EE2-01CA-A8BC09BA7DE6";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "LowerARm_FK_Ctrl_scaleZ";
+	rename -uuid "E6C0AA6A-4B1D-7F76-E0BF-A5A31FF315CB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTA -name "UpperArm_FK_Ctrl_rotateX";
+	rename -uuid "287F83EC-410D-B522-2069-7490C6816F39";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -4.3762125477015239 6 26.693350413164932
+		 12 -70.296540619210177 18 15.232254728484756 25 -4.3762125477015239;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTA -name "UpperArm_FK_Ctrl_rotateY";
+	rename -uuid "D92D7604-4928-CFD6-EEA5-5DA8F1DAEB71";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 0 12 0 18 0 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTA -name "UpperArm_FK_Ctrl_rotateZ";
+	rename -uuid "FB413ECF-4C4A-A21B-4B36-C8AE93E8CBF8";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 0 12 0 18 0 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "UpperArm_FK_Ctrl_visibility";
+	rename -uuid "8F4E91CA-40E3-A350-E91B-7494DBBF7FE1";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[0:4]"  9 9 9 9 1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+createNode animCurveTL -name "UpperArm_FK_Ctrl_translateX";
+	rename -uuid "A5DEF284-43EB-83CC-F306-6D8E5C51D192";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -3.0694717517707013 6 -3.0694717517707013
+		 12 -3.0694717517707013 18 -3.0694717517707013 25 -3.0694717517707013;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTL -name "UpperArm_FK_Ctrl_translateY";
+	rename -uuid "18A1D28B-4CA3-B54E-1CC3-1CAE51C4B313";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0.30871187015987545 6 0.30871187015987545
+		 12 0.30871187015987545 18 0.30871187015987545 25 0.30871187015987545;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTL -name "UpperArm_FK_Ctrl_translateZ";
+	rename -uuid "0E1D367C-4C50-FA35-C3B3-94A627766A78";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0.53070125913463606 6 0.53070125913463606
+		 12 0.53070125913463606 18 0.53070125913463606 25 0.53070125913463606;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "UpperArm_FK_Ctrl_scaleX";
+	rename -uuid "908BEDDA-43E5-C140-F1D8-488BC4CC3C5A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "UpperArm_FK_Ctrl_scaleY";
+	rename -uuid "DD516CB4-4395-92AB-05CD-E3A0A286C7A1";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "UpperArm_FK_Ctrl_scaleZ";
+	rename -uuid "E9F0E403-48A5-2CCD-4CCB-8F9153101FD5";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTA -name "LampHead_FK_Ctrl_rotateX";
+	rename -uuid "391C0B9A-40DD-42A5-2BD4-DC8B8CC83B73";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -0.48360654688879234 6 -30.90463215857525
+		 12 -68.348052884952239 18 21.880571447179342 25 -0.48360654688879234;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTA -name "LampHead_FK_Ctrl_rotateY";
+	rename -uuid "5B1ED7B9-4801-B8E4-9B2D-03A96965ACBA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 0 12 0 18 0 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTA -name "LampHead_FK_Ctrl_rotateZ";
+	rename -uuid "3912E720-4473-548A-E161-E1AD47B7C9BD";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 6 0 12 0 18 0 25 0;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "LampHead_FK_Ctrl_visibility";
+	rename -uuid "6FA49906-472A-AA9A-CA7E-CFAF31DBF121";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[0:4]"  9 9 9 9 1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+createNode animCurveTL -name "LampHead_FK_Ctrl_translateX";
+	rename -uuid "3598F065-477A-B878-B7C0-32B3ABC17924";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -4.3246062207028819 6 -4.3246062207028819
+		 12 -4.3246062207028819 18 -4.3246062207028819 25 -4.3246062207028819;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTL -name "LampHead_FK_Ctrl_translateY";
+	rename -uuid "CF470125-429F-0FA9-A26C-7791AF163491";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0.030640126600069095 6 0.030640126600069095
+		 12 0.030640126600069095 18 0.030640126600069095 25 0.030640126600069095;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTL -name "LampHead_FK_Ctrl_translateZ";
+	rename -uuid "67667E11-44B8-EAAA-ADBC-29A267FD21EB";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -0.75811455821504437 6 -0.75811455821504437
+		 12 -0.75811455821504437 18 -0.75811455821504437 25 -0.75811455821504437;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "LampHead_FK_Ctrl_scaleX";
+	rename -uuid "70396004-4BB4-AD48-3706-E8BF70C2A96F";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "LampHead_FK_Ctrl_scaleY";
+	rename -uuid "4DCE242C-4476-E289-5552-6DB8FDAAF406";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTU -name "LampHead_FK_Ctrl_scaleZ";
+	rename -uuid "7DF68C43-4A74-9F23-FEFF-E3A06FDBF897";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 6 1 12 1 18 1 25 1;
+	setAttr -size 5 ".keyTanInType[4]"  1;
+	setAttr -size 5 ".keyTanOutType[4]"  1;
+	setAttr -size 5 ".keyTanInX[4]"  1;
+	setAttr -size 5 ".keyTanInY[4]"  0;
+	setAttr -size 5 ".keyTanOutX[4]"  1;
+	setAttr -size 5 ".keyTanOutY[4]"  0;
+createNode animCurveTL -name "Base_FK_Ctrl_translateX";
+	rename -uuid "28EA510B-4B55-2F92-EA7D-9A9EFED98D18";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 11 0 18 5.2481590984552177e-33
+		 23 0 25 0;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTL -name "Base_FK_Ctrl_translateY";
+	rename -uuid "F05F26B4-4FA4-E7CD-7A9B-FF89340A7015";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -0.61010564801092571 11 -0.61010564801092571
+		 18 12.315370879094043 23 -0.61010564801092571 25 -0.61010564801092571;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTL -name "Base_FK_Ctrl_translateZ";
+	rename -uuid "0899AE0D-4683-CFAB-F80D-E691B59459CA";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 -0.0681851640044564 11 -0.0681851640044564
+		 18 -0.0681851640044564 23 -0.0681851640044564 25 -0.0681851640044564;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTU -name "Base_FK_Ctrl_visibility";
+	rename -uuid "220FE47C-46CA-3A4F-8C11-D4856C01822C";
+	setAttr ".tangentType" 5;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 11 1 18 1 23 1 25 1;
+	setAttr -size 5 ".keyTanInType[0:4]"  9 9 9 1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+createNode animCurveTA -name "Base_FK_Ctrl_rotateX";
+	rename -uuid "3240521F-4303-D6BC-4FF5-34B54520CD20";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 11 0 18 0 23 0 25 0;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTA -name "Base_FK_Ctrl_rotateY";
+	rename -uuid "9BEF415E-45D8-D5E0-CA73-61983507662D";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 11 0 18 0 23 0 25 0;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTA -name "Base_FK_Ctrl_rotateZ";
+	rename -uuid "38F97078-448A-7136-8EAB-E4A5491909CC";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 0 11 0 18 0 23 0 25 0;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTU -name "Base_FK_Ctrl_scaleX";
+	rename -uuid "C1CFF981-4870-2713-DD95-FE802F60575A";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 11 1 18 1 23 1 25 1;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTU -name "Base_FK_Ctrl_scaleY";
+	rename -uuid "5C3B4350-457B-728D-24F3-FB81A7C92B91";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 11 1 18 1 23 1 25 1;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTU -name "Base_FK_Ctrl_scaleZ";
+	rename -uuid "6AFA24E1-4EA9-8477-6BB4-FFB59BE46F82";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 11 1 18 1 23 1 25 1;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
+createNode animCurveTU -name "Base_FK_Ctrl_Arm_IKFK";
+	rename -uuid "05598A56-4884-491C-AC21-9BB3420B1B00";
+	setAttr ".tangentType" 18;
+	setAttr ".weightedTangents" no;
+	setAttr -size 5 ".keyTimeValue[0:4]"  0 1 11 1 18 1 23 1 25 1;
+	setAttr -size 5 ".keyTanInType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutType[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanInY[3:4]"  0 0;
+	setAttr -size 5 ".keyTanOutX[3:4]"  1 1;
+	setAttr -size 5 ".keyTanOutY[3:4]"  0 0;
 select -noExpand :time1;
-	setAttr ".outTime" 0;
+	setAttr ".outTime" 6;
+	setAttr ".unwarpedTime" 6;
 select -noExpand :hardwareRenderingGlobals;
 	setAttr ".objectTypeFilterNameArray" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".objectTypeFilterValueArray" -type "Int32Array" 22 0 1 1
@@ -4050,7 +4246,6 @@ select -noExpand :defaultShaderList1;
 select -noExpand :postProcessList1;
 	setAttr -size 2 ".postProcesses";
 select -noExpand :defaultRenderUtilityList1;
-	setAttr -size 3 ".utilities";
 select -noExpand :defaultRenderingList1;
 select -noExpand :standardSurface1;
 	setAttr ".baseColor" -type "float3" 0.40000001 0.40000001 0.40000001 ;
@@ -4063,7 +4258,7 @@ select -noExpand :defaultRenderGlobals;
 	addAttr -cachedInternally true -hidden true -shortName "dss" -longName "defaultSurfaceShader" 
 		-dataType "string";
 	setAttr ".currentRenderer" -type "string" "arnold";
-	setAttr ".defaultSurfaceShader" -type "string" "standardSurface1";
+	setAttr ".defaultSurfaceShader" -type "string" "lambert1";
 select -noExpand :defaultResolution;
 	setAttr ".pixelAspect" 1;
 select -noExpand :defaultColorMgtGlobals;
@@ -4079,7 +4274,7 @@ select -noExpand :hardwareRenderGlobals;
 	setAttr ".colorTextureResolution" 256;
 	setAttr ".bumpTextureResolution" 512;
 select -noExpand :ikSystem;
-connectAttr "geo_layer.drawInfo" "base_geo.drawOverride";
+connectAttr "GeoLayer.drawInfo" "Geometry.drawOverride";
 connectAttr "base_geo_parentConstraint1.constraintTranslateX" "base_geo.translateX"
 		;
 connectAttr "base_geo_parentConstraint1.constraintTranslateY" "base_geo.translateY"
@@ -4100,35 +4295,33 @@ connectAttr "base_geo.rotatePivot" "base_geo_parentConstraint1.constraintRotateP
 		;
 connectAttr "base_geo.rotatePivotTranslate" "base_geo_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "RK_base.translate" "base_geo_parentConstraint1.target[0].targetTranslate"
+connectAttr "Base.translate" "base_geo_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "RK_base.rotatePivot" "base_geo_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "Base.rotatePivot" "base_geo_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "RK_base.rotatePivotTranslate" "base_geo_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "Base.rotatePivotTranslate" "base_geo_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "RK_base.rotate" "base_geo_parentConstraint1.target[0].targetRotate"
+connectAttr "Base.rotate" "base_geo_parentConstraint1.target[0].targetRotate";
+connectAttr "Base.rotateOrder" "base_geo_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "RK_base.rotateOrder" "base_geo_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "Base.scale" "base_geo_parentConstraint1.target[0].targetScale";
+connectAttr "Base.parentMatrix" "base_geo_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "RK_base.scale" "base_geo_parentConstraint1.target[0].targetScale";
-connectAttr "RK_base.parentMatrix" "base_geo_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "Base.jointOrient" "base_geo_parentConstraint1.target[0].targetJointOrient"
 		;
-connectAttr "RK_base.jointOrient" "base_geo_parentConstraint1.target[0].targetJointOrient"
+connectAttr "Base.segmentScaleCompensate" "base_geo_parentConstraint1.target[0].targetScaleCompensate"
 		;
-connectAttr "RK_base.segmentScaleCompensate" "base_geo_parentConstraint1.target[0].targetScaleCompensate"
+connectAttr "Base.inverseScale" "base_geo_parentConstraint1.target[0].targetInverseScale"
 		;
-connectAttr "RK_base.inverseScale" "base_geo_parentConstraint1.target[0].targetInverseScale"
-		;
-connectAttr "base_geo_parentConstraint1.RK_baseW0" "base_geo_parentConstraint1.target[0].targetWeight"
+connectAttr "base_geo_parentConstraint1.BaseW0" "base_geo_parentConstraint1.target[0].targetWeight"
 		;
 connectAttr "base_geo.parentInverseMatrix" "base_geo_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "RK_base.scale" "base_geo_scaleConstraint1.target[0].targetScale";
-connectAttr "RK_base.parentMatrix" "base_geo_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "Base.scale" "base_geo_scaleConstraint1.target[0].targetScale";
+connectAttr "Base.parentMatrix" "base_geo_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "base_geo_scaleConstraint1.RK_baseW0" "base_geo_scaleConstraint1.target[0].targetWeight"
+connectAttr "base_geo_scaleConstraint1.BaseW0" "base_geo_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "geo_layer.drawInfo" "lower_arm_geo.drawOverride";
 connectAttr "lower_arm_geo_parentConstraint1.constraintTranslateX" "lower_arm_geo.translateX"
 		;
 connectAttr "lower_arm_geo_parentConstraint1.constraintTranslateY" "lower_arm_geo.translateY"
@@ -4155,37 +4348,36 @@ connectAttr "lower_arm_geo.rotatePivot" "lower_arm_geo_parentConstraint1.constra
 		;
 connectAttr "lower_arm_geo.rotatePivotTranslate" "lower_arm_geo_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "RK_arm1.translate" "lower_arm_geo_parentConstraint1.target[0].targetTranslate"
+connectAttr "LowerArmFK.translate" "lower_arm_geo_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "RK_arm1.rotatePivot" "lower_arm_geo_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "LowerArmFK.rotatePivot" "lower_arm_geo_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "RK_arm1.rotatePivotTranslate" "lower_arm_geo_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "LowerArmFK.rotatePivotTranslate" "lower_arm_geo_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "RK_arm1.rotate" "lower_arm_geo_parentConstraint1.target[0].targetRotate"
+connectAttr "LowerArmFK.rotate" "lower_arm_geo_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "RK_arm1.rotateOrder" "lower_arm_geo_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "LowerArmFK.rotateOrder" "lower_arm_geo_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "RK_arm1.scale" "lower_arm_geo_parentConstraint1.target[0].targetScale"
+connectAttr "LowerArmFK.scale" "lower_arm_geo_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "RK_arm1.parentMatrix" "lower_arm_geo_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "LowerArmFK.parentMatrix" "lower_arm_geo_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "RK_arm1.jointOrient" "lower_arm_geo_parentConstraint1.target[0].targetJointOrient"
+connectAttr "LowerArmFK.jointOrient" "lower_arm_geo_parentConstraint1.target[0].targetJointOrient"
 		;
-connectAttr "RK_arm1.segmentScaleCompensate" "lower_arm_geo_parentConstraint1.target[0].targetScaleCompensate"
+connectAttr "LowerArmFK.segmentScaleCompensate" "lower_arm_geo_parentConstraint1.target[0].targetScaleCompensate"
 		;
-connectAttr "RK_arm1.inverseScale" "lower_arm_geo_parentConstraint1.target[0].targetInverseScale"
+connectAttr "LowerArmFK.inverseScale" "lower_arm_geo_parentConstraint1.target[0].targetInverseScale"
 		;
-connectAttr "lower_arm_geo_parentConstraint1.RK_arm1W0" "lower_arm_geo_parentConstraint1.target[0].targetWeight"
+connectAttr "lower_arm_geo_parentConstraint1.LowerArmW0" "lower_arm_geo_parentConstraint1.target[0].targetWeight"
 		;
 connectAttr "lower_arm_geo.parentInverseMatrix" "lower_arm_geo_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "RK_arm1.scale" "lower_arm_geo_scaleConstraint1.target[0].targetScale"
+connectAttr "LowerArmFK.scale" "lower_arm_geo_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "RK_arm1.parentMatrix" "lower_arm_geo_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "LowerArmFK.parentMatrix" "lower_arm_geo_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "lower_arm_geo_scaleConstraint1.RK_arm1W0" "lower_arm_geo_scaleConstraint1.target[0].targetWeight"
+connectAttr "lower_arm_geo_scaleConstraint1.LowerArmW0" "lower_arm_geo_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "geo_layer.drawInfo" "upper_arm_geo.drawOverride";
 connectAttr "upper_arm_geo_parentConstraint1.constraintTranslateX" "upper_arm_geo.translateX"
 		;
 connectAttr "upper_arm_geo_parentConstraint1.constraintTranslateY" "upper_arm_geo.translateY"
@@ -4212,37 +4404,36 @@ connectAttr "upper_arm_geo.rotatePivot" "upper_arm_geo_parentConstraint1.constra
 		;
 connectAttr "upper_arm_geo.rotatePivotTranslate" "upper_arm_geo_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "RK_arm2.translate" "upper_arm_geo_parentConstraint1.target[0].targetTranslate"
+connectAttr "UpperArmFK.translate" "upper_arm_geo_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "RK_arm2.rotatePivot" "upper_arm_geo_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "UpperArmFK.rotatePivot" "upper_arm_geo_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "RK_arm2.rotatePivotTranslate" "upper_arm_geo_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "UpperArmFK.rotatePivotTranslate" "upper_arm_geo_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "RK_arm2.rotate" "upper_arm_geo_parentConstraint1.target[0].targetRotate"
+connectAttr "UpperArmFK.rotate" "upper_arm_geo_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "RK_arm2.rotateOrder" "upper_arm_geo_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "UpperArmFK.rotateOrder" "upper_arm_geo_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "RK_arm2.scale" "upper_arm_geo_parentConstraint1.target[0].targetScale"
+connectAttr "UpperArmFK.scale" "upper_arm_geo_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "RK_arm2.parentMatrix" "upper_arm_geo_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "UpperArmFK.parentMatrix" "upper_arm_geo_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "RK_arm2.jointOrient" "upper_arm_geo_parentConstraint1.target[0].targetJointOrient"
+connectAttr "UpperArmFK.jointOrient" "upper_arm_geo_parentConstraint1.target[0].targetJointOrient"
 		;
-connectAttr "RK_arm2.segmentScaleCompensate" "upper_arm_geo_parentConstraint1.target[0].targetScaleCompensate"
+connectAttr "UpperArmFK.segmentScaleCompensate" "upper_arm_geo_parentConstraint1.target[0].targetScaleCompensate"
 		;
-connectAttr "RK_arm2.inverseScale" "upper_arm_geo_parentConstraint1.target[0].targetInverseScale"
+connectAttr "UpperArmFK.inverseScale" "upper_arm_geo_parentConstraint1.target[0].targetInverseScale"
 		;
-connectAttr "upper_arm_geo_parentConstraint1.RK_arm2W0" "upper_arm_geo_parentConstraint1.target[0].targetWeight"
+connectAttr "upper_arm_geo_parentConstraint1.UpperArmW0" "upper_arm_geo_parentConstraint1.target[0].targetWeight"
 		;
 connectAttr "upper_arm_geo.parentInverseMatrix" "upper_arm_geo_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "RK_arm2.scale" "upper_arm_geo_scaleConstraint1.target[0].targetScale"
+connectAttr "UpperArmFK.scale" "upper_arm_geo_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "RK_arm2.parentMatrix" "upper_arm_geo_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "UpperArmFK.parentMatrix" "upper_arm_geo_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "upper_arm_geo_scaleConstraint1.RK_arm2W0" "upper_arm_geo_scaleConstraint1.target[0].targetWeight"
+connectAttr "upper_arm_geo_scaleConstraint1.UpperArmW0" "upper_arm_geo_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "geo_layer.drawInfo" "head_geo.drawOverride";
 connectAttr "head_geo_parentConstraint1.constraintTranslateX" "head_geo.translateX"
 		;
 connectAttr "head_geo_parentConstraint1.constraintTranslateY" "head_geo.translateY"
@@ -4263,737 +4454,617 @@ connectAttr "head_geo.rotatePivot" "head_geo_parentConstraint1.constraintRotateP
 		;
 connectAttr "head_geo.rotatePivotTranslate" "head_geo_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "RK_lamp.translate" "head_geo_parentConstraint1.target[0].targetTranslate"
+connectAttr "LampHeadFK.translate" "head_geo_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "RK_lamp.rotatePivot" "head_geo_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "LampHeadFK.rotatePivot" "head_geo_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "RK_lamp.rotatePivotTranslate" "head_geo_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "LampHeadFK.rotatePivotTranslate" "head_geo_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "RK_lamp.rotate" "head_geo_parentConstraint1.target[0].targetRotate"
+connectAttr "LampHeadFK.rotate" "head_geo_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "RK_lamp.rotateOrder" "head_geo_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "LampHeadFK.rotateOrder" "head_geo_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "RK_lamp.scale" "head_geo_parentConstraint1.target[0].targetScale";
-connectAttr "RK_lamp.parentMatrix" "head_geo_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "LampHeadFK.scale" "head_geo_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "RK_lamp.jointOrient" "head_geo_parentConstraint1.target[0].targetJointOrient"
+connectAttr "LampHeadFK.parentMatrix" "head_geo_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "RK_lamp.segmentScaleCompensate" "head_geo_parentConstraint1.target[0].targetScaleCompensate"
+connectAttr "LampHeadFK.jointOrient" "head_geo_parentConstraint1.target[0].targetJointOrient"
 		;
-connectAttr "RK_lamp.inverseScale" "head_geo_parentConstraint1.target[0].targetInverseScale"
+connectAttr "LampHeadFK.segmentScaleCompensate" "head_geo_parentConstraint1.target[0].targetScaleCompensate"
 		;
-connectAttr "head_geo_parentConstraint1.RK_lampW0" "head_geo_parentConstraint1.target[0].targetWeight"
+connectAttr "LampHeadFK.inverseScale" "head_geo_parentConstraint1.target[0].targetInverseScale"
+		;
+connectAttr "head_geo_parentConstraint1.LampHeadW0" "head_geo_parentConstraint1.target[0].targetWeight"
 		;
 connectAttr "head_geo.parentInverseMatrix" "head_geo_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "RK_lamp.scale" "head_geo_scaleConstraint1.target[0].targetScale";
-connectAttr "RK_lamp.parentMatrix" "head_geo_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "LampHeadFK.scale" "head_geo_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "head_geo_scaleConstraint1.RK_lampW0" "head_geo_scaleConstraint1.target[0].targetWeight"
+connectAttr "LampHeadFK.parentMatrix" "head_geo_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "FK_root_scaleConstraint1.constraintScaleX" "FK_root.scaleX";
-connectAttr "FK_root_scaleConstraint1.constraintScaleY" "FK_root.scaleY";
-connectAttr "FK_root_scaleConstraint1.constraintScaleZ" "FK_root.scaleZ";
-connectAttr "FK_root_parentConstraint1.constraintTranslateX" "FK_root.translateX"
+connectAttr "head_geo_scaleConstraint1.LampHeadW0" "head_geo_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "FK_root_parentConstraint1.constraintTranslateY" "FK_root.translateY"
+connectAttr "SkeletonLayer.drawInfo" "Skeleton.drawOverride";
+connectAttr "Base_parentConstraint1.constraintTranslateX" "Base.translateX";
+connectAttr "Base_parentConstraint1.constraintTranslateY" "Base.translateY";
+connectAttr "Base_parentConstraint1.constraintTranslateZ" "Base.translateZ";
+connectAttr "Base_parentConstraint1.constraintRotateX" "Base.rotateX";
+connectAttr "Base_parentConstraint1.constraintRotateY" "Base.rotateY";
+connectAttr "Base_parentConstraint1.constraintRotateZ" "Base.rotateZ";
+connectAttr "Base_scaleConstraint1.constraintScaleX" "Base.scaleX";
+connectAttr "Base_scaleConstraint1.constraintScaleY" "Base.scaleY";
+connectAttr "Base_scaleConstraint1.constraintScaleZ" "Base.scaleZ";
+connectAttr "LowerArmRK_parentConstraint1.constraintTranslateX" "LowerArmRK.translateX"
 		;
-connectAttr "FK_root_parentConstraint1.constraintTranslateZ" "FK_root.translateZ"
+connectAttr "LowerArmRK_parentConstraint1.constraintTranslateY" "LowerArmRK.translateY"
 		;
-connectAttr "FK_root_parentConstraint1.constraintRotateX" "FK_root.rotateX";
-connectAttr "FK_root_parentConstraint1.constraintRotateY" "FK_root.rotateY";
-connectAttr "FK_root_parentConstraint1.constraintRotateZ" "FK_root.rotateZ";
-connectAttr "Joints.drawInfo" "FK_root.drawOverride";
-connectAttr "FK_root.scale" "FK_base.inverseScale";
-connectAttr "FK_base_parentConstraint1.constraintTranslateX" "FK_base.translateX"
+connectAttr "LowerArmRK_parentConstraint1.constraintTranslateZ" "LowerArmRK.translateZ"
 		;
-connectAttr "FK_base_parentConstraint1.constraintTranslateY" "FK_base.translateY"
+connectAttr "LowerArmRK_parentConstraint1.constraintRotateX" "LowerArmRK.rotateX"
 		;
-connectAttr "FK_base_parentConstraint1.constraintTranslateZ" "FK_base.translateZ"
+connectAttr "LowerArmRK_parentConstraint1.constraintRotateY" "LowerArmRK.rotateY"
 		;
-connectAttr "FK_base_parentConstraint1.constraintRotateX" "FK_base.rotateX";
-connectAttr "FK_base_parentConstraint1.constraintRotateY" "FK_base.rotateY";
-connectAttr "FK_base_parentConstraint1.constraintRotateZ" "FK_base.rotateZ";
-connectAttr "FK_base_scaleConstraint1.constraintScaleX" "FK_base.scaleX";
-connectAttr "FK_base_scaleConstraint1.constraintScaleY" "FK_base.scaleY";
-connectAttr "FK_base_scaleConstraint1.constraintScaleZ" "FK_base.scaleZ";
-connectAttr "Joints.drawInfo" "FK_base.drawOverride";
-connectAttr "FK_base.rotateOrder" "FK_base_parentConstraint1.constraintRotateOrder"
+connectAttr "LowerArmRK_parentConstraint1.constraintRotateZ" "LowerArmRK.rotateZ"
 		;
-connectAttr "FK_base.parentInverseMatrix" "FK_base_parentConstraint1.constraintParentInverseMatrix"
+connectAttr "LowerArmRK_scaleConstraint1.constraintScaleX" "LowerArmRK.scaleX";
+connectAttr "LowerArmRK_scaleConstraint1.constraintScaleY" "LowerArmRK.scaleY";
+connectAttr "LowerArmRK_scaleConstraint1.constraintScaleZ" "LowerArmRK.scaleZ";
+connectAttr "Base.scale" "LowerArmRK.inverseScale";
+connectAttr "UpperArmRK_parentConstraint1.constraintTranslateX" "UpperArmRK.translateX"
 		;
-connectAttr "FK_base.rotatePivot" "FK_base_parentConstraint1.constraintRotatePivot"
+connectAttr "UpperArmRK_parentConstraint1.constraintTranslateY" "UpperArmRK.translateY"
 		;
-connectAttr "FK_base.rotatePivotTranslate" "FK_base_parentConstraint1.constraintRotateTranslate"
+connectAttr "UpperArmRK_parentConstraint1.constraintTranslateZ" "UpperArmRK.translateZ"
 		;
-connectAttr "FK_base.jointOrient" "FK_base_parentConstraint1.constraintJointOrient"
+connectAttr "UpperArmRK_parentConstraint1.constraintRotateX" "UpperArmRK.rotateX"
 		;
-connectAttr "fk_base_ctrl.translate" "FK_base_parentConstraint1.target[0].targetTranslate"
+connectAttr "UpperArmRK_parentConstraint1.constraintRotateY" "UpperArmRK.rotateY"
 		;
-connectAttr "fk_base_ctrl.rotatePivot" "FK_base_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "UpperArmRK_parentConstraint1.constraintRotateZ" "UpperArmRK.rotateZ"
 		;
-connectAttr "fk_base_ctrl.rotatePivotTranslate" "FK_base_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "UpperArmRK_scaleConstraint1.constraintScaleX" "UpperArmRK.scaleX";
+connectAttr "UpperArmRK_scaleConstraint1.constraintScaleY" "UpperArmRK.scaleY";
+connectAttr "UpperArmRK_scaleConstraint1.constraintScaleZ" "UpperArmRK.scaleZ";
+connectAttr "LowerArmRK.scale" "UpperArmRK.inverseScale";
+connectAttr "LampHeadRK_parentConstraint1.constraintTranslateX" "LampHeadRK.translateX"
 		;
-connectAttr "fk_base_ctrl.rotate" "FK_base_parentConstraint1.target[0].targetRotate"
+connectAttr "LampHeadRK_parentConstraint1.constraintTranslateY" "LampHeadRK.translateY"
 		;
-connectAttr "fk_base_ctrl.rotateOrder" "FK_base_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "LampHeadRK_parentConstraint1.constraintTranslateZ" "LampHeadRK.translateZ"
 		;
-connectAttr "fk_base_ctrl.scale" "FK_base_parentConstraint1.target[0].targetScale"
+connectAttr "LampHeadRK_parentConstraint1.constraintRotateX" "LampHeadRK.rotateX"
 		;
-connectAttr "fk_base_ctrl.parentMatrix" "FK_base_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "LampHeadRK_parentConstraint1.constraintRotateY" "LampHeadRK.rotateY"
 		;
-connectAttr "FK_base_parentConstraint1.fk_base_ctrlW0" "FK_base_parentConstraint1.target[0].targetWeight"
+connectAttr "LampHeadRK_parentConstraint1.constraintRotateZ" "LampHeadRK.rotateZ"
 		;
-connectAttr "FK_base.segmentScaleCompensate" "FK_base_scaleConstraint1.constraintScaleCompensate"
+connectAttr "LampHeadRK_scaleConstraint1.constraintScaleX" "LampHeadRK.scaleX";
+connectAttr "LampHeadRK_scaleConstraint1.constraintScaleY" "LampHeadRK.scaleY";
+connectAttr "LampHeadRK_scaleConstraint1.constraintScaleZ" "LampHeadRK.scaleZ";
+connectAttr "UpperArmRK.scale" "LampHeadRK.inverseScale";
+connectAttr "LampHeadRK.rotateOrder" "LampHeadRK_parentConstraint1.constraintRotateOrder"
 		;
-connectAttr "FK_base.parentInverseMatrix" "FK_base_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "LampHeadRK.parentInverseMatrix" "LampHeadRK_parentConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "fk_base_ctrl.scale" "FK_base_scaleConstraint1.target[0].targetScale"
+connectAttr "LampHeadRK.rotatePivot" "LampHeadRK_parentConstraint1.constraintRotatePivot"
 		;
-connectAttr "fk_base_ctrl.parentMatrix" "FK_base_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "LampHeadRK.rotatePivotTranslate" "LampHeadRK_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "FK_base_scaleConstraint1.fk_base_ctrlW0" "FK_base_scaleConstraint1.target[0].targetWeight"
+connectAttr "LampHeadRK.jointOrient" "LampHeadRK_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "FK_arm1_scaleConstraint1.constraintScaleX" "FK_arm1.scaleX";
-connectAttr "FK_arm1_scaleConstraint1.constraintScaleY" "FK_arm1.scaleY";
-connectAttr "FK_arm1_scaleConstraint1.constraintScaleZ" "FK_arm1.scaleZ";
-connectAttr "FK_root.scale" "FK_arm1.inverseScale";
-connectAttr "FK_arm1_parentConstraint1.constraintTranslateX" "FK_arm1.translateX"
+connectAttr "LampHeadFK.translate" "LampHeadRK_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "FK_arm1_parentConstraint1.constraintTranslateY" "FK_arm1.translateY"
+connectAttr "LampHeadFK.rotatePivot" "LampHeadRK_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "FK_arm1_parentConstraint1.constraintTranslateZ" "FK_arm1.translateZ"
+connectAttr "LampHeadFK.rotatePivotTranslate" "LampHeadRK_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "FK_arm1_parentConstraint1.constraintRotateX" "FK_arm1.rotateX";
-connectAttr "FK_arm1_parentConstraint1.constraintRotateY" "FK_arm1.rotateY";
-connectAttr "FK_arm1_parentConstraint1.constraintRotateZ" "FK_arm1.rotateZ";
-connectAttr "Joints.drawInfo" "FK_arm1.drawOverride";
-connectAttr "FK_arm1.scale" "FK_arm2.inverseScale";
-connectAttr "FK_arm2_scaleConstraint1.constraintScaleX" "FK_arm2.scaleX";
-connectAttr "FK_arm2_scaleConstraint1.constraintScaleY" "FK_arm2.scaleY";
-connectAttr "FK_arm2_scaleConstraint1.constraintScaleZ" "FK_arm2.scaleZ";
-connectAttr "FK_arm2_parentConstraint1.constraintTranslateX" "FK_arm2.translateX"
+connectAttr "LampHeadFK.rotate" "LampHeadRK_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "FK_arm2_parentConstraint1.constraintTranslateY" "FK_arm2.translateY"
+connectAttr "LampHeadFK.rotateOrder" "LampHeadRK_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "FK_arm2_parentConstraint1.constraintTranslateZ" "FK_arm2.translateZ"
+connectAttr "LampHeadFK.scale" "LampHeadRK_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "FK_arm2_parentConstraint1.constraintRotateX" "FK_arm2.rotateX";
-connectAttr "FK_arm2_parentConstraint1.constraintRotateY" "FK_arm2.rotateY";
-connectAttr "FK_arm2_parentConstraint1.constraintRotateZ" "FK_arm2.rotateZ";
-connectAttr "Joints.drawInfo" "FK_arm2.drawOverride";
-connectAttr "FK_arm2.scale" "FK_lamp.inverseScale";
-connectAttr "FK_lamp_parentConstraint1.constraintTranslateX" "FK_lamp.translateX"
+connectAttr "LampHeadFK.parentMatrix" "LampHeadRK_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "FK_lamp_parentConstraint1.constraintTranslateY" "FK_lamp.translateY"
+connectAttr "LampHeadFK.jointOrient" "LampHeadRK_parentConstraint1.target[0].targetJointOrient"
 		;
-connectAttr "FK_lamp_parentConstraint1.constraintTranslateZ" "FK_lamp.translateZ"
+connectAttr "LampHeadFK.segmentScaleCompensate" "LampHeadRK_parentConstraint1.target[0].targetScaleCompensate"
 		;
-connectAttr "FK_lamp_parentConstraint1.constraintRotateX" "FK_lamp.rotateX";
-connectAttr "FK_lamp_parentConstraint1.constraintRotateY" "FK_lamp.rotateY";
-connectAttr "FK_lamp_parentConstraint1.constraintRotateZ" "FK_lamp.rotateZ";
-connectAttr "FK_lamp_scaleConstraint1.constraintScaleX" "FK_lamp.scaleX";
-connectAttr "FK_lamp_scaleConstraint1.constraintScaleY" "FK_lamp.scaleY";
-connectAttr "FK_lamp_scaleConstraint1.constraintScaleZ" "FK_lamp.scaleZ";
-connectAttr "Joints.drawInfo" "FK_lamp.drawOverride";
-connectAttr "FK_lamp.rotateOrder" "FK_lamp_parentConstraint1.constraintRotateOrder"
+connectAttr "LampHeadFK.inverseScale" "LampHeadRK_parentConstraint1.target[0].targetInverseScale"
 		;
-connectAttr "FK_lamp.parentInverseMatrix" "FK_lamp_parentConstraint1.constraintParentInverseMatrix"
+connectAttr "LampHeadRK_parentConstraint1.LampHeadFKW0" "LampHeadRK_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "FK_lamp.rotatePivot" "FK_lamp_parentConstraint1.constraintRotatePivot"
+connectAttr "LampHeadIK.translate" "LampHeadRK_parentConstraint1.target[1].targetTranslate"
 		;
-connectAttr "FK_lamp.rotatePivotTranslate" "FK_lamp_parentConstraint1.constraintRotateTranslate"
+connectAttr "LampHeadIK.rotatePivot" "LampHeadRK_parentConstraint1.target[1].targetRotatePivot"
 		;
-connectAttr "FK_lamp.jointOrient" "FK_lamp_parentConstraint1.constraintJointOrient"
+connectAttr "LampHeadIK.rotatePivotTranslate" "LampHeadRK_parentConstraint1.target[1].targetRotateTranslate"
 		;
-connectAttr "fk_lamp_ctrl.translate" "FK_lamp_parentConstraint1.target[0].targetTranslate"
+connectAttr "LampHeadIK.rotate" "LampHeadRK_parentConstraint1.target[1].targetRotate"
 		;
-connectAttr "fk_lamp_ctrl.rotatePivot" "FK_lamp_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "LampHeadIK.rotateOrder" "LampHeadRK_parentConstraint1.target[1].targetRotateOrder"
 		;
-connectAttr "fk_lamp_ctrl.rotatePivotTranslate" "FK_lamp_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "LampHeadIK.scale" "LampHeadRK_parentConstraint1.target[1].targetScale"
 		;
-connectAttr "fk_lamp_ctrl.rotate" "FK_lamp_parentConstraint1.target[0].targetRotate"
+connectAttr "LampHeadIK.parentMatrix" "LampHeadRK_parentConstraint1.target[1].targetParentMatrix"
 		;
-connectAttr "fk_lamp_ctrl.rotateOrder" "FK_lamp_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "LampHeadIK.jointOrient" "LampHeadRK_parentConstraint1.target[1].targetJointOrient"
 		;
-connectAttr "fk_lamp_ctrl.scale" "FK_lamp_parentConstraint1.target[0].targetScale"
+connectAttr "LampHeadIK.segmentScaleCompensate" "LampHeadRK_parentConstraint1.target[1].targetScaleCompensate"
 		;
-connectAttr "fk_lamp_ctrl.parentMatrix" "FK_lamp_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "LampHeadIK.inverseScale" "LampHeadRK_parentConstraint1.target[1].targetInverseScale"
 		;
-connectAttr "FK_lamp_parentConstraint1.fk_lamp_ctrlW0" "FK_lamp_parentConstraint1.target[0].targetWeight"
+connectAttr "LampHeadRK_parentConstraint1.LampHeadIKW1" "LampHeadRK_parentConstraint1.target[1].targetWeight"
 		;
-connectAttr "FK_lamp.segmentScaleCompensate" "FK_lamp_scaleConstraint1.constraintScaleCompensate"
+connectAttr "Base_FK_Ctrl.Arm_IKFK" "LampHeadRK_parentConstraint1.LampHeadFKW0";
+connectAttr "Arm_IKFK_Rev.outputX" "LampHeadRK_parentConstraint1.LampHeadIKW1";
+connectAttr "LampHeadRK.segmentScaleCompensate" "LampHeadRK_scaleConstraint1.constraintScaleCompensate"
 		;
-connectAttr "FK_lamp.parentInverseMatrix" "FK_lamp_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "LampHeadRK.parentInverseMatrix" "LampHeadRK_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "fk_lamp_ctrl.scale" "FK_lamp_scaleConstraint1.target[0].targetScale"
+connectAttr "LampHeadFK.scale" "LampHeadRK_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "fk_lamp_ctrl.parentMatrix" "FK_lamp_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "LampHeadFK.parentMatrix" "LampHeadRK_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "FK_lamp_scaleConstraint1.fk_lamp_ctrlW0" "FK_lamp_scaleConstraint1.target[0].targetWeight"
+connectAttr "LampHeadRK_scaleConstraint1.LampHeadFKW0" "LampHeadRK_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "FK_arm2.rotateOrder" "FK_arm2_parentConstraint1.constraintRotateOrder"
+connectAttr "LampHeadIK.scale" "LampHeadRK_scaleConstraint1.target[1].targetScale"
 		;
-connectAttr "FK_arm2.parentInverseMatrix" "FK_arm2_parentConstraint1.constraintParentInverseMatrix"
+connectAttr "LampHeadIK.parentMatrix" "LampHeadRK_scaleConstraint1.target[1].targetParentMatrix"
 		;
-connectAttr "FK_arm2.rotatePivot" "FK_arm2_parentConstraint1.constraintRotatePivot"
+connectAttr "LampHeadRK_scaleConstraint1.LampHeadIKW1" "LampHeadRK_scaleConstraint1.target[1].targetWeight"
 		;
-connectAttr "FK_arm2.rotatePivotTranslate" "FK_arm2_parentConstraint1.constraintRotateTranslate"
+connectAttr "Base_FK_Ctrl.Arm_IKFK" "LampHeadRK_scaleConstraint1.LampHeadFKW0";
+connectAttr "Arm_IKFK_Rev.outputX" "LampHeadRK_scaleConstraint1.LampHeadIKW1";
+connectAttr "UpperArmRK.rotateOrder" "UpperArmRK_parentConstraint1.constraintRotateOrder"
 		;
-connectAttr "FK_arm2.jointOrient" "FK_arm2_parentConstraint1.constraintJointOrient"
+connectAttr "UpperArmRK.parentInverseMatrix" "UpperArmRK_parentConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "fk_arm_2_ctrl.translate" "FK_arm2_parentConstraint1.target[0].targetTranslate"
+connectAttr "UpperArmRK.rotatePivot" "UpperArmRK_parentConstraint1.constraintRotatePivot"
 		;
-connectAttr "fk_arm_2_ctrl.rotatePivot" "FK_arm2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "UpperArmRK.rotatePivotTranslate" "UpperArmRK_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "fk_arm_2_ctrl.rotatePivotTranslate" "FK_arm2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "UpperArmRK.jointOrient" "UpperArmRK_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "fk_arm_2_ctrl.rotate" "FK_arm2_parentConstraint1.target[0].targetRotate"
+connectAttr "UpperArmFK.translate" "UpperArmRK_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "fk_arm_2_ctrl.rotateOrder" "FK_arm2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "UpperArmFK.rotatePivot" "UpperArmRK_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "fk_arm_2_ctrl.scale" "FK_arm2_parentConstraint1.target[0].targetScale"
+connectAttr "UpperArmFK.rotatePivotTranslate" "UpperArmRK_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "fk_arm_2_ctrl.parentMatrix" "FK_arm2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "UpperArmFK.rotate" "UpperArmRK_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "FK_arm2_parentConstraint1.fk_arm_2_ctrlW0" "FK_arm2_parentConstraint1.target[0].targetWeight"
+connectAttr "UpperArmFK.rotateOrder" "UpperArmRK_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "FK_arm2.segmentScaleCompensate" "FK_arm2_scaleConstraint1.constraintScaleCompensate"
+connectAttr "UpperArmFK.scale" "UpperArmRK_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "FK_arm2.parentInverseMatrix" "FK_arm2_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "UpperArmFK.parentMatrix" "UpperArmRK_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "fk_arm_2_ctrl.scale" "FK_arm2_scaleConstraint1.target[0].targetScale"
+connectAttr "UpperArmFK.jointOrient" "UpperArmRK_parentConstraint1.target[0].targetJointOrient"
 		;
-connectAttr "fk_arm_2_ctrl.parentMatrix" "FK_arm2_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "UpperArmFK.segmentScaleCompensate" "UpperArmRK_parentConstraint1.target[0].targetScaleCompensate"
 		;
-connectAttr "FK_arm2_scaleConstraint1.fk_arm_2_ctrlW0" "FK_arm2_scaleConstraint1.target[0].targetWeight"
+connectAttr "UpperArmFK.inverseScale" "UpperArmRK_parentConstraint1.target[0].targetInverseScale"
 		;
-connectAttr "FK_arm1.rotateOrder" "FK_arm1_parentConstraint1.constraintRotateOrder"
+connectAttr "UpperArmRK_parentConstraint1.UpperArmFKW0" "UpperArmRK_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "FK_arm1.parentInverseMatrix" "FK_arm1_parentConstraint1.constraintParentInverseMatrix"
+connectAttr "UpperArmIK.translate" "UpperArmRK_parentConstraint1.target[1].targetTranslate"
 		;
-connectAttr "FK_arm1.rotatePivot" "FK_arm1_parentConstraint1.constraintRotatePivot"
+connectAttr "UpperArmIK.rotatePivot" "UpperArmRK_parentConstraint1.target[1].targetRotatePivot"
 		;
-connectAttr "FK_arm1.rotatePivotTranslate" "FK_arm1_parentConstraint1.constraintRotateTranslate"
+connectAttr "UpperArmIK.rotatePivotTranslate" "UpperArmRK_parentConstraint1.target[1].targetRotateTranslate"
 		;
-connectAttr "FK_arm1.jointOrient" "FK_arm1_parentConstraint1.constraintJointOrient"
+connectAttr "UpperArmIK.rotate" "UpperArmRK_parentConstraint1.target[1].targetRotate"
 		;
-connectAttr "fk_arm_1_ctrl.translate" "FK_arm1_parentConstraint1.target[0].targetTranslate"
+connectAttr "UpperArmIK.rotateOrder" "UpperArmRK_parentConstraint1.target[1].targetRotateOrder"
 		;
-connectAttr "fk_arm_1_ctrl.rotatePivot" "FK_arm1_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "UpperArmIK.scale" "UpperArmRK_parentConstraint1.target[1].targetScale"
 		;
-connectAttr "fk_arm_1_ctrl.rotatePivotTranslate" "FK_arm1_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "UpperArmIK.parentMatrix" "UpperArmRK_parentConstraint1.target[1].targetParentMatrix"
 		;
-connectAttr "fk_arm_1_ctrl.rotate" "FK_arm1_parentConstraint1.target[0].targetRotate"
+connectAttr "UpperArmIK.jointOrient" "UpperArmRK_parentConstraint1.target[1].targetJointOrient"
 		;
-connectAttr "fk_arm_1_ctrl.rotateOrder" "FK_arm1_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "UpperArmIK.segmentScaleCompensate" "UpperArmRK_parentConstraint1.target[1].targetScaleCompensate"
 		;
-connectAttr "fk_arm_1_ctrl.scale" "FK_arm1_parentConstraint1.target[0].targetScale"
+connectAttr "UpperArmIK.inverseScale" "UpperArmRK_parentConstraint1.target[1].targetInverseScale"
 		;
-connectAttr "fk_arm_1_ctrl.parentMatrix" "FK_arm1_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "UpperArmRK_parentConstraint1.UpperArmIKW1" "UpperArmRK_parentConstraint1.target[1].targetWeight"
 		;
-connectAttr "FK_arm1_parentConstraint1.fk_arm_1_ctrlW0" "FK_arm1_parentConstraint1.target[0].targetWeight"
+connectAttr "Base_FK_Ctrl.Arm_IKFK" "UpperArmRK_parentConstraint1.UpperArmFKW0";
+connectAttr "Arm_IKFK_Rev.outputX" "UpperArmRK_parentConstraint1.UpperArmIKW1";
+connectAttr "UpperArmRK.segmentScaleCompensate" "UpperArmRK_scaleConstraint1.constraintScaleCompensate"
 		;
-connectAttr "FK_arm1.segmentScaleCompensate" "FK_arm1_scaleConstraint1.constraintScaleCompensate"
+connectAttr "UpperArmRK.parentInverseMatrix" "UpperArmRK_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "FK_arm1.parentInverseMatrix" "FK_arm1_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "UpperArmFK.scale" "UpperArmRK_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "fk_arm_1_ctrl.scale" "FK_arm1_scaleConstraint1.target[0].targetScale"
+connectAttr "UpperArmFK.parentMatrix" "UpperArmRK_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "fk_arm_1_ctrl.parentMatrix" "FK_arm1_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "UpperArmRK_scaleConstraint1.UpperArmFKW0" "UpperArmRK_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "FK_arm1_scaleConstraint1.fk_arm_1_ctrlW0" "FK_arm1_scaleConstraint1.target[0].targetWeight"
+connectAttr "UpperArmIK.scale" "UpperArmRK_scaleConstraint1.target[1].targetScale"
 		;
-connectAttr "FK_root.rotateOrder" "FK_root_parentConstraint1.constraintRotateOrder"
+connectAttr "UpperArmIK.parentMatrix" "UpperArmRK_scaleConstraint1.target[1].targetParentMatrix"
 		;
-connectAttr "FK_root.parentInverseMatrix" "FK_root_parentConstraint1.constraintParentInverseMatrix"
+connectAttr "UpperArmRK_scaleConstraint1.UpperArmIKW1" "UpperArmRK_scaleConstraint1.target[1].targetWeight"
 		;
-connectAttr "FK_root.rotatePivot" "FK_root_parentConstraint1.constraintRotatePivot"
+connectAttr "Base_FK_Ctrl.Arm_IKFK" "UpperArmRK_scaleConstraint1.UpperArmFKW0";
+connectAttr "Arm_IKFK_Rev.outputX" "UpperArmRK_scaleConstraint1.UpperArmIKW1";
+connectAttr "LowerArmRK.rotateOrder" "LowerArmRK_parentConstraint1.constraintRotateOrder"
 		;
-connectAttr "FK_root.rotatePivotTranslate" "FK_root_parentConstraint1.constraintRotateTranslate"
+connectAttr "LowerArmRK.parentInverseMatrix" "LowerArmRK_parentConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "FK_root.jointOrient" "FK_root_parentConstraint1.constraintJointOrient"
+connectAttr "LowerArmRK.rotatePivot" "LowerArmRK_parentConstraint1.constraintRotatePivot"
 		;
-connectAttr "fk_root_ctrl.translate" "FK_root_parentConstraint1.target[0].targetTranslate"
+connectAttr "LowerArmRK.rotatePivotTranslate" "LowerArmRK_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "fk_root_ctrl.rotatePivot" "FK_root_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "LowerArmRK.jointOrient" "LowerArmRK_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "fk_root_ctrl.rotatePivotTranslate" "FK_root_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "LowerArmFK.translate" "LowerArmRK_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "fk_root_ctrl.rotate" "FK_root_parentConstraint1.target[0].targetRotate"
+connectAttr "LowerArmFK.rotatePivot" "LowerArmRK_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "fk_root_ctrl.rotateOrder" "FK_root_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "LowerArmFK.rotatePivotTranslate" "LowerArmRK_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "fk_root_ctrl.scale" "FK_root_parentConstraint1.target[0].targetScale"
+connectAttr "LowerArmFK.rotate" "LowerArmRK_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "fk_root_ctrl.parentMatrix" "FK_root_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "LowerArmFK.rotateOrder" "LowerArmRK_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "FK_root_parentConstraint1.fk_root_ctrlW0" "FK_root_parentConstraint1.target[0].targetWeight"
+connectAttr "LowerArmFK.scale" "LowerArmRK_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "FK_root.parentInverseMatrix" "FK_root_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "LowerArmFK.parentMatrix" "LowerArmRK_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "fk_root_ctrl.scale" "FK_root_scaleConstraint1.target[0].targetScale"
+connectAttr "LowerArmFK.jointOrient" "LowerArmRK_parentConstraint1.target[0].targetJointOrient"
 		;
-connectAttr "fk_root_ctrl.parentMatrix" "FK_root_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "LowerArmFK.segmentScaleCompensate" "LowerArmRK_parentConstraint1.target[0].targetScaleCompensate"
 		;
-connectAttr "FK_root_scaleConstraint1.fk_root_ctrlW0" "FK_root_scaleConstraint1.target[0].targetWeight"
+connectAttr "LowerArmFK.inverseScale" "LowerArmRK_parentConstraint1.target[0].targetInverseScale"
 		;
-connectAttr "IK_arm1.message" "ikHandle1.startJoint";
-connectAttr "IK_effector1.handlePath" "ikHandle1.endEffector";
-connectAttr "ikRPsolver.message" "ikHandle1.ikSolver";
-connectAttr "ikHandle1_poleVectorConstraint1.constraintTranslateX" "ikHandle1.poleVectorX"
+connectAttr "LowerArmRK_parentConstraint1.LowerArmFKW0" "LowerArmRK_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "ikHandle1_poleVectorConstraint1.constraintTranslateY" "ikHandle1.poleVectorY"
+connectAttr "LowerArmIK.translate" "LowerArmRK_parentConstraint1.target[1].targetTranslate"
 		;
-connectAttr "ikHandle1_poleVectorConstraint1.constraintTranslateZ" "ikHandle1.poleVectorZ"
+connectAttr "LowerArmIK.rotatePivot" "LowerArmRK_parentConstraint1.target[1].targetRotatePivot"
 		;
-connectAttr "ikHandle1_parentConstraint1.constraintTranslateX" "ikHandle1.translateX"
+connectAttr "LowerArmIK.rotatePivotTranslate" "LowerArmRK_parentConstraint1.target[1].targetRotateTranslate"
 		;
-connectAttr "ikHandle1_parentConstraint1.constraintTranslateY" "ikHandle1.translateY"
+connectAttr "LowerArmIK.rotate" "LowerArmRK_parentConstraint1.target[1].targetRotate"
 		;
-connectAttr "ikHandle1_parentConstraint1.constraintTranslateZ" "ikHandle1.translateZ"
+connectAttr "LowerArmIK.rotateOrder" "LowerArmRK_parentConstraint1.target[1].targetRotateOrder"
 		;
-connectAttr "ikHandle1_parentConstraint1.constraintRotateX" "ikHandle1.rotateX";
-connectAttr "ikHandle1_parentConstraint1.constraintRotateY" "ikHandle1.rotateY";
-connectAttr "ikHandle1_parentConstraint1.constraintRotateZ" "ikHandle1.rotateZ";
-connectAttr "ikHandle1_scaleConstraint1.constraintScaleX" "ikHandle1.scaleX";
-connectAttr "ikHandle1_scaleConstraint1.constraintScaleY" "ikHandle1.scaleY";
-connectAttr "ikHandle1_scaleConstraint1.constraintScaleZ" "ikHandle1.scaleZ";
-connectAttr "Joints.drawInfo" "ikHandle1.drawOverride";
-connectAttr "ikHandle1.parentInverseMatrix" "ikHandle1_poleVectorConstraint1.constraintParentInverseMatrix"
+connectAttr "LowerArmIK.scale" "LowerArmRK_parentConstraint1.target[1].targetScale"
 		;
-connectAttr "IK_arm1.parentMatrix" "ikHandle1_poleVectorConstraint1.pivotSpace";
-connectAttr "IK_arm1.translate" "ikHandle1_poleVectorConstraint1.constraintRotatePivot"
+connectAttr "LowerArmIK.parentMatrix" "LowerArmRK_parentConstraint1.target[1].targetParentMatrix"
 		;
-connectAttr "ikpv.translate" "ikHandle1_poleVectorConstraint1.target[0].targetTranslate"
+connectAttr "LowerArmIK.jointOrient" "LowerArmRK_parentConstraint1.target[1].targetJointOrient"
 		;
-connectAttr "ikpv.rotatePivot" "ikHandle1_poleVectorConstraint1.target[0].targetRotatePivot"
+connectAttr "LowerArmIK.segmentScaleCompensate" "LowerArmRK_parentConstraint1.target[1].targetScaleCompensate"
 		;
-connectAttr "ikpv.rotatePivotTranslate" "ikHandle1_poleVectorConstraint1.target[0].targetRotateTranslate"
+connectAttr "LowerArmIK.inverseScale" "LowerArmRK_parentConstraint1.target[1].targetInverseScale"
 		;
-connectAttr "ikpv.parentMatrix" "ikHandle1_poleVectorConstraint1.target[0].targetParentMatrix"
+connectAttr "LowerArmRK_parentConstraint1.LowerArmIKW1" "LowerArmRK_parentConstraint1.target[1].targetWeight"
 		;
-connectAttr "ikHandle1_poleVectorConstraint1.nurbsCircle1W0" "ikHandle1_poleVectorConstraint1.target[0].targetWeight"
+connectAttr "Base_FK_Ctrl.Arm_IKFK" "LowerArmRK_parentConstraint1.LowerArmFKW0";
+connectAttr "Arm_IKFK_Rev.outputX" "LowerArmRK_parentConstraint1.LowerArmIKW1";
+connectAttr "LowerArmRK.segmentScaleCompensate" "LowerArmRK_scaleConstraint1.constraintScaleCompensate"
 		;
-connectAttr "ikHandle1.rotateOrder" "ikHandle1_parentConstraint1.constraintRotateOrder"
+connectAttr "LowerArmRK.parentInverseMatrix" "LowerArmRK_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "ikHandle1.parentInverseMatrix" "ikHandle1_parentConstraint1.constraintParentInverseMatrix"
+connectAttr "LowerArmFK.scale" "LowerArmRK_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "ikHandle1.rotatePivot" "ikHandle1_parentConstraint1.constraintRotatePivot"
+connectAttr "LowerArmFK.parentMatrix" "LowerArmRK_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "ikHandle1.rotatePivotTranslate" "ikHandle1_parentConstraint1.constraintRotateTranslate"
+connectAttr "LowerArmRK_scaleConstraint1.LowerArmFKW0" "LowerArmRK_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "iklamp.translate" "ikHandle1_parentConstraint1.target[0].targetTranslate"
+connectAttr "LowerArmIK.scale" "LowerArmRK_scaleConstraint1.target[1].targetScale"
 		;
-connectAttr "iklamp.rotatePivot" "ikHandle1_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "LowerArmIK.parentMatrix" "LowerArmRK_scaleConstraint1.target[1].targetParentMatrix"
 		;
-connectAttr "iklamp.rotatePivotTranslate" "ikHandle1_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "LowerArmRK_scaleConstraint1.LowerArmIKW1" "LowerArmRK_scaleConstraint1.target[1].targetWeight"
 		;
-connectAttr "iklamp.rotate" "ikHandle1_parentConstraint1.target[0].targetRotate"
+connectAttr "Base_FK_Ctrl.Arm_IKFK" "LowerArmRK_scaleConstraint1.LowerArmFKW0";
+connectAttr "Arm_IKFK_Rev.outputX" "LowerArmRK_scaleConstraint1.LowerArmIKW1";
+connectAttr "LowerArm_parentConstraint1.constraintTranslateX" "LowerArmFK.translateX"
 		;
-connectAttr "iklamp.rotateOrder" "ikHandle1_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "LowerArm_parentConstraint1.constraintTranslateY" "LowerArmFK.translateY"
 		;
-connectAttr "iklamp.scale" "ikHandle1_parentConstraint1.target[0].targetScale";
-connectAttr "iklamp.parentMatrix" "ikHandle1_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "LowerArm_parentConstraint1.constraintTranslateZ" "LowerArmFK.translateZ"
 		;
-connectAttr "ikHandle1_parentConstraint1.nurbsCircle2W0" "ikHandle1_parentConstraint1.target[0].targetWeight"
+connectAttr "LowerArm_parentConstraint1.constraintRotateX" "LowerArmFK.rotateX";
+connectAttr "LowerArm_parentConstraint1.constraintRotateY" "LowerArmFK.rotateY";
+connectAttr "LowerArm_parentConstraint1.constraintRotateZ" "LowerArmFK.rotateZ";
+connectAttr "LowerArm_scaleConstraint1.constraintScaleX" "LowerArmFK.scaleX";
+connectAttr "LowerArm_scaleConstraint1.constraintScaleY" "LowerArmFK.scaleY";
+connectAttr "LowerArm_scaleConstraint1.constraintScaleZ" "LowerArmFK.scaleZ";
+connectAttr "Base.scale" "LowerArmFK.inverseScale";
+connectAttr "UpperArm_parentConstraint1.constraintTranslateX" "UpperArmFK.translateX"
 		;
-connectAttr "ikHandle1.parentInverseMatrix" "ikHandle1_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "UpperArm_parentConstraint1.constraintTranslateY" "UpperArmFK.translateY"
 		;
-connectAttr "iklamp.scale" "ikHandle1_scaleConstraint1.target[0].targetScale";
-connectAttr "iklamp.parentMatrix" "ikHandle1_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "UpperArm_parentConstraint1.constraintTranslateZ" "UpperArmFK.translateZ"
 		;
-connectAttr "ikHandle1_scaleConstraint1.nurbsCircle2W0" "ikHandle1_scaleConstraint1.target[0].targetWeight"
+connectAttr "UpperArm_parentConstraint1.constraintRotateX" "UpperArmFK.rotateX";
+connectAttr "UpperArm_parentConstraint1.constraintRotateY" "UpperArmFK.rotateY";
+connectAttr "UpperArm_parentConstraint1.constraintRotateZ" "UpperArmFK.rotateZ";
+connectAttr "UpperArm_scaleConstraint1.constraintScaleX" "UpperArmFK.scaleX";
+connectAttr "UpperArm_scaleConstraint1.constraintScaleY" "UpperArmFK.scaleY";
+connectAttr "UpperArm_scaleConstraint1.constraintScaleZ" "UpperArmFK.scaleZ";
+connectAttr "LowerArmFK.scale" "UpperArmFK.inverseScale";
+connectAttr "LampHead_parentConstraint1.constraintTranslateX" "LampHeadFK.translateX"
 		;
-connectAttr "Joints.drawInfo" "IK_root.drawOverride";
-connectAttr "IK_root.scale" "IK_base.inverseScale";
-connectAttr "IK_base_parentConstraint1.constraintTranslateX" "IK_base.translateX"
+connectAttr "LampHead_parentConstraint1.constraintTranslateY" "LampHeadFK.translateY"
 		;
-connectAttr "IK_base_parentConstraint1.constraintTranslateY" "IK_base.translateY"
+connectAttr "LampHead_parentConstraint1.constraintTranslateZ" "LampHeadFK.translateZ"
 		;
-connectAttr "IK_base_parentConstraint1.constraintTranslateZ" "IK_base.translateZ"
+connectAttr "LampHead_parentConstraint1.constraintRotateX" "LampHeadFK.rotateX";
+connectAttr "LampHead_parentConstraint1.constraintRotateY" "LampHeadFK.rotateY";
+connectAttr "LampHead_parentConstraint1.constraintRotateZ" "LampHeadFK.rotateZ";
+connectAttr "LampHead_scaleConstraint1.constraintScaleX" "LampHeadFK.scaleX";
+connectAttr "LampHead_scaleConstraint1.constraintScaleY" "LampHeadFK.scaleY";
+connectAttr "LampHead_scaleConstraint1.constraintScaleZ" "LampHeadFK.scaleZ";
+connectAttr "UpperArmFK.scale" "LampHeadFK.inverseScale";
+connectAttr "LampHeadFK.rotateOrder" "LampHead_parentConstraint1.constraintRotateOrder"
 		;
-connectAttr "IK_base_parentConstraint1.constraintRotateX" "IK_base.rotateX";
-connectAttr "IK_base_parentConstraint1.constraintRotateY" "IK_base.rotateY";
-connectAttr "IK_base_parentConstraint1.constraintRotateZ" "IK_base.rotateZ";
-connectAttr "IK_base_scaleConstraint1.constraintScaleX" "IK_base.scaleX";
-connectAttr "IK_base_scaleConstraint1.constraintScaleY" "IK_base.scaleY";
-connectAttr "IK_base_scaleConstraint1.constraintScaleZ" "IK_base.scaleZ";
-connectAttr "Joints.drawInfo" "IK_base.drawOverride";
-connectAttr "IK_base.rotateOrder" "IK_base_parentConstraint1.constraintRotateOrder"
+connectAttr "LampHeadFK.parentInverseMatrix" "LampHead_parentConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "IK_base.parentInverseMatrix" "IK_base_parentConstraint1.constraintParentInverseMatrix"
+connectAttr "LampHeadFK.rotatePivot" "LampHead_parentConstraint1.constraintRotatePivot"
 		;
-connectAttr "IK_base.rotatePivot" "IK_base_parentConstraint1.constraintRotatePivot"
+connectAttr "LampHeadFK.rotatePivotTranslate" "LampHead_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "IK_base.rotatePivotTranslate" "IK_base_parentConstraint1.constraintRotateTranslate"
+connectAttr "LampHeadFK.jointOrient" "LampHead_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "IK_base.jointOrient" "IK_base_parentConstraint1.constraintJointOrient"
+connectAttr "LampHead_FK_Ctrl.translate" "LampHead_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "ikbase.translate" "IK_base_parentConstraint1.target[0].targetTranslate"
+connectAttr "LampHead_FK_Ctrl.rotatePivot" "LampHead_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "ikbase.rotatePivot" "IK_base_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "LampHead_FK_Ctrl.rotatePivotTranslate" "LampHead_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "ikbase.rotatePivotTranslate" "IK_base_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "LampHead_FK_Ctrl.rotate" "LampHead_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "ikbase.rotate" "IK_base_parentConstraint1.target[0].targetRotate";
-connectAttr "ikbase.rotateOrder" "IK_base_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "LampHead_FK_Ctrl.rotateOrder" "LampHead_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "ikbase.scale" "IK_base_parentConstraint1.target[0].targetScale";
-connectAttr "ikbase.parentMatrix" "IK_base_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "LampHead_FK_Ctrl.scale" "LampHead_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "IK_base_parentConstraint1.ikbaseW0" "IK_base_parentConstraint1.target[0].targetWeight"
+connectAttr "LampHead_FK_Ctrl.parentMatrix" "LampHead_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "IK_base.segmentScaleCompensate" "IK_base_scaleConstraint1.constraintScaleCompensate"
+connectAttr "LampHead_parentConstraint1.LampHead_FK_CtrlW0" "LampHead_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "IK_base.parentInverseMatrix" "IK_base_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "LampHeadFK.segmentScaleCompensate" "LampHead_scaleConstraint1.constraintScaleCompensate"
 		;
-connectAttr "ikbase.scale" "IK_base_scaleConstraint1.target[0].targetScale";
-connectAttr "ikbase.parentMatrix" "IK_base_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "LampHeadFK.parentInverseMatrix" "LampHead_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "IK_base_scaleConstraint1.ikbaseW0" "IK_base_scaleConstraint1.target[0].targetWeight"
+connectAttr "LampHead_FK_Ctrl.scale" "LampHead_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "IK_root.scale" "IK_arm1.inverseScale";
-connectAttr "Joints.drawInfo" "IK_arm1.drawOverride";
-connectAttr "IK_arm1.scale" "IK_arm2.inverseScale";
-connectAttr "Joints.drawInfo" "IK_arm2.drawOverride";
-connectAttr "IK_arm2.scale" "IK_lamp.inverseScale";
-connectAttr "Joints.drawInfo" "IK_lamp.drawOverride";
-connectAttr "IK_lamp.translateX" "IK_effector1.translateX";
-connectAttr "IK_lamp.translateY" "IK_effector1.translateY";
-connectAttr "IK_lamp.translateZ" "IK_effector1.translateZ";
-connectAttr "IK_lamp.offsetParentMatrix" "IK_effector1.offsetParentMatrix";
-connectAttr "Joints.drawInfo" "IK_effector1.drawOverride";
-connectAttr "Joints.drawInfo" "RK_root.drawOverride";
-connectAttr "RK_base_parentConstraint1.constraintTranslateX" "RK_base.translateX"
+connectAttr "LampHead_FK_Ctrl.parentMatrix" "LampHead_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "RK_base_parentConstraint1.constraintTranslateY" "RK_base.translateY"
+connectAttr "LampHead_scaleConstraint1.LampHead_FK_CtrlW0" "LampHead_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "RK_base_parentConstraint1.constraintTranslateZ" "RK_base.translateZ"
+connectAttr "UpperArmFK.rotateOrder" "UpperArm_parentConstraint1.constraintRotateOrder"
 		;
-connectAttr "RK_base_parentConstraint1.constraintRotateX" "RK_base.rotateX";
-connectAttr "RK_base_parentConstraint1.constraintRotateY" "RK_base.rotateY";
-connectAttr "RK_base_parentConstraint1.constraintRotateZ" "RK_base.rotateZ";
-connectAttr "RK_base_scaleConstraint1.constraintScaleX" "RK_base.scaleX";
-connectAttr "RK_base_scaleConstraint1.constraintScaleY" "RK_base.scaleY";
-connectAttr "RK_base_scaleConstraint1.constraintScaleZ" "RK_base.scaleZ";
-connectAttr "RK_root.scale" "RK_base.inverseScale";
-connectAttr "Joints.drawInfo" "RK_base.drawOverride";
-connectAttr "RK_base.rotateOrder" "RK_base_parentConstraint1.constraintRotateOrder"
+connectAttr "UpperArmFK.parentInverseMatrix" "UpperArm_parentConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "RK_base.parentInverseMatrix" "RK_base_parentConstraint1.constraintParentInverseMatrix"
+connectAttr "UpperArmFK.rotatePivot" "UpperArm_parentConstraint1.constraintRotatePivot"
 		;
-connectAttr "RK_base.rotatePivot" "RK_base_parentConstraint1.constraintRotatePivot"
+connectAttr "UpperArmFK.rotatePivotTranslate" "UpperArm_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "RK_base.rotatePivotTranslate" "RK_base_parentConstraint1.constraintRotateTranslate"
+connectAttr "UpperArmFK.jointOrient" "UpperArm_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "RK_base.jointOrient" "RK_base_parentConstraint1.constraintJointOrient"
+connectAttr "UpperArm_FK_Ctrl.translate" "UpperArm_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "IK_base.translate" "RK_base_parentConstraint1.target[0].targetTranslate"
+connectAttr "UpperArm_FK_Ctrl.rotatePivot" "UpperArm_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "IK_base.rotatePivot" "RK_base_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "UpperArm_FK_Ctrl.rotatePivotTranslate" "UpperArm_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "IK_base.rotatePivotTranslate" "RK_base_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "UpperArm_FK_Ctrl.rotate" "UpperArm_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "IK_base.rotate" "RK_base_parentConstraint1.target[0].targetRotate";
-connectAttr "IK_base.rotateOrder" "RK_base_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "UpperArm_FK_Ctrl.rotateOrder" "UpperArm_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "IK_base.scale" "RK_base_parentConstraint1.target[0].targetScale";
-connectAttr "IK_base.parentMatrix" "RK_base_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "UpperArm_FK_Ctrl.scale" "UpperArm_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "IK_base.jointOrient" "RK_base_parentConstraint1.target[0].targetJointOrient"
+connectAttr "UpperArm_FK_Ctrl.parentMatrix" "UpperArm_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "IK_base.segmentScaleCompensate" "RK_base_parentConstraint1.target[0].targetScaleCompensate"
+connectAttr "UpperArm_parentConstraint1.UpperArm_FK_CtrlW0" "UpperArm_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "IK_base.inverseScale" "RK_base_parentConstraint1.target[0].targetInverseScale"
+connectAttr "UpperArmFK.segmentScaleCompensate" "UpperArm_scaleConstraint1.constraintScaleCompensate"
 		;
-connectAttr "RK_base_parentConstraint1.IK_baseW0" "RK_base_parentConstraint1.target[0].targetWeight"
+connectAttr "UpperArmFK.parentInverseMatrix" "UpperArm_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "FK_base.translate" "RK_base_parentConstraint1.target[1].targetTranslate"
+connectAttr "UpperArm_FK_Ctrl.scale" "UpperArm_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "FK_base.rotatePivot" "RK_base_parentConstraint1.target[1].targetRotatePivot"
+connectAttr "UpperArm_FK_Ctrl.parentMatrix" "UpperArm_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "FK_base.rotatePivotTranslate" "RK_base_parentConstraint1.target[1].targetRotateTranslate"
+connectAttr "UpperArm_scaleConstraint1.UpperArm_FK_CtrlW0" "UpperArm_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "FK_base.rotate" "RK_base_parentConstraint1.target[1].targetRotate";
-connectAttr "FK_base.rotateOrder" "RK_base_parentConstraint1.target[1].targetRotateOrder"
+connectAttr "LowerArmFK.rotateOrder" "LowerArm_parentConstraint1.constraintRotateOrder"
 		;
-connectAttr "FK_base.scale" "RK_base_parentConstraint1.target[1].targetScale";
-connectAttr "FK_base.parentMatrix" "RK_base_parentConstraint1.target[1].targetParentMatrix"
+connectAttr "LowerArmFK.parentInverseMatrix" "LowerArm_parentConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "FK_base.jointOrient" "RK_base_parentConstraint1.target[1].targetJointOrient"
+connectAttr "LowerArmFK.rotatePivot" "LowerArm_parentConstraint1.constraintRotatePivot"
 		;
-connectAttr "FK_base.segmentScaleCompensate" "RK_base_parentConstraint1.target[1].targetScaleCompensate"
+connectAttr "LowerArmFK.rotatePivotTranslate" "LowerArm_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "FK_base.inverseScale" "RK_base_parentConstraint1.target[1].targetInverseScale"
+connectAttr "LowerArmFK.jointOrient" "LowerArm_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "RK_base_parentConstraint1.FK_baseW1" "RK_base_parentConstraint1.target[1].targetWeight"
+connectAttr "LowerARm_FK_Ctrl.translate" "LowerArm_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "RK_base.segmentScaleCompensate" "RK_base_scaleConstraint1.constraintScaleCompensate"
+connectAttr "LowerARm_FK_Ctrl.rotatePivot" "LowerArm_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "RK_base.parentInverseMatrix" "RK_base_scaleConstraint1.constraintParentInverseMatrix"
+connectAttr "LowerARm_FK_Ctrl.rotatePivotTranslate" "LowerArm_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "IK_base.scale" "RK_base_scaleConstraint1.target[0].targetScale";
-connectAttr "IK_base.parentMatrix" "RK_base_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "LowerARm_FK_Ctrl.rotate" "LowerArm_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "RK_base_scaleConstraint1.IK_baseW0" "RK_base_scaleConstraint1.target[0].targetWeight"
+connectAttr "LowerARm_FK_Ctrl.rotateOrder" "LowerArm_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "FK_base.scale" "RK_base_scaleConstraint1.target[1].targetScale";
-connectAttr "FK_base.parentMatrix" "RK_base_scaleConstraint1.target[1].targetParentMatrix"
+connectAttr "LowerARm_FK_Ctrl.scale" "LowerArm_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "RK_base_scaleConstraint1.FK_baseW1" "RK_base_scaleConstraint1.target[1].targetWeight"
+connectAttr "LowerARm_FK_Ctrl.parentMatrix" "LowerArm_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "RK_arm1_parentConstraint2.constraintTranslateX" "RK_arm1.translateX"
+connectAttr "LowerArm_parentConstraint1.LowerARm_FK_CtrlW0" "LowerArm_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "RK_arm1_parentConstraint2.constraintTranslateY" "RK_arm1.translateY"
+connectAttr "LowerArmFK.segmentScaleCompensate" "LowerArm_scaleConstraint1.constraintScaleCompensate"
 		;
-connectAttr "RK_arm1_parentConstraint2.constraintTranslateZ" "RK_arm1.translateZ"
+connectAttr "LowerArmFK.parentInverseMatrix" "LowerArm_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "RK_arm1_parentConstraint2.constraintRotateX" "RK_arm1.rotateX";
-connectAttr "RK_arm1_parentConstraint2.constraintRotateY" "RK_arm1.rotateY";
-connectAttr "RK_arm1_parentConstraint2.constraintRotateZ" "RK_arm1.rotateZ";
-connectAttr "RK_arm1_scaleConstraint2.constraintScaleX" "RK_arm1.scaleX";
-connectAttr "RK_arm1_scaleConstraint2.constraintScaleY" "RK_arm1.scaleY";
-connectAttr "RK_arm1_scaleConstraint2.constraintScaleZ" "RK_arm1.scaleZ";
-connectAttr "RK_root.scale" "RK_arm1.inverseScale";
-connectAttr "Joints.drawInfo" "RK_arm1.drawOverride";
-connectAttr "RK_arm2_parentConstraint2.constraintTranslateX" "RK_arm2.translateX"
+connectAttr "LowerARm_FK_Ctrl.scale" "LowerArm_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "RK_arm2_parentConstraint2.constraintTranslateY" "RK_arm2.translateY"
+connectAttr "LowerARm_FK_Ctrl.parentMatrix" "LowerArm_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "RK_arm2_parentConstraint2.constraintTranslateZ" "RK_arm2.translateZ"
+connectAttr "LowerArm_scaleConstraint1.LowerARm_FK_CtrlW0" "LowerArm_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "RK_arm2_parentConstraint2.constraintRotateX" "RK_arm2.rotateX";
-connectAttr "RK_arm2_parentConstraint2.constraintRotateY" "RK_arm2.rotateY";
-connectAttr "RK_arm2_parentConstraint2.constraintRotateZ" "RK_arm2.rotateZ";
-connectAttr "RK_arm2_scaleConstraint2.constraintScaleX" "RK_arm2.scaleX";
-connectAttr "RK_arm2_scaleConstraint2.constraintScaleY" "RK_arm2.scaleY";
-connectAttr "RK_arm2_scaleConstraint2.constraintScaleZ" "RK_arm2.scaleZ";
-connectAttr "RK_arm1.scale" "RK_arm2.inverseScale";
-connectAttr "Joints.drawInfo" "RK_arm2.drawOverride";
-connectAttr "RK_lamp_parentConstraint2.constraintTranslateX" "RK_lamp.translateX"
+connectAttr "LowerArmIK_pointConstraint1.constraintTranslateX" "LowerArmIK.translateX"
 		;
-connectAttr "RK_lamp_parentConstraint2.constraintTranslateY" "RK_lamp.translateY"
+connectAttr "LowerArmIK_pointConstraint1.constraintTranslateY" "LowerArmIK.translateY"
 		;
-connectAttr "RK_lamp_parentConstraint2.constraintTranslateZ" "RK_lamp.translateZ"
+connectAttr "LowerArmIK_pointConstraint1.constraintTranslateZ" "LowerArmIK.translateZ"
 		;
-connectAttr "RK_lamp_parentConstraint2.constraintRotateX" "RK_lamp.rotateX";
-connectAttr "RK_lamp_parentConstraint2.constraintRotateY" "RK_lamp.rotateY";
-connectAttr "RK_lamp_parentConstraint2.constraintRotateZ" "RK_lamp.rotateZ";
-connectAttr "RK_lamp_scaleConstraint2.constraintScaleX" "RK_lamp.scaleX";
-connectAttr "RK_lamp_scaleConstraint2.constraintScaleY" "RK_lamp.scaleY";
-connectAttr "RK_lamp_scaleConstraint2.constraintScaleZ" "RK_lamp.scaleZ";
-connectAttr "RK_arm2.scale" "RK_lamp.inverseScale";
-connectAttr "Joints.drawInfo" "RK_lamp.drawOverride";
-connectAttr "RK_lamp.rotateOrder" "RK_lamp_parentConstraint2.constraintRotateOrder"
+connectAttr "Base.scale" "LowerArmIK.inverseScale";
+connectAttr "LowerArmIK.scale" "UpperArmIK.inverseScale";
+connectAttr "LampHeadIK_orientConstraint1.constraintRotateX" "LampHeadIK.rotateX"
 		;
-connectAttr "RK_lamp.parentInverseMatrix" "RK_lamp_parentConstraint2.constraintParentInverseMatrix"
+connectAttr "LampHeadIK_orientConstraint1.constraintRotateY" "LampHeadIK.rotateY"
 		;
-connectAttr "RK_lamp.rotatePivot" "RK_lamp_parentConstraint2.constraintRotatePivot"
+connectAttr "LampHeadIK_orientConstraint1.constraintRotateZ" "LampHeadIK.rotateZ"
 		;
-connectAttr "RK_lamp.rotatePivotTranslate" "RK_lamp_parentConstraint2.constraintRotateTranslate"
+connectAttr "UpperArmIK.scale" "LampHeadIK.inverseScale";
+connectAttr "LampHeadIK.rotateOrder" "LampHeadIK_orientConstraint1.constraintRotateOrder"
 		;
-connectAttr "RK_lamp.jointOrient" "RK_lamp_parentConstraint2.constraintJointOrient"
+connectAttr "LampHeadIK.parentInverseMatrix" "LampHeadIK_orientConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "FK_lamp.translate" "RK_lamp_parentConstraint2.target[0].targetTranslate"
+connectAttr "LampHeadIK.jointOrient" "LampHeadIK_orientConstraint1.constraintJointOrient"
 		;
-connectAttr "FK_lamp.rotatePivot" "RK_lamp_parentConstraint2.target[0].targetRotatePivot"
+connectAttr "LampHeadIK.inverseScale" "LampHeadIK_orientConstraint1.inverseScale"
 		;
-connectAttr "FK_lamp.rotatePivotTranslate" "RK_lamp_parentConstraint2.target[0].targetRotateTranslate"
+connectAttr "Arm_IK_Ctrl.rotate" "LampHeadIK_orientConstraint1.target[0].targetRotate"
 		;
-connectAttr "FK_lamp.rotate" "RK_lamp_parentConstraint2.target[0].targetRotate";
-connectAttr "FK_lamp.rotateOrder" "RK_lamp_parentConstraint2.target[0].targetRotateOrder"
+connectAttr "Arm_IK_Ctrl.rotateOrder" "LampHeadIK_orientConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "FK_lamp.scale" "RK_lamp_parentConstraint2.target[0].targetScale";
-connectAttr "FK_lamp.parentMatrix" "RK_lamp_parentConstraint2.target[0].targetParentMatrix"
+connectAttr "Arm_IK_Ctrl.parentMatrix" "LampHeadIK_orientConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "FK_lamp.jointOrient" "RK_lamp_parentConstraint2.target[0].targetJointOrient"
+connectAttr "LampHeadIK_orientConstraint1.Arm_IK_CtrlW0" "LampHeadIK_orientConstraint1.target[0].targetWeight"
 		;
-connectAttr "FK_lamp.segmentScaleCompensate" "RK_lamp_parentConstraint2.target[0].targetScaleCompensate"
+connectAttr "LampHeadIK.translateX" "effector1.translateX";
+connectAttr "LampHeadIK.translateY" "effector1.translateY";
+connectAttr "LampHeadIK.translateZ" "effector1.translateZ";
+connectAttr "LampHeadIK.offsetParentMatrix" "effector1.offsetParentMatrix";
+connectAttr "LowerArmIK.parentInverseMatrix" "LowerArmIK_pointConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "FK_lamp.inverseScale" "RK_lamp_parentConstraint2.target[0].targetInverseScale"
+connectAttr "LowerArmIK.rotatePivot" "LowerArmIK_pointConstraint1.constraintRotatePivot"
 		;
-connectAttr "RK_lamp_parentConstraint2.lampW0" "RK_lamp_parentConstraint2.target[0].targetWeight"
+connectAttr "LowerArmIK.rotatePivotTranslate" "LowerArmIK_pointConstraint1.constraintRotateTranslate"
 		;
-connectAttr "IK_lamp.translate" "RK_lamp_parentConstraint2.target[1].targetTranslate"
+connectAttr "ARM_IK_Base_Ctrl.translate" "LowerArmIK_pointConstraint1.target[0].targetTranslate"
 		;
-connectAttr "IK_lamp.rotatePivot" "RK_lamp_parentConstraint2.target[1].targetRotatePivot"
+connectAttr "ARM_IK_Base_Ctrl.rotatePivot" "LowerArmIK_pointConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "IK_lamp.rotatePivotTranslate" "RK_lamp_parentConstraint2.target[1].targetRotateTranslate"
+connectAttr "ARM_IK_Base_Ctrl.rotatePivotTranslate" "LowerArmIK_pointConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "IK_lamp.rotate" "RK_lamp_parentConstraint2.target[1].targetRotate";
-connectAttr "IK_lamp.rotateOrder" "RK_lamp_parentConstraint2.target[1].targetRotateOrder"
+connectAttr "ARM_IK_Base_Ctrl.parentMatrix" "LowerArmIK_pointConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "IK_lamp.scale" "RK_lamp_parentConstraint2.target[1].targetScale";
-connectAttr "IK_lamp.parentMatrix" "RK_lamp_parentConstraint2.target[1].targetParentMatrix"
+connectAttr "LowerArmIK_pointConstraint1.ARM_IK_Base_CtrlW0" "LowerArmIK_pointConstraint1.target[0].targetWeight"
 		;
-connectAttr "IK_lamp.jointOrient" "RK_lamp_parentConstraint2.target[1].targetJointOrient"
+connectAttr "Base.rotateOrder" "Base_parentConstraint1.constraintRotateOrder";
+connectAttr "Base.parentInverseMatrix" "Base_parentConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "IK_lamp.segmentScaleCompensate" "RK_lamp_parentConstraint2.target[1].targetScaleCompensate"
+connectAttr "Base.rotatePivot" "Base_parentConstraint1.constraintRotatePivot";
+connectAttr "Base.rotatePivotTranslate" "Base_parentConstraint1.constraintRotateTranslate"
 		;
-connectAttr "IK_lamp.inverseScale" "RK_lamp_parentConstraint2.target[1].targetInverseScale"
+connectAttr "Base.jointOrient" "Base_parentConstraint1.constraintJointOrient";
+connectAttr "Base_FK_Ctrl.translate" "Base_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "RK_lamp_parentConstraint2.lampW1" "RK_lamp_parentConstraint2.target[1].targetWeight"
+connectAttr "Base_FK_Ctrl.rotatePivot" "Base_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "IKFK.IKFKswitch" "RK_lamp_parentConstraint2.lampW0";
-connectAttr "Arm_IKFK_reverse.outputX" "RK_lamp_parentConstraint2.lampW1";
-connectAttr "RK_lamp.segmentScaleCompensate" "RK_lamp_scaleConstraint2.constraintScaleCompensate"
+connectAttr "Base_FK_Ctrl.rotatePivotTranslate" "Base_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "RK_lamp.parentInverseMatrix" "RK_lamp_scaleConstraint2.constraintParentInverseMatrix"
+connectAttr "Base_FK_Ctrl.rotate" "Base_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "FK_lamp.scale" "RK_lamp_scaleConstraint2.target[0].targetScale";
-connectAttr "FK_lamp.parentMatrix" "RK_lamp_scaleConstraint2.target[0].targetParentMatrix"
+connectAttr "Base_FK_Ctrl.rotateOrder" "Base_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "RK_lamp_scaleConstraint2.lampW0" "RK_lamp_scaleConstraint2.target[0].targetWeight"
+connectAttr "Base_FK_Ctrl.scale" "Base_parentConstraint1.target[0].targetScale";
+connectAttr "Base_FK_Ctrl.parentMatrix" "Base_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "IK_lamp.scale" "RK_lamp_scaleConstraint2.target[1].targetScale";
-connectAttr "IK_lamp.parentMatrix" "RK_lamp_scaleConstraint2.target[1].targetParentMatrix"
+connectAttr "Base_parentConstraint1.Base_FK_CtrlW0" "Base_parentConstraint1.target[0].targetWeight"
 		;
-connectAttr "RK_lamp_scaleConstraint2.lampW1" "RK_lamp_scaleConstraint2.target[1].targetWeight"
+connectAttr "Base.parentInverseMatrix" "Base_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "IKFK.IKFKswitch" "RK_lamp_scaleConstraint2.lampW0";
-connectAttr "Arm_IKFK_reverse.outputX" "RK_lamp_scaleConstraint2.lampW1";
-connectAttr "RK_arm2.rotateOrder" "RK_arm2_parentConstraint2.constraintRotateOrder"
+connectAttr "Base_FK_Ctrl.scale" "Base_scaleConstraint1.target[0].targetScale";
+connectAttr "Base_FK_Ctrl.parentMatrix" "Base_scaleConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "RK_arm2.parentInverseMatrix" "RK_arm2_parentConstraint2.constraintParentInverseMatrix"
+connectAttr "Base_scaleConstraint1.Base_FK_CtrlW0" "Base_scaleConstraint1.target[0].targetWeight"
 		;
-connectAttr "RK_arm2.rotatePivot" "RK_arm2_parentConstraint2.constraintRotatePivot"
+connectAttr "ControlsLayer.drawInfo" "Controls.drawOverride";
+connectAttr "Base_FK_Ctrl_Arm_IKFK.output" "Base_FK_Ctrl.Arm_IKFK";
+connectAttr "Base_FK_Ctrl_translateX.output" "Base_FK_Ctrl.translateX";
+connectAttr "Base_FK_Ctrl_translateY.output" "Base_FK_Ctrl.translateY";
+connectAttr "Base_FK_Ctrl_translateZ.output" "Base_FK_Ctrl.translateZ";
+connectAttr "Base_FK_Ctrl_rotateX.output" "Base_FK_Ctrl.rotateX";
+connectAttr "Base_FK_Ctrl_rotateY.output" "Base_FK_Ctrl.rotateY";
+connectAttr "Base_FK_Ctrl_rotateZ.output" "Base_FK_Ctrl.rotateZ";
+connectAttr "Base_FK_Ctrl_scaleX.output" "Base_FK_Ctrl.scaleX";
+connectAttr "Base_FK_Ctrl_scaleY.output" "Base_FK_Ctrl.scaleY";
+connectAttr "Base_FK_Ctrl_scaleZ.output" "Base_FK_Ctrl.scaleZ";
+connectAttr "Base_FK_Ctrl_visibility.output" "Base_FK_Ctrl.visibility";
+connectAttr "transformGeometry4.outputGeometry" "Base_FK_CtrlShape.create";
+connectAttr "Base_FK_Ctrl.Arm_IKFK" "LowerArm_FK_Ctrl_Grp.visibility";
+connectAttr "LowerARm_FK_Ctrl_translateX.output" "LowerARm_FK_Ctrl.translateX";
+connectAttr "LowerARm_FK_Ctrl_translateY.output" "LowerARm_FK_Ctrl.translateY";
+connectAttr "LowerARm_FK_Ctrl_translateZ.output" "LowerARm_FK_Ctrl.translateZ";
+connectAttr "LowerARm_FK_Ctrl_rotateX.output" "LowerARm_FK_Ctrl.rotateX";
+connectAttr "LowerARm_FK_Ctrl_rotateY.output" "LowerARm_FK_Ctrl.rotateY";
+connectAttr "LowerARm_FK_Ctrl_rotateZ.output" "LowerARm_FK_Ctrl.rotateZ";
+connectAttr "LowerARm_FK_Ctrl_scaleX.output" "LowerARm_FK_Ctrl.scaleX";
+connectAttr "LowerARm_FK_Ctrl_scaleY.output" "LowerARm_FK_Ctrl.scaleY";
+connectAttr "LowerARm_FK_Ctrl_scaleZ.output" "LowerARm_FK_Ctrl.scaleZ";
+connectAttr "LowerARm_FK_Ctrl_visibility.output" "LowerARm_FK_Ctrl.visibility";
+connectAttr "transformGeometry3.outputGeometry" "LowerARm_FK_CtrlShape.create";
+connectAttr "UpperArm_FK_Ctrl_translateX.output" "UpperArm_FK_Ctrl.translateX";
+connectAttr "UpperArm_FK_Ctrl_translateY.output" "UpperArm_FK_Ctrl.translateY";
+connectAttr "UpperArm_FK_Ctrl_translateZ.output" "UpperArm_FK_Ctrl.translateZ";
+connectAttr "UpperArm_FK_Ctrl_rotateX.output" "UpperArm_FK_Ctrl.rotateX";
+connectAttr "UpperArm_FK_Ctrl_rotateY.output" "UpperArm_FK_Ctrl.rotateY";
+connectAttr "UpperArm_FK_Ctrl_rotateZ.output" "UpperArm_FK_Ctrl.rotateZ";
+connectAttr "UpperArm_FK_Ctrl_scaleX.output" "UpperArm_FK_Ctrl.scaleX";
+connectAttr "UpperArm_FK_Ctrl_scaleY.output" "UpperArm_FK_Ctrl.scaleY";
+connectAttr "UpperArm_FK_Ctrl_scaleZ.output" "UpperArm_FK_Ctrl.scaleZ";
+connectAttr "UpperArm_FK_Ctrl_visibility.output" "UpperArm_FK_Ctrl.visibility";
+connectAttr "transformGeometry1.outputGeometry" "UpperArm_FK_CtrlShape.create";
+connectAttr "LampHead_FK_Ctrl_translateX.output" "LampHead_FK_Ctrl.translateX";
+connectAttr "LampHead_FK_Ctrl_translateY.output" "LampHead_FK_Ctrl.translateY";
+connectAttr "LampHead_FK_Ctrl_translateZ.output" "LampHead_FK_Ctrl.translateZ";
+connectAttr "LampHead_FK_Ctrl_rotateX.output" "LampHead_FK_Ctrl.rotateX";
+connectAttr "LampHead_FK_Ctrl_rotateY.output" "LampHead_FK_Ctrl.rotateY";
+connectAttr "LampHead_FK_Ctrl_rotateZ.output" "LampHead_FK_Ctrl.rotateZ";
+connectAttr "LampHead_FK_Ctrl_scaleX.output" "LampHead_FK_Ctrl.scaleX";
+connectAttr "LampHead_FK_Ctrl_scaleY.output" "LampHead_FK_Ctrl.scaleY";
+connectAttr "LampHead_FK_Ctrl_scaleZ.output" "LampHead_FK_Ctrl.scaleZ";
+connectAttr "LampHead_FK_Ctrl_visibility.output" "LampHead_FK_Ctrl.visibility";
+connectAttr "transformGeometry2.outputGeometry" "LampHead_FK_CtrlShape.create";
+connectAttr "Arm_IKFK_Rev.outputX" "Arm_IK_Main_Ctrl_Grp.visibility";
+connectAttr "transformGeometry5.outputGeometry" "ARM_IK_Base_CtrlShape.create";
+connectAttr "LowerArmIK.message" "ArmIKHandle.startJoint";
+connectAttr "effector1.handlePath" "ArmIKHandle.endEffector";
+connectAttr "ikRPsolver.message" "ArmIKHandle.ikSolver";
+connectAttr "ArmIKHandle_poleVectorConstraint1.constraintTranslateX" "ArmIKHandle.poleVectorX"
 		;
-connectAttr "RK_arm2.rotatePivotTranslate" "RK_arm2_parentConstraint2.constraintRotateTranslate"
+connectAttr "ArmIKHandle_poleVectorConstraint1.constraintTranslateY" "ArmIKHandle.poleVectorY"
 		;
-connectAttr "RK_arm2.jointOrient" "RK_arm2_parentConstraint2.constraintJointOrient"
+connectAttr "ArmIKHandle_poleVectorConstraint1.constraintTranslateZ" "ArmIKHandle.poleVectorZ"
 		;
-connectAttr "FK_arm2.translate" "RK_arm2_parentConstraint2.target[0].targetTranslate"
+connectAttr "ArmIKHandle.parentInverseMatrix" "ArmIKHandle_poleVectorConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "FK_arm2.rotatePivot" "RK_arm2_parentConstraint2.target[0].targetRotatePivot"
+connectAttr "LowerArmIK.parentMatrix" "ArmIKHandle_poleVectorConstraint1.pivotSpace"
 		;
-connectAttr "FK_arm2.rotatePivotTranslate" "RK_arm2_parentConstraint2.target[0].targetRotateTranslate"
+connectAttr "LowerArmIK.translate" "ArmIKHandle_poleVectorConstraint1.constraintRotatePivot"
 		;
-connectAttr "FK_arm2.rotate" "RK_arm2_parentConstraint2.target[0].targetRotate";
-connectAttr "FK_arm2.rotateOrder" "RK_arm2_parentConstraint2.target[0].targetRotateOrder"
+connectAttr "Arm_IK_PV_Ctrl.translate" "ArmIKHandle_poleVectorConstraint1.target[0].targetTranslate"
 		;
-connectAttr "FK_arm2.scale" "RK_arm2_parentConstraint2.target[0].targetScale";
-connectAttr "FK_arm2.parentMatrix" "RK_arm2_parentConstraint2.target[0].targetParentMatrix"
+connectAttr "Arm_IK_PV_Ctrl.rotatePivot" "ArmIKHandle_poleVectorConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "FK_arm2.jointOrient" "RK_arm2_parentConstraint2.target[0].targetJointOrient"
+connectAttr "Arm_IK_PV_Ctrl.rotatePivotTranslate" "ArmIKHandle_poleVectorConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "FK_arm2.segmentScaleCompensate" "RK_arm2_parentConstraint2.target[0].targetScaleCompensate"
+connectAttr "Arm_IK_PV_Ctrl.parentMatrix" "ArmIKHandle_poleVectorConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "FK_arm2.inverseScale" "RK_arm2_parentConstraint2.target[0].targetInverseScale"
+connectAttr "ArmIKHandle_poleVectorConstraint1.Arm_IK_PV_CtrlW0" "ArmIKHandle_poleVectorConstraint1.target[0].targetWeight"
 		;
-connectAttr "RK_arm2_parentConstraint2.arm2W0" "RK_arm2_parentConstraint2.target[0].targetWeight"
-		;
-connectAttr "IK_arm2.translate" "RK_arm2_parentConstraint2.target[1].targetTranslate"
-		;
-connectAttr "IK_arm2.rotatePivot" "RK_arm2_parentConstraint2.target[1].targetRotatePivot"
-		;
-connectAttr "IK_arm2.rotatePivotTranslate" "RK_arm2_parentConstraint2.target[1].targetRotateTranslate"
-		;
-connectAttr "IK_arm2.rotate" "RK_arm2_parentConstraint2.target[1].targetRotate";
-connectAttr "IK_arm2.rotateOrder" "RK_arm2_parentConstraint2.target[1].targetRotateOrder"
-		;
-connectAttr "IK_arm2.scale" "RK_arm2_parentConstraint2.target[1].targetScale";
-connectAttr "IK_arm2.parentMatrix" "RK_arm2_parentConstraint2.target[1].targetParentMatrix"
-		;
-connectAttr "IK_arm2.jointOrient" "RK_arm2_parentConstraint2.target[1].targetJointOrient"
-		;
-connectAttr "IK_arm2.segmentScaleCompensate" "RK_arm2_parentConstraint2.target[1].targetScaleCompensate"
-		;
-connectAttr "IK_arm2.inverseScale" "RK_arm2_parentConstraint2.target[1].targetInverseScale"
-		;
-connectAttr "RK_arm2_parentConstraint2.arm2W1" "RK_arm2_parentConstraint2.target[1].targetWeight"
-		;
-connectAttr "IKFK.IKFKswitch" "RK_arm2_parentConstraint2.arm2W0";
-connectAttr "Arm_IKFK_reverse.outputX" "RK_arm2_parentConstraint2.arm2W1";
-connectAttr "RK_arm2.segmentScaleCompensate" "RK_arm2_scaleConstraint2.constraintScaleCompensate"
-		;
-connectAttr "RK_arm2.parentInverseMatrix" "RK_arm2_scaleConstraint2.constraintParentInverseMatrix"
-		;
-connectAttr "FK_arm2.scale" "RK_arm2_scaleConstraint2.target[0].targetScale";
-connectAttr "FK_arm2.parentMatrix" "RK_arm2_scaleConstraint2.target[0].targetParentMatrix"
-		;
-connectAttr "RK_arm2_scaleConstraint2.arm2W0" "RK_arm2_scaleConstraint2.target[0].targetWeight"
-		;
-connectAttr "IK_arm2.scale" "RK_arm2_scaleConstraint2.target[1].targetScale";
-connectAttr "IK_arm2.parentMatrix" "RK_arm2_scaleConstraint2.target[1].targetParentMatrix"
-		;
-connectAttr "RK_arm2_scaleConstraint2.arm2W1" "RK_arm2_scaleConstraint2.target[1].targetWeight"
-		;
-connectAttr "IKFK.IKFKswitch" "RK_arm2_scaleConstraint2.arm2W0";
-connectAttr "Arm_IKFK_reverse.outputX" "RK_arm2_scaleConstraint2.arm2W1";
-connectAttr "RK_arm1.rotateOrder" "RK_arm1_parentConstraint2.constraintRotateOrder"
-		;
-connectAttr "RK_arm1.parentInverseMatrix" "RK_arm1_parentConstraint2.constraintParentInverseMatrix"
-		;
-connectAttr "RK_arm1.rotatePivot" "RK_arm1_parentConstraint2.constraintRotatePivot"
-		;
-connectAttr "RK_arm1.rotatePivotTranslate" "RK_arm1_parentConstraint2.constraintRotateTranslate"
-		;
-connectAttr "RK_arm1.jointOrient" "RK_arm1_parentConstraint2.constraintJointOrient"
-		;
-connectAttr "FK_arm1.translate" "RK_arm1_parentConstraint2.target[0].targetTranslate"
-		;
-connectAttr "FK_arm1.rotatePivot" "RK_arm1_parentConstraint2.target[0].targetRotatePivot"
-		;
-connectAttr "FK_arm1.rotatePivotTranslate" "RK_arm1_parentConstraint2.target[0].targetRotateTranslate"
-		;
-connectAttr "FK_arm1.rotate" "RK_arm1_parentConstraint2.target[0].targetRotate";
-connectAttr "FK_arm1.rotateOrder" "RK_arm1_parentConstraint2.target[0].targetRotateOrder"
-		;
-connectAttr "FK_arm1.scale" "RK_arm1_parentConstraint2.target[0].targetScale";
-connectAttr "FK_arm1.parentMatrix" "RK_arm1_parentConstraint2.target[0].targetParentMatrix"
-		;
-connectAttr "FK_arm1.jointOrient" "RK_arm1_parentConstraint2.target[0].targetJointOrient"
-		;
-connectAttr "FK_arm1.segmentScaleCompensate" "RK_arm1_parentConstraint2.target[0].targetScaleCompensate"
-		;
-connectAttr "FK_arm1.inverseScale" "RK_arm1_parentConstraint2.target[0].targetInverseScale"
-		;
-connectAttr "RK_arm1_parentConstraint2.arm1W0" "RK_arm1_parentConstraint2.target[0].targetWeight"
-		;
-connectAttr "IK_arm1.translate" "RK_arm1_parentConstraint2.target[1].targetTranslate"
-		;
-connectAttr "IK_arm1.rotatePivot" "RK_arm1_parentConstraint2.target[1].targetRotatePivot"
-		;
-connectAttr "IK_arm1.rotatePivotTranslate" "RK_arm1_parentConstraint2.target[1].targetRotateTranslate"
-		;
-connectAttr "IK_arm1.rotate" "RK_arm1_parentConstraint2.target[1].targetRotate";
-connectAttr "IK_arm1.rotateOrder" "RK_arm1_parentConstraint2.target[1].targetRotateOrder"
-		;
-connectAttr "IK_arm1.scale" "RK_arm1_parentConstraint2.target[1].targetScale";
-connectAttr "IK_arm1.parentMatrix" "RK_arm1_parentConstraint2.target[1].targetParentMatrix"
-		;
-connectAttr "IK_arm1.jointOrient" "RK_arm1_parentConstraint2.target[1].targetJointOrient"
-		;
-connectAttr "IK_arm1.segmentScaleCompensate" "RK_arm1_parentConstraint2.target[1].targetScaleCompensate"
-		;
-connectAttr "IK_arm1.inverseScale" "RK_arm1_parentConstraint2.target[1].targetInverseScale"
-		;
-connectAttr "RK_arm1_parentConstraint2.arm1W1" "RK_arm1_parentConstraint2.target[1].targetWeight"
-		;
-connectAttr "IKFK.IKFKswitch" "RK_arm1_parentConstraint2.arm1W0";
-connectAttr "Arm_IKFK_reverse.outputX" "RK_arm1_parentConstraint2.arm1W1";
-connectAttr "RK_arm1.segmentScaleCompensate" "RK_arm1_scaleConstraint2.constraintScaleCompensate"
-		;
-connectAttr "RK_arm1.parentInverseMatrix" "RK_arm1_scaleConstraint2.constraintParentInverseMatrix"
-		;
-connectAttr "FK_arm1.scale" "RK_arm1_scaleConstraint2.target[0].targetScale";
-connectAttr "FK_arm1.parentMatrix" "RK_arm1_scaleConstraint2.target[0].targetParentMatrix"
-		;
-connectAttr "RK_arm1_scaleConstraint2.arm1W0" "RK_arm1_scaleConstraint2.target[0].targetWeight"
-		;
-connectAttr "IK_arm1.scale" "RK_arm1_scaleConstraint2.target[1].targetScale";
-connectAttr "IK_arm1.parentMatrix" "RK_arm1_scaleConstraint2.target[1].targetParentMatrix"
-		;
-connectAttr "RK_arm1_scaleConstraint2.arm1W1" "RK_arm1_scaleConstraint2.target[1].targetWeight"
-		;
-connectAttr "IKFK.IKFKswitch" "RK_arm1_scaleConstraint2.arm1W0";
-connectAttr "Arm_IKFK_reverse.outputX" "RK_arm1_scaleConstraint2.arm1W1";
-connectAttr "Controls.drawInfo" "IKFK.drawOverride";
-connectAttr "transformGeometry3.outputGeometry" "IKFKShape.create";
-connectAttr "reverse1.outputX" "fk_root_ctrl.visibility";
-connectAttr "reverse2.outputX" "IK_ctrl.visibility";
-connectAttr "transformGeometry2.outputGeometry" "ikpvShape.create";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "base_geoSG.message" ":defaultLightSet.message";
@@ -5003,6 +5074,12 @@ relationship "shadowLink" ":lightLinker1" "base_geoSG.message" ":defaultLightSet
 connectAttr "layerManager.displayLayerId[0]" "defaultLayer.identification";
 connectAttr "renderLayerManager.renderLayerId[0]" "defaultRenderLayer.identification"
 		;
+connectAttr ":defaultArnoldDenoiser.message" ":defaultArnoldRenderOptions.imagers"
+		 -nextAvailable;
+connectAttr ":defaultArnoldDisplayDriver.message" ":defaultArnoldRenderOptions.drivers"
+		 -nextAvailable;
+connectAttr ":defaultArnoldFilter.message" ":defaultArnoldRenderOptions.filter";
+connectAttr ":defaultArnoldDriver.message" ":defaultArnoldRenderOptions.driver";
 connectAttr "lambert2.outColor" "base_geoSG.surfaceShader";
 connectAttr "base_geoShape.instObjGroups" "base_geoSG.dagSetMembers" -nextAvailable
 		;
@@ -5014,57 +5091,38 @@ connectAttr "head_geoShape.instObjGroups" "base_geoSG.dagSetMembers" -nextAvaila
 		;
 connectAttr "base_geoSG.message" "materialInfo1.shadingGroup";
 connectAttr "lambert2.message" "materialInfo1.material";
-connectAttr "layerManager.displayLayerId[1]" "geo_layer.identification";
-connectAttr ":defaultArnoldDenoiser.message" ":defaultArnoldRenderOptions.imagers"
-		 -nextAvailable;
-connectAttr ":defaultArnoldDisplayDriver.message" ":defaultArnoldRenderOptions.drivers"
-		 -nextAvailable;
-connectAttr ":defaultArnoldFilter.message" ":defaultArnoldRenderOptions.filter";
-connectAttr ":defaultArnoldDriver.message" ":defaultArnoldRenderOptions.driver";
-connectAttr "layerManager.displayLayerId[2]" "Joints.identification";
-connectAttr "makeNurbCircle1.outputCurve" "transformGeometry2.inputGeometry";
-connectAttr "makeNurbCircle3.outputCurve" "transformGeometry3.inputGeometry";
-connectAttr "IKFK.IKFKswitch" "Arm_IKFK_reverse.inputX";
-connectAttr "layerManager.displayLayerId[3]" "Controls.identification";
-connectAttr "Arm_IKFK_reverse.outputX" "reverse1.inputX";
-connectAttr "IKFK.IKFKswitch" "reverse2.inputX";
-connectAttr "fk_root_ctrlShape.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[0].dependNode"
+connectAttr "makeNurbCircle3.outputCurve" "transformGeometry1.inputGeometry";
+connectAttr "makeNurbCircle4.outputCurve" "transformGeometry2.inputGeometry";
+connectAttr "makeNurbCircle2.outputCurve" "transformGeometry3.inputGeometry";
+connectAttr "makeNurbCircle1.outputCurve" "transformGeometry4.inputGeometry";
+connectAttr "makeNurbCircle6.outputCurve" "transformGeometry5.inputGeometry";
+connectAttr "Base_FK_Ctrl.Arm_IKFK" "Arm_IKFK_Rev.inputX";
+connectAttr "LowerArmRK_scaleConstraint1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[0].dependNode"
 		;
-connectAttr "RK_arm2_parentConstraint2.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[1].dependNode"
+connectAttr "LowerArmRK_parentConstraint1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[1].dependNode"
 		;
-connectAttr "RK_arm1_parentConstraint2.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[2].dependNode"
+connectAttr "Arm_IKFK_Rev.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[2].dependNode"
 		;
-connectAttr "RK_lamp_scaleConstraint2.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[3].dependNode"
+connectAttr "UpperArmRK_scaleConstraint1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[3].dependNode"
 		;
-connectAttr "fk_root_ctrl.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[4].dependNode"
+connectAttr "LampHeadRK_scaleConstraint1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[4].dependNode"
 		;
-connectAttr "Arm_IKFK_reverse.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[5].dependNode"
+connectAttr "UpperArmRK_parentConstraint1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[5].dependNode"
 		;
-connectAttr "IKFK.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[6].dependNode"
+connectAttr "LampHeadRK_parentConstraint1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[6].dependNode"
 		;
-connectAttr "IK_ctrl.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[7].dependNode"
+connectAttr "Base_FK_CtrlShape.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[7].dependNode"
 		;
-connectAttr "reverse1.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[8].dependNode"
+connectAttr "Base_FK_Ctrl.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[8].dependNode"
 		;
-connectAttr "RK_arm1_scaleConstraint2.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[9].dependNode"
-		;
-connectAttr "RK_arm2_scaleConstraint2.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[10].dependNode"
-		;
-connectAttr "RK_lamp_parentConstraint2.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[11].dependNode"
-		;
-connectAttr "IKFKShape.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[12].dependNode"
-		;
-connectAttr "reverse2.message" "MayaNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[13].dependNode"
-		;
+connectAttr "layerManager.displayLayerId[5]" "GeoLayer.identification";
+connectAttr "layerManager.displayLayerId[6]" "SkeletonLayer.identification";
+connectAttr "layerManager.displayLayerId[7]" "ControlsLayer.identification";
 connectAttr "base_geoSG.partition" ":renderPartition.sets" -nextAvailable;
 connectAttr "lambert2.message" ":defaultShaderList1.shaders" -nextAvailable;
-connectAttr "Arm_IKFK_reverse.message" ":defaultRenderUtilityList1.utilities" -nextAvailable
-		;
-connectAttr "reverse1.message" ":defaultRenderUtilityList1.utilities" -nextAvailable
-		;
-connectAttr "reverse2.message" ":defaultRenderUtilityList1.utilities" -nextAvailable
+connectAttr "Arm_IKFK_Rev.message" ":defaultRenderUtilityList1.utilities" -nextAvailable
 		;
 connectAttr "defaultRenderLayer.message" ":defaultRenderingList1.rendering" -nextAvailable
 		;
 connectAttr "ikRPsolver.message" ":ikSystem.ikSolver" -nextAvailable;
-// End of LampRigRK.ma
+// End of IKFKRIGYAY.ma
