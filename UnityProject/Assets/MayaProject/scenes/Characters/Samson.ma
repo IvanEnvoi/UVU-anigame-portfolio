@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Samson.ma
-//Last modified: Wed, Mar 11, 2026 10:41:24 PM
+//Last modified: Wed, Mar 11, 2026 10:50:35 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,17 +13,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "4B49DE25-4911-21AE-17CE-5FBD1FC5BD83";
+fileInfo "UUID" "5B8A4463-4E74-3650-4295-FC8780B20140";
 createNode transform -shared -name "persp";
 	rename -uuid "ACC3C3DF-4E9F-E7AD-71C8-A99E3A379314";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 53.698017623736291 158.61033604608673 354.62474228652002 ;
-	setAttr ".rotate" -type "double3" -371.13835281533204 12969.399999999858 0 ;
+	setAttr ".translate" -type "double3" -76.30042768565778 148.50425626666532 461.01266153228829 ;
+	setAttr ".rotate" -type "double3" -368.13835281162534 13311.799999998488 1.0041899440740655e-16 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "0FE8D53B-4B74-5BD5-D788-C08AD7167D73";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 360.74881437722968;
+	setAttr ".centerOfInterest" 476.71916062076338;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -64554,6 +64554,61 @@ createNode transform -name "samsons_body_or_something";
 createNode mesh -name "samsons_body_or_somethingShape" -parent "samsons_body_or_something";
 	rename -uuid "0D64F4DE-471E-C2DB-981E-468E1CC5AACE";
 	setAttr -keyable off ".visibility";
+	setAttr -size 2 ".instObjGroups[0].objectGroups";
+	setAttr ".visibleInReflections" yes;
+	setAttr ".visibleInRefractions" yes;
+	setAttr ".uvPivot" -type "double2" 0.49905478954315186 0.51490294933319092 ;
+	setAttr ".uvSet[0].uvSetName" -type "string" "map1";
+	setAttr ".currentUVSet" -type "string" "map1";
+	setAttr ".displayColorChannel" -type "string" "Ambient+Diffuse";
+	setAttr -size 2 ".colorSet";
+	setAttr ".colorSet[0].colorName" -type "string" "SculptFreezeColorTemp";
+	setAttr ".colorSet[1].colorName" -type "string" "SculptMaskColorTemp";
+	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
+	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
+	setAttr -size 38 ".pnts";
+	setAttr ".pnts[592]" -type "float3" 0.10645663 -0.17874755 -0.019163011 ;
+	setAttr ".pnts[636]" -type "float3" -0.28565705 -0.03062347 0.17484336 ;
+	setAttr ".pnts[690]" -type "float3" -0.034284525 0.3588739 0.026554793 ;
+	setAttr ".pnts[691]" -type "float3" 0.53268486 -0.035520356 -0.037783816 ;
+	setAttr ".pnts[722]" -type "float3" 0.43947658 -0.13636796 0.29839939 ;
+	setAttr ".pnts[723]" -type "float3" 0.035288934 -0.21755746 -0.017061524 ;
+	setAttr ".pnts[759]" -type "float3" -0.35358679 7.1054274e-15 -0.023485212 ;
+	setAttr ".pnts[1082]" -type "float3" -0.10645663 -0.17874755 -0.019163011 ;
+	setAttr ".pnts[1131]" -type "float3" 0.28565705 -0.03062347 0.17484336 ;
+	setAttr ".pnts[1600]" -type "float3" 0.034284525 0.3588739 0.026554793 ;
+	setAttr ".pnts[1601]" -type "float3" -0.53268486 -0.035520356 -0.037783816 ;
+	setAttr ".pnts[1632]" -type "float3" -0.43947658 -0.13636796 0.29839939 ;
+	setAttr ".pnts[1633]" -type "float3" -0.035288934 -0.21755746 -0.017061524 ;
+	setAttr ".pnts[1667]" -type "float3" 0.35358679 7.1054274e-15 -0.023485212 ;
+	setAttr ".pnts[1938]" -type "float3" 0.10372265 0.24455464 0.023433231 ;
+	setAttr ".pnts[1939]" -type "float3" -0.10519644 0.31138787 0.01407807 ;
+	setAttr ".pnts[1954]" -type "float3" -0.10372265 0.24455464 0.023433231 ;
+	setAttr ".pnts[1955]" -type "float3" 0.10519644 0.31138787 0.01407807 ;
+	setAttr ".pnts[1997]" -type "float3" 0.43205342 -0.078045428 0.098728821 ;
+	setAttr ".pnts[1998]" -type "float3" -0.34297729 0.2467249 0.18172629 ;
+	setAttr ".pnts[1999]" -type "float3" 0.49328491 0.17699093 0.051443145 ;
+	setAttr ".pnts[2000]" -type "float3" -0.1388905 -0.13801132 0.001579874 ;
+	setAttr ".pnts[2001]" -type "float3" -0.14033568 4.9737992e-14 0.0093210852 ;
+	setAttr ".pnts[2002]" -type "float3" -0.10476877 -0.31012192 -0.01402084 ;
+	setAttr ".pnts[2003]" -type "float3" 0.10234641 -0.59699965 -0.062680498 ;
+	setAttr ".pnts[2004]" -type "float3" 0.22149596 1.3871161 0.2493442 ;
+	setAttr ".pnts[2005]" -type "float3" -0.43205342 -0.078045428 0.098728821 ;
+	setAttr ".pnts[2006]" -type "float3" 0.34297729 0.2467249 0.18172629 ;
+	setAttr ".pnts[2007]" -type "float3" -0.49328491 0.17699093 0.051443145 ;
+	setAttr ".pnts[2008]" -type "float3" 0.1388905 -0.13801132 0.001579874 ;
+	setAttr ".pnts[2009]" -type "float3" 0.14033568 4.9737992e-14 0.0093210852 ;
+	setAttr ".pnts[2010]" -type "float3" 0.10476877 -0.31012192 -0.01402084 ;
+	setAttr ".pnts[2011]" -type "float3" -0.10234641 -0.59699965 -0.062680498 ;
+	setAttr ".pnts[2012]" -type "float3" -0.22149596 1.3871161 0.2493442 ;
+	setAttr ".pnts[2013]" -type "float3" -0.37785581 -0.027183816 0.11104301 ;
+	setAttr ".pnts[2014]" -type "float3" 0.24047574 0.67378956 0.28432453 ;
+	setAttr ".pnts[2015]" -type "float3" 0.37785581 -0.027183816 0.11104301 ;
+	setAttr ".pnts[2016]" -type "float3" -0.24047574 0.67378956 0.28432453 ;
+createNode mesh -name "polySurfaceShape24" -parent "samsons_body_or_something";
+	rename -uuid "15E8F27C-4585-DA42-88A4-359E22ED18AD";
+	setAttr -keyable off ".visibility";
+	setAttr ".intermediateObject" yes;
 	setAttr ".instObjGroups[0].objectGroups[0].objectGrpCompList" -type "componentList" 
 		1 "f[0:1921]";
 	setAttr ".visibleInReflections" yes;
@@ -157646,9 +157701,6 @@ createNode groupParts -name "groupParts8";
 	rename -uuid "76AA3548-47E8-2BAD-C0AD-3C9B0B946F8D";
 	setAttr ".isHistoricallyInteresting" 0;
 	setAttr ".inputComponents" -type "componentList" 1 "f[0:3869]";
-createNode groupId -name "groupId46";
-	rename -uuid "BE76A3EA-424D-B837-AA83-CF90476A4FE3";
-	setAttr ".isHistoricallyInteresting" 0;
 createNode groupId -name "groupId48";
 	rename -uuid "C663572E-4B90-C9D9-B53A-B8B26872E3D6";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -157661,6 +157713,103 @@ createNode groupId -name "groupId57";
 createNode groupId -name "groupId60";
 	rename -uuid "ACBA06F2-4CB9-CD34-81AE-96AED7BC2175";
 	setAttr ".isHistoricallyInteresting" 0;
+createNode polySplit -name "polySplit1";
+	rename -uuid "A67EBC7D-4895-4464-58AE-5F8103641CB4";
+	setAttr -size 17 ".edge[0:16]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -size 17 ".desc[0:16]"  -2147481469 -2147481450 -2147481449 -2147481448 -2147480391 
+		-2147480459 -2147481465 -2147480506 -2147481464 -2147480449 -2147481463 -2147480439 -2147481462 -2147480426 -2147481461 -2147480530 -2147481469;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode groupId -name "groupId61";
+	rename -uuid "73D19BBB-409B-B2C1-2233-9B8B19A090F5";
+	setAttr ".isHistoricallyInteresting" 0;
+createNode groupParts -name "groupParts9";
+	rename -uuid "D2A27835-40FC-1AE4-5175-A1B4CA8A2AAA";
+	setAttr ".isHistoricallyInteresting" 0;
+	setAttr ".inputComponents" -type "componentList" 1 "f[0:1921]";
+createNode polySplit -name "polySplit2";
+	rename -uuid "57284E9B-4770-8926-4C3B-33A62D60133D";
+	setAttr -size 17 ".edge[0:16]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -size 17 ".desc[0:16]"  -2147482439 -2147482420 -2147482419 -2147482418 -2147482196 
+		-2147482266 -2147482435 -2147482313 -2147482434 -2147482255 -2147482433 -2147482244 -2147482432 -2147482231 -2147482431 -2147482337 -2147482439;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit3";
+	rename -uuid "EC9A897C-4105-49FC-A790-79A9D3D597DC";
+	setAttr -size 17 ".edge[0:16]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -size 17 ".desc[0:16]"  -2147480025 -2147480010 -2147480011 -2147480012 -2147480013 
+		-2147480014 -2147480015 -2147480016 -2147480017 -2147480018 -2147480019 -2147480020 -2147480021 -2147480022 -2147480023 -2147480024 -2147480025;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit4";
+	rename -uuid "2F947C04-4F23-7586-59D3-FA83AC829CA6";
+	setAttr -size 17 ".edge[0:16]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -size 17 ".desc[0:16]"  -2147480009 -2147480008 -2147480007 -2147480006 -2147480005 
+		-2147480004 -2147480003 -2147480002 -2147480001 -2147480000 -2147479999 -2147479998 -2147479997 -2147479996 -2147479995 -2147479994 -2147480009;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit5";
+	rename -uuid "B2C4E94C-4C0C-BE89-6EA4-DAB3DF01B77C";
+	setAttr -size 4 ".vertices[0:3]" -type "float3"  17.339825 32.185139 
+		4.6225042 17.314245 36.383869 5.958981 10.342577 36.933327 6.8772888 11.063452 30.850277 
+		5.3469439;
+	setAttr -size 10 ".edge[0:9]"  1 1584 0.56530201 1583 0.455677 0.56082797
+		 1521 0.536924 1520 0;
+	setAttr -size 10 ".desc[0:9]"  -2147480390 0 -2147480408 1 -2147479788 
+		-2147481465 2 -2147481456 3 -2147480507;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit6";
+	rename -uuid "D516E545-411F-99C2-C512-B495E64974F2";
+	setAttr -size 4 ".vertices[0:3]" -type "float3"  -17.253174 32.205086 
+		4.5790401 -17.314253 36.383858 5.9589872 -10.375857 36.95121 6.8182421 -11.078235 
+		30.858061 5.267015;
+	setAttr -size 10 ".edge[0:9]"  0 688 0.56530201 1942 0.455677 0.56082797
+		 1944 0.536924 624 0;
+	setAttr -size 10 ".desc[0:9]"  -2147482212 0 -2147482213 1 -2147479756 
+		-2147482435 2 -2147482426 3 -2147482314;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit7";
+	rename -uuid "C4B5A73E-4EFA-87AD-451D-BF911FEECE3A";
+	setAttr -size 4 ".edge[0:3]"  1 0.54968297 0.253245 1;
+	setAttr -size 4 ".desc[0:3]"  -2147479661 -2147480458 -2147481553 -2147479654;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit8";
+	rename -uuid "8A5E1C11-4C47-E881-244A-56915F6E6751";
+	setAttr -size 4 ".edge[0:3]"  1 0.54968297 0.253245 1;
+	setAttr -size 4 ".desc[0:3]"  -2147479648 -2147482265 -2147482503 -2147479641;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit9";
+	rename -uuid "327610F3-4E64-E652-59C5-9C9AFC8AF148";
+	setAttr -size 2 ".edge[0:1]"  1 1;
+	setAttr -size 2 ".desc[0:1]"  -2147479656 -2147479771;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit10";
+	rename -uuid "F3FD09D5-4E03-FA57-4F8D-72A425FD2468";
+	setAttr -size 2 ".edge[0:1]"  1 1;
+	setAttr -size 2 ".desc[0:1]"  -2147479643 -2147482313;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit11";
+	rename -uuid "4333D7F9-40B3-4EC3-9449-319531320037";
+	setAttr -size 2 ".edge[0:1]"  0 1;
+	setAttr -size 2 ".desc[0:1]"  -2147479789 -2147479659;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
+createNode polySplit -name "polySplit12";
+	rename -uuid "D2D09B73-44CE-3291-A424-64AC9710277B";
+	setAttr -size 2 ".edge[0:1]"  0 1;
+	setAttr -size 2 ".desc[0:1]"  -2147479757 -2147479646;
+	setAttr ".smoothingAngle" 180;
+	setAttr ".maya2015" yes;
 select -noExpand :time1;
 	setAttr -alteredValue -keyable on ".caching";
 	setAttr -channelBox on ".isHistoricallyInteresting";
@@ -157823,7 +157972,8 @@ connectAttr "groupParts6.outputGeometry" "NoraBody:NoraBodyNoraThoNoraBestgeoSha
 		;
 connectAttr "groupId13.groupId" "NoraBody:NoraBodyNoraThoNoraBestgeoShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId"
 		;
-connectAttr "groupId46.groupId" "samsons_body_or_somethingShape.instObjGroups.objectGroups[0].objectGroupId"
+connectAttr "polySplit12.output" "samsons_body_or_somethingShape.inMesh";
+connectAttr "groupId61.groupId" "samsons_body_or_somethingShape.instObjGroups.objectGroups[0].objectGroupId"
 		;
 connectAttr ":initialShadingGroup.memberWireframeColor" "samsons_body_or_somethingShape.instObjGroups.objectGroups[0].objectGrpColor"
 		;
@@ -157880,6 +158030,20 @@ connectAttr "polyChipOff2.output" "groupParts6.inputGeometry";
 connectAttr "groupId12.groupId" "groupParts6.groupId";
 connectAttr "polySeparate2.output[1]" "groupParts8.inputGeometry";
 connectAttr "groupId15.groupId" "groupParts8.groupId";
+connectAttr "groupParts9.outputGeometry" "polySplit1.inputPolymesh";
+connectAttr "polySurfaceShape24.outMesh" "groupParts9.inputGeometry";
+connectAttr "groupId61.groupId" "groupParts9.groupId";
+connectAttr "polySplit1.output" "polySplit2.inputPolymesh";
+connectAttr "polySplit2.output" "polySplit3.inputPolymesh";
+connectAttr "polySplit3.output" "polySplit4.inputPolymesh";
+connectAttr "polySplit4.output" "polySplit5.inputPolymesh";
+connectAttr "polySplit5.output" "polySplit6.inputPolymesh";
+connectAttr "polySplit6.output" "polySplit7.inputPolymesh";
+connectAttr "polySplit7.output" "polySplit8.inputPolymesh";
+connectAttr "polySplit8.output" "polySplit9.inputPolymesh";
+connectAttr "polySplit9.output" "polySplit10.inputPolymesh";
+connectAttr "polySplit10.output" "polySplit11.inputPolymesh";
+connectAttr "polySplit11.output" "polySplit12.inputPolymesh";
 connectAttr "val_single_meshSG.partition" ":renderPartition.sets" -nextAvailable
 		;
 connectAttr "clear.message" ":defaultShaderList1.shaders" -nextAvailable;
@@ -157901,13 +158065,13 @@ connectAttr "samsons_scarf_armShape.instObjGroups" ":initialShadingGroup.dagSetM
 		 -nextAvailable;
 connectAttr "SamsonShoeRough1:Group60051Shape.instObjGroups" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
-connectAttr "samsons_body_or_somethingShape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
-		 -nextAvailable;
 connectAttr "samsons_awsome_shoes1Shape.compInstObjGroups.compObjectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
 connectAttr "samsons_awsome_shoes1Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
 connectAttr "samsons_awsome_shoes3Shape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
+		 -nextAvailable;
+connectAttr "samsons_body_or_somethingShape.instObjGroups.objectGroups[0]" ":initialShadingGroup.dagSetMembers"
 		 -nextAvailable;
 connectAttr "groupId12.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
@@ -157915,12 +158079,12 @@ connectAttr "groupId13.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "groupId15.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
-connectAttr "groupId46.message" ":initialShadingGroup.groupNodes" -nextAvailable
-		;
 connectAttr "groupId48.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "groupId57.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 connectAttr "groupId60.message" ":initialShadingGroup.groupNodes" -nextAvailable
+		;
+connectAttr "groupId61.message" ":initialShadingGroup.groupNodes" -nextAvailable
 		;
 // End of Samson.ma
