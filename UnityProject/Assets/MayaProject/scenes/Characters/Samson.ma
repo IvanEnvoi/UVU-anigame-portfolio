@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Samson.ma
-//Last modified: Mon, Mar 16, 2026 07:05:13 PM
+//Last modified: Tue, Mar 17, 2026 04:33:40 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "446426B6-4A54-51D8-9EE9-A1AE7055DDE6";
+fileInfo "UUID" "AABE9507-4981-4AD9-CA8F-C19229FAED76";
 createNode transform -shared -name "persp";
 	rename -uuid "ACC3C3DF-4E9F-E7AD-71C8-A99E3A379314";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -10.074261208803875 92.295588468235053 465.64591680302567 ;
-	setAttr ".rotate" -type "double3" -0.93835274888813824 13678.999999994958 3.1064835636148157e-18 ;
+	setAttr ".translate" -type "double3" 194.92686736086094 110.28336095881107 -56.775966605646175 ;
+	setAttr ".rotate" -type "double3" -15.3383527272764 13769.799999998315 4.5558182074292559e-13 ;
 	setAttr ".rotatePivot" -type "double3" 3.5527136788005009e-15 -2.8421709430404007e-14 
 		7.1054273576010019e-15 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -1.4759471799108767e-13 -7.7169338291415228e-16 
@@ -26,7 +26,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "0FE8D53B-4B74-5BD5-D788-C08AD7167D73";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999979;
-	setAttr ".centerOfInterest" 456.87785264818649;
+	setAttr ".centerOfInterest" 195.0687858911607;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
