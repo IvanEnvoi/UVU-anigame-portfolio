@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: RobotRig.ma
-//Last modified: Mon, Mar 23, 2026 09:06:42 PM
+//Last modified: Mon, Mar 23, 2026 09:55:39 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "CEA9C137-458C-566D-6ABB-F4AC737EDEDC";
+fileInfo "UUID" "D4F80E59-4C20-121F-F2DD-9485EC10F99C";
 createNode transform -shared -name "persp";
 	rename -uuid "709131CD-430A-9D47-5134-E88B060EAAB1";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 94.894124866065169 288.54451169494149 697.58845405741113 ;
-	setAttr ".rotate" -type "double3" -374.13835286542354 2884.9999999990496 9.9771996363744032e-17 ;
+	setAttr ".translate" -type "double3" 100.63177414817025 145.79627544881237 371.6777523332446 ;
+	setAttr ".rotate" -type "double3" -364.53835286528869 4330.5999999996739 2.5279468756928975e-16 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "542452AA-4BBA-8701-F688-E3B84A612AD1";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 683.23427270318223;
+	setAttr ".centerOfInterest" 378.44417632689505;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -43030,8 +43030,8 @@ createNode parentConstraint -name "jnt_wrist2_parentConstraint1" -parent "jnt_wr
 		-3.6415315207705135e-14 0 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -1.9977859092942719e-14 
 		-7.3683136253693898e-15 4.9616613277608309e-12 ;
-	setAttr ".lastTargetRotate" -type "double3" 2.0002707176391332e-14 7.3676660343282179e-15 
-		-4.9616613269462462e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" 2.0002707176391329e-14 7.4173622012260854e-15 
+		-4.9616612146492248e-12 ;
 	setAttr ".restTranslate" -type "double3" 72.046400004442177 2.708944180085382e-14 
 		1.1596057447604835e-11 ;
 	setAttr ".restRotate" -type "double3" 1.9977859092942397e-14 7.3683136253702512e-15 
@@ -43074,8 +43074,8 @@ createNode parentConstraint -name "jnt_elbow2_parentConstraint1" -parent "jnt_el
 		1.5543122344752192e-14 1.4210854715202004e-14 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" 2.5742614453095345e-14 8.1214407747624341e-15 
 		-8.2241029125081138e-15 ;
-	setAttr ".lastTargetRotate" -type "double3" -2.5767237258205031e-14 -8.1198849125798414e-15 
-		6.8585260139024552e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" -2.576723726188454e-14 -8.1695810157920782e-15 
+		6.8584137850099241e-15 ;
 	setAttr ".restTranslate" -type "double3" 69.601000103736951 3.1086244689504383e-15 
 		0 ;
 	setAttr ".restRotate" -type "double3" -2.5742344314893795e-14 -8.1222052296779822e-15 
@@ -43118,7 +43118,7 @@ createNode parentConstraint -name "jnt_upper_arm2_parentConstraint1" -parent "jn
 		1.021405182655144e-14 4.2632564145606011e-14 ;
 	setAttr ".target[0].targetOffsetRotate" -type "double3" -5.9242447492918312e-24 
 		2.9196498052497128e-15 -5.1436213664578983e-22 ;
-	setAttr ".lastTargetRotate" -type "double3" 0 -2.9444978886987073e-15 0 ;
+	setAttr ".lastTargetRotate" -type "double3" 0 -2.9941940555965752e-15 0 ;
 	setAttr ".restTranslate" -type "double3" 11.412426061764847 -2.1064245705413427 
 		99.683527231432649 ;
 	setAttr ".restRotate" -type "double3" 0 -2.93207384697424e-15 0 ;
@@ -43891,9 +43891,9 @@ createNode scaleConstraint -name "jnt_hip2_scaleConstraint1" -parent "jnt_hip2";
 	setAttr ".enableRestPosition" yes;
 	setAttr -keyable on ".L_socketW0";
 createNode parentConstraint -name "jnt_COG_parentConstraint1" -parent "jnt_COG";
-	rename -uuid "651AF023-4B1F-B8F7-F4F8-D19CB8D7C86D";
+	rename -uuid "70CEEF57-426F-91F8-EAC8-C9BBB1D6D274";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "jnt_rootW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "COGW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -43906,17 +43906,17 @@ createNode parentConstraint -name "jnt_COG_parentConstraint1" -parent "jnt_COG";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.6132928326584306e-15 
-		93.930603898614365 -2.9045703411102304 ;
-	setAttr ".target[0].targetOffsetRotate" -type "double3" 89.999999999999972 6.3611093629270335e-15 
-		89.915729423280652 ;
-	setAttr ".restTranslate" -type "double3" 1.6132928326584306e-15 93.930603898614365 
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 -8.8817841970012523e-16 
+		-2.7755575615628914e-17 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 0 1.2424041724470391e-17 
+		1.4124500153760504e-30 ;
+	setAttr ".restTranslate" -type "double3" 1.6123604346719614e-15 93.930603898614365 
 		-2.9045703411102304 ;
-	setAttr -keyable on ".jnt_rootW0";
+	setAttr -keyable on ".COGW0";
 createNode scaleConstraint -name "jnt_COG_scaleConstraint1" -parent "jnt_COG";
-	rename -uuid "363B867A-48D4-47DD-36AB-989A02139218";
+	rename -uuid "EC36C88F-435F-EE28-01EC-CB8D07D7DF72";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
-		-longName "jnt_rootW0" -defaultValue 1 -minValue 0 -attributeType "double";
+		-longName "COGW0" -defaultValue 1 -minValue 0 -attributeType "double";
 	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
 	setAttr -keyable off ".translateX";
@@ -43929,7 +43929,7 @@ createNode scaleConstraint -name "jnt_COG_scaleConstraint1" -parent "jnt_COG";
 	setAttr -keyable off ".scaleY";
 	setAttr -keyable off ".scaleZ";
 	setAttr ".enableRestPosition" yes;
-	setAttr -keyable on ".jnt_rootW0";
+	setAttr -keyable on ".COGW0";
 createNode parentConstraint -name "jnt_root_parentConstraint1" -parent "jnt_root";
 	rename -uuid "41F70797-4973-2D18-94FC-CEA52A032434";
 	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
@@ -44258,10 +44258,10 @@ createNode nurbsCurve -name "R_finger3Shape" -parent "|root|root|COG|COG|chest|c
 		2.1401455718678975e-15 1.4883997416621213e-14 -10.220416672213544
 		-7.2269259354742479 1.4670107392505719e-14 -7.2269259354742443
 		;
-createNode transform -name "L_shoulder" -parent "|root|root|COG|COG|chest";
+createNode transform -name "L_shoulder" -parent "|root|root|COG|COG|chest|chest";
 	rename -uuid "F1F33F31-491E-A537-398C-DA8B0C0DFBDF";
-	setAttr ".translate" -type "double3" 11.412426061764791 -2.1064245705413462 99.683527231432649 ;
-	setAttr ".rotate" -type "double3" 179.99999996843479 -0.087398749618286337 -179.99998353591749 ;
+	setAttr ".translate" -type "double3" 11.412426061764762 -2.1064245705413467 99.683527231432663 ;
+	setAttr ".rotate" -type "double3" 179.99999996843479 -0.087398749618286281 -179.99998353591749 ;
 	setAttr ".scale" -type "double3" 1 1.0000000000000002 1 ;
 	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006271e-16 
 		-1.4210854715202004e-14 ;
@@ -44270,7 +44270,7 @@ createNode transform -name "L_shoulder" -parent "|root|root|COG|COG|chest";
 	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
 		-1.4210854715202004e-14 ;
 	setAttr ".scalePivotTranslate" -type "double3" 0 9.8607613152626519e-32 0 ;
-createNode transform -name "L_shoulder" -parent "|root|root|COG|COG|chest|L_shoulder";
+createNode transform -name "L_shoulder" -parent "|root|root|COG|COG|chest|chest|L_shoulder";
 	rename -uuid "065155BE-41E6-494A-44BB-08854553A1D5";
 	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
 		-1.4210854715202004e-14 ;
@@ -44278,7 +44278,7 @@ createNode transform -name "L_shoulder" -parent "|root|root|COG|COG|chest|L_shou
 		-5.7857824424309146e-30 ;
 	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
 		-1.4210854715202004e-14 ;
-createNode nurbsCurve -name "L_shoulderShape" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder";
+createNode nurbsCurve -name "L_shoulderShape" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder";
 	rename -uuid "00B7F7EC-4DD6-5A89-293E-AE9E9C0B1142";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
@@ -44297,7 +44297,7 @@ createNode nurbsCurve -name "L_shoulderShape" -parent "|root|root|COG|COG|chest|
 		0.0024372245868648575 -0.0026293824606179825 -49.754242879462637
 		-3.4402818447285926 -35.014623118193477 -35.179835772245987
 		;
-createNode transform -name "L_elbow" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder";
+createNode transform -name "L_elbow" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder";
 	rename -uuid "C3D8BED6-487D-DA0A-4A4C-B9A2A13EE585";
 	setAttr ".translate" -type "double3" 69.601000103736965 -1.021405182655144e-14 
 		-2.8421709430404007e-14 ;
@@ -44311,7 +44311,7 @@ createNode transform -name "L_elbow" -parent "|root|root|COG|COG|chest|L_shoulde
 		0 ;
 	setAttr ".scalePivotTranslate" -type "double3" -9.4663308626521403e-30 -9.8607613152626432e-32 
 		0 ;
-createNode transform -name "L_elbow" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow";
+createNode transform -name "L_elbow" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow";
 	rename -uuid "FC37755C-4FAE-4D2A-B76A-D29D4D151F4A";
 	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
 		0 ;
@@ -44319,7 +44319,7 @@ createNode transform -name "L_elbow" -parent "|root|root|COG|COG|chest|L_shoulde
 		0 ;
 	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
 		0 ;
-createNode nurbsCurve -name "L_elbowShape" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow";
+createNode nurbsCurve -name "L_elbowShape" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow";
 	rename -uuid "E0688AF5-4FE7-DDDF-1E9D-8B8E63334FC4";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
@@ -44338,7 +44338,7 @@ createNode nurbsCurve -name "L_elbowShape" -parent "|root|root|COG|COG|chest|L_s
 		-0.22449414009062624 -0.22130354779954459 -24.047714506355682
 		-0.60503776433933332 -17.22134687243971 -17.004301999482152
 		;
-createNode transform -name "L_wrist" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow";
+createNode transform -name "L_wrist" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow";
 	rename -uuid "473CEEFF-48BA-FD9C-1371-DDBEB4B94F79";
 	setAttr ".translate" -type "double3" 72.046400004442233 6.6613381477509392e-15 
 		1.1624479157035239e-11 ;
@@ -44348,11 +44348,11 @@ createNode transform -name "L_wrist" -parent "|root|root|COG|COG|chest|L_shoulde
 	setAttr ".rotatePivotTranslate" -type "double3" -1.4210854715201844e-14 -9.8873194307436615e-22 
 		1.1059879890612881e-21 ;
 	setAttr ".scalePivot" -type "double3" 7.1054273576010019e-15 0 0 ;
-createNode transform -name "L_wrist" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist";
+createNode transform -name "L_wrist" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist";
 	rename -uuid "D3F25DD4-42C7-18FA-9C66-CC966C023B61";
 	setAttr ".rotatePivot" -type "double3" 7.1054273576010019e-15 0 1.4210854715202004e-14 ;
 	setAttr ".scalePivot" -type "double3" 7.1054273576010019e-15 0 1.4210854715202004e-14 ;
-createNode nurbsCurve -name "L_wristShape" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
+createNode nurbsCurve -name "L_wristShape" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
 	rename -uuid "CB9DA5D7-4B48-753C-9403-E9A050966551";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
@@ -44371,7 +44371,7 @@ createNode nurbsCurve -name "L_wristShape" -parent "|root|root|COG|COG|chest|L_s
 		-0.0011202595139565192 0.0011150553986369978 -32.456745014538186
 		0.10703628625163825 -22.949014587612496 -22.950384495023485
 		;
-createNode transform -name "L_finger1" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
+createNode transform -name "L_finger1" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
 	rename -uuid "DBA88C13-4B98-3B83-C20F-6096E4BC88AD";
 	setAttr ".translate" -type "double3" -9.2952674083744071 4.7556799999992041 -12.111101765191307 ;
 	setAttr ".rotate" -type "double3" -153.31310334211577 -39.262415787839522 -18.416149890884579 ;
@@ -44381,11 +44381,11 @@ createNode transform -name "L_finger1" -parent "|root|root|COG|COG|chest|L_shoul
 		-2.7747751265969332e-14 ;
 	setAttr ".scalePivot" -type "double3" 0 1.0658141036401503e-14 1.4210854715202004e-14 ;
 	setAttr ".scalePivotTranslate" -type "double3" 0 -3.1554436208840458e-30 -4.7331654313260701e-30 ;
-createNode transform -name "L_finger1" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1";
+createNode transform -name "L_finger1" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1";
 	rename -uuid "C07E7AE5-4754-88DA-3A5E-04B6A3207E48";
 	setAttr ".rotatePivot" -type "double3" 0 1.0658141036401503e-14 1.4210854715202004e-14 ;
 	setAttr ".scalePivot" -type "double3" 0 1.0658141036401503e-14 1.4210854715202004e-14 ;
-createNode nurbsCurve -name "L_fingerShape1" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1";
+createNode nurbsCurve -name "L_fingerShape1" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1";
 	rename -uuid "80A23ACD-403A-27D6-A812-209A7C5DB9EB";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
@@ -44404,7 +44404,7 @@ createNode nurbsCurve -name "L_fingerShape1" -parent "|root|root|COG|COG|chest|L
 		9.0975606762060986e-16 4.1785337069794293e-15 -10.220416672213533
 		-7.2269259354742488 4.5306301949614152e-15 -7.2269259354742337
 		;
-createNode transform -name "L_finger2" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
+createNode transform -name "L_finger2" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
 	rename -uuid "2A8E2AE2-4382-4E17-B1C3-298348D43EA6";
 	setAttr ".translate" -type "double3" -9.2953998680659957 -12.811230000000798 -0.0121017659163698 ;
 	setAttr ".rotate" -type "double3" 88.504161299385146 0.39878384828689101 42.724139674290662 ;
@@ -44414,11 +44414,11 @@ createNode transform -name "L_finger2" -parent "|root|root|COG|COG|chest|L_shoul
 		7.2857185767855076e-15 ;
 	setAttr ".scalePivot" -type "double3" 0 1.4210854715202004e-14 7.1054273576010019e-15 ;
 	setAttr ".scalePivotTranslate" -type "double3" 0 0 -3.9443045261050569e-30 ;
-createNode transform -name "L_finger2" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2";
+createNode transform -name "L_finger2" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2";
 	rename -uuid "B821AB59-496E-D0BB-A20F-AA8993DC7340";
 	setAttr ".rotatePivot" -type "double3" 0 1.4210854715202004e-14 7.1054273576010019e-15 ;
 	setAttr ".scalePivot" -type "double3" 0 1.4210854715202004e-14 7.1054273576010019e-15 ;
-createNode nurbsCurve -name "L_fingerShape2" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2";
+createNode nurbsCurve -name "L_fingerShape2" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2";
 	rename -uuid "10475EAE-4682-6484-CD58-90A69FEFF803";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
@@ -44437,7 +44437,7 @@ createNode nurbsCurve -name "L_fingerShape2" -parent "|root|root|COG|COG|chest|L
 		-8.8850551551004111e-16 -1.3585034687023075e-14 -10.220416672213544
 		-7.2269259354742506 -1.3768333129474326e-14 -7.2269259354742452
 		;
-createNode transform -name "L_finger3" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
+createNode transform -name "L_finger3" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
 	rename -uuid "E94A2661-42A2-29EA-7971-C58B72EF0147";
 	setAttr ".translate" -type "double3" -9.2955325653319036 4.7556799999991934 12.108598233357242 ;
 	setAttr ".rotate" -type "double3" -26.686394357046915 39.261482116098115 -18.415905021460876 ;
@@ -44450,13 +44450,13 @@ createNode transform -name "L_finger3" -parent "|root|root|COG|COG|chest|L_shoul
 		-1.4210854715202004e-14 ;
 	setAttr ".scalePivotTranslate" -type "double3" -4.7331654313260701e-30 -3.1554436208840444e-30 
 		7.8886090522101139e-30 ;
-createNode transform -name "L_finger3" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3";
+createNode transform -name "L_finger3" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3";
 	rename -uuid "41BB7013-4502-E06E-A1B5-31AB7859A05D";
 	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 1.4210854715202004e-14 
 		-2.1316282072803006e-14 ;
 	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 1.4210854715202004e-14 
 		-2.1316282072803006e-14 ;
-createNode nurbsCurve -name "L_finger3Shape" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3";
+createNode nurbsCurve -name "L_finger3Shape" -parent "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3";
 	rename -uuid "23AE6246-491F-B989-FADD-E1A5C75700E8";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
@@ -44985,7 +44985,6 @@ createNode aiImagerDenoiserOidn -shared -name "defaultArnoldDenoiser";
 	rename -uuid "18F4FE37-40EE-B302-45DE-98B5A6581ED6";
 createNode displayLayer -name "joints";
 	rename -uuid "EC59E850-416C-020D-FE36-42987CEA777B";
-	setAttr ".displayType" 2;
 	setAttr ".color" 9;
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 	setAttr ".displayOrder" 1;
@@ -45003,7 +45002,7 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 809\n            -height 467\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"flatShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1625\n            -height 1001\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
@@ -45032,8 +45031,8 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n"
 		+ "                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
 		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1625\\n    -height 1001\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1625\\n    -height 1001\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"flatShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1625\\n    -height 1001\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"flatShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1625\\n    -height 1001\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
@@ -45042,7 +45041,7 @@ createNode script -name "sceneConfigurationScriptNode";
 	setAttr ".scriptType" 6;
 createNode displayLayer -name "geo";
 	rename -uuid "94643FA0-43BF-17E1-7FA6-ED99751FB34E";
-	setAttr ".displayType" 2;
+	setAttr ".visibility" no;
 	setAttr ".color" 6;
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 	setAttr ".displayOrder" 2;
@@ -45642,19 +45641,19 @@ connectAttr "jnt_finger6.rotatePivotTranslate" "jnt_finger6_parentConstraint1.co
 		;
 connectAttr "jnt_finger6.jointOrient" "jnt_finger6_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.translate" "jnt_finger6_parentConstraint1.target[0].targetTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.translate" "jnt_finger6_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotatePivot" "jnt_finger6_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotatePivot" "jnt_finger6_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotatePivotTranslate" "jnt_finger6_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotatePivotTranslate" "jnt_finger6_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotate" "jnt_finger6_parentConstraint1.target[0].targetRotate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotate" "jnt_finger6_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotateOrder" "jnt_finger6_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotateOrder" "jnt_finger6_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.scale" "jnt_finger6_parentConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.scale" "jnt_finger6_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.parentMatrix" "jnt_finger6_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.parentMatrix" "jnt_finger6_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_finger6_parentConstraint1.L_finger1W0" "jnt_finger6_parentConstraint1.target[0].targetWeight"
 		;
@@ -45662,9 +45661,9 @@ connectAttr "jnt_finger6.segmentScaleCompensate" "jnt_finger6_scaleConstraint1.c
 		;
 connectAttr "jnt_finger6.parentInverseMatrix" "jnt_finger6_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.scale" "jnt_finger6_scaleConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.scale" "jnt_finger6_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.parentMatrix" "jnt_finger6_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.parentMatrix" "jnt_finger6_scaleConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_finger6_scaleConstraint1.L_finger1W0" "jnt_finger6_scaleConstraint1.target[0].targetWeight"
 		;
@@ -45697,19 +45696,19 @@ connectAttr "jnt_finger5.rotatePivotTranslate" "jnt_finger5_parentConstraint1.co
 		;
 connectAttr "jnt_finger5.jointOrient" "jnt_finger5_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.translate" "jnt_finger5_parentConstraint1.target[0].targetTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.translate" "jnt_finger5_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotatePivot" "jnt_finger5_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotatePivot" "jnt_finger5_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotatePivotTranslate" "jnt_finger5_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotatePivotTranslate" "jnt_finger5_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotate" "jnt_finger5_parentConstraint1.target[0].targetRotate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotate" "jnt_finger5_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotateOrder" "jnt_finger5_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotateOrder" "jnt_finger5_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.scale" "jnt_finger5_parentConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.scale" "jnt_finger5_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.parentMatrix" "jnt_finger5_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.parentMatrix" "jnt_finger5_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_finger5_parentConstraint1.L_finger2W0" "jnt_finger5_parentConstraint1.target[0].targetWeight"
 		;
@@ -45717,9 +45716,9 @@ connectAttr "jnt_finger5.segmentScaleCompensate" "jnt_finger5_scaleConstraint1.c
 		;
 connectAttr "jnt_finger5.parentInverseMatrix" "jnt_finger5_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.scale" "jnt_finger5_scaleConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.scale" "jnt_finger5_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.parentMatrix" "jnt_finger5_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.parentMatrix" "jnt_finger5_scaleConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_finger5_scaleConstraint1.L_finger2W0" "jnt_finger5_scaleConstraint1.target[0].targetWeight"
 		;
@@ -45752,19 +45751,19 @@ connectAttr "jnt_finger4.rotatePivotTranslate" "jnt_finger4_parentConstraint1.co
 		;
 connectAttr "jnt_finger4.jointOrient" "jnt_finger4_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.translate" "jnt_finger4_parentConstraint1.target[0].targetTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.translate" "jnt_finger4_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotatePivot" "jnt_finger4_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotatePivot" "jnt_finger4_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotatePivotTranslate" "jnt_finger4_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotatePivotTranslate" "jnt_finger4_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotate" "jnt_finger4_parentConstraint1.target[0].targetRotate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotate" "jnt_finger4_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotateOrder" "jnt_finger4_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotateOrder" "jnt_finger4_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.scale" "jnt_finger4_parentConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.scale" "jnt_finger4_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.parentMatrix" "jnt_finger4_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.parentMatrix" "jnt_finger4_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_finger4_parentConstraint1.L_finger3W0" "jnt_finger4_parentConstraint1.target[0].targetWeight"
 		;
@@ -45772,9 +45771,9 @@ connectAttr "jnt_finger4.segmentScaleCompensate" "jnt_finger4_scaleConstraint1.c
 		;
 connectAttr "jnt_finger4.parentInverseMatrix" "jnt_finger4_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.scale" "jnt_finger4_scaleConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.scale" "jnt_finger4_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.parentMatrix" "jnt_finger4_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.parentMatrix" "jnt_finger4_scaleConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_finger4_scaleConstraint1.L_finger3W0" "jnt_finger4_scaleConstraint1.target[0].targetWeight"
 		;
@@ -45788,19 +45787,19 @@ connectAttr "jnt_wrist2.rotatePivotTranslate" "jnt_wrist2_parentConstraint1.cons
 		;
 connectAttr "jnt_wrist2.jointOrient" "jnt_wrist2_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.translate" "jnt_wrist2_parentConstraint1.target[0].targetTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.translate" "jnt_wrist2_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotatePivot" "jnt_wrist2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotatePivot" "jnt_wrist2_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotatePivotTranslate" "jnt_wrist2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotatePivotTranslate" "jnt_wrist2_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotate" "jnt_wrist2_parentConstraint1.target[0].targetRotate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotate" "jnt_wrist2_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotateOrder" "jnt_wrist2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotateOrder" "jnt_wrist2_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.scale" "jnt_wrist2_parentConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.scale" "jnt_wrist2_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.parentMatrix" "jnt_wrist2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.parentMatrix" "jnt_wrist2_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_wrist2_parentConstraint1.L_wristW0" "jnt_wrist2_parentConstraint1.target[0].targetWeight"
 		;
@@ -45808,9 +45807,9 @@ connectAttr "jnt_wrist2.segmentScaleCompensate" "jnt_wrist2_scaleConstraint1.con
 		;
 connectAttr "jnt_wrist2.parentInverseMatrix" "jnt_wrist2_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.scale" "jnt_wrist2_scaleConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.scale" "jnt_wrist2_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.parentMatrix" "jnt_wrist2_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.parentMatrix" "jnt_wrist2_scaleConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_wrist2_scaleConstraint1.L_wristW0" "jnt_wrist2_scaleConstraint1.target[0].targetWeight"
 		;
@@ -45824,19 +45823,19 @@ connectAttr "jnt_elbow2.rotatePivotTranslate" "jnt_elbow2_parentConstraint1.cons
 		;
 connectAttr "jnt_elbow2.jointOrient" "jnt_elbow2_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.translate" "jnt_elbow2_parentConstraint1.target[0].targetTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.translate" "jnt_elbow2_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotatePivot" "jnt_elbow2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotatePivot" "jnt_elbow2_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotatePivotTranslate" "jnt_elbow2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotatePivotTranslate" "jnt_elbow2_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotate" "jnt_elbow2_parentConstraint1.target[0].targetRotate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotate" "jnt_elbow2_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotateOrder" "jnt_elbow2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotateOrder" "jnt_elbow2_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.scale" "jnt_elbow2_parentConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.scale" "jnt_elbow2_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.parentMatrix" "jnt_elbow2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.parentMatrix" "jnt_elbow2_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_elbow2_parentConstraint1.L_elbowW0" "jnt_elbow2_parentConstraint1.target[0].targetWeight"
 		;
@@ -45844,9 +45843,9 @@ connectAttr "jnt_elbow2.segmentScaleCompensate" "jnt_elbow2_scaleConstraint1.con
 		;
 connectAttr "jnt_elbow2.parentInverseMatrix" "jnt_elbow2_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.scale" "jnt_elbow2_scaleConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.scale" "jnt_elbow2_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.parentMatrix" "jnt_elbow2_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.parentMatrix" "jnt_elbow2_scaleConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_elbow2_scaleConstraint1.L_elbowW0" "jnt_elbow2_scaleConstraint1.target[0].targetWeight"
 		;
@@ -45860,19 +45859,19 @@ connectAttr "jnt_upper_arm2.rotatePivotTranslate" "jnt_upper_arm2_parentConstrai
 		;
 connectAttr "jnt_upper_arm2.jointOrient" "jnt_upper_arm2_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.translate" "jnt_upper_arm2_parentConstraint1.target[0].targetTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.translate" "jnt_upper_arm2_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.rotatePivot" "jnt_upper_arm2_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.rotatePivot" "jnt_upper_arm2_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.rotatePivotTranslate" "jnt_upper_arm2_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.rotatePivotTranslate" "jnt_upper_arm2_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.rotate" "jnt_upper_arm2_parentConstraint1.target[0].targetRotate"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.rotate" "jnt_upper_arm2_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.rotateOrder" "jnt_upper_arm2_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.rotateOrder" "jnt_upper_arm2_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.scale" "jnt_upper_arm2_parentConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.scale" "jnt_upper_arm2_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.parentMatrix" "jnt_upper_arm2_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.parentMatrix" "jnt_upper_arm2_parentConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_upper_arm2_parentConstraint1.L_shoulderW0" "jnt_upper_arm2_parentConstraint1.target[0].targetWeight"
 		;
@@ -45880,9 +45879,9 @@ connectAttr "jnt_upper_arm2.segmentScaleCompensate" "jnt_upper_arm2_scaleConstra
 		;
 connectAttr "jnt_upper_arm2.parentInverseMatrix" "jnt_upper_arm2_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.scale" "jnt_upper_arm2_scaleConstraint1.target[0].targetScale"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.scale" "jnt_upper_arm2_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.parentMatrix" "jnt_upper_arm2_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder.parentMatrix" "jnt_upper_arm2_scaleConstraint1.target[0].targetParentMatrix"
 		;
 connectAttr "jnt_upper_arm2_scaleConstraint1.L_shoulderW0" "jnt_upper_arm2_scaleConstraint1.target[0].targetWeight"
 		;
@@ -46636,35 +46635,31 @@ connectAttr "jnt_COG.rotatePivotTranslate" "jnt_COG_parentConstraint1.constraint
 		;
 connectAttr "jnt_COG.jointOrient" "jnt_COG_parentConstraint1.constraintJointOrient"
 		;
-connectAttr "jnt_root.translate" "jnt_COG_parentConstraint1.target[0].targetTranslate"
+connectAttr "|root|root|COG|COG.translate" "jnt_COG_parentConstraint1.target[0].targetTranslate"
 		;
-connectAttr "jnt_root.rotatePivot" "jnt_COG_parentConstraint1.target[0].targetRotatePivot"
+connectAttr "|root|root|COG|COG.rotatePivot" "jnt_COG_parentConstraint1.target[0].targetRotatePivot"
 		;
-connectAttr "jnt_root.rotatePivotTranslate" "jnt_COG_parentConstraint1.target[0].targetRotateTranslate"
+connectAttr "|root|root|COG|COG.rotatePivotTranslate" "jnt_COG_parentConstraint1.target[0].targetRotateTranslate"
 		;
-connectAttr "jnt_root.rotate" "jnt_COG_parentConstraint1.target[0].targetRotate"
+connectAttr "|root|root|COG|COG.rotate" "jnt_COG_parentConstraint1.target[0].targetRotate"
 		;
-connectAttr "jnt_root.rotateOrder" "jnt_COG_parentConstraint1.target[0].targetRotateOrder"
+connectAttr "|root|root|COG|COG.rotateOrder" "jnt_COG_parentConstraint1.target[0].targetRotateOrder"
 		;
-connectAttr "jnt_root.scale" "jnt_COG_parentConstraint1.target[0].targetScale";
-connectAttr "jnt_root.parentMatrix" "jnt_COG_parentConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG.scale" "jnt_COG_parentConstraint1.target[0].targetScale"
 		;
-connectAttr "jnt_root.jointOrient" "jnt_COG_parentConstraint1.target[0].targetJointOrient"
+connectAttr "|root|root|COG|COG.parentMatrix" "jnt_COG_parentConstraint1.target[0].targetParentMatrix"
 		;
-connectAttr "jnt_root.segmentScaleCompensate" "jnt_COG_parentConstraint1.target[0].targetScaleCompensate"
-		;
-connectAttr "jnt_root.inverseScale" "jnt_COG_parentConstraint1.target[0].targetInverseScale"
-		;
-connectAttr "jnt_COG_parentConstraint1.jnt_rootW0" "jnt_COG_parentConstraint1.target[0].targetWeight"
+connectAttr "jnt_COG_parentConstraint1.COGW0" "jnt_COG_parentConstraint1.target[0].targetWeight"
 		;
 connectAttr "jnt_COG.segmentScaleCompensate" "jnt_COG_scaleConstraint1.constraintScaleCompensate"
 		;
 connectAttr "jnt_COG.parentInverseMatrix" "jnt_COG_scaleConstraint1.constraintParentInverseMatrix"
 		;
-connectAttr "jnt_root.scale" "jnt_COG_scaleConstraint1.target[0].targetScale";
-connectAttr "jnt_root.parentMatrix" "jnt_COG_scaleConstraint1.target[0].targetParentMatrix"
+connectAttr "|root|root|COG|COG.scale" "jnt_COG_scaleConstraint1.target[0].targetScale"
 		;
-connectAttr "jnt_COG_scaleConstraint1.jnt_rootW0" "jnt_COG_scaleConstraint1.target[0].targetWeight"
+connectAttr "|root|root|COG|COG.parentMatrix" "jnt_COG_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_COG_scaleConstraint1.COGW0" "jnt_COG_scaleConstraint1.target[0].targetWeight"
 		;
 connectAttr "jnt_root.rotateOrder" "jnt_root_parentConstraint1.constraintRotateOrder"
 		;
@@ -46716,17 +46711,17 @@ connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|R_shoulder|R_sho
 		;
 connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3.drawOverride"
 		;
-connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder.drawOverride"
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|L_shoulder.drawOverride"
 		;
-connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow.drawOverride"
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow.drawOverride"
 		;
-connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist.drawOverride"
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist.drawOverride"
 		;
-connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1.drawOverride"
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1.drawOverride"
 		;
-connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2.drawOverride"
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2.drawOverride"
 		;
-connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3.drawOverride"
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3.drawOverride"
 		;
 connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket.drawOverride";
 connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket|L_socket|L_hip.drawOverride"
