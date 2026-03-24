@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: railgun.ma
-//Last modified: Mon, Mar 23, 2026 10:20:03 PM
+//Last modified: Mon, Mar 23, 2026 10:48:58 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "4B2C0742-4A6F-03A1-3186-72B2CD05D561";
+fileInfo "UUID" "641A2AF0-42EA-D2B8-244D-2EA21FCA580B";
 createNode transform -shared -name "persp";
 	rename -uuid "34C10C86-4C5A-7251-B072-DDAE1CDEB72B";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -52.749200043585923 51.107303997375986 75.910172167461354 ;
-	setAttr ".rotate" -type "double3" -386.13835611597813 10766.200000009794 4.7843172747214786e-15 ;
+	setAttr ".translate" -type "double3" -109.41998561230312 7.5608114524688403 -3.1114573983036138 ;
+	setAttr ".rotate" -type "double3" -363.33835611820359 11072.999999995263 7.5964855588862062e-15 ;
 	setAttr ".rotatePivot" -type "double3" -2.6645352591003757e-15 3.5527136788005009e-15 
 		0 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -2.1272019448693484e-14 -6.0299794477567773e-15 
@@ -26,7 +26,7 @@ createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "6238811E-47D7-4853-5345-B1A102BD00D3";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999979;
-	setAttr ".centerOfInterest" 113.90424375209214;
+	setAttr ".centerOfInterest" 113.90424375204077;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -114,6 +114,7 @@ createNode mesh -name "gunShape" -parent "|railgun|gun|gun";
 	setAttr ".colorSet[1].colorName" -type "string" "SculptMaskColorTemp";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
+	setAttr ".dispResolution" 1;
 createNode mesh -name "polySurfaceShape6" -parent "|railgun|gun|gun";
 	rename -uuid "3DCCE8B3-427E-5006-BFB0-0290E5C07283";
 	setAttr -keyable off ".visibility";
@@ -3803,6 +3804,7 @@ createNode mesh -name "standShape" -parent "stand";
 	setAttr ".colorSet[1].colorName" -type "string" "SculptMaskColorTemp";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
+	setAttr ".dispResolution" 1;
 createNode mesh -name "polySurfaceShape5" -parent "stand";
 	rename -uuid "3C90585D-4780-A330-739F-BF9233C45A63";
 	setAttr -keyable off ".visibility";
