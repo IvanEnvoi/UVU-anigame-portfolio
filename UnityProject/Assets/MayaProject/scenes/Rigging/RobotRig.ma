@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: RobotRig.ma
-//Last modified: Mon, Mar 23, 2026 11:49:11 AM
+//Last modified: Mon, Mar 23, 2026 09:06:42 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "3E9754D8-44F1-82D3-0236-AFBAE500D2ED";
+fileInfo "UUID" "CEA9C137-458C-566D-6ABB-F4AC737EDEDC";
 createNode transform -shared -name "persp";
 	rename -uuid "709131CD-430A-9D47-5134-E88B060EAAB1";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 140.55687432366665 52.779816161798074 64.046710315675213 ;
-	setAttr ".rotate" -type "double3" -15.93835274001923 1837.7999999992055 1.0063071902393608e-15 ;
+	setAttr ".translate" -type "double3" 94.894124866065169 288.54451169494149 697.58845405741113 ;
+	setAttr ".rotate" -type "double3" -374.13835286542354 2884.9999999990496 9.9771996363744032e-17 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "542452AA-4BBA-8701-F688-E3B84A612AD1";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 119.91663131467601;
+	setAttr ".centerOfInterest" 683.23427270318223;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -48,13 +48,13 @@ createNode camera -shared -name "topShape" -parent "top";
 createNode transform -shared -name "front";
 	rename -uuid "84BFF2F8-4E48-EAA5-01CB-9BB8FFA8155D";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -26.775097138388134 57.807617155478219 1000.1 ;
+	setAttr ".translate" -type "double3" 4.2495216557623605 113.83128072817594 1000.1 ;
 createNode camera -shared -name "frontShape" -parent "front";
 	rename -uuid "CFFB5C99-46B0-E44E-B67B-A0A13B7D8533";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".centerOfInterest" 1000.1;
-	setAttr ".orthographicWidth" 30.360290625036495;
+	setAttr ".orthographicWidth" 210.40777875479367;
 	setAttr ".imageName" -type "string" "front";
 	setAttr ".depthName" -type "string" "front_depth";
 	setAttr ".maskName" -type "string" "front_mask";
@@ -42507,11 +42507,10 @@ createNode joint -name "jnt_root" -parent "Joint__group";
 	rename -uuid "068FA9DD-4395-B071-26EB-61AEA2FECB60";
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
+	setAttr ".jointOrientType" -type "string" "none";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_COG" -parent "jnt_root";
 	rename -uuid "5DEB1132-462F-8B27-AA2B-ABA22D786A70";
-	setAttr ".translate" -type "double3" 1.6123604346719612e-15 93.930603898614365 
-		-2.9045703411102304 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42520,33 +42519,21 @@ createNode joint -name "jnt_COG" -parent "jnt_root";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_chest" -parent "jnt_COG";
 	rename -uuid "FB304BC7-457A-A553-F7E8-FB9B83F60F42";
-	setAttr ".translate" -type "double3" 77.369680450469716 1.3140149116516153 -2.4980018054066022e-15 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrientType" -type "string" "none";
 	setAttr ".radius" 2;
-createNode joint -name "jnt_shoulder2" -parent "jnt_chest";
-	rename -uuid "9619D084-4D66-A6F3-66B5-9B8AC9F83617";
-	setAttr ".translate" -type "double3" 11.157964661575699 -2.1064226627349592 -61.635403087045567 ;
-	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
-	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" 10.632260959132584 89.941746455071026 -179.99999999997266 ;
-	setAttr ".radius" 2;
-createNode joint -name "jnt_upper_arm1" -parent "jnt_shoulder2";
+createNode joint -name "jnt_upper_arm1" -parent "jnt_chest";
 	rename -uuid "71DC744A-4317-DE43-5CF6-D4BFDBC8D7EC";
-	setAttr ".translate" -type "double3" 38.081238664049835 -2.5160500668541557e-14 
-		-1.6004826812921059e-15 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" 89.878400691504268 -79.367692835232688 90.123723451994024 ;
+	setAttr ".jointOrient" -type "double3" 179.99999997765076 -0.081081193274720506 
+		-179.99997801798088 ;
 	setAttr ".radius" 2;
 createNode joint -name "jnt_elbow1" -parent "jnt_upper_arm1";
 	rename -uuid "709AA656-497F-3FEF-DA21-5EBBDB7C7929";
-	setAttr ".translate" -type "double3" 69.600703139206075 1.5453936331193414e-14 
-		9.1419368413271868e-17 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42555,8 +42542,6 @@ createNode joint -name "jnt_elbow1" -parent "jnt_upper_arm1";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_wrist1" -parent "jnt_elbow1";
 	rename -uuid "5353BBE9-4BC0-B84A-5F48-D7A80FDE092E";
-	setAttr ".translate" -type "double3" 72.046842498697288 3.5819437464412767e-13 
-		-7.6695984148906119e-11 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42566,50 +42551,298 @@ createNode joint -name "jnt_wrist1" -parent "jnt_elbow1";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_finger1" -parent "jnt_wrist1";
 	rename -uuid "10A1ED1F-4B51-A2D5-C33A-05BE9D72FC80";
-	setAttr ".translate" -type "double3" 9.2952658707384721 -4.7556787367321762 12.11061134045805 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrient" -type "double3" -153.31310334211582 -39.262415787839487 -18.416149887398358 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_finger1_parentConstraint1" -parent "jnt_finger1";
+	rename -uuid "60B51883-491C-6A27-A950-D987562A8243";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_finger1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.4210854715202004e-14 
+		5.3290705182007514e-14 1.2789769243681803e-13 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -5.8000595171168724e-11 
+		3.1433421916903943e-11 6.3413899239019615e-11 ;
+	setAttr ".lastTargetRotate" -type "double3" 5.8000992740521266e-11 -3.1449324690279148e-11 
+		-6.3410718684354042e-11 ;
+	setAttr ".restTranslate" -type "double3" 9.2952658707384757 -4.7556787367321878 
+		12.110611340458064 ;
+	setAttr ".restRotate" -type "double3" 5.7991848645812047e-11 -3.1436602471553307e-11 
+		-6.3405947852331838e-11 ;
+	setAttr -keyable on ".R_finger1W0";
+createNode scaleConstraint -name "jnt_finger1_scaleConstraint1" -parent "jnt_finger1";
+	rename -uuid "8E235477-4911-E4B5-4489-6E9004E27848";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_finger1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_finger1W0";
 createNode joint -name "jnt_finger2" -parent "jnt_wrist1";
 	rename -uuid "07D83F83-45F1-B4AB-B46D-94BA720C63D3";
-	setAttr ".translate" -type "double3" 9.2953957438819579 12.811230056108862 0.012084775356186128 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrient" -type "double3" 88.504161299385075 0.39878384828691643 42.724139677776861 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_finger2_parentConstraint1" -parent "jnt_finger2";
+	rename -uuid "959098DD-4B83-D12E-F521-A28D202E5CDE";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_finger3W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.4210854715202004e-14 
+		-9.9475983006414026e-14 1.0658141036401503e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 9.3070981366326179e-13 -9.1485731103477176e-11 
+		-2.6912959183540122e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" -9.2077058028154705e-13 9.150137763102394e-11 
+		2.6812075964730096e-12 ;
+	setAttr ".restTranslate" -type "double3" 9.2953957438819614 12.811230056108856 0.012084775356186128 ;
+	setAttr ".restRotate" -type "double3" -9.2236085762227649e-13 9.1495016521661013e-11 
+		2.6843881511544717e-12 ;
+	setAttr -keyable on ".R_finger3W0";
+createNode scaleConstraint -name "jnt_finger2_scaleConstraint1" -parent "jnt_finger2";
+	rename -uuid "FC352B93-4748-F2DE-F0C6-45908857F41F";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_finger3W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_finger3W0";
 createNode joint -name "jnt_finger3" -parent "jnt_wrist1";
 	rename -uuid "4BA90A1B-4871-68CF-E0CF-AFA70670A921";
-	setAttr ".translate" -type "double3" 9.2955153704849458 -4.7556759540894467 -12.108667059737812 ;
-	setAttr ".scale" -type "double3" 1 1 0.99999999999999978 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" 153.31360564295312 39.261482116098023 -18.415905017974705 ;
+	setAttr ".jointOrient" -type "double3" -26.686394357046893 39.261482116098023 -18.415905017974705 ;
 	setAttr ".radius" 2;
-createNode joint -name "jnt_shoulder1" -parent "jnt_chest";
-	rename -uuid "35B38ABA-4C9A-B5AC-45E5-F1BA02C539C9";
-	setAttr ".translate" -type "double3" 11.339416161385898 -2.1064245705413658 61.602293424681463 ;
-	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
-	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
-	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" 169.36834639936222 -89.890151825167706 4.14737139864582e-12 ;
-	setAttr ".radius" 2;
-createNode joint -name "jnt_upper_arm2" -parent "jnt_shoulder1";
+createNode parentConstraint -name "jnt_finger3_parentConstraint1" -parent "jnt_finger3";
+	rename -uuid "A4AF8DAC-4E26-214E-6ED9-5AAFB0027788";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_finger2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 4.2632564145606011e-14 
+		2.8421709430404007e-14 -1.2789769243681803e-13 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 5.7804991058258695e-11 3.2161768938959094e-11 
+		-6.3215114571428154e-11 ;
+	setAttr ".lastTargetRotate" -type "double3" -5.7812942444980095e-11 -3.2181647405686337e-11 
+		6.321034373942217e-11 ;
+	setAttr ".restTranslate" -type "double3" 9.2955153704849529 -4.7556759540894582 
+		-12.10866705973784 ;
+	setAttr ".restRotate" -type "double3" -5.7804991058276434e-11 -3.217389480365028e-11 
+		6.32071631847407e-11 ;
+	setAttr -keyable on ".R_finger2W0";
+createNode scaleConstraint -name "jnt_finger3_scaleConstraint1" -parent "jnt_finger3";
+	rename -uuid "0E323621-4A36-AA4C-6D52-3DAF2F9B3827";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_finger2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_finger2W0";
+createNode parentConstraint -name "jnt_wrist1_parentConstraint1" -parent "jnt_wrist1";
+	rename -uuid "B8D00791-409F-97EA-8038-7ABC24E986F3";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_wristW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -7.1054273576010019e-15 
+		-4.8849813083506888e-15 -5.6843418860808015e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.8337885585313091e-14 4.2703666603061134e-13 
+		-9.1509708712336745e-11 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.8139100918062693e-14 -4.2705684184290142e-13 
+		9.1514032189641576e-11 ;
+	setAttr ".restTranslate" -type "double3" 72.046842498697288 3.6015634918840078e-13 
+		-7.6724404607375618e-11 ;
+	setAttr ".restRotate" -type "double3" -1.8188797084960532e-14 -4.2703666603207778e-13 
+		9.1509708714148297e-11 ;
+	setAttr -keyable on ".R_wristW0";
+createNode scaleConstraint -name "jnt_wrist1_scaleConstraint1" -parent "jnt_wrist1";
+	rename -uuid "724E7C1B-47D3-F945-102B-C984C5768042";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_wristW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_wristW0";
+createNode parentConstraint -name "jnt_elbow1_parentConstraint1" -parent "jnt_elbow1";
+	rename -uuid "DE32A30D-4B64-EC7F-2024-AF805C9983A8";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_elbowW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.4210854715202004e-14 
+		-3.9968028886505635e-15 -2.8421709430404007e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 2.1369351766082996e-14 -1.8063780164767035e-14 
+		1.2499690064459095e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" -2.1419137048617648e-14 1.8083323655770476e-14 
+		2.67486949100057e-15 ;
+	setAttr ".restTranslate" -type "double3" 69.600703139206104 1.5987211554602254e-14 
+		-4.2632564145606011e-14 ;
+	setAttr ".restRotate" -type "double3" -2.1419006323909027e-14 1.8064847844004244e-14 
+		-1.2499720396592252e-15 ;
+	setAttr -keyable on ".R_elbowW0";
+createNode scaleConstraint -name "jnt_elbow1_scaleConstraint1" -parent "jnt_elbow1";
+	rename -uuid "521C18C7-4899-3294-955E-6F9B2008E411";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_elbowW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_elbowW0";
+createNode parentConstraint -name "jnt_upper_arm1_parentConstraint1" -parent "jnt_upper_arm1";
+	rename -uuid "94B4C54E-49DE-CE13-F063-8E882E15B790";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_shoulderW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 2.8421709430404007e-14 
+		1.4654943925052066e-14 -2.8421709430404007e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 3.6007272260325411e-17 2.1245111348838336e-15 
+		-2.5444415981602984e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -3.6007273741387065e-17 -2.1245111398464388e-15 
+		2.5444413186001642e-14 ;
+	setAttr ".restTranslate" -type "double3" 11.119246857504862 -2.1064226627349498 
+		-99.716622068585167 ;
+	setAttr ".restRotate" -type "double3" -3.6007273741387065e-17 -2.112087098121972e-15 
+		2.5444413186001642e-14 ;
+	setAttr -keyable on ".R_shoulderW0";
+createNode scaleConstraint -name "jnt_upper_arm1_scaleConstraint1" -parent "jnt_upper_arm1";
+	rename -uuid "E326F9E6-4CB7-7110-A979-56962C47D32C";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_shoulderW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_shoulderW0";
+createNode joint -name "jnt_upper_arm2" -parent "jnt_chest";
 	rename -uuid "E0023414-462A-E852-9306-E39F34AD99B3";
-	setAttr ".translate" -type "double3" 38.08130379451314 -2.0881456279223349e-14 
-		1.6764438493295078e-15 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" -89.880408366481774 79.368306506308031 90.121680461735338 ;
+	setAttr ".jointOrient" -type "double3" 179.99999996843479 -0.087398749618289251 
+		-179.99998353591749 ;
 	setAttr ".radius" 2;
 createNode joint -name "jnt_elbow2" -parent "jnt_upper_arm2";
 	rename -uuid "53C18B28-4062-2F51-8817-E1AAE84331A2";
-	setAttr ".translate" -type "double3" 69.601000103736922 -7.6337148616833076e-18 
-		2.4331081656017208e-16 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42618,8 +42851,6 @@ createNode joint -name "jnt_elbow2" -parent "jnt_upper_arm2";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_wrist2" -parent "jnt_elbow2";
 	rename -uuid "025BD3BD-4AF3-F119-944D-41BCE3CCC621";
-	setAttr ".translate" -type "double3" 72.046400004442262 2.5947221138261156e-14 
-		1.1624494064172744e-11 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42629,32 +42860,325 @@ createNode joint -name "jnt_wrist2" -parent "jnt_elbow2";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_finger6" -parent "jnt_wrist2";
 	rename -uuid "EC36A363-4D53-9A6C-3678-CEAE1B12A61E";
-	setAttr ".translate" -type "double3" -9.2952674083740057 4.7556800000000088 -12.111101765191322 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrient" -type "double3" -153.31310334211577 -39.262415787839487 -18.416149890884576 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_finger6_parentConstraint1" -parent "jnt_finger6";
+	rename -uuid "4858A6D0-416A-E6D6-1078-49BBFDF3F712";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_finger1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 6.3948846218409017e-14 
+		1.4210854715202004e-14 0 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 3.1296658065601004e-12 -1.7588467388493247e-12 
+		-3.4286379466176712e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" -3.1248949745378529e-12 1.7493050748050274e-12 
+		3.4270476692768915e-12 ;
+	setAttr ".restTranslate" -type "double3" -9.2952674083740128 4.7556800000000123 
+		-12.111101765191279 ;
+	setAttr ".restRotate" -type "double3" -3.1248949745378529e-12 1.7493050748050274e-12 
+		3.4270476692768915e-12 ;
+	setAttr -keyable on ".L_finger1W0";
+createNode scaleConstraint -name "jnt_finger6_scaleConstraint1" -parent "jnt_finger6";
+	rename -uuid "36464C98-4099-FBAD-67F8-83BA7030555E";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_finger1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_finger1W0";
 createNode joint -name "jnt_finger5" -parent "jnt_wrist2";
 	rename -uuid "2CED1581-415F-4F3D-BAFB-FBAAF69AAE75";
-	setAttr ".translate" -type "double3" -9.2953998680671042 -12.811229999999998 -0.012101765916398222 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrient" -type "double3" 88.504161299385174 0.39878384828689728 42.724139674290669 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_finger5_parentConstraint1" -parent "jnt_finger5";
+	rename -uuid "EF350DEA-4AE2-A64F-6373-CBB495161F47";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_finger2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 2.1316282072803006e-14 
+		-2.8421709430404007e-14 6.0396132539608516e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -8.7465253740246719e-15 
+		4.9519015592928689e-12 1.2299801307222192e-13 ;
+	setAttr ".lastTargetRotate" -type "double3" 9.5416640443956495e-15 -4.9648458577645496e-12 
+		-1.1768052321415051e-13 ;
+	setAttr ".restTranslate" -type "double3" -9.2953998680671184 -12.811229999999997 
+		-0.012101765916384011 ;
+	setAttr ".restRotate" -type "double3" 1.1131941385127542e-14 -4.9616653030830862e-12 
+		-1.2086107789561411e-13 ;
+	setAttr -keyable on ".L_finger2W0";
+createNode scaleConstraint -name "jnt_finger5_scaleConstraint1" -parent "jnt_finger5";
+	rename -uuid "C22F74CA-46F3-4ECC-86D3-2A8E71C25885";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_finger2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_finger2W0";
 createNode joint -name "jnt_finger4" -parent "jnt_wrist2";
 	rename -uuid "6A6E2C5B-4B3B-7C4E-911E-F9B273AC5653";
-	setAttr ".translate" -type "double3" -9.2955325653315022 4.7556799999999964 12.108598233357213 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" 153.31360564295312 39.261482116098101 -18.415905021460876 ;
+	setAttr ".jointOrient" -type "double3" -26.686394357046908 39.261482116098108 -18.415905021460883 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_finger4_parentConstraint1" -parent "jnt_finger4";
+	rename -uuid "B8E4ADEA-48BF-0773-DD50-43838ACB231B";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_finger3W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 2.8421709430404007e-14 
+		-3.5527136788005009e-14 4.2632564145606011e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -3.1344366385822958e-12 
+		-1.7397634107605434e-12 3.4063740638474256e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" 3.1264852518785858e-12 1.7238606373533193e-12 
+		-3.4135303118806724e-12 ;
+	setAttr ".restTranslate" -type "double3" -9.2955325653315057 4.75568 12.108598233357228 ;
+	setAttr ".restRotate" -type "double3" 3.1320512225711474e-12 1.7302217467162467e-12 
+		-3.407964341188112e-12 ;
+	setAttr -keyable on ".L_finger3W0";
+createNode scaleConstraint -name "jnt_finger4_scaleConstraint1" -parent "jnt_finger4";
+	rename -uuid "7619D75D-4E62-C407-67CD-578F274220A2";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_finger3W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_finger3W0";
+createNode parentConstraint -name "jnt_wrist2_parentConstraint1" -parent "jnt_wrist2";
+	rename -uuid "89FDEFDC-4706-F550-32CD-7FB64629BF64";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_wristW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 7.1054273576010019e-14 
+		-3.6415315207705135e-14 0 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -1.9977859092942719e-14 
+		-7.3683136253693898e-15 4.9616613277608309e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" 2.0002707176391332e-14 7.3676660343282179e-15 
+		-4.9616613269462462e-12 ;
+	setAttr ".restTranslate" -type "double3" 72.046400004442177 2.708944180085382e-14 
+		1.1596057447604835e-11 ;
+	setAttr ".restRotate" -type "double3" 1.9977859092942397e-14 7.3683136253702512e-15 
+		-4.9616613246950329e-12 ;
+	setAttr -keyable on ".L_wristW0";
+createNode scaleConstraint -name "jnt_wrist2_scaleConstraint1" -parent "jnt_wrist2";
+	rename -uuid "AC060F53-4B3E-9B1D-90BE-70981AA4FC88";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_wristW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_wristW0";
+createNode parentConstraint -name "jnt_elbow2_parentConstraint1" -parent "jnt_elbow2";
+	rename -uuid "919C0A66-4BD0-F40D-C82E-1890899D1AF6";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_elbowW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -9.9475983006414026e-14 
+		1.5543122344752192e-14 1.4210854715202004e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 2.5742614453095345e-14 8.1214407747624341e-15 
+		-8.2241029125081138e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" -2.5767237258205031e-14 -8.1198849125798414e-15 
+		6.8585260139024552e-15 ;
+	setAttr ".restTranslate" -type "double3" 69.601000103736951 3.1086244689504383e-15 
+		0 ;
+	setAttr ".restRotate" -type "double3" -2.5742344314893795e-14 -8.1222052296779822e-15 
+		8.2241006375981303e-15 ;
+	setAttr -keyable on ".L_elbowW0";
+createNode scaleConstraint -name "jnt_elbow2_scaleConstraint1" -parent "jnt_elbow2";
+	rename -uuid "274A0EFB-475D-526C-5BB5-F68EE841500C";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_elbowW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_elbowW0";
+createNode parentConstraint -name "jnt_upper_arm2_parentConstraint1" -parent "jnt_upper_arm2";
+	rename -uuid "AD847D46-49AB-29CB-B4DC-39A17B718717";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_shoulderW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -8.5265128291212022e-14 
+		1.021405182655144e-14 4.2632564145606011e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -5.9242447492918312e-24 
+		2.9196498052497128e-15 -5.1436213664578983e-22 ;
+	setAttr ".lastTargetRotate" -type "double3" 0 -2.9444978886987073e-15 0 ;
+	setAttr ".restTranslate" -type "double3" 11.412426061764847 -2.1064245705413427 
+		99.683527231432649 ;
+	setAttr ".restRotate" -type "double3" 0 -2.93207384697424e-15 0 ;
+	setAttr -keyable on ".L_shoulderW0";
+createNode scaleConstraint -name "jnt_upper_arm2_scaleConstraint1" -parent "jnt_upper_arm2";
+	rename -uuid "9AA52F9B-4EA3-2D67-029E-118EF9940713";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_shoulderW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_shoulderW0";
+createNode parentConstraint -name "jnt_chest_parentConstraint1" -parent "jnt_chest";
+	rename -uuid "091E4474-40AD-FF66-83CC-88A1F94AF572";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "chestW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 2.2204460492503131e-15 
+		-5.5511151231257827e-17 ;
+	setAttr ".restTranslate" -type "double3" 77.369680450469701 1.3140149116516238 -2.5257573810222311e-15 ;
+	setAttr -keyable on ".chestW0";
+createNode scaleConstraint -name "jnt_chest_scaleConstraint1" -parent "jnt_chest";
+	rename -uuid "76705BAF-4462-FCBA-DB97-BC9A6F933CE0";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "chestW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".chestW0";
 createNode joint -name "jnt_hip1" -parent "jnt_COG";
 	rename -uuid "5ADEF7D4-4465-4552-7E2A-FDB19D965DDC";
-	setAttr ".translate" -type "double3" -1.298464719967555 4.1390158811438482e-07 
-		-9.9638397882134715 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42662,7 +43186,6 @@ createNode joint -name "jnt_hip1" -parent "jnt_COG";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_leg_upper2" -parent "jnt_hip1";
 	rename -uuid "D52ECDD3-4D4F-D274-92D2-19B386A07E4A";
-	setAttr ".translate" -type "double3" 19.069988229105302 2.0660567227108544 -0.41912508956848749 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42671,8 +43194,6 @@ createNode joint -name "jnt_leg_upper2" -parent "jnt_hip1";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_knee1" -parent "jnt_leg_upper2";
 	rename -uuid "7BE44B99-4D4B-A438-A095-DC9595FEFE5C";
-	setAttr ".translate" -type "double3" -7.1054273576010019e-15 -32.925651550293004 
-		0.77696096896874733 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42680,8 +43201,6 @@ createNode joint -name "jnt_knee1" -parent "jnt_leg_upper2";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_ankle1" -parent "jnt_knee1";
 	rename -uuid "6E8E5BF6-4AF3-4782-AA71-62B7074A7A00";
-	setAttr ".translate" -type "double3" 40.375646253891844 -2.5729038416969783e-13 
-		-4.6034343864099468e-15 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42690,33 +43209,335 @@ createNode joint -name "jnt_ankle1" -parent "jnt_knee1";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_toe3" -parent "jnt_ankle1";
 	rename -uuid "B7AC3119-4709-4614-F58E-378DA146C1B2";
-	setAttr ".translate" -type "double3" 10.552921182648632 -10.614340928217018 -1.772664204868768e-06 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" -90.000253 -8.2409000013159057e-06 -37.610488 ;
+	setAttr ".jointOrient" -type "double3" 89.999746999999985 -8.2408999949547949e-06 
+		-37.610488 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_toe3_parentConstraint1" -parent "jnt_toe3";
+	rename -uuid "CD25CB68-4252-DD0B-3B05-3785A9E761DE";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_toe3W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.4210854715202004e-14 
+		-3.2862601528904634e-14 -1.0658141036401503e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.2041169787986899e-11 1.8605631134922402e-14 
+		-9.3094834646805224e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.2036014053328316e-11 -2.8624992132193839e-14 
+		9.3094835526437166e-12 ;
+	setAttr ".restTranslate" -type "double3" 10.552921182648639 -10.614340928217016 
+		-1.7726642099757939e-06 ;
+	setAttr ".restRotate" -type "double3" -1.2036014053328316e-11 -2.8624992132193839e-14 
+		9.3094835526437166e-12 ;
+	setAttr -keyable on ".R_toe3W0";
+createNode scaleConstraint -name "jnt_toe3_scaleConstraint1" -parent "jnt_toe3";
+	rename -uuid "49EF8571-48FE-B1DC-7CFE-FCA6B17DEC7F";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_toe3W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_toe3W0";
 createNode joint -name "jnt_toe2" -parent "jnt_ankle1";
 	rename -uuid "CC5609C5-4C01-2D1D-17B6-0BBDE645C999";
-	setAttr ".translate" -type "double3" -8.7072394343579163e-06 -8.8528413688951133 
-		11.201009865001543 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrient" -type "double3" -179.99964 -52.389368000000005 -89.999966 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_toe2_parentConstraint1" -parent "jnt_toe2";
+	rename -uuid "ED849127-4199-43EE-B983-60A39D35D520";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_toe2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -2.7977620220553945e-14 
+		3.5527136788005009e-15 0 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 7.7116706423547564e-14 -1.5228495814847313e-11 
+		-7.6230401493887137e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -6.3611093629260187e-14 1.522849581484732e-11 
+		7.6333312355115946e-14 ;
+	setAttr ".restTranslate" -type "double3" -8.7072394272524889e-06 -8.8528413688951151 
+		11.201009865001536 ;
+	setAttr ".restRotate" -type "double3" -6.3611093629260187e-14 1.522849581484732e-11 
+		7.6333312355115946e-14 ;
+	setAttr -keyable on ".R_toe2W0";
+createNode scaleConstraint -name "jnt_toe2_scaleConstraint1" -parent "jnt_toe2";
+	rename -uuid "E4223EE7-4B16-6663-F09E-619C8FEE53D6";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_toe2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_toe2W0";
 createNode joint -name "jnt_toe1" -parent "jnt_ankle1";
 	rename -uuid "AD7B93AB-413C-0B39-3EB0-B28C9E35C3AF";
-	setAttr ".translate" -type "double3" -10.552921149128128 -10.6143452632625 -1.7081145426978139e-06 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrient" -type "double3" -89.999875 -1.0336000000004868e-05 -142.389551 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_toe1_parentConstraint1" -parent "jnt_toe1";
+	rename -uuid "995E7199-4FE5-2BCB-A5DF-828D3DA8CCAA";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_toe1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.0658141036401503e-14 
+		2.5313084961453569e-14 -2.1316282072803006e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -1.2071076033688613e-11 
+		-5.3592851090680059e-14 9.2585947945190096e-12 ;
+	setAttr ".lastTargetRotate" -type "double3" 1.206702446147258e-11 4.4527765541464545e-14 
+		-9.2617752324217571e-12 ;
+	setAttr ".restTranslate" -type "double3" -10.552921149128117 -10.614345263262498 
+		-1.7081145503028416e-06 ;
+	setAttr ".restRotate" -type "double3" 1.206702446147258e-11 4.4527765541464545e-14 
+		-9.2617752324217571e-12 ;
+	setAttr -keyable on ".R_toe1W0";
+createNode scaleConstraint -name "jnt_toe1_scaleConstraint1" -parent "jnt_toe1";
+	rename -uuid "79443F7E-4CE0-F838-E2E9-BD8E49DD39F9";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_toe1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_toe1W0";
+createNode parentConstraint -name "jnt_ankle1_parentConstraint1" -parent "jnt_ankle1";
+	rename -uuid "05C1D970-43FB-4572-68E1-D7B53A8618BA";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_ankleW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -7.1054273576010019e-15 
+		3.5527136788005009e-14 -2.5757174171303632e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.5213785749445548e-11 8.0903380198038823e-16 
+		1.9067207204920815e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.5214183318780731e-11 -1.9878466759231435e-16 
+		-6.3611093629270075e-15 ;
+	setAttr ".restTranslate" -type "double3" 40.375646253891844 -2.5579538487363607e-13 
+		-4.4686476741162551e-15 ;
+	setAttr ".restRotate" -type "double3" -1.5214183318780731e-11 -1.9878466759231435e-16 
+		-6.3611093629270075e-15 ;
+	setAttr -keyable on ".R_ankleW0";
+createNode scaleConstraint -name "jnt_ankle1_scaleConstraint1" -parent "jnt_ankle1";
+	rename -uuid "E8380AF2-41DE-3299-2051-09A0ADAFACDB";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_ankleW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_ankleW0";
+createNode parentConstraint -name "jnt_knee1_parentConstraint1" -parent "jnt_knee1";
+	rename -uuid "CA14182A-4F32-6A14-7F8D-BE90C52EA6B9";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_kneeW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -5.6843418860808015e-14 
+		-1.0658141036401503e-14 -1.1268763699945339e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.2207016659373393e-15 1.5215376026786279e-11 
+		3.8166656177562409e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.3914926731343777e-15 -1.5214978457451099e-11 
+		-4.4518447509195696e-14 ;
+	setAttr ".restTranslate" -type "double3" -1.0658141036401503e-14 -32.925651550293026 
+		0.77696096896874689 ;
+	setAttr ".restRotate" -type "double3" -1.3914926731343777e-15 -1.5214978457451099e-11 
+		-4.4518447509195696e-14 ;
+	setAttr -keyable on ".R_kneeW0";
+createNode scaleConstraint -name "jnt_knee1_scaleConstraint1" -parent "jnt_knee1";
+	rename -uuid "898874A8-400B-334D-2D89-5CACFC3D83DA";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_kneeW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_kneeW0";
+createNode parentConstraint -name "jnt_leg_upper2_parentConstraint1" -parent "jnt_leg_upper2";
+	rename -uuid "A8B85E4B-498D-F3BA-3585-E0A4C5F425DA";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_hipW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 3.5527136788005009e-15 
+		4.2632564145606011e-14 -1.7763568394002505e-15 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 1.5215773587021827e-11 5.0888880969842893e-14 
+		2.0242675434623672e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.5215773596121463e-11 -5.0888883623907702e-14 
+		-2.3854160110969622e-14 ;
+	setAttr ".restTranslate" -type "double3" 19.069988229105306 2.0660567227108828 -0.4191250895684866 ;
+	setAttr ".restRotate" -type "double3" -1.5215773596121463e-11 -5.0888883623907702e-14 
+		-2.3854160110969622e-14 ;
+	setAttr -keyable on ".R_hipW0";
+createNode scaleConstraint -name "jnt_leg_upper2_scaleConstraint1" -parent "jnt_leg_upper2";
+	rename -uuid "1EA41A70-42B2-37C2-75B0-4291E679622B";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_hipW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_hipW0";
+createNode parentConstraint -name "jnt_hip1_parentConstraint1" -parent "jnt_hip1";
+	rename -uuid "D95295FF-4500-BC09-61D6-5F8A07B54950";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_socketW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -1.7763568394002505e-15 
+		1.4210854715202004e-14 3.1086244689504383e-15 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -1.2722221569491547e-14 
+		-3.1805577146768283e-15 -1.2722218725854067e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 2.5444437451708134e-14 9.5416640443905471e-15 
+		9.5416640443905535e-15 ;
+	setAttr ".restTranslate" -type "double3" -1.2984647199675265 4.1390158855847403e-07 
+		-9.9638397882134733 ;
+	setAttr ".restRotate" -type "double3" 2.5444437451708134e-14 9.5416640443905471e-15 
+		9.5416640443905535e-15 ;
+	setAttr -keyable on ".R_socketW0";
+createNode scaleConstraint -name "jnt_hip1_scaleConstraint1" -parent "jnt_hip1";
+	rename -uuid "DD7FBE16-46E0-F74E-5C0C-32A8E9A4A66B";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "R_socketW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".R_socketW0";
 createNode joint -name "jnt_hip2" -parent "jnt_COG";
 	rename -uuid "3D000FBA-4AE7-12B8-AA21-1DB4D001F193";
-	setAttr ".translate" -type "double3" -1.2691449146166178 3.4111022584326633e-07 
-		9.9676174376528017 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42724,7 +43545,6 @@ createNode joint -name "jnt_hip2" -parent "jnt_COG";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_leg_upper1" -parent "jnt_hip2";
 	rename -uuid "AF4E4A3F-449B-69A8-7CFC-AB951A060562";
-	setAttr ".translate" -type "double3" -19.069958856894146 -2.0660294955909535 0.41912970810108074 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42733,8 +43553,6 @@ createNode joint -name "jnt_leg_upper1" -parent "jnt_hip2";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_knee2" -parent "jnt_leg_upper1";
 	rename -uuid "C2AB1724-46EC-A233-1847-35B059189619";
-	setAttr ".translate" -type "double3" 1.4210854715202004e-14 32.925600115625222 
-		-0.77695510008004276 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42742,8 +43560,6 @@ createNode joint -name "jnt_knee2" -parent "jnt_leg_upper1";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_ankle2" -parent "jnt_knee2";
 	rename -uuid "DD99FE13-4A5D-88AF-4EBB-26B3CA03AE69";
-	setAttr ".translate" -type "double3" 40.375656121477448 2.0029819141125255e-13 
-		-3.5115902241972984e-15 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
@@ -42751,814 +43567,1375 @@ createNode joint -name "jnt_ankle2" -parent "jnt_knee2";
 	setAttr ".radius" 2;
 createNode joint -name "jnt_toe4" -parent "jnt_ankle2";
 	rename -uuid "614BA1FA-4255-7A19-0D7D-C1B9AE5F35F4";
-	setAttr ".translate" -type "double3" -10.552899999999983 10.614370000000022 1.990055640721522e-06 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
-	setAttr ".jointOrient" -type "double3" -90.000253 -8.2409000013159057e-06 -37.610488 ;
+	setAttr ".jointOrient" -type "double3" 89.999746999999985 -8.2408999949547949e-06 
+		-37.610488 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_toe4_parentConstraint1" -parent "jnt_toe4";
+	rename -uuid "6AF7EF93-4CCB-52BB-B7EA-25AEA7956512";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_toe3W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.4210854715202004e-14 
+		1.27675647831893e-15 4.3520742565306136e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 2.4822652988528966e-14 -6.8370779954878661e-15 
+		6.3610714477606396e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" -2.3854160110976377e-14 -1.3241718894150478e-30 
+		-6.3611093629270335e-15 ;
+	setAttr ".restTranslate" -type "double3" -10.552899999999987 10.614370000000012 
+		1.9900556408325443e-06 ;
+	setAttr ".restRotate" -type "double3" -2.3854160110976377e-14 -1.3241718894150478e-30 
+		-6.3611093629270335e-15 ;
+	setAttr -keyable on ".L_toe3W0";
+createNode scaleConstraint -name "jnt_toe4_scaleConstraint1" -parent "jnt_toe4";
+	rename -uuid "635E31DC-4944-9E73-3B06-4493D599D8A1";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_toe3W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_toe3W0";
 createNode joint -name "jnt_toe5" -parent "jnt_ankle2";
 	rename -uuid "87774FEF-4056-9634-CCDF-9C9365118080";
-	setAttr ".translate" -type "double3" 3.5527136788005009e-15 8.8528699895060292 
-		-11.201031008294052 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrient" -type "double3" -179.99964 -52.389368000000005 -89.999966 ;
 	setAttr ".radius" 2;
+createNode parentConstraint -name "jnt_toe5_parentConstraint1" -parent "jnt_toe5";
+	rename -uuid "21BDB7CE-4A8D-B867-C6BB-6499AF74532D";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_toe2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 2.4424906541753444e-14 
+		3.5527136788005009e-15 3.730349362740526e-14 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 7.8684877705664161e-14 0 
+		-6.3611093629270348e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -6.679164831073383e-14 3.1805546814635491e-15 
+		5.7249984266343296e-14 ;
+	setAttr ".restTranslate" -type "double3" -7.1054273576010019e-15 8.8528699895060186 
+		-11.201031008294054 ;
+	setAttr ".restRotate" -type "double3" -6.679164831073383e-14 3.1805546814635491e-15 
+		5.7249984266343296e-14 ;
+	setAttr -keyable on ".L_toe2W0";
+createNode scaleConstraint -name "jnt_toe5_scaleConstraint1" -parent "jnt_toe5";
+	rename -uuid "21C1B5DD-4C1A-C1B7-BA0F-CBB7287B3240";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_toe2W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_toe2W0";
 createNode joint -name "jnt_toe6" -parent "jnt_ankle2";
 	rename -uuid "F0E7F81E-4311-D989-A8EA-B49456A0F16D";
-	setAttr ".translate" -type "double3" 10.553000000000011 10.614370000000008 9.9005563791720874e-07 ;
 	setAttr ".minRotLimit" -type "double3" -360 -360 -360 ;
 	setAttr ".maxRotLimit" -type "double3" 360 360 360 ;
 	setAttr ".displayLocalAxis" yes;
 	setAttr ".jointOrient" -type "double3" -89.999875 -1.0336000000004868e-05 -142.389551 ;
 	setAttr ".radius" 2;
-createNode transform -name "group1";
-	rename -uuid "87702D6C-4F0B-6C73-0DA2-59B7351155A3";
-	setAttr ".translate" -type "double3" 28.953399999999807 16.645800000000023 -0.4171309999999348 ;
-	setAttr ".rotate" -type "double3" -179.99999994632091 0 0 ;
-	setAttr ".scale" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
-createNode transform -name "ctrl_ctrl_toe8";
-	rename -uuid "54BFEE84-45B7-7661-BB91-B98D60DA4162";
-	setAttr ".translate" -type "double3" -7.1054273576010019e-15 -3.5527136788005009e-15 
-		-2.3314683517128287e-15 ;
-	setAttr ".rotate" -type "double3" 0.0003600000000499644 52.389367946320924 89.999966000000029 ;
-	setAttr ".rotatePivot" -type "double3" 28.95344352722168 7.7929315567016673 10.783879280090328 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 0 0 3.5527136788005009e-15 ;
-	setAttr ".scalePivot" -type "double3" 28.95344352722168 7.7929315567016673 10.783879280090328 ;
-createNode nurbsCurve -name "ctrl_ctrl_toeShape8" -parent "ctrl_ctrl_toe8";
-	rename -uuid "9C991234-4B32-EAAF-40A5-AB8D5858A540";
+createNode parentConstraint -name "jnt_toe6_parentConstraint1" -parent "jnt_toe6";
+	rename -uuid "E57F9E23-43D9-384D-B7C3-BD8DD370CD0A";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_toe1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		31.237048928333905 16.298204900526603 4.4311348943471991
-		32.274674115341107 9.0384459521379448 0.52083826959741208
-		31.366767467596318 1.0490815630336598 2.6224918776031085
-		29.045168385979757 -2.9898269623896212 9.5049755382048939
-		26.669838126109454 -0.71234178712325757 17.136623665833479
-		25.63221293910226 6.5474171612653791 21.046920290583262
-		26.540119586847048 14.536781550369685 18.945266682577564
-		28.86171866846361 18.575690075792963 12.062783021975783
-		31.237048928333905 16.298204900526603 4.4311348943471991
-		32.274674115341107 9.0384459521379448 0.52083826959741208
-		31.366767467596318 1.0490815630336598 2.6224918776031085
-		;
-createNode transform -name "ctrl_toe7";
-	rename -uuid "BB4F14F0-48DF-2218-D71B-5DAFB78F9D04";
-	setAttr ".translate" -type "double3" -7.1054273576010019e-15 -3.5527136788005009e-15 
-		-2.3314683517128287e-15 ;
-	setAttr ".rotate" -type "double3" 90.000124957476586 1.0303240207271924e-05 142.38955099999998 ;
-	setAttr ".rotatePivot" -type "double3" 39.506355285644531 6.0314278602600062 -0.41713246703147866 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -2.8421709430404007e-14 0 2.6645352591003757e-15 ;
-	setAttr ".scalePivot" -type "double3" 39.506355285644531 6.0314278602600062 -0.41713246703147866 ;
-createNode nurbsCurve -name "ctrl_toeShape7" -parent "ctrl_toe7";
-	rename -uuid "73BAE9E2-4534-1EEE-03D9-AFA375E9B45E";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		43.88741449876364 -1.4215884384726085 -6.6682533378185429
-		42.064860225356988 -4.2576722148034234 0.76866517085477803
-		38.743568457665319 -1.066540711776117 7.5109595054843155
-		35.869106868604277 6.2824845154519604 9.6090850863553925
-		35.125296072525337 13.484444158992613 5.8339884037556402
-		36.947850345931954 16.320527935323426 -1.6029301049176787
-		40.26914211362363 13.129396432296122 -8.345224439547227
-		43.143603702684665 5.7803712050680485 -10.443350020418302
-		43.88741449876364 -1.4215884384726085 -6.6682533378185429
-		42.064860225356988 -4.2576722148034234 0.76866517085477803
-		38.743568457665319 -1.066540711776117 7.5109595054843155
-		;
-createNode transform -name "ctrl_ctrl_toe9";
-	rename -uuid "8C73EE2A-42B1-7D40-13CA-019DAF26D700";
-	setAttr ".translate" -type "double3" -7.1054273576010019e-15 -3.5527136788005009e-15 
-		-2.3314683517128287e-15 ;
-	setAttr ".rotate" -type "double3" 89.999747042523381 8.2081401863190774e-06 37.610487999999975 ;
-	setAttr ".rotatePivot" -type "double3" 18.4005126953125 6.0314321517944336 -0.41713252663612344 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -2.6645352591003757e-15 8.8817841970012523e-16 
-		0 ;
-	setAttr ".scalePivot" -type "double3" 18.4005126953125 6.0314321517944336 -0.41713252663612344 ;
-createNode nurbsCurve -name "ctrl_ctrl_toeShape9" -parent "ctrl_ctrl_toe9";
-	rename -uuid "8907FF47-48DB-2708-D354-FEA2693FABC6";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		20.648874998045621 -2.1259660005495098 -6.9147756577263868
-		22.304450711093292 -3.809164768924334 0.90179284354293721
-		21.673152481160479 0.27212467701097331 7.945752750719322
-		19.124786249439708 7.7271383317976952 10.090847882991179
-		16.152150392579383 14.18883030413838 6.0805106044541404
-		14.496574679531728 15.872029072513214 -1.7360578968151898
-		15.127872909464536 11.790739626577899 -8.7800178039915764
-		17.676239141185306 4.3357259717911791 -10.925112936263423
-		20.648874998045621 -2.1259660005495098 -6.9147756577263868
-		22.304450711093292 -3.809164768924334 0.90179284354293721
-		21.673152481160479 0.27212467701097331 7.945752750719322
-		;
-createNode transform -name "ctrl_ankle3";
-	rename -uuid "DD7666A0-440A-5EC3-9173-4BBE0E67ED0E";
-	setAttr ".translate" -type "double3" -7.1054273576010019e-15 -3.5527136788005009e-15 
-		-2.3314683517128287e-15 ;
-	setAttr ".rotate" -type "double3" -179.99999994632091 0 0 ;
-	setAttr ".rotatePivot" -type "double3" 28.953433990478516 16.645772933959961 -0.41713076829910278 ;
-	setAttr ".scalePivot" -type "double3" 28.953433990478516 16.645772933959961 -0.41713076829910278 ;
-createNode nurbsCurve -name "ctrl_ankleShape3" -parent "ctrl_ankle3";
-	rename -uuid "A41426D5-4DDF-C528-65D6-94B0697BB566";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		8.0671252647682596 16.645772953527889 20.469177957411155
-		28.953433990478509 16.645772961633178 29.120570299511851
-		49.839742716188766 16.645772953527889 20.469177957411151
-		58.491135058289466 16.645772933959975 -0.41713076829910123
-		49.839742716188766 16.645772914392087 -21.303439494009353
-		28.953433990478516 16.645772906286798 -29.954831836110063
-		8.0671252647682596 16.645772914392087 -21.30343949400935
-		-0.58426707733244487 16.645772933959975 -0.41713076829910689
-		8.0671252647682596 16.645772953527889 20.469177957411155
-		28.953433990478509 16.645772961633178 29.120570299511851
-		49.839742716188766 16.645772953527889 20.469177957411151
-		;
-createNode transform -name "ctrl_knee3";
-	rename -uuid "323983E4-4337-CA6F-28C2-1085ABE1C821";
-	setAttr ".translate" -type "double3" -7.1054273576010019e-15 -7.1054273576010019e-15 
-		-3.5527136788005009e-15 ;
-	setAttr ".rotate" -type "double3" -180 -1.8328239041861905 -90 ;
-	setAttr ".rotatePivot" -type "double3" 28.953433990478516 57.000762939453125 -1.7084835767745972 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 0 -1.4210854715202004e-14 0 ;
-	setAttr ".scalePivot" -type "double3" 28.953433990478516 57.000762939453125 -1.7084835767745972 ;
-createNode nurbsCurve -name "ctrl_kneeShape3" -parent "ctrl_knee3";
-	rename -uuid "D16803DF-4001-A1B3-D864-089B0DB88A4C";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		28.380710063657098 74.907699268734717 16.189291592351598
-		28.143480045672135 57.000762939453139 23.602792803708084
-		28.380710063657098 39.093826610171554 16.189291592351605
-		28.953433990478487 31.676530722031636 -1.7084835767745925
-		29.526157917299876 39.093826610171554 -19.606258745900803
-		29.763387935284868 57.000762939453125 -27.019759957257307
-		29.526157917299876 74.907699268734703 -19.60625874590081
-		28.953433990478487 82.324995156874621 -1.7084835767746038
-		28.380710063657098 74.907699268734717 16.189291592351598
-		28.143480045672135 57.000762939453139 23.602792803708084
-		28.380710063657098 39.093826610171554 16.189291592351605
-		;
-createNode transform -name "ctrl_leg_upper3";
-	rename -uuid "16B9C049-46F7-88A4-1E4F-86A00BBA59D8";
-	setAttr ".translate" -type "double3" -7.1054273576010019e-15 -1.4210854715202004e-14 
-		-2.6645352591003757e-15 ;
-	setAttr ".rotate" -type "double3" 179.99999147336013 0 0 ;
-	setAttr ".rotatePivot" -type "double3" 28.953433990478501 89.926414489746151 -2.4854445457458496 ;
-	setAttr ".scalePivot" -type "double3" 28.953433990478501 89.926414489746151 -2.4854445457458496 ;
-createNode nurbsCurve -name "ctrl_leg_upperShape3" -parent "ctrl_leg_upper3";
-	rename -uuid "5E2BD5BC-4499-C84D-EB23-FF8D0D88CEA2";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		15.508349439221146 101.75384054418788 15.421493543669106
-		28.953433990478494 89.926410721045997 22.838787671675348
-		42.398518541735847 78.09898310555748 15.421490023401946
-		47.967654910119634 73.199904386889486 -2.4854470349506235
-		42.398518541735847 78.098988435304221 -20.3923826351608
-		28.953433990478501 89.926418258446162 -27.809676763167062
-		15.508349439221142 101.75384587393462 -20.392379114893647
-		9.9392130708373756 106.65292459260269 -2.4854420565410797
-		15.508349439221146 101.75384054418788 15.421493543669106
-		28.953433990478494 89.926410721045997 22.838787671675348
-		42.398518541735847 78.09898310555748 15.421490023401946
-		;
-createNode transform -name "ctrl_hip3";
-	rename -uuid "D89C4D0E-485F-C4E7-7933-388E90B0E8C9";
-	setAttr ".translate" -type "double3" -3.5527136788005009e-15 8.1712414612411521e-14 
-		-3.3306690738754696e-15 ;
-	setAttr ".rotate" -type "double3" 1.9595524619380484e-05 2.9999807573710788e-06 
-		165.66332599999998 ;
-	setAttr ".rotatePivot" -type "double3" 9.9657392501831374 92.646797180175668 -2.9045698642730713 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 7.1054273576010019e-15 0 4.0793784366124908e-16 ;
-	setAttr ".scalePivot" -type "double3" 9.9657392501831374 92.646797180175668 -2.9045698642730713 ;
-createNode nurbsCurve -name "ctrl_hipShape3" -parent "ctrl_hip3";
-	rename -uuid "1A793447-4D82-860B-8AA3-F9BF2E0EB5B4";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		12.00697457912182 107.87742976533069 -18.271388800671104
-		9.965740388058439 92.646789747706933 -24.636526399202879
-		7.9245055304431418 77.416154083922507 -18.271378596475373
-		7.0789977018782579 71.10742258225909 -2.9045626488170715
-		7.9245039212444812 77.416164595020604 12.462249072124974
-		9.9657381123078697 92.646804612644388 18.827386670656754
-		12.006972969923169 107.87744027642873 12.462238867929241
-		12.852480798488029 114.18617177809226 -2.9045770797290684
-		12.00697457912182 107.87742976533069 -18.271388800671104
-		9.965740388058439 92.646789747706933 -24.636526399202879
-		7.9245055304431418 77.416154083922507 -18.271378596475373
-		;
-createNode transform -name "ctrl_toe11";
-	rename -uuid "6F850B2D-4229-E063-7B93-DCB5FC34ED7D";
-	setAttr ".translate" -type "double3" -1.0658141036401503e-14 -3.5527136788005009e-15 
-		-2.3314683517128287e-15 ;
-	setAttr ".rotate" -type "double3" -179.99964000000003 -52.389367999984799 -89.999966000000015 ;
-	setAttr ".rotatePivot" -type "double3" -28.95344352722168 7.7929315567016673 10.783879280090328 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 0 7.1054273576010019e-15 0 ;
-	setAttr ".scalePivot" -type "double3" -28.95344352722168 7.7929315567016673 10.783879280090328 ;
-createNode nurbsCurve -name "ctrl_toeShape11" -parent "ctrl_toe11";
-	rename -uuid "E49C0AB8-4C6F-D9B5-BDE4-2085FEA8DED8";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-31.237048934283887 -0.71234178712327534 17.136623663694603
-		-32.27467412495357 6.547417161265372 21.046920287472549
-		-31.366767475240383 14.53678155036966 18.945266680317214
-		-29.045168387177636 18.57569007579297 12.062783021889866
-		-26.669838120159444 16.298204900526621 4.4311348964860464
-		-25.632212929489775 9.038445952137991 0.52083827270808669
-		-26.540119579202937 1.0490815630336918 2.6224918798634285
-		-28.861718667265698 -2.9898269623896212 9.504975538290779
-		-31.237048934283887 -0.71234178712327534 17.136623663694603
-		-32.27467412495357 6.547417161265372 21.046920287472549
-		-31.366767475240383 14.53678155036966 18.945266680317214
-		;
-createNode transform -name "ctrl_toe10";
-	rename -uuid "8AE55E4D-4FDC-E7DA-4BBA-E5BB03A709EB";
-	setAttr ".translate" -type "double3" -7.1054273576010019e-15 -3.5527136788005009e-15 
-		-2.3314683517128287e-15 ;
-	setAttr ".rotate" -type "double3" -90.000252999987993 -8.2408907204573448e-06 -37.610487999999975 ;
-	setAttr ".rotatePivot" -type "double3" -18.4005126953125 6.0314321517944336 -0.41713252663612344 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -1.3322676295501878e-15 8.8817841970012523e-16 
-		-8.8817841970012523e-16 ;
-	setAttr ".scalePivot" -type "double3" -18.4005126953125 6.0314321517944336 -0.41713252663612344 ;
-createNode nurbsCurve -name "ctrl_toeShape10" -parent "ctrl_toe10";
-	rename -uuid "1A71E860-4BCF-CE4F-5F8F-C7BB90211609";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-20.648875002708447 14.188830298032187 6.080510610506618
-		-22.304450716718211 15.872029071260281 -1.7360578895138383
-		-21.673152484452498 11.790739630912185 -8.780017799718383
-		-19.124786248470411 4.3357259791737102 -10.925112937521574
-		-16.152150387916564 -2.1259659944433258 -6.9147756637788724
-		-14.496574673906796 -3.8091647676714313 0.90179283624158924
-		-15.127872906172509 0.27212467267667151 7.9457527464461304
-		-17.676239142154603 7.7271383244151473 10.090847884249317
-		-20.648875002708447 14.188830298032187 6.080510610506618
-		-22.304450716718211 15.872029071260281 -1.7360578895138383
-		-21.673152484452498 11.790739630912185 -8.780017799718383
-		;
-createNode transform -name "ctrl_toe12";
-	rename -uuid "9DD5986E-41F7-9BDB-03D0-F2AF4B536A8C";
-	setAttr ".translate" -type "double3" 3.5527136788005009e-15 -3.5527136788005009e-15 
-		-2.3314683517128287e-15 ;
-	setAttr ".rotate" -type "double3" -89.99987500001204 -1.033599073186853e-05 -142.38955099999998 ;
-	setAttr ".rotatePivot" -type "double3" -39.506355285644531 6.0314278602600062 -0.41713246703147866 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -1.4210854715202004e-14 -1.0658141036401503e-14 
-		8.8817841970012523e-16 ;
-	setAttr ".scalePivot" -type "double3" -39.506355285644531 6.0314278602600062 -0.41713246703147866 ;
-createNode nurbsCurve -name "ctrl_toeShape12" -parent "ctrl_toe12";
-	rename -uuid "3EE9C5A4-4461-E3BD-9402-BCAF29C4823B";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-43.887414503023891 13.484444161126483 5.833988398225749
-		-42.064860231238384 16.320527932981165 -1.6029301125518458
-		-38.743568461722639 13.129396426849784 -8.3452244448136987
-		-35.869106868460875 5.7803711997080356 -10.443350020232057
-		-35.125296068265243 -1.4215884406064703 -6.668253332288689
-		-36.947850340050749 -4.2576722124611486 0.76866517848889515
-		-40.269142109566488 -1.0665407063297696 7.510959510750741
-		-43.143603702828258 6.2824845208119831 9.6090850861691131
-		-43.887414503023891 13.484444161126483 5.833988398225749
-		-42.064860231238384 16.320527932981165 -1.6029301125518458
-		-38.743568461722639 13.129396426849784 -8.3452244448136987
-		;
-createNode transform -name "ctrl_ankle4";
-	rename -uuid "D3FE3EFE-4B5A-8432-68C8-8D8588FDB961";
-	setAttr ".translate" -type "double3" -1.0658141036401503e-14 -3.5527136788005009e-15 
-		-2.3314683517128287e-15 ;
-	setAttr ".rotatePivot" -type "double3" -28.953433990478516 16.645772933959961 -0.41713076829910278 ;
-	setAttr ".scalePivot" -type "double3" -28.953433990478516 16.645772933959961 -0.41713076829910278 ;
-createNode nurbsCurve -name "ctrl_ankleShape4" -parent "ctrl_ankle4";
-	rename -uuid "A2802AB4-44F9-BB47-CE94-B2954C7CB6DF";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-8.0671252647682614 16.645772933959961 -21.303439494009357
-		-28.953433990478512 16.645772933959961 -29.954831836110053
-		-49.839742716188766 16.645772933959961 -21.303439494009353
-		-58.491135058289473 16.645772933959961 -0.41713076829910428
-		-49.839742716188766 16.645772933959961 20.469177957411151
-		-28.953433990478519 16.645772933959961 29.120570299511861
-		-8.0671252647682614 16.645772933959961 20.469177957411148
-		0.58426707733244498 16.645772933959961 -0.41713076829909862
-		-8.0671252647682614 16.645772933959961 -21.303439494009357
-		-28.953433990478512 16.645772933959961 -29.954831836110053
-		-49.839742716188766 16.645772933959961 -21.303439494009353
-		;
-createNode transform -name "ctrl_knee4";
-	rename -uuid "9232038B-4862-F192-069A-E8B340011ECC";
-	setAttr ".translate" -type "double3" -1.0658141036401503e-14 -7.1054273576010019e-15 
-		-3.5527136788005009e-15 ;
-	setAttr ".rotate" -type "double3" 0 -1.832829759507141 -89.999999999999957 ;
-	setAttr ".rotatePivot" -type "double3" -28.953433990478516 57.000762939453125 -1.7084835767745972 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 1.4210854715202004e-14 -1.0658141036401503e-14 
-		-2.2204460492503131e-16 ;
-	setAttr ".scalePivot" -type "double3" -28.953433990478516 57.000762939453125 -1.7084835767745972 ;
-createNode nurbsCurve -name "ctrl_kneeShape4" -parent "ctrl_knee4";
-	rename -uuid "5E355ADF-4592-75FD-0906-B5BDBA37EE5B";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-29.526159746356416 74.90769926873466 -19.606258687371405
-		-29.76339052196143 57.000762939453111 -27.01975987448423
-		-29.526159746356434 39.093826610171519 -19.606258687371398
-		-28.953433990478565 31.6765307220316 -1.7084835767745969
-		-28.380708234600682 39.093826610171519 16.189291533822221
-		-28.143477458995672 57.000762939453111 23.602792720935039
-		-28.380708234600664 74.90769926873466 16.189291533822217
-		-28.953433990478533 82.324995156874579 -1.7084835767745943
-		-29.526159746356416 74.90769926873466 -19.606258687371405
-		-29.76339052196143 57.000762939453111 -27.01975987448423
-		-29.526159746356434 39.093826610171519 -19.606258687371398
-		;
-createNode transform -name "ctrl_leg_upper4";
-	rename -uuid "4EE901A7-49F9-A583-AC5F-34B64A6A0650";
-	setAttr ".translate" -type "double3" -1.0658141036401503e-14 -1.4210854715202004e-14 
-		-2.6645352591003757e-15 ;
-	setAttr ".rotatePivot" -type "double3" -28.953433990478501 89.926414489746151 -2.4854445457458496 ;
-	setAttr ".scalePivot" -type "double3" -28.953433990478501 89.926414489746151 -2.4854445457458496 ;
-createNode nurbsCurve -name "ctrl_leg_upperShape4" -parent "ctrl_leg_upper4";
-	rename -uuid "3A7D24A3-49B0-8A9D-883C-8EABDA34EBF3";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-15.508349439221149 78.098985770430815 -20.392380875027428
-		-28.953433990478501 89.926414489746151 -27.809676763167335
-		-42.398518541735854 101.75384320906149 -20.392380875027424
-		-47.967654910119634 106.65292459260294 -2.4854445457458509
-		-42.398518541735854 101.75384320906149 15.421491783535728
-		-28.953433990478505 89.926414489746151 22.83878767167565
-		-15.508349439221149 78.098985770430815 15.421491783535725
-		-9.9392130708373756 73.199904386889344 -2.4854445457458461
-		-15.508349439221149 78.098985770430815 -20.392380875027428
-		-28.953433990478501 89.926414489746151 -27.809676763167335
-		-42.398518541735854 101.75384320906149 -20.392380875027424
-		;
-createNode transform -name "ctrl_hip4";
-	rename -uuid "161B2525-4547-F2AE-FBB4-37A24473B2F1";
-	setAttr ".translate" -type "double3" -1.0658141036401503e-14 8.1712414612411521e-14 
-		-3.3306690738754696e-15 ;
-	setAttr ".rotate" -type "double3" 1.9595570567338023e-05 180.00000299999246 14.336674000000027 ;
-	setAttr ".rotatePivot" -type "double3" -9.9657392501831374 92.646797180175668 -2.9045698642730713 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 4.4408920985006262e-15 -1.5654144647214707e-14 
-		0 ;
-	setAttr ".scalePivot" -type "double3" -9.9657392501831374 92.646797180175668 -2.9045698642730713 ;
-createNode nurbsCurve -name "ctrl_hipShape4" -parent "ctrl_hip4";
-	rename -uuid "30C933CB-49E6-F97E-8E64-8CB7A3CCDC30";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-12.006974579124925 77.416164595032981 12.462249072136778
-		-9.9657403880628479 92.646804612661825 18.827386670656733
-		-7.9245055304462584 107.87744027644108 12.462238867917442
-		-7.0789977018782428 114.1861717780922 -2.9045770797457591
-		-7.9245039212413309 107.87742976531838 -18.271388800682924
-		-9.9657381123033986 92.646789747689496 -24.636526399202896
-		-12.006972969919982 77.4161540839102 -18.271378596463592
-		-12.852480798487999 71.107422582259062 -2.9045626488003946
-		-12.006974579124925 77.416164595032981 12.462249072136778
-		-9.9657403880628479 92.646804612661825 18.827386670656733
-		-7.9245055304462584 107.87744027644108 12.462238867917442
-		;
-createNode transform -name "ctrl_finger8";
-	rename -uuid "807F831E-402A-40BB-96F9-6795128F75C6";
-	setAttr ".translate" -type "double3" 1.4210854715202004e-14 -3.1974423109204508e-14 
-		-1.7763568394002505e-15 ;
-	setAttr ".rotate" -type "double3" 178.13587101186852 -42.722858001153234 -89.456543027535332 ;
-	setAttr ".rotatePivot" -type "double3" -99.601432800292969 31.623157501220724 9.1142196655273651 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -1.4210854715202004e-14 -2.1316282072803006e-14 
-		1.4210854715202004e-14 ;
-	setAttr ".scalePivot" -type "double3" -99.601432800292969 31.623157501220724 9.1142196655273651 ;
-createNode nurbsCurve -name "ctrl_fingerShape8" -parent "ctrl_finger8";
-	rename -uuid "E6840E52-4F3F-D4F5-820E-1B91ACC3EB79";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-100.75122576745672 22.750558886462017 15.675230567763766
-		-101.17724543634873 30.055297735594195 19.983926395545332
-		-100.68017543479822 38.278467571531252 17.925295439900498
-		-99.551192628264602 42.603047030078685 10.705255794724859
-		-98.451639833129263 40.495756115979404 2.553208763290904
-		-98.025620164237239 33.191017266847169 -1.7554870644906799
-		-98.522690165787736 24.967847430910155 0.30314389115417839
-		-99.651672972321364 20.64326797236275 7.5231835363298245
-		-100.75122576745672 22.750558886462017 15.675230567763766
-		-101.17724543634873 30.055297735594195 19.983926395545332
-		-100.68017543479822 38.278467571531252 17.925295439900498
-		;
-createNode transform -name "ctrl_finger7";
-	rename -uuid "C8B5A18A-46AF-87D4-AA8B-3B8B41F059F9";
-	setAttr ".translate" -type "double3" 1.4210854715202004e-14 -2.8421709430404007e-14 
-		-3.5527136788005009e-15 ;
-	setAttr ".rotate" -type "double3" -75.212771992458428 14.158201004886784 -130.74481501763847 ;
-	setAttr ".rotatePivot" -type "double3" -111.69995880126953 31.623153686523448 -8.4526891708373935 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -5.6843418860808015e-14 -1.4210854715202004e-14 
-		1.0658141036401503e-14 ;
-	setAttr ".scalePivot" -type "double3" -111.69995880126953 31.623153686523448 -8.4526891708373935 ;
-createNode nurbsCurve -name "ctrl_fingerShape7" -parent "ctrl_finger7";
-	rename -uuid "5AE8FAA2-4085-D9E4-2A5C-2FBA4C6278AD";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-112.85858328868022 41.49429542046677 -3.5221674671229835
-		-111.85083480527057 42.158578928812673 -11.927447507869516
-		-110.75470520495386 36.651353215593389 -18.297261240751553
-		-110.21229234147697 28.198676412562975 -18.900258170837148
-		-110.54133431385902 21.752011952580176 -13.383210874551651
-		-111.54908279726865 21.08772844423428 -4.9779308338051322
-		-112.64521239758537 26.59495415745355 1.3918828990769185
-		-113.18762526106224 35.047630960483971 1.9948798291625565
-		-112.85858328868022 41.49429542046677 -3.5221674671229835
-		-111.85083480527057 42.158578928812673 -11.927447507869516
-		-110.75470520495386 36.651353215593389 -18.297261240751553
-		;
-createNode transform -name "ctrl_finger9";
-	rename -uuid "AB3F7998-45C0-5B36-2D82-28B990C31E9A";
-	setAttr ".translate" -type "double3" -15.273223892632803 -27.304848898177028 -2.2952471402622368 ;
-	setAttr ".rotate" -type "double3" -104.78712099389955 14.1582079934912 -49.254913017990994 ;
-	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999978 0.99999999999999989 ;
-	setAttr ".rotatePivot" -type "double3" -87.480682373046776 31.623170852661111 -8.4526863098144247 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 15.273223892632767 27.304848898177045 
-		2.2952471402622012 ;
-	setAttr ".scalePivot" -type "double3" -87.48068237304679 31.623170852661119 -8.4526863098144265 ;
-	setAttr ".scalePivotTranslate" -type "double3" 1.4210854715202001e-14 -7.1054273576009987e-15 
-		1.7763568394002501e-15 ;
-createNode nurbsCurve -name "ctrl_fingerShape9" -parent "ctrl_finger9";
-	rename -uuid "8C55C7D3-4D1C-E964-1914-5280B240AE34";
-	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-88.948575731964809 38.871796542901784 -0.18258299759103025
-		-88.564619373810146 42.644285772521144 -7.7803764059487897
-		-87.545707421366274 39.960755354558991 -15.77199983787331
-		-86.488704677510768 32.393181012816726 -19.476068672321802
-		-86.012789014128614 24.374545162420379 -16.722789622037858
-		-86.396745372283277 20.602055932800994 -9.1249962136800811
-		-87.415657324727206 23.285586350763204 -1.1333727817555994
-		-88.472660068582655 30.853160692505437 2.570696052692921
-		-88.948575731964809 38.871796542901784 -0.18258299759103025
-		-88.564619373810146 42.644285772521144 -7.7803764059487897
-		-87.545707421366274 39.960755354558991 -15.77199983787331
-		;
-createNode transform -name "ctrl_wrist3";
-	rename -uuid "2C1F2330-470B-5ACA-26A7-538D70029A30";
-	setAttr ".translate" -type "double3" 1.4210854715202004e-14 0 -1.7763568394002505e-15 ;
-	setAttr ".rotate" -type "double3" 90.000000008729685 -3.180554681463516e-15 -89.999372746041502 ;
-	setAttr ".rotatePivot" -type "double3" -99.589447021484375 40.918552398681641 -3.6970100402832031 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 1.4210854715202004e-14 -1.4210854715202004e-14 
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 1.27675647831893e-15 
 		2.1316282072803006e-14 ;
-	setAttr ".scalePivot" -type "double3" -99.589447021484375 40.918552398681641 -3.6970100402832031 ;
-createNode nurbsCurve -name "ctrl_wristShape3" -parent "ctrl_wrist3";
-	rename -uuid "F6776A6F-43DD-4A84-5B9D-2A84D94C4EE1";
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 4.2485151165019616e-14 3.7578421615982139e-13 
+		1.9530726538012414e-07 ;
+	setAttr ".lastTargetRotate" -type "double3" -4.4527764900827088e-14 -3.753054524885871e-13 
+		-1.9530726856103061e-07 ;
+	setAttr ".restTranslate" -type "double3" 10.553000000000029 10.614369999999996 9.900556381947645e-07 ;
+	setAttr ".restRotate" -type "double3" -4.4527764900827088e-14 -3.753054524885871e-13 
+		-1.9530726856103061e-07 ;
+	setAttr -keyable on ".L_toe1W0";
+createNode scaleConstraint -name "jnt_toe6_scaleConstraint1" -parent "jnt_toe6";
+	rename -uuid "E7D09AB8-4D09-4E0F-E4B9-23BEBCB9CA6E";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_toe1W0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-99.589045666179601 4.2572213068232259 -40.358341118773076
-		-99.589447021484375 -10.928399238175452 -3.6970100323836732
-		-99.589848376789092 4.2572213179947909 32.964321049378256
-		-99.590014623599671 40.918552406581107 48.149941593466949
-		-99.589848376789149 77.579883490540027 32.964321038206734
-		-99.589447021484375 92.765504035538726 -3.6970100481826336
-		-99.589045666179629 77.579883479368448 -40.358341129944613
-		-99.588879419369079 40.918552390782139 -55.543961674033305
-		-99.589045666179601 4.2572213068232259 -40.358341118773076
-		-99.589447021484375 -10.928399238175452 -3.6970100323836732
-		-99.589848376789092 4.2572213179947909 32.964321049378256
-		;
-createNode transform -name "ctrl_elbow4";
-	rename -uuid "C069402E-4861-DA03-568F-74ADBA4ED7B2";
-	setAttr ".translate" -type "double3" 1.4210854715202004e-14 0 -4.4408920985006262e-15 ;
-	setAttr ".rotate" -type "double3" 90.267372961821735 4.1712918606020565e-06 -89.999372726576311 ;
-	setAttr ".rotatePivot" -type "double3" -99.590240478515625 112.96539306640625 -3.6970047950744629 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -2.8421709430404007e-14 2.1316282072803006e-14 
-		-4.2632564145606011e-14 ;
-	setAttr ".scalePivot" -type "double3" -99.590240478515625 112.96539306640625 -3.6970047950744629 ;
-createNode nurbsCurve -name "ctrl_elbowShape4" -parent "ctrl_elbow4";
-	rename -uuid "04BB9C07-481D-B182-2ACF-BD93A4A3CC3F";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_toe1W0";
+createNode parentConstraint -name "jnt_ankle2_parentConstraint1" -parent "jnt_ankle2";
+	rename -uuid "D584F9B3-413B-B342-2157-31823FDAF3D8";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_ankleW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-99.589836441709153 76.13338026610208 -40.18685580805581
-		-99.590236703913519 61.119005953214277 -3.4550598765209912
-		-99.590639177228667 76.475542051188683 33.135008003072457
-		-99.590808098244963 113.20733798490402 48.149382315010811
-		-99.590644515322055 149.79740586671059 32.792846217906899
-		-99.590244253117604 164.81178017959837 -3.9389497136279203
-		-99.589841779802569 149.4552440816239 -40.529017593221369
-		-99.58967285878623 112.72344814790867 -55.543391905159773
-		-99.589836441709153 76.13338026610208 -40.18685580805581
-		-99.590236703913519 61.119005953214277 -3.4550598765209912
-		-99.590639177228667 76.475542051188683 33.135008003072457
-		;
-createNode transform -name "ctrl_upper_arm5";
-	rename -uuid "0704AB18-4BDE-235E-FD46-0786B3E90F59";
-	setAttr ".translate" -type "double3" -3.5527136788005009e-15 1.8118839761882555e-13 
-		-4.2188474935755949e-15 ;
-	setAttr ".rotate" -type "double3" 90.000000008758263 2.1981997113811256e-05 -90.003189383444635 ;
-	setAttr ".rotatePivot" -type "double3" -99.586364746093935 182.56610107421744 -3.6969780921936035 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -5.6843418860808015e-14 5.6843418860808015e-14 
-		2.8421709430404007e-14 ;
-	setAttr ".scalePivot" -type "double3" -99.586364746093935 182.56610107421744 -3.6969780921936035 ;
-createNode nurbsCurve -name "ctrl_upper_armShape5" -parent "ctrl_upper_arm5";
-	rename -uuid "B0F6A988-409F-481F-8390-E6B810E24395";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -7.1054273576010019e-15 
+		-4.6185277824406512e-14 1.3877787807814457e-15 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -9.1440947092076166e-15 
+		4.0689926774147801e-16 1.271571005860008e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" 8.3489560388417319e-15 -3.9756933518293822e-16 
+		-1.9080222078349984e-14 ;
+	setAttr ".restTranslate" -type "double3" 40.375656121477448 2.0961010704922955e-13 
+		-4.1217029789208937e-15 ;
+	setAttr ".restRotate" -type "double3" 8.3489560388417319e-15 -3.9756933518293822e-16 
+		-1.9080222078349984e-14 ;
+	setAttr -keyable on ".L_ankleW0";
+createNode scaleConstraint -name "jnt_ankle2_scaleConstraint1" -parent "jnt_ankle2";
+	rename -uuid "E5B56DC7-4A94-4F30-3F0F-B28C41C27760";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_ankleW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-59.490107382985855 127.26975103368025 34.381623209802044
-		-99.586334743686876 104.3652311337261 -3.6969780802398162
-		-139.68257967939101 127.26972025553721 -41.775579377283982
-		-156.29100570699626 182.56607931078378 -57.548252477719842
-		-139.68262210920187 237.86245111475458 -41.775579394189272
-		-99.586394748500851 260.76697101470887 -3.6969781041474903
-		-59.490149812796773 237.86248189289756 34.381623192896782
-		-42.881723785191454 182.56612283765102 50.154296293332536
-		-59.490107382985855 127.26975103368025 34.381623209802044
-		-99.586334743686876 104.3652311337261 -3.6969780802398162
-		-139.68257967939101 127.26972025553721 -41.775579377283982
-		;
-createNode transform -name "ctrl_finger10";
-	rename -uuid "4C696D86-43DE-0BDE-DCB0-D3B80F2F1CEA";
-	setAttr ".translate" -type "double3" 0 0 -7.1054273576010019e-15 ;
-	setAttr ".rotate" -type "double3" 75.212879006533541 -14.158207997603537 49.254912998401991 ;
-	setAttr ".rotatePivot" -type "double3" 87.48068237304679 31.623170852661119 -8.4526863098144265 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -1.4210854715202004e-14 -1.4210854715202004e-14 
-		1.4210854715202004e-14 ;
-	setAttr ".scalePivot" -type "double3" 87.48068237304679 31.623170852661119 -8.4526863098144265 ;
-createNode nurbsCurve -name "ctrl_fingerShape10" -parent "ctrl_finger10";
-	rename -uuid "35C7B2F4-4834-4B0F-1673-689BA694B9AC";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_ankleW0";
+createNode parentConstraint -name "jnt_knee2_parentConstraint1" -parent "jnt_knee2";
+	rename -uuid "9F01D8C8-4B7C-FED7-5A3B-F19ED96488B1";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_kneeW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		88.948575729272861 24.374545163071872 -16.722789623086626
-		88.564619373750062 20.602055932868709 -9.1249962148857051
-		87.545707423973298 23.285586350207481 -1.1333727824118256
-		86.488704681257801 30.853160691651894 2.5706960529704901
-		86.012789016820705 38.871796542250422 -0.18258299654220167
-		86.396745372343531 42.6442857724536 -7.7803764047431017
-		87.415657322120282 39.960755355114799 -15.771999837217006
-		88.472660064835807 32.393181013670414 -19.476068672599343
-		88.948575729272861 24.374545163071872 -16.722789623086626
-		88.564619373750062 20.602055932868709 -9.1249962148857051
-		87.545707423973298 23.285586350207481 -1.1333727824118256
-		;
-createNode transform -name "ctrl_finger12";
-	rename -uuid "1C03CCFC-4D65-7929-091D-7498D670C73E";
-	setAttr ".translate" -type "double3" 0 -2.8421709430404007e-14 -3.5527136788005009e-15 ;
-	setAttr ".rotate" -type "double3" 104.78722800341119 -14.15820100591066 130.74481499916578 ;
-	setAttr ".rotatePivot" -type "double3" 111.69995880126953 31.623153686523448 -8.4526891708373935 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 2.8421709430404007e-14 2.1316282072803006e-14 
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" -7.815970093361102e-14 
+		0 -2.0261570199409107e-15 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -2.0344868175132103e-16 
+		1.1927080055488188e-15 6.3611093629270446e-15 ;
+	setAttr ".lastTargetRotate" -type "double3" 5.9635400277440979e-16 -2.1866313435061676e-15 
+		-1.9077116067918868e-14 ;
+	setAttr ".restTranslate" -type "double3" 3.5527136788005009e-15 32.925600115625208 
+		-0.77695510008004187 ;
+	setAttr ".restRotate" -type "double3" 5.9635400277440979e-16 -2.1866313435061676e-15 
+		-1.9077116067918868e-14 ;
+	setAttr -keyable on ".L_kneeW0";
+createNode scaleConstraint -name "jnt_knee2_scaleConstraint1" -parent "jnt_knee2";
+	rename -uuid "33AE0F4D-424F-BE25-D2EF-C0BFC60E56A8";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_kneeW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_kneeW0";
+createNode parentConstraint -name "jnt_leg_upper1_parentConstraint1" -parent "jnt_leg_upper1";
+	rename -uuid "BE2BDE52-4DF7-D2C5-EF1C-B1A6AD5DA059";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_hipW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 0 -2.8421709430404007e-14 
+		8.8817841970012523e-16 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -3.0332133116374183e-21 
+		4.5498199674561264e-21 2.672623661749978e-14 ;
+	setAttr ".lastTargetRotate" -type "double3" -1.5166066558187078e-21 -4.5498199674561264e-21 
+		-2.5444437451708134e-14 ;
+	setAttr ".restTranslate" -type "double3" -19.06995885689415 -2.0660294955909819 
+		0.41912970810107941 ;
+	setAttr ".restRotate" -type "double3" -1.5166066558187078e-21 -4.5498199674561264e-21 
+		-2.5444437451708134e-14 ;
+	setAttr -keyable on ".L_hipW0";
+createNode scaleConstraint -name "jnt_leg_upper1_scaleConstraint1" -parent "jnt_leg_upper1";
+	rename -uuid "C2EBAAED-40D9-4991-1F56-48BC7DE1C312";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_hipW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_hipW0";
+createNode parentConstraint -name "jnt_hip2_parentConstraint1" -parent "jnt_hip2";
+	rename -uuid "A62577DF-4390-DEDF-1E93-0B844844817A";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_socketW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
+	setAttr -keyable off ".visibility";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.0658141036401503e-14 
+		-2.8421709430404007e-14 -1.7763568394002505e-15 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" -1.895758319773386e-22 -7.5830332790935439e-22 
 		0 ;
-	setAttr ".scalePivot" -type "double3" 111.69995880126953 31.623153686523448 -8.4526891708373935 ;
-createNode nurbsCurve -name "ctrl_fingerShape12" -parent "ctrl_finger12";
-	rename -uuid "17223BA6-4AA5-42D0-4361-46AA43AF6D28";
+	setAttr ".restTranslate" -type "double3" -1.269144914616632 3.4111022717553396e-07 
+		9.9676174376527999 ;
+	setAttr -keyable on ".L_socketW0";
+createNode scaleConstraint -name "jnt_hip2_scaleConstraint1" -parent "jnt_hip2";
+	rename -uuid "894D2D88-4E72-1B59-B618-75B4602803AC";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "L_socketW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		112.85858328625407 21.752011953211948 -13.383210876386684
-		111.85083480528229 21.087728443695099 -4.9779308354403753
-		110.75470520739643 26.594954156059238 1.3918828985992633
-		110.21229234491949 35.04763095905124 1.9948798301222865
-		110.54133431628495 41.494295419834934 -3.5221674652880921
-		111.54908279725672 42.158578929351776 -11.927447506234316
-		112.64521239514258 36.651353216987637 -18.297261240274025
-		113.18762525761947 28.198676413995614 -18.900258171797077
-		112.85858328625407 21.752011953211948 -13.383210876386684
-		111.85083480528229 21.087728443695099 -4.9779308354403753
-		110.75470520739643 26.594954156059238 1.3918828985992633
-		;
-createNode transform -name "ctrl_finger11";
-	rename -uuid "1E988602-4012-10E7-59EC-08A198EBCE04";
-	setAttr ".translate" -type "double3" 0.22756720113017082 4.2498780512545409e-05 
-		3.3448391612012074e-07 ;
-	setAttr ".rotate" -type "double3" -1.8641289913080628 42.722857997736256 89.456543005897188 ;
-	setAttr ".scale" -type "double3" 0.99999999999999967 0.99999999999999989 1 ;
-	setAttr ".rotatePivot" -type "double3" 99.601432800292969 31.623157501220724 9.1142196655273651 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 0 -1.4210854715202004e-14 -1.4210854715202004e-14 ;
-	setAttr ".scalePivot" -type "double3" 99.601432800292969 31.623157501220724 9.1142196655273651 ;
-createNode nurbsCurve -name "ctrl_fingerShape11" -parent "ctrl_finger11";
-	rename -uuid "AFD218BC-4D77-6F6C-4B12-859C61ED58D0";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".L_socketW0";
+createNode parentConstraint -name "jnt_COG_parentConstraint1" -parent "jnt_COG";
+	rename -uuid "651AF023-4B1F-B8F7-F4F8-D19CB8D7C86D";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "jnt_rootW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		100.75122576464783 40.495756114983138 2.5532087614514474
-		101.17724543536207 33.191017265104847 -1.7554870648850116
-		100.68017543621166 24.967847429442287 0.30314389243602236
-		99.551192631250188 20.643267972029335 7.5231835385369408
-		98.451639835938067 22.750558887458268 15.675230569603318
-		98.025620165223899 30.055297737336645 19.983926395939779
-		98.522690164374296 38.278467572999205 17.92529543861875
-		99.651672969335721 42.603047030412199 10.705255792517807
-		100.75122576464783 40.495756114983138 2.5532087614514474
-		101.17724543536207 33.191017265104847 -1.7554870648850116
-		100.68017543621166 24.967847429442287 0.30314389243602236
-		;
-createNode transform -name "ctrl_wrist4";
-	rename -uuid "FF88B81D-4B83-B8A8-D740-3A9713EA3A43";
-	setAttr ".translate" -type "double3" 0 0 -1.7763568394002505e-15 ;
-	setAttr ".rotate" -type "double3" -89.99999999363628 0 89.999372726558505 ;
-	setAttr ".rotatePivot" -type "double3" 99.589447021484375 40.918552398681641 -3.6970100402832031 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 0 -7.1054273576010019e-15 1.4210854715202004e-14 ;
-	setAttr ".scalePivot" -type "double3" 99.589447021484375 40.918552398681641 -3.6970100402832031 ;
-createNode nurbsCurve -name "ctrl_wristShape4" -parent "ctrl_wrist4";
-	rename -uuid "78F01F41-489E-7A64-C317-B2B3F03E2EDB";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr ".target[0].targetOffsetTranslate" -type "double3" 1.6132928326584306e-15 
+		93.930603898614365 -2.9045703411102304 ;
+	setAttr ".target[0].targetOffsetRotate" -type "double3" 89.999999999999972 6.3611093629270335e-15 
+		89.915729423280652 ;
+	setAttr ".restTranslate" -type "double3" 1.6132928326584306e-15 93.930603898614365 
+		-2.9045703411102304 ;
+	setAttr -keyable on ".jnt_rootW0";
+createNode scaleConstraint -name "jnt_COG_scaleConstraint1" -parent "jnt_COG";
+	rename -uuid "363B867A-48D4-47DD-36AB-989A02139218";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "jnt_rootW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		99.589045653713214 77.57988348902613 32.964321039720403
-		99.589447021484318 92.765504035538726 -3.6970100460417683
-		99.589848389255494 77.579883480882302 -40.358341128430681
-		99.590014641229814 40.918552392923075 -55.543961674033199
-		99.589848389255508 4.2572213083371011 -40.358341120286894
-		99.589447021484318 -10.92839923817548 -3.697010034524709
-		99.589045653713214 4.2572213164809227 32.964321047864196
-		99.588879401738893 40.918552404440163 48.149941593466735
-		99.589045653713214 77.57988348902613 32.964321039720403
-		99.589447021484318 92.765504035538726 -3.6970100460417683
-		99.589848389255494 77.579883480882302 -40.358341128430681
-		;
-createNode transform -name "ctrl_ctrl_elbow3";
-	rename -uuid "E438CBF7-4ABF-BDA8-D0B6-50AFEC217936";
-	setAttr ".translate" -type "double3" 0 0 -4.4408920985006262e-15 ;
-	setAttr ".rotate" -type "double3" 89.870451769631174 7.9526172157373119e-06 -90.000636209761183 ;
-	setAttr ".rotatePivot" -type "double3" 99.590240478515625 112.96539306640625 -3.6970047950744629 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -2.8421709430404007e-14 -2.8421709430404007e-14 
-		1.4210854715202004e-14 ;
-	setAttr ".scalePivot" -type "double3" 99.590240478515625 112.96539306640625 -3.6970047950744629 ;
-createNode nurbsCurve -name "ctrl_ctrl_elbowShape3" -parent "ctrl_ctrl_elbow3";
-	rename -uuid "A5B31FFD-4A7E-7397-D62D-6BA4020239DB";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".jnt_rootW0";
+createNode parentConstraint -name "jnt_root_parentConstraint1" -parent "jnt_root";
+	rename -uuid "41F70797-4973-2D18-94FC-CEA52A032434";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "rootW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		99.590652652857614 76.221262911051014 32.881339795557608
-		99.590247674838977 61.11857395849789 -3.8142328905588272
-		99.589838481311588 76.387048473452921 -40.44113494823165
-		99.589664772294299 113.08262116180343 -55.54382389978727
-		99.589828304173409 149.70952322176151 -40.275349385706591
-		99.590233282192131 164.81221217431471 -3.5797766995902123
-		99.590642475719463 149.54373765935952 33.04712535808271
-		99.590816184736795 112.8481649710091 48.149814309638288
-		99.590652652857614 76.221262911051014 32.881339795557608
-		99.590247674838977 61.11857395849789 -3.8142328905588272
-		99.589838481311588 76.387048473452921 -40.44113494823165
-		;
-createNode transform -name "ctrl_upper_arm4";
-	rename -uuid "9AF950AE-49BD-C450-6500-26912CEB9D05";
-	setAttr ".translate" -type "double3" -3.5527136788005009e-15 1.8118839761882555e-13 
-		-4.2188474935755949e-15 ;
-	setAttr ".rotate" -type "double3" 89.999999993549082 1.6464063350020329e-05 -89.996871827101046 ;
-	setAttr ".rotatePivot" -type "double3" 99.586364746093935 182.56610107421744 -3.6969780921936035 ;
-	setAttr ".rotatePivotTranslate" -type "double3" 0 0 -2.8421709430404007e-14 ;
-	setAttr ".scalePivot" -type "double3" 99.586364746093935 182.56610107421744 -3.6969780921936035 ;
-createNode nurbsCurve -name "ctrl_upper_armShape4" -parent "ctrl_upper_arm4";
-	rename -uuid "F75A88E6-4F9A-702C-EC86-73939488DCE8";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".rootW0";
+createNode scaleConstraint -name "jnt_root_scaleConstraint1" -parent "jnt_root";
+	rename -uuid "B6E6EC9A-4DD7-4893-6F36-B9B27CFE028E";
+	addAttr -disconnectBehaviour 0 -cachedInternally true -keyable true -shortName "w0" 
+		-longName "rootW0" -defaultValue 1 -minValue 0 -attributeType "double";
+	setAttr -keyable on ".nodeState";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		139.6825761034593 127.2697471706208 -41.775622227774562
-		99.586387217279196 104.36523113372363 -3.6969781009982228
-		59.49018516778338 127.26972411859322 34.38166603093574
-		42.881781315914907 182.56608477397251 50.154356872319099
-		59.49015338872843 237.86245497781422 34.381666043387334
-		99.586342274908674 260.76697101471149 -3.69697808338897
-		139.68254432440435 237.86247802984178 -41.775622215322954
-		156.29094817627288 182.56611737446255 -57.548313056706291
-		139.6825761034593 127.2697471706208 -41.775622227774562
-		99.586387217279196 104.36523113372363 -3.6969781009982228
-		59.49018516778338 127.26972411859322 34.38166603093574
-		;
-createNode transform -name "ctrl_chest";
-	rename -uuid "7A45A577-4F19-B1BA-539E-D4A872851A9C";
-	setAttr ".rotatePivot" -type "double3" 0.113795205950737 171.30020141601562 -1.5905554294586182 ;
-	setAttr ".scalePivot" -type "double3" 0.113795205950737 171.30020141601562 -1.5905554294586182 ;
-createNode nurbsCurve -name "ctrl_chestShape" -parent "ctrl_chest";
-	rename -uuid "E0B0D1E1-4AA9-F626-9495-33A8AC274047";
+	setAttr -keyable off ".translateX";
+	setAttr -keyable off ".translateY";
+	setAttr -keyable off ".translateZ";
+	setAttr -keyable off ".rotateX";
+	setAttr -keyable off ".rotateY";
+	setAttr -keyable off ".rotateZ";
+	setAttr -keyable off ".scaleX";
+	setAttr -keyable off ".scaleY";
+	setAttr -keyable off ".scaleZ";
+	setAttr ".enableRestPosition" yes;
+	setAttr -keyable on ".rootW0";
+createNode transform -name "root";
+	rename -uuid "881E9FC7-48C8-EFAF-74B2-0897F73F5804";
+createNode transform -name "root" -parent "|root";
+	rename -uuid "DD040AE3-49DD-AE2F-031C-85BCFBF0DA70";
+createNode nurbsCurve -name "rootShape" -parent "|root|root";
+	rename -uuid "DC6C2336-438F-F612-3356-BF9C24C6810C";
 	setAttr -keyable off ".visibility";
-	setAttr ".cached" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		162.07629306808917 171.30020141601562 -163.55305329159705
-		0.11379520595075103 171.30020141601562 -230.64011650191813
-		-161.8487026561877 171.30020141601562 -163.55305329159702
-		-228.93576586650886 171.30020141601562 -1.5905554294586297
-		-161.8487026561877 171.30020141601562 160.37194243267982
-		0.11379520595071406 171.30020141601562 227.45900564300101
-		162.07629306808917 171.30020141601562 160.37194243267979
-		229.16335627841033 171.30020141601562 -1.5905554294585857
-		162.07629306808917 171.30020141601562 -163.55305329159705
-		0.11379520595075103 171.30020141601562 -230.64011650191813
-		-161.8487026561877 171.30020141601562 -163.55305329159702
-		;
-createNode transform -name "ctrl_COG";
-	rename -uuid "FC84A0E2-41DB-E435-2AD5-FF9D2D932137";
+	setAttr ".tweak" yes;
+	setAttr -size 11 ".controlPoints[0:10]" -type "double3" 40.06698014133962 
+		2.4533949490795399e-15 -40.06698014133967 4.6983238993795391e-15 3.4696244108458724e-15 
+		-56.66326671921604 -40.066980141339677 2.4533949490794886e-15 -40.066980141339599 
+		-56.663266719216061 -1.1200098770230241e-29 1.1685094382290633e-14 -40.066980141339684 
+		-2.4533949490795383e-15 40.066980141339748 6.3479300556771249e-15 -3.4696244108459087e-15 
+		56.663266719216246 40.066980141339677 -2.4533949490794886e-15 40.066980141339599 
+		56.663266719215919 2.2462538923775482e-29 4.4373676366670289e-15 0 0 0 0 0 0 0 0 
+		0;
+createNode transform -name "COG" -parent "|root|root";
+	rename -uuid "2A139793-4C1A-2AA7-1E8F-82813E6C2E1D";
+	setAttr ".translate" -type "double3" 1.6123604346719612e-15 93.930603898614365 
+		-2.9045703411102304 ;
 	setAttr ".rotate" -type "double3" 89.999999999999972 6.3611093629270335e-15 89.915729423280652 ;
-	setAttr ".rotatePivot" -type "double3" 93.930501429684526 -2.9045703411102126 -0.1381529896612374 ;
-	setAttr ".rotatePivotTranslate" -type "double3" -93.930501429684526 96.835173368453965 
-		-2.7664173514489923 ;
-	setAttr ".scalePivot" -type "double3" 93.930501429684526 -2.9045703411102126 -0.1381529896612374 ;
-createNode nurbsCurve -name "ctrl_COGShape" -parent "ctrl_COG";
-	rename -uuid "62A3B19A-44B9-D54F-7882-07BA2A155191";
+	setAttr ".rotatePivot" -type "double3" 0 8.8817841970012523e-16 2.7755575615628914e-17 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 2.7755545594512471e-17 -8.8821924255899714e-16 
+		8.6042284408449632e-16 ;
+	setAttr ".scalePivot" -type "double3" 0 8.8817841970012523e-16 2.7755575615628914e-17 ;
+createNode transform -name "COG" -parent "|root|root|COG";
+	rename -uuid "B8E8EF50-444F-D274-CC66-E6830B073D11";
+	setAttr ".rotatePivot" -type "double3" 0 8.8817841970012523e-16 2.7755575615628914e-17 ;
+	setAttr ".scalePivot" -type "double3" 0 8.8817841970012523e-16 2.7755575615628914e-17 ;
+createNode nurbsCurve -name "COGShape" -parent "|root|root|COG|COG";
+	rename -uuid "13C0C138-487B-7436-B389-1BBCD8AF5611";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		94.179398419729623 -172.13032813085567 169.08742176132375
-		93.93050142968417 -242.22593211023246 -0.13815298966324235
-		93.681604439638662 -172.13032813085539 -169.36372774065018
-		93.578507930728009 -2.9045703411100976 -239.45925590289102
-		93.681604439638633 166.3211874486353 -169.36372774065006
-		93.930501429684114 236.41679142801215 -0.13815298966301523
-		94.179398419729594 166.32118744863502 169.08742176132392
-		94.282494928640276 -2.9045703411103179 239.18294992356476
-		94.179398419729623 -172.13032813085567 169.08742176132375
-		93.93050142968417 -242.22593211023246 -0.13815298966324235
-		93.681604439638662 -172.13032813085539 -169.36372774065018
+		1.1794494548273036 -25.346859318246466 -40.286739684442075
+		4.7043802984911158e-14 -7.4788633291553186e-13 -56.974053645531598
+		-1.1794494548272163 25.346859318245134 -40.286739684441429
+		-1.6679934151502411 35.84587221142602 4.7121745687451019e-13
+		-1.1794494548272629 25.346859318246189 40.28673968444204
+		-1.8842478118624896e-14 6.8546282510863057e-13 56.974053645531555
+		1.1794494548272541 -25.346859318245354 40.286739684441507
+		1.6679934151502878 -35.845872211426062 -4.6616559876618056e-13
+		1.1794494548273036 -25.346859318246466 -40.286739684442075
+		4.7043802984911158e-14 -7.4788633291553186e-13 -56.974053645531598
+		-1.1794494548272163 25.346859318245134 -40.286739684441429
 		;
-createNode transform -name "ctrl_root";
-	rename -uuid "1097BFEB-4FAB-B0FF-C38C-839D31B8E0D2";
-createNode nurbsCurve -name "ctrl_rootShape" -parent "ctrl_root";
-	rename -uuid "F2782A1A-42A4-B5C1-EC8B-C1B856F231EA";
+createNode transform -name "chest" -parent "|root|root|COG|COG";
+	rename -uuid "B5D148EB-4565-94BA-5121-D196164DD77E";
+	setAttr ".translate" -type "double3" 77.369680450469716 1.3140149116516167 -2.4980018054066022e-15 ;
+	setAttr ".rotatePivot" -type "double3" 0 -2.2204460492503131e-16 -2.7755575615628914e-17 ;
+	setAttr ".scalePivot" -type "double3" 0 -2.2204460492503131e-16 -2.7755575615628914e-17 ;
+createNode transform -name "chest" -parent "|root|root|COG|COG|chest";
+	rename -uuid "DBA3B38F-4BA6-C42D-59F4-6DA6C9474989";
+	setAttr ".rotatePivot" -type "double3" 0 -2.2204460492503131e-16 -2.7755575615628914e-17 ;
+	setAttr ".scalePivot" -type "double3" 0 -2.2204460492503131e-16 -2.7755575615628914e-17 ;
+createNode nurbsCurve -name "chestShape" -parent "|root|root|COG|COG|chest|chest";
+	rename -uuid "71B05B56-4D1E-6770-7925-73A5770E4F8E";
 	setAttr -keyable off ".visibility";
 	setAttr ".cached" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		156.10482542899567 9.5586637396537957e-15 -156.10482542899567
-		1.3517991898782318e-14 1.3517991898782318e-14 -220.76556127357
-		-156.10482542899567 9.5586637396537925e-15 -156.10482542899564
-		-220.76556127357009 7.0077508713136197e-31 -1.144452568069861e-14
-		-156.10482542899567 -9.5586637396537941e-15 156.10482542899567
-		-2.2114237261254387e-14 -1.3517991898782328e-14 220.76556127357011
-		156.10482542899567 -9.5586637396537925e-15 156.10482542899564
-		220.76556127357009 -1.8434437823337357e-30 3.0105721643452028e-14
-		156.10482542899567 9.5586637396537957e-15 -156.10482542899567
-		1.3517991898782318e-14 1.3517991898782318e-14 -220.76556127357
-		-156.10482542899567 9.5586637396537925e-15 -156.10482542899564
+		-3.5078644505455117 -59.595370314844907 -59.69851988087229
+		-8.9712933158672643e-14 5.1768376760188404e-14 -84.426456469129491
+		3.5078644505453078 59.595370314845127 -59.698519880872283
+		4.9608694809276779 84.280580953900895 -1.859855328735502e-14
+		3.5078644505453163 59.595370314845169 59.698519880872283
+		-9.9233628192881566e-14 6.5979179676533426e-14 84.426456469129548
+		-3.507864450545509 -59.595370314844907 59.698519880872283
+		-4.9608694809279239 -84.280580953900667 -2.708664815814977e-15
+		-3.5078644505455117 -59.595370314844907 -59.69851988087229
+		-8.9712933158672643e-14 5.1768376760188404e-14 -84.426456469129491
+		3.5078644505453078 59.595370314845127 -59.698519880872283
 		;
-createNode transform -name "ctrl_group";
-	rename -uuid "D2B122A8-4AD8-02C1-61FF-54B4ADDD2292";
+createNode transform -name "R_shoulder" -parent "|root|root|COG|COG|chest|chest";
+	rename -uuid "72B9D0FD-421D-E03A-1D27-BA90A19D2473";
+	setAttr ".translate" -type "double3" 11.119246857504862 -2.1064226627349552 -99.716622068585153 ;
+	setAttr ".rotate" -type "double3" 179.99999997765076 -0.081081193274718383 -179.99997801798091 ;
+	setAttr ".scale" -type "double3" 0.99999999999999978 0.99999999999999989 0.99999999999999967 ;
+	setAttr ".rotatePivot" -type "double3" -2.8421709430404001e-14 4.4408920985006247e-16 
+		1.4210854715201996e-14 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 5.6823279977826963e-14 1.0902050296142742e-20 
+		-2.8461915708670798e-14 ;
+	setAttr ".scalePivot" -type "double3" -2.8421709430404007e-14 4.4408920985006262e-16 
+		1.4210854715202004e-14 ;
+	setAttr ".scalePivotTranslate" -type "double3" 6.3108872417680916e-30 -1.4791141972893969e-31 
+		-7.8886090522101139e-30 ;
+createNode transform -name "R_shoulder" -parent "|root|root|COG|COG|chest|chest|R_shoulder";
+	rename -uuid "141C5411-4C6B-10F9-DC72-6C944FC02A49";
+	setAttr ".rotatePivot" -type "double3" -2.8421709430404007e-14 4.4408920985006262e-16 
+		1.4210854715202004e-14 ;
+	setAttr ".scalePivot" -type "double3" -2.8421709430404007e-14 4.4408920985006262e-16 
+		1.4210854715202004e-14 ;
+createNode nurbsCurve -name "R_shoulderShape" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder";
+	rename -uuid "4E14B0E9-4733-802B-4582-26BDECE9D2A5";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		3.4402889201886797 35.014693451643147 -35.179801983384984
+		-0.0024442540613694966 0.0027151668912756017 -49.7542428764867
+		-3.443707979091708 -35.01087309157942 -35.183323080239347
+		-4.8676566364822369 -49.515586189304763 -0.002489795033871452
+		-3.4401604148564253 -35.014759911967637 35.179801976242764
+		0.0025727593935950237 -0.002781627216016813 49.754242869344367
+		3.4438364844239775 35.010806631254795 35.183323073096972
+		4.8677851418144593 49.515519728980273 0.0024897878916736527
+		3.4402889201886797 35.014693451643147 -35.179801983384984
+		-0.0024442540613694966 0.0027151668912756017 -49.7542428764867
+		-3.443707979091708 -35.01087309157942 -35.183323080239347
+		;
+createNode transform -name "R_elbow" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder";
+	rename -uuid "CC4ECCEB-4B05-7F78-3988-E392390DD131";
+	setAttr ".translate" -type "double3" 69.600703139206104 -1.3322676295501878e-15 
+		1.4210854715202004e-14 ;
+	setAttr ".rotate" -type "double3" 0.26737295278552242 0.0038166568683516079 1.781070463191386e-05 ;
+	setAttr ".scale" -type "double3" 1.0000000000000002 1 1.0000000000000002 ;
+	setAttr ".rotatePivot" -type "double3" 1.4210854715202007e-14 1.3322676295501878e-15 
+		-1.4210854715202007e-14 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -9.4667275251866931e-19 6.630516906254788e-17 
+		5.4251876581333663e-18 ;
+	setAttr ".scalePivot" -type "double3" 1.4210854715202004e-14 1.3322676295501878e-15 
+		-1.4210854715202004e-14 ;
+	setAttr ".scalePivotTranslate" -type "double3" 3.1554436208840486e-30 0 -3.1554436208840486e-30 ;
+createNode transform -name "R_elbow" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow";
+	rename -uuid "7735AB01-4AE8-1AC7-C5F9-1AAB3CF1AC27";
+	setAttr ".rotatePivot" -type "double3" 1.4210854715202004e-14 1.3322676295501878e-15 
+		-1.4210854715202004e-14 ;
+	setAttr ".scalePivot" -type "double3" 1.4210854715202004e-14 1.3322676295501878e-15 
+		-1.4210854715202004e-14 ;
+createNode nurbsCurve -name "R_elbowShape" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow";
+	rename -uuid "AE9B2E14-46F0-E556-B554-828C6CE47C95";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.083350542070234943 16.543895593135783 -17.004301999482305
+		-0.46389416631893887 -0.45614773150438803 -24.047714506355678
+		-0.84443779056764834 -17.456191056144569 -17.004301999482138
+		-1.0020641208060594 -24.497839562140793 8.4065304508648261e-14
+		-0.8444377905676439 -17.456191056144721 17.004301999482248
+		-0.4638941663189366 -0.45614773150452864 24.047714506355661
+		-0.083350542070233805 16.543895593135645 17.004301999482145
+		0.074275788168192886 23.585544099131873 -1.0081328958892987e-13
+		-0.083350542070234943 16.543895593135783 -17.004301999482305
+		-0.46389416631893887 -0.45614773150438803 -24.047714506355678
+		-0.84443779056764834 -17.456191056144569 -17.004301999482138
+		;
+createNode transform -name "R_wrist" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow";
+	rename -uuid "CA6668FA-4069-D4EC-FD61-F790462DB5DC";
+	setAttr ".translate" -type "double3" 72.046842498697316 3.6859404417555197e-13 
+		-7.6695982897945214e-11 ;
+	setAttr ".rotate" -type "double3" -0.26737295309202835 0 4.1713372805715472e-06 ;
+	setAttr ".scale" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000004 ;
+	setAttr ".rotatePivot" -type "double3" 0 -4.4408920985006271e-16 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 3.2330927736005101e-23 4.8353633926278836e-21 
+		2.0723518125454535e-18 ;
+	setAttr ".scalePivot" -type "double3" 0 -4.4408920985006262e-16 0 ;
+	setAttr ".scalePivotTranslate" -type "double3" 0 -9.8607613152626519e-32 0 ;
+createNode transform -name "R_wrist" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist";
+	rename -uuid "DACB4F5F-455F-9722-8E8A-09942EE6AD55";
+	setAttr ".rotatePivot" -type "double3" 0 -4.4408920985006262e-16 0 ;
+	setAttr ".scalePivot" -type "double3" 0 -4.4408920985006262e-16 0 ;
+createNode nurbsCurve -name "R_wristShape" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist";
+	rename -uuid "3A36B626-43A8-7A4A-8EB1-FA804B657D68";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.10708347870243448 22.949061630543 -22.950384495021847
+		0.0010730670631524666 -0.0010680124685218013 -32.456745014538143
+		0.10922961282872842 -22.951197655479358 -22.950384495023506
+		0.15402952094425407 -32.457452611834633 -1.2225084280840414e-12
+		0.10922961282872841 -22.951197655477657 22.950384495021794
+		0.0010730670631517642 -0.001068012466198203 32.4567450145381
+		-0.10708347870243685 22.949061630544652 22.950384495023407
+		-0.15188338681796557 32.455316586899997 1.1389859956369818e-12
+		-0.10708347870243448 22.949061630543 -22.950384495021847
+		0.0010730670631524666 -0.0010680124685218013 -32.456745014538143
+		0.10922961282872842 -22.951197655479358 -22.950384495023506
+		;
+createNode transform -name "R_finger1" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist";
+	rename -uuid "D717729F-44FD-1CFF-D35B-01BFE7B6FB89";
+	setAttr ".translate" -type "double3" 9.2952658707308764 -4.7556787367470221 12.110611340458064 ;
+	setAttr ".rotate" -type "double3" -153.3131033421158 -39.26241578783948 -18.416149887398372 ;
+	setAttr ".scale" -type "double3" 0.99999999999999978 0.99999999999999989 0.99999999999999978 ;
+	setAttr ".rotatePivot" -type "double3" 7.1054273576010003e-15 0 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.8857550203255386e-15 -1.7379881073066037e-15 
+		4.4968339934321423e-15 ;
+	setAttr ".scalePivot" -type "double3" 7.1054273576010019e-15 0 0 ;
+	setAttr ".scalePivotTranslate" -type "double3" -1.5777218104420229e-30 0 0 ;
+createNode transform -name "R_finger1" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1";
+	rename -uuid "F6AFD05D-4328-0765-E62C-94B5CA2AC4A7";
+	setAttr ".rotatePivot" -type "double3" -7.1054273576010019e-15 7.1054273576010019e-15 
+		1.4210854715202004e-14 ;
+	setAttr ".scalePivot" -type "double3" -7.1054273576010019e-15 7.1054273576010019e-15 
+		1.4210854715202004e-14 ;
+createNode nurbsCurve -name "R_finger1Shape" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1";
+	rename -uuid "9000926D-4070-050B-D66A-22A263263C97";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742346 3.7275377993115582e-15 -7.2269259354742656
+		-1.3490389340542516e-14 3.4213709351349446e-15 -10.220416672213561
+		-7.226925935474263 3.1921428688783204e-15 -7.226925935474263
+		-10.220416672213565 3.1741322928782586e-15 -1.4929973613241012e-14
+		-7.226925935474263 3.3778895582894437e-15 7.2269259354742355
+		-1.5329286189801223e-14 3.6840564224660573e-15 10.220416672213538
+		7.2269259354742346 3.9132844887226815e-15 7.2269259354742346
+		10.220416672213537 3.9312950647227437e-15 -1.2627809409253634e-14
+		7.2269259354742346 3.7275377993115582e-15 -7.2269259354742656
+		-1.3490389340542516e-14 3.4213709351349446e-15 -10.220416672213561
+		-7.226925935474263 3.1921428688783204e-15 -7.226925935474263
+		;
+createNode transform -name "R_finger2" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist";
+	rename -uuid "A76EC135-4DE2-D251-3AA6-9882F55BAAD1";
+	setAttr ".translate" -type "double3" 9.295515370477343 -4.7556759541042926 -12.108667059737797 ;
+	setAttr ".rotate" -type "double3" -26.686394357046868 39.261482116098044 -18.415905017974698 ;
+	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999967 0.99999999999999989 ;
+	setAttr ".rotatePivot" -type "double3" 1.4210854715201999e-14 0 -1.4210854715201999e-14 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.3411544343782236e-14 -6.9928179039096683e-15 
+		-4.6135545495281643e-15 ;
+	setAttr ".scalePivot" -type "double3" 1.4210854715202004e-14 0 -1.4210854715202004e-14 ;
+	setAttr ".scalePivotTranslate" -type "double3" -4.7331654313260701e-30 0 4.7331654313260701e-30 ;
+createNode transform -name "R_finger2" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2";
+	rename -uuid "D7BDF6C4-4834-A8A2-9B68-C5B06507D562";
+	setAttr ".rotatePivot" -type "double3" 1.4210854715202004e-14 7.1054273576010019e-15 
+		-1.4210854715202004e-14 ;
+	setAttr ".scalePivot" -type "double3" 1.4210854715202004e-14 7.1054273576010019e-15 
+		-1.4210854715202004e-14 ;
+createNode nurbsCurve -name "R_finger2Shape" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2";
+	rename -uuid "7041FC42-4BDA-B0EE-BB5A-0394066C3637";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742621 4.4252158572767671e-16 -7.2269259354742577
+		1.3890221278575326e-14 1.3829828000234127e-15 -10.220416672213554
+		-7.2269259354742355 1.5133114465941525e-15 -7.2269259354742532
+		-10.220416672213537 7.5716277184448494e-16 -6.499511404912163e-15
+		-7.2269259354742337 -4.4252158572767656e-16 7.2269259354742426
+		1.4133522051888953e-14 -1.3829828000234135e-15 10.220416672213545
+		7.2269259354742639 -1.5133114465941525e-15 7.226925935474239
+		10.220416672213565 -7.5716277184448514e-16 -6.847416902380481e-15
+		7.2269259354742621 4.4252158572767671e-16 -7.2269259354742577
+		1.3890221278575326e-14 1.3829828000234127e-15 -10.220416672213554
+		-7.2269259354742355 1.5133114465941525e-15 -7.2269259354742532
+		;
+createNode transform -name "R_finger3" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist";
+	rename -uuid "BC89322A-412E-2E4E-BA26-83BE140286A2";
+	setAttr ".translate" -type "double3" 9.2953957439024144 12.81123005609401 0.012084775356200339 ;
+	setAttr ".rotate" -type "double3" 88.504161299385103 0.39878384828691005 42.724139677776883 ;
+	setAttr ".scale" -type "double3" 0.99999999999999956 0.99999999999999989 1 ;
+	setAttr ".rotatePivot" -type "double3" -3.5527136788004994e-15 -1.4210854715201999e-14 
+		3.5527136788005009e-15 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 3.5319632461658872e-15 8.8523028508064101e-15 
+		-1.7640915552701204e-14 ;
+	setAttr ".scalePivot" -type "double3" -3.5527136788005009e-15 -1.4210854715202004e-14 
+		3.5527136788005009e-15 ;
+	setAttr ".scalePivotTranslate" -type "double3" 1.5777218104420222e-30 4.7331654313260701e-30 
+		0 ;
+createNode transform -name "R_finger3" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3";
+	rename -uuid "6BF96DC7-4430-9A6D-F109-7CA7543BB3E9";
+	setAttr ".rotatePivot" -type "double3" -3.5527136788005009e-15 -1.4210854715202004e-14 
+		3.5527136788005009e-15 ;
+	setAttr ".scalePivot" -type "double3" -3.5527136788005009e-15 -1.4210854715202004e-14 
+		3.5527136788005009e-15 ;
+createNode nurbsCurve -name "R_finger3Shape" -parent "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3";
+	rename -uuid "43FF2A90-4B1D-870B-0D25-A18EBBC4E8C3";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742497 1.4703569575657795e-14 -7.2269259354742488
+		2.1401455718678975e-15 1.4883997416621213e-14 -10.220416672213544
+		-7.2269259354742479 1.4670107392505719e-14 -7.2269259354742443
+		-10.220416672213551 1.4187193378581864e-14 3.7800482455670978e-15
+		-7.2269259354742497 1.3718139854746211e-14 7.2269259354742541
+		-2.5381116718076273e-15 1.3537712013782795e-14 10.220416672213556
+		7.2269259354742479 1.3751602037898288e-14 7.2269259354742514
+		10.220416672213551 1.4234516051822145e-14 4.1893055199432646e-15
+		7.2269259354742497 1.4703569575657795e-14 -7.2269259354742488
+		2.1401455718678975e-15 1.4883997416621213e-14 -10.220416672213544
+		-7.2269259354742479 1.4670107392505719e-14 -7.2269259354742443
+		;
+createNode transform -name "L_shoulder" -parent "|root|root|COG|COG|chest";
+	rename -uuid "F1F33F31-491E-A537-398C-DA8B0C0DFBDF";
+	setAttr ".translate" -type "double3" 11.412426061764791 -2.1064245705413462 99.683527231432649 ;
+	setAttr ".rotate" -type "double3" 179.99999996843479 -0.087398749618286337 -179.99998353591749 ;
+	setAttr ".scale" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006271e-16 
+		-1.4210854715202004e-14 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -5.6821708750418274e-14 -8.1686383127907851e-21 
+		2.8465047240954793e-14 ;
+	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
+		-1.4210854715202004e-14 ;
+	setAttr ".scalePivotTranslate" -type "double3" 0 9.8607613152626519e-32 0 ;
+createNode transform -name "L_shoulder" -parent "|root|root|COG|COG|chest|L_shoulder";
+	rename -uuid "065155BE-41E6-494A-44BB-08854553A1D5";
+	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
+		-1.4210854715202004e-14 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.8932661725304283e-29 9.4663308626521417e-30 
+		-5.7857824424309146e-30 ;
+	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
+		-1.4210854715202004e-14 ;
+createNode nurbsCurve -name "L_shoulderShape" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder";
+	rename -uuid "00B7F7EC-4DD6-5A89-293E-AE9E9C0B1142";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		3.4437150470691207 35.010943429138678 -35.183289294228175
+		0.0024372245868648575 -0.0026293824606179825 -49.754242879462637
+		-3.4402818447285926 -35.014623118193477 -35.179835772245987
+		-4.8677440215128351 -49.515486693391153 0.0024420075612316141
+		-3.4437613223802077 -35.010810891823269 35.18328929172543
+		-0.0024834998979941353 0.0027619197749426797 49.754242876960177
+		3.4402355694175215 35.01475565550875 35.179835769743363
+		4.8676977462017454 49.515619230705596 -0.0024420100638604951
+		3.4437150470691207 35.010943429138678 -35.183289294228175
+		0.0024372245868648575 -0.0026293824606179825 -49.754242879462637
+		-3.4402818447285926 -35.014623118193477 -35.179835772245987
+		;
+createNode transform -name "L_elbow" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder";
+	rename -uuid "C3D8BED6-487D-DA0A-4A4C-B9A2A13EE585";
+	setAttr ".translate" -type "double3" 69.601000103736965 -1.021405182655144e-14 
+		-2.8421709430404007e-14 ;
+	setAttr ".rotate" -type "double3" -0.12954822339542602 -0.0037643826601428745 8.5114456901071148e-06 ;
+	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999978 0.99999999999999989 ;
+	setAttr ".rotatePivot" -type "double3" 2.8421709430403998e-14 4.4408920985006252e-16 
+		0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -6.1342953639143342e-23 3.0869615123551625e-21 
+		8.6322712550896099e-19 ;
+	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
+		0 ;
+	setAttr ".scalePivotTranslate" -type "double3" -9.4663308626521403e-30 -9.8607613152626432e-32 
+		0 ;
+createNode transform -name "L_elbow" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow";
+	rename -uuid "FC37755C-4FAE-4D2A-B76A-D29D4D151F4A";
+	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
+		0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -9.4663308626521417e-30 3.1554436208840472e-29 
+		0 ;
+	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 4.4408920985006262e-16 
+		0 ;
+createNode nurbsCurve -name "L_elbowShape" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow";
+	rename -uuid "E0688AF5-4FE7-DDDF-1E9D-8B8E63334FC4";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.15604948415808273 16.778739776840606 -17.004301999482276
+		-0.22449414009062624 -0.22130354779954459 -24.047714506355682
+		-0.60503776433933332 -17.22134687243971 -17.004301999482152
+		-0.76266409457777007 -24.262995378435935 8.9550903160336019e-14
+		-0.60503776433931811 -17.221346872439849 17.004301999482216
+		-0.22449414009060573 -0.22130354779970382 24.047714506355643
+		0.15604948415809425 16.778739776840464 17.004301999482117
+		0.31367581439650893 23.820388282836699 -6.8867505591260149e-14
+		0.15604948415808273 16.778739776840606 -17.004301999482276
+		-0.22449414009062624 -0.22130354779954459 -24.047714506355682
+		-0.60503776433933332 -17.22134687243971 -17.004301999482152
+		;
+createNode transform -name "L_wrist" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow";
+	rename -uuid "473CEEFF-48BA-FD9C-1371-DDBEB4B94F79";
+	setAttr ".translate" -type "double3" 72.046400004442233 6.6613381477509392e-15 
+		1.1624479157035239e-11 ;
+	setAttr ".rotate" -type "double3" -0.12954822400511318 -8.9183156446719616e-06 -179.99999202719772 ;
+	setAttr ".scale" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr ".rotatePivot" -type "double3" 7.1054273576010019e-15 0 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.4210854715201844e-14 -9.8873194307436615e-22 
+		1.1059879890612881e-21 ;
+	setAttr ".scalePivot" -type "double3" 7.1054273576010019e-15 0 0 ;
+createNode transform -name "L_wrist" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist";
+	rename -uuid "D3F25DD4-42C7-18FA-9C66-CC966C023B61";
+	setAttr ".rotatePivot" -type "double3" 7.1054273576010019e-15 0 1.4210854715202004e-14 ;
+	setAttr ".scalePivot" -type "double3" 7.1054273576010019e-15 0 1.4210854715202004e-14 ;
+createNode nurbsCurve -name "L_wristShape" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
+	rename -uuid "CB9DA5D7-4B48-753C-9403-E9A050966551";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.10927680527953836 22.951244698409926 -22.950384495021726
+		-0.0011202595139565192 0.0011150553986369978 -32.456745014538186
+		0.10703628625163825 -22.949014587612496 -22.950384495023485
+		0.15183619436715981 -32.455269543967788 -1.1433973121650827e-12
+		0.10703628625164224 -22.949014587610677 22.950384495021847
+		-0.0011202595139547722 0.0011150554009708108 32.456745014538107
+		-0.10927680527953655 22.951244698411656 22.950384495023478
+		-0.15407671339508353 32.457499654766686 1.1648133665593784e-12
+		-0.10927680527953836 22.951244698409926 -22.950384495021726
+		-0.0011202595139565192 0.0011150553986369978 -32.456745014538186
+		0.10703628625163825 -22.949014587612496 -22.950384495023485
+		;
+createNode transform -name "L_finger1" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
+	rename -uuid "DBA88C13-4B98-3B83-C20F-6096E4BC88AD";
+	setAttr ".translate" -type "double3" -9.2952674083744071 4.7556799999992041 -12.111101765191307 ;
+	setAttr ".rotate" -type "double3" -153.31310334211577 -39.262415787839522 -18.416149890884579 ;
+	setAttr ".scale" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
+	setAttr ".rotatePivot" -type "double3" 0 1.06581410364015e-14 1.4210854715201999e-14 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 9.5062027912739575e-15 -1.713339410893874e-14 
+		-2.7747751265969332e-14 ;
+	setAttr ".scalePivot" -type "double3" 0 1.0658141036401503e-14 1.4210854715202004e-14 ;
+	setAttr ".scalePivotTranslate" -type "double3" 0 -3.1554436208840458e-30 -4.7331654313260701e-30 ;
+createNode transform -name "L_finger1" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1";
+	rename -uuid "C07E7AE5-4754-88DA-3A5E-04B6A3207E48";
+	setAttr ".rotatePivot" -type "double3" 0 1.0658141036401503e-14 1.4210854715202004e-14 ;
+	setAttr ".scalePivot" -type "double3" 0 1.0658141036401503e-14 1.4210854715202004e-14 ;
+createNode nurbsCurve -name "L_fingerShape1" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1";
+	rename -uuid "80A23ACD-403A-27D6-A812-209A7C5DB9EB";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742488 3.4598403340949397e-15 -7.2269259354742381
+		9.0975606762060986e-16 4.1785337069794293e-15 -10.220416672213533
+		-7.2269259354742488 4.5306301949614152e-15 -7.2269259354742337
+		-10.220416672213551 4.3098764506449857e-15 1.5100706707332524e-14
+		-7.2269259354742488 3.6455870235060622e-15 7.2269259354742648
+		-1.3077221675603391e-15 2.9268936506215725e-15 10.220416672213567
+		7.2269259354742488 2.5747971626395862e-15 7.2269259354742621
+		10.220416672213551 2.7955509069560158e-15 1.4184929130980843e-14
+		7.2269259354742488 3.4598403340949397e-15 -7.2269259354742381
+		9.0975606762060986e-16 4.1785337069794293e-15 -10.220416672213533
+		-7.2269259354742488 4.5306301949614152e-15 -7.2269259354742337
+		;
+createNode transform -name "L_finger2" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
+	rename -uuid "2A8E2AE2-4382-4E17-B1C3-298348D43EA6";
+	setAttr ".translate" -type "double3" -9.2953998680659957 -12.811230000000798 -0.0121017659163698 ;
+	setAttr ".rotate" -type "double3" 88.504161299385146 0.39878384828689101 42.724139674290662 ;
+	setAttr ".scale" -type "double3" 1 1 0.99999999999999967 ;
+	setAttr ".rotatePivot" -type "double3" 0 1.4210854715202004e-14 7.1054273576009979e-15 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 4.6410670323314382e-15 -1.9088446863723735e-14 
+		7.2857185767855076e-15 ;
+	setAttr ".scalePivot" -type "double3" 0 1.4210854715202004e-14 7.1054273576010019e-15 ;
+	setAttr ".scalePivotTranslate" -type "double3" 0 0 -3.9443045261050569e-30 ;
+createNode transform -name "L_finger2" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2";
+	rename -uuid "B821AB59-496E-D0BB-A20F-AA8993DC7340";
+	setAttr ".rotatePivot" -type "double3" 0 1.4210854715202004e-14 7.1054273576010019e-15 ;
+	setAttr ".scalePivot" -type "double3" 0 1.4210854715202004e-14 7.1054273576010019e-15 ;
+createNode nurbsCurve -name "L_fingerShape2" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2";
+	rename -uuid "10475EAE-4682-6484-CD58-90A69FEFF803";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742488 -1.3768333129474326e-14 -7.2269259354742479
+		-8.8850551551004111e-16 -1.3585034687023075e-14 -10.220416672213544
+		-7.2269259354742506 -1.3768333129474326e-14 -7.2269259354742452
+		-10.220416672213553 -1.4210854715202004e-14 3.0228854737226126e-15
+		-7.2269259354742488 -1.4653376300929679e-14 7.2269259354742532
+		4.9053941557031289e-16 -1.4836674743380934e-14 10.220416672213556
+		7.2269259354742506 -1.4653376300929679e-14 7.2269259354742523
+		10.220416672213553 -1.4210854715202004e-14 4.9464682917877501e-15
+		7.2269259354742488 -1.3768333129474326e-14 -7.2269259354742479
+		-8.8850551551004111e-16 -1.3585034687023075e-14 -10.220416672213544
+		-7.2269259354742506 -1.3768333129474326e-14 -7.2269259354742452
+		;
+createNode transform -name "L_finger3" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist";
+	rename -uuid "E94A2661-42A2-29EA-7971-C58B72EF0147";
+	setAttr ".translate" -type "double3" -9.2955325653319036 4.7556799999991934 12.108598233357242 ;
+	setAttr ".rotate" -type "double3" -26.686394357046915 39.261482116098115 -18.415905021460876 ;
+	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999956 0.99999999999999967 ;
+	setAttr ".rotatePivot" -type "double3" 1.4210854715201999e-14 7.1054273576009987e-15 
+		-1.4210854715201996e-14 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.3322056347221672e-14 -7.4368301385966517e-15 
+		-7.0843111931708744e-15 ;
+	setAttr ".scalePivot" -type "double3" 1.4210854715202004e-14 7.1054273576010019e-15 
+		-1.4210854715202004e-14 ;
+	setAttr ".scalePivotTranslate" -type "double3" -4.7331654313260701e-30 -3.1554436208840444e-30 
+		7.8886090522101139e-30 ;
+createNode transform -name "L_finger3" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3";
+	rename -uuid "41BB7013-4502-E06E-A1B5-31AB7859A05D";
+	setAttr ".rotatePivot" -type "double3" 2.8421709430404007e-14 1.4210854715202004e-14 
+		-2.1316282072803006e-14 ;
+	setAttr ".scalePivot" -type "double3" 2.8421709430404007e-14 1.4210854715202004e-14 
+		-2.1316282072803006e-14 ;
+createNode nurbsCurve -name "L_finger3Shape" -parent "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3";
+	rename -uuid "23AE6246-491F-B989-FADD-E1A5C75700E8";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742497 1.2456139813775336e-15 -7.2269259354742497
+		5.3117468169836759e-16 1.3829828000234127e-15 -10.220416672213547
+		-7.2269259354742497 7.102190509442954e-16 -7.226925935474247
+		-10.220416672213553 -3.7858138592224237e-16 -5.2982820507788828e-16
+		-7.2269259354742497 -1.2456139813775336e-15 7.2269259354742488
+		-9.291407816380965e-16 -1.3829828000234135e-15 10.220416672213553
+		7.2269259354742497 -7.102190509442954e-16 7.226925935474247
+		10.220416672213553 3.7858138592224227e-16 1.3937546129872488e-15
+		7.2269259354742497 1.2456139813775336e-15 -7.2269259354742497
+		5.3117468169836759e-16 1.3829828000234127e-15 -10.220416672213547
+		-7.2269259354742497 7.102190509442954e-16 -7.226925935474247
+		;
+createNode transform -name "L_socket" -parent "|root|root|COG|COG";
+	rename -uuid "D48A8047-4651-6E15-87B1-84853CFEC29B";
+	setAttr ".translate" -type "double3" -1.2691449146166462 3.4111022761962317e-07 
+		9.9676174376528017 ;
+	setAttr ".rotate" -type "double3" -89.999992214851176 75.747596576719005 -1.2185436432411418e-05 ;
+	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999989 1 ;
+	setAttr ".rotatePivot" -type "double3" -1.7763568394002499e-15 0 4.4408920985006262e-16 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 1.3390286858367554e-15 4.4408930285926531e-16 
+		1.2775924170415112e-15 ;
+	setAttr ".scalePivot" -type "double3" -1.7763568394002505e-15 0 4.4408920985006262e-16 ;
+	setAttr ".scalePivotTranslate" -type "double3" 5.9164567891575877e-31 0 0 ;
+createNode transform -name "L_socket" -parent "|root|root|COG|COG|L_socket";
+	rename -uuid "D5724B1B-40EC-3230-3724-AEBA5217C600";
+	setAttr ".rotatePivot" -type "double3" -1.7763568394002505e-15 0 4.4408920985006262e-16 ;
+	setAttr ".scalePivot" -type "double3" -1.7763568394002505e-15 0 4.4408920985006262e-16 ;
+createNode nurbsCurve -name "L_socketShape" -parent "|root|root|COG|COG|L_socket|L_socket";
+	rename -uuid "CFF4C7CE-416E-6002-3EEB-65A43A5149CD";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-1.6391035970277841 23.966195012103753 1.6177962451922687
+		-1.674291833259915 18.057665477798725 -15.836662937624547
+		-0.72870262093886495 1.5712004113955904 -24.014219754312254
+		0.64375070379132804 -15.83565254679689 -18.124572328731745
+		1.6391035970278014 -23.966195012103736 -1.6177962451922978
+		1.674291833259931 -18.057665477798697 15.836662937624517
+		0.72870262093890059 -1.5712004113955567 24.014219754312244
+		-0.64375070379131327 15.835652546796934 18.124572328731716
+		-1.6391035970277841 23.966195012103753 1.6177962451922687
+		-1.674291833259915 18.057665477798725 -15.836662937624547
+		-0.72870262093886495 1.5712004113955904 -24.014219754312254
+		;
+createNode transform -name "L_hip" -parent "|root|root|COG|COG|L_socket|L_socket";
+	rename -uuid "969588B1-4FB5-9895-14C8-CF989A14A920";
+	setAttr ".translate" -type "double3" -19.069958856894154 -2.0660294955909677 0.41912970810107941 ;
+	setAttr ".rotate" -type "double3" 1.1201482686566262e-05 180.00000194567471 14.336674000000206 ;
+	setAttr ".scale" -type "double3" 0.99999999999999989 0.99999999999999989 0.99999999999999989 ;
+	setAttr ".rotatePivot" -type "double3" -7.1054273576009995e-15 0 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 1.3989573469629448e-14 1.7594403207805491e-15 
+		-2.412891555779383e-22 ;
+	setAttr ".scalePivot" -type "double3" -7.1054273576010019e-15 0 0 ;
+	setAttr ".scalePivotTranslate" -type "double3" 2.3665827156630351e-30 0 0 ;
+createNode transform -name "L_hip" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip";
+	rename -uuid "DAEB06A3-4B43-18A7-0048-EE88B26B4F0E";
+	setAttr ".rotatePivot" -type "double3" -7.1054273576010019e-15 0 0 ;
+	setAttr ".scalePivot" -type "double3" -7.1054273576010019e-15 0 0 ;
+createNode nurbsCurve -name "L_hipShape" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip";
+	rename -uuid "38D6E6EB-451B-0047-4084-53AFE8A39F15";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		12.944172587000754 7.9260220494497301e-16 -12.944172587000766
+		4.4039414573056496e-16 1.1209087877999659e-15 -18.305824426234555
+		-12.944172587000772 7.92602204944938e-16 -12.944172587000756
+		-18.305824426234601 -1.3088726990220517e-29 6.288911224574765e-17
+		-12.944172587000761 -7.9260220494497449e-16 12.944172587000766
+		-3.5527135576627166e-15 -1.120908787799971e-15 18.305824426234594
+		12.944172587000764 -7.9260220494493741e-16 12.944172587000756
+		18.305824426234594 1.0001066661317067e-29 6.288911224574765e-17
+		12.944172587000754 7.9260220494497301e-16 -12.944172587000766
+		4.4039414573056496e-16 1.1209087877999659e-15 -18.305824426234555
+		-12.944172587000772 7.92602204944938e-16 -12.944172587000756
+		;
+createNode transform -name "L_knee" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip";
+	rename -uuid "56307D29-4720-6FE1-7F2D-4CA0C98B151A";
+	setAttr ".translate" -type "double3" -1.4210854715202004e-14 32.925600115625244 
+		-0.77695510008004232 ;
+	setAttr ".rotate" -type "double3" 0 1.8328153775463183 89.999999999999986 ;
+	setAttr ".scale" -type "double3" 1.0000000000000002 1 1.0000000000000002 ;
+	setAttr ".rotatePivot" -type "double3" 0 0 -2.775557561562892e-17 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.0562956753545069e-34 -8.8771233885066706e-19 
+		1.4199576247834659e-20 ;
+	setAttr ".scalePivot" -type "double3" 0 0 -2.7755575615628914e-17 ;
+	setAttr ".scalePivotTranslate" -type "double3" 0 0 -6.1629758220391575e-33 ;
+createNode transform -name "L_knee" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee";
+	rename -uuid "F86F645B-4AFC-EF81-F92D-B68EE1C9D15E";
+	setAttr ".rotatePivot" -type "double3" 0 0 -2.7755575615628914e-17 ;
+	setAttr ".scalePivot" -type "double3" 0 0 -2.7755575615628914e-17 ;
+createNode nurbsCurve -name "L_kneeShape" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee";
+	rename -uuid "6E3613FF-41C8-1C55-058B-838E9475DA9F";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-1.4202122938928934 1.1647712697725296e-14 -16.727983342767519
+		-12.832713523145461 1.179476015344382e-14 -10.824228320832846
+		-16.727985322175808 1.1275991545947208e-14 1.4202138991457587
+		-10.824230300241508 1.0395294489773569e-14 12.832715128398469
+		1.4202119197367804 9.6685693760873558e-15 16.727986927428613
+		12.832713148989317 9.5215219203688278e-15 10.824231905493912
+		16.727984948019625 1.0040290527865441e-14 -1.4202103144846823
+		10.824229926085284 1.0920987584039079e-14 -12.832711543737364
+		-1.4202122938928934 1.1647712697725296e-14 -16.727983342767519
+		-12.832713523145461 1.179476015344382e-14 -10.824228320832846
+		-16.727985322175808 1.1275991545947208e-14 1.4202138991457587
+		;
+createNode transform -name "L_ankle" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee";
+	rename -uuid "7D947C52-404D-4C6A-2A7B-789C54F3FCFF";
+	setAttr ".translate" -type "double3" 40.375656121477448 2.1316282072803006e-13 
+		-5.7454041524351851e-15 ;
+	setAttr ".rotate" -type "double3" 1.8328239578652821 0 -89.999999999999986 ;
+	setAttr ".scale" -type "double3" 1 0.99999999999999989 0.99999999999999978 ;
+createNode transform -name "L_ankle" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle";
+	rename -uuid "CE3C359D-412A-B7A6-4B18-9290724104A3";
+createNode nurbsCurve -name "L_ankleShape" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle";
+	rename -uuid "F9BA38FB-4D35-1817-E1FD-63BB0F3762E3";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		17.435602239193944 4.6203364024722438e-15 -17.435602239193962
+		2.6620719637792337e-15 5.062560214114756e-15 -24.657665154810818
+		-17.435602239193962 4.6203364024722281e-15 -17.435602239193944
+		-24.657665154810807 3.5527136788004938e-15 -2.1550936416834235e-15
+		-17.435602239193944 2.4850909551287572e-15 17.435602239193962
+		-2.6620719637792337e-15 2.0428671434862443e-15 24.657665154810818
+		17.435602239193962 2.4850909551287738e-15 17.435602239193944
+		24.657665154810807 3.552713678800508e-15 3.1690502858750444e-15
+		17.435602239193944 4.6203364024722438e-15 -17.435602239193962
+		2.6620719637792337e-15 5.062560214114756e-15 -24.657665154810818
+		-17.435602239193962 4.6203364024722281e-15 -17.435602239193944
+		;
+createNode transform -name "L_toe1" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle";
+	rename -uuid "5EA257A2-4C67-4E66-D55B-D0BD1D4D34D7";
+	setAttr ".translate" -type "double3" 10.553000000000011 10.614369999999958 9.9005563919396522e-07 ;
+	setAttr ".rotate" -type "double3" -89.999875000000046 -1.053130727174646e-05 -142.38955100000007 ;
+	setAttr ".scale" -type "double3" 0.99999999999999978 1.0000000000000002 0.99999999999999978 ;
+	setAttr ".rotatePivot" -type "double3" 0 -1.1102230246251568e-16 -3.5527136788005001e-15 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -2.1681844950186901e-15 2.9254053965106974e-15 
+		3.6637282304438664e-15 ;
+	setAttr ".scalePivot" -type "double3" 0 -1.1102230246251565e-16 -3.5527136788005009e-15 ;
+	setAttr ".scalePivotTranslate" -type "double3" 0 -2.465190328815663e-32 7.8886090522101146e-31 ;
+createNode transform -name "L_toe1" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1";
+	rename -uuid "81AC9914-49EC-F5AB-4646-3FBC7FC0F633";
+	setAttr ".rotatePivot" -type "double3" 0 -1.1102230246251565e-16 -3.5527136788005009e-15 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 0 0 -1.3681806324926924e-30 ;
+	setAttr ".scalePivot" -type "double3" 0 -1.1102230246251565e-16 -3.5527136788005009e-15 ;
+createNode nurbsCurve -name "L_toeShape1" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1";
+	rename -uuid "714CBA10-45E0-0854-819F-AC8D2192C21B";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742479 4.3304141674292587e-16 -7.2269259354742541
+		-2.2756391209614891e-15 6.2337359847711423e-16 -10.220416672213551
+		-7.2269259354742514 4.4854198064872965e-16 -7.2269259354742532
+		-10.220416672213553 1.0960553850009413e-17 -4.7125125121913941e-15
+		-7.2269259354742479 -4.3304141674292577e-16 7.2269259354742452
+		1.8776730210217609e-15 -6.2337359847711472e-16 10.220416672213549
+		7.2269259354742514 -4.4854198064872965e-16 7.2269259354742461
+		10.220416672213553 -1.0960553850009466e-17 -1.5289884375002468e-15
+		7.2269259354742479 4.3304141674292587e-16 -7.2269259354742541
+		-2.2756391209614891e-15 6.2337359847711423e-16 -10.220416672213551
+		-7.2269259354742514 4.4854198064872965e-16 -7.2269259354742532
+		;
+createNode transform -name "L_toe3" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle";
+	rename -uuid "2322D386-456D-8375-5282-97993C0E1C3E";
+	setAttr ".translate" -type "double3" -10.552899999999983 10.614370000000001 1.9900556393337432e-06 ;
+	setAttr ".rotate" -type "double3" 89.999746999999971 -8.2408999949547949e-06 -37.610487999999989 ;
+	setAttr ".scale" -type "double3" 1.0000000000000002 0.99999999999999978 0.99999999999999978 ;
+	setAttr ".rotatePivot" -type "double3" 3.5527136788005017e-15 5.5511151231257815e-17 
+		-8.8817841970012504e-16 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.9628555188289284e-16 -1.5201018777725266e-15 
+		9.436861600062713e-16 ;
+	setAttr ".scalePivot" -type "double3" 3.5527136788005009e-15 5.5511151231257827e-17 
+		-8.8817841970012523e-16 ;
+	setAttr ".scalePivotTranslate" -type "double3" 7.8886090522101216e-31 -1.2325951644078304e-32 
+		1.9721522630525286e-31 ;
+createNode transform -name "L_toe3" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3";
+	rename -uuid "B5B41455-4442-0546-9639-EB8701BC5867";
+	setAttr ".rotatePivot" -type "double3" 3.5527136788005009e-15 5.5511151231257827e-17 
+		-8.8817841970012523e-16 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.1709654061874394e-30 -4.9303806576313238e-32 
+		-3.8518598887744717e-31 ;
+	setAttr ".scalePivot" -type "double3" 3.5527136788005009e-15 5.5511151231257827e-17 
+		-8.8817841970012523e-16 ;
+createNode nurbsCurve -name "L_toeShape3" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3";
+	rename -uuid "466C0FD4-4DEC-E0B2-F6E3-0293AB640972";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742497 3.7980035929667382e-16 -7.2269259354742541
+		1.0691106782859374e-15 5.7419081498691213e-16 -10.220416672213549
+		-7.2269259354742497 3.9971039911955133e-16 -7.2269259354742514
+		-10.220416672213553 -4.1432627058806844e-17 -2.7510719185131443e-15
+		-7.2269259354742497 -4.9082266175918947e-16 7.226925935474247
+		-1.4670767782256666e-15 -6.8521311744942817e-16 10.220416672213549
+		7.2269259354742497 -5.1073270158206698e-16 7.2269259354742461
+		10.220416672213553 -6.9589675403708859e-17 -1.7140721917782466e-15
+		7.2269259354742497 3.7980035929667382e-16 -7.2269259354742541
+		1.0691106782859374e-15 5.7419081498691213e-16 -10.220416672213549
+		-7.2269259354742497 3.9971039911955133e-16 -7.2269259354742514
+		;
+createNode transform -name "L_toe2" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle";
+	rename -uuid "C2BE5C68-4B88-BCBE-F63D-2EB7B92552A0";
+	setAttr ".translate" -type "double3" -3.5527136788005009e-15 8.8528699895060079 
+		-11.201031008294054 ;
+	setAttr ".rotate" -type "double3" -179.99964 -52.389368000000019 -89.999966000000086 ;
+	setAttr ".scale" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr ".rotatePivot" -type "double3" 1.3322676295501878e-15 0 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -1.3322671470632501e-15 -8.1307250713580122e-16 
+		1.055390986737591e-15 ;
+	setAttr ".scalePivot" -type "double3" 1.3322676295501878e-15 0 0 ;
+createNode transform -name "L_toe2" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2";
+	rename -uuid "DFDC98E4-4D66-A49F-B8AD-08B7F56E79E6";
+	setAttr ".rotatePivot" -type "double3" 1.3322676295501878e-15 0 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 9.2136488539485363e-31 1.128474576789396e-36 
+		9.8607613152626476e-32 ;
+	setAttr ".scalePivot" -type "double3" 1.3322676295501878e-15 0 0 ;
+createNode nurbsCurve -name "L_toeShape2" -parent "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2";
+	rename -uuid "843A01B9-4B67-F65C-5B13-6CA854937A0B";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742488 4.4252158572767666e-16 -7.2269259354742506
+		1.8173081832886557e-16 6.2582002817892828e-16 -10.220416672213547
+		-7.2269259354742506 4.4252158572767661e-16 -7.2269259354742497
+		-10.220416672213553 3.2442620772331176e-32 -1.2869909769223734e-15
+		-7.2269259354742506 -4.4252158572767661e-16 7.2269259354742488
+		-1.4678753379687198e-15 -6.2582002817892868e-16 10.220416672213553
+		7.2269259354742488 -4.4252158572767661e-16 7.2269259354742497
+		10.220416672213553 -8.5342856279584628e-32 2.1509173848317339e-15
+		7.2269259354742488 4.4252158572767666e-16 -7.2269259354742506
+		1.8173081832886557e-16 6.2582002817892828e-16 -10.220416672213547
+		-7.2269259354742506 4.4252158572767661e-16 -7.2269259354742497
+		;
+createNode transform -name "R_socket" -parent "|root|root|COG|COG";
+	rename -uuid "49F78F13-47FD-4049-F7F7-2F8928A4C55A";
+	setAttr ".translate" -type "double3" -1.298464719967555 4.1390158989074166e-07 
+		-9.9638397882134679 ;
+	setAttr ".rotate" -type "double3" -89.999992070922147 75.579055423280337 179.999987953963 ;
+	setAttr ".scale" -type "double3" 0.99999999999999978 0.99999999999999978 1 ;
+	setAttr ".rotatePivot" -type "double3" 1.7763568394002501e-15 1.4210854715202001e-14 
+		-8.8817841970012523e-16 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 1.1544354331581291e-14 -1.3322681062707336e-14 
+		-4.3713365508067242e-15 ;
+	setAttr ".scalePivot" -type "double3" 1.7763568394002505e-15 1.4210854715202004e-14 
+		-8.8817841970012523e-16 ;
+	setAttr ".scalePivotTranslate" -type "double3" -3.9443045261050573e-31 -3.1554436208840458e-30 
+		0 ;
+createNode transform -name "R_socket" -parent "|root|root|COG|COG|R_socket";
+	rename -uuid "9DC541E2-48D3-200E-444E-CEA4FA688FD6";
+	setAttr ".rotatePivot" -type "double3" 1.7763568394002505e-15 1.4210854715202004e-14 
+		-8.8817841970012523e-16 ;
+	setAttr ".scalePivot" -type "double3" 1.7763568394002505e-15 1.4210854715202004e-14 
+		-8.8817841970012523e-16 ;
+createNode nurbsCurve -name "R_socketShape" -parent "|root|root|COG|COG|R_socket|R_socket";
+	rename -uuid "109A89C2-42A0-3F57-D24C-9CA6069E367C";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-1.6391035970277879 23.966195012103753 1.6177962451922683
+		-1.6742918332599179 18.057665477798725 -15.836662937624547
+		-0.72870262093886662 1.5712004113955891 -24.014219754312254
+		0.64375070379132771 -15.835652546796892 -18.124572328731745
+		1.6391035970278016 -23.966195012103736 -1.6177962451922983
+		1.6742918332599304 -18.057665477798693 15.836662937624517
+		0.72870262093889859 -1.5712004113955553 24.014219754312244
+		-0.64375070379131649 15.835652546796936 18.124572328731716
+		-1.6391035970277879 23.966195012103753 1.6177962451922683
+		-1.6742918332599179 18.057665477798725 -15.836662937624547
+		-0.72870262093886662 1.5712004113955891 -24.014219754312254
+		;
+createNode transform -name "R_hip" -parent "|root|root|COG|COG|R_socket|R_socket";
+	rename -uuid "431936D0-45E1-EDA9-3A6E-8AB788A1F5A0";
+	setAttr ".translate" -type "double3" 19.069988229105309 2.0660567227108686 -0.41912508956848749 ;
+	setAttr ".rotate" -type "double3" 1.9728169978452108e-05 180.00000194567474 14.336674000000206 ;
+	setAttr ".scale" -type "double3" 1 0.99999999999999989 0.99999999999999967 ;
+createNode transform -name "R_hip" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip";
+	rename -uuid "8C39D80D-4553-83E7-CAD0-FBB31DBC0A84";
+createNode nurbsCurve -name "R_hipShape" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip";
+	rename -uuid "AC1679CB-4B5A-9A05-8180-4AA66F831FA3";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		12.944172587000757 7.9260197631401245e-16 -12.944172587000768
+		3.9931079456688502e-15 1.1209084644669608e-15 -18.305824426234558
+		-12.944172587000768 7.9260197631397745e-16 -12.944172587000757
+		-18.305824426234597 -1.3088726981265836e-29 2.529339750614198e-16
+		-12.944172587000757 -7.9260197631401393e-16 12.944172587000768
+		-1.2869221529499365e-32 -1.1209084644669659e-15 18.305824426234597
+		12.944172587000768 -7.9260197631397686e-16 12.944172587000757
+		18.305824426234597 1.0001066670271749e-29 7.6102266913020098e-16
+		12.944172587000757 7.9260197631401245e-16 -12.944172587000768
+		3.9931079456688502e-15 1.1209084644669608e-15 -18.305824426234558
+		-12.944172587000768 7.9260197631397745e-16 -12.944172587000757
+		;
+createNode transform -name "R_knee" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip";
+	rename -uuid "32DBF2B7-48BD-F4FD-17FF-CFA73C397B22";
+	setAttr ".translate" -type "double3" 2.1316282072803006e-14 -32.925651550293232 
+		0.77696096896001499 ;
+	setAttr ".rotate" -type "double3" 0 -1.8328297595223368 -89.999999999999986 ;
+	setAttr ".scale" -type "double3" 0.99999999999999989 1 1 ;
+	setAttr ".rotatePivot" -type "double3" 0 3.5527136788005009e-15 -2.7755575615628914e-17 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 3.5527136788005009e-15 -3.5536013981027893e-15 
+		1.4199799075806531e-20 ;
+	setAttr ".scalePivot" -type "double3" 0 3.5527136788005009e-15 -2.7755575615628914e-17 ;
+createNode transform -name "R_knee" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee";
+	rename -uuid "3A28CFBD-41D0-D027-C527-F2BE1C5A365C";
+	setAttr ".rotatePivot" -type "double3" 0 3.5527136788005009e-15 -2.7755575615628914e-17 ;
+	setAttr ".scalePivot" -type "double3" 0 3.5527136788005009e-15 -2.7755575615628914e-17 ;
+createNode nurbsCurve -name "R_kneeShape" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee";
+	rename -uuid "26706EF2-4880-0F18-A029-0DBFB29F747F";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-1.4202121068148477 8.9183192136342892e-16 -16.72798513509807
+		-12.832713336067391 -2.5598838464962924e-16 -10.824230113163383
+		-16.727985135097736 -1.2538541667449133e-15 1.4202121068152131
+		-10.824230113163456 -1.5172291831990518e-15 12.83271333606794
+		1.4202121068148443 -8.9183192136342813e-16 16.72798513509807
+		12.832713336067384 2.5598838464962811e-16 10.824230113163372
+		16.727985135097665 1.2538541667449048e-15 -1.4202121068151994
+		10.824230113163372 1.5172291831990421e-15 -12.832713336067908
+		-1.4202121068148477 8.9183192136342892e-16 -16.72798513509807
+		-12.832713336067391 -2.5598838464962924e-16 -10.824230113163383
+		-16.727985135097736 -1.2538541667449133e-15 1.4202121068152131
+		;
+createNode transform -name "R_ankle" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee";
+	rename -uuid "F2D3277F-4B80-2796-BC8B-C981F69B97A7";
+	setAttr ".translate" -type "double3" 40.375646253891844 -2.2737367544323206e-13 
+		-1.0713069320544832e-11 ;
+	setAttr ".rotate" -type "double3" 1.8328297595223368 0 89.999999999999986 ;
+	setAttr ".scale" -type "double3" 1 1.0000000000000002 1 ;
+createNode transform -name "R_ankle" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle";
+	rename -uuid "BC245F1A-4DE8-30C0-B500-4A861049F396";
+createNode nurbsCurve -name "R_ankleShape" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle";
+	rename -uuid "625957D4-4089-AEA4-E093-7E895D9DE88C";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		17.435602239193948 1.0676227236717433e-15 -17.435602239193958
+		9.7674993213802348e-15 1.5098465353142551e-15 -24.657665154810815
+		-17.435602239193951 1.0676227236717275e-15 -17.43560223919394
+		-24.657665154810797 -7.1038524667872948e-30 -2.1550936416834231e-15
+		-17.435602239193933 -1.0676227236717439e-15 17.435602239193958
+		4.4433553938217689e-15 -1.5098465353142568e-15 24.657665154810815
+		17.435602239193965 -1.0676227236717273e-15 17.43560223919394
+		24.657665154810811 7.1564040924023185e-30 3.169050285875044e-15
+		17.435602239193948 1.0676227236717433e-15 -17.435602239193958
+		9.7674993213802348e-15 1.5098465353142551e-15 -24.657665154810815
+		-17.435602239193951 1.0676227236717275e-15 -17.43560223919394
+		;
+createNode transform -name "R_toe3" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle";
+	rename -uuid "54824B00-4655-E496-2BC5-13A943F385B0";
+	setAttr ".translate" -type "double3" 10.552921182648646 -10.614340928217004 -1.7726670271112077e-06 ;
+	setAttr ".rotate" -type "double3" 89.999746999999985 -8.2408999949547949e-06 -37.610488 ;
+	setAttr ".scale" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
+	setAttr ".rotatePivot" -type "double3" 0 5.5511151231257809e-17 -2.6645352591003745e-15 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 1.6261398525477212e-15 2.0552751082148964e-15 
+		2.720034644588023e-15 ;
+	setAttr ".scalePivot" -type "double3" 0 5.5511151231257827e-17 -2.6645352591003757e-15 ;
+	setAttr ".scalePivotTranslate" -type "double3" 0 -1.8488927466117461e-32 1.1832913578315175e-30 ;
+createNode transform -name "R_toe3" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3";
+	rename -uuid "F5D27CEA-443D-48D2-4C1F-7EB70346984A";
+	setAttr ".rotatePivot" -type "double3" 0 5.5511151231257827e-17 -2.6645352591003757e-15 ;
+	setAttr ".scalePivot" -type "double3" 0 5.5511151231257827e-17 -2.6645352591003757e-15 ;
+createNode nurbsCurve -name "R_toeShape3" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3";
+	rename -uuid "2DDF9C34-4920-C4ED-8EC8-B89326543D18";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742488 5.2432057216402671e-16 -7.2269259354742488
+		-8.350876838774282e-16 7.2228218958698356e-16 -10.220416672213545
+		-7.2269259354742506 5.9469373479540175e-16 -7.2269259354742443
+		-10.220416672213553 2.1629479420396252e-16 1.1689333516169929e-15
+		-7.2269259354742488 -1.912536647764797e-16 7.2269259354742497
+		4.3712158393769999e-16 -3.892152821994371e-16 10.220416672213553
+		7.2269259354742506 -2.6162682740785474e-16 7.2269259354742461
+		10.220416672213553 1.167721131835844e-16 1.4713498956926181e-15
+		7.2269259354742488 5.2432057216402671e-16 -7.2269259354742488
+		-8.350876838774282e-16 7.2228218958698356e-16 -10.220416672213545
+		-7.2269259354742506 5.9469373479540175e-16 -7.2269259354742443
+		;
+createNode transform -name "R_toe2" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle";
+	rename -uuid "A9B6B6FF-4100-324C-A957-47BF8AF7EF81";
+	setAttr ".translate" -type "double3" -8.7072394236997752e-06 -8.8528413688980834 
+		11.201009864999184 ;
+	setAttr ".rotate" -type "double3" -179.99964000000003 -52.389368000000005 -89.999966000000015 ;
+	setAttr ".scale" -type "double3" 1 1 1.0000000000000002 ;
+	setAttr ".rotatePivot" -type "double3" -2.2204460492503131e-15 0 0 ;
+	setAttr ".rotatePivotTranslate" -type "double3" 2.2204452451054175e-15 1.3551208452263367e-15 
+		-1.758984977895986e-15 ;
+	setAttr ".scalePivot" -type "double3" -2.2204460492503131e-15 0 0 ;
+createNode transform -name "R_toe2" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2";
+	rename -uuid "D5BE1247-4C17-DC93-B9A9-508D866240F2";
+	setAttr ".rotatePivot" -type "double3" -2.2204460492503131e-15 0 0 ;
+	setAttr ".scalePivot" -type "double3" -2.2204460492503131e-15 0 0 ;
+createNode nurbsCurve -name "R_toeShape2" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2";
+	rename -uuid "26F5D06D-457D-BBCD-D110-FC9A8B605A2B";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742461 -3.1102063896598644e-15 -7.2269259354742488
+		-1.9076995830658068e-15 -2.9269080923553497e-15 -10.220416672213545
+		-7.2269259354742514 -3.1101982201815558e-15 -7.2269259354742443
+		-10.220416672213553 -3.55270790210699e-15 2.0036914061668473e-15
+		-7.2269259354742497 -3.995220967941137e-15 7.2269259354742514
+		-2.0429801956744227e-15 -4.1785192652456529e-15 10.220416672213554
+		7.2269259354742479 -3.9952291374194461e-15 7.2269259354742479
+		10.220416672213549 -3.5527194554940115e-15 2.4129486805430141e-15
+		7.2269259354742461 -3.1102063896598644e-15 -7.2269259354742488
+		-1.9076995830658068e-15 -2.9269080923553497e-15 -10.220416672213545
+		-7.2269259354742514 -3.1101982201815558e-15 -7.2269259354742443
+		;
+createNode transform -name "R_toe1" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle";
+	rename -uuid "65FDD564-4366-C941-C668-AA9FD8A00088";
+	setAttr ".translate" -type "double3" -10.552921149128114 -10.614345263262496 -1.7081173631638968e-06 ;
+	setAttr ".rotate" -type "double3" -89.999875 -1.0336000000004868e-05 -142.389551 ;
+	setAttr ".scale" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
+	setAttr ".rotatePivot" -type "double3" 3.5527136788005009e-15 0 3.5527136788004997e-15 ;
+	setAttr ".rotatePivotTranslate" -type "double3" -4.1989122051621518e-15 -4.9825672530865032e-15 
+		-3.5527052870819019e-15 ;
+	setAttr ".scalePivot" -type "double3" 3.5527136788005009e-15 0 3.5527136788005009e-15 ;
+	setAttr ".scalePivotTranslate" -type "double3" 0 0 -1.1832913578315175e-30 ;
+createNode transform -name "R_toe1" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1";
+	rename -uuid "5CB409B7-4EAE-DB0D-341F-D7B0D3B4BD3A";
+	setAttr ".rotatePivot" -type "double3" 0 0 3.5527136788005009e-15 ;
+	setAttr ".scalePivot" -type "double3" 0 0 3.5527136788005009e-15 ;
+createNode nurbsCurve -name "R_toe1Shape" -parent "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1";
+	rename -uuid "6D055B1C-499B-D53E-83DF-59912D8D8F0D";
+	setAttr -keyable off ".visibility";
+	setAttr ".cached" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.2269259354742506 4.5080824499077826e-16 -7.2269259354742479
+		1.7832847943847441e-15 6.277783272790812e-16 -10.220416672213544
+		-7.2269259354742488 4.3700437961119428e-16 -7.2269259354742452
+		-10.220416672213553 -9.760806816489974e-18 3.423185393725732e-15
+		-7.2269259354742506 -4.5080824499077826e-16 7.2269259354742532
+		-2.1812508943244735e-15 -6.2777832727908169e-16 10.220416672213556
+		7.2269259354742488 -4.3700437961119428e-16 7.2269259354742523
+		10.220416672213553 9.7608068164899217e-18 4.5461683717846303e-15
+		7.2269259354742506 4.5080824499077826e-16 -7.2269259354742479
+		1.7832847943847441e-15 6.277783272790812e-16 -10.220416672213544
+		-7.2269259354742488 4.3700437961119428e-16 -7.2269259354742452
+		;
 createNode lightLinker -shared -name "lightLinker1";
 	rename -uuid "867A5ADA-4838-AA7B-6B2E-DCA705C807A4";
 	setAttr -size 3 ".link";
@@ -43569,7 +44946,7 @@ createNode poseInterpolatorManager -name "poseInterpolatorManager";
 	rename -uuid "8155FB34-4E90-9B21-53D8-168DBEAAC694";
 createNode displayLayerManager -name "layerManager";
 	rename -uuid "A1B1B2E0-4E6F-5494-256C-9B9489215B1D";
-	setAttr ".currentDisplayLayer" 1;
+	setAttr ".currentDisplayLayer" 4;
 	setAttr -size 5 ".displayLayerId[1:4]"  1 2 3 4;
 	setAttr -size 4 ".displayLayerId";
 createNode displayLayer -name "defaultLayer";
@@ -43608,6 +44985,7 @@ createNode aiImagerDenoiserOidn -shared -name "defaultArnoldDenoiser";
 	rename -uuid "18F4FE37-40EE-B302-45DE-98B5A6581ED6";
 createNode displayLayer -name "joints";
 	rename -uuid "EC59E850-416C-020D-FE36-42987CEA777B";
+	setAttr ".displayType" 2;
 	setAttr ".color" 9;
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 	setAttr ".displayOrder" 1;
@@ -43617,17 +44995,17 @@ createNode script -name "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 809\n            -height 467\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 808\n            -height 467\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 809\n            -height 467\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1625\n            -height 1089\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1625\n            -height 1001\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -43654,8 +45032,8 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n"
 		+ "                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
 		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1625\\n    -height 1089\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1625\\n    -height 1089\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1625\\n    -height 1001\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1625\\n    -height 1001\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
@@ -43670,9 +45048,21 @@ createNode displayLayer -name "geo";
 	setAttr ".displayOrder" 2;
 createNode displayLayer -name "controls";
 	rename -uuid "FB5B8B8E-4F31-B60C-5D6B-FD87923B6C9E";
-	setAttr ".color" 25;
+	setAttr ".color" 22;
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 	setAttr ".displayOrder" 3;
+createNode makeNurbCircle -name "makeNurbCircle1";
+	rename -uuid "63F333E4-4A28-CC46-EBE0-89BC275116D5";
+	setAttr ".normal" -type "double3" 0 1 0 ;
+	setAttr ".tolerance" 0;
+createNode transformGeometry -name "transformGeometry1";
+	rename -uuid "350B828F-4E7D-B2F2-8006-679554D49C17";
+	setAttr ".transform" -type "matrix" 6.1540802423136327 0 0 0 0 6.1540802423136327 0 0
+		 0 0 6.1540802423136327 0 0 0 0 1;
+createNode transformGeometry -name "transformGeometry2";
+	rename -uuid "E2514916-4766-0278-74E3-D3A5AF93D895";
+	setAttr ".transform" -type "matrix" 1.4986132880137002 0 0 0 0 1.4986132880137002 0 0
+		 0 0 1.4986132880137002 0 0 0 0 1;
 select -noExpand :time1;
 	setAttr -alteredValue -keyable on ".caching";
 	setAttr -channelBox on ".isHistoricallyInteresting";
@@ -43685,6 +45075,7 @@ select -noExpand :hardwareRenderingGlobals;
 	setAttr ".objectTypeFilterValueArray" -type "Int32Array" 22 0 1 1
 		 1 1 1 1 1 1 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 ;
+	setAttr ".multiSampleEnable" yes;
 	setAttr ".floatingPointRTEnable" yes;
 	setAttr ".floatingPointRTFormat" 1;
 select -noExpand :renderPartition;
@@ -43808,66 +45199,1561 @@ select -noExpand :ikSystem;
 	setAttr -size 4 ".ikSolver";
 connectAttr "geo.drawInfo" "Robot_Geo.drawOverride";
 connectAttr "joints.drawInfo" "jnt_root.drawOverride";
+connectAttr "jnt_root_scaleConstraint1.constraintScaleX" "jnt_root.scaleX";
+connectAttr "jnt_root_scaleConstraint1.constraintScaleY" "jnt_root.scaleY";
+connectAttr "jnt_root_scaleConstraint1.constraintScaleZ" "jnt_root.scaleZ";
+connectAttr "jnt_root_parentConstraint1.constraintTranslateX" "jnt_root.translateX"
+		;
+connectAttr "jnt_root_parentConstraint1.constraintTranslateY" "jnt_root.translateY"
+		;
+connectAttr "jnt_root_parentConstraint1.constraintTranslateZ" "jnt_root.translateZ"
+		;
+connectAttr "jnt_root_parentConstraint1.constraintRotateX" "jnt_root.rotateX";
+connectAttr "jnt_root_parentConstraint1.constraintRotateY" "jnt_root.rotateY";
+connectAttr "jnt_root_parentConstraint1.constraintRotateZ" "jnt_root.rotateZ";
 connectAttr "joints.drawInfo" "jnt_COG.drawOverride";
 connectAttr "jnt_root.scale" "jnt_COG.inverseScale";
+connectAttr "jnt_COG_scaleConstraint1.constraintScaleX" "jnt_COG.scaleX";
+connectAttr "jnt_COG_scaleConstraint1.constraintScaleY" "jnt_COG.scaleY";
+connectAttr "jnt_COG_scaleConstraint1.constraintScaleZ" "jnt_COG.scaleZ";
+connectAttr "jnt_COG_parentConstraint1.constraintTranslateX" "jnt_COG.translateX"
+		;
+connectAttr "jnt_COG_parentConstraint1.constraintTranslateY" "jnt_COG.translateY"
+		;
+connectAttr "jnt_COG_parentConstraint1.constraintTranslateZ" "jnt_COG.translateZ"
+		;
+connectAttr "jnt_COG_parentConstraint1.constraintRotateX" "jnt_COG.rotateX";
+connectAttr "jnt_COG_parentConstraint1.constraintRotateY" "jnt_COG.rotateY";
+connectAttr "jnt_COG_parentConstraint1.constraintRotateZ" "jnt_COG.rotateZ";
 connectAttr "jnt_COG.scale" "jnt_chest.inverseScale";
-connectAttr "jnt_chest.scale" "jnt_shoulder2.inverseScale";
-connectAttr "jnt_shoulder2.scale" "jnt_upper_arm1.inverseScale";
+connectAttr "jnt_chest_scaleConstraint1.constraintScaleX" "jnt_chest.scaleX";
+connectAttr "jnt_chest_scaleConstraint1.constraintScaleY" "jnt_chest.scaleY";
+connectAttr "jnt_chest_scaleConstraint1.constraintScaleZ" "jnt_chest.scaleZ";
+connectAttr "jnt_chest_parentConstraint1.constraintTranslateX" "jnt_chest.translateX"
+		;
+connectAttr "jnt_chest_parentConstraint1.constraintTranslateY" "jnt_chest.translateY"
+		;
+connectAttr "jnt_chest_parentConstraint1.constraintTranslateZ" "jnt_chest.translateZ"
+		;
+connectAttr "jnt_chest_parentConstraint1.constraintRotateX" "jnt_chest.rotateX";
+connectAttr "jnt_chest_parentConstraint1.constraintRotateY" "jnt_chest.rotateY";
+connectAttr "jnt_chest_parentConstraint1.constraintRotateZ" "jnt_chest.rotateZ";
+connectAttr "jnt_chest.scale" "jnt_upper_arm1.inverseScale";
+connectAttr "jnt_upper_arm1_scaleConstraint1.constraintScaleX" "jnt_upper_arm1.scaleX"
+		;
+connectAttr "jnt_upper_arm1_scaleConstraint1.constraintScaleY" "jnt_upper_arm1.scaleY"
+		;
+connectAttr "jnt_upper_arm1_scaleConstraint1.constraintScaleZ" "jnt_upper_arm1.scaleZ"
+		;
+connectAttr "jnt_upper_arm1_parentConstraint1.constraintTranslateX" "jnt_upper_arm1.translateX"
+		;
+connectAttr "jnt_upper_arm1_parentConstraint1.constraintTranslateY" "jnt_upper_arm1.translateY"
+		;
+connectAttr "jnt_upper_arm1_parentConstraint1.constraintTranslateZ" "jnt_upper_arm1.translateZ"
+		;
+connectAttr "jnt_upper_arm1_parentConstraint1.constraintRotateX" "jnt_upper_arm1.rotateX"
+		;
+connectAttr "jnt_upper_arm1_parentConstraint1.constraintRotateY" "jnt_upper_arm1.rotateY"
+		;
+connectAttr "jnt_upper_arm1_parentConstraint1.constraintRotateZ" "jnt_upper_arm1.rotateZ"
+		;
 connectAttr "jnt_upper_arm1.scale" "jnt_elbow1.inverseScale";
+connectAttr "jnt_elbow1_scaleConstraint1.constraintScaleX" "jnt_elbow1.scaleX";
+connectAttr "jnt_elbow1_scaleConstraint1.constraintScaleY" "jnt_elbow1.scaleY";
+connectAttr "jnt_elbow1_scaleConstraint1.constraintScaleZ" "jnt_elbow1.scaleZ";
+connectAttr "jnt_elbow1_parentConstraint1.constraintTranslateX" "jnt_elbow1.translateX"
+		;
+connectAttr "jnt_elbow1_parentConstraint1.constraintTranslateY" "jnt_elbow1.translateY"
+		;
+connectAttr "jnt_elbow1_parentConstraint1.constraintTranslateZ" "jnt_elbow1.translateZ"
+		;
+connectAttr "jnt_elbow1_parentConstraint1.constraintRotateX" "jnt_elbow1.rotateX"
+		;
+connectAttr "jnt_elbow1_parentConstraint1.constraintRotateY" "jnt_elbow1.rotateY"
+		;
+connectAttr "jnt_elbow1_parentConstraint1.constraintRotateZ" "jnt_elbow1.rotateZ"
+		;
 connectAttr "jnt_elbow1.scale" "jnt_wrist1.inverseScale";
+connectAttr "jnt_wrist1_scaleConstraint1.constraintScaleX" "jnt_wrist1.scaleX";
+connectAttr "jnt_wrist1_scaleConstraint1.constraintScaleY" "jnt_wrist1.scaleY";
+connectAttr "jnt_wrist1_scaleConstraint1.constraintScaleZ" "jnt_wrist1.scaleZ";
+connectAttr "jnt_wrist1_parentConstraint1.constraintTranslateX" "jnt_wrist1.translateX"
+		;
+connectAttr "jnt_wrist1_parentConstraint1.constraintTranslateY" "jnt_wrist1.translateY"
+		;
+connectAttr "jnt_wrist1_parentConstraint1.constraintTranslateZ" "jnt_wrist1.translateZ"
+		;
+connectAttr "jnt_wrist1_parentConstraint1.constraintRotateX" "jnt_wrist1.rotateX"
+		;
+connectAttr "jnt_wrist1_parentConstraint1.constraintRotateY" "jnt_wrist1.rotateY"
+		;
+connectAttr "jnt_wrist1_parentConstraint1.constraintRotateZ" "jnt_wrist1.rotateZ"
+		;
 connectAttr "jnt_wrist1.scale" "jnt_finger1.inverseScale";
+connectAttr "jnt_finger1_parentConstraint1.constraintTranslateX" "jnt_finger1.translateX"
+		;
+connectAttr "jnt_finger1_parentConstraint1.constraintTranslateY" "jnt_finger1.translateY"
+		;
+connectAttr "jnt_finger1_parentConstraint1.constraintTranslateZ" "jnt_finger1.translateZ"
+		;
+connectAttr "jnt_finger1_parentConstraint1.constraintRotateX" "jnt_finger1.rotateX"
+		;
+connectAttr "jnt_finger1_parentConstraint1.constraintRotateY" "jnt_finger1.rotateY"
+		;
+connectAttr "jnt_finger1_parentConstraint1.constraintRotateZ" "jnt_finger1.rotateZ"
+		;
+connectAttr "jnt_finger1_scaleConstraint1.constraintScaleX" "jnt_finger1.scaleX"
+		;
+connectAttr "jnt_finger1_scaleConstraint1.constraintScaleY" "jnt_finger1.scaleY"
+		;
+connectAttr "jnt_finger1_scaleConstraint1.constraintScaleZ" "jnt_finger1.scaleZ"
+		;
+connectAttr "jnt_finger1.rotateOrder" "jnt_finger1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_finger1.parentInverseMatrix" "jnt_finger1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_finger1.rotatePivot" "jnt_finger1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_finger1.rotatePivotTranslate" "jnt_finger1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_finger1.jointOrient" "jnt_finger1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.translate" "jnt_finger1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.rotatePivot" "jnt_finger1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.rotatePivotTranslate" "jnt_finger1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.rotate" "jnt_finger1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.rotateOrder" "jnt_finger1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.scale" "jnt_finger1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.parentMatrix" "jnt_finger1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger1_parentConstraint1.R_finger1W0" "jnt_finger1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_finger1.segmentScaleCompensate" "jnt_finger1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_finger1.parentInverseMatrix" "jnt_finger1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.scale" "jnt_finger1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1|R_finger1.parentMatrix" "jnt_finger1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger1_scaleConstraint1.R_finger1W0" "jnt_finger1_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_wrist1.scale" "jnt_finger2.inverseScale";
+connectAttr "jnt_finger2_parentConstraint1.constraintTranslateX" "jnt_finger2.translateX"
+		;
+connectAttr "jnt_finger2_parentConstraint1.constraintTranslateY" "jnt_finger2.translateY"
+		;
+connectAttr "jnt_finger2_parentConstraint1.constraintTranslateZ" "jnt_finger2.translateZ"
+		;
+connectAttr "jnt_finger2_parentConstraint1.constraintRotateX" "jnt_finger2.rotateX"
+		;
+connectAttr "jnt_finger2_parentConstraint1.constraintRotateY" "jnt_finger2.rotateY"
+		;
+connectAttr "jnt_finger2_parentConstraint1.constraintRotateZ" "jnt_finger2.rotateZ"
+		;
+connectAttr "jnt_finger2_scaleConstraint1.constraintScaleX" "jnt_finger2.scaleX"
+		;
+connectAttr "jnt_finger2_scaleConstraint1.constraintScaleY" "jnt_finger2.scaleY"
+		;
+connectAttr "jnt_finger2_scaleConstraint1.constraintScaleZ" "jnt_finger2.scaleZ"
+		;
+connectAttr "jnt_finger2.rotateOrder" "jnt_finger2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_finger2.parentInverseMatrix" "jnt_finger2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_finger2.rotatePivot" "jnt_finger2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_finger2.rotatePivotTranslate" "jnt_finger2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_finger2.jointOrient" "jnt_finger2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.translate" "jnt_finger2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.rotatePivot" "jnt_finger2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.rotatePivotTranslate" "jnt_finger2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.rotate" "jnt_finger2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.rotateOrder" "jnt_finger2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.scale" "jnt_finger2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.parentMatrix" "jnt_finger2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger2_parentConstraint1.R_finger3W0" "jnt_finger2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_finger2.segmentScaleCompensate" "jnt_finger2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_finger2.parentInverseMatrix" "jnt_finger2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.scale" "jnt_finger2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3|R_finger3.parentMatrix" "jnt_finger2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger2_scaleConstraint1.R_finger3W0" "jnt_finger2_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_wrist1.scale" "jnt_finger3.inverseScale";
-connectAttr "jnt_chest.scale" "jnt_shoulder1.inverseScale";
-connectAttr "jnt_shoulder1.scale" "jnt_upper_arm2.inverseScale";
+connectAttr "jnt_finger3_parentConstraint1.constraintTranslateX" "jnt_finger3.translateX"
+		;
+connectAttr "jnt_finger3_parentConstraint1.constraintTranslateY" "jnt_finger3.translateY"
+		;
+connectAttr "jnt_finger3_parentConstraint1.constraintTranslateZ" "jnt_finger3.translateZ"
+		;
+connectAttr "jnt_finger3_parentConstraint1.constraintRotateX" "jnt_finger3.rotateX"
+		;
+connectAttr "jnt_finger3_parentConstraint1.constraintRotateY" "jnt_finger3.rotateY"
+		;
+connectAttr "jnt_finger3_parentConstraint1.constraintRotateZ" "jnt_finger3.rotateZ"
+		;
+connectAttr "jnt_finger3_scaleConstraint1.constraintScaleX" "jnt_finger3.scaleX"
+		;
+connectAttr "jnt_finger3_scaleConstraint1.constraintScaleY" "jnt_finger3.scaleY"
+		;
+connectAttr "jnt_finger3_scaleConstraint1.constraintScaleZ" "jnt_finger3.scaleZ"
+		;
+connectAttr "jnt_finger3.rotateOrder" "jnt_finger3_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_finger3.parentInverseMatrix" "jnt_finger3_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_finger3.rotatePivot" "jnt_finger3_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_finger3.rotatePivotTranslate" "jnt_finger3_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_finger3.jointOrient" "jnt_finger3_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.translate" "jnt_finger3_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.rotatePivot" "jnt_finger3_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.rotatePivotTranslate" "jnt_finger3_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.rotate" "jnt_finger3_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.rotateOrder" "jnt_finger3_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.scale" "jnt_finger3_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.parentMatrix" "jnt_finger3_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger3_parentConstraint1.R_finger2W0" "jnt_finger3_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_finger3.segmentScaleCompensate" "jnt_finger3_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_finger3.parentInverseMatrix" "jnt_finger3_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.scale" "jnt_finger3_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2|R_finger2.parentMatrix" "jnt_finger3_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger3_scaleConstraint1.R_finger2W0" "jnt_finger3_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_wrist1.rotateOrder" "jnt_wrist1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_wrist1.parentInverseMatrix" "jnt_wrist1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_wrist1.rotatePivot" "jnt_wrist1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_wrist1.rotatePivotTranslate" "jnt_wrist1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_wrist1.jointOrient" "jnt_wrist1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.translate" "jnt_wrist1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.rotatePivot" "jnt_wrist1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.rotatePivotTranslate" "jnt_wrist1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.rotate" "jnt_wrist1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.rotateOrder" "jnt_wrist1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.scale" "jnt_wrist1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.parentMatrix" "jnt_wrist1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_wrist1_parentConstraint1.R_wristW0" "jnt_wrist1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_wrist1.segmentScaleCompensate" "jnt_wrist1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_wrist1.parentInverseMatrix" "jnt_wrist1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.scale" "jnt_wrist1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist.parentMatrix" "jnt_wrist1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_wrist1_scaleConstraint1.R_wristW0" "jnt_wrist1_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_elbow1.rotateOrder" "jnt_elbow1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_elbow1.parentInverseMatrix" "jnt_elbow1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_elbow1.rotatePivot" "jnt_elbow1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_elbow1.rotatePivotTranslate" "jnt_elbow1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_elbow1.jointOrient" "jnt_elbow1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.translate" "jnt_elbow1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.rotatePivot" "jnt_elbow1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.rotatePivotTranslate" "jnt_elbow1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.rotate" "jnt_elbow1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.rotateOrder" "jnt_elbow1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.scale" "jnt_elbow1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.parentMatrix" "jnt_elbow1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_elbow1_parentConstraint1.R_elbowW0" "jnt_elbow1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_elbow1.segmentScaleCompensate" "jnt_elbow1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_elbow1.parentInverseMatrix" "jnt_elbow1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.scale" "jnt_elbow1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow.parentMatrix" "jnt_elbow1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_elbow1_scaleConstraint1.R_elbowW0" "jnt_elbow1_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_upper_arm1.rotateOrder" "jnt_upper_arm1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_upper_arm1.parentInverseMatrix" "jnt_upper_arm1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_upper_arm1.rotatePivot" "jnt_upper_arm1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_upper_arm1.rotatePivotTranslate" "jnt_upper_arm1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_upper_arm1.jointOrient" "jnt_upper_arm1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.translate" "jnt_upper_arm1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.rotatePivot" "jnt_upper_arm1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.rotatePivotTranslate" "jnt_upper_arm1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.rotate" "jnt_upper_arm1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.rotateOrder" "jnt_upper_arm1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.scale" "jnt_upper_arm1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.parentMatrix" "jnt_upper_arm1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_upper_arm1_parentConstraint1.R_shoulderW0" "jnt_upper_arm1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_upper_arm1.segmentScaleCompensate" "jnt_upper_arm1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_upper_arm1.parentInverseMatrix" "jnt_upper_arm1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.scale" "jnt_upper_arm1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder.parentMatrix" "jnt_upper_arm1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_upper_arm1_scaleConstraint1.R_shoulderW0" "jnt_upper_arm1_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_chest.scale" "jnt_upper_arm2.inverseScale";
+connectAttr "jnt_upper_arm2_scaleConstraint1.constraintScaleX" "jnt_upper_arm2.scaleX"
+		;
+connectAttr "jnt_upper_arm2_scaleConstraint1.constraintScaleY" "jnt_upper_arm2.scaleY"
+		;
+connectAttr "jnt_upper_arm2_scaleConstraint1.constraintScaleZ" "jnt_upper_arm2.scaleZ"
+		;
+connectAttr "jnt_upper_arm2_parentConstraint1.constraintTranslateX" "jnt_upper_arm2.translateX"
+		;
+connectAttr "jnt_upper_arm2_parentConstraint1.constraintTranslateY" "jnt_upper_arm2.translateY"
+		;
+connectAttr "jnt_upper_arm2_parentConstraint1.constraintTranslateZ" "jnt_upper_arm2.translateZ"
+		;
+connectAttr "jnt_upper_arm2_parentConstraint1.constraintRotateX" "jnt_upper_arm2.rotateX"
+		;
+connectAttr "jnt_upper_arm2_parentConstraint1.constraintRotateY" "jnt_upper_arm2.rotateY"
+		;
+connectAttr "jnt_upper_arm2_parentConstraint1.constraintRotateZ" "jnt_upper_arm2.rotateZ"
+		;
 connectAttr "jnt_upper_arm2.scale" "jnt_elbow2.inverseScale";
+connectAttr "jnt_elbow2_scaleConstraint1.constraintScaleX" "jnt_elbow2.scaleX";
+connectAttr "jnt_elbow2_scaleConstraint1.constraintScaleY" "jnt_elbow2.scaleY";
+connectAttr "jnt_elbow2_scaleConstraint1.constraintScaleZ" "jnt_elbow2.scaleZ";
+connectAttr "jnt_elbow2_parentConstraint1.constraintTranslateX" "jnt_elbow2.translateX"
+		;
+connectAttr "jnt_elbow2_parentConstraint1.constraintTranslateY" "jnt_elbow2.translateY"
+		;
+connectAttr "jnt_elbow2_parentConstraint1.constraintTranslateZ" "jnt_elbow2.translateZ"
+		;
+connectAttr "jnt_elbow2_parentConstraint1.constraintRotateX" "jnt_elbow2.rotateX"
+		;
+connectAttr "jnt_elbow2_parentConstraint1.constraintRotateY" "jnt_elbow2.rotateY"
+		;
+connectAttr "jnt_elbow2_parentConstraint1.constraintRotateZ" "jnt_elbow2.rotateZ"
+		;
 connectAttr "jnt_elbow2.scale" "jnt_wrist2.inverseScale";
+connectAttr "jnt_wrist2_scaleConstraint1.constraintScaleX" "jnt_wrist2.scaleX";
+connectAttr "jnt_wrist2_scaleConstraint1.constraintScaleY" "jnt_wrist2.scaleY";
+connectAttr "jnt_wrist2_scaleConstraint1.constraintScaleZ" "jnt_wrist2.scaleZ";
+connectAttr "jnt_wrist2_parentConstraint1.constraintTranslateX" "jnt_wrist2.translateX"
+		;
+connectAttr "jnt_wrist2_parentConstraint1.constraintTranslateY" "jnt_wrist2.translateY"
+		;
+connectAttr "jnt_wrist2_parentConstraint1.constraintTranslateZ" "jnt_wrist2.translateZ"
+		;
+connectAttr "jnt_wrist2_parentConstraint1.constraintRotateX" "jnt_wrist2.rotateX"
+		;
+connectAttr "jnt_wrist2_parentConstraint1.constraintRotateY" "jnt_wrist2.rotateY"
+		;
+connectAttr "jnt_wrist2_parentConstraint1.constraintRotateZ" "jnt_wrist2.rotateZ"
+		;
 connectAttr "jnt_wrist2.scale" "jnt_finger6.inverseScale";
+connectAttr "jnt_finger6_parentConstraint1.constraintTranslateX" "jnt_finger6.translateX"
+		;
+connectAttr "jnt_finger6_parentConstraint1.constraintTranslateY" "jnt_finger6.translateY"
+		;
+connectAttr "jnt_finger6_parentConstraint1.constraintTranslateZ" "jnt_finger6.translateZ"
+		;
+connectAttr "jnt_finger6_parentConstraint1.constraintRotateX" "jnt_finger6.rotateX"
+		;
+connectAttr "jnt_finger6_parentConstraint1.constraintRotateY" "jnt_finger6.rotateY"
+		;
+connectAttr "jnt_finger6_parentConstraint1.constraintRotateZ" "jnt_finger6.rotateZ"
+		;
+connectAttr "jnt_finger6_scaleConstraint1.constraintScaleX" "jnt_finger6.scaleX"
+		;
+connectAttr "jnt_finger6_scaleConstraint1.constraintScaleY" "jnt_finger6.scaleY"
+		;
+connectAttr "jnt_finger6_scaleConstraint1.constraintScaleZ" "jnt_finger6.scaleZ"
+		;
+connectAttr "jnt_finger6.rotateOrder" "jnt_finger6_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_finger6.parentInverseMatrix" "jnt_finger6_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_finger6.rotatePivot" "jnt_finger6_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_finger6.rotatePivotTranslate" "jnt_finger6_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_finger6.jointOrient" "jnt_finger6_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.translate" "jnt_finger6_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotatePivot" "jnt_finger6_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotatePivotTranslate" "jnt_finger6_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotate" "jnt_finger6_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.rotateOrder" "jnt_finger6_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.scale" "jnt_finger6_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.parentMatrix" "jnt_finger6_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger6_parentConstraint1.L_finger1W0" "jnt_finger6_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_finger6.segmentScaleCompensate" "jnt_finger6_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_finger6.parentInverseMatrix" "jnt_finger6_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.scale" "jnt_finger6_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1|L_finger1.parentMatrix" "jnt_finger6_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger6_scaleConstraint1.L_finger1W0" "jnt_finger6_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_wrist2.scale" "jnt_finger5.inverseScale";
+connectAttr "jnt_finger5_parentConstraint1.constraintTranslateX" "jnt_finger5.translateX"
+		;
+connectAttr "jnt_finger5_parentConstraint1.constraintTranslateY" "jnt_finger5.translateY"
+		;
+connectAttr "jnt_finger5_parentConstraint1.constraintTranslateZ" "jnt_finger5.translateZ"
+		;
+connectAttr "jnt_finger5_parentConstraint1.constraintRotateX" "jnt_finger5.rotateX"
+		;
+connectAttr "jnt_finger5_parentConstraint1.constraintRotateY" "jnt_finger5.rotateY"
+		;
+connectAttr "jnt_finger5_parentConstraint1.constraintRotateZ" "jnt_finger5.rotateZ"
+		;
+connectAttr "jnt_finger5_scaleConstraint1.constraintScaleX" "jnt_finger5.scaleX"
+		;
+connectAttr "jnt_finger5_scaleConstraint1.constraintScaleY" "jnt_finger5.scaleY"
+		;
+connectAttr "jnt_finger5_scaleConstraint1.constraintScaleZ" "jnt_finger5.scaleZ"
+		;
+connectAttr "jnt_finger5.rotateOrder" "jnt_finger5_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_finger5.parentInverseMatrix" "jnt_finger5_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_finger5.rotatePivot" "jnt_finger5_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_finger5.rotatePivotTranslate" "jnt_finger5_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_finger5.jointOrient" "jnt_finger5_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.translate" "jnt_finger5_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotatePivot" "jnt_finger5_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotatePivotTranslate" "jnt_finger5_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotate" "jnt_finger5_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.rotateOrder" "jnt_finger5_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.scale" "jnt_finger5_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.parentMatrix" "jnt_finger5_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger5_parentConstraint1.L_finger2W0" "jnt_finger5_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_finger5.segmentScaleCompensate" "jnt_finger5_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_finger5.parentInverseMatrix" "jnt_finger5_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.scale" "jnt_finger5_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2|L_finger2.parentMatrix" "jnt_finger5_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger5_scaleConstraint1.L_finger2W0" "jnt_finger5_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_wrist2.scale" "jnt_finger4.inverseScale";
+connectAttr "jnt_finger4_parentConstraint1.constraintTranslateX" "jnt_finger4.translateX"
+		;
+connectAttr "jnt_finger4_parentConstraint1.constraintTranslateY" "jnt_finger4.translateY"
+		;
+connectAttr "jnt_finger4_parentConstraint1.constraintTranslateZ" "jnt_finger4.translateZ"
+		;
+connectAttr "jnt_finger4_parentConstraint1.constraintRotateX" "jnt_finger4.rotateX"
+		;
+connectAttr "jnt_finger4_parentConstraint1.constraintRotateY" "jnt_finger4.rotateY"
+		;
+connectAttr "jnt_finger4_parentConstraint1.constraintRotateZ" "jnt_finger4.rotateZ"
+		;
+connectAttr "jnt_finger4_scaleConstraint1.constraintScaleX" "jnt_finger4.scaleX"
+		;
+connectAttr "jnt_finger4_scaleConstraint1.constraintScaleY" "jnt_finger4.scaleY"
+		;
+connectAttr "jnt_finger4_scaleConstraint1.constraintScaleZ" "jnt_finger4.scaleZ"
+		;
+connectAttr "jnt_finger4.rotateOrder" "jnt_finger4_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_finger4.parentInverseMatrix" "jnt_finger4_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_finger4.rotatePivot" "jnt_finger4_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_finger4.rotatePivotTranslate" "jnt_finger4_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_finger4.jointOrient" "jnt_finger4_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.translate" "jnt_finger4_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotatePivot" "jnt_finger4_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotatePivotTranslate" "jnt_finger4_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotate" "jnt_finger4_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.rotateOrder" "jnt_finger4_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.scale" "jnt_finger4_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.parentMatrix" "jnt_finger4_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger4_parentConstraint1.L_finger3W0" "jnt_finger4_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_finger4.segmentScaleCompensate" "jnt_finger4_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_finger4.parentInverseMatrix" "jnt_finger4_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.scale" "jnt_finger4_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3|L_finger3.parentMatrix" "jnt_finger4_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_finger4_scaleConstraint1.L_finger3W0" "jnt_finger4_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_wrist2.rotateOrder" "jnt_wrist2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_wrist2.parentInverseMatrix" "jnt_wrist2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_wrist2.rotatePivot" "jnt_wrist2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_wrist2.rotatePivotTranslate" "jnt_wrist2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_wrist2.jointOrient" "jnt_wrist2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.translate" "jnt_wrist2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotatePivot" "jnt_wrist2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotatePivotTranslate" "jnt_wrist2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotate" "jnt_wrist2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.rotateOrder" "jnt_wrist2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.scale" "jnt_wrist2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.parentMatrix" "jnt_wrist2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_wrist2_parentConstraint1.L_wristW0" "jnt_wrist2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_wrist2.segmentScaleCompensate" "jnt_wrist2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_wrist2.parentInverseMatrix" "jnt_wrist2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.scale" "jnt_wrist2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist.parentMatrix" "jnt_wrist2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_wrist2_scaleConstraint1.L_wristW0" "jnt_wrist2_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_elbow2.rotateOrder" "jnt_elbow2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_elbow2.parentInverseMatrix" "jnt_elbow2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_elbow2.rotatePivot" "jnt_elbow2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_elbow2.rotatePivotTranslate" "jnt_elbow2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_elbow2.jointOrient" "jnt_elbow2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.translate" "jnt_elbow2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotatePivot" "jnt_elbow2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotatePivotTranslate" "jnt_elbow2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotate" "jnt_elbow2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.rotateOrder" "jnt_elbow2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.scale" "jnt_elbow2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.parentMatrix" "jnt_elbow2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_elbow2_parentConstraint1.L_elbowW0" "jnt_elbow2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_elbow2.segmentScaleCompensate" "jnt_elbow2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_elbow2.parentInverseMatrix" "jnt_elbow2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.scale" "jnt_elbow2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow.parentMatrix" "jnt_elbow2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_elbow2_scaleConstraint1.L_elbowW0" "jnt_elbow2_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_upper_arm2.rotateOrder" "jnt_upper_arm2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_upper_arm2.parentInverseMatrix" "jnt_upper_arm2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_upper_arm2.rotatePivot" "jnt_upper_arm2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_upper_arm2.rotatePivotTranslate" "jnt_upper_arm2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_upper_arm2.jointOrient" "jnt_upper_arm2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.translate" "jnt_upper_arm2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.rotatePivot" "jnt_upper_arm2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.rotatePivotTranslate" "jnt_upper_arm2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.rotate" "jnt_upper_arm2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.rotateOrder" "jnt_upper_arm2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.scale" "jnt_upper_arm2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.parentMatrix" "jnt_upper_arm2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_upper_arm2_parentConstraint1.L_shoulderW0" "jnt_upper_arm2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_upper_arm2.segmentScaleCompensate" "jnt_upper_arm2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_upper_arm2.parentInverseMatrix" "jnt_upper_arm2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.scale" "jnt_upper_arm2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|L_shoulder|L_shoulder.parentMatrix" "jnt_upper_arm2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_upper_arm2_scaleConstraint1.L_shoulderW0" "jnt_upper_arm2_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_chest.rotateOrder" "jnt_chest_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_chest.parentInverseMatrix" "jnt_chest_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_chest.rotatePivot" "jnt_chest_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_chest.rotatePivotTranslate" "jnt_chest_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_chest.jointOrient" "jnt_chest_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.translate" "jnt_chest_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.rotatePivot" "jnt_chest_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.rotatePivotTranslate" "jnt_chest_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.rotate" "jnt_chest_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.rotateOrder" "jnt_chest_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.scale" "jnt_chest_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.parentMatrix" "jnt_chest_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_chest_parentConstraint1.chestW0" "jnt_chest_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_chest.segmentScaleCompensate" "jnt_chest_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_chest.parentInverseMatrix" "jnt_chest_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.scale" "jnt_chest_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|chest|chest.parentMatrix" "jnt_chest_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_chest_scaleConstraint1.chestW0" "jnt_chest_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_COG.scale" "jnt_hip1.inverseScale";
+connectAttr "jnt_hip1_scaleConstraint1.constraintScaleX" "jnt_hip1.scaleX";
+connectAttr "jnt_hip1_scaleConstraint1.constraintScaleY" "jnt_hip1.scaleY";
+connectAttr "jnt_hip1_scaleConstraint1.constraintScaleZ" "jnt_hip1.scaleZ";
+connectAttr "jnt_hip1_parentConstraint1.constraintTranslateX" "jnt_hip1.translateX"
+		;
+connectAttr "jnt_hip1_parentConstraint1.constraintTranslateY" "jnt_hip1.translateY"
+		;
+connectAttr "jnt_hip1_parentConstraint1.constraintTranslateZ" "jnt_hip1.translateZ"
+		;
+connectAttr "jnt_hip1_parentConstraint1.constraintRotateX" "jnt_hip1.rotateX";
+connectAttr "jnt_hip1_parentConstraint1.constraintRotateY" "jnt_hip1.rotateY";
+connectAttr "jnt_hip1_parentConstraint1.constraintRotateZ" "jnt_hip1.rotateZ";
 connectAttr "jnt_hip1.scale" "jnt_leg_upper2.inverseScale";
+connectAttr "jnt_leg_upper2_scaleConstraint1.constraintScaleX" "jnt_leg_upper2.scaleX"
+		;
+connectAttr "jnt_leg_upper2_scaleConstraint1.constraintScaleY" "jnt_leg_upper2.scaleY"
+		;
+connectAttr "jnt_leg_upper2_scaleConstraint1.constraintScaleZ" "jnt_leg_upper2.scaleZ"
+		;
+connectAttr "jnt_leg_upper2_parentConstraint1.constraintTranslateX" "jnt_leg_upper2.translateX"
+		;
+connectAttr "jnt_leg_upper2_parentConstraint1.constraintTranslateY" "jnt_leg_upper2.translateY"
+		;
+connectAttr "jnt_leg_upper2_parentConstraint1.constraintTranslateZ" "jnt_leg_upper2.translateZ"
+		;
+connectAttr "jnt_leg_upper2_parentConstraint1.constraintRotateX" "jnt_leg_upper2.rotateX"
+		;
+connectAttr "jnt_leg_upper2_parentConstraint1.constraintRotateY" "jnt_leg_upper2.rotateY"
+		;
+connectAttr "jnt_leg_upper2_parentConstraint1.constraintRotateZ" "jnt_leg_upper2.rotateZ"
+		;
 connectAttr "jnt_leg_upper2.scale" "jnt_knee1.inverseScale";
+connectAttr "jnt_knee1_scaleConstraint1.constraintScaleX" "jnt_knee1.scaleX";
+connectAttr "jnt_knee1_scaleConstraint1.constraintScaleY" "jnt_knee1.scaleY";
+connectAttr "jnt_knee1_scaleConstraint1.constraintScaleZ" "jnt_knee1.scaleZ";
+connectAttr "jnt_knee1_parentConstraint1.constraintTranslateX" "jnt_knee1.translateX"
+		;
+connectAttr "jnt_knee1_parentConstraint1.constraintTranslateY" "jnt_knee1.translateY"
+		;
+connectAttr "jnt_knee1_parentConstraint1.constraintTranslateZ" "jnt_knee1.translateZ"
+		;
+connectAttr "jnt_knee1_parentConstraint1.constraintRotateX" "jnt_knee1.rotateX";
+connectAttr "jnt_knee1_parentConstraint1.constraintRotateY" "jnt_knee1.rotateY";
+connectAttr "jnt_knee1_parentConstraint1.constraintRotateZ" "jnt_knee1.rotateZ";
 connectAttr "jnt_knee1.scale" "jnt_ankle1.inverseScale";
+connectAttr "jnt_ankle1_scaleConstraint1.constraintScaleX" "jnt_ankle1.scaleX";
+connectAttr "jnt_ankle1_scaleConstraint1.constraintScaleY" "jnt_ankle1.scaleY";
+connectAttr "jnt_ankle1_scaleConstraint1.constraintScaleZ" "jnt_ankle1.scaleZ";
+connectAttr "jnt_ankle1_parentConstraint1.constraintTranslateX" "jnt_ankle1.translateX"
+		;
+connectAttr "jnt_ankle1_parentConstraint1.constraintTranslateY" "jnt_ankle1.translateY"
+		;
+connectAttr "jnt_ankle1_parentConstraint1.constraintTranslateZ" "jnt_ankle1.translateZ"
+		;
+connectAttr "jnt_ankle1_parentConstraint1.constraintRotateX" "jnt_ankle1.rotateX"
+		;
+connectAttr "jnt_ankle1_parentConstraint1.constraintRotateY" "jnt_ankle1.rotateY"
+		;
+connectAttr "jnt_ankle1_parentConstraint1.constraintRotateZ" "jnt_ankle1.rotateZ"
+		;
 connectAttr "jnt_ankle1.scale" "jnt_toe3.inverseScale";
+connectAttr "jnt_toe3_parentConstraint1.constraintTranslateX" "jnt_toe3.translateX"
+		;
+connectAttr "jnt_toe3_parentConstraint1.constraintTranslateY" "jnt_toe3.translateY"
+		;
+connectAttr "jnt_toe3_parentConstraint1.constraintTranslateZ" "jnt_toe3.translateZ"
+		;
+connectAttr "jnt_toe3_parentConstraint1.constraintRotateX" "jnt_toe3.rotateX";
+connectAttr "jnt_toe3_parentConstraint1.constraintRotateY" "jnt_toe3.rotateY";
+connectAttr "jnt_toe3_parentConstraint1.constraintRotateZ" "jnt_toe3.rotateZ";
+connectAttr "jnt_toe3_scaleConstraint1.constraintScaleX" "jnt_toe3.scaleX";
+connectAttr "jnt_toe3_scaleConstraint1.constraintScaleY" "jnt_toe3.scaleY";
+connectAttr "jnt_toe3_scaleConstraint1.constraintScaleZ" "jnt_toe3.scaleZ";
+connectAttr "jnt_toe3.rotateOrder" "jnt_toe3_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_toe3.parentInverseMatrix" "jnt_toe3_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_toe3.rotatePivot" "jnt_toe3_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_toe3.rotatePivotTranslate" "jnt_toe3_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_toe3.jointOrient" "jnt_toe3_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.translate" "jnt_toe3_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.rotatePivot" "jnt_toe3_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.rotatePivotTranslate" "jnt_toe3_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.rotate" "jnt_toe3_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.rotateOrder" "jnt_toe3_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.scale" "jnt_toe3_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.parentMatrix" "jnt_toe3_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe3_parentConstraint1.R_toe3W0" "jnt_toe3_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_toe3.segmentScaleCompensate" "jnt_toe3_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_toe3.parentInverseMatrix" "jnt_toe3_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.scale" "jnt_toe3_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3|R_toe3.parentMatrix" "jnt_toe3_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe3_scaleConstraint1.R_toe3W0" "jnt_toe3_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_ankle1.scale" "jnt_toe2.inverseScale";
+connectAttr "jnt_toe2_parentConstraint1.constraintTranslateX" "jnt_toe2.translateX"
+		;
+connectAttr "jnt_toe2_parentConstraint1.constraintTranslateY" "jnt_toe2.translateY"
+		;
+connectAttr "jnt_toe2_parentConstraint1.constraintTranslateZ" "jnt_toe2.translateZ"
+		;
+connectAttr "jnt_toe2_parentConstraint1.constraintRotateX" "jnt_toe2.rotateX";
+connectAttr "jnt_toe2_parentConstraint1.constraintRotateY" "jnt_toe2.rotateY";
+connectAttr "jnt_toe2_parentConstraint1.constraintRotateZ" "jnt_toe2.rotateZ";
+connectAttr "jnt_toe2_scaleConstraint1.constraintScaleX" "jnt_toe2.scaleX";
+connectAttr "jnt_toe2_scaleConstraint1.constraintScaleY" "jnt_toe2.scaleY";
+connectAttr "jnt_toe2_scaleConstraint1.constraintScaleZ" "jnt_toe2.scaleZ";
+connectAttr "jnt_toe2.rotateOrder" "jnt_toe2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_toe2.parentInverseMatrix" "jnt_toe2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_toe2.rotatePivot" "jnt_toe2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_toe2.rotatePivotTranslate" "jnt_toe2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_toe2.jointOrient" "jnt_toe2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.translate" "jnt_toe2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.rotatePivot" "jnt_toe2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.rotatePivotTranslate" "jnt_toe2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.rotate" "jnt_toe2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.rotateOrder" "jnt_toe2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.scale" "jnt_toe2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.parentMatrix" "jnt_toe2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe2_parentConstraint1.R_toe2W0" "jnt_toe2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_toe2.segmentScaleCompensate" "jnt_toe2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_toe2.parentInverseMatrix" "jnt_toe2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.scale" "jnt_toe2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2|R_toe2.parentMatrix" "jnt_toe2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe2_scaleConstraint1.R_toe2W0" "jnt_toe2_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_ankle1.scale" "jnt_toe1.inverseScale";
+connectAttr "jnt_toe1_parentConstraint1.constraintTranslateX" "jnt_toe1.translateX"
+		;
+connectAttr "jnt_toe1_parentConstraint1.constraintTranslateY" "jnt_toe1.translateY"
+		;
+connectAttr "jnt_toe1_parentConstraint1.constraintTranslateZ" "jnt_toe1.translateZ"
+		;
+connectAttr "jnt_toe1_parentConstraint1.constraintRotateX" "jnt_toe1.rotateX";
+connectAttr "jnt_toe1_parentConstraint1.constraintRotateY" "jnt_toe1.rotateY";
+connectAttr "jnt_toe1_parentConstraint1.constraintRotateZ" "jnt_toe1.rotateZ";
+connectAttr "jnt_toe1_scaleConstraint1.constraintScaleX" "jnt_toe1.scaleX";
+connectAttr "jnt_toe1_scaleConstraint1.constraintScaleY" "jnt_toe1.scaleY";
+connectAttr "jnt_toe1_scaleConstraint1.constraintScaleZ" "jnt_toe1.scaleZ";
+connectAttr "jnt_toe1.rotateOrder" "jnt_toe1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_toe1.parentInverseMatrix" "jnt_toe1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_toe1.rotatePivot" "jnt_toe1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_toe1.rotatePivotTranslate" "jnt_toe1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_toe1.jointOrient" "jnt_toe1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.translate" "jnt_toe1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.rotatePivot" "jnt_toe1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.rotatePivotTranslate" "jnt_toe1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.rotate" "jnt_toe1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.rotateOrder" "jnt_toe1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.scale" "jnt_toe1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.parentMatrix" "jnt_toe1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe1_parentConstraint1.R_toe1W0" "jnt_toe1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_toe1.segmentScaleCompensate" "jnt_toe1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_toe1.parentInverseMatrix" "jnt_toe1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.scale" "jnt_toe1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1|R_toe1.parentMatrix" "jnt_toe1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe1_scaleConstraint1.R_toe1W0" "jnt_toe1_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_ankle1.rotateOrder" "jnt_ankle1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_ankle1.parentInverseMatrix" "jnt_ankle1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_ankle1.rotatePivot" "jnt_ankle1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_ankle1.rotatePivotTranslate" "jnt_ankle1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_ankle1.jointOrient" "jnt_ankle1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.translate" "jnt_ankle1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.rotatePivot" "jnt_ankle1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.rotatePivotTranslate" "jnt_ankle1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.rotate" "jnt_ankle1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.rotateOrder" "jnt_ankle1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.scale" "jnt_ankle1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.parentMatrix" "jnt_ankle1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_ankle1_parentConstraint1.R_ankleW0" "jnt_ankle1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_ankle1.segmentScaleCompensate" "jnt_ankle1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_ankle1.parentInverseMatrix" "jnt_ankle1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.scale" "jnt_ankle1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle.parentMatrix" "jnt_ankle1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_ankle1_scaleConstraint1.R_ankleW0" "jnt_ankle1_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_knee1.rotateOrder" "jnt_knee1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_knee1.parentInverseMatrix" "jnt_knee1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_knee1.rotatePivot" "jnt_knee1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_knee1.rotatePivotTranslate" "jnt_knee1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_knee1.jointOrient" "jnt_knee1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.translate" "jnt_knee1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.rotatePivot" "jnt_knee1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.rotatePivotTranslate" "jnt_knee1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.rotate" "jnt_knee1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.rotateOrder" "jnt_knee1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.scale" "jnt_knee1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.parentMatrix" "jnt_knee1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_knee1_parentConstraint1.R_kneeW0" "jnt_knee1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_knee1.segmentScaleCompensate" "jnt_knee1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_knee1.parentInverseMatrix" "jnt_knee1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.scale" "jnt_knee1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee.parentMatrix" "jnt_knee1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_knee1_scaleConstraint1.R_kneeW0" "jnt_knee1_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_leg_upper2.rotateOrder" "jnt_leg_upper2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_leg_upper2.parentInverseMatrix" "jnt_leg_upper2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_leg_upper2.rotatePivot" "jnt_leg_upper2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_leg_upper2.rotatePivotTranslate" "jnt_leg_upper2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_leg_upper2.jointOrient" "jnt_leg_upper2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.translate" "jnt_leg_upper2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.rotatePivot" "jnt_leg_upper2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.rotatePivotTranslate" "jnt_leg_upper2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.rotate" "jnt_leg_upper2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.rotateOrder" "jnt_leg_upper2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.scale" "jnt_leg_upper2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.parentMatrix" "jnt_leg_upper2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_leg_upper2_parentConstraint1.R_hipW0" "jnt_leg_upper2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_leg_upper2.segmentScaleCompensate" "jnt_leg_upper2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_leg_upper2.parentInverseMatrix" "jnt_leg_upper2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.scale" "jnt_leg_upper2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip.parentMatrix" "jnt_leg_upper2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_leg_upper2_scaleConstraint1.R_hipW0" "jnt_leg_upper2_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_hip1.rotateOrder" "jnt_hip1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_hip1.parentInverseMatrix" "jnt_hip1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_hip1.rotatePivot" "jnt_hip1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_hip1.rotatePivotTranslate" "jnt_hip1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_hip1.jointOrient" "jnt_hip1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.translate" "jnt_hip1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.rotatePivot" "jnt_hip1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.rotatePivotTranslate" "jnt_hip1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.rotate" "jnt_hip1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.rotateOrder" "jnt_hip1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.scale" "jnt_hip1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.parentMatrix" "jnt_hip1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_hip1_parentConstraint1.R_socketW0" "jnt_hip1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_hip1.segmentScaleCompensate" "jnt_hip1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_hip1.parentInverseMatrix" "jnt_hip1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.scale" "jnt_hip1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|R_socket|R_socket.parentMatrix" "jnt_hip1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_hip1_scaleConstraint1.R_socketW0" "jnt_hip1_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_COG.scale" "jnt_hip2.inverseScale";
+connectAttr "jnt_hip2_scaleConstraint1.constraintScaleX" "jnt_hip2.scaleX";
+connectAttr "jnt_hip2_scaleConstraint1.constraintScaleY" "jnt_hip2.scaleY";
+connectAttr "jnt_hip2_scaleConstraint1.constraintScaleZ" "jnt_hip2.scaleZ";
+connectAttr "jnt_hip2_parentConstraint1.constraintTranslateX" "jnt_hip2.translateX"
+		;
+connectAttr "jnt_hip2_parentConstraint1.constraintTranslateY" "jnt_hip2.translateY"
+		;
+connectAttr "jnt_hip2_parentConstraint1.constraintTranslateZ" "jnt_hip2.translateZ"
+		;
+connectAttr "jnt_hip2_parentConstraint1.constraintRotateX" "jnt_hip2.rotateX";
+connectAttr "jnt_hip2_parentConstraint1.constraintRotateY" "jnt_hip2.rotateY";
+connectAttr "jnt_hip2_parentConstraint1.constraintRotateZ" "jnt_hip2.rotateZ";
 connectAttr "jnt_hip2.scale" "jnt_leg_upper1.inverseScale";
+connectAttr "jnt_leg_upper1_scaleConstraint1.constraintScaleX" "jnt_leg_upper1.scaleX"
+		;
+connectAttr "jnt_leg_upper1_scaleConstraint1.constraintScaleY" "jnt_leg_upper1.scaleY"
+		;
+connectAttr "jnt_leg_upper1_scaleConstraint1.constraintScaleZ" "jnt_leg_upper1.scaleZ"
+		;
+connectAttr "jnt_leg_upper1_parentConstraint1.constraintTranslateX" "jnt_leg_upper1.translateX"
+		;
+connectAttr "jnt_leg_upper1_parentConstraint1.constraintTranslateY" "jnt_leg_upper1.translateY"
+		;
+connectAttr "jnt_leg_upper1_parentConstraint1.constraintTranslateZ" "jnt_leg_upper1.translateZ"
+		;
+connectAttr "jnt_leg_upper1_parentConstraint1.constraintRotateX" "jnt_leg_upper1.rotateX"
+		;
+connectAttr "jnt_leg_upper1_parentConstraint1.constraintRotateY" "jnt_leg_upper1.rotateY"
+		;
+connectAttr "jnt_leg_upper1_parentConstraint1.constraintRotateZ" "jnt_leg_upper1.rotateZ"
+		;
 connectAttr "jnt_leg_upper1.scale" "jnt_knee2.inverseScale";
+connectAttr "jnt_knee2_scaleConstraint1.constraintScaleX" "jnt_knee2.scaleX";
+connectAttr "jnt_knee2_scaleConstraint1.constraintScaleY" "jnt_knee2.scaleY";
+connectAttr "jnt_knee2_scaleConstraint1.constraintScaleZ" "jnt_knee2.scaleZ";
+connectAttr "jnt_knee2_parentConstraint1.constraintTranslateX" "jnt_knee2.translateX"
+		;
+connectAttr "jnt_knee2_parentConstraint1.constraintTranslateY" "jnt_knee2.translateY"
+		;
+connectAttr "jnt_knee2_parentConstraint1.constraintTranslateZ" "jnt_knee2.translateZ"
+		;
+connectAttr "jnt_knee2_parentConstraint1.constraintRotateX" "jnt_knee2.rotateX";
+connectAttr "jnt_knee2_parentConstraint1.constraintRotateY" "jnt_knee2.rotateY";
+connectAttr "jnt_knee2_parentConstraint1.constraintRotateZ" "jnt_knee2.rotateZ";
 connectAttr "jnt_knee2.scale" "jnt_ankle2.inverseScale";
+connectAttr "jnt_ankle2_scaleConstraint1.constraintScaleX" "jnt_ankle2.scaleX";
+connectAttr "jnt_ankle2_scaleConstraint1.constraintScaleY" "jnt_ankle2.scaleY";
+connectAttr "jnt_ankle2_scaleConstraint1.constraintScaleZ" "jnt_ankle2.scaleZ";
+connectAttr "jnt_ankle2_parentConstraint1.constraintTranslateX" "jnt_ankle2.translateX"
+		;
+connectAttr "jnt_ankle2_parentConstraint1.constraintTranslateY" "jnt_ankle2.translateY"
+		;
+connectAttr "jnt_ankle2_parentConstraint1.constraintTranslateZ" "jnt_ankle2.translateZ"
+		;
+connectAttr "jnt_ankle2_parentConstraint1.constraintRotateX" "jnt_ankle2.rotateX"
+		;
+connectAttr "jnt_ankle2_parentConstraint1.constraintRotateY" "jnt_ankle2.rotateY"
+		;
+connectAttr "jnt_ankle2_parentConstraint1.constraintRotateZ" "jnt_ankle2.rotateZ"
+		;
 connectAttr "jnt_ankle2.scale" "jnt_toe4.inverseScale";
+connectAttr "jnt_toe4_parentConstraint1.constraintTranslateX" "jnt_toe4.translateX"
+		;
+connectAttr "jnt_toe4_parentConstraint1.constraintTranslateY" "jnt_toe4.translateY"
+		;
+connectAttr "jnt_toe4_parentConstraint1.constraintTranslateZ" "jnt_toe4.translateZ"
+		;
+connectAttr "jnt_toe4_parentConstraint1.constraintRotateX" "jnt_toe4.rotateX";
+connectAttr "jnt_toe4_parentConstraint1.constraintRotateY" "jnt_toe4.rotateY";
+connectAttr "jnt_toe4_parentConstraint1.constraintRotateZ" "jnt_toe4.rotateZ";
+connectAttr "jnt_toe4_scaleConstraint1.constraintScaleX" "jnt_toe4.scaleX";
+connectAttr "jnt_toe4_scaleConstraint1.constraintScaleY" "jnt_toe4.scaleY";
+connectAttr "jnt_toe4_scaleConstraint1.constraintScaleZ" "jnt_toe4.scaleZ";
+connectAttr "jnt_toe4.rotateOrder" "jnt_toe4_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_toe4.parentInverseMatrix" "jnt_toe4_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_toe4.rotatePivot" "jnt_toe4_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_toe4.rotatePivotTranslate" "jnt_toe4_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_toe4.jointOrient" "jnt_toe4_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.translate" "jnt_toe4_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.rotatePivot" "jnt_toe4_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.rotatePivotTranslate" "jnt_toe4_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.rotate" "jnt_toe4_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.rotateOrder" "jnt_toe4_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.scale" "jnt_toe4_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.parentMatrix" "jnt_toe4_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe4_parentConstraint1.L_toe3W0" "jnt_toe4_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_toe4.segmentScaleCompensate" "jnt_toe4_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_toe4.parentInverseMatrix" "jnt_toe4_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.scale" "jnt_toe4_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3|L_toe3.parentMatrix" "jnt_toe4_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe4_scaleConstraint1.L_toe3W0" "jnt_toe4_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_ankle2.scale" "jnt_toe5.inverseScale";
+connectAttr "jnt_toe5_parentConstraint1.constraintTranslateX" "jnt_toe5.translateX"
+		;
+connectAttr "jnt_toe5_parentConstraint1.constraintTranslateY" "jnt_toe5.translateY"
+		;
+connectAttr "jnt_toe5_parentConstraint1.constraintTranslateZ" "jnt_toe5.translateZ"
+		;
+connectAttr "jnt_toe5_parentConstraint1.constraintRotateX" "jnt_toe5.rotateX";
+connectAttr "jnt_toe5_parentConstraint1.constraintRotateY" "jnt_toe5.rotateY";
+connectAttr "jnt_toe5_parentConstraint1.constraintRotateZ" "jnt_toe5.rotateZ";
+connectAttr "jnt_toe5_scaleConstraint1.constraintScaleX" "jnt_toe5.scaleX";
+connectAttr "jnt_toe5_scaleConstraint1.constraintScaleY" "jnt_toe5.scaleY";
+connectAttr "jnt_toe5_scaleConstraint1.constraintScaleZ" "jnt_toe5.scaleZ";
+connectAttr "jnt_toe5.rotateOrder" "jnt_toe5_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_toe5.parentInverseMatrix" "jnt_toe5_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_toe5.rotatePivot" "jnt_toe5_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_toe5.rotatePivotTranslate" "jnt_toe5_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_toe5.jointOrient" "jnt_toe5_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.translate" "jnt_toe5_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.rotatePivot" "jnt_toe5_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.rotatePivotTranslate" "jnt_toe5_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.rotate" "jnt_toe5_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.rotateOrder" "jnt_toe5_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.scale" "jnt_toe5_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.parentMatrix" "jnt_toe5_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe5_parentConstraint1.L_toe2W0" "jnt_toe5_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_toe5.segmentScaleCompensate" "jnt_toe5_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_toe5.parentInverseMatrix" "jnt_toe5_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.scale" "jnt_toe5_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2|L_toe2.parentMatrix" "jnt_toe5_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe5_scaleConstraint1.L_toe2W0" "jnt_toe5_scaleConstraint1.target[0].targetWeight"
+		;
 connectAttr "jnt_ankle2.scale" "jnt_toe6.inverseScale";
-connectAttr "controls.drawInfo" "ctrl_ctrl_toe8.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_toe7.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_ctrl_toe9.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_ankle3.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_knee3.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_leg_upper3.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_hip3.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_toe11.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_toe10.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_toe12.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_ankle4.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_knee4.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_leg_upper4.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_hip4.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_finger8.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_finger7.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_finger9.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_wrist3.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_elbow4.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_upper_arm5.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_finger10.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_finger12.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_finger11.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_wrist4.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_ctrl_elbow3.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_upper_arm4.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_chest.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_COG.drawOverride";
-connectAttr "controls.drawInfo" "ctrl_root.drawOverride";
+connectAttr "jnt_toe6_parentConstraint1.constraintTranslateX" "jnt_toe6.translateX"
+		;
+connectAttr "jnt_toe6_parentConstraint1.constraintTranslateY" "jnt_toe6.translateY"
+		;
+connectAttr "jnt_toe6_parentConstraint1.constraintTranslateZ" "jnt_toe6.translateZ"
+		;
+connectAttr "jnt_toe6_parentConstraint1.constraintRotateX" "jnt_toe6.rotateX";
+connectAttr "jnt_toe6_parentConstraint1.constraintRotateY" "jnt_toe6.rotateY";
+connectAttr "jnt_toe6_parentConstraint1.constraintRotateZ" "jnt_toe6.rotateZ";
+connectAttr "jnt_toe6_scaleConstraint1.constraintScaleX" "jnt_toe6.scaleX";
+connectAttr "jnt_toe6_scaleConstraint1.constraintScaleY" "jnt_toe6.scaleY";
+connectAttr "jnt_toe6_scaleConstraint1.constraintScaleZ" "jnt_toe6.scaleZ";
+connectAttr "jnt_toe6.rotateOrder" "jnt_toe6_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_toe6.parentInverseMatrix" "jnt_toe6_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_toe6.rotatePivot" "jnt_toe6_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_toe6.rotatePivotTranslate" "jnt_toe6_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_toe6.jointOrient" "jnt_toe6_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.translate" "jnt_toe6_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.rotatePivot" "jnt_toe6_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.rotatePivotTranslate" "jnt_toe6_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.rotate" "jnt_toe6_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.rotateOrder" "jnt_toe6_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.scale" "jnt_toe6_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.parentMatrix" "jnt_toe6_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe6_parentConstraint1.L_toe1W0" "jnt_toe6_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_toe6.segmentScaleCompensate" "jnt_toe6_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_toe6.parentInverseMatrix" "jnt_toe6_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.scale" "jnt_toe6_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1|L_toe1.parentMatrix" "jnt_toe6_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_toe6_scaleConstraint1.L_toe1W0" "jnt_toe6_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_ankle2.rotateOrder" "jnt_ankle2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_ankle2.parentInverseMatrix" "jnt_ankle2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_ankle2.rotatePivot" "jnt_ankle2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_ankle2.rotatePivotTranslate" "jnt_ankle2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_ankle2.jointOrient" "jnt_ankle2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.translate" "jnt_ankle2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.rotatePivot" "jnt_ankle2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.rotatePivotTranslate" "jnt_ankle2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.rotate" "jnt_ankle2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.rotateOrder" "jnt_ankle2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.scale" "jnt_ankle2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.parentMatrix" "jnt_ankle2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_ankle2_parentConstraint1.L_ankleW0" "jnt_ankle2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_ankle2.segmentScaleCompensate" "jnt_ankle2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_ankle2.parentInverseMatrix" "jnt_ankle2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.scale" "jnt_ankle2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle.parentMatrix" "jnt_ankle2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_ankle2_scaleConstraint1.L_ankleW0" "jnt_ankle2_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_knee2.rotateOrder" "jnt_knee2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_knee2.parentInverseMatrix" "jnt_knee2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_knee2.rotatePivot" "jnt_knee2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_knee2.rotatePivotTranslate" "jnt_knee2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_knee2.jointOrient" "jnt_knee2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.translate" "jnt_knee2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.rotatePivot" "jnt_knee2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.rotatePivotTranslate" "jnt_knee2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.rotate" "jnt_knee2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.rotateOrder" "jnt_knee2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.scale" "jnt_knee2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.parentMatrix" "jnt_knee2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_knee2_parentConstraint1.L_kneeW0" "jnt_knee2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_knee2.segmentScaleCompensate" "jnt_knee2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_knee2.parentInverseMatrix" "jnt_knee2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.scale" "jnt_knee2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee.parentMatrix" "jnt_knee2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_knee2_scaleConstraint1.L_kneeW0" "jnt_knee2_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_leg_upper1.rotateOrder" "jnt_leg_upper1_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_leg_upper1.parentInverseMatrix" "jnt_leg_upper1_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_leg_upper1.rotatePivot" "jnt_leg_upper1_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_leg_upper1.rotatePivotTranslate" "jnt_leg_upper1_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_leg_upper1.jointOrient" "jnt_leg_upper1_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.translate" "jnt_leg_upper1_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.rotatePivot" "jnt_leg_upper1_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.rotatePivotTranslate" "jnt_leg_upper1_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.rotate" "jnt_leg_upper1_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.rotateOrder" "jnt_leg_upper1_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.scale" "jnt_leg_upper1_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.parentMatrix" "jnt_leg_upper1_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_leg_upper1_parentConstraint1.L_hipW0" "jnt_leg_upper1_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_leg_upper1.segmentScaleCompensate" "jnt_leg_upper1_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_leg_upper1.parentInverseMatrix" "jnt_leg_upper1_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.scale" "jnt_leg_upper1_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip.parentMatrix" "jnt_leg_upper1_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_leg_upper1_scaleConstraint1.L_hipW0" "jnt_leg_upper1_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_hip2.rotateOrder" "jnt_hip2_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_hip2.parentInverseMatrix" "jnt_hip2_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_hip2.rotatePivot" "jnt_hip2_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_hip2.rotatePivotTranslate" "jnt_hip2_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_hip2.jointOrient" "jnt_hip2_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.translate" "jnt_hip2_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.rotatePivot" "jnt_hip2_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.rotatePivotTranslate" "jnt_hip2_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.rotate" "jnt_hip2_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.rotateOrder" "jnt_hip2_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.scale" "jnt_hip2_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.parentMatrix" "jnt_hip2_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_hip2_parentConstraint1.L_socketW0" "jnt_hip2_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_hip2.segmentScaleCompensate" "jnt_hip2_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_hip2.parentInverseMatrix" "jnt_hip2_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.scale" "jnt_hip2_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root|COG|COG|L_socket|L_socket.parentMatrix" "jnt_hip2_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_hip2_scaleConstraint1.L_socketW0" "jnt_hip2_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_COG.rotateOrder" "jnt_COG_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_COG.parentInverseMatrix" "jnt_COG_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_COG.rotatePivot" "jnt_COG_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_COG.rotatePivotTranslate" "jnt_COG_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_COG.jointOrient" "jnt_COG_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "jnt_root.translate" "jnt_COG_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "jnt_root.rotatePivot" "jnt_COG_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "jnt_root.rotatePivotTranslate" "jnt_COG_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "jnt_root.rotate" "jnt_COG_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "jnt_root.rotateOrder" "jnt_COG_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "jnt_root.scale" "jnt_COG_parentConstraint1.target[0].targetScale";
+connectAttr "jnt_root.parentMatrix" "jnt_COG_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_root.jointOrient" "jnt_COG_parentConstraint1.target[0].targetJointOrient"
+		;
+connectAttr "jnt_root.segmentScaleCompensate" "jnt_COG_parentConstraint1.target[0].targetScaleCompensate"
+		;
+connectAttr "jnt_root.inverseScale" "jnt_COG_parentConstraint1.target[0].targetInverseScale"
+		;
+connectAttr "jnt_COG_parentConstraint1.jnt_rootW0" "jnt_COG_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_COG.segmentScaleCompensate" "jnt_COG_scaleConstraint1.constraintScaleCompensate"
+		;
+connectAttr "jnt_COG.parentInverseMatrix" "jnt_COG_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_root.scale" "jnt_COG_scaleConstraint1.target[0].targetScale";
+connectAttr "jnt_root.parentMatrix" "jnt_COG_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_COG_scaleConstraint1.jnt_rootW0" "jnt_COG_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_root.rotateOrder" "jnt_root_parentConstraint1.constraintRotateOrder"
+		;
+connectAttr "jnt_root.parentInverseMatrix" "jnt_root_parentConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "jnt_root.rotatePivot" "jnt_root_parentConstraint1.constraintRotatePivot"
+		;
+connectAttr "jnt_root.rotatePivotTranslate" "jnt_root_parentConstraint1.constraintRotateTranslate"
+		;
+connectAttr "jnt_root.jointOrient" "jnt_root_parentConstraint1.constraintJointOrient"
+		;
+connectAttr "|root|root.translate" "jnt_root_parentConstraint1.target[0].targetTranslate"
+		;
+connectAttr "|root|root.rotatePivot" "jnt_root_parentConstraint1.target[0].targetRotatePivot"
+		;
+connectAttr "|root|root.rotatePivotTranslate" "jnt_root_parentConstraint1.target[0].targetRotateTranslate"
+		;
+connectAttr "|root|root.rotate" "jnt_root_parentConstraint1.target[0].targetRotate"
+		;
+connectAttr "|root|root.rotateOrder" "jnt_root_parentConstraint1.target[0].targetRotateOrder"
+		;
+connectAttr "|root|root.scale" "jnt_root_parentConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root.parentMatrix" "jnt_root_parentConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_root_parentConstraint1.rootW0" "jnt_root_parentConstraint1.target[0].targetWeight"
+		;
+connectAttr "jnt_root.parentInverseMatrix" "jnt_root_scaleConstraint1.constraintParentInverseMatrix"
+		;
+connectAttr "|root|root.scale" "jnt_root_scaleConstraint1.target[0].targetScale"
+		;
+connectAttr "|root|root.parentMatrix" "jnt_root_scaleConstraint1.target[0].targetParentMatrix"
+		;
+connectAttr "jnt_root_scaleConstraint1.rootW0" "jnt_root_scaleConstraint1.target[0].targetWeight"
+		;
+connectAttr "controls.drawInfo" "|root.drawOverride";
+connectAttr "transformGeometry2.outputGeometry" "rootShape.create";
+connectAttr "controls.drawInfo" "|root|root|COG.drawOverride";
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest.drawOverride";
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|R_shoulder.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger1.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger2.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|chest|R_shoulder|R_shoulder|R_elbow|R_elbow|R_wrist|R_wrist|R_finger3.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger1.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger2.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|chest|L_shoulder|L_shoulder|L_elbow|L_elbow|L_wrist|L_wrist|L_finger3.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket.drawOverride";
+connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket|L_socket|L_hip.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe1.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe3.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|L_socket|L_socket|L_hip|L_hip|L_knee|L_knee|L_ankle|L_ankle|L_toe2.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|R_socket.drawOverride";
+connectAttr "controls.drawInfo" "|root|root|COG|COG|R_socket|R_socket|R_hip.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe3.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe2.drawOverride"
+		;
+connectAttr "controls.drawInfo" "|root|root|COG|COG|R_socket|R_socket|R_hip|R_hip|R_knee|R_knee|R_ankle|R_ankle|R_toe1.drawOverride"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Robot_GeoSG.message" ":defaultLightSet.message";
@@ -43891,6 +46777,9 @@ connectAttr ":defaultArnoldDriver.message" ":defaultArnoldRenderOptions.driver";
 connectAttr "layerManager.displayLayerId[2]" "joints.identification";
 connectAttr "layerManager.displayLayerId[3]" "geo.identification";
 connectAttr "layerManager.displayLayerId[4]" "controls.identification";
+connectAttr "makeNurbCircle1.outputCurve" "transformGeometry1.inputGeometry";
+connectAttr "transformGeometry1.outputGeometry" "transformGeometry2.inputGeometry"
+		;
 connectAttr "Robot_GeoSG.partition" ":renderPartition.sets" -nextAvailable;
 connectAttr "lambert2.message" ":defaultShaderList1.shaders" -nextAvailable;
 connectAttr "defaultRenderLayer.message" ":defaultRenderingList1.rendering" -nextAvailable
