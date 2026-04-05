@@ -100,7 +100,7 @@ public class PlayerControllerV3 : MonoBehaviour
             Quaternion targetRot = Quaternion.LookRotation(move);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 10f * Time.deltaTime);
         }
-
+// raycast down to check for ground and slope
         velocity.x = move.x;
         velocity.z = move.z;
     }
