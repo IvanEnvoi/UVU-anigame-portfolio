@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2cecfc918e8b345936a8b4efd8235a, type: 3}
   m_Name: SpawnTargetRandom
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6532769055604496569, guid: 4e7181f81c2657147b67c7f0e2d82bf8, type: 3}
-  minRange: {x: 40, y: 70, z: -5}
-  maxRange: {x: 40, y: 70, z: 5}
+  prefab: {fileID: 6532769055604496569, guid: 6f1cb86f03c922945b4b90bafaeac4da, type: 3}
+  minRange: {x: -10, y: 10, z: -10}
+  maxRange: {x: 10, y: 11, z: 10}
