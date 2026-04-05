@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpawnTargetRandom
   m_EditorClassIdentifier: 
   prefab: {fileID: 6532769055604496569, guid: 4e7181f81c2657147b67c7f0e2d82bf8, type: 3}
-  minRange: {x: 40, y: -22, z: -5}
-  maxRange: {x: 40, y: -22, z: 5}
+  minRange: {x: 40, y: 70, z: -5}
+  maxRange: {x: 40, y: 70, z: 5}
