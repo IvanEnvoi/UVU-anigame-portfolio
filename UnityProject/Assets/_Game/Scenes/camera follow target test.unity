@@ -338,6 +338,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 539a99bda591568478d49521d04a2bc0, type: 3}
   m_PrefabInstance: {fileID: 195478167}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &344289367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344289369}
+  - component: {fileID: 344289368}
+  m_Layer: 0
+  m_Name: MouseTracker3D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &344289368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344289367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1e5f7e67472914faeae030624e0601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseTracker3D
+  trackerObject: {fileID: 1096898546}
+  targetObject: {fileID: 1477996069}
+  offset: {x: 1, y: 0, z: 0}
+  sensitivity: 0.1
+  cam: {fileID: 1096898550}
+  mouseDeltaAction:
+    m_Name: Mouse Delta
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 831470a6-b3df-4687-8d2c-99e6d7c85c18
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+--- !u!4 &344289369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344289367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.09536, y: 4.30995, z: 0.77371}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &354219795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,67 +2370,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2760a8da068ce2f42a81ece3ef60ea22, type: 3}
---- !u!1001 &1385453902
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1254114112469238555, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_Name
-      value: MouseTracker
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937879014897458045, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1096898550}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.85639
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -49.72972
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -22.98591
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069290080630706432, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e7aa3abe6a9e8041a403cbf8af5dc4d, type: 3}
+--- !u!4 &1477996069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6686120025135287448, guid: 2760a8da068ce2f42a81ece3ef60ea22, type: 3}
+  m_PrefabInstance: {fileID: 1311777746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1563980407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2675,8 +2677,8 @@ SceneRoots:
   - {fileID: 618786587}
   - {fileID: 578163686}
   - {fileID: 687293312}
-  - {fileID: 1385453902}
   - {fileID: 615292434}
   - {fileID: 1144107982}
   - {fileID: 1735393953}
   - {fileID: 1311777746}
+  - {fileID: 344289369}
