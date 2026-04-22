@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: LurkerJumpscare.ma
-//Last modified: Sat, Apr 18, 2026 01:02:07 PM
+//Last modified: Sat, Apr 18, 2026 01:57:58 PM
 //Codeset: 1252
 file -rdi 1 -ns "model" -rfn "modelRN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Animations/LurkerRig4 1.ma";
 file -r -ns "model" -dr 1 -rfn "modelRN" -op "v=1;" -typ "mayaAscii" "C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject//scenes/Animations/LurkerRig4 1.ma";
@@ -15,18 +15,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "7BCD687B-4823-280D-2EC1-E7957856DAB4";
+fileInfo "UUID" "9B4A5970-44E0-63CF-54DF-85B888A62B75";
 createNode transform -shared -name "persp";
 	rename -uuid "A444A25B-488F-2F75-7EE9-71ACFDCC80CB";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" -1.2292708966401704 13.002095401380949 28.076930992170457 ;
-	setAttr ".rotate" -type "double3" 3.2616472699044206 -368.19999999969252 5.0209497203473335e-17 ;
+	setAttr ".translate" -type "double3" 1.5026296015377374 11.769819004944971 28.075317713289472 ;
+	setAttr ".rotate" -type "double3" 6.8616472699045081 -356.19999999969099 4.9805666234337012e-17 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "920BD78B-4FAD-D1A4-8FE4-698CDB28C2C8";
 	setAttr -keyable off ".visibility" no;
 	setAttr ".renderable" no;
 	setAttr ".focalLength" 34.999999999999993;
-	setAttr ".centerOfInterest" 16.412390584526225;
+	setAttr ".centerOfInterest" 16.412390584526243;
 	setAttr ".imageName" -type "string" "persp";
 	setAttr ".depthName" -type "string" "persp_depth";
 	setAttr ".maskName" -type "string" "persp_mask";
@@ -25115,6 +25115,7 @@ createNode aiOptions -shared -name "defaultArnoldRenderOptions";
 	rename -uuid "E180E480-4162-0A9D-25C1-8E9D64C11B6C";
 	addAttr -cachedInternally true -shortName "ARV_options" -longName "ARV_options" 
 		-dataType "string";
+	setAttr ".AASamples" 0;
 	setAttr ".renderDevice" 1;
 	setAttr ".version" -type "string" "5.3.4.1";
 	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=cameraShape1;Snapshots Folder=C:/Users/foxke/Documents/UVU/UVU-anigame-portfolio/UnityProject/Assets/MayaProject/images/snapshots/LurkerJumpscare;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1   1;Background.Offset=0   0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1   1;Foreground.Offset=0   0;Foreground.Apply Color Management=1;";
@@ -26102,8 +26103,8 @@ select -noExpand :time1;
 	setAttr -alteredValue -channelBox on ".isHistoricallyInteresting";
 	setAttr -alteredValue -keyable on ".nodeState";
 	setAttr -channelBox on ".binMembership";
-	setAttr -keyable on ".outTime" 45;
-	setAttr -alteredValue ".unwarpedTime" 45;
+	setAttr -keyable on ".outTime" 34;
+	setAttr -alteredValue ".unwarpedTime" 34;
 	setAttr -alteredValue -keyable on ".enableTimewarp";
 	setAttr -alteredValue -keyable on ".timecodeProductionStart";
 	setAttr -alteredValue -keyable on ".timecodeMayaStart";

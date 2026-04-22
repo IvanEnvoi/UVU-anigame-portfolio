@@ -2227,7 +2227,12 @@ MonoBehaviour:
     m_Float4Data:
       m_Data: []
     m_ObjectData:
-      m_Data: []
+      m_Data:
+      - Key: 
+        Value:
+          m_IndexUnit: 0
+          m_DefaultValue: {fileID: 0}
+          m_DataPoints: []
   m_Knots:
     m_KnotsLink: []
 --- !u!4 &1144107982
