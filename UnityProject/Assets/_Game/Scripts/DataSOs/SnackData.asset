@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbff2e96efc2f1418cf3ec281dff9a2, type: 3}
+  m_Name: SnackData
+  m_EditorClassIdentifier: Assembly-CSharp::SnackData
+  spawnPositions:
+  - {x: 1, y: 8, z: 2}
+  - {x: 2, y: 8, z: 2}
+  - {x: 3, y: 8, z: 2}
+  - {x: 4, y: 8, z: 2}
+  - {x: 5, y: 8, z: 2}
+  - {x: 6, y: 8, z: 2}
+  - {x: 7, y: 8, z: 2}
+  - {x: 8, y: 8, z: 2}
+  - {x: 9, y: 8, z: 2}
+  - {x: 10, y: 8, z: 2}
+  - {x: -1, y: 8, z: 2}
+  - {x: -2, y: 8, z: 2}
+  - {x: -3, y: 8, z: 2}
+  - {x: -4, y: 8, z: 2}
+  - {x: -5, y: 8, z: 2}
+  - {x: -6, y: 8, z: 2}
+  - {x: -7, y: 8, z: 2}
+  - {x: -8, y: 8, z: 2}
+  - {x: -9, y: 8, z: 2}
+  - {x: -10, y: 8, z: 2}
+  snackPrefabs:
+  - {fileID: 872977597242088139, guid: 37b8240288acbcf47b3b7cb41b5a57b0, type: 3}
+  - {fileID: 1576950161639345079, guid: 938b6239e7414af4e9ffa98109fac43f, type: 3}
