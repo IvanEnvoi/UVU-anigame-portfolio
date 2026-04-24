@@ -13,7 +13,12 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
 
     private Vector2 moveInput;
     private bool jumpPressed;
-
+    
+    public bool isGrounded;
+    public float groundDistance = 0.2f;
+    public LayerMask groundMask;
+    
+    
     private Vector3 velocity;
 
     private void Awake()
@@ -46,6 +51,7 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
         HandleJump();
         HandleGravity();
         ApplyMovement();
+        IsGrounded();
     }
 
     // --------------------
@@ -116,5 +122,11 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
     private void ApplyMovement()
     {
         controller.Move(velocity * Time.deltaTime);
+    }
+    void IsGrounded()
+    {
+        Vector3 origin = transform.position + Vector3.down * (controller.height / 2f - 0.1f);
+
+        isGrounded = Physics.Raycast(origin, Vector3.down, groundDistance, groundMask);
     }
 }

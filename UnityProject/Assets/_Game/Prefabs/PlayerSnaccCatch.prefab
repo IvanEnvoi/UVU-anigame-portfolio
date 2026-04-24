@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7864083446310641778}
   - component: {fileID: 7012088115773370991}
   - component: {fileID: 2414048279285185516}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: PlayerSnaccCatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,5 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControllerV4SnaccCatch
   moveSpeed: 20
-  jumpHeight: 2
-  gravity: -9.81
+  jumpHeight: 4.06
+  gravity: -79.9
+  isGrounded: 0
+  groundDistance: 0.78
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 524288

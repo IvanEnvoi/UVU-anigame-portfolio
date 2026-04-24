@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbff2e96efc2f1418cf3ec281dff9a2, type: 3}
+  m_Name: PlatformSnaccData
+  m_EditorClassIdentifier: Assembly-CSharp::SnackData
+  spawnPositions:
+  - {x: 0, y: 0, z: 2}
+  snackPrefabs:
+  - {fileID: 563409606556683308, guid: b1c9d482e70e33246a007d1d8a3b0637, type: 3}
+  - {fileID: 3537128093717625839, guid: e02276d6c3c290f4c830dd5e611e0987, type: 3}
+  - {fileID: 7513758505021685416, guid: b58e5f76300bd0c43a794f33c56005cb, type: 3}
