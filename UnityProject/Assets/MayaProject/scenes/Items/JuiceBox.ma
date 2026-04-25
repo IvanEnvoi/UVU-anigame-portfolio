@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: JuiceBox.ma
-//Last modified: Fri, Apr 24, 2026 04:59:16 PM
+//Last modified: Fri, Apr 24, 2026 09:55:20 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "B385AA09-4D7F-E6AA-2ED1-BBBD3324DA5B";
+fileInfo "UUID" "91BDD558-4AAD-73F0-C8F8-3290D1F25F1C";
 createNode transform -shared -name "persp";
 	rename -uuid "76360123-4DA6-9330-F7B4-9BAD27B4E5E2";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 21.80182179060898 136.6556530853608 668.76609900812525 ;
-	setAttr ".rotate" -type "double3" -6.9383527295143592 1440.9999999999736 -2.4851868508880149e-17 ;
+	setAttr ".translate" -type "double3" 213.70823633602362 100.20010078887685 641.85086055311797 ;
+	setAttr ".rotate" -type "double3" -3.9383527295135252 1456.9999999999834 -1.0393374410820977e-16 ;
 createNode camera -shared -name "perspShape" -parent "persp";
 	rename -uuid "9DC8CF20-48BC-5CD1-52AC-40873A7DC364";
 	setAttr -keyable off ".visibility" no;

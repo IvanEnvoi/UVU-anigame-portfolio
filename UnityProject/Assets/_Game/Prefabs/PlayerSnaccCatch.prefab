@@ -156,8 +156,5 @@ MonoBehaviour:
   moveSpeed: 20
   jumpHeight: 4.06
   gravity: -79.9
-  isGrounded: 1
-  groundDistance: 11.64
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  inputBufferTime: 0.01
+  coyoteTime: 0.11

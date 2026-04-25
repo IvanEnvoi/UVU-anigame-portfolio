@@ -12,14 +12,13 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
     private PlayerControls controls;
 
     private Vector2 moveInput;
-    private float jumpBufferCounter;
     
     private Vector3 velocity;
     
-    public float inputBufferTime = 0.2f;
-    private float spawnBufferCounter = 0f;
+    public float inputBufferTime = 0.05f;
+    private float jumpBufferCounter;
     
-    public float coyoteTime = 0.2f;
+    public float coyoteTime = 0.11f;
     private float coyoteCounter;
 
     private void Awake()
