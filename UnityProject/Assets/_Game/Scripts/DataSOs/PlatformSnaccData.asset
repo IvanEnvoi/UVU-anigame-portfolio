@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: PlatformSnaccData
   m_EditorClassIdentifier: Assembly-CSharp::SnackData
   spawnPositions:
-  - {x: 0, y: 0, z: 2}
+  - {x: 0, y: 12, z: 2}
   snackPrefabs:
-  - {fileID: 563409606556683308, guid: b1c9d482e70e33246a007d1d8a3b0637, type: 3}
-  - {fileID: 3537128093717625839, guid: e02276d6c3c290f4c830dd5e611e0987, type: 3}
-  - {fileID: 7513758505021685416, guid: b58e5f76300bd0c43a794f33c56005cb, type: 3}
+  - {fileID: 3527811745705665721, guid: b1c9d482e70e33246a007d1d8a3b0637, type: 3}
+  - {fileID: 9029685393993007729, guid: e02276d6c3c290f4c830dd5e611e0987, type: 3}
+  - {fileID: 2384499827046690645, guid: b58e5f76300bd0c43a794f33c56005cb, type: 3}
+  - {fileID: 3310741363446994020, guid: 0aed9565614b5c549be3b4d9a99c6fea, type: 3}

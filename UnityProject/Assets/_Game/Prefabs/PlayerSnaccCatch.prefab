@@ -156,8 +156,8 @@ MonoBehaviour:
   moveSpeed: 20
   jumpHeight: 4.06
   gravity: -79.9
-  isGrounded: 0
-  groundDistance: 0.78
+  isGrounded: 1
+  groundDistance: 11.64
   groundMask:
     serializedVersion: 2
-    m_Bits: 524288
+    m_Bits: 4294967295

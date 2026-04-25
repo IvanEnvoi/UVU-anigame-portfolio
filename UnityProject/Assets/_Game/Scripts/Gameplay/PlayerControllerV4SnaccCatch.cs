@@ -12,14 +12,15 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
     private PlayerControls controls;
 
     private Vector2 moveInput;
-    private bool jumpPressed;
-    
-    public bool isGrounded;
-    public float groundDistance = 0.2f;
-    public LayerMask groundMask;
-    
+    private float jumpBufferCounter;
     
     private Vector3 velocity;
+    
+    public float inputBufferTime = 0.2f;
+    private float spawnBufferCounter = 0f;
+    
+    public float coyoteTime = 0.2f;
+    private float coyoteCounter;
 
     private void Awake()
     {
@@ -48,10 +49,10 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
     private void Update()
     {
         HandleMovement();
+        CoyoteTimer();
         HandleJump();
         HandleGravity();
         ApplyMovement();
-        IsGrounded();
     }
 
     // --------------------
@@ -65,19 +66,9 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
     private void OnJump(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
-            jumpPressed = true;
+            jumpBufferCounter = inputBufferTime;
     }
     
-   //private void OnLaser(InputAction.CallbackContext ctx)
-   // {
-   //     if (ctx.started)
-            // Implement laser firing logic here
-  //          Debug.Log("Laser fired!");
-            
-        
-  //  }
-    ///
-
     // --------------------
     // MOVEMENT
     // --------------------
@@ -103,12 +94,13 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
 
     private void HandleJump()
     {
-        if (controller.isGrounded && jumpPressed)
+        if (coyoteCounter > 0f && jumpBufferCounter > 0f)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            
+            jumpBufferCounter = 0f; // consume the buffered input
+            coyoteCounter = 0f; // consume coyote time
         }
-
-        jumpPressed = false;
     }
 
     private void HandleGravity()
@@ -123,10 +115,12 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
     {
         controller.Move(velocity * Time.deltaTime);
     }
-    void IsGrounded()
-    {
-        Vector3 origin = transform.position + Vector3.down * (controller.height / 2f - 0.1f);
 
-        isGrounded = Physics.Raycast(origin, Vector3.down, groundDistance, groundMask);
+    private void CoyoteTimer()
+    {
+        if (controller.isGrounded)
+            coyoteCounter = coyoteTime;
+        else
+            coyoteCounter -= Time.deltaTime;
     }
 }
