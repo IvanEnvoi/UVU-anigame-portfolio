@@ -21,6 +21,8 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
     public float coyoteTime = 0.11f;
     private float coyoteCounter;
 
+    public float positionOnPlatform = 2.0f;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -52,6 +54,7 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
         HandleJump();
         HandleGravity();
         ApplyMovement();
+        KeepCenteredOnPlatforms();
     }
 
     // --------------------
@@ -121,5 +124,15 @@ public class PlayerControllerV4SnaccCatch: MonoBehaviour
             coyoteCounter = coyoteTime;
         else
             coyoteCounter -= Time.deltaTime;
+    }
+
+    private void KeepCenteredOnPlatforms()
+    {
+        if (transform.position.z != positionOnPlatform)
+        {
+            Vector3 center = transform.position;
+            center.z = positionOnPlatform;
+            transform.position = center;
+        }
     }
 }
