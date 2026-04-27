@@ -33,8 +33,8 @@ Transform:
   m_GameObject: {fileID: 872977597242088139}
   serializedVersion: 2
   m_LocalRotation: {x: 0.062906854, y: -0.6277415, z: -0.061235324, w: 0.7734556}
-  m_LocalPosition: {x: -0.26666, y: 1.0475, z: -0.5442}
-  m_LocalScale: {x: 1.7284586, y: 1.7284586, z: 1.7284586}
+  m_LocalPosition: {x: -0.26922, y: 0.88744, z: -0.57252}
+  m_LocalScale: {x: 3.2562432, y: 3.2562432, z: 3.2562432}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,7 +72,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a70cedd30d823de45bb5c7812ec8885d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,6 +188,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 9097bd1bc232e2140b81403156ffa4c9, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 505d99e2547f43c44bddf8636cc4dd96, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
         m_MethodName: Raise
         m_Mode: 1
