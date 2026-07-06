@@ -46,7 +46,7 @@
                     "name": "Crouch",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -64,7 +64,7 @@
                     "name": "Previous",
                     "type": "Button",
                     "id": "2776c80d-3c14-4091-8c56-d04ced07a2b0",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -73,7 +73,7 @@
                     "name": "Next",
                     "type": "Button",
                     "id": "b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -88,13 +88,40 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Laser",
+                    "name": "Grip",
+                    "type": "Value",
+                    "id": "b214b42d-4956-4492-b628-93f402df9e0b",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Pickup",
                     "type": "Button",
-                    "id": "c1774a88-6ec2-43fd-8512-bbf586aa785f",
+                    "id": "3c34246a-a5b4-479d-9968-319bafc36d63",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Laser",
+                    "type": "Button",
+                    "id": "0b2086a6-b715-46ae-a8f2-272d7abb1bbd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Sling",
+                    "type": "Value",
+                    "id": "9bf19304-0eaf-4f79-8b76-30f66d43d54a",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -485,23 +512,45 @@
                 },
                 {
                     "name": "",
-                    "id": "df3a5f47-f17c-445e-8dca-5c7fbf6873cb",
-                    "path": "<Mouse>/leftButton",
+                    "id": "94aa1182-35b9-443b-83bc-ad7e8325d8f9",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "",
+                    "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fd45e75-36ef-4013-903a-f129a155d477",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pickup",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3c25fbce-7d82-4ef8-99b6-17fc2dea7921",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Laser",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "7ded24c9-f562-4679-95f1-b9beda80ead5",
-                    "path": "<Gamepad>/rightTrigger",
+                    "id": "19ef0062-f8d4-400e-ad41-cac0db8cdf1e",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Laser",
+                    "groups": "",
+                    "action": "Sling",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
