@@ -208,6 +208,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""WallRun"",
+                    ""type"": ""Button"",
+                    ""id"": ""110105e9-9365-46ef-bdaa-302dd929ebe8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -637,6 +646,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Sling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c73c51d3-4e00-4224-88c1-6b9375f3dd27"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WallRun"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1237,6 +1257,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Pickup = m_Player.FindAction("Pickup", throwIfNotFound: true);
         m_Player_Laser = m_Player.FindAction("Laser", throwIfNotFound: true);
         m_Player_Sling = m_Player.FindAction("Sling", throwIfNotFound: true);
+        m_Player_WallRun = m_Player.FindAction("WallRun", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1343,6 +1364,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Pickup;
     private readonly InputAction m_Player_Laser;
     private readonly InputAction m_Player_Sling;
+    private readonly InputAction m_Player_WallRun;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1406,6 +1428,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Sling".
         /// </summary>
         public InputAction @Sling => m_Wrapper.m_Player_Sling;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/WallRun".
+        /// </summary>
+        public InputAction @WallRun => m_Wrapper.m_Player_WallRun;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1471,6 +1497,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Sling.started += instance.OnSling;
             @Sling.performed += instance.OnSling;
             @Sling.canceled += instance.OnSling;
+            @WallRun.started += instance.OnWallRun;
+            @WallRun.performed += instance.OnWallRun;
+            @WallRun.canceled += instance.OnWallRun;
         }
 
         /// <summary>
@@ -1521,6 +1550,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Sling.started -= instance.OnSling;
             @Sling.performed -= instance.OnSling;
             @Sling.canceled -= instance.OnSling;
+            @WallRun.started -= instance.OnWallRun;
+            @WallRun.performed -= instance.OnWallRun;
+            @WallRun.canceled -= instance.OnWallRun;
         }
 
         /// <summary>
@@ -1912,6 +1944,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSling(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "WallRun" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnWallRun(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
