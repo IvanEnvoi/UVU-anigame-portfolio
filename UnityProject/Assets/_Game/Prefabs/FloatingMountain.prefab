@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloatingMountain
       objectReference: {fileID: 0}
+    - target: {fileID: 999487968466720741, guid: 5d1fbe959e4010e418755d6eab43374c, type: 3}
+      propertyPath: m_Layer
+      value: 21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

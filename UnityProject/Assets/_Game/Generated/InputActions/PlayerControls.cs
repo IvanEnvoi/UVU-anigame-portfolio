@@ -1177,6 +1177,74 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Trucc"",
+            ""id"": ""e547e6c9-221d-4bc8-afd9-2babc6734e5b"",
+            ""actions"": [
+                {
+                    ""name"": ""Brake"",
+                    ""type"": ""Value"",
+                    ""id"": ""e81b1274-210e-46b5-b9f0-b413f96aeb49"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SwitchTarget"",
+                    ""type"": ""Button"",
+                    ""id"": ""7f3a9c1e-2b4d-4f6a-9e8c-1a2b3c4d5e6f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Laser"",
+                    ""type"": ""Button"",
+                    ""id"": ""4543fe63-0a26-44a7-9614-0150e4b5b301"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""9ca5081c-3382-4a9f-a631-ad1d5b3974ca"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4c3b2a1-6f5e-4d3c-8b7a-9f8e7d6c5b4a"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""SwitchTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ef707bd-c55c-40ff-8728-16f9d38f20b3"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Laser"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1270,12 +1338,18 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // Trucc
+        m_Trucc = asset.FindActionMap("Trucc", throwIfNotFound: true);
+        m_Trucc_Brake = m_Trucc.FindAction("Brake", throwIfNotFound: true);
+        m_Trucc_SwitchTarget = m_Trucc.FindAction("SwitchTarget", throwIfNotFound: true);
+        m_Trucc_Laser = m_Trucc.FindAction("Laser", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
     {
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, PlayerControls.Player.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, PlayerControls.UI.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Trucc.enabled, "This will cause a leak and performance issues, PlayerControls.Trucc.Disable() has not been called.");
     }
 
     /// <summary>
@@ -1781,6 +1855,124 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="UIActions" /> instance referencing this action map.
     /// </summary>
     public UIActions @UI => new UIActions(this);
+
+    // Trucc
+    private readonly InputActionMap m_Trucc;
+    private List<ITruccActions> m_TruccActionsCallbackInterfaces = new List<ITruccActions>();
+    private readonly InputAction m_Trucc_Brake;
+    private readonly InputAction m_Trucc_SwitchTarget;
+    private readonly InputAction m_Trucc_Laser;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Trucc".
+    /// </summary>
+    public struct TruccActions
+    {
+        private @PlayerControls m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public TruccActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Trucc/Brake".
+        /// </summary>
+        public InputAction @Brake => m_Wrapper.m_Trucc_Brake;
+        /// <summary>
+        /// Provides access to the underlying input action "Trucc/SwitchTarget".
+        /// </summary>
+        public InputAction @SwitchTarget => m_Wrapper.m_Trucc_SwitchTarget;
+        /// <summary>
+        /// Provides access to the underlying input action "Trucc/Laser".
+        /// </summary>
+        public InputAction @Laser => m_Wrapper.m_Trucc_Laser;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Trucc; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="TruccActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(TruccActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="TruccActions" />
+        public void AddCallbacks(ITruccActions instance)
+        {
+            if (instance == null || m_Wrapper.m_TruccActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_TruccActionsCallbackInterfaces.Add(instance);
+            @Brake.started += instance.OnBrake;
+            @Brake.performed += instance.OnBrake;
+            @Brake.canceled += instance.OnBrake;
+            @SwitchTarget.started += instance.OnSwitchTarget;
+            @SwitchTarget.performed += instance.OnSwitchTarget;
+            @SwitchTarget.canceled += instance.OnSwitchTarget;
+            @Laser.started += instance.OnLaser;
+            @Laser.performed += instance.OnLaser;
+            @Laser.canceled += instance.OnLaser;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="TruccActions" />
+        private void UnregisterCallbacks(ITruccActions instance)
+        {
+            @Brake.started -= instance.OnBrake;
+            @Brake.performed -= instance.OnBrake;
+            @Brake.canceled -= instance.OnBrake;
+            @SwitchTarget.started -= instance.OnSwitchTarget;
+            @SwitchTarget.performed -= instance.OnSwitchTarget;
+            @SwitchTarget.canceled -= instance.OnSwitchTarget;
+            @Laser.started -= instance.OnLaser;
+            @Laser.performed -= instance.OnLaser;
+            @Laser.canceled -= instance.OnLaser;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="TruccActions.UnregisterCallbacks(ITruccActions)" />.
+        /// </summary>
+        /// <seealso cref="TruccActions.UnregisterCallbacks(ITruccActions)" />
+        public void RemoveCallbacks(ITruccActions instance)
+        {
+            if (m_Wrapper.m_TruccActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="TruccActions.AddCallbacks(ITruccActions)" />
+        /// <seealso cref="TruccActions.RemoveCallbacks(ITruccActions)" />
+        /// <seealso cref="TruccActions.UnregisterCallbacks(ITruccActions)" />
+        public void SetCallbacks(ITruccActions instance)
+        {
+            foreach (var item in m_Wrapper.m_TruccActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_TruccActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="TruccActions" /> instance referencing this action map.
+    /// </summary>
+    public TruccActions @Trucc => new TruccActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -2029,5 +2221,34 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Trucc" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="TruccActions.AddCallbacks(ITruccActions)" />
+    /// <seealso cref="TruccActions.RemoveCallbacks(ITruccActions)" />
+    public interface ITruccActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Brake" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBrake(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchTarget" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchTarget(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Laser" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLaser(InputAction.CallbackContext context);
     }
 }

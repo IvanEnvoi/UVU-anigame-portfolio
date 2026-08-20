@@ -1091,6 +1091,74 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Trucc",
+            "id": "e547e6c9-221d-4bc8-afd9-2babc6734e5b",
+            "actions": [
+                {
+                    "name": "Brake",
+                    "type": "Value",
+                    "id": "e81b1274-210e-46b5-b9f0-b413f96aeb49",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "SwitchTarget",
+                    "type": "Button",
+                    "id": "7f3a9c1e-2b4d-4f6a-9e8c-1a2b3c4d5e6f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Laser",
+                    "type": "Button",
+                    "id": "4543fe63-0a26-44a7-9614-0150e4b5b301",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9ca5081c-3382-4a9f-a631-ad1d5b3974ca",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4c3b2a1-6f5e-4d3c-8b7a-9f8e7d6c5b4a",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "SwitchTarget",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ef707bd-c55c-40ff-8728-16f9d38f20b3",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Laser",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

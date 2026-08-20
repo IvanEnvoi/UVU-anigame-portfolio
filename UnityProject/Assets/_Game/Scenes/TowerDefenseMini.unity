@@ -2230,15 +2230,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1715802320064209882, guid: 0dbf506c9eedcaa4c99becb3b08379ad, type: 3}
       propertyPath: m_LocalScale.x
-      value: 104.665794
+      value: 138.58798
       objectReference: {fileID: 0}
     - target: {fileID: 1715802320064209882, guid: 0dbf506c9eedcaa4c99becb3b08379ad, type: 3}
       propertyPath: m_LocalScale.y
-      value: 104.66582
+      value: 138.58801
       objectReference: {fileID: 0}
     - target: {fileID: 1715802320064209882, guid: 0dbf506c9eedcaa4c99becb3b08379ad, type: 3}
       propertyPath: m_LocalScale.z
-      value: 104.665794
+      value: 138.58798
       objectReference: {fileID: 0}
     - target: {fileID: 1715802320064209882, guid: 0dbf506c9eedcaa4c99becb3b08379ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2246,7 +2246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1715802320064209882, guid: 0dbf506c9eedcaa4c99becb3b08379ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 52.9
+      value: 43.9
       objectReference: {fileID: 0}
     - target: {fileID: 1715802320064209882, guid: 0dbf506c9eedcaa4c99becb3b08379ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2319,7 +2319,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
