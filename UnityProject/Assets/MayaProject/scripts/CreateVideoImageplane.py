@@ -13,7 +13,7 @@ def create_video_imageplane(video_path):
     # connect timeline
     cmds.expression(s=f"{shape}.frameExtension = frame;")
 
-    print("Video image plane ready, love ❤️")
+    print("Video image plane ready, love")
 
 # example:
-# create_video_imageplane("C:/path/to/your/video.mov")
+create_video_imageplane("C:\Users\foxke\Downloads\Slow motion running - side view.avi")
