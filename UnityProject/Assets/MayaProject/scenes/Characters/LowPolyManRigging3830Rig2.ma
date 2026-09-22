@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: LowPolyManRigging3830Rig2.ma
-//Last modified: Tue, Sep 15, 2026 10:21:24 PM
+//Last modified: Thu, Sep 17, 2026 12:09:59 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "7694B081-4253-9E2D-A2CF-28B6185419C4";
+fileInfo "UUID" "BDBD4044-4E09-FF8D-D444-638405EFE9EE";
 createNode transform -shared -name "persp";
 	rename -uuid "10B1BA89-4BC5-173F-9034-AA93A09D38CE";
 	setAttr ".visibility" no;
-	setAttr ".translate" -type "double3" 7.2528559033595457 850.8356290804885 979.43850451699529 ;
-	setAttr ".rotate" -type "double3" -378.33835273011744 1439.3999999998759 5.5911253409601615e-16 ;
+	setAttr ".translate" -type "double3" 301.54616578406706 464.73273920247101 994.29411315467053 ;
+	setAttr ".rotate" -type "double3" -357.33835273009942 1455.4000000001315 0 ;
 	setAttr ".rotatePivot" -type "double3" 0 -1.1368683772161603e-13 -5.6843418860808015e-14 ;
 	setAttr ".rotatePivotTranslate" -type "double3" -3.0640931082708053e-15 8.6766759089570077e-16 
 		-1.6229605667393631e-15 ;
@@ -135406,15 +135406,15 @@ createNode mesh -name "Shoes_GeoShapeDeformed" -parent "modelRNfosterParent1";
 	setAttr ".collisionOffsetVelocityMultiplier[0]"  0 1 1;
 	setAttr ".collisionDepthVelocityMultiplier[0]"  0 1 1;
 createNode lightLinker -shared -name "lightLinker1";
-	rename -uuid "B8B6D792-463D-E75A-AF4D-8A923D6C3598";
-	setAttr -size 14 ".link";
-	setAttr -size 14 ".shadowLink";
+	rename -uuid "EF6D2EA9-4F9C-A58C-D681-6B909DB7F1E9";
+	setAttr -size 8 ".link";
+	setAttr -size 8 ".shadowLink";
 createNode shapeEditorManager -name "shapeEditorManager";
-	rename -uuid "4A6EA244-4ABF-77A9-0F1F-E88B4D82E764";
+	rename -uuid "B623BD21-403E-049B-0C6F-A4BFE55A48CA";
 createNode poseInterpolatorManager -name "poseInterpolatorManager";
-	rename -uuid "56565E22-44A3-3F98-75FE-C29C931214D1";
+	rename -uuid "19423C5E-4020-4645-6A4A-4AA1DAA0E096";
 createNode displayLayerManager -name "layerManager";
-	rename -uuid "78D36274-4738-4F2A-3140-19B9FF5440DF";
+	rename -uuid "B1A58201-44F8-77C7-6319-70ACDA3B3B6F";
 	setAttr ".currentDisplayLayer" 1;
 	setAttr -size 4 ".displayLayerId[1:3]"  1 2 0;
 	setAttr -size 3 ".displayLayerId";
@@ -135422,7 +135422,7 @@ createNode displayLayer -name "defaultLayer";
 	rename -uuid "2BDB6328-4FCD-C1CA-F621-FE8936CB32A4";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 createNode renderLayerManager -name "renderLayerManager";
-	rename -uuid "DD944039-4F6B-226E-DFE3-938DE07C1C0B";
+	rename -uuid "B9B637E1-450E-18E8-BEC1-21AD83ADEBED";
 createNode renderLayer -name "defaultRenderLayer";
 	rename -uuid "2A495F16-44B0-6248-B6B9-57949A0E0042";
 	setAttr ".global" yes;
@@ -135447,22 +135447,22 @@ createNode script -name "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 677\n            -height 488\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 676\n            -height 488\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 677\n            -height 488\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1660\n            -height 955\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1274\n            -height 955\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
-		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
-		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
+		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
+		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
 		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
@@ -135481,8 +135481,8 @@ createNode script -name "uiConfigurationScriptNode";
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n"
 		+ "\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1660\\n    -height 955\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1660\\n    -height 955\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1274\\n    -height 955\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1274\\n    -height 955\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".scriptType" 3;
 createNode script -name "sceneConfigurationScriptNode";
@@ -135613,548 +135613,6 @@ createNode displayLayer -name "layer2";
 	rename -uuid "2E2A53DF-4E3E-3E29-9296-65A45C51F030";
 	setAttr ".ufeMembers" -type "stringArray" 0  ;
 	setAttr ".displayOrder" 2;
-createNode animCurveUA -name "SDKFKIndexFinger3_L_rotateY";
-	rename -uuid "414F07F1-477D-840A-3610-05874C5164F7";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKIndexFinger2_L_rotateY";
-	rename -uuid "BA86D3E4-4F0F-6B47-2959-91B017C574BD";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKIndexFinger1_L_rotateY";
-	rename -uuid "935EC8AF-4428-826E-91CF-58B3645BF79A";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKIndexFinger2_R_rotateY";
-	rename -uuid "5F28D89B-44F3-855F-CEE1-808F87FEB039";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKIndexFinger3_R_rotateY";
-	rename -uuid "9CABF082-40C1-9A7E-2420-759C4445736F";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKIndexFinger1_R_rotateY";
-	rename -uuid "506CC4DD-41C8-386A-ADD9-FBA113A5BAEA";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKMiddleFinger3_L_rotateY";
-	rename -uuid "A8CA1146-4D1E-F212-9FA3-BEAEAE248916";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKMiddleFinger2_L_rotateY";
-	rename -uuid "DB93CD90-4993-C74D-1ACA-D08AF2739E0E";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKMiddleFinger1_L_rotateY";
-	rename -uuid "B4DF1A56-4C98-137D-D884-B081F4CBE234";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKMiddleFinger3_R_rotateY";
-	rename -uuid "FF85E0E7-4DF5-2E8B-D299-8F872D3F5E05";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKMiddleFinger1_R_rotateY";
-	rename -uuid "71154BFA-42B9-AA7C-FAEA-D9880342F1B1";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKMiddleFinger2_R_rotateY";
-	rename -uuid "60FAA30F-4A39-4F18-3C1B-AB8862B3B654";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKRingFinger3_L_rotateY";
-	rename -uuid "702A7C1C-4DFB-59AE-37DD-90A3F82AD6FB";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKRingFinger2_L_rotateY";
-	rename -uuid "59148F01-4BCF-46B3-8551-E09DE4DC09AA";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKRingFinger1_L_rotateY";
-	rename -uuid "F1A67745-41D4-C5F4-81CD-2BA09524C986";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKRingFinger2_R_rotateY";
-	rename -uuid "0FC8631B-4FEC-BBDB-2709-7488010B931F";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKRingFinger3_R_rotateY";
-	rename -uuid "57C3A5EF-4472-384C-442D-F8A07047B214";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKRingFinger1_R_rotateY";
-	rename -uuid "E498165C-4854-68FA-EE93-5C8AE13A4A4C";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKPinkyFinger3_L_rotateY";
-	rename -uuid "C98FCDBC-47AE-CA17-3D20-91A09947752E";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKPinkyFinger2_L_rotateY";
-	rename -uuid "CCB2136C-48B4-1B4C-B83E-AA9369CEF97B";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKPinkyFinger1_L_rotateY";
-	rename -uuid "DF36B923-4509-2CB3-D1AA-78A7339218D5";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKPinkyFinger2_R_rotateY";
-	rename -uuid "ABF412BF-4F10-ABA7-87D2-14A6E1EEB013";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKPinkyFinger1_R_rotateY";
-	rename -uuid "65612081-4EAB-84E0-7A6A-E5B0E1A8ED0E";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKPinkyFinger3_R_rotateY";
-	rename -uuid "DDA8A5BA-4434-B87C-9E18-EF9D00EC1B98";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKThumbFinger3_L_rotateY";
-	rename -uuid "7E3CB13D-43FD-636B-C295-53839C16AC55";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "thumbCurl" -longName "thumbCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKThumbFinger2_L_rotateY";
-	rename -uuid "1A185CBA-4783-7865-2157-29A03A0DD6B1";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "thumbCurl" -longName "thumbCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKThumbFinger3_R_rotateY";
-	rename -uuid "3C6639F2-469A-92E7-00FB-6EBD6CED2AFC";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "thumbCurl" -longName "thumbCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKThumbFinger2_R_rotateY";
-	rename -uuid "7F1A9FF8-4725-F513-B647-209FBF05FF98";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "thumbCurl" -longName "thumbCurl" -softMinValue 
-		-2 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 1;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
-	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
-	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKIndexFinger1_R_rotateZ";
-	rename -uuid "04610BC6-4377-E993-DC17-059F27F36B98";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
-		-5 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -5 -20 0 0 10 40;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKPinkyFinger1_R_rotateZ";
-	rename -uuid "3A86EAA7-4459-A690-ECB9-18A5C2DF3260";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
-		-5 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -5 29.999999999999996 0 0 10 
-		-59.999999999999993;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKRingFinger1_R_rotateZ";
-	rename -uuid "A2D16E05-4475-7E9A-E3BE-DC972692D6F4";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
-		-5 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -5 14.999999999999998 0 0 10 
-		-29.999999999999996;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKIndexFinger1_L_rotateZ";
-	rename -uuid "4E1232A3-4506-3D33-F891-ACAF0A69BF41";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
-		-5 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -5 -20 0 0 10 40;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKPinkyFinger1_L_rotateZ";
-	rename -uuid "9F6C1284-4111-1A4B-CD41-15A4DE2DF134";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
-		-5 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -5 29.999999999999996 0 0 10 
-		-59.999999999999993;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKRingFinger1_L_rotateZ";
-	rename -uuid "5C9166E0-44A3-472E-832B-42AAB90C28F5";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
-		-5 -softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 3 ".keyTimeValue[0:2]"  -5 14.999999999999998 0 0 10 
-		-29.999999999999996;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKCup_R_rotateX";
-	rename -uuid "0AA1A18C-4A84-C331-9D35-CBA0DE0AD693";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "cup" -longName "cup" -softMinValue 0 
-		-softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 10 65;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode animCurveUA -name "SDKFKCup_L_rotateX";
-	rename -uuid "45124850-4A9A-8D75-078D-A78E81089B40";
-	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
-		-attributeType "message";
-	addAttr -cachedInternally true -shortName "cup" -longName "cup" -softMinValue 0 
-		-softMaxValue 10 -attributeType "float";
-	setAttr ".tangentType" 2;
-	setAttr ".weightedTangents" no;
-	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 10 65;
-	setAttr ".preInfinity" 4;
-	setAttr ".postInfinity" 4;
-createNode multiplyDivide -name "RootFat";
-	rename -uuid "4AB5D95D-42C6-F3DD-1F46-DCA180D8C50B";
-createNode multiplyDivide -name "HipFat";
-	rename -uuid "600E1B2E-4A3F-0B08-D85F-E1890E6DEAF5";
-createNode multiplyDivide -name "KneeFat";
-	rename -uuid "FBC6DFDA-4A4A-6327-F233-83B817409C37";
-createNode multiplyDivide -name "AnkleFat";
-	rename -uuid "0CAEF971-4444-AF4F-A523-A1B6EFE31AD5";
-createNode multiplyDivide -name "ToesFat";
-	rename -uuid "22BA4FE9-4365-A06A-DB75-C9A09B6100AA";
-createNode multiplyDivide -name "ToesEndFat";
-	rename -uuid "1AE067CB-439D-2B92-75A3-42B9F3F6BF93";
-createNode multiplyDivide -name "FootSideOuterFat";
-	rename -uuid "10C96DC5-4BA1-D430-C2E7-7BB1A3136990";
-createNode multiplyDivide -name "FootSideInnerFat";
-	rename -uuid "BFF7A644-415D-9DBA-1639-739787067603";
-createNode multiplyDivide -name "HeelFat";
-	rename -uuid "83CA3173-4B80-A0C0-C73F-22830F6274BC";
-createNode multiplyDivide -name "Spine1Fat";
-	rename -uuid "B7478E37-4CBF-EE6A-B77A-CE82058F407D";
-createNode multiplyDivide -name "ChestFat";
-	rename -uuid "28379A5B-4FF1-DC48-200C-6DA2C37CD360";
-createNode multiplyDivide -name "ScapulaFat";
-	rename -uuid "98421611-465B-7CFE-FAB9-DF8D45680C96";
-createNode multiplyDivide -name "ShoulderFat";
-	rename -uuid "04A07ADE-43EA-647C-B43D-ABBD71500F4E";
-createNode multiplyDivide -name "ElbowFat";
-	rename -uuid "9C6F37D4-41DA-B168-876E-2481D4D37D5C";
-createNode multiplyDivide -name "WristFat";
-	rename -uuid "E4CB3D9D-40A8-058D-019E-48ADE4B8F348";
-createNode multiplyDivide -name "CupFat";
-	rename -uuid "5CEC687B-48D8-C9E3-E917-46981ACE6EA9";
-createNode multiplyDivide -name "RingFinger1Fat";
-	rename -uuid "99A33DB0-43B1-23D2-32EA-369E1F345E6B";
-createNode multiplyDivide -name "RingFinger2Fat";
-	rename -uuid "D0358B1F-49A9-1B25-132B-3380514716B8";
-createNode multiplyDivide -name "RingFinger3Fat";
-	rename -uuid "3A736C10-45B3-7A3E-0942-EDABCD21F9C7";
-createNode multiplyDivide -name "RingFinger4Fat";
-	rename -uuid "ED2E0693-4340-91B5-CAE5-28B2F40EF14C";
-createNode multiplyDivide -name "PinkyFinger1Fat";
-	rename -uuid "A319730A-4DFE-FF1E-7A71-66A672EF2F2A";
-createNode multiplyDivide -name "PinkyFinger2Fat";
-	rename -uuid "FB38C531-4755-0447-C2AA-5A9A16BB6516";
-createNode multiplyDivide -name "PinkyFinger3Fat";
-	rename -uuid "02797048-4C59-E4FD-3E40-AF9726F14079";
-createNode multiplyDivide -name "PinkyFinger4Fat";
-	rename -uuid "4A7C2925-403A-C83A-0470-2B9D24DE51F9";
-createNode multiplyDivide -name "IndexFinger1Fat";
-	rename -uuid "40038772-4F7B-22C5-2D22-A687E5F6B31D";
-createNode multiplyDivide -name "IndexFinger2Fat";
-	rename -uuid "DAD72E5A-4C54-0C05-B553-6990D8E53E2F";
-createNode multiplyDivide -name "IndexFinger3Fat";
-	rename -uuid "FDE9372E-4D03-1956-18F6-AD8AD6B1D236";
-createNode multiplyDivide -name "IndexFinger4Fat";
-	rename -uuid "58A6D03A-42C6-F8A6-774B-1DADA415ABE1";
-createNode multiplyDivide -name "ThumbFinger1Fat";
-	rename -uuid "72AB4DDA-4D4A-A0F5-20B6-1080AFF531AC";
-createNode multiplyDivide -name "ThumbFinger2Fat";
-	rename -uuid "0E9C7623-4B0B-338E-7F74-C1A3AAE949C4";
-createNode multiplyDivide -name "ThumbFinger3Fat";
-	rename -uuid "AD3C59C4-4A12-9838-DE75-1D817FCA314A";
-createNode multiplyDivide -name "ThumbFinger4Fat";
-	rename -uuid "74D161AB-4025-2FA3-0535-91A6DB4036F0";
-createNode multiplyDivide -name "MiddleFinger1Fat";
-	rename -uuid "83B68FC7-4FEE-228B-C9A8-099680A50002";
-createNode multiplyDivide -name "MiddleFinger2Fat";
-	rename -uuid "11F81722-40E3-F13B-0ED5-58AD3F01950B";
-createNode multiplyDivide -name "MiddleFinger3Fat";
-	rename -uuid "2DE4CC72-4CD2-B16F-F0E7-E0AAEA3560AE";
-createNode multiplyDivide -name "MiddleFinger4Fat";
-	rename -uuid "791F36BC-46D4-651B-9DCA-2BBA2D4251BA";
-createNode multiplyDivide -name "NeckFat";
-	rename -uuid "68FB2188-4C8F-7DA4-E37C-669F3DC3E168";
-createNode multiplyDivide -name "HeadFat";
-	rename -uuid "8BB2C4A3-47FD-5AA0-67FD-498A5D9AEC01";
-createNode multiplyDivide -name "JawFat";
-	rename -uuid "9C5127E6-41A1-F2CD-AE0D-5BB0ECE2E147";
-createNode multiplyDivide -name "JawEndFat";
-	rename -uuid "AB6D93D2-4AE9-393C-C200-B1BC7113A4ED";
-createNode multiplyDivide -name "EyeFat";
-	rename -uuid "FB134BE6-4C99-0F7B-D6B3-A8BE75645469";
-createNode multiplyDivide -name "EyeEndFat";
-	rename -uuid "D590338A-4AA4-F8E2-583C-8BBEEDDAA442";
-createNode multiplyDivide -name "HeadEndFat";
-	rename -uuid "B224C64C-4ACC-E298-9E32-C6B816D74B2F";
 createNode objectSet -name "ControlSet";
 	rename -uuid "0076E460-4043-655B-D143-7FBBB54EACE9";
 	setAttr ".isHistoricallyInteresting" 0;
@@ -136293,6 +135751,548 @@ createNode nodeGraphEditorInfo -name "LowPolyManRigging3830:hyperShadePrimaryNod
 	setAttr ".tabGraphInfo[0].nodeInfo[8].positionX" 352.85714721679688;
 	setAttr ".tabGraphInfo[0].nodeInfo[8].positionY" 168.57142639160156;
 	setAttr ".tabGraphInfo[0].nodeInfo[8].nodeVisualState" 1923;
+createNode animCurveUA -name "SDKFKCup_R_rotateX";
+	rename -uuid "0AA1A18C-4A84-C331-9D35-CBA0DE0AD693";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "cup" -longName "cup" -softMinValue 0 
+		-softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 10 65;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKRingFinger1_L_rotateZ";
+	rename -uuid "5C9166E0-44A3-472E-832B-42AAB90C28F5";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
+		-5 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -5 14.999999999999998 0 0 10 
+		-29.999999999999996;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKCup_L_rotateX";
+	rename -uuid "45124850-4A9A-8D75-078D-A78E81089B40";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "cup" -longName "cup" -softMinValue 0 
+		-softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 2 ".keyTimeValue[0:1]"  0 0 10 65;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKThumbFinger2_L_rotateY";
+	rename -uuid "1A185CBA-4783-7865-2157-29A03A0DD6B1";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "thumbCurl" -longName "thumbCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKThumbFinger3_R_rotateY";
+	rename -uuid "3C6639F2-469A-92E7-00FB-6EBD6CED2AFC";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "thumbCurl" -longName "thumbCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKIndexFinger1_R_rotateZ";
+	rename -uuid "04610BC6-4377-E993-DC17-059F27F36B98";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
+		-5 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -5 -20 0 0 10 40;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKThumbFinger2_R_rotateY";
+	rename -uuid "7F1A9FF8-4725-F513-B647-209FBF05FF98";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "thumbCurl" -longName "thumbCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKPinkyFinger1_L_rotateZ";
+	rename -uuid "9F6C1284-4111-1A4B-CD41-15A4DE2DF134";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
+		-5 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -5 29.999999999999996 0 0 10 
+		-59.999999999999993;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKIndexFinger1_L_rotateZ";
+	rename -uuid "4E1232A3-4506-3D33-F891-ACAF0A69BF41";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
+		-5 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -5 -20 0 0 10 40;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKRingFinger1_R_rotateZ";
+	rename -uuid "A2D16E05-4475-7E9A-E3BE-DC972692D6F4";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
+		-5 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -5 14.999999999999998 0 0 10 
+		-29.999999999999996;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKPinkyFinger1_R_rotateZ";
+	rename -uuid "3A86EAA7-4459-A690-ECB9-18A5C2DF3260";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "spread" -longName "spread" -softMinValue 
+		-5 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -5 29.999999999999996 0 0 10 
+		-59.999999999999993;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKMiddleFinger2_L_rotateY";
+	rename -uuid "DB93CD90-4993-C74D-1ACA-D08AF2739E0E";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKMiddleFinger3_L_rotateY";
+	rename -uuid "A8CA1146-4D1E-F212-9FA3-BEAEAE248916";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKIndexFinger2_R_rotateY";
+	rename -uuid "5F28D89B-44F3-855F-CEE1-808F87FEB039";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKMiddleFinger1_L_rotateY";
+	rename -uuid "B4DF1A56-4C98-137D-D884-B081F4CBE234";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKIndexFinger1_R_rotateY";
+	rename -uuid "506CC4DD-41C8-386A-ADD9-FBA113A5BAEA";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKIndexFinger3_R_rotateY";
+	rename -uuid "9CABF082-40C1-9A7E-2420-759C4445736F";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKIndexFinger2_L_rotateY";
+	rename -uuid "BA86D3E4-4F0F-6B47-2959-91B017C574BD";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKIndexFinger1_L_rotateY";
+	rename -uuid "935EC8AF-4428-826E-91CF-58B3645BF79A";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKPinkyFinger2_L_rotateY";
+	rename -uuid "CCB2136C-48B4-1B4C-B83E-AA9369CEF97B";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKRingFinger1_R_rotateY";
+	rename -uuid "E498165C-4854-68FA-EE93-5C8AE13A4A4C";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKPinkyFinger1_L_rotateY";
+	rename -uuid "DF36B923-4509-2CB3-D1AA-78A7339218D5";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKPinkyFinger3_L_rotateY";
+	rename -uuid "C98FCDBC-47AE-CA17-3D20-91A09947752E";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKPinkyFinger3_R_rotateY";
+	rename -uuid "DDA8A5BA-4434-B87C-9E18-EF9D00EC1B98";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKPinkyFinger2_R_rotateY";
+	rename -uuid "ABF412BF-4F10-ABA7-87D2-14A6E1EEB013";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKThumbFinger3_L_rotateY";
+	rename -uuid "7E3CB13D-43FD-636B-C295-53839C16AC55";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "thumbCurl" -longName "thumbCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKPinkyFinger1_R_rotateY";
+	rename -uuid "65612081-4EAB-84E0-7A6A-E5B0E1A8ED0E";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "pinkyCurl" -longName "pinkyCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKRingFinger2_L_rotateY";
+	rename -uuid "59148F01-4BCF-46B3-8551-E09DE4DC09AA";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKRingFinger1_L_rotateY";
+	rename -uuid "F1A67745-41D4-C5F4-81CD-2BA09524C986";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKRingFinger3_R_rotateY";
+	rename -uuid "57C3A5EF-4472-384C-442D-F8A07047B214";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKRingFinger2_R_rotateY";
+	rename -uuid "0FC8631B-4FEC-BBDB-2709-7488010B931F";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKIndexFinger3_L_rotateY";
+	rename -uuid "414F07F1-477D-840A-3610-05874C5164F7";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "indexCurl" -longName "indexCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKMiddleFinger3_R_rotateY";
+	rename -uuid "FF85E0E7-4DF5-2E8B-D299-8F872D3F5E05";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKMiddleFinger1_R_rotateY";
+	rename -uuid "71154BFA-42B9-AA7C-FAEA-D9880342F1B1";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKRingFinger3_L_rotateY";
+	rename -uuid "702A7C1C-4DFB-59AE-37DD-90A3F82AD6FB";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "ringCurl" -longName "ringCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 2;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode animCurveUA -name "SDKFKMiddleFinger2_R_rotateY";
+	rename -uuid "60FAA30F-4A39-4F18-3C1B-AB8862B3B654";
+	addAttr -storable false -cachedInternally true -shortName "drivingSystemOut" -longName "drivingSystemOut" 
+		-attributeType "message";
+	addAttr -cachedInternally true -shortName "middleCurl" -longName "middleCurl" -softMinValue 
+		-2 -softMaxValue 10 -attributeType "float";
+	setAttr ".tangentType" 1;
+	setAttr ".weightedTangents" no;
+	setAttr -size 3 ".keyTimeValue[0:2]"  -2 -18 0 0 10 90;
+	setAttr -size 3 ".keyTanInX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanInY[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutX[0:2]"  0 0 0;
+	setAttr -size 3 ".keyTanOutY[0:2]"  0 0 0;
+	setAttr ".preInfinity" 4;
+	setAttr ".postInfinity" 4;
+createNode multiplyDivide -name "RootFat";
+	rename -uuid "4AB5D95D-42C6-F3DD-1F46-DCA180D8C50B";
+createNode multiplyDivide -name "Spine1Fat";
+	rename -uuid "B7478E37-4CBF-EE6A-B77A-CE82058F407D";
+createNode multiplyDivide -name "ChestFat";
+	rename -uuid "28379A5B-4FF1-DC48-200C-6DA2C37CD360";
+createNode multiplyDivide -name "NeckFat";
+	rename -uuid "68FB2188-4C8F-7DA4-E37C-669F3DC3E168";
+createNode multiplyDivide -name "HeadFat";
+	rename -uuid "8BB2C4A3-47FD-5AA0-67FD-498A5D9AEC01";
+createNode multiplyDivide -name "HeadEndFat";
+	rename -uuid "B224C64C-4ACC-E298-9E32-C6B816D74B2F";
+createNode multiplyDivide -name "EyeFat";
+	rename -uuid "FB134BE6-4C99-0F7B-D6B3-A8BE75645469";
+createNode multiplyDivide -name "EyeEndFat";
+	rename -uuid "D590338A-4AA4-F8E2-583C-8BBEEDDAA442";
+createNode multiplyDivide -name "JawFat";
+	rename -uuid "9C5127E6-41A1-F2CD-AE0D-5BB0ECE2E147";
+createNode multiplyDivide -name "JawEndFat";
+	rename -uuid "AB6D93D2-4AE9-393C-C200-B1BC7113A4ED";
+createNode multiplyDivide -name "ScapulaFat";
+	rename -uuid "98421611-465B-7CFE-FAB9-DF8D45680C96";
+createNode multiplyDivide -name "ShoulderFat";
+	rename -uuid "04A07ADE-43EA-647C-B43D-ABBD71500F4E";
+createNode multiplyDivide -name "ElbowFat";
+	rename -uuid "9C6F37D4-41DA-B168-876E-2481D4D37D5C";
+createNode multiplyDivide -name "WristFat";
+	rename -uuid "E4CB3D9D-40A8-058D-019E-48ADE4B8F348";
+createNode multiplyDivide -name "MiddleFinger1Fat";
+	rename -uuid "83B68FC7-4FEE-228B-C9A8-099680A50002";
+createNode multiplyDivide -name "MiddleFinger2Fat";
+	rename -uuid "11F81722-40E3-F13B-0ED5-58AD3F01950B";
+createNode multiplyDivide -name "MiddleFinger3Fat";
+	rename -uuid "2DE4CC72-4CD2-B16F-F0E7-E0AAEA3560AE";
+createNode multiplyDivide -name "MiddleFinger4Fat";
+	rename -uuid "791F36BC-46D4-651B-9DCA-2BBA2D4251BA";
+createNode multiplyDivide -name "ThumbFinger1Fat";
+	rename -uuid "72AB4DDA-4D4A-A0F5-20B6-1080AFF531AC";
+createNode multiplyDivide -name "ThumbFinger2Fat";
+	rename -uuid "0E9C7623-4B0B-338E-7F74-C1A3AAE949C4";
+createNode multiplyDivide -name "ThumbFinger3Fat";
+	rename -uuid "AD3C59C4-4A12-9838-DE75-1D817FCA314A";
+createNode multiplyDivide -name "ThumbFinger4Fat";
+	rename -uuid "74D161AB-4025-2FA3-0535-91A6DB4036F0";
+createNode multiplyDivide -name "IndexFinger1Fat";
+	rename -uuid "40038772-4F7B-22C5-2D22-A687E5F6B31D";
+createNode multiplyDivide -name "IndexFinger2Fat";
+	rename -uuid "DAD72E5A-4C54-0C05-B553-6990D8E53E2F";
+createNode multiplyDivide -name "IndexFinger3Fat";
+	rename -uuid "FDE9372E-4D03-1956-18F6-AD8AD6B1D236";
+createNode multiplyDivide -name "IndexFinger4Fat";
+	rename -uuid "58A6D03A-42C6-F8A6-774B-1DADA415ABE1";
+createNode multiplyDivide -name "CupFat";
+	rename -uuid "5CEC687B-48D8-C9E3-E917-46981ACE6EA9";
+createNode multiplyDivide -name "PinkyFinger1Fat";
+	rename -uuid "A319730A-4DFE-FF1E-7A71-66A672EF2F2A";
+createNode multiplyDivide -name "PinkyFinger2Fat";
+	rename -uuid "FB38C531-4755-0447-C2AA-5A9A16BB6516";
+createNode multiplyDivide -name "PinkyFinger3Fat";
+	rename -uuid "02797048-4C59-E4FD-3E40-AF9726F14079";
+createNode multiplyDivide -name "PinkyFinger4Fat";
+	rename -uuid "4A7C2925-403A-C83A-0470-2B9D24DE51F9";
+createNode multiplyDivide -name "RingFinger1Fat";
+	rename -uuid "99A33DB0-43B1-23D2-32EA-369E1F345E6B";
+createNode multiplyDivide -name "RingFinger2Fat";
+	rename -uuid "D0358B1F-49A9-1B25-132B-3380514716B8";
+createNode multiplyDivide -name "RingFinger3Fat";
+	rename -uuid "3A736C10-45B3-7A3E-0942-EDABCD21F9C7";
+createNode multiplyDivide -name "RingFinger4Fat";
+	rename -uuid "ED2E0693-4340-91B5-CAE5-28B2F40EF14C";
+createNode multiplyDivide -name "HipFat";
+	rename -uuid "600E1B2E-4A3F-0B08-D85F-E1890E6DEAF5";
+createNode multiplyDivide -name "KneeFat";
+	rename -uuid "FBC6DFDA-4A4A-6327-F233-83B817409C37";
+createNode multiplyDivide -name "AnkleFat";
+	rename -uuid "0CAEF971-4444-AF4F-A523-A1B6EFE31AD5";
+createNode multiplyDivide -name "HeelFat";
+	rename -uuid "83CA3173-4B80-A0C0-C73F-22830F6274BC";
+createNode multiplyDivide -name "ToesFat";
+	rename -uuid "22BA4FE9-4365-A06A-DB75-C9A09B6100AA";
+createNode multiplyDivide -name "FootSideInnerFat";
+	rename -uuid "BFF7A644-415D-9DBA-1639-739787067603";
+createNode multiplyDivide -name "FootSideOuterFat";
+	rename -uuid "10C96DC5-4BA1-D430-C2E7-7BB1A3136990";
+createNode multiplyDivide -name "ToesEndFat";
+	rename -uuid "1AE067CB-439D-2B92-75A3-42B9F3F6BF93";
 select -noExpand :time1;
 	setAttr ".outTime" 0;
 select -noExpand :hardwareRenderingGlobals;
@@ -136414,134 +136414,134 @@ connectAttr "SDKFKRingFinger1_L_rotateZ.drivingSystemOut" "FitSkeleton.drivingSy
 		 -nextAvailable;
 connectAttr "SDKFKCup_L_rotateX.drivingSystemOut" "FitSkeleton.drivingSystem" -nextAvailable
 		;
-connectAttr "RootFat.outputY" "Root.fatFrontAbs";
 connectAttr "RootFat.outputZ" "Root.fatWidthAbs";
+connectAttr "RootFat.outputY" "Root.fatFrontAbs";
 connectAttr "Root.scale" "Spine1.inverseScale";
-connectAttr "Spine1Fat.outputY" "Spine1.fatFrontAbs";
 connectAttr "Spine1Fat.outputZ" "Spine1.fatWidthAbs";
+connectAttr "Spine1Fat.outputY" "Spine1.fatFrontAbs";
 connectAttr "Spine1.scale" "Chest.inverseScale";
-connectAttr "ChestFat.outputY" "Chest.fatFrontAbs";
 connectAttr "ChestFat.outputZ" "Chest.fatWidthAbs";
+connectAttr "ChestFat.outputY" "Chest.fatFrontAbs";
 connectAttr "Chest.scale" "Neck.inverseScale";
-connectAttr "NeckFat.outputY" "Neck.fatFrontAbs";
 connectAttr "NeckFat.outputZ" "Neck.fatWidthAbs";
+connectAttr "NeckFat.outputY" "Neck.fatFrontAbs";
 connectAttr "Neck.scale" "Head.inverseScale";
-connectAttr "HeadFat.outputY" "Head.fatFrontAbs";
 connectAttr "HeadFat.outputZ" "Head.fatWidthAbs";
+connectAttr "HeadFat.outputY" "Head.fatFrontAbs";
 connectAttr "Head.scale" "HeadEnd.inverseScale";
-connectAttr "HeadEndFat.outputY" "HeadEnd.fatFrontAbs";
 connectAttr "HeadEndFat.outputZ" "HeadEnd.fatWidthAbs";
+connectAttr "HeadEndFat.outputY" "HeadEnd.fatFrontAbs";
 connectAttr "Head.scale" "Eye.inverseScale";
-connectAttr "EyeFat.outputY" "Eye.fatFrontAbs";
 connectAttr "EyeFat.outputZ" "Eye.fatWidthAbs";
+connectAttr "EyeFat.outputY" "Eye.fatFrontAbs";
 connectAttr "Eye.scale" "EyeEnd.inverseScale";
-connectAttr "EyeEndFat.outputY" "EyeEnd.fatFrontAbs";
 connectAttr "EyeEndFat.outputZ" "EyeEnd.fatWidthAbs";
+connectAttr "EyeEndFat.outputY" "EyeEnd.fatFrontAbs";
 connectAttr "Head.scale" "Jaw.inverseScale";
-connectAttr "JawFat.outputY" "Jaw.fatFrontAbs";
 connectAttr "JawFat.outputZ" "Jaw.fatWidthAbs";
+connectAttr "JawFat.outputY" "Jaw.fatFrontAbs";
 connectAttr "Jaw.scale" "JawEnd.inverseScale";
-connectAttr "JawEndFat.outputY" "JawEnd.fatFrontAbs";
 connectAttr "JawEndFat.outputZ" "JawEnd.fatWidthAbs";
+connectAttr "JawEndFat.outputY" "JawEnd.fatFrontAbs";
 connectAttr "Chest.scale" "Scapula.inverseScale";
-connectAttr "ScapulaFat.outputY" "Scapula.fatFrontAbs";
 connectAttr "ScapulaFat.outputZ" "Scapula.fatWidthAbs";
+connectAttr "ScapulaFat.outputY" "Scapula.fatFrontAbs";
 connectAttr "Scapula.scale" "Shoulder.inverseScale";
-connectAttr "ShoulderFat.outputY" "Shoulder.fatFrontAbs";
 connectAttr "ShoulderFat.outputZ" "Shoulder.fatWidthAbs";
+connectAttr "ShoulderFat.outputY" "Shoulder.fatFrontAbs";
 connectAttr "Shoulder.scale" "Elbow.inverseScale";
-connectAttr "ElbowFat.outputY" "Elbow.fatFrontAbs";
 connectAttr "ElbowFat.outputZ" "Elbow.fatWidthAbs";
+connectAttr "ElbowFat.outputY" "Elbow.fatFrontAbs";
 connectAttr "Elbow.scale" "Wrist.inverseScale";
-connectAttr "WristFat.outputY" "Wrist.fatFrontAbs";
 connectAttr "WristFat.outputZ" "Wrist.fatWidthAbs";
+connectAttr "WristFat.outputY" "Wrist.fatFrontAbs";
 connectAttr "Wrist.scale" "MiddleFinger1.inverseScale";
-connectAttr "MiddleFinger1Fat.outputY" "MiddleFinger1.fatFrontAbs";
 connectAttr "MiddleFinger1Fat.outputZ" "MiddleFinger1.fatWidthAbs";
+connectAttr "MiddleFinger1Fat.outputY" "MiddleFinger1.fatFrontAbs";
 connectAttr "MiddleFinger1.scale" "MiddleFinger2.inverseScale";
-connectAttr "MiddleFinger2Fat.outputY" "MiddleFinger2.fatFrontAbs";
 connectAttr "MiddleFinger2Fat.outputZ" "MiddleFinger2.fatWidthAbs";
+connectAttr "MiddleFinger2Fat.outputY" "MiddleFinger2.fatFrontAbs";
 connectAttr "MiddleFinger2.scale" "MiddleFinger3.inverseScale";
-connectAttr "MiddleFinger3Fat.outputY" "MiddleFinger3.fatFrontAbs";
 connectAttr "MiddleFinger3Fat.outputZ" "MiddleFinger3.fatWidthAbs";
+connectAttr "MiddleFinger3Fat.outputY" "MiddleFinger3.fatFrontAbs";
 connectAttr "MiddleFinger3.scale" "MiddleFinger4.inverseScale";
-connectAttr "MiddleFinger4Fat.outputY" "MiddleFinger4.fatFrontAbs";
 connectAttr "MiddleFinger4Fat.outputZ" "MiddleFinger4.fatWidthAbs";
+connectAttr "MiddleFinger4Fat.outputY" "MiddleFinger4.fatFrontAbs";
 connectAttr "Wrist.scale" "ThumbFinger1.inverseScale";
-connectAttr "ThumbFinger1Fat.outputY" "ThumbFinger1.fatFrontAbs";
 connectAttr "ThumbFinger1Fat.outputZ" "ThumbFinger1.fatWidthAbs";
+connectAttr "ThumbFinger1Fat.outputY" "ThumbFinger1.fatFrontAbs";
 connectAttr "ThumbFinger1.scale" "ThumbFinger2.inverseScale";
-connectAttr "ThumbFinger2Fat.outputY" "ThumbFinger2.fatFrontAbs";
 connectAttr "ThumbFinger2Fat.outputZ" "ThumbFinger2.fatWidthAbs";
+connectAttr "ThumbFinger2Fat.outputY" "ThumbFinger2.fatFrontAbs";
 connectAttr "ThumbFinger2.scale" "ThumbFinger3.inverseScale";
-connectAttr "ThumbFinger3Fat.outputY" "ThumbFinger3.fatFrontAbs";
 connectAttr "ThumbFinger3Fat.outputZ" "ThumbFinger3.fatWidthAbs";
+connectAttr "ThumbFinger3Fat.outputY" "ThumbFinger3.fatFrontAbs";
 connectAttr "ThumbFinger3.scale" "ThumbFinger4.inverseScale";
-connectAttr "ThumbFinger4Fat.outputY" "ThumbFinger4.fatFrontAbs";
 connectAttr "ThumbFinger4Fat.outputZ" "ThumbFinger4.fatWidthAbs";
+connectAttr "ThumbFinger4Fat.outputY" "ThumbFinger4.fatFrontAbs";
 connectAttr "Wrist.scale" "IndexFinger1.inverseScale";
-connectAttr "IndexFinger1Fat.outputY" "IndexFinger1.fatFrontAbs";
 connectAttr "IndexFinger1Fat.outputZ" "IndexFinger1.fatWidthAbs";
+connectAttr "IndexFinger1Fat.outputY" "IndexFinger1.fatFrontAbs";
 connectAttr "IndexFinger1.scale" "IndexFinger2.inverseScale";
-connectAttr "IndexFinger2Fat.outputY" "IndexFinger2.fatFrontAbs";
 connectAttr "IndexFinger2Fat.outputZ" "IndexFinger2.fatWidthAbs";
+connectAttr "IndexFinger2Fat.outputY" "IndexFinger2.fatFrontAbs";
 connectAttr "IndexFinger2.scale" "IndexFinger3.inverseScale";
-connectAttr "IndexFinger3Fat.outputY" "IndexFinger3.fatFrontAbs";
 connectAttr "IndexFinger3Fat.outputZ" "IndexFinger3.fatWidthAbs";
+connectAttr "IndexFinger3Fat.outputY" "IndexFinger3.fatFrontAbs";
 connectAttr "IndexFinger3.scale" "IndexFinger4.inverseScale";
-connectAttr "IndexFinger4Fat.outputY" "IndexFinger4.fatFrontAbs";
 connectAttr "IndexFinger4Fat.outputZ" "IndexFinger4.fatWidthAbs";
+connectAttr "IndexFinger4Fat.outputY" "IndexFinger4.fatFrontAbs";
 connectAttr "Wrist.scale" "Cup.inverseScale";
-connectAttr "CupFat.outputY" "Cup.fatFrontAbs";
 connectAttr "CupFat.outputZ" "Cup.fatWidthAbs";
+connectAttr "CupFat.outputY" "Cup.fatFrontAbs";
 connectAttr "Cup.scale" "PinkyFinger1.inverseScale";
-connectAttr "PinkyFinger1Fat.outputY" "PinkyFinger1.fatFrontAbs";
 connectAttr "PinkyFinger1Fat.outputZ" "PinkyFinger1.fatWidthAbs";
+connectAttr "PinkyFinger1Fat.outputY" "PinkyFinger1.fatFrontAbs";
 connectAttr "PinkyFinger1.scale" "PinkyFinger2.inverseScale";
-connectAttr "PinkyFinger2Fat.outputY" "PinkyFinger2.fatFrontAbs";
 connectAttr "PinkyFinger2Fat.outputZ" "PinkyFinger2.fatWidthAbs";
+connectAttr "PinkyFinger2Fat.outputY" "PinkyFinger2.fatFrontAbs";
 connectAttr "PinkyFinger2.scale" "PinkyFinger3.inverseScale";
-connectAttr "PinkyFinger3Fat.outputY" "PinkyFinger3.fatFrontAbs";
 connectAttr "PinkyFinger3Fat.outputZ" "PinkyFinger3.fatWidthAbs";
+connectAttr "PinkyFinger3Fat.outputY" "PinkyFinger3.fatFrontAbs";
 connectAttr "PinkyFinger3.scale" "PinkyFinger4.inverseScale";
-connectAttr "PinkyFinger4Fat.outputY" "PinkyFinger4.fatFrontAbs";
 connectAttr "PinkyFinger4Fat.outputZ" "PinkyFinger4.fatWidthAbs";
+connectAttr "PinkyFinger4Fat.outputY" "PinkyFinger4.fatFrontAbs";
 connectAttr "Cup.scale" "RingFinger1.inverseScale";
-connectAttr "RingFinger1Fat.outputY" "RingFinger1.fatFrontAbs";
 connectAttr "RingFinger1Fat.outputZ" "RingFinger1.fatWidthAbs";
+connectAttr "RingFinger1Fat.outputY" "RingFinger1.fatFrontAbs";
 connectAttr "RingFinger1.scale" "RingFinger2.inverseScale";
-connectAttr "RingFinger2Fat.outputY" "RingFinger2.fatFrontAbs";
 connectAttr "RingFinger2Fat.outputZ" "RingFinger2.fatWidthAbs";
+connectAttr "RingFinger2Fat.outputY" "RingFinger2.fatFrontAbs";
 connectAttr "RingFinger2.scale" "RingFinger3.inverseScale";
-connectAttr "RingFinger3Fat.outputY" "RingFinger3.fatFrontAbs";
 connectAttr "RingFinger3Fat.outputZ" "RingFinger3.fatWidthAbs";
+connectAttr "RingFinger3Fat.outputY" "RingFinger3.fatFrontAbs";
 connectAttr "RingFinger3.scale" "RingFinger4.inverseScale";
-connectAttr "RingFinger4Fat.outputY" "RingFinger4.fatFrontAbs";
 connectAttr "RingFinger4Fat.outputZ" "RingFinger4.fatWidthAbs";
+connectAttr "RingFinger4Fat.outputY" "RingFinger4.fatFrontAbs";
 connectAttr "Root.scale" "Hip.inverseScale";
-connectAttr "HipFat.outputY" "Hip.fatFrontAbs";
 connectAttr "HipFat.outputZ" "Hip.fatWidthAbs";
+connectAttr "HipFat.outputY" "Hip.fatFrontAbs";
 connectAttr "Hip.scale" "Knee.inverseScale";
-connectAttr "KneeFat.outputY" "Knee.fatFrontAbs";
 connectAttr "KneeFat.outputZ" "Knee.fatWidthAbs";
+connectAttr "KneeFat.outputY" "Knee.fatFrontAbs";
 connectAttr "Knee.scale" "Ankle.inverseScale";
-connectAttr "AnkleFat.outputY" "Ankle.fatFrontAbs";
 connectAttr "AnkleFat.outputZ" "Ankle.fatWidthAbs";
+connectAttr "AnkleFat.outputY" "Ankle.fatFrontAbs";
 connectAttr "Ankle.scale" "Heel.inverseScale";
-connectAttr "HeelFat.outputY" "Heel.fatFrontAbs";
 connectAttr "HeelFat.outputZ" "Heel.fatWidthAbs";
+connectAttr "HeelFat.outputY" "Heel.fatFrontAbs";
 connectAttr "Ankle.scale" "Toes.inverseScale";
-connectAttr "ToesFat.outputY" "Toes.fatFrontAbs";
 connectAttr "ToesFat.outputZ" "Toes.fatWidthAbs";
+connectAttr "ToesFat.outputY" "Toes.fatFrontAbs";
 connectAttr "Toes.scale" "FootSideInner.inverseScale";
-connectAttr "FootSideInnerFat.outputY" "FootSideInner.fatFrontAbs";
 connectAttr "FootSideInnerFat.outputZ" "FootSideInner.fatWidthAbs";
+connectAttr "FootSideInnerFat.outputY" "FootSideInner.fatFrontAbs";
 connectAttr "Toes.scale" "FootSideOuter.inverseScale";
-connectAttr "FootSideOuterFat.outputY" "FootSideOuter.fatFrontAbs";
 connectAttr "FootSideOuterFat.outputZ" "FootSideOuter.fatWidthAbs";
+connectAttr "FootSideOuterFat.outputY" "FootSideOuter.fatFrontAbs";
 connectAttr "Toes.scale" "ToesEnd.inverseScale";
-connectAttr "ToesEndFat.outputY" "ToesEnd.fatFrontAbs";
 connectAttr "ToesEndFat.outputZ" "ToesEnd.fatWidthAbs";
+connectAttr "ToesEndFat.outputY" "ToesEnd.fatFrontAbs";
 connectAttr "cluster24.outputGeometry[0]" "Pants_GeoShapeDeformed.inMesh";
 connectAttr "cluster6.outputGeometry[0]" "Shirt_GeoShapeDeformed.inMesh";
 connectAttr "cluster25.outputGeometry[0]" "Body_GeoShapeDeformed.inMesh";
@@ -136645,248 +136645,6 @@ connectAttr "cluster26Handle.worldMatrix" "cluster26.matrix";
 connectAttr "cluster26HandleShape.clusterTransforms" "cluster26.clusterXforms";
 connectAttr "layerManager.displayLayerId[1]" "layer1.identification";
 connectAttr "layerManager.displayLayerId[2]" "layer2.identification";
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[6]" "SDKFKIndexFinger3_L_rotateY.indexCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[5]" "SDKFKIndexFinger2_L_rotateY.indexCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[4]" "SDKFKIndexFinger1_L_rotateY.indexCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[5]" "SDKFKIndexFinger2_R_rotateY.indexCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[6]" "SDKFKIndexFinger3_R_rotateY.indexCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[4]" "SDKFKIndexFinger1_R_rotateY.indexCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[8]" "SDKFKMiddleFinger3_L_rotateY.middleCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[7]" "SDKFKMiddleFinger2_L_rotateY.middleCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[9]" "SDKFKMiddleFinger1_L_rotateY.middleCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[8]" "SDKFKMiddleFinger3_R_rotateY.middleCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[9]" "SDKFKMiddleFinger1_R_rotateY.middleCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[7]" "SDKFKMiddleFinger2_R_rotateY.middleCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[11]" "SDKFKRingFinger3_L_rotateY.ringCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[10]" "SDKFKRingFinger2_L_rotateY.ringCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[12]" "SDKFKRingFinger1_L_rotateY.ringCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[10]" "SDKFKRingFinger2_R_rotateY.ringCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[11]" "SDKFKRingFinger3_R_rotateY.ringCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[12]" "SDKFKRingFinger1_R_rotateY.ringCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[14]" "SDKFKPinkyFinger3_L_rotateY.pinkyCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[13]" "SDKFKPinkyFinger2_L_rotateY.pinkyCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[15]" "SDKFKPinkyFinger1_L_rotateY.pinkyCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[13]" "SDKFKPinkyFinger2_R_rotateY.pinkyCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[15]" "SDKFKPinkyFinger1_R_rotateY.pinkyCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[14]" "SDKFKPinkyFinger3_R_rotateY.pinkyCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[17]" "SDKFKThumbFinger3_L_rotateY.thumbCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[16]" "SDKFKThumbFinger2_L_rotateY.thumbCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[17]" "SDKFKThumbFinger3_R_rotateY.thumbCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[16]" "SDKFKThumbFinger2_R_rotateY.thumbCurl"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[1]" "SDKFKIndexFinger1_R_rotateZ.spread"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[0]" "SDKFKPinkyFinger1_R_rotateZ.spread"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[2]" "SDKFKRingFinger1_R_rotateZ.spread"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[1]" "SDKFKIndexFinger1_L_rotateZ.spread"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[0]" "SDKFKPinkyFinger1_L_rotateZ.spread"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[2]" "SDKFKRingFinger1_L_rotateZ.spread"
-		;
-connectAttr "FitSkeleton.drivingSystem_Fingers_R[3]" "SDKFKCup_R_rotateX.cup";
-connectAttr "FitSkeleton.drivingSystem_Fingers_L[3]" "SDKFKCup_L_rotateX.cup";
-connectAttr "Root.fat" "RootFat.input1Y";
-connectAttr "Root.fat" "RootFat.input1Z";
-connectAttr "Root.fatFront" "RootFat.input2Y";
-connectAttr "Root.fatWidth" "RootFat.input2Z";
-connectAttr "Hip.fat" "HipFat.input1Y";
-connectAttr "Hip.fat" "HipFat.input1Z";
-connectAttr "Hip.fatFront" "HipFat.input2Y";
-connectAttr "Hip.fatWidth" "HipFat.input2Z";
-connectAttr "Knee.fat" "KneeFat.input1Y";
-connectAttr "Knee.fat" "KneeFat.input1Z";
-connectAttr "Knee.fatFront" "KneeFat.input2Y";
-connectAttr "Knee.fatWidth" "KneeFat.input2Z";
-connectAttr "Ankle.fat" "AnkleFat.input1Y";
-connectAttr "Ankle.fat" "AnkleFat.input1Z";
-connectAttr "Ankle.fatFront" "AnkleFat.input2Y";
-connectAttr "Ankle.fatWidth" "AnkleFat.input2Z";
-connectAttr "Toes.fat" "ToesFat.input1Y";
-connectAttr "Toes.fat" "ToesFat.input1Z";
-connectAttr "Toes.fatFront" "ToesFat.input2Y";
-connectAttr "Toes.fatWidth" "ToesFat.input2Z";
-connectAttr "ToesEnd.fat" "ToesEndFat.input1Y";
-connectAttr "ToesEnd.fat" "ToesEndFat.input1Z";
-connectAttr "ToesEnd.fatFront" "ToesEndFat.input2Y";
-connectAttr "ToesEnd.fatWidth" "ToesEndFat.input2Z";
-connectAttr "FootSideOuter.fat" "FootSideOuterFat.input1Y";
-connectAttr "FootSideOuter.fat" "FootSideOuterFat.input1Z";
-connectAttr "FootSideOuter.fatFront" "FootSideOuterFat.input2Y";
-connectAttr "FootSideOuter.fatWidth" "FootSideOuterFat.input2Z";
-connectAttr "FootSideInner.fat" "FootSideInnerFat.input1Y";
-connectAttr "FootSideInner.fat" "FootSideInnerFat.input1Z";
-connectAttr "FootSideInner.fatFront" "FootSideInnerFat.input2Y";
-connectAttr "FootSideInner.fatWidth" "FootSideInnerFat.input2Z";
-connectAttr "Heel.fat" "HeelFat.input1Y";
-connectAttr "Heel.fat" "HeelFat.input1Z";
-connectAttr "Heel.fatFront" "HeelFat.input2Y";
-connectAttr "Heel.fatWidth" "HeelFat.input2Z";
-connectAttr "Spine1.fat" "Spine1Fat.input1Y";
-connectAttr "Spine1.fat" "Spine1Fat.input1Z";
-connectAttr "Spine1.fatFront" "Spine1Fat.input2Y";
-connectAttr "Spine1.fatWidth" "Spine1Fat.input2Z";
-connectAttr "Chest.fat" "ChestFat.input1Y";
-connectAttr "Chest.fat" "ChestFat.input1Z";
-connectAttr "Chest.fatFront" "ChestFat.input2Y";
-connectAttr "Chest.fatWidth" "ChestFat.input2Z";
-connectAttr "Scapula.fat" "ScapulaFat.input1Y";
-connectAttr "Scapula.fat" "ScapulaFat.input1Z";
-connectAttr "Scapula.fatFront" "ScapulaFat.input2Y";
-connectAttr "Scapula.fatWidth" "ScapulaFat.input2Z";
-connectAttr "Shoulder.fat" "ShoulderFat.input1Y";
-connectAttr "Shoulder.fat" "ShoulderFat.input1Z";
-connectAttr "Shoulder.fatFront" "ShoulderFat.input2Y";
-connectAttr "Shoulder.fatWidth" "ShoulderFat.input2Z";
-connectAttr "Elbow.fat" "ElbowFat.input1Y";
-connectAttr "Elbow.fat" "ElbowFat.input1Z";
-connectAttr "Elbow.fatFront" "ElbowFat.input2Y";
-connectAttr "Elbow.fatWidth" "ElbowFat.input2Z";
-connectAttr "Wrist.fat" "WristFat.input1Y";
-connectAttr "Wrist.fat" "WristFat.input1Z";
-connectAttr "Wrist.fatFront" "WristFat.input2Y";
-connectAttr "Wrist.fatWidth" "WristFat.input2Z";
-connectAttr "Cup.fat" "CupFat.input1Y";
-connectAttr "Cup.fat" "CupFat.input1Z";
-connectAttr "Cup.fatFront" "CupFat.input2Y";
-connectAttr "Cup.fatWidth" "CupFat.input2Z";
-connectAttr "RingFinger1.fat" "RingFinger1Fat.input1Y";
-connectAttr "RingFinger1.fat" "RingFinger1Fat.input1Z";
-connectAttr "RingFinger1.fatFront" "RingFinger1Fat.input2Y";
-connectAttr "RingFinger1.fatWidth" "RingFinger1Fat.input2Z";
-connectAttr "RingFinger2.fat" "RingFinger2Fat.input1Y";
-connectAttr "RingFinger2.fat" "RingFinger2Fat.input1Z";
-connectAttr "RingFinger2.fatFront" "RingFinger2Fat.input2Y";
-connectAttr "RingFinger2.fatWidth" "RingFinger2Fat.input2Z";
-connectAttr "RingFinger3.fat" "RingFinger3Fat.input1Y";
-connectAttr "RingFinger3.fat" "RingFinger3Fat.input1Z";
-connectAttr "RingFinger3.fatFront" "RingFinger3Fat.input2Y";
-connectAttr "RingFinger3.fatWidth" "RingFinger3Fat.input2Z";
-connectAttr "RingFinger4.fat" "RingFinger4Fat.input1Y";
-connectAttr "RingFinger4.fat" "RingFinger4Fat.input1Z";
-connectAttr "RingFinger4.fatFront" "RingFinger4Fat.input2Y";
-connectAttr "RingFinger4.fatWidth" "RingFinger4Fat.input2Z";
-connectAttr "PinkyFinger1.fat" "PinkyFinger1Fat.input1Y";
-connectAttr "PinkyFinger1.fat" "PinkyFinger1Fat.input1Z";
-connectAttr "PinkyFinger1.fatFront" "PinkyFinger1Fat.input2Y";
-connectAttr "PinkyFinger1.fatWidth" "PinkyFinger1Fat.input2Z";
-connectAttr "PinkyFinger2.fat" "PinkyFinger2Fat.input1Y";
-connectAttr "PinkyFinger2.fat" "PinkyFinger2Fat.input1Z";
-connectAttr "PinkyFinger2.fatFront" "PinkyFinger2Fat.input2Y";
-connectAttr "PinkyFinger2.fatWidth" "PinkyFinger2Fat.input2Z";
-connectAttr "PinkyFinger3.fat" "PinkyFinger3Fat.input1Y";
-connectAttr "PinkyFinger3.fat" "PinkyFinger3Fat.input1Z";
-connectAttr "PinkyFinger3.fatFront" "PinkyFinger3Fat.input2Y";
-connectAttr "PinkyFinger3.fatWidth" "PinkyFinger3Fat.input2Z";
-connectAttr "PinkyFinger4.fat" "PinkyFinger4Fat.input1Y";
-connectAttr "PinkyFinger4.fat" "PinkyFinger4Fat.input1Z";
-connectAttr "PinkyFinger4.fatFront" "PinkyFinger4Fat.input2Y";
-connectAttr "PinkyFinger4.fatWidth" "PinkyFinger4Fat.input2Z";
-connectAttr "IndexFinger1.fat" "IndexFinger1Fat.input1Y";
-connectAttr "IndexFinger1.fat" "IndexFinger1Fat.input1Z";
-connectAttr "IndexFinger1.fatFront" "IndexFinger1Fat.input2Y";
-connectAttr "IndexFinger1.fatWidth" "IndexFinger1Fat.input2Z";
-connectAttr "IndexFinger2.fat" "IndexFinger2Fat.input1Y";
-connectAttr "IndexFinger2.fat" "IndexFinger2Fat.input1Z";
-connectAttr "IndexFinger2.fatFront" "IndexFinger2Fat.input2Y";
-connectAttr "IndexFinger2.fatWidth" "IndexFinger2Fat.input2Z";
-connectAttr "IndexFinger3.fat" "IndexFinger3Fat.input1Y";
-connectAttr "IndexFinger3.fat" "IndexFinger3Fat.input1Z";
-connectAttr "IndexFinger3.fatFront" "IndexFinger3Fat.input2Y";
-connectAttr "IndexFinger3.fatWidth" "IndexFinger3Fat.input2Z";
-connectAttr "IndexFinger4.fat" "IndexFinger4Fat.input1Y";
-connectAttr "IndexFinger4.fat" "IndexFinger4Fat.input1Z";
-connectAttr "IndexFinger4.fatFront" "IndexFinger4Fat.input2Y";
-connectAttr "IndexFinger4.fatWidth" "IndexFinger4Fat.input2Z";
-connectAttr "ThumbFinger1.fat" "ThumbFinger1Fat.input1Y";
-connectAttr "ThumbFinger1.fat" "ThumbFinger1Fat.input1Z";
-connectAttr "ThumbFinger1.fatFront" "ThumbFinger1Fat.input2Y";
-connectAttr "ThumbFinger1.fatWidth" "ThumbFinger1Fat.input2Z";
-connectAttr "ThumbFinger2.fat" "ThumbFinger2Fat.input1Y";
-connectAttr "ThumbFinger2.fat" "ThumbFinger2Fat.input1Z";
-connectAttr "ThumbFinger2.fatFront" "ThumbFinger2Fat.input2Y";
-connectAttr "ThumbFinger2.fatWidth" "ThumbFinger2Fat.input2Z";
-connectAttr "ThumbFinger3.fat" "ThumbFinger3Fat.input1Y";
-connectAttr "ThumbFinger3.fat" "ThumbFinger3Fat.input1Z";
-connectAttr "ThumbFinger3.fatFront" "ThumbFinger3Fat.input2Y";
-connectAttr "ThumbFinger3.fatWidth" "ThumbFinger3Fat.input2Z";
-connectAttr "ThumbFinger4.fat" "ThumbFinger4Fat.input1Y";
-connectAttr "ThumbFinger4.fat" "ThumbFinger4Fat.input1Z";
-connectAttr "ThumbFinger4.fatFront" "ThumbFinger4Fat.input2Y";
-connectAttr "ThumbFinger4.fatWidth" "ThumbFinger4Fat.input2Z";
-connectAttr "MiddleFinger1.fat" "MiddleFinger1Fat.input1Y";
-connectAttr "MiddleFinger1.fat" "MiddleFinger1Fat.input1Z";
-connectAttr "MiddleFinger1.fatFront" "MiddleFinger1Fat.input2Y";
-connectAttr "MiddleFinger1.fatWidth" "MiddleFinger1Fat.input2Z";
-connectAttr "MiddleFinger2.fat" "MiddleFinger2Fat.input1Y";
-connectAttr "MiddleFinger2.fat" "MiddleFinger2Fat.input1Z";
-connectAttr "MiddleFinger2.fatFront" "MiddleFinger2Fat.input2Y";
-connectAttr "MiddleFinger2.fatWidth" "MiddleFinger2Fat.input2Z";
-connectAttr "MiddleFinger3.fat" "MiddleFinger3Fat.input1Y";
-connectAttr "MiddleFinger3.fat" "MiddleFinger3Fat.input1Z";
-connectAttr "MiddleFinger3.fatFront" "MiddleFinger3Fat.input2Y";
-connectAttr "MiddleFinger3.fatWidth" "MiddleFinger3Fat.input2Z";
-connectAttr "MiddleFinger4.fat" "MiddleFinger4Fat.input1Y";
-connectAttr "MiddleFinger4.fat" "MiddleFinger4Fat.input1Z";
-connectAttr "MiddleFinger4.fatFront" "MiddleFinger4Fat.input2Y";
-connectAttr "MiddleFinger4.fatWidth" "MiddleFinger4Fat.input2Z";
-connectAttr "Neck.fat" "NeckFat.input1Y";
-connectAttr "Neck.fat" "NeckFat.input1Z";
-connectAttr "Neck.fatFront" "NeckFat.input2Y";
-connectAttr "Neck.fatWidth" "NeckFat.input2Z";
-connectAttr "Head.fat" "HeadFat.input1Y";
-connectAttr "Head.fat" "HeadFat.input1Z";
-connectAttr "Head.fatFront" "HeadFat.input2Y";
-connectAttr "Head.fatWidth" "HeadFat.input2Z";
-connectAttr "Jaw.fat" "JawFat.input1Y";
-connectAttr "Jaw.fat" "JawFat.input1Z";
-connectAttr "Jaw.fatFront" "JawFat.input2Y";
-connectAttr "Jaw.fatWidth" "JawFat.input2Z";
-connectAttr "JawEnd.fat" "JawEndFat.input1Y";
-connectAttr "JawEnd.fat" "JawEndFat.input1Z";
-connectAttr "JawEnd.fatFront" "JawEndFat.input2Y";
-connectAttr "JawEnd.fatWidth" "JawEndFat.input2Z";
-connectAttr "Eye.fat" "EyeFat.input1Y";
-connectAttr "Eye.fat" "EyeFat.input1Z";
-connectAttr "Eye.fatFront" "EyeFat.input2Y";
-connectAttr "Eye.fatWidth" "EyeFat.input2Z";
-connectAttr "EyeEnd.fat" "EyeEndFat.input1Y";
-connectAttr "EyeEnd.fat" "EyeEndFat.input1Z";
-connectAttr "EyeEnd.fatFront" "EyeEndFat.input2Y";
-connectAttr "EyeEnd.fatWidth" "EyeEndFat.input2Z";
-connectAttr "HeadEnd.fat" "HeadEndFat.input1Y";
-connectAttr "HeadEnd.fat" "HeadEndFat.input1Z";
-connectAttr "HeadEnd.fatFront" "HeadEndFat.input2Y";
-connectAttr "HeadEnd.fatWidth" "HeadEndFat.input2Z";
 connectAttr "IKhybrid_icon.instObjGroups" "ControlSet.dagSetMembers" -nextAvailable
 		;
 connectAttr "IKLocal_icon.instObjGroups" "ControlSet.dagSetMembers" -nextAvailable
@@ -137193,6 +136951,248 @@ connectAttr "LowPolyManRigging3830:lambert2.message" "LowPolyManRigging3830:hype
 		;
 connectAttr "LowPolyManRigging3830:place2dTexture5.message" "LowPolyManRigging3830:hyperShadePrimaryNodeEditorSavedTabsInfo.tabGraphInfo[0].nodeInfo[8].dependNode"
 		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[3]" "SDKFKCup_R_rotateX.cup";
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[2]" "SDKFKRingFinger1_L_rotateZ.spread"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[3]" "SDKFKCup_L_rotateX.cup";
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[16]" "SDKFKThumbFinger2_L_rotateY.thumbCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[17]" "SDKFKThumbFinger3_R_rotateY.thumbCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[1]" "SDKFKIndexFinger1_R_rotateZ.spread"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[16]" "SDKFKThumbFinger2_R_rotateY.thumbCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[0]" "SDKFKPinkyFinger1_L_rotateZ.spread"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[1]" "SDKFKIndexFinger1_L_rotateZ.spread"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[2]" "SDKFKRingFinger1_R_rotateZ.spread"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[0]" "SDKFKPinkyFinger1_R_rotateZ.spread"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[7]" "SDKFKMiddleFinger2_L_rotateY.middleCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[8]" "SDKFKMiddleFinger3_L_rotateY.middleCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[5]" "SDKFKIndexFinger2_R_rotateY.indexCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[9]" "SDKFKMiddleFinger1_L_rotateY.middleCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[4]" "SDKFKIndexFinger1_R_rotateY.indexCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[6]" "SDKFKIndexFinger3_R_rotateY.indexCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[5]" "SDKFKIndexFinger2_L_rotateY.indexCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[4]" "SDKFKIndexFinger1_L_rotateY.indexCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[13]" "SDKFKPinkyFinger2_L_rotateY.pinkyCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[12]" "SDKFKRingFinger1_R_rotateY.ringCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[15]" "SDKFKPinkyFinger1_L_rotateY.pinkyCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[14]" "SDKFKPinkyFinger3_L_rotateY.pinkyCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[14]" "SDKFKPinkyFinger3_R_rotateY.pinkyCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[13]" "SDKFKPinkyFinger2_R_rotateY.pinkyCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[17]" "SDKFKThumbFinger3_L_rotateY.thumbCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[15]" "SDKFKPinkyFinger1_R_rotateY.pinkyCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[10]" "SDKFKRingFinger2_L_rotateY.ringCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[12]" "SDKFKRingFinger1_L_rotateY.ringCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[11]" "SDKFKRingFinger3_R_rotateY.ringCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[10]" "SDKFKRingFinger2_R_rotateY.ringCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[6]" "SDKFKIndexFinger3_L_rotateY.indexCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[8]" "SDKFKMiddleFinger3_R_rotateY.middleCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[9]" "SDKFKMiddleFinger1_R_rotateY.middleCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_L[11]" "SDKFKRingFinger3_L_rotateY.ringCurl"
+		;
+connectAttr "FitSkeleton.drivingSystem_Fingers_R[7]" "SDKFKMiddleFinger2_R_rotateY.middleCurl"
+		;
+connectAttr "Root.fat" "RootFat.input1Y";
+connectAttr "Root.fat" "RootFat.input1Z";
+connectAttr "Root.fatFront" "RootFat.input2Y";
+connectAttr "Root.fatWidth" "RootFat.input2Z";
+connectAttr "Spine1.fat" "Spine1Fat.input1Y";
+connectAttr "Spine1.fat" "Spine1Fat.input1Z";
+connectAttr "Spine1.fatFront" "Spine1Fat.input2Y";
+connectAttr "Spine1.fatWidth" "Spine1Fat.input2Z";
+connectAttr "Chest.fat" "ChestFat.input1Y";
+connectAttr "Chest.fat" "ChestFat.input1Z";
+connectAttr "Chest.fatFront" "ChestFat.input2Y";
+connectAttr "Chest.fatWidth" "ChestFat.input2Z";
+connectAttr "Neck.fat" "NeckFat.input1Y";
+connectAttr "Neck.fat" "NeckFat.input1Z";
+connectAttr "Neck.fatFront" "NeckFat.input2Y";
+connectAttr "Neck.fatWidth" "NeckFat.input2Z";
+connectAttr "Head.fat" "HeadFat.input1Y";
+connectAttr "Head.fat" "HeadFat.input1Z";
+connectAttr "Head.fatFront" "HeadFat.input2Y";
+connectAttr "Head.fatWidth" "HeadFat.input2Z";
+connectAttr "HeadEnd.fat" "HeadEndFat.input1Y";
+connectAttr "HeadEnd.fat" "HeadEndFat.input1Z";
+connectAttr "HeadEnd.fatFront" "HeadEndFat.input2Y";
+connectAttr "HeadEnd.fatWidth" "HeadEndFat.input2Z";
+connectAttr "Eye.fat" "EyeFat.input1Y";
+connectAttr "Eye.fat" "EyeFat.input1Z";
+connectAttr "Eye.fatFront" "EyeFat.input2Y";
+connectAttr "Eye.fatWidth" "EyeFat.input2Z";
+connectAttr "EyeEnd.fat" "EyeEndFat.input1Y";
+connectAttr "EyeEnd.fat" "EyeEndFat.input1Z";
+connectAttr "EyeEnd.fatFront" "EyeEndFat.input2Y";
+connectAttr "EyeEnd.fatWidth" "EyeEndFat.input2Z";
+connectAttr "Jaw.fat" "JawFat.input1Y";
+connectAttr "Jaw.fat" "JawFat.input1Z";
+connectAttr "Jaw.fatFront" "JawFat.input2Y";
+connectAttr "Jaw.fatWidth" "JawFat.input2Z";
+connectAttr "JawEnd.fat" "JawEndFat.input1Y";
+connectAttr "JawEnd.fat" "JawEndFat.input1Z";
+connectAttr "JawEnd.fatFront" "JawEndFat.input2Y";
+connectAttr "JawEnd.fatWidth" "JawEndFat.input2Z";
+connectAttr "Scapula.fat" "ScapulaFat.input1Y";
+connectAttr "Scapula.fat" "ScapulaFat.input1Z";
+connectAttr "Scapula.fatFront" "ScapulaFat.input2Y";
+connectAttr "Scapula.fatWidth" "ScapulaFat.input2Z";
+connectAttr "Shoulder.fat" "ShoulderFat.input1Y";
+connectAttr "Shoulder.fat" "ShoulderFat.input1Z";
+connectAttr "Shoulder.fatFront" "ShoulderFat.input2Y";
+connectAttr "Shoulder.fatWidth" "ShoulderFat.input2Z";
+connectAttr "Elbow.fat" "ElbowFat.input1Y";
+connectAttr "Elbow.fat" "ElbowFat.input1Z";
+connectAttr "Elbow.fatFront" "ElbowFat.input2Y";
+connectAttr "Elbow.fatWidth" "ElbowFat.input2Z";
+connectAttr "Wrist.fat" "WristFat.input1Y";
+connectAttr "Wrist.fat" "WristFat.input1Z";
+connectAttr "Wrist.fatFront" "WristFat.input2Y";
+connectAttr "Wrist.fatWidth" "WristFat.input2Z";
+connectAttr "MiddleFinger1.fat" "MiddleFinger1Fat.input1Y";
+connectAttr "MiddleFinger1.fat" "MiddleFinger1Fat.input1Z";
+connectAttr "MiddleFinger1.fatFront" "MiddleFinger1Fat.input2Y";
+connectAttr "MiddleFinger1.fatWidth" "MiddleFinger1Fat.input2Z";
+connectAttr "MiddleFinger2.fat" "MiddleFinger2Fat.input1Y";
+connectAttr "MiddleFinger2.fat" "MiddleFinger2Fat.input1Z";
+connectAttr "MiddleFinger2.fatFront" "MiddleFinger2Fat.input2Y";
+connectAttr "MiddleFinger2.fatWidth" "MiddleFinger2Fat.input2Z";
+connectAttr "MiddleFinger3.fat" "MiddleFinger3Fat.input1Y";
+connectAttr "MiddleFinger3.fat" "MiddleFinger3Fat.input1Z";
+connectAttr "MiddleFinger3.fatFront" "MiddleFinger3Fat.input2Y";
+connectAttr "MiddleFinger3.fatWidth" "MiddleFinger3Fat.input2Z";
+connectAttr "MiddleFinger4.fat" "MiddleFinger4Fat.input1Y";
+connectAttr "MiddleFinger4.fat" "MiddleFinger4Fat.input1Z";
+connectAttr "MiddleFinger4.fatFront" "MiddleFinger4Fat.input2Y";
+connectAttr "MiddleFinger4.fatWidth" "MiddleFinger4Fat.input2Z";
+connectAttr "ThumbFinger1.fat" "ThumbFinger1Fat.input1Y";
+connectAttr "ThumbFinger1.fat" "ThumbFinger1Fat.input1Z";
+connectAttr "ThumbFinger1.fatFront" "ThumbFinger1Fat.input2Y";
+connectAttr "ThumbFinger1.fatWidth" "ThumbFinger1Fat.input2Z";
+connectAttr "ThumbFinger2.fat" "ThumbFinger2Fat.input1Y";
+connectAttr "ThumbFinger2.fat" "ThumbFinger2Fat.input1Z";
+connectAttr "ThumbFinger2.fatFront" "ThumbFinger2Fat.input2Y";
+connectAttr "ThumbFinger2.fatWidth" "ThumbFinger2Fat.input2Z";
+connectAttr "ThumbFinger3.fat" "ThumbFinger3Fat.input1Y";
+connectAttr "ThumbFinger3.fat" "ThumbFinger3Fat.input1Z";
+connectAttr "ThumbFinger3.fatFront" "ThumbFinger3Fat.input2Y";
+connectAttr "ThumbFinger3.fatWidth" "ThumbFinger3Fat.input2Z";
+connectAttr "ThumbFinger4.fat" "ThumbFinger4Fat.input1Y";
+connectAttr "ThumbFinger4.fat" "ThumbFinger4Fat.input1Z";
+connectAttr "ThumbFinger4.fatFront" "ThumbFinger4Fat.input2Y";
+connectAttr "ThumbFinger4.fatWidth" "ThumbFinger4Fat.input2Z";
+connectAttr "IndexFinger1.fat" "IndexFinger1Fat.input1Y";
+connectAttr "IndexFinger1.fat" "IndexFinger1Fat.input1Z";
+connectAttr "IndexFinger1.fatFront" "IndexFinger1Fat.input2Y";
+connectAttr "IndexFinger1.fatWidth" "IndexFinger1Fat.input2Z";
+connectAttr "IndexFinger2.fat" "IndexFinger2Fat.input1Y";
+connectAttr "IndexFinger2.fat" "IndexFinger2Fat.input1Z";
+connectAttr "IndexFinger2.fatFront" "IndexFinger2Fat.input2Y";
+connectAttr "IndexFinger2.fatWidth" "IndexFinger2Fat.input2Z";
+connectAttr "IndexFinger3.fat" "IndexFinger3Fat.input1Y";
+connectAttr "IndexFinger3.fat" "IndexFinger3Fat.input1Z";
+connectAttr "IndexFinger3.fatFront" "IndexFinger3Fat.input2Y";
+connectAttr "IndexFinger3.fatWidth" "IndexFinger3Fat.input2Z";
+connectAttr "IndexFinger4.fat" "IndexFinger4Fat.input1Y";
+connectAttr "IndexFinger4.fat" "IndexFinger4Fat.input1Z";
+connectAttr "IndexFinger4.fatFront" "IndexFinger4Fat.input2Y";
+connectAttr "IndexFinger4.fatWidth" "IndexFinger4Fat.input2Z";
+connectAttr "Cup.fat" "CupFat.input1Y";
+connectAttr "Cup.fat" "CupFat.input1Z";
+connectAttr "Cup.fatFront" "CupFat.input2Y";
+connectAttr "Cup.fatWidth" "CupFat.input2Z";
+connectAttr "PinkyFinger1.fat" "PinkyFinger1Fat.input1Y";
+connectAttr "PinkyFinger1.fat" "PinkyFinger1Fat.input1Z";
+connectAttr "PinkyFinger1.fatFront" "PinkyFinger1Fat.input2Y";
+connectAttr "PinkyFinger1.fatWidth" "PinkyFinger1Fat.input2Z";
+connectAttr "PinkyFinger2.fat" "PinkyFinger2Fat.input1Y";
+connectAttr "PinkyFinger2.fat" "PinkyFinger2Fat.input1Z";
+connectAttr "PinkyFinger2.fatFront" "PinkyFinger2Fat.input2Y";
+connectAttr "PinkyFinger2.fatWidth" "PinkyFinger2Fat.input2Z";
+connectAttr "PinkyFinger3.fat" "PinkyFinger3Fat.input1Y";
+connectAttr "PinkyFinger3.fat" "PinkyFinger3Fat.input1Z";
+connectAttr "PinkyFinger3.fatFront" "PinkyFinger3Fat.input2Y";
+connectAttr "PinkyFinger3.fatWidth" "PinkyFinger3Fat.input2Z";
+connectAttr "PinkyFinger4.fat" "PinkyFinger4Fat.input1Y";
+connectAttr "PinkyFinger4.fat" "PinkyFinger4Fat.input1Z";
+connectAttr "PinkyFinger4.fatFront" "PinkyFinger4Fat.input2Y";
+connectAttr "PinkyFinger4.fatWidth" "PinkyFinger4Fat.input2Z";
+connectAttr "RingFinger1.fat" "RingFinger1Fat.input1Y";
+connectAttr "RingFinger1.fat" "RingFinger1Fat.input1Z";
+connectAttr "RingFinger1.fatFront" "RingFinger1Fat.input2Y";
+connectAttr "RingFinger1.fatWidth" "RingFinger1Fat.input2Z";
+connectAttr "RingFinger2.fat" "RingFinger2Fat.input1Y";
+connectAttr "RingFinger2.fat" "RingFinger2Fat.input1Z";
+connectAttr "RingFinger2.fatFront" "RingFinger2Fat.input2Y";
+connectAttr "RingFinger2.fatWidth" "RingFinger2Fat.input2Z";
+connectAttr "RingFinger3.fat" "RingFinger3Fat.input1Y";
+connectAttr "RingFinger3.fat" "RingFinger3Fat.input1Z";
+connectAttr "RingFinger3.fatFront" "RingFinger3Fat.input2Y";
+connectAttr "RingFinger3.fatWidth" "RingFinger3Fat.input2Z";
+connectAttr "RingFinger4.fat" "RingFinger4Fat.input1Y";
+connectAttr "RingFinger4.fat" "RingFinger4Fat.input1Z";
+connectAttr "RingFinger4.fatFront" "RingFinger4Fat.input2Y";
+connectAttr "RingFinger4.fatWidth" "RingFinger4Fat.input2Z";
+connectAttr "Hip.fat" "HipFat.input1Y";
+connectAttr "Hip.fat" "HipFat.input1Z";
+connectAttr "Hip.fatFront" "HipFat.input2Y";
+connectAttr "Hip.fatWidth" "HipFat.input2Z";
+connectAttr "Knee.fat" "KneeFat.input1Y";
+connectAttr "Knee.fat" "KneeFat.input1Z";
+connectAttr "Knee.fatFront" "KneeFat.input2Y";
+connectAttr "Knee.fatWidth" "KneeFat.input2Z";
+connectAttr "Ankle.fat" "AnkleFat.input1Y";
+connectAttr "Ankle.fat" "AnkleFat.input1Z";
+connectAttr "Ankle.fatFront" "AnkleFat.input2Y";
+connectAttr "Ankle.fatWidth" "AnkleFat.input2Z";
+connectAttr "Heel.fat" "HeelFat.input1Y";
+connectAttr "Heel.fat" "HeelFat.input1Z";
+connectAttr "Heel.fatFront" "HeelFat.input2Y";
+connectAttr "Heel.fatWidth" "HeelFat.input2Z";
+connectAttr "Toes.fat" "ToesFat.input1Y";
+connectAttr "Toes.fat" "ToesFat.input1Z";
+connectAttr "Toes.fatFront" "ToesFat.input2Y";
+connectAttr "Toes.fatWidth" "ToesFat.input2Z";
+connectAttr "FootSideInner.fat" "FootSideInnerFat.input1Y";
+connectAttr "FootSideInner.fat" "FootSideInnerFat.input1Z";
+connectAttr "FootSideInner.fatFront" "FootSideInnerFat.input2Y";
+connectAttr "FootSideInner.fatWidth" "FootSideInnerFat.input2Z";
+connectAttr "FootSideOuter.fat" "FootSideOuterFat.input1Y";
+connectAttr "FootSideOuter.fat" "FootSideOuterFat.input1Z";
+connectAttr "FootSideOuter.fatFront" "FootSideOuterFat.input2Y";
+connectAttr "FootSideOuter.fatWidth" "FootSideOuterFat.input2Z";
+connectAttr "ToesEnd.fat" "ToesEndFat.input1Y";
+connectAttr "ToesEnd.fat" "ToesEndFat.input1Z";
+connectAttr "ToesEnd.fatFront" "ToesEndFat.input2Y";
+connectAttr "ToesEnd.fatWidth" "ToesEndFat.input2Z";
 connectAttr "LowPolyManRigging3830:Pants_GeoSG.partition" ":renderPartition.sets"
 		 -nextAvailable;
 connectAttr "LowPolyManRigging3830:Body_GeoSG.partition" ":renderPartition.sets"
